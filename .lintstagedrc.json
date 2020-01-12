@@ -1,0 +1,4 @@
+{
+  "*.{js,jsx}": ["eslint . --fix", "git add"],
+  "!(*test).{ts,tsx}": ["tslint --config tslint.json --project tsconfig.json --fix", "git add"]
+}

@@ -1,0 +1,63 @@
+{
+  "dependencies": {},
+  "description": "",
+  "devDependencies": {
+    "@types/jasmine": "3.5.0",
+    "@typescript-eslint/eslint-plugin": "2.15.0",
+    "@typescript-eslint/parser": "2.15.0",
+    "eslint": "6.8.0",
+    "eslint-config-prettier": "6.9.0",
+    "eslint-plugin-no-unsanitized": "3.0.2",
+    "eslint-plugin-prettier": "3.1.2",
+    "generate-changelog": "1.8.0",
+    "husky": "4.0.4",
+    "jasmine": "3.5.0",
+    "lint-staged": "9.5.0",
+    "nyc": "15.0.0",
+    "prettier": "1.19.1",
+    "pretty-quick": "2.0.1",
+    "rimraf": "3.0.0",
+    "ts-node": "8.6.0",
+    "tslint": "5.20.1",
+    "tslint-config-prettier": "1.18.0",
+    "tslint-plugin-prettier": "2.1.0",
+    "typescript": "3.7.4"
+  },
+  "engines": {
+    "node": ">= 10.9",
+    "yarn": ">= 1"
+  },
+  "files": [
+    "dist"
+  ],
+  "keywords": [],
+  "license": "UNLICENSED",
+  "main": "dist/index.js",
+  "name": "ts-node-starter",
+  "private": false,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bennyn/ts-node-starter.git"
+  },
+  "scripts": {
+    "build": "tsc",
+    "changelog:commit": "git add CHANGELOG.md && git commit -m \"docs: updated CHANGELOG.md\"",
+    "clean": "rimraf .nyc_output coverage dist",
+    "dist": "yarn clean && yarn build",
+    "fix": "yarn fix:other && yarn fix:code",
+    "fix:code": "yarn lint:code --fix",
+    "fix:other": "yarn prettier --write",
+    "lint": "yarn lint:code && yarn lint:other",
+    "lint:code": "eslint --ignore-path .gitignore --ext .js,.jsx,.ts,.tsx .",
+    "lint:other": "yarn prettier --list-different",
+    "postversion": "git push origin && git push origin --tags && npm publish",
+    "prettier": "prettier --ignore-path .gitignore \"**/*.{json,scss,yml}\"",
+    "preversion": "git pull && yarn && yarn test && yarn dist",
+    "release:major": "generate-changelog -M -x \"chore,docs,refactor,style,test\" && yarn changelog:commit && npm version major",
+    "release:minor": "generate-changelog -m -x \"chore,docs,refactor,style,test\" && yarn changelog:commit && npm version minor",
+    "release:patch": "generate-changelog -p -x \"chore,docs,refactor,style,test\" && yarn changelog:commit && npm version patch",
+    "test": "nyc --nycrc-path=nyc.config.coverage.js jasmine --config=jasmine.json",
+    "test:dev": "nyc jasmine --config=jasmine.json"
+  },
+  "version": "0.0.0"
+}
