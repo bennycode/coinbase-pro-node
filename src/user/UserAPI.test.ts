@@ -10,6 +10,7 @@ describe('UserAPI', () => {
   beforeAll(() => {
     nock(global.REST_URL)
       .get(TimeAPI.URL.TIME)
+
       .query(() => true)
       .reply(() => {
         const now = new Date();
