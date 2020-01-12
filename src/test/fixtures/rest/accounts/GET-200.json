@@ -1,0 +1,58 @@
+[
+  {
+    "available": "0",
+    "balance": "0.0000000000000000",
+    "currency": "BTC",
+    "hold": "0.0000000000000000",
+    "id": "322dfa88-e10d-4678-856d-2930eac3e62d",
+    "profile_id": "09a6bf48-aaf1-4332-a299-cc2982a7a69d"
+  },
+  {
+    "available": "0",
+    "balance": "0.0000000000000000",
+    "currency": "USDC",
+    "hold": "0.0000000000000000",
+    "id": "540a5ee9-f643-4c96-8c71-11e76f5e47e9",
+    "profile_id": "09a6bf48-aaf1-4332-a299-cc2982a7a69d"
+  },
+  {
+    "available": "0",
+    "balance": "0.0000000000000000",
+    "currency": "USD",
+    "hold": "0.0000000000000000",
+    "id": "febfe5d0-a0da-48d3-a40c-558c2ba7c867",
+    "profile_id": "09a6bf48-aaf1-4332-a299-cc2982a7a69d"
+  },
+  {
+    "available": "0",
+    "balance": "0.0000000000000000",
+    "currency": "GBP",
+    "hold": "0.0000000000000000",
+    "id": "7df11882-5a15-4de9-adcc-6d23691537f9",
+    "profile_id": "09a6bf48-aaf1-4332-a299-cc2982a7a69d"
+  },
+  {
+    "available": "0",
+    "balance": "0.0000000000000000",
+    "currency": "EUR",
+    "hold": "0.0000000000000000",
+    "id": "247a6bbd-a2fc-4102-aecc-77f2d2429297",
+    "profile_id": "09a6bf48-aaf1-4332-a299-cc2982a7a69d"
+  },
+  {
+    "available": "0",
+    "balance": "0.0000000000000000",
+    "currency": "ETH",
+    "hold": "0.0000000000000000",
+    "id": "d6518493-9bee-4d27-a04f-9b8c72dbfc87",
+    "profile_id": "09a6bf48-aaf1-4332-a299-cc2982a7a69d"
+  },
+  {
+    "available": "0",
+    "balance": "0.0000000000000000",
+    "currency": "BAT",
+    "hold": "0.0000000000000000",
+    "id": "0910e755-f6c1-459a-b137-d2cef9665ac1",
+    "profile_id": "09a6bf48-aaf1-4332-a299-cc2982a7a69d"
+  }
+]
