@@ -38,7 +38,7 @@
     "@typescript-eslint/no-unused-vars": "error",
     "@typescript-eslint/prefer-for-of": "error",
     "@typescript-eslint/prefer-readonly": "error",
-    "@typescript-eslint/typedef": "error",
+    "@typescript-eslint/typedef": "off",
     "curly": "error",
     "dot-notation": "error",
     "no-console": "error",
@@ -52,17 +52,11 @@
     "no-redeclare": "error",
     "no-return-await": "error",
     "no-sequences": "error",
-    "no-shadow": "error",
+    "no-shadow": "off",
     "no-sparse-arrays": "error",
     "no-template-curly-in-string": "error",
     "no-unneeded-ternary": "error",
     "no-unused-expressions": "error",
-    "no-unused-vars": [
-      "error",
-      {
-        "args": "none"
-      }
-    ],
     "no-useless-return": "error",
     "no-var": "error",
     "one-var": ["error", "never"],
@@ -70,7 +64,7 @@
     "prefer-const": "error",
     "prefer-promise-reject-errors": "error",
     "prettier/prettier": "error",
-    "sort-imports": "error",
+    "sort-imports": "off",
     "sort-keys": [
       "error",
       "asc",
