@@ -1,4 +1,3 @@
 {
-  "*.{js,jsx}": ["eslint . --fix", "git add"],
-  "src/**/*.ts": ["eslint --ignore-path .gitignore --fix", "git add"]
+  "*.{js,jsx}": ["eslint . --fix", "git add"]
 }
