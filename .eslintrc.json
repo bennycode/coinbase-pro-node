@@ -57,12 +57,6 @@
     "no-template-curly-in-string": "error",
     "no-unneeded-ternary": "error",
     "no-unused-expressions": "error",
-    "no-unused-vars": [
-      "error",
-      {
-        "args": "none"
-      }
-    ],
     "no-useless-return": "error",
     "no-var": "error",
     "one-var": ["error", "never"],
