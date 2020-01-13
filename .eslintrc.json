@@ -41,7 +41,12 @@
     "@typescript-eslint/typedef": "off",
     "curly": "error",
     "dot-notation": "error",
-    "no-console": "error",
+    "no-console": [
+      "error",
+      {
+        "allow": ["error", "info", "warn"]
+      }
+    ],
     "no-const-assign": "error",
     "no-dupe-class-members": "error",
     "no-duplicate-case": "error",

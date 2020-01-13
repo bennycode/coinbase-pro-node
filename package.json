@@ -5,7 +5,6 @@
   "dependencies": {
     "@types/big.js": "4.0.5",
     "@types/ws": "6.0.4",
-    "@wireapp/commons": "3.1.0",
     "axios": "0.19.1",
     "big.js": "5.2.2",
     "reconnecting-websocket": "wireapp/reconnecting-websocket#96ac796ae8c7a7d9d857f46ed39dbedd7b9ad378",
