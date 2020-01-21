@@ -1,13 +1,20 @@
-# Unofficial Coinbase Pro API
+# Coinbase Pro API
 
-Unofficial [Coinbase Pro][1] API written in TypeScript and covered by tests.
+[Coinbase Pro][1] API for Node.js, written in TypeScript and covered by tests.
+
+## Motivation
+
+This project was created to continue an active **Coinbase Pro API** after Coinbase deprecated the official Node.js library [on January, 16 2020](https://github.com/coinbase/coinbase-node/issues/140#issuecomment-574990136). The official predecessor was also deprecated on [July, 19th 2016](https://github.com/coinbase/coinbase-exchange-node/commit/b8347efdb4e2589367c1395b646d283c9c391681).
 
 ## Features
 
+Advantages over the [official counterpart][3]:
+
+- **Alive.** Not archived and ready-only. Pull Requests are welcome!
 - **Typed.** Source code is 100% TypeScript. No need to install external typings.
-- **Tested.** Code coverage is at 100%. No surprises when using.
+- **Tested.** Code coverage is at 100%. No surprises when using it.
 - **Robust.** WebSocket reconnection is built-in. No problems if your Wi-Fi is gone.
-- **Easy-to-use.** HTTP requests are easy to customize. HMAC signing and JSON formatting included.
+- **Easy-to-use.** HTTP requests are easy to customize. HMAC signing and JSON formatting is already included.
 
 ## Installation
 
@@ -35,6 +42,7 @@ const auth = {
   apiSecret: '',
   passphrase: '',
 };
+
 const client = new CoinbasePro(auth);
 ```
 
@@ -65,8 +73,8 @@ client.ws.subscribeToTickers(['BTC-USD', 'ETH-EUR']);
 ## Resources
 
 - [Coinbase Pro API Reference][2]
-- [Official Coinbase Pro API](https://github.com/coinbase/coinbase-pro-node)
-- [Official Coinbase Pro Trading Toolkit](https://github.com/coinbase/coinbase-pro-trading-toolkit)
+- [Coinbase Pro API][3]
+- [Coinbase Pro Trading Toolkit](https://github.com/coinbase/coinbase-pro-trading-toolkit)
 
 ## Contributing
 
@@ -88,5 +96,6 @@ Give a ⭐️ if this project helped you!
 
 [1]: https://pro.coinbase.com/
 [2]: https://docs.pro.coinbase.com/
+[3]: https://github.com/coinbase/coinbase-pro-node
 [stack_exchange_bennyn_badge]: http://stackexchange.com/users/flair/203782.png?theme=default
 [stack_exchange_bennyn_url]: http://stackexchange.com/users/203782/benny-neugebauer?tab=accounts
