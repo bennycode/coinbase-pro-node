@@ -4,7 +4,7 @@
 
 ## Motivation
 
-This project was created to continue an active **Coinbase Pro API** after Coinbase deprecated the official Node.js library [on January, 16 2020](https://github.com/coinbase/coinbase-node/issues/140#issuecomment-574990136). The official predecessor was also deprecated on [July, 19th 2016](https://github.com/coinbase/coinbase-exchange-node/commit/b8347efdb4e2589367c1395b646d283c9c391681).
+This project was created to continue an active **Coinbase Pro API** after Coinbase deprecated the official Node.js library on [January, 16 2020](https://github.com/coinbase/coinbase-node/issues/140#issuecomment-574990136). The official predecessor was also deprecated on [July, 19th 2016](https://github.com/coinbase/coinbase-exchange-node/commit/b8347efdb4e2589367c1395b646d283c9c391681).
 
 ## Features
 
@@ -18,11 +18,13 @@ Advantages over the [official counterpart][3]:
 
 ## Installation
 
+**npm**
+
 ```bash
 npm install coinbase-pro-node
 ```
 
-or:
+**Yarn**
 
 ```bash
 yarn add coinbase-pro-node
@@ -82,7 +84,7 @@ Contributions, issues and feature requests are welcome!
 
 Feel free to check [issues page](https://github.com/bennyn/coinbase-pro-node/issues).
 
-**Maintainers**
+## Maintainers
 
 [![Benny Neugebauer on Stack Exchange][stack_exchange_bennyn_badge]][stack_exchange_bennyn_url]
 
