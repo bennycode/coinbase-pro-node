@@ -11,9 +11,14 @@ export class TimeAPI {
   };
 
   // https://docs.pro.coinbase.com/#time
-  static async getClockSkew(baseURL: string): Promise<number> {
+  static async getTime(baseURL: string): Promise<TimeSkew> {
     const response = await axios.get<TimeSkew>(`${baseURL}${TimeAPI.URL.TIME}`);
+    return response.data;
+  }
+
+  static async getClockSkew(baseURL: string): Promise<number> {
+    const time = await this.getTime(baseURL);
     const now = Date.now() / 1000;
-    return response.data.epoch - now;
+    return time.epoch - now;
   }
 }

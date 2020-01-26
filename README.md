@@ -39,6 +39,7 @@ const {CoinbasePro} = require('coinbase-pro-node');
 
 // API Keys can be generated here:
 // https://pro.coinbase.com/profile/api
+// https://public.sandbox.pro.coinbase.com/profile/api
 const auth = {
   apiKey: '',
   apiSecret: '',

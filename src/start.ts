@@ -13,12 +13,9 @@ const client = new CoinbasePro(
   CoinbasePro.SETUP.SANDBOX
 );
 
-client.rest.account
-  .listAccounts()
-  .then(payload => {
-    const message = `You can trade "${payload.length}" different symbols.`;
-    console.info(message);
-  })
-  .catch(error => {
-    console.error(error.message);
-  });
+// eslint-disable-next-line @typescript-eslint/no-floating-promises
+(async (): Promise<void> => {
+  const payload = await client.rest.account.listAccounts();
+  const message = `You can trade "${payload.length}" different symbols in Coinbase's Public Sandbox.`;
+  console.info(message);
+})();
