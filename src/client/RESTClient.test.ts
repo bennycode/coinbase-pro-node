@@ -3,7 +3,6 @@ import nock from 'nock';
 import {AccountAPI} from '../account/AccountAPI';
 import {ClientAuthentication} from '../CoinbasePro';
 import listAccounts from '../test/fixtures/rest/accounts/GET-200.json';
-import {TimeAPI} from '../time/TimeAPI';
 import {RESTClient} from './RESTClient';
 
 describe('RESTClient', () => {
@@ -30,21 +29,6 @@ describe('RESTClient', () => {
     afterAll(() => nock.cleanAll());
 
     beforeAll(() => {
-      nock(global.REST_URL)
-        .get(TimeAPI.URL.TIME)
-        .query(() => true)
-        .reply(() => {
-          const now = new Date();
-          return [
-            200,
-            JSON.stringify({
-              epoch: now.getTime() / 1000,
-              iso: now.toISOString(),
-            }),
-          ];
-        })
-        .persist();
-
       nock(global.REST_URL)
         .get(AccountAPI.URL.ACCOUNTS)
         .query(() => true)

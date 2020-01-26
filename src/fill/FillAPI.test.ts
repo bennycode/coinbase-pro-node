@@ -1,4 +1,3 @@
-import {TimeAPI} from '../time/TimeAPI';
 import nock from 'nock';
 import BTCEUR from '../test/fixtures/rest/fills/product_id/BTC-EUR/GET-200.json';
 import {FillAPI} from './FillAPI';
@@ -8,21 +7,6 @@ describe('FillAPI', () => {
   afterAll(() => nock.cleanAll());
 
   beforeAll(() => {
-    nock(global.REST_URL)
-      .get(TimeAPI.URL.TIME)
-      .query(() => true)
-      .reply(() => {
-        const now = new Date();
-        return [
-          200,
-          JSON.stringify({
-            epoch: now.getTime() / 1000,
-            iso: now.toISOString(),
-          }),
-        ];
-      })
-      .persist();
-
     nock(global.REST_URL)
       .get(FillAPI.URL.FILLS)
       .query(() => true)
