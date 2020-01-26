@@ -10,7 +10,7 @@ const client = new CoinbasePro(
     apiSecret: COINBASE_PRO_SANDBOX_API_SECRET!,
     passphrase: COINBASE_PRO_SANDBOX_PASSPHRASE!,
   },
-  CoinbasePro.SETUP.SANDBOX
+  true
 );
 
 // eslint-disable-next-line @typescript-eslint/no-floating-promises

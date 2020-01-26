@@ -31,9 +31,9 @@ export class CoinbasePro {
     },
   };
 
-  constructor(auth: ClientAuthentication, url: ClientConnection = CoinbasePro.SETUP.PRODUCTION) {
-    this.rest = new RESTClient(url.REST, auth);
-    this.url = url;
-    this.ws = new WebSocketClient(url.WebSocket);
+  constructor(auth: ClientAuthentication, useSandbox: boolean = false) {
+    this.url = useSandbox ? CoinbasePro.SETUP.SANDBOX : CoinbasePro.SETUP.PRODUCTION;
+    this.rest = new RESTClient(this.url.REST, auth);
+    this.ws = new WebSocketClient(this.url.WebSocket);
   }
 }
