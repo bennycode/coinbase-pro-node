@@ -1,5 +1,4 @@
-/// <reference types="../test/typings/global" />
-import nock = require('nock');
+import nock from 'nock';
 import verifyPayload from '../test/fixtures/rest/users/self/verify/GET-200.json';
 import {TimeAPI} from '../time/TimeAPI';
 import {UserAPI} from './UserAPI';
@@ -16,7 +15,7 @@ describe('UserAPI', () => {
         return [
           200,
           JSON.stringify({
-            epoch: now.getTime() * 1000,
+            epoch: now.getTime() / 1000,
             iso: now.toISOString(),
           }),
         ];

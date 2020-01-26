@@ -1,5 +1,4 @@
-/// <reference types="../../src/test/typings/global" />
-import nock = require('nock');
+import nock from 'nock';
 import {TimeAPI} from '../time/TimeAPI';
 import {NewOrder, OrderAPI, OrderSide, OrderStatus, OrderType, SelfTradePrevention} from './OrderAPI';
 
@@ -15,7 +14,7 @@ describe('OrderAPI', () => {
         return [
           200,
           JSON.stringify({
-            epoch: now.getTime() * 1000,
+            epoch: now.getTime() / 1000,
             iso: now.toISOString(),
           }),
         ];

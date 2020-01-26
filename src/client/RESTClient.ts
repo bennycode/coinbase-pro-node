@@ -28,15 +28,6 @@ class RESTClient {
   public user: UserAPI;
   private readonly httpClient: AxiosInstance;
 
-  private stringifyPayload(config: AxiosRequestConfig): string {
-    if (config.data) {
-      return JSON.stringify(config.data);
-    } else {
-      const params = querystring.stringify(config.params);
-      return params ? `?${params}` : '';
-    }
-  }
-
   constructor(baseURL: string, auth: ClientAuthentication) {
     this.httpClient = axios.create({
       baseURL: baseURL,
@@ -75,6 +66,14 @@ class RESTClient {
     this.order = new OrderAPI(this.httpClient);
     this.user = new UserAPI(this.httpClient);
     this.product = new ProductAPI(this.httpClient);
+  }
+
+  private stringifyPayload(config: AxiosRequestConfig): string {
+    if (config.data) {
+      return JSON.stringify(config.data);
+    }
+    const params = querystring.stringify(config.params);
+    return params ? `?${params}` : '';
   }
 }
 

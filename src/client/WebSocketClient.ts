@@ -1,6 +1,6 @@
 import EventEmitter from 'events';
 import ReconnectingWebSocket, {Event, Options} from 'reconnecting-websocket';
-import NodeWebSocket = require('ws');
+import WebSocket from 'ws';
 import {SignedRequest} from '../auth/RequestSigner';
 
 export interface WebSocketChannel {
@@ -52,7 +52,7 @@ class WebSocketClient extends EventEmitter {
   public connect(): Promise<ReconnectingWebSocket> {
     return new Promise(resolve => {
       const options: Options = {
-        WebSocket: NodeWebSocket,
+        WebSocket,
         connectionTimeout: 4000,
         debug: false,
         maxReconnectionDelay: 10000,

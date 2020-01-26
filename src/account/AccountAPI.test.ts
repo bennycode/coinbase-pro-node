@@ -1,9 +1,8 @@
-/// <reference types="../../src/test/typings/global" />
 import getAccount from '../test/fixtures/rest/accounts/322dfa88-e10d-4678-856d-2930eac3e62d/GET-200.json';
 import getAccountHistory from '../test/fixtures/rest/accounts/322dfa88-e10d-4678-856d-2930eac3e62d/ledger/GET-200.json';
 import getHolds from '../test/fixtures/rest/accounts/322dfa88-e10d-4678-856d-2930eac3e62d/holds/GET-200.json';
 import listAccounts from '../test/fixtures/rest/accounts/GET-200.json';
-import nock = require('nock');
+import nock from 'nock';
 import {AccountAPI} from './AccountAPI';
 import {TimeAPI} from '../time/TimeAPI';
 
@@ -19,7 +18,7 @@ describe('AccountAPI', () => {
         return [
           200,
           JSON.stringify({
-            epoch: now.getTime() * 1000,
+            epoch: now.getTime() / 1000,
             iso: now.toISOString(),
           }),
         ];
