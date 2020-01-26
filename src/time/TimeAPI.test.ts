@@ -3,9 +3,11 @@ import nock from 'nock';
 
 describe('TimeAPI', () => {
   describe('getTime', () => {
-    afterAll(() => nock.cleanAll());
+    afterEach(() => nock.cleanAll());
 
-    beforeAll(() => {
+    beforeEach(() => {
+      nock.cleanAll();
+
       nock(global.REST_URL)
         .get(TimeAPI.URL.TIME)
         .query(() => true)

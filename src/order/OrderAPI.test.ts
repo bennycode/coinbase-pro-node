@@ -1,26 +1,8 @@
 import nock from 'nock';
-import {TimeAPI} from '../time/TimeAPI';
 import {NewOrder, OrderAPI, OrderSide, OrderStatus, OrderType, SelfTradePrevention} from './OrderAPI';
 
 describe('OrderAPI', () => {
-  afterAll(() => nock.cleanAll());
-
-  beforeAll(() => {
-    nock(global.REST_URL)
-      .get(TimeAPI.URL.TIME)
-      .query(() => true)
-      .reply(() => {
-        const now = new Date();
-        return [
-          200,
-          JSON.stringify({
-            epoch: now.getTime() / 1000,
-            iso: now.toISOString(),
-          }),
-        ];
-      })
-      .persist();
-  });
+  afterEach(() => nock.cleanAll());
 
   describe('placeOrder', () => {
     it('places market buy orders', async () => {
