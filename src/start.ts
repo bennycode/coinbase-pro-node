@@ -16,7 +16,7 @@ const client = new CoinbasePro(
 client.rest.account
   .listAccounts()
   .then(payload => {
-    const message = `You can trade "${payload.length}" different symbols.`;
+    const message = `You can trade "${payload.length}" different symbols in Coinbase's Public Sandbox.`;
     console.info(message);
   })
   .catch(error => {
