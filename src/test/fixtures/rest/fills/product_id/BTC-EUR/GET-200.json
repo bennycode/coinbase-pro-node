@@ -1,0 +1,32 @@
+[
+  {
+    "created_at": "2020-01-26T17:47:43.602Z",
+    "fee": "39.8009947826945000",
+    "liquidity": "T",
+    "order_id": "0e8029ae-ba75-4e3a-9472-efc8183005c4",
+    "price": "7755.01000000",
+    "product_id": "BTC-EUR",
+    "profile_id": "09a6bf48-aaf1-4332-a299-cc2982a7a69d",
+    "settled": true,
+    "side": "buy",
+    "size": "1.02645889",
+    "trade_id": 2522525,
+    "usd_volume": "8765.9486560111000000",
+    "user_id": "59e7cb4ba7de2e00e9a9db9c"
+  },
+  {
+    "created_at": "2020-01-26T17:47:34.831Z",
+    "fee": "38.5820894534295000",
+    "liquidity": "T",
+    "order_id": "164185c4-1280-4d1d-9ad0-02999040a91a",
+    "price": "7755.01000000",
+    "product_id": "BTC-EUR",
+    "profile_id": "09a6bf48-aaf1-4332-a299-cc2982a7a69d",
+    "settled": true,
+    "side": "buy",
+    "size": "0.99502359",
+    "trade_id": 2522524,
+    "usd_volume": "8497.4915083641000000",
+    "user_id": "59e7cb4ba7de2e00e9a9db9c"
+  }
+]

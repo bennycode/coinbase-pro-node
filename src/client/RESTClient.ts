@@ -7,6 +7,7 @@ import {ProductAPI} from '../product/ProductAPI';
 import {TimeAPI} from '../time/TimeAPI';
 import {UserAPI} from '../user/UserAPI';
 import {FillAPI} from '../fill/FillAPI';
+import querystring from 'querystring';
 
 class RESTClient {
   get defaults(): AxiosRequestConfig {
@@ -27,6 +28,15 @@ class RESTClient {
   public user: UserAPI;
   private readonly httpClient: AxiosInstance;
 
+  private stringifyPayload(config: AxiosRequestConfig): string {
+    if (config.data) {
+      return JSON.stringify(config.data);
+    } else {
+      const params = querystring.stringify(config.params);
+      return params ? `?${params}` : '';
+    }
+  }
+
   constructor(baseURL: string, auth: ClientAuthentication) {
     this.httpClient = axios.create({
       baseURL: baseURL,
@@ -37,14 +47,13 @@ class RESTClient {
       const baseURL = String(config.baseURL);
       const url = String(config.url);
       const requestPath = url.replace(baseURL, '');
-
       const clockSkew = await TimeAPI.getClockSkew(baseURL);
 
       const signedRequest = RequestSigner.signRequest(
         auth,
         {
           httpMethod: String(config.method).toUpperCase(),
-          payload: JSON.stringify(config.data || {}),
+          payload: this.stringifyPayload(config),
           requestPath,
         },
         clockSkew

@@ -1,5 +1,4 @@
 /// <reference types="../../src/test/typings/global" />
-import Big from 'big.js';
 import nock = require('nock');
 import {TimeAPI} from '../time/TimeAPI';
 import {NewOrder, OrderAPI, OrderSide, OrderStatus, OrderType, SelfTradePrevention} from './OrderAPI';
@@ -45,7 +44,7 @@ describe('OrderAPI', () => {
               product_id: newOrder.product_id,
               settled: false,
               side: newOrder.side,
-              size: new Big(String(newOrder.size)).toFixed(8),
+              size: '0.10000000',
               status: OrderStatus.PENDING,
               stp: SelfTradePrevention.DECREMENT_AND_CANCEL,
               type: newOrder.type,
