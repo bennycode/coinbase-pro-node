@@ -128,8 +128,11 @@ describe('OrderAPI', () => {
         .query(() => true)
         .reply(500);
 
-      // eslint-disable-next-line @typescript-eslint/no-floating-promises
-      expectAsync(global.client.rest.order.getOrder('123')).toBeRejected();
+      try {
+        await global.client.rest.order.getOrder('123');
+      } catch (error) {
+        expect(error.response.status).toBe(500);
+      }
     });
   });
 
