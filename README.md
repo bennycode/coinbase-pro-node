@@ -46,7 +46,8 @@ const auth = {
   passphrase: '',
 };
 
-const client = new CoinbasePro(auth);
+const useSandbox = true;
+const client = new CoinbasePro(auth, useSandbox);
 ```
 
 ## REST Example

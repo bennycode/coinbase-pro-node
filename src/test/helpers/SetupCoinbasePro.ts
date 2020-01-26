@@ -36,6 +36,6 @@ beforeEach(() => {
       apiSecret: '',
       passphrase: '',
     },
-    CoinbasePro.SETUP.SANDBOX
+    true
   );
 });

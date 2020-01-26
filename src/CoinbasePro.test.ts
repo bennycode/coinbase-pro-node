@@ -2,7 +2,7 @@ import {CoinbasePro} from './CoinbasePro';
 
 describe('CoinbasePro', () => {
   describe('constructor', () => {
-    it('defaults to the production environment', () => {
+    it('defaults to Coinbase production environment', () => {
       const client = new CoinbasePro({
         apiKey: '',
         apiSecret: '',
@@ -12,14 +12,14 @@ describe('CoinbasePro', () => {
       expect(client.url.REST).toBe(CoinbasePro.SETUP.PRODUCTION.REST);
     });
 
-    it('supports the public sandbox for testing API connectivity', () => {
+    it('supports Coinbase public sandbox for testing', () => {
       const client = new CoinbasePro(
         {
           apiKey: '',
           apiSecret: '',
           passphrase: '',
         },
-        CoinbasePro.SETUP.SANDBOX
+        true
       );
 
       expect(client.url.REST).toBe(CoinbasePro.SETUP.SANDBOX.REST);
