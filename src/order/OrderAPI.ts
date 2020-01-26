@@ -74,7 +74,6 @@ export class OrderAPI {
     const response = await this.apiClient.delete(resource, {
       params: productId ? {product_id: productId} : {},
     });
-
     return response.data;
   }
 
@@ -82,7 +81,6 @@ export class OrderAPI {
   async getOpenOrders(): Promise<Order[]> {
     const resource = OrderAPI.URL.ORDERS;
     const response = await this.apiClient.get(resource);
-
     return response.data;
   }
 

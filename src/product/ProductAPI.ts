@@ -96,7 +96,6 @@ export class ProductAPI {
   async getProducts(): Promise<Product[]> {
     const resource = ProductAPI.URL.PRODUCTS;
     const response = await this.apiClient.get<Product[]>(resource);
-
     return response.data;
   }
 
@@ -104,7 +103,6 @@ export class ProductAPI {
   async getProductStats(productId: string): Promise<ProductStats> {
     const resource = `${ProductAPI.URL.PRODUCTS}/${productId}/stats`;
     const response = await this.apiClient.get<ProductStats>(resource);
-
     return response.data;
   }
 
@@ -112,7 +110,6 @@ export class ProductAPI {
   async getProductTicker(productId: string): Promise<ProductTicker> {
     const resource = `${ProductAPI.URL.PRODUCTS}/${productId}/ticker`;
     const response = await this.apiClient.get<ProductTicker>(resource);
-
     return response.data;
   }
 }
