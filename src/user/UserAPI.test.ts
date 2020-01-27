@@ -18,9 +18,7 @@ describe('UserAPI', () => {
     nock(global.REST_URL)
       .get(`${UserAPI.URL.USERS}/self/trailing-volume`)
       .query(() => true)
-      .reply(() => {
-        return [200, JSON.stringify(trailingVolume)];
-      })
+      .reply(() => [200, JSON.stringify(trailingVolume)])
       .persist();
   });
 
