@@ -33,7 +33,7 @@ export class UserAPI {
    * @see https://docs.pro.coinbase.com/#trailing-volume
    */
   async getTrailingVolume(): Promise<TrailingVolume[]> {
-    const resource = [UserAPI.URL.USERS, 'self', 'trailing-volume'].join('/');
+    const resource = `${UserAPI.URL.USERS}/self/trailing-volume`;
     const response = await this.apiClient.get<TrailingVolume[]>(resource);
     return response.data;
   }
