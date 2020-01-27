@@ -1,0 +1,14 @@
+{
+  "all": true,
+  "branches": 100,
+  "check-coverage": true,
+  "exclude": ["**/*.d.ts", "**/*.test*.ts", "**/index.ts", "**/start.ts"],
+  "extension": [".ts"],
+  "functions": 100,
+  "include": ["src/**/*.ts"],
+  "lines": 100,
+  "per-file": false,
+  "reporter": ["html"],
+  "require": ["ts-node/register"],
+  "statements": 100
+}
