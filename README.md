@@ -86,10 +86,6 @@ Contributions, issues and feature requests are welcome!
 
 Feel free to check [issues page](https://github.com/bennyn/coinbase-pro-node/issues).
 
-The following Pull Requests teach best practices and will help you getting started quickly with the code base:
-
-- [Add REST API endpoint]()
-
 ## Maintainers
 
 [![Benny Neugebauer on Stack Exchange][stack_exchange_bennyn_badge]][stack_exchange_bennyn_url]
