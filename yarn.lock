@@ -1909,9 +1909,10 @@ punycode@^2.1.0:
   resolved "https://registry.npmjs.org/punycode/-/punycode-2.1.1.tgz#b58b010ac40c22c5657616c8d2c2c02c7bf479ec"
   integrity sha512-XRsRjdf+j5ml+y/6GKHPZbrF/8p2Yga0JPtdqTIY2Xe5ohJPD9saDJJLPvp9+NSBprVvevdXZybnj2cv8OEd0A==
 
-reconnecting-websocket@wireapp/reconnecting-websocket#96ac796ae8c7a7d9d857f46ed39dbedd7b9ad378:
-  version "4.2.0"
-  resolved "https://codeload.github.com/wireapp/reconnecting-websocket/tar.gz/96ac796ae8c7a7d9d857f46ed39dbedd7b9ad378"
+reconnecting-websocket@4.3.0:
+  version "4.3.0"
+  resolved "https://registry.npmjs.org/reconnecting-websocket/-/reconnecting-websocket-4.3.0.tgz#aaefbc7629a89450aa45324b89aec2276e728cc5"
+  integrity sha512-3eaHIEVYB9Zb0GfYy1xdEHKJLA2JaawAegByZ1AZ8Npb3AiRgUN5l89cvE2H+pHTsFcoC88t32ky9qET6DJ75Q==
 
 regenerator-runtime@^0.13.2:
   version "0.13.3"

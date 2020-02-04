@@ -6,7 +6,7 @@
     "@types/ws": "7.2.1",
     "axios": "0.19.2",
     "bufferutil": "4.0.1",
-    "reconnecting-websocket": "wireapp/reconnecting-websocket#96ac796ae8c7a7d9d857f46ed39dbedd7b9ad378",
+    "reconnecting-websocket": "4.3.0",
     "utf-8-validate": "5.0.2",
     "ws": "7.2.1"
   },
