@@ -84,7 +84,7 @@
     "release:minor": "generate-changelog -m && yarn changelog:commit && npm version minor",
     "release:patch": "generate-changelog -p && yarn changelog:commit && npm version patch",
     "start": "cross-env NODE_DEBUG=coinbase-pro-node* ts-node src/start.ts",
-    "test": "nyc --nycrc-path=nyc.config.coverage.json jasmine --config=jasmine.json",
+    "test": "tsc --noEmit && nyc --nycrc-path=nyc.config.coverage.json jasmine --config=jasmine.json",
     "test:dev": "nyc jasmine --config=jasmine.json"
   },
   "version": "0.9.2"
