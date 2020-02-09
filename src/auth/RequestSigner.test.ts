@@ -18,6 +18,7 @@ describe('RequestSigner', () => {
         apiKey: '163c69bf6c849427616c7e04ee99df52',
         apiSecret: 'kv+3DPw2yHWQWkDsmpN4uXWtgtuBrFFLu7zRk9gipjdrFpUjwZ0mK6KzGAPFpxOjDLdna20xozy+9fqRU5zJZQ==',
         passphrase: 'wvp2pxkmx5',
+        useSandbox: true,
       };
       const setup: RequestSetup = {
         httpMethod: 'GET',

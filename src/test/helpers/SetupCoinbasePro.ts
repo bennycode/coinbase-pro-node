@@ -30,12 +30,10 @@ beforeEach(() => {
     })
     .persist();
 
-  global.client = new CoinbasePro(
-    {
-      apiKey: '',
-      apiSecret: '',
-      passphrase: '',
-    },
-    true
-  );
+  global.client = new CoinbasePro({
+    apiKey: '',
+    apiSecret: '',
+    passphrase: '',
+    useSandbox: true,
+  });
 });
