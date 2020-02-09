@@ -8,6 +8,7 @@ import {TimeAPI} from '../time/TimeAPI';
 import {UserAPI} from '../user/UserAPI';
 import {FillAPI} from '../fill/FillAPI';
 import querystring from 'querystring';
+import {ProfileAPI} from '../profile/ProfileAPI';
 
 class RESTClient {
   get defaults(): AxiosRequestConfig {
@@ -21,11 +22,13 @@ class RESTClient {
     return this.httpClient.interceptors;
   }
 
-  public account: AccountAPI;
-  public fill: FillAPI;
-  public order: OrderAPI;
-  public product: ProductAPI;
-  public user: UserAPI;
+  public readonly account: AccountAPI;
+  public readonly fill: FillAPI;
+  public readonly order: OrderAPI;
+  public readonly product: ProductAPI;
+  public readonly profile: ProfileAPI;
+  public readonly user: UserAPI;
+
   private readonly httpClient: AxiosInstance;
 
   constructor(baseURL: string, auth: ClientAuthentication) {
@@ -64,8 +67,9 @@ class RESTClient {
     this.account = new AccountAPI(this.httpClient);
     this.fill = new FillAPI(this.httpClient);
     this.order = new OrderAPI(this.httpClient);
-    this.user = new UserAPI(this.httpClient);
     this.product = new ProductAPI(this.httpClient);
+    this.profile = new ProfileAPI(this.httpClient);
+    this.user = new UserAPI(this.httpClient);
   }
 
   private stringifyPayload(config: AxiosRequestConfig): string {
