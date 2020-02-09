@@ -1,6 +1,7 @@
 import {AxiosInstance} from 'axios';
+import {ISO_8601_MS_UTC} from '../payload/common';
 
-export type Product = {
+export interface Product {
   base_currency: string;
   base_increment: string;
   base_max_size: string;
@@ -17,10 +18,10 @@ export type Product = {
   quote_increment: string;
   status: string;
   status_message: string;
-};
+}
 
 // Snapshot information about the last trade (tick), best bid/ask and 24h volume.
-export type ProductTicker = {
+export interface ProductTicker {
   ask: string;
   bid: string;
   price: string;
@@ -28,45 +29,48 @@ export type ProductTicker = {
   time: string;
   trade_id: number;
   volume: string;
-};
+}
 
-export type ProductStats = {
+export interface ProductStats {
   high: string;
   last: string;
   low: string;
   open: string;
   volume: string;
   volume_30day: string;
-};
+}
 
 export type CandleGranularity = 60 | 300 | 900 | 3600 | 21600 | 86400;
 
-export type CandlesRequestParameters = {
-  /** End time in ISO 8601 */
-  end?: string;
-  /** Desired timeslice in seconds */
+export interface CandlesRequestParameters {
+  end?: ISO_8601_MS_UTC;
   granularity: CandleGranularity;
-  /** Start time in ISO 8601 */
-  start?: string;
-};
+  start?: ISO_8601_MS_UTC;
+}
 
-export type Candle = {
-  /** closing price (last trade) in the bucket interval */
-  close: number;
-  /**  highest price during the bucket interval */
-  high: number;
-  /** lowest price during the bucket interval */
-  low: number;
-  /** opening price (first trade) in the bucket interval */
-  open: number;
-  /** bucket start time */
-  time: number;
-  /** volume of trading activity during the bucket interval */
-  volume: number;
-};
+type Close = number;
+type High = number;
+type Low = number;
+type Open = number;
+type Timestamp = number;
+type Volume = number;
 
-/** [ time, low, high, open, close, volume ], */
-type RawCandle = [number, number, number, number, number, number];
+export interface Candle {
+  /** Closing price (last trade) in the bucket interval */
+  close: Close;
+  /** Highest price during the bucket interval */
+  high: High;
+  /** Lowest price during the bucket interval */
+  low: Low;
+  /** Opening price (first trade) in the bucket interval */
+  open: Open;
+  /** Bucket start time */
+  time: Timestamp;
+  /** Volume of trading activity during the bucket interval */
+  volume: Volume;
+}
+
+type RawCandle = [Timestamp, Low, High, Open, Close, Volume];
 
 export class ProductAPI {
   static readonly URL = {

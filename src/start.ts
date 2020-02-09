@@ -2,18 +2,33 @@ import {CoinbasePro} from './CoinbasePro';
 
 require('dotenv').config();
 
-const {COINBASE_PRO_SANDBOX_API_KEY, COINBASE_PRO_SANDBOX_API_SECRET, COINBASE_PRO_SANDBOX_PASSPHRASE} = process.env;
+let client: CoinbasePro;
 
-const client = new CoinbasePro({
-  apiKey: COINBASE_PRO_SANDBOX_API_KEY!,
-  apiSecret: COINBASE_PRO_SANDBOX_API_SECRET!,
-  passphrase: COINBASE_PRO_SANDBOX_PASSPHRASE!,
-  useSandbox: true,
-});
+if (process.env.USE_SANDBOX === 'true') {
+  console.info('Using Coinbase Public Sandbox...');
+
+  client = new CoinbasePro({
+    apiKey: process.env.COINBASE_PRO_API_KEY!,
+    apiSecret: process.env.COINBASE_PRO_API_SECRET!,
+    passphrase: process.env.COINBASE_PRO_PASSPHRASE!,
+    useSandbox: false,
+  });
+} else if (process.env.USE_SANDBOX === 'false') {
+  console.info('Using Coinbase Production Environment...');
+
+  client = new CoinbasePro({
+    apiKey: process.env.COINBASE_PRO_SANDBOX_API_KEY!,
+    apiSecret: process.env.COINBASE_PRO_SANDBOX_API_SECRET!,
+    passphrase: process.env.COINBASE_PRO_SANDBOX_PASSPHRASE!,
+    useSandbox: true,
+  });
+} else {
+  throw Error('No environment specified.');
+}
 
 // eslint-disable-next-line @typescript-eslint/no-floating-promises
 (async (): Promise<void> => {
   const payload = await client.rest.account.listAccounts();
-  const message = `You can trade "${payload.length}" different symbols in Coinbase's Public Sandbox.`;
+  const message = `You can trade "${payload.length}" different symbols.`;
   console.info(message);
 })();

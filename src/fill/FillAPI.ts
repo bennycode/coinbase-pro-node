@@ -1,8 +1,5 @@
 import {AxiosInstance} from 'axios';
-
-type ISO_8601_UTC = string;
-
-type UUID_V4 = string;
+import {ISO_8601_MS_UTC, UUID_V4} from '../payload/common';
 
 export enum OrderSide {
   BUY = 'buy',
@@ -15,7 +12,7 @@ export enum Liquidity {
 }
 
 export interface Fill {
-  created_at: ISO_8601_UTC;
+  created_at: ISO_8601_MS_UTC;
   fee: string;
   liquidity: Liquidity;
   order_id: UUID_V4;
