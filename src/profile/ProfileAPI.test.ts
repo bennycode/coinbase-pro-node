@@ -84,4 +84,23 @@ describe('ProfileAPI', () => {
       }
     });
   });
+
+  describe('transferFunds', () => {
+    it('transfers funds from one profile to another', async done => {
+      nock(global.REST_URL)
+        .post(`${ProfileAPI.URL.PROFILES}/transfer`)
+        .query(() => true)
+        .reply(200);
+
+      const transfer = {
+        amount: '1000.00',
+        currency: 'BTC',
+        from: '86602c68-306a-4500-ac73-4ce56a91d83c',
+        to: 'e87429d3-f0a7-4f28-8dff-8dd93d383de1',
+      };
+
+      await global.client.rest.profile.transferFunds(transfer);
+      done();
+    });
+  });
 });
