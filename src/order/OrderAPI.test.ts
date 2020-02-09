@@ -81,8 +81,10 @@ describe('OrderAPI', () => {
 
   describe('getOrder', () => {
     it('returns correct order information', async () => {
+      const orderId = '8eba9e7b-08d6-4667-90ca-6db445d743c1';
+
       nock(global.REST_URL)
-        .get(`${OrderAPI.URL.ORDERS}/8eba9e7b-08d6-4667-90ca-6db445d743c1`)
+        .get(`${OrderAPI.URL.ORDERS}/${orderId}`)
         .query(() => true)
         .reply(
           200,
@@ -94,7 +96,7 @@ describe('OrderAPI', () => {
             fill_fees: '0.0249376391550000',
             filled_size: '0.01291771',
             funds: '9.9750623400000000',
-            id: '8eba9e7b-08d6-4667-90ca-6db445d743c1',
+            id: orderId,
             post_only: false,
             product_id: 'BTC-USD',
             settled: true,
@@ -111,7 +113,7 @@ describe('OrderAPI', () => {
       expect(order!.id).toBe('8eba9e7b-08d6-4667-90ca-6db445d743c1');
     });
 
-    it('returns null for 404', async () => {
+    it('returns null if an order cannot be found', async () => {
       nock(global.REST_URL)
         .get(`${OrderAPI.URL.ORDERS}/123`)
         .query(() => true)
@@ -122,7 +124,7 @@ describe('OrderAPI', () => {
       expect(order).toEqual(null);
     });
 
-    it('re-throws errors with status code other than 404', async () => {
+    it('rethrows errors with status code other than 404', async () => {
       nock(global.REST_URL)
         .get(`${OrderAPI.URL.ORDERS}/123`)
         .query(() => true)
