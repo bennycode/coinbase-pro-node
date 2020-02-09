@@ -12,6 +12,13 @@ export interface Profile {
   user_id: string;
 }
 
+export interface FundTransfer {
+  amount: string;
+  currency: string;
+  from: UUID_V4;
+  to: UUID_V4;
+}
+
 export class ProfileAPI {
   static readonly URL = {
     PROFILES: `/profiles`,
@@ -50,5 +57,15 @@ export class ProfileAPI {
 
       throw error;
     }
+  }
+
+  /**
+   * Transfer funds from API key’s profile to another user owned profile.
+   * This endpoint requires the “transfer” permission.
+   * @see https://docs.pro.coinbase.com/#create-profile-transfer
+   */
+  async transferFunds(transfer: FundTransfer): Promise<void> {
+    const resource = `${ProfileAPI.URL.PROFILES}/transfer`;
+    await this.apiClient.post(resource, transfer);
   }
 }
