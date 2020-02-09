@@ -1,3 +1,13 @@
+#### 0.9.4 (2020-02-09)
+
+##### New Features
+
+- Add profile / portfolio resource ([#38](https://github.com/bennyn/coinbase-pro-node/pull/38)) ([452af03a](https://github.com/bennyn/coinbase-pro-node/commit/452af03aa2d2f6c923c46688ee4891568aa0c413))
+
+##### Refactors
+
+- Export common types ([13a9bef8](https://github.com/bennyn/coinbase-pro-node/commit/13a9bef8220a3db71a5f3f0c88a4003355a9539e))
+
 #### 0.9.3 (2020-02-09)
 
 ##### Chores
