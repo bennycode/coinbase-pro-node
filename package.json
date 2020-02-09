@@ -80,9 +80,9 @@
     "postversion": "git push origin && git push origin --tags && npm publish",
     "prettier": "prettier --ignore-path .gitignore \"**/*.{json,scss,yml}\"",
     "preversion": "git pull && yarn && yarn test && yarn dist",
-    "release:major": "generate-changelog -M -x \"chore,docs,refactor,style,test\" && yarn changelog:commit && npm version major",
-    "release:minor": "generate-changelog -m -x \"chore,docs,refactor,style,test\" && yarn changelog:commit && npm version minor",
-    "release:patch": "generate-changelog -p -x \"chore,docs,refactor,style,test\" && yarn changelog:commit && npm version patch",
+    "release:major": "generate-changelog -M && yarn changelog:commit && npm version major",
+    "release:minor": "generate-changelog -m && yarn changelog:commit && npm version minor",
+    "release:patch": "generate-changelog -p && yarn changelog:commit && npm version patch",
     "start": "cross-env NODE_DEBUG=coinbase-pro-node* ts-node src/start.ts",
     "test": "nyc --nycrc-path=nyc.config.coverage.json jasmine --config=jasmine.json",
     "test:dev": "nyc jasmine --config=jasmine.json"

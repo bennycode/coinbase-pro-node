@@ -44,10 +44,10 @@ const auth = {
   apiKey: '',
   apiSecret: '',
   passphrase: '',
+  useSandbox: true,
 };
 
-const useSandbox = true;
-const client = new CoinbasePro(auth, useSandbox);
+const client = new CoinbasePro(auth);
 ```
 
 ## REST Example

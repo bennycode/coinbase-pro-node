@@ -5,6 +5,7 @@ export interface ClientAuthentication {
   apiKey: string;
   apiSecret: string;
   passphrase: string;
+  useSandbox: boolean;
 }
 
 export interface ClientConnection {
@@ -31,8 +32,8 @@ export class CoinbasePro {
     },
   };
 
-  constructor(auth: ClientAuthentication, useSandbox: boolean = false) {
-    this.url = useSandbox ? CoinbasePro.SETUP.SANDBOX : CoinbasePro.SETUP.PRODUCTION;
+  constructor(auth: ClientAuthentication) {
+    this.url = auth.useSandbox === true ? CoinbasePro.SETUP.SANDBOX : CoinbasePro.SETUP.PRODUCTION;
     this.rest = new RESTClient(this.url.REST, auth);
     this.ws = new WebSocketClient(this.url.WebSocket);
   }

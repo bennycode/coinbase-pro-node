@@ -11,6 +11,7 @@ describe('RESTClient', () => {
       apiKey: '',
       apiSecret: '',
       passphrase: '',
+      useSandbox: true,
     };
     const baseURL = global.REST_URL;
     return new RESTClient(baseURL, auth);
