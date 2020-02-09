@@ -39,6 +39,7 @@
   },
   "files": [
     "dist",
+    "!dist/test",
     "!dist/**/*.test.*"
   ],
   "homepage": "https://github.com/bennyn/coinbase-pro-node#readme",
