@@ -88,7 +88,7 @@ export class OrderAPI {
   async getOrder(orderId: string): Promise<Order | null> {
     const resource = `${OrderAPI.URL.ORDERS}/${orderId}`;
     try {
-      const response = await this.apiClient.get(resource);
+      const response = await this.apiClient.get<Order>(resource);
       return response.data;
     } catch (error) {
       /**

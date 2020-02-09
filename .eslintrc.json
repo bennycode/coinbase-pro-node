@@ -80,7 +80,6 @@
     ],
     "sort-vars": "error",
     "space-in-parens": "error",
-    "strict": ["error", "global"],
-    "valid-jsdoc": "error"
+    "strict": ["error", "global"]
   }
 }

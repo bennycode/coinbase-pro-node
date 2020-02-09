@@ -29,7 +29,7 @@ export class UserAPI {
    * This request will return your 30-day trailing volume for all products of the API key’s profile. This is a cached
    * value that’s calculated every day at midnight UTC.
    * @note This endpoint requires either the “view” or “trade” permission
-   * @returns {Promise<TrailingVolume>} Your 30-day trailing volume for all products of the API key’s profile
+   * @returns Your 30-day trailing volume for all products of the API key’s profile.
    * @see https://docs.pro.coinbase.com/#trailing-volume
    */
   async getTrailingVolume(): Promise<TrailingVolume[]> {
