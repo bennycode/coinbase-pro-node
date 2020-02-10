@@ -1,6 +1,6 @@
 # Coinbase Pro API
 
-![David](https://img.shields.io/david/bennyn/coinbase-pro-node?style=flat-square) [![codecov](https://codecov.io/gh/bennyn/coinbase-pro-node/branch/master/graph/badge.svg)](https://codecov.io/gh/bennyn/coinbase-pro-node)
+![GitHub top language](https://img.shields.io/github/languages/top/bennyn/coinbase-pro-node) [![codecov](https://codecov.io/gh/bennyn/coinbase-pro-node/branch/master/graph/badge.svg)](https://codecov.io/gh/bennyn/coinbase-pro-node) ![David](https://img.shields.io/david/bennyn/coinbase-pro-node) ![NPM](https://img.shields.io/npm/l/coinbase-pro-node)
 
 [Coinbase Pro][1] API for Node.js, written in TypeScript and covered by tests.
 
@@ -10,13 +10,11 @@ This project was created to continue an active **Coinbase Pro API** after Coinba
 
 ## Features
 
-Advantages over the [official counterpart][3]:
-
-- **Alive.** Not archived and ready-only. Pull Requests are welcome!
 - **Typed.** Source code is 100% TypeScript. No need to install external typings.
-- **Tested.** Code coverage is at 100%. No surprises when using it.
+- **Tested.** Code coverage is 100%. No surprises when using "coinbase-pro-node".
 - **Robust.** WebSocket reconnection is built-in. No problems if your Wi-Fi is gone.
-- **Easy-to-use.** HTTP requests are easy to customize. HMAC signing and JSON formatting is already included.
+- **Easy-to-use.** HTTP client with Promise API. No callbacks required.
+- **Maintained.** Automated security updates. No threats from outdated dependencies.
 
 ## Installation
 
