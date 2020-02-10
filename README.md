@@ -1,5 +1,7 @@
 # Coinbase Pro API
 
+![David](https://img.shields.io/david/bennyn/coinbase-pro-node?style=flat-square) [![codecov](https://codecov.io/gh/bennyn/coinbase-pro-node/branch/master/graph/badge.svg)](https://codecov.io/gh/bennyn/coinbase-pro-node)
+
 [Coinbase Pro][1] API for Node.js, written in TypeScript and covered by tests.
 
 ## Motivation
