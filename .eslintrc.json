@@ -81,5 +81,13 @@
     "sort-vars": "error",
     "space-in-parens": "error",
     "strict": ["error", "global"]
-  }
+  },
+  "overrides": [
+    {
+      "files": ["*.ts", "*.tsx"],
+      "rules": {
+        "no-dupe-class-members": "off"
+      }
+    }
+  ]
 }
