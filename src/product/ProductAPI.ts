@@ -1,10 +1,12 @@
-import {AxiosInstance} from 'axios';
+import {AxiosInstance, AxiosResponse} from 'axios';
 import {ISO_8601_MS_UTC} from '../payload/common';
 
 export interface Product {
   base_currency: string;
   base_increment: string;
+  /** Maximum order size */
   base_max_size: string;
+  /** Minimum order size */
   base_min_size: string;
   cancel_only: boolean;
   display_name: string;
@@ -15,6 +17,10 @@ export interface Product {
   min_market_funds: string;
   post_only: boolean;
   quote_currency: string;
+  /**
+   * Increment steps for min/max order size. The order price must be a multiple of this increment (i.e. if the
+   * increment is 0.01, order prices of 0.001 or 0.021 would be rejected).
+   */
   quote_increment: string;
   status: string;
   status_message: string;
@@ -46,6 +52,55 @@ export interface CandlesRequestParameters {
   end?: ISO_8601_MS_UTC;
   granularity: CandleGranularity;
   start?: ISO_8601_MS_UTC;
+}
+
+export enum OrderBookLevel {
+  ONLY_BEST_BID_AND_ASK = 1,
+  TOP_50_BIDS_AND_ASKS = 2,
+  FULL_ORDER_BOOK = 3,
+}
+
+/** Active order price */
+type ActiveOrderPrice = string;
+/** Sum of the size of the orders at active order price. */
+type OrderSumSize = string;
+/** Count of orders at active order price. */
+type CountOfOrders = string;
+/** Aggregated levels return only one size for each active order price. */
+type AggregatedOrder = [ActiveOrderPrice, OrderSumSize, CountOfOrders];
+/**
+ * Sequence numbers are increasing integer values for each product with every new message being exactly 1 sequence
+ * number than the one before it. If you see a sequence number that is more than one value from the previous, it means
+ * a message has been dropped. A sequence number less than one you have seen can be ignored or has arrived
+ * out-of-order. In both situations you may need to perform logic to make sure your system is in the correct state.
+ */
+type SequenceNumber = number;
+
+/** Represents only the best bid and ask. */
+export interface OrderBookLevel1 {
+  sequence: SequenceNumber;
+  bids: AggregatedOrder[];
+  asks: AggregatedOrder[];
+}
+
+/** Top 50 bids and asks (aggregated) BUT if there are not 50 then less bids and asks are returned. */
+export interface OrderBookLevel2 {
+  sequence: SequenceNumber;
+  bids: AggregatedOrder[];
+  asks: AggregatedOrder[];
+}
+
+/** Full order book (non aggregated) */
+export interface OrderBookLevel3 {
+  sequence: SequenceNumber;
+  bids: AggregatedOrder[];
+  asks: AggregatedOrder[];
+}
+
+export type OrderBook = OrderBookLevel1 | OrderBookLevel2 | OrderBookLevel3;
+
+export interface OrderBookRequestParameters {
+  level: OrderBookLevel;
 }
 
 type Close = number;
@@ -100,6 +155,35 @@ export class ProductAPI {
   async getProducts(): Promise<Product[]> {
     const resource = ProductAPI.URL.PRODUCTS;
     const response = await this.apiClient.get<Product[]>(resource);
+    return response.data;
+  }
+
+  /**
+   * Get a list of open orders for a product. The amount of detail shown can be customized with the level parameter.
+   * By default, only the inside (i.e. best) bid and ask are returned. This is equivalent to a book depth of 1 level.
+   *
+   * @param productId - Representation for base and counter
+   * @param params - Amount of detail
+   * @see https://docs.pro.coinbase.com/#get-product-order-book
+   */
+  async getProductOrderBook(
+    productId: string,
+    params: OrderBookRequestParameters = {level: OrderBookLevel.ONLY_BEST_BID_AND_ASK}
+  ): Promise<OrderBook> {
+    const resource = `${ProductAPI.URL.PRODUCTS}/${productId}/book`;
+    let response: AxiosResponse;
+
+    switch (params.level) {
+      case OrderBookLevel.TOP_50_BIDS_AND_ASKS:
+        response = await this.apiClient.get<OrderBookLevel2>(resource, {params});
+        break;
+      case OrderBookLevel.FULL_ORDER_BOOK:
+        response = await this.apiClient.get<OrderBookLevel3>(resource, {params});
+        break;
+      default:
+        response = await this.apiClient.get<OrderBookLevel1>(resource, {params});
+    }
+
     return response.data;
   }
 

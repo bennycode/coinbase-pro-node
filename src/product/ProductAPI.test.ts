@@ -1,5 +1,9 @@
 import nock from 'nock';
-import {ProductAPI} from './ProductAPI';
+import {OrderBookLevel, ProductAPI} from './ProductAPI';
+import Level1OrderBookBTCEUR from '../test/fixtures/rest/products/BTC-EUR/book/level-1.json';
+import Level2OrderBookBTCEUR from '../test/fixtures/rest/products/BTC-EUR/book/level-2.json';
+import Level2OrderBookBTCUSD from '../test/fixtures/rest/products/BTC-USD/book/level-2.json';
+import Level3OrderBookBTCUSD from '../test/fixtures/rest/products/BTC-USD/book/level-3.json';
 
 describe('ProductAPI', () => {
   describe('getProducts', () => {
@@ -54,6 +58,54 @@ describe('ProductAPI', () => {
       expect(products.length).toBe(2);
       expect(products[0].id).toBe('BTC-EUR');
       expect(products[1].id).toBe('XRP-USD');
+    });
+  });
+
+  describe('getProductOrderBook', () => {
+    it('lists only the best bid and ask by default', async () => {
+      const productId = 'BTC-EUR';
+      nock(global.REST_URL)
+        .get(`${ProductAPI.URL.PRODUCTS}/${productId}/book?level=1`)
+        .reply(() => [200, JSON.stringify(Level1OrderBookBTCEUR)]);
+
+      const orderBook = await global.client.rest.product.getProductOrderBook(productId);
+      expect(orderBook.asks.length).toBe(1);
+      expect(orderBook.bids.length).toBe(1);
+    });
+
+    it('lists up to 50 bids and asks with a depth of level 2', async () => {
+      nock(global.REST_URL)
+        .get(`${ProductAPI.URL.PRODUCTS}/BTC-USD/book?level=2`)
+        .reply(() => [200, JSON.stringify(Level2OrderBookBTCUSD)]);
+
+      nock(global.REST_URL)
+        .get(`${ProductAPI.URL.PRODUCTS}/BTC-EUR/book?level=2`)
+        .reply(() => [200, JSON.stringify(Level2OrderBookBTCEUR)]);
+
+      const orderBookBTCUSD = await global.client.rest.product.getProductOrderBook('BTC-USD', {
+        level: OrderBookLevel.TOP_50_BIDS_AND_ASKS,
+      });
+      expect(orderBookBTCUSD.asks.length).toBe(50);
+      expect(orderBookBTCUSD.bids.length).toBe(50);
+
+      const orderBookBTCEUR = await global.client.rest.product.getProductOrderBook('BTC-EUR', {
+        level: OrderBookLevel.TOP_50_BIDS_AND_ASKS,
+      });
+      expect(orderBookBTCEUR.asks.length).toBe(1);
+      expect(orderBookBTCEUR.bids.length).toBe(36);
+    });
+
+    it('lists the full order book with a depth of level 3', async () => {
+      const productId = 'BTC-USD';
+      const level = OrderBookLevel.FULL_ORDER_BOOK;
+
+      nock(global.REST_URL)
+        .get(`${ProductAPI.URL.PRODUCTS}/${productId}/book?level=${level}`)
+        .reply(() => [200, JSON.stringify(Level3OrderBookBTCUSD)]);
+
+      const orderBook = await global.client.rest.product.getProductOrderBook(productId, {level});
+      expect(orderBook.asks.length).toBe(60);
+      expect(orderBook.bids.length).toBe(877);
     });
   });
 
