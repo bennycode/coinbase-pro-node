@@ -52,7 +52,7 @@ const client = new CoinbasePro(auth);
 
 ## REST Example
 
-**Query accounts**
+**List accounts**
 
 ```javascript
 const tradingAccounts = await client.rest.account.listAccounts();
@@ -62,7 +62,7 @@ console.log(message);
 
 ## WebSocket Example
 
-**Event registration**
+**Subscribe to tickers**
 
 ```javascript
 client.on(WebSocketClient.TOPIC.ON_MESSAGE, event => {
