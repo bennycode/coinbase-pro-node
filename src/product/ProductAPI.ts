@@ -62,12 +62,15 @@ export enum OrderBookLevel {
 
 /** Active order price */
 type ActiveOrderPrice = string;
-/** Sum of the size of the orders at active order price. */
+/** Sum of the size of the orders at active order price. Size should not be multiplied by number of orders. */
 type OrderSumSize = string;
-/** Count of orders at active order price. */
-type CountOfOrders = string;
+/** Number of orders at active order price. */
+type NumberOfOrders = string;
+type OrderId = string;
 /** Aggregated levels return only one size for each active order price. */
-type AggregatedOrder = [ActiveOrderPrice, OrderSumSize, CountOfOrders];
+type AggregatedOrder = [ActiveOrderPrice, OrderSumSize, NumberOfOrders];
+type NonAggregatedOrder = [ActiveOrderPrice, OrderSumSize, OrderId];
+
 /**
  * Sequence numbers are increasing integer values for each product with every new message being exactly 1 sequence
  * number than the one before it. If you see a sequence number that is more than one value from the previous, it means
@@ -90,11 +93,14 @@ export interface OrderBookLevel2 {
   asks: AggregatedOrder[];
 }
 
-/** Full order book (non aggregated) */
+/**
+ * Full order book (non aggregated): Level 3 is only recommended for users wishing to maintain a full real-time order
+ * book using the websocket stream. Abuse of Level 3 via polling will cause your access to be limited or blocked.
+ */
 export interface OrderBookLevel3 {
   sequence: SequenceNumber;
-  bids: AggregatedOrder[];
-  asks: AggregatedOrder[];
+  bids: NonAggregatedOrder[];
+  asks: NonAggregatedOrder[];
 }
 
 export type OrderBook = OrderBookLevel1 | OrderBookLevel2 | OrderBookLevel3;
