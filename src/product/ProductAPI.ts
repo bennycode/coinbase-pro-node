@@ -174,6 +174,18 @@ export class ProductAPI {
    */
   async getProductOrderBook(
     productId: string,
+    params: {level: OrderBookLevel.ONLY_BEST_BID_AND_ASK}
+  ): Promise<OrderBookLevel1>;
+  async getProductOrderBook(
+    productId: string,
+    params: {level: OrderBookLevel.TOP_50_BIDS_AND_ASKS}
+  ): Promise<OrderBookLevel2>;
+  async getProductOrderBook(
+    productId: string,
+    params: {level: OrderBookLevel.FULL_ORDER_BOOK}
+  ): Promise<OrderBookLevel3>;
+  async getProductOrderBook(
+    productId: string,
     params: OrderBookRequestParameters = {level: OrderBookLevel.ONLY_BEST_BID_AND_ASK}
   ): Promise<OrderBook> {
     const resource = `${ProductAPI.URL.PRODUCTS}/${productId}/book`;

@@ -48,7 +48,7 @@
       }
     ],
     "no-const-assign": "error",
-    "no-dupe-class-members": "error",
+    "no-dupe-class-members": "off",
     "no-duplicate-case": "error",
     "no-duplicate-imports": "error",
     "no-else-return": "error",
