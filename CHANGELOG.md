@@ -1,3 +1,22 @@
+### 0.10.0 (2020-02-17)
+
+##### Chores
+
+- **deps-dev:**
+  - bump @typescript-eslint/parser from 2.19.0 to 2.19.2 ([#51](https://github.com/bennyn/coinbase-pro-node/pull/51)) ([5b6e55bb](https://github.com/bennyn/coinbase-pro-node/commit/5b6e55bb5346e4a6d006b861bec4da49904fed29))
+  - bump @typescript-eslint/eslint-plugin ([#50](https://github.com/bennyn/coinbase-pro-node/pull/50)) ([785c0aca](https://github.com/bennyn/coinbase-pro-node/commit/785c0acad62d23a2b7ddca822e2e9db7df677f9e))
+  - bump nock from 11.7.2 to 12.0.0 ([#48](https://github.com/bennyn/coinbase-pro-node/pull/48)) ([c6473912](https://github.com/bennyn/coinbase-pro-node/commit/c64739129f9f5923c7756f750f68a06c3816a34a))
+  - bump @types/jasmine from 3.5.3 to 3.5.4 ([#49](https://github.com/bennyn/coinbase-pro-node/pull/49)) ([7807ffdb](https://github.com/bennyn/coinbase-pro-node/commit/7807ffdbb09219ba0047960e75baae6f8fe19855))
+  - bump husky from 4.2.1 to 4.2.3 ([#47](https://github.com/bennyn/coinbase-pro-node/pull/47)) ([8383c695](https://github.com/bennyn/coinbase-pro-node/commit/8383c6954f6b80c8790908771cba2051bd2be410))
+
+##### New Features
+
+- Get Trades ([#52](https://github.com/bennyn/coinbase-pro-node/pull/52)) ([722fab5d](https://github.com/bennyn/coinbase-pro-node/commit/722fab5d303d8e3d0a7af896b0d72393fcaf0b33))
+
+##### Bug Fixes
+
+- Correct return type for order book depth of level 3 ([#46](https://github.com/bennyn/coinbase-pro-node/pull/46)) ([695afb94](https://github.com/bennyn/coinbase-pro-node/commit/695afb94fd5f85ea2d8ef56ee86880693fc7f3fd))
+
 #### 0.9.5 (2020-02-11)
 
 ##### Chores
