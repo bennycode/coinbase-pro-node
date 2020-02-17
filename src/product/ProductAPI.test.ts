@@ -4,6 +4,7 @@ import Level1OrderBookBTCEUR from '../test/fixtures/rest/products/BTC-EUR/book/l
 import Level2OrderBookBTCEUR from '../test/fixtures/rest/products/BTC-EUR/book/level-2.json';
 import Level2OrderBookBTCUSD from '../test/fixtures/rest/products/BTC-USD/book/level-2.json';
 import Level3OrderBookBTCUSD from '../test/fixtures/rest/products/BTC-USD/book/level-3.json';
+import TradesBTCEUR from '../test/fixtures/rest/products/BTC-EUR/trades/GET-200.json';
 
 describe('ProductAPI', () => {
   describe('getProducts', () => {
@@ -58,6 +59,17 @@ describe('ProductAPI', () => {
       expect(products.length).toBe(2);
       expect(products[0].id).toBe('BTC-EUR');
       expect(products[1].id).toBe('XRP-USD');
+    });
+  });
+
+  describe('getTrades', () => {
+    it('lists the latest public trades for a product', async () => {
+      const productId = 'BTC-EUR';
+      nock(global.REST_URL)
+        .get(`${ProductAPI.URL.PRODUCTS}/${productId}/trades`)
+        .reply(() => [200, JSON.stringify(TradesBTCEUR)]);
+      const trades = await global.client.rest.product.getTrades(productId);
+      expect(trades.length).toBe(100);
     });
   });
 
