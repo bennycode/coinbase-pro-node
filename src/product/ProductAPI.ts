@@ -46,7 +46,28 @@ export interface ProductStats {
   volume_30day: string;
 }
 
-export type CandleGranularity = 60 | 300 | 900 | 3600 | 21600 | 86400;
+export enum Side {
+  BUY = 'buy',
+  SELL = 'sell',
+}
+
+export interface Trade {
+  time: ISO_8601_MS_UTC;
+  trade_id: number;
+  price: string;
+  size: string;
+  side: Side;
+}
+
+/** Accepted granularity in seconds to group historic rates. */
+export enum CandleGranularity {
+  ONE_MINUTE = 60,
+  FIVE_MINUTES = 300,
+  FIFTEEN_MINUTES = 900,
+  ONE_HOUR = 3600,
+  SIX_HOURS = 21600,
+  ONE_DAY = 86400,
+}
 
 export interface CandlesRequestParameters {
   end?: ISO_8601_MS_UTC;
@@ -161,6 +182,12 @@ export class ProductAPI {
   async getProducts(): Promise<Product[]> {
     const resource = ProductAPI.URL.PRODUCTS;
     const response = await this.apiClient.get<Product[]>(resource);
+    return response.data;
+  }
+
+  async getTrades(productId: string): Promise<Trade[]> {
+    const resource = `${ProductAPI.URL.PRODUCTS}/${productId}/trades`;
+    const response = await this.apiClient.get<Trade[]>(resource);
     return response.data;
   }
 
