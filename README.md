@@ -1,6 +1,6 @@
 # Coinbase Pro API
 
-![GitHub top language](https://img.shields.io/github/languages/top/bennyn/coinbase-pro-node) [![codecov](https://codecov.io/gh/bennyn/coinbase-pro-node/branch/master/graph/badge.svg)](https://codecov.io/gh/bennyn/coinbase-pro-node) ![David](https://img.shields.io/david/bennyn/coinbase-pro-node) ![NPM](https://img.shields.io/npm/l/coinbase-pro-node)
+![GitHub top language](https://img.shields.io/github/languages/top/bennyn/coinbase-pro-node) [![codecov](https://codecov.io/gh/bennyn/coinbase-pro-node/branch/master/graphs/badge.svg)](https://codecov.io/gh/bennyn/coinbase-pro-node) ![David](https://img.shields.io/david/bennyn/coinbase-pro-node.svg) ![NPM](https://img.shields.io/npm/l/coinbase-pro-node)
 
 [Coinbase Pro][1] API for Node.js, written in TypeScript and covered by tests.
 
