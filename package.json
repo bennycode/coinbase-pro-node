@@ -42,7 +42,7 @@
     "!dist/test",
     "!dist/**/*.test.*"
   ],
-  "homepage": "https://github.com/bennyn/coinbase-pro-node#readme",
+  "homepage": "https://documentup.com/bennyn/coinbase-pro-node",
   "keywords": [
     "API",
     "Bitcoin",
