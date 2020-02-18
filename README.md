@@ -71,7 +71,10 @@ client.on(WebSocketClient.TOPIC.ON_MESSAGE, event => {
 
 await client.ws.connect();
 
-client.ws.subscribeToTickers(['BTC-USD', 'ETH-EUR']);
+client.ws.subscribe({
+  name: WebSocketChannelName.TICKER,
+  product_ids: ['BTC-USD', 'ETH-EUR'],
+});
 ```
 
 ## Resources

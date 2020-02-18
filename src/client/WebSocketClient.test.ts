@@ -37,7 +37,7 @@ describe('WebSocketClient', () => {
     });
   });
 
-  describe('subscribeToTickers', () => {
+  describe('subscribe', () => {
     it('receives real-time price updates from the ticker channel every time a match happens', async done => {
       server.on('connection', ws => {
         ws.on('message', (message: string) => {
@@ -64,7 +64,10 @@ describe('WebSocketClient', () => {
       client.on(WebSocketClient.TOPIC.ON_MESSAGE, event => {
         if (event.type === 'ticker') {
           expect(event.trade_id).toBe(3526965);
-          client.unsubscribeFromTickers(productIds);
+          client.unsubscribe({
+            name: WebSocketChannelName.TICKER,
+            product_ids: productIds,
+          });
         }
 
         if (event.type === 'unsubscribe') {
@@ -73,7 +76,10 @@ describe('WebSocketClient', () => {
       });
 
       await client.connect();
-      client.subscribeToTickers(productIds);
+      client.subscribe({
+        name: WebSocketChannelName.TICKER,
+        product_ids: productIds,
+      });
     });
   });
 
