@@ -39,8 +39,9 @@
   },
   "files": [
     "dist",
-    "!dist/test",
-    "!dist/**/*.test.*"
+    "!/dist/start.d.ts",
+    "!/dist/start.js",
+    "!/dist/start.js.map"
   ],
   "homepage": "https://documentup.com/bennyn/coinbase-pro-node",
   "keywords": [
