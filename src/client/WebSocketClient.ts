@@ -114,20 +114,6 @@ class WebSocketClient extends EventEmitter {
     });
   }
 
-  public subscribeToTickers(productIds: string[]): void {
-    this.subscribe({
-      name: WebSocketChannelName.TICKER,
-      product_ids: productIds,
-    });
-  }
-
-  public unsubscribeFromTickers(productIds: string[]): void {
-    this.unsubscribe({
-      name: WebSocketChannelName.TICKER,
-      product_ids: productIds,
-    });
-  }
-
   public unsubscribe(channel: WebSocketChannel): void {
     this.sendMessage({
       channels: [channel],
