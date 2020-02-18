@@ -1,3 +1,16 @@
+### 0.11.0 (2020-02-18)
+
+##### Chores
+
+- Adjust line endings ([#53](https://github.com/bennyn/coinbase-pro-node/pull/53)) ([b51086d1](https://github.com/bennyn/coinbase-pro-node/commit/b51086d18a5ff63831c7828265a9c7b33dc7f979))
+- Add custom homepage ([63c63f03](https://github.com/bennyn/coinbase-pro-node/commit/63c63f039c70e9f397455fbac478c76de00e6604))
+- Adjust badge urls to be found with "node-detect-readme-badges" ([2f38a459](https://github.com/bennyn/coinbase-pro-node/commit/2f38a459bdd5061b37a4c06fc964d0f42df9dcb8))
+- Add EditorConfig ([9ed33222](https://github.com/bennyn/coinbase-pro-node/commit/9ed3322278a7779c0f4560b471d80bc233d65a22))
+
+##### New Features
+
+- Expose WebSocket channels for "status" and "user" ([#54](https://github.com/bennyn/coinbase-pro-node/pull/54)) ([f922ab81](https://github.com/bennyn/coinbase-pro-node/commit/f922ab81bdf3e5e7305e71e485b4c03b4abe3eed))
+
 ### 0.10.0 (2020-02-17)
 
 ##### Chores
