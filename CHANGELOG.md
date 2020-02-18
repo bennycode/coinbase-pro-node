@@ -1,3 +1,9 @@
+#### 0.11.2 (2020-02-18)
+
+##### Chores
+
+- Publish tests ([d751ba23](https://github.com/bennyn/coinbase-pro-node/commit/d751ba23422e1b48dd2cd0f76bbbc9f9f87e1ac0))
+
 #### 0.11.1 (2020-02-18)
 
 ##### Chores
