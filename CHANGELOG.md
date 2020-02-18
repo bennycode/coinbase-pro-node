@@ -1,3 +1,10 @@
+#### 0.11.1 (2020-02-18)
+
+##### Chores
+
+- Remove start script from publication ([#55](https://github.com/bennyn/coinbase-pro-node/pull/55)) ([a480e769](https://github.com/bennyn/coinbase-pro-node/commit/a480e76937a8ffd10296f8b4f1dc51190608426a))
+- Adjust badge url to be found with "node-detect-readme-badges" ([b6eb427c](https://github.com/bennyn/coinbase-pro-node/commit/b6eb427c7b151bd76fa2ca764e9530a72cb73230))
+
 ### 0.11.0 (2020-02-18)
 
 ##### Chores
