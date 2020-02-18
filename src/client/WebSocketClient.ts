@@ -9,11 +9,20 @@ export interface WebSocketChannel {
 }
 
 export enum WebSocketChannelName {
+  /** The full channel provides real-time updates on orders and trades. These updates can be applied on to a level 3 order book snapshot to maintain an accurate and up-to-date copy of the exchange order book. */
   FULL = 'full',
+  /** To receive heartbeat messages for specific products once a second subscribe to the heartbeat channel. Heartbeats also include sequence numbers and last trade ids that can be used to verify no messages were missed. */
   HEARTBEAT = 'heartbeat',
+  /** The easiest way to keep a snapshot of the order book is to use the level2 channel. It guarantees delivery of all updates, which reduce a lot of the overhead required when consuming the full channel. */
   LEVEL2 = 'level2',
+  /** If you are only interested in match messages you can subscribe to the matches channel. This is useful when you’re consuming the remaining feed using the level 2 channel. Please note that messages can be dropped from this channel. By using the heartbeat channel you can track the last trade id and fetch trades that you missed from the REST API. */
   MATCHES = 'matches',
+  /** The status channel will send all products and currencies on a preset interval. */
+  STATUS = 'status',
+  /** The ticker channel provides real-time price updates every time a match happens. It batches updates in case of cascading matches, greatly reducing bandwidth requirements. */
   TICKER = 'ticker',
+  /** This channel is a version of the full channel that only contains messages that include the authenticated user. Consequently, you need to be authenticated to receive any messages. */
+  USER = 'user',
 }
 
 export interface WebSocketRequest {
@@ -97,28 +106,32 @@ class WebSocketClient extends EventEmitter {
     this.socket.send(JSON.stringify(message));
   }
 
-  public subscribeToTickers(productIds: string[]): void {
+  public subscribe(channel: WebSocketChannel): void {
     this.sendMessage({
-      channels: [
-        {
-          name: WebSocketChannelName.TICKER,
-          product_ids: productIds,
-        },
-      ],
-      product_ids: productIds,
+      channels: [channel],
+      product_ids: channel.product_ids,
       type: WebSocketRequestType.SUBSCRIBE,
     });
   }
 
-  public unsubscribeFromTickers(productIds: string[]): void {
-    this.sendMessage({
-      channels: [
-        {
-          name: WebSocketChannelName.TICKER,
-          product_ids: productIds,
-        },
-      ],
+  public subscribeToTickers(productIds: string[]): void {
+    this.subscribe({
+      name: WebSocketChannelName.TICKER,
       product_ids: productIds,
+    });
+  }
+
+  public unsubscribeFromTickers(productIds: string[]): void {
+    this.unsubscribe({
+      name: WebSocketChannelName.TICKER,
+      product_ids: productIds,
+    });
+  }
+
+  public unsubscribe(channel: WebSocketChannel): void {
+    this.sendMessage({
+      channels: [channel],
+      product_ids: channel.product_ids,
       type: WebSocketRequestType.UNSUBSCRIBE,
     });
   }
