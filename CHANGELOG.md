@@ -1,3 +1,9 @@
+## 1.0.0 (2020-02-20)
+
+##### New Features
+
+- Export response types ([#56](https://github.com/bennyn/coinbase-pro-node/pull/56)) ([7fff578c](https://github.com/bennyn/coinbase-pro-node/commit/7fff578cf7e757c7bc408d56fc4414239b12f87c))
+
 #### 0.11.2 (2020-02-18)
 
 ##### Chores
