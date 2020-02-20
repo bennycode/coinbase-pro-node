@@ -10,7 +10,7 @@ import {FillAPI} from '../fill/FillAPI';
 import querystring from 'querystring';
 import {ProfileAPI} from '../profile/ProfileAPI';
 
-class RESTClient {
+export class RESTClient {
   get defaults(): AxiosRequestConfig {
     return this.httpClient.defaults;
   }
@@ -80,5 +80,3 @@ class RESTClient {
     return params ? `?${params}` : '';
   }
 }
-
-export {RESTClient};

@@ -36,7 +36,7 @@ export enum WebSocketRequestType {
   UNSUBSCRIBE = 'unsubscribe',
 }
 
-class WebSocketClient extends EventEmitter {
+export class WebSocketClient extends EventEmitter {
   public static CLOSE_EVENT_CODE = {
     GOING_AWAY: 1001,
     NORMAL_CLOSURE: 1000,
@@ -122,5 +122,3 @@ class WebSocketClient extends EventEmitter {
     });
   }
 }
-
-export {WebSocketClient};
