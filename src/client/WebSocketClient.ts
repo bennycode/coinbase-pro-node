@@ -1,4 +1,4 @@
-import EventEmitter from 'events';
+import {EventEmitter} from 'events';
 import ReconnectingWebSocket, {Event, Options} from 'reconnecting-websocket';
 import WebSocket from 'ws';
 import {SignedRequest} from '../auth/RequestSigner';
