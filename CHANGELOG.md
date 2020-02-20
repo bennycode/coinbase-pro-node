@@ -1,3 +1,9 @@
+#### 1.0.1 (2020-02-20)
+
+##### Bug Fixes
+
+- `EventEmitter` constructor function type in `WebSocketClient` ([#57](https://github.com/bennyn/coinbase-pro-node/pull/57)) ([bd1a358c](https://github.com/bennyn/coinbase-pro-node/commit/bd1a358c12f18ff09500e549f36c4962fc39b702))
+
 ## 1.0.0 (2020-02-20)
 
 ##### New Features
