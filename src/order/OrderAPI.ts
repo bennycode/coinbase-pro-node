@@ -1,9 +1,5 @@
 import {AxiosInstance} from 'axios';
-
-export enum OrderSide {
-  BUY = 'buy',
-  SELL = 'sell',
-}
+import {OrderSide} from '../payload/common';
 
 export enum OrderType {
   LIMIT = 'limit',
