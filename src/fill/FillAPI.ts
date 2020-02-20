@@ -1,10 +1,5 @@
 import {AxiosInstance} from 'axios';
-import {ISO_8601_MS_UTC, UUID_V4} from '../payload/common';
-
-export enum OrderSide {
-  BUY = 'buy',
-  SELL = 'sell',
-}
+import {ISO_8601_MS_UTC, UUID_V4, OrderSide} from '../payload/common';
 
 export enum Liquidity {
   MAKER = 'M',
