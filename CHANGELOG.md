@@ -1,3 +1,17 @@
+### 1.1.0 (2020-02-21)
+
+##### Chores
+
+- Always do releases from master branch ([291c854c](https://github.com/bennyn/coinbase-pro-node/commit/291c854c54a86b2e09263ad2b3ececf251b79e3c))
+
+##### New Features
+
+- Export WebSocket response types ([#60](https://github.com/bennyn/coinbase-pro-node/pull/60)) ([ad4c985e](https://github.com/bennyn/coinbase-pro-node/commit/ad4c985efb4ec1e02e35042c18d4cacf195ce001))
+
+##### Refactors
+
+- Set public access modifiers by default ([#59](https://github.com/bennyn/coinbase-pro-node/pull/59)) ([9cb1ba86](https://github.com/bennyn/coinbase-pro-node/commit/9cb1ba86d02f7c4b773c19d35f92ffde9fa21739))
+
 #### 1.0.1 (2020-02-20)
 
 ##### Bug Fixes
