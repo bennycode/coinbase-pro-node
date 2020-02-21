@@ -37,14 +37,14 @@ export enum WebSocketRequestType {
 }
 
 export class WebSocketClient extends EventEmitter {
-  public static CLOSE_EVENT_CODE = {
+  static CLOSE_EVENT_CODE = {
     GOING_AWAY: 1001,
     NORMAL_CLOSURE: 1000,
     PROTOCOL_ERROR: 1002,
     UNSUPPORTED_DATA: 1003,
   };
 
-  public static TOPIC = {
+  static TOPIC = {
     ON_CLOSE: 'WebSocketClient.TOPIC.ON_CLOSE',
     ON_ERROR: 'WebSocketClient.TOPIC.ON_ERROR',
     ON_MESSAGE: 'WebSocketClient.TOPIC.ON_MESSAGE',
@@ -58,7 +58,7 @@ export class WebSocketClient extends EventEmitter {
     this.baseURL = baseURL;
   }
 
-  public connect(): Promise<ReconnectingWebSocket> {
+  connect(): Promise<ReconnectingWebSocket> {
     return new Promise(resolve => {
       const options: Options = {
         WebSocket,
@@ -88,13 +88,13 @@ export class WebSocketClient extends EventEmitter {
     });
   }
 
-  public disconnect(reason: string = 'Unknown reason'): void {
+  disconnect(reason: string = 'Unknown reason'): void {
     if (this.socket) {
       this.socket.close(WebSocketClient.CLOSE_EVENT_CODE.NORMAL_CLOSURE, reason);
     }
   }
 
-  public sendMessage(message: WebSocketRequest, signature?: SignedRequest): void {
+  sendMessage(message: WebSocketRequest, signature?: SignedRequest): void {
     if (!this.socket) {
       throw new Error('You need to connect to the WebSocket first!');
     }
@@ -106,7 +106,7 @@ export class WebSocketClient extends EventEmitter {
     this.socket.send(JSON.stringify(message));
   }
 
-  public subscribe(channel: WebSocketChannel): void {
+  subscribe(channel: WebSocketChannel): void {
     this.sendMessage({
       channels: [channel],
       product_ids: channel.product_ids,
@@ -114,7 +114,7 @@ export class WebSocketClient extends EventEmitter {
     });
   }
 
-  public unsubscribe(channel: WebSocketChannel): void {
+  unsubscribe(channel: WebSocketChannel): void {
     this.sendMessage({
       channels: [channel],
       product_ids: channel.product_ids,

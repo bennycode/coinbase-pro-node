@@ -22,12 +22,12 @@ export class RESTClient {
     return this.httpClient.interceptors;
   }
 
-  public readonly account: AccountAPI;
-  public readonly fill: FillAPI;
-  public readonly order: OrderAPI;
-  public readonly product: ProductAPI;
-  public readonly profile: ProfileAPI;
-  public readonly user: UserAPI;
+  readonly account: AccountAPI;
+  readonly fill: FillAPI;
+  readonly order: OrderAPI;
+  readonly product: ProductAPI;
+  readonly profile: ProfileAPI;
+  readonly user: UserAPI;
 
   private readonly httpClient: AxiosInstance;
 
