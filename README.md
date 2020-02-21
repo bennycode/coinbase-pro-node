@@ -1,6 +1,6 @@
 # Coinbase Pro API
 
-![GitHub top language](https://img.shields.io/github/languages/top/bennyn/coinbase-pro-node) [![codecov](https://codecov.io/gh/bennyn/coinbase-pro-node/branch/master/graphs/badge.svg)](https://codecov.io/gh/bennyn/coinbase-pro-node) ![David](https://img.shields.io/david/bennyn/coinbase-pro-node.svg) ![NPM](https://img.shields.io/npm/l/coinbase-pro-node.svg)
+![Language Details](https://img.shields.io/github/languages/top/bennyn/coinbase-pro-node) [![Code Coverage](https://codecov.io/gh/bennyn/coinbase-pro-node/branch/master/graphs/badge.svg)](https://codecov.io/gh/bennyn/coinbase-pro-node) ![License](https://img.shields.io/npm/l/coinbase-pro-node.svg) ![Package Version](https://img.shields.io/npm/v/coinbase-pro-node) ![Dependency updates](https://img.shields.io/david/bennyn/coinbase-pro-node.svg)
 
 [Coinbase Pro][1] API for Node.js, written in TypeScript and covered by tests.
 
@@ -65,7 +65,7 @@ console.log(message);
 **Subscribe to tickers**
 
 ```javascript
-client.on(WebSocketClient.TOPIC.ON_MESSAGE, event => {
+client.on(WebSocketEvent.ON_MESSAGE, event => {
   console.log(`Received event of type "${event.type}".`);
 });
 
