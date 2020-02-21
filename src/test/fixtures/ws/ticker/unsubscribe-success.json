@@ -1,4 +1,5 @@
 {
-  "channels": ["ticker"],
-  "type": "unsubscribe"
+  "type": "subscriptions",
+  "product_ids": [],
+  "channels": ["ticker"]
 }

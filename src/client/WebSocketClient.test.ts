@@ -2,7 +2,14 @@ import WebSocket = require('ws');
 import {SignedRequest} from '../auth/RequestSigner';
 import tickerBTCUSD from '../test/fixtures/ws/ticker/BTC-USD.json';
 import tickerUnsubscribeSuccess from '../test/fixtures/ws/ticker/unsubscribe-success.json';
-import {WebSocketChannelName, WebSocketClient, WebSocketRequest, WebSocketRequestType} from './WebSocketClient';
+import {
+  WebSocketChannelName,
+  WebSocketClient,
+  WebSocketRequest,
+  WebSocketRequestType,
+  WebSocketEvent,
+  WebSocketResponseType,
+} from './WebSocketClient';
 
 const WEBSOCKET_PORT = 8087;
 const WEBSOCKET_URL = `ws://localhost:${WEBSOCKET_PORT}`;
@@ -32,7 +39,7 @@ describe('WebSocketClient', () => {
   describe('constructor', () => {
     it('it signals an event when the WebSocket connection is established', async done => {
       const client = new WebSocketClient(WEBSOCKET_URL);
-      client.on(WebSocketClient.TOPIC.ON_OPEN, () => done());
+      client.on(WebSocketEvent.ON_OPEN, () => done());
       await client.connect();
     });
   });
@@ -61,8 +68,8 @@ describe('WebSocketClient', () => {
       const productIds = ['BTC-USD'];
       const client = new WebSocketClient(WEBSOCKET_URL);
 
-      client.on(WebSocketClient.TOPIC.ON_MESSAGE, event => {
-        if (event.type === 'ticker') {
+      client.on(WebSocketEvent.ON_MESSAGE, event => {
+        if (event.type === WebSocketResponseType.TICKER) {
           expect(event.trade_id).toBe(3526965);
           client.unsubscribe({
             name: WebSocketChannelName.TICKER,
@@ -70,7 +77,7 @@ describe('WebSocketClient', () => {
           });
         }
 
-        if (event.type === 'unsubscribe') {
+        if (event.type === WebSocketResponseType.SUBSCRIPTIONS) {
           done();
         }
       });
@@ -88,7 +95,7 @@ describe('WebSocketClient', () => {
       const client = new WebSocketClient(WEBSOCKET_URL);
       const onClose = jasmine.createSpy('onClose');
 
-      client.on(WebSocketClient.TOPIC.ON_CLOSE, () => {
+      client.on(WebSocketEvent.ON_CLOSE, () => {
         onClose();
       });
 
@@ -99,11 +106,11 @@ describe('WebSocketClient', () => {
     it('emits an event when an existing connection gets closed', async done => {
       const client = new WebSocketClient(WEBSOCKET_URL);
 
-      client.on(WebSocketClient.TOPIC.ON_CLOSE, () => {
+      client.on(WebSocketEvent.ON_CLOSE, () => {
         done();
       });
 
-      client.on(WebSocketClient.TOPIC.ON_OPEN, () => {
+      client.on(WebSocketEvent.ON_OPEN, () => {
         client.disconnect();
       });
 
@@ -154,7 +161,7 @@ describe('WebSocketClient', () => {
 
       const client = new WebSocketClient(WEBSOCKET_URL);
 
-      client.on(WebSocketClient.TOPIC.ON_OPEN, () => {
+      client.on(WebSocketEvent.ON_OPEN, () => {
         client.sendMessage(message, signature);
       });
 
