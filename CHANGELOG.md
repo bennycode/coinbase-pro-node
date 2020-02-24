@@ -1,3 +1,19 @@
+### 1.2.0 (2020-02-24)
+
+##### Chores
+
+- **deps-dev:**
+  - bump @typescript-eslint/parser from 2.19.2 to 2.20.0 ([#61](https://github.com/bennyn/coinbase-pro-node/pull/61)) ([c2594b8e](https://github.com/bennyn/coinbase-pro-node/commit/c2594b8ee7f19363f7547c7081a4f909b1ee7a4f))
+  - bump @typescript-eslint/eslint-plugin ([#64](https://github.com/bennyn/coinbase-pro-node/pull/64)) ([17db6bdf](https://github.com/bennyn/coinbase-pro-node/commit/17db6bdf4cf814281d94ba6ec85b9c1e5578c9b7))
+  - bump nock from 12.0.0 to 12.0.1 ([#65](https://github.com/bennyn/coinbase-pro-node/pull/65)) ([73af81b9](https://github.com/bennyn/coinbase-pro-node/commit/73af81b9fd23287132e7281fcccc68fb1f6de791))
+  - bump @types/jasmine from 3.5.4 to 3.5.6 ([#63](https://github.com/bennyn/coinbase-pro-node/pull/63)) ([950390f1](https://github.com/bennyn/coinbase-pro-node/commit/950390f15d6188535a22af097e7c7e0439872576))
+  - bump typescript from 3.7.5 to 3.8.2 ([#62](https://github.com/bennyn/coinbase-pro-node/pull/62)) ([e3262249](https://github.com/bennyn/coinbase-pro-node/commit/e32622497ea19d2486eb326eea839b00adaa2fec))
+
+##### New Features
+
+- Export type for "matches" channel from WebSocket ([#67](https://github.com/bennyn/coinbase-pro-node/pull/67)) ([b84de740](https://github.com/bennyn/coinbase-pro-node/commit/b84de7404fd0f7c2c14c26ee47571b5f971dc373))
+- Export type for ticker message from WebSocket ([#66](https://github.com/bennyn/coinbase-pro-node/pull/66)) ([5329ff6b](https://github.com/bennyn/coinbase-pro-node/commit/5329ff6b48c1e3581d8e5dc609a2b079914f5a8b))
+
 ### 1.1.0 (2020-02-21)
 
 ##### Chores
