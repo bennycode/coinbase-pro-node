@@ -2,7 +2,7 @@ import {EventEmitter} from 'events';
 import ReconnectingWebSocket, {Event, ErrorEvent, Options, CloseEvent} from 'reconnecting-websocket';
 import WebSocket from 'ws';
 import {SignedRequest} from '../auth/RequestSigner';
-import {OrderSide, ISO_8601_MS_UTC} from '..';
+import {OrderSide, ISO_8601_MS_UTC, UUID_V4} from '..';
 
 export interface WebSocketChannel {
   name: WebSocketChannelName;
@@ -114,13 +114,13 @@ export enum WebSocketResponseType {
    * An `activate` message is sent when a stop order is placed. When the stop is triggered the order will be placed and
    * go through the order lifecycle.
    */
-  FULL_ACTIVE = 'active',
+  FULL_ACTIVATE = 'activate',
 }
 
 export type WebSocketResponse = {type: WebSocketResponseType} & WebSocketMessage;
 
 // Not exported because it will become "WebSocketResponse" once complete
-type WebSocketMessage = Record<string, string | number | boolean> | WebSocketTickerMessage;
+type WebSocketMessage = Record<string, string | number | boolean> | WebSocketTickerMessage | WebSocketMatchMessage;
 
 export type WebSocketTickerMessage = {
   best_ask: string;
@@ -140,10 +140,24 @@ export type WebSocketTickerMessage = {
   volume_30d: string;
 };
 
+export type WebSocketMatchMessage = {
+  maker_order_id: UUID_V4;
+  price: string;
+  product_id: string;
+  sequence: number;
+  side: OrderSide;
+  size: string;
+  taker_order_id: UUID_V4;
+  time: ISO_8601_MS_UTC;
+  trade_id: number;
+  type: WebSocketResponseType.FULL_MATCH;
+};
+
 export enum WebSocketEvent {
   ON_CLOSE = 'WebSocketEvent.ON_CLOSE',
   ON_ERROR = 'WebSocketEvent.ON_ERROR',
   ON_MESSAGE = 'WebSocketEvent.ON_MESSAGE',
+  ON_MESSAGE_MATCHES = 'WebSocketEvent.ON_MESSAGE_MATCHES',
   ON_MESSAGE_TICKER = 'WebSocketEvent.ON_MESSAGE_TICKER',
   ON_OPEN = 'WebSocketEvent.ON_OPEN',
 }
@@ -154,6 +168,8 @@ export interface WebSocketClient {
   on(event: WebSocketEvent.ON_ERROR, listener: (event: ErrorEvent) => void): this;
 
   on(event: WebSocketEvent.ON_MESSAGE, listener: (response: WebSocketResponse) => void): this;
+
+  on(event: WebSocketEvent.ON_MESSAGE_MATCHES, listener: (matchMessage: WebSocketMatchMessage) => void): this;
 
   on(event: WebSocketEvent.ON_MESSAGE_TICKER, listener: (tickerMessage: WebSocketTickerMessage) => void): this;
 
@@ -196,10 +212,15 @@ export class WebSocketClient extends EventEmitter {
 
       this.socket.onmessage = (event: MessageEvent): void => {
         const response: WebSocketResponse = JSON.parse(event.data);
-        if (response.type === WebSocketResponseType.TICKER) {
-          this.emit(WebSocketEvent.ON_MESSAGE_TICKER, response);
-        } else {
-          this.emit(WebSocketEvent.ON_MESSAGE, response);
+        switch (response.type) {
+          case WebSocketResponseType.TICKER:
+            this.emit(WebSocketEvent.ON_MESSAGE_TICKER, response);
+            break;
+          case WebSocketResponseType.FULL_MATCH:
+            this.emit(WebSocketEvent.ON_MESSAGE_MATCHES, response);
+            break;
+          default:
+            this.emit(WebSocketEvent.ON_MESSAGE, response);
         }
       };
 

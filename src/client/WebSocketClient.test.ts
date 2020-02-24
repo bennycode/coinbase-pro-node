@@ -1,6 +1,7 @@
 import WebSocket = require('ws');
 import {SignedRequest} from '../auth/RequestSigner';
 import tickerBTCUSD from '../test/fixtures/ws/ticker/BTC-USD.json';
+import matchesBTCUSD from '../test/fixtures/ws/matches/BTC-USD.json';
 import tickerUnsubscribeSuccess from '../test/fixtures/ws/ticker/unsubscribe-success.json';
 import {
   WebSocketChannelName,
@@ -45,7 +46,7 @@ describe('WebSocketClient', () => {
   });
 
   describe('subscribe', () => {
-    it('receives real-time price updates from the ticker channel every time a match happens', async done => {
+    it('receives typed messages from the "ticker" channel', async done => {
       server.on('connection', ws => {
         ws.on('message', (message: string) => {
           const request = JSON.parse(message);
@@ -83,8 +84,54 @@ describe('WebSocketClient', () => {
       });
 
       await client.connect();
+
       client.subscribe({
         name: WebSocketChannelName.TICKER,
+        product_ids: productIds,
+      });
+    });
+
+    it('receives typed messages from the "matches" channel', async done => {
+      server.on('connection', ws => {
+        ws.on('message', (message: string) => {
+          const request = JSON.parse(message);
+          let response: string;
+
+          if (request.type === WebSocketRequestType.SUBSCRIBE) {
+            response = JSON.stringify(matchesBTCUSD);
+          }
+
+          if (request.type === WebSocketRequestType.UNSUBSCRIBE) {
+            response = JSON.stringify(tickerUnsubscribeSuccess);
+          }
+
+          server.clients.forEach(client => {
+            client.send(response);
+          });
+        });
+      });
+
+      const productIds = ['BTC-USD'];
+      const client = new WebSocketClient(WEBSOCKET_URL);
+
+      client.on(WebSocketEvent.ON_MESSAGE_MATCHES, message => {
+        expect(message.trade_id).toBe(9713921);
+        client.unsubscribe({
+          name: WebSocketChannelName.MATCHES,
+          product_ids: productIds,
+        });
+      });
+
+      client.on(WebSocketEvent.ON_MESSAGE, event => {
+        if (event.type === WebSocketResponseType.SUBSCRIPTIONS) {
+          done();
+        }
+      });
+
+      await client.connect();
+
+      client.subscribe({
+        name: WebSocketChannelName.MATCHES,
         product_ids: productIds,
       });
     });

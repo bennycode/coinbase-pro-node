@@ -1,0 +1,12 @@
+{
+  "maker_order_id": "97bb540a-2ad1-45c4-885d-9e088e091e9e",
+  "price": "9692.53",
+  "product_id": "BTC-USD",
+  "sequence": 122107997,
+  "side": "sell",
+  "size": "2.2285",
+  "taker_order_id": "51a1cb96-4c1f-48b6-9639-8da567469c47",
+  "time": "2020-02-24T07:20:00.716579Z",
+  "trade_id": 9713921,
+  "type": "match"
+}
