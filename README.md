@@ -65,7 +65,7 @@ console.log(message);
 **Subscribe to tickers**
 
 ```javascript
-client.on(WebSocketEvent.ON_MESSAGE_TICKER, message => {
+client.ws.on(WebSocketEvent.ON_MESSAGE_TICKER, message => {
   console.log(`Received message of type "${message.type}".`);
 });
 
