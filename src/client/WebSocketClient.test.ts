@@ -46,7 +46,7 @@ describe('WebSocketClient', () => {
   });
 
   describe('subscribe', () => {
-    it('receives typed messages from the "ticker" channel', async done => {
+    it('receives typed messages from "ticker" channel', async done => {
       server.on('connection', ws => {
         ws.on('message', (message: string) => {
           const request = JSON.parse(message);
@@ -91,7 +91,7 @@ describe('WebSocketClient', () => {
       });
     });
 
-    it('receives typed messages from the "matches" channel', async done => {
+    it('receives typed messages from "matches" channel', async done => {
       server.on('connection', ws => {
         ws.on('message', (message: string) => {
           const request = JSON.parse(message);
