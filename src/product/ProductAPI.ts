@@ -1,5 +1,5 @@
 import {AxiosInstance, AxiosResponse} from 'axios';
-import {ISO_8601_MS_UTC} from '../payload/common';
+import {ISO_8601_MS_UTC, OrderSide} from '../payload/common';
 
 export interface Product {
   base_currency: string;
@@ -46,17 +46,12 @@ export interface ProductStats {
   volume_30day: string;
 }
 
-export enum Side {
-  BUY = 'buy',
-  SELL = 'sell',
-}
-
 export interface Trade {
   time: ISO_8601_MS_UTC;
   trade_id: number;
   price: string;
   size: string;
-  side: Side;
+  side: OrderSide;
 }
 
 /** Accepted granularity in seconds to group historic rates. */
