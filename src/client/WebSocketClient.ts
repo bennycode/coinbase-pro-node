@@ -2,6 +2,7 @@ import {EventEmitter} from 'events';
 import ReconnectingWebSocket, {Event, ErrorEvent, Options, CloseEvent} from 'reconnecting-websocket';
 import WebSocket from 'ws';
 import {SignedRequest} from '../auth/RequestSigner';
+import {OrderSide, ISO_8601_MS_UTC} from '..';
 
 export interface WebSocketChannel {
   name: WebSocketChannelName;
@@ -116,19 +117,46 @@ export enum WebSocketResponseType {
   FULL_ACTIVE = 'active',
 }
 
-export type WebSocketResponse = {type: WebSocketResponseType} & Record<string, string | number | boolean>;
+export type WebSocketResponse = {type: WebSocketResponseType} & WebSocketMessage;
+
+// Not exported because it will become "WebSocketResponse" once complete
+type WebSocketMessage = Record<string, string | number | boolean> | WebSocketTickerMessage;
+
+export type WebSocketTickerMessage = {
+  best_ask: string;
+  best_bid: string;
+  high_24h: string;
+  last_size: string;
+  low_24h: string;
+  open_24h: string;
+  price: string;
+  product_id: string;
+  sequence: number;
+  side: OrderSide;
+  time: ISO_8601_MS_UTC;
+  trade_id: number;
+  type: WebSocketResponseType.TICKER;
+  volume_24h: string;
+  volume_30d: string;
+};
 
 export enum WebSocketEvent {
   ON_CLOSE = 'WebSocketEvent.ON_CLOSE',
   ON_ERROR = 'WebSocketEvent.ON_ERROR',
   ON_MESSAGE = 'WebSocketEvent.ON_MESSAGE',
+  ON_MESSAGE_TICKER = 'WebSocketEvent.ON_MESSAGE_TICKER',
   ON_OPEN = 'WebSocketEvent.ON_OPEN',
 }
 
 export interface WebSocketClient {
   on(event: WebSocketEvent.ON_CLOSE, listener: (event: CloseEvent) => void): this;
+
   on(event: WebSocketEvent.ON_ERROR, listener: (event: ErrorEvent) => void): this;
+
   on(event: WebSocketEvent.ON_MESSAGE, listener: (response: WebSocketResponse) => void): this;
+
+  on(event: WebSocketEvent.ON_MESSAGE_TICKER, listener: (tickerMessage: WebSocketTickerMessage) => void): this;
+
   on(event: WebSocketEvent.ON_OPEN, listener: (event: Event) => void): this;
 }
 
@@ -168,7 +196,11 @@ export class WebSocketClient extends EventEmitter {
 
       this.socket.onmessage = (event: MessageEvent): void => {
         const response: WebSocketResponse = JSON.parse(event.data);
-        this.emit(WebSocketEvent.ON_MESSAGE, response);
+        if (response.type === WebSocketResponseType.TICKER) {
+          this.emit(WebSocketEvent.ON_MESSAGE_TICKER, response);
+        } else {
+          this.emit(WebSocketEvent.ON_MESSAGE, response);
+        }
       };
 
       this.socket.onopen = (): void => {

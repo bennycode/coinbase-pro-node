@@ -68,15 +68,15 @@ describe('WebSocketClient', () => {
       const productIds = ['BTC-USD'];
       const client = new WebSocketClient(WEBSOCKET_URL);
 
-      client.on(WebSocketEvent.ON_MESSAGE, event => {
-        if (event.type === WebSocketResponseType.TICKER) {
-          expect(event.trade_id).toBe(3526965);
-          client.unsubscribe({
-            name: WebSocketChannelName.TICKER,
-            product_ids: productIds,
-          });
-        }
+      client.on(WebSocketEvent.ON_MESSAGE_TICKER, tickerMessage => {
+        expect(tickerMessage.trade_id).toBe(3526965);
+        client.unsubscribe({
+          name: WebSocketChannelName.TICKER,
+          product_ids: productIds,
+        });
+      });
 
+      client.on(WebSocketEvent.ON_MESSAGE, event => {
         if (event.type === WebSocketResponseType.SUBSCRIPTIONS) {
           done();
         }
