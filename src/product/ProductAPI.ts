@@ -156,7 +156,17 @@ export class ProductAPI {
 
   constructor(private readonly apiClient: AxiosInstance) {}
 
-  // https://docs.pro.coinbase.com/#get-historic-rates
+  /**
+   * Get historic rates for a product. Rates are returned in grouped buckets (candlesticks) based on requested granularity.
+   *
+   * Note: The maximum number of data points for a single request is 300 candles. If your selection of start/end time
+   * and granularity will result in more than 300 data points, your request will be rejected. If you wish to retrieve
+   * fine granularity data over a larger time range, you will need to make multiple requests with new start/end ranges.
+   *
+   * @param productId - Representation for base and counter
+   * @param [params] - Desired timespan
+   * @see https://docs.pro.coinbase.com/#get-historic-rates
+   */
   async getCandles(productId: string, params?: CandlesRequestParameters): Promise<Candle[]> {
     const resource = `${ProductAPI.URL.PRODUCTS}/${productId}/candles`;
     const response = await this.apiClient.get<RawCandle[]>(resource, {params});
@@ -173,13 +183,22 @@ export class ProductAPI {
     return candles;
   }
 
-  // https://docs.pro.coinbase.com/#get-products
+  /**
+   * Get a list of available currency pairs for trading.
+   *
+   * @see https://docs.pro.coinbase.com/#get-products
+   */
   async getProducts(): Promise<Product[]> {
     const resource = ProductAPI.URL.PRODUCTS;
     const response = await this.apiClient.get<Product[]>(resource);
     return response.data;
   }
 
+  /**
+   * Get latest trades for a product.
+   *
+   * @param productId - Representation for base and counter
+   */
   async getTrades(productId: string): Promise<Trade[]> {
     const resource = `${ProductAPI.URL.PRODUCTS}/${productId}/trades`;
     const response = await this.apiClient.get<Trade[]>(resource);
@@ -227,14 +246,21 @@ export class ProductAPI {
     return response.data;
   }
 
-  // https://docs.pro.coinbase.com/#get-24hr-stats
+  /**
+   * Get latest 24 hours of movement data for a product.
+   *
+   * @param productId - Representation for base and counter
+   */
   async getProductStats(productId: string): Promise<ProductStats> {
     const resource = `${ProductAPI.URL.PRODUCTS}/${productId}/stats`;
     const response = await this.apiClient.get<ProductStats>(resource);
     return response.data;
   }
 
-  // https://docs.pro.coinbase.com/#get-product-ticker
+  /**
+   * Get snapshot information about the last trade (tick), best bid/ask and 24h volume.
+   * @param productId - Representation for base and counter
+   */
   async getProductTicker(productId: string): Promise<ProductTicker> {
     const resource = `${ProductAPI.URL.PRODUCTS}/${productId}/ticker`;
     const response = await this.apiClient.get<ProductTicker>(resource);
