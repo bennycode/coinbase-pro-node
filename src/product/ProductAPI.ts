@@ -195,7 +195,7 @@ export class ProductAPI {
   }
 
   /**
-   * Get the latest trades for a product.
+   * Get latest trades for a product.
    *
    * @param productId - Representation for base and counter
    */
