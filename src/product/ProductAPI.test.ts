@@ -1,5 +1,5 @@
 import nock from 'nock';
-import {OrderBookLevel, ProductAPI} from './ProductAPI';
+import {OrderBookLevel, ProductAPI} from '.';
 import Level1OrderBookBTCEUR from '../test/fixtures/rest/products/BTC-EUR/book/level-1.json';
 import Level2OrderBookBTCEUR from '../test/fixtures/rest/products/BTC-EUR/book/level-2.json';
 import Level2OrderBookBTCUSD from '../test/fixtures/rest/products/BTC-USD/book/level-2.json';
