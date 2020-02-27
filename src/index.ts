@@ -7,7 +7,7 @@ export * from './account/AccountAPI';
 export * from './fill/FillAPI';
 export * from './order/OrderAPI';
 export * from './payload/common';
-export * from './product/ProductAPI';
+export * from './product/';
 export * from './profile/ProfileAPI';
 export * from './time/TimeAPI';
 export * from './user/UserAPI';
