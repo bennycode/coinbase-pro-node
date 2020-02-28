@@ -1,4 +1,5 @@
 import axios, {AxiosInstance, AxiosInterceptorManager, AxiosRequestConfig, AxiosResponse} from 'axios';
+import rateLimit from 'axios-rate-limit';
 import {AccountAPI} from '../account/AccountAPI';
 import {RequestSigner} from '../auth/RequestSigner';
 import {ClientAuthentication} from '../CoinbasePro';
@@ -32,10 +33,19 @@ export class RESTClient {
   private readonly httpClient: AxiosInstance;
 
   constructor(baseURL: string, auth: ClientAuthentication) {
-    this.httpClient = axios.create({
-      baseURL: baseURL,
-      timeout: 5000,
-    });
+    /**
+     * Rate limits:
+     * - 3 requests per second, up to 6 requests per second in bursts for public endpoints
+     * - 5 requests per second, up to 10 requests per second in bursts for private endpoints
+     * @see https://docs.pro.coinbase.com/#rate-limits
+     */
+    this.httpClient = rateLimit(
+      axios.create({
+        baseURL: baseURL,
+        timeout: 5000,
+      }),
+      {maxRequests: 3, perMilliseconds: 1000}
+    );
 
     this.httpClient.interceptors.request.use(async config => {
       const baseURL = String(config.baseURL);
