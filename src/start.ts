@@ -26,9 +26,10 @@ if (process.env.USE_SANDBOX === 'true') {
   throw Error('No environment specified.');
 }
 
-// eslint-disable-next-line @typescript-eslint/no-floating-promises
-(async (): Promise<void> => {
+async function main(): Promise<void> {
   const payload = await client.rest.account.listAccounts();
   const message = `You can trade "${payload.length}" different symbols.`;
   console.info(message);
-})();
+}
+
+main().catch(console.error);
