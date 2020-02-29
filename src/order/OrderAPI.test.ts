@@ -10,7 +10,7 @@ describe('OrderAPI', () => {
       nock(global.REST_URL)
         .post(OrderAPI.URL.ORDERS)
         .query(() => true)
-        .reply((uri, body) => {
+        .reply((_uri, body) => {
           const newOrder: NewOrder = typeof body === 'string' ? JSON.parse(body) : body;
 
           return [
