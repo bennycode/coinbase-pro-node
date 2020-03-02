@@ -1,3 +1,27 @@
+### 1.3.0 (2020-03-02)
+
+##### Chores
+
+- **deps-dev:**
+  - bump @types/jasmine from 3.5.6 to 3.5.7 ([#76](https://github.com/bennyn/coinbase-pro-node/pull/76)) ([7fdbdeef](https://github.com/bennyn/coinbase-pro-node/commit/7fdbdeefced1c3e8b126a5abd42425df160358f2))
+  - bump lint-staged from 10.0.7 to 10.0.8 ([#73](https://github.com/bennyn/coinbase-pro-node/pull/73)) ([4a3daa8f](https://github.com/bennyn/coinbase-pro-node/commit/4a3daa8f6a79034d9479fae6e288f0f97f4dd6f5))
+  - bump @typescript-eslint/eslint-plugin ([#72](https://github.com/bennyn/coinbase-pro-node/pull/72)) ([163b10be](https://github.com/bennyn/coinbase-pro-node/commit/163b10be8982b528e204941403c556ecb21b68ae))
+  - bump @typescript-eslint/parser from 2.20.0 to 2.21.0 ([#74](https://github.com/bennyn/coinbase-pro-node/pull/74)) ([9e887104](https://github.com/bennyn/coinbase-pro-node/commit/9e887104ab742638319629b66c1cd4e4d87fa514))
+  - bump nock from 12.0.1 to 12.0.2 ([#75](https://github.com/bennyn/coinbase-pro-node/pull/75)) ([14a88455](https://github.com/bennyn/coinbase-pro-node/commit/14a88455a8f1b27fb48fb392273a9e5396700ccc))
+  - bump typescript from 3.8.2 to 3.8.3 ([#71](https://github.com/bennyn/coinbase-pro-node/pull/71)) ([5f3ae007](https://github.com/bennyn/coinbase-pro-node/commit/5f3ae0071640b5c41f4eeabee0f7b1ecd5282b0c))
+- **deps:** bump @types/ws from 7.2.1 to 7.2.2 ([#77](https://github.com/bennyn/coinbase-pro-node/pull/77)) ([b0393780](https://github.com/bennyn/coinbase-pro-node/commit/b03937801f0e4e9503bfa479b5ae81957b6451b6))
+- Report errors on unused parameters ([a64f8fd2](https://github.com/bennyn/coinbase-pro-node/commit/a64f8fd260953e5cd239eceabe6db00fe21efabe))
+
+##### Documentation Changes
+
+- Document account resources ([#78](https://github.com/bennyn/coinbase-pro-node/pull/78)) ([ba32406f](https://github.com/bennyn/coinbase-pro-node/commit/ba32406f460ea0d8af9d90b292ee92d91eaa911e))
+- Document product resources ([#68](https://github.com/bennyn/coinbase-pro-node/pull/68)) ([e7df8204](https://github.com/bennyn/coinbase-pro-node/commit/e7df820414806ee5a6f17f792be594903554cbf5))
+
+##### New Features
+
+- Add automatic request throttling for rate limits ([#70](https://github.com/bennyn/coinbase-pro-node/pull/70)) ([a07260c0](https://github.com/bennyn/coinbase-pro-node/commit/a07260c0d347d7bf470cf821832090578ea837f2))
+- Add utility to determine candle buckets ([#69](https://github.com/bennyn/coinbase-pro-node/pull/69)) ([1e5f9237](https://github.com/bennyn/coinbase-pro-node/commit/1e5f9237cb86248be94cf4148b7fee5b6d4c82ca))
+
 ### 1.2.0 (2020-02-24)
 
 ##### Chores
