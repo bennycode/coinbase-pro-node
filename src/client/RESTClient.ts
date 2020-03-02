@@ -57,7 +57,7 @@ export class RESTClient {
         auth,
         {
           httpMethod: String(config.method).toUpperCase(),
-          payload: this.stringifyPayload(config),
+          payload: RESTClient.stringifyPayload(config),
           requestPath,
         },
         clockSkew
@@ -82,7 +82,7 @@ export class RESTClient {
     this.user = new UserAPI(this.httpClient);
   }
 
-  private stringifyPayload(config: AxiosRequestConfig): string {
+  static stringifyPayload(config: AxiosRequestConfig): string {
     if (config.data) {
       return JSON.stringify(config.data);
     }

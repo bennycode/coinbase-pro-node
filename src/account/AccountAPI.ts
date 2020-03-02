@@ -41,29 +41,50 @@ export class AccountAPI {
 
   constructor(private readonly apiClient: AxiosInstance) {}
 
-  // https://docs.pro.coinbase.com/#get-an-account
+  /**
+   * Get information for a single account. API key must belong to the same profile as the account.
+   *
+   * @param accountId - Account ID belonging to the API key’s profile
+   * @see https://docs.pro.coinbase.com/#get-an-account
+   */
   async getAccount(accountId: string): Promise<Account> {
-    const resource = [AccountAPI.URL.ACCOUNTS, accountId].join('/');
+    const resource = `${AccountAPI.URL.ACCOUNTS}/${accountId}`;
     const response = await this.apiClient.get<Account>(resource);
     return response.data;
   }
 
-  // https://docs.pro.coinbase.com/#get-account-history
-  // TODO: Implement Pagination: https://docs.pro.coinbase.com/#pagination
+  /**
+   * List account activity of the API key’s profile. Account activity either increases or decreases your account
+   * balance. Items are paginated and sorted latest first.
+   *
+   * @param accountId - Account ID belonging to the API key’s profile
+   * @see https://docs.pro.coinbase.com/#get-account-history
+   */
   async getAccountHistory(accountId: string): Promise<AccountHistory[]> {
-    const resource = [AccountAPI.URL.ACCOUNTS, accountId, 'ledger'].join('/');
+    const resource = `${AccountAPI.URL.ACCOUNTS}/${accountId}/ledger`;
     const response = await this.apiClient.get<AccountHistory[]>(resource);
     return response.data;
   }
 
-  // https://docs.pro.coinbase.com/#get-holds
+  /**
+   * List holds of an account that belong to the same profile as the API key. Holds are placed on an account for any
+   * active orders or pending withdraw requests. As an order is filled, the hold amount is updated. If an order is
+   * canceled, any remaining hold is removed. For a withdraw, once it is completed, the hold is removed.
+   *
+   * @param accountId - Account ID belonging to the API key’s profile
+   * @see https://docs.pro.coinbase.com/#get-holds
+   */
   async getHolds(accountId: string): Promise<Hold[]> {
-    const resource = [AccountAPI.URL.ACCOUNTS, accountId, 'holds'].join('/');
+    const resource = `${AccountAPI.URL.ACCOUNTS}/${accountId}/holds`;
     const response = await this.apiClient.get<Hold[]>(resource);
     return response.data;
   }
 
-  // https://docs.pro.coinbase.com/#list-accounts
+  /**
+   * Get a list of trading accounts from the profile of the API key.
+   *
+   * @see https://docs.pro.coinbase.com/#list-accounts
+   */
   async listAccounts(): Promise<Account[]> {
     const resource = AccountAPI.URL.ACCOUNTS;
     const response = await this.apiClient.get<Account[]>(resource);
