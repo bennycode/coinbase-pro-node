@@ -1,5 +1,6 @@
 import {AxiosInstance, AxiosResponse} from 'axios';
 import {ISO_8601_MS_UTC, OrderSide} from '../payload/common';
+import {CandleBucketUtil} from './CandleBucketUtil';
 
 export interface Product {
   base_currency: string;
@@ -157,7 +158,8 @@ export class ProductAPI {
   constructor(private readonly apiClient: AxiosInstance) {}
 
   /**
-   * Get historic rates for a product. Rates are returned in grouped buckets (candlesticks) based on requested granularity.
+   * Get historic rates for a product. Rates are returned in grouped buckets (candlesticks) based on requested
+   * granularity.
    *
    * Note: The maximum number of data points for a single request is 300 candles. If your selection of start/end time
    * and granularity will result in more than 300 data points, your request will be rejected. If you wish to retrieve
@@ -169,9 +171,35 @@ export class ProductAPI {
    */
   async getCandles(productId: string, params?: CandlesRequestParameters): Promise<Candle[]> {
     const resource = `${ProductAPI.URL.PRODUCTS}/${productId}/candles`;
-    const response = await this.apiClient.get<RawCandle[]>(resource, {params});
+    let rawCandles: RawCandle[] = [];
 
-    const candles = response.data.map(([time, low, high, open, close, volume]) => ({
+    if (params && params.start && params.end && params.granularity) {
+      const fromInMillis = new Date(params.start).getTime();
+      const toInMillis = new Date(params.end).getTime();
+      const candleSizeInMillis = params.granularity * 1000;
+      const bucketsInMillis = CandleBucketUtil.getBucketsInMillis(fromInMillis, toInMillis, candleSizeInMillis);
+      const buckets = CandleBucketUtil.getBuckets(bucketsInMillis);
+      const rawCandles = await Promise.all(
+        buckets.map(bucket =>
+          this.apiClient.get<RawCandle[]>(resource, {
+            params: {
+              granularity: params.granularity,
+              start: bucket.start,
+              stop: bucket.stop,
+            },
+          })
+        )
+      );
+      // TODO: Get "data"
+      // TODO: Merge data
+      // TODO: Sort data by date
+      console.info(rawCandles);
+    } else {
+      const response = await this.apiClient.get<RawCandle[]>(resource, {params});
+      rawCandles = response.data;
+    }
+
+    const candles = rawCandles.map(([time, low, high, open, close, volume]) => ({
       close,
       high,
       low,
