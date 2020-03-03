@@ -179,21 +179,21 @@ export class ProductAPI {
       const candleSizeInMillis = params.granularity * 1000;
       const bucketsInMillis = CandleBucketUtil.getBucketsInMillis(fromInMillis, toInMillis, candleSizeInMillis);
       const buckets = CandleBucketUtil.getBuckets(bucketsInMillis);
-      const rawCandles = await Promise.all(
-        buckets.map(bucket =>
-          this.apiClient.get<RawCandle[]>(resource, {
+      rawCandles = await Promise.all(
+        buckets.map(bucket => {
+          return this.apiClient.get<RawCandle[]>(resource, {
             params: {
               granularity: params.granularity,
               start: bucket.start,
               stop: bucket.stop,
             },
-          })
-        )
-      );
-      // TODO: Get "data"
-      // TODO: Merge data
-      // TODO: Sort data by date
-      console.info(rawCandles);
+          });
+        })
+      ).then(data => {
+        return data.reduce((candles, response) => {
+          return candles.concat(response.data);
+        }, rawCandles);
+      });
     } else {
       const response = await this.apiClient.get<RawCandle[]>(resource, {params});
       rawCandles = response.data;
@@ -208,7 +208,7 @@ export class ProductAPI {
       volume,
     }));
 
-    return candles;
+    return candles.sort((candleA, candleB) => candleA.time - candleB.time);
   }
 
   /**

@@ -170,7 +170,7 @@ describe('ProductAPI', () => {
   });
 
   describe('getCandles', () => {
-    it('correctly returns candle objects', async () => {
+    it('returns candle objects, descending by timestamp', async () => {
       nock(global.REST_URL)
         .get(`${ProductAPI.URL.PRODUCTS}/BTC-USD/candles`)
         .query(() => true)
