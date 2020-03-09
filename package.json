@@ -9,7 +9,7 @@
     "bufferutil": "4.0.1",
     "reconnecting-websocket": "4.4.0",
     "utf-8-validate": "5.0.2",
-    "ws": "7.2.1"
+    "ws": "7.2.2"
   },
   "description": "Coinbase Pro API for Node.js, written in TypeScript and covered by tests.",
   "devDependencies": {
