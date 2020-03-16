@@ -85,10 +85,12 @@ describe('WebSocketClient', () => {
 
       await client.connect();
 
-      client.subscribe({
-        name: WebSocketChannelName.TICKER,
-        product_ids: productIds,
-      });
+      client.subscribe([
+        {
+          name: WebSocketChannelName.TICKER,
+          product_ids: productIds,
+        },
+      ]);
     });
 
     it('receives typed messages from "matches" channel', async done => {
@@ -130,10 +132,12 @@ describe('WebSocketClient', () => {
 
       await client.connect();
 
-      client.subscribe({
-        name: WebSocketChannelName.MATCHES,
-        product_ids: productIds,
-      });
+      client.subscribe([
+        {
+          name: WebSocketChannelName.MATCHES,
+          product_ids: productIds,
+        },
+      ]);
     });
   });
 
