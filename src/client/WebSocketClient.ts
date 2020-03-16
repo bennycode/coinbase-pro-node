@@ -249,10 +249,9 @@ export class WebSocketClient extends EventEmitter {
     this.socket.send(JSON.stringify(message));
   }
 
-  subscribe(channel: WebSocketChannel): void {
+  subscribe(channels: WebSocketChannel[]): void {
     this.sendMessage({
-      channels: [channel],
-      product_ids: channel.product_ids,
+      channels,
       type: WebSocketRequestType.SUBSCRIBE,
     });
   }
