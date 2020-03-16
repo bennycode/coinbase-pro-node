@@ -212,6 +212,11 @@ export class WebSocketClient extends EventEmitter {
 
       this.socket.onmessage = (event: MessageEvent): void => {
         const response: WebSocketResponse = JSON.parse(event.data);
+
+        // Emit generic event
+        this.emit(WebSocketEvent.ON_MESSAGE, response);
+
+        // Emit specific event
         switch (response.type) {
           case WebSocketResponseType.TICKER:
             this.emit(WebSocketEvent.ON_MESSAGE_TICKER, response);
@@ -219,8 +224,6 @@ export class WebSocketClient extends EventEmitter {
           case WebSocketResponseType.FULL_MATCH:
             this.emit(WebSocketEvent.ON_MESSAGE_MATCHES, response);
             break;
-          default:
-            this.emit(WebSocketEvent.ON_MESSAGE, response);
         }
       };
 
