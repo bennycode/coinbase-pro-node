@@ -1,3 +1,30 @@
+### 1.4.0 (2020-03-20)
+
+##### Chores
+
+- **deps:**
+  - yarn upgrade --latest ([d0a54c90](https://github.com/bennyn/coinbase-pro-node/commit/d0a54c9005479bf0e4c993682c26db705d693f6b))
+  - bump ws from 7.2.2 to 7.2.3 ([#90](https://github.com/bennyn/coinbase-pro-node/pull/90)) ([ca6d5197](https://github.com/bennyn/coinbase-pro-node/commit/ca6d51972a539eb24e2102d952e3e0956511b644))
+  - [security] bump acorn from 7.1.0 to 7.1.1 ([#86](https://github.com/bennyn/coinbase-pro-node/pull/86)) ([4972a37f](https://github.com/bennyn/coinbase-pro-node/commit/4972a37fd9de1ae36f113e7411af07fcaa6ac292))
+  - bump ws from 7.2.1 to 7.2.2 ([#79](https://github.com/bennyn/coinbase-pro-node/pull/79)) ([e21e0f1a](https://github.com/bennyn/coinbase-pro-node/commit/e21e0f1a0cd086339a90bfe73c0ff46d221665dd))
+- **deps-dev:**
+  - bump @typescript-eslint/parser from 2.22.0 to 2.23.0 ([#88](https://github.com/bennyn/coinbase-pro-node/pull/88)) ([3d1ce013](https://github.com/bennyn/coinbase-pro-node/commit/3d1ce01358524314f61776f9feaf105ca74a1f01))
+  - bump @types/jasmine from 3.5.8 to 3.5.9 ([#89](https://github.com/bennyn/coinbase-pro-node/pull/89)) ([43e560d8](https://github.com/bennyn/coinbase-pro-node/commit/43e560d8b8e3cd76e889818de82d33247fac6686))
+  - bump @typescript-eslint/eslint-plugin ([#87](https://github.com/bennyn/coinbase-pro-node/pull/87)) ([d723038b](https://github.com/bennyn/coinbase-pro-node/commit/d723038bcfdeee1e5c1095f746dfe77c81d4abb4))
+  - bump @typescript-eslint/eslint-plugin ([#82](https://github.com/bennyn/coinbase-pro-node/pull/82)) ([89939eae](https://github.com/bennyn/coinbase-pro-node/commit/89939eae12d0a60c07045f993b67d689c6d3b733))
+  - bump cross-env from 7.0.0 to 7.0.2 ([#80](https://github.com/bennyn/coinbase-pro-node/pull/80)) ([b06f8ca5](https://github.com/bennyn/coinbase-pro-node/commit/b06f8ca5577d04145f030827599ef1bbc0ca2a43))
+  - bump @types/jasmine from 3.5.7 to 3.5.8 ([#83](https://github.com/bennyn/coinbase-pro-node/pull/83)) ([3e2e91f9](https://github.com/bennyn/coinbase-pro-node/commit/3e2e91f994f01025956090acd81380b8a3aab2d9))
+  - bump @typescript-eslint/parser from 2.21.0 to 2.22.0 ([#81](https://github.com/bennyn/coinbase-pro-node/pull/81)) ([bc0e96a3](https://github.com/bennyn/coinbase-pro-node/commit/bc0e96a35f3e56ed7749a0e9bca5fa332aec3639))
+
+##### Documentation Changes
+
+- Describe WebSocket channel subscription ([#85](https://github.com/bennyn/coinbase-pro-node/pull/85)) ([cf92123a](https://github.com/bennyn/coinbase-pro-node/commit/cf92123aa9a75ecebbb101317d90e0395a8cccc6))
+
+##### New Features
+
+- Subscribe to multiple WebSocket channels at once ([#92](https://github.com/bennyn/coinbase-pro-node/pull/92)) ([ae9db0ae](https://github.com/bennyn/coinbase-pro-node/commit/ae9db0ae0bdfdd5bcf2b27cf088b5d5e8ff4e7f4))
+- Emit all WebSocket messages with one generic event ([#91](https://github.com/bennyn/coinbase-pro-node/pull/91)) ([8d9979c4](https://github.com/bennyn/coinbase-pro-node/commit/8d9979c4bf72cdd29ee4031071bdfa8db1840068))
+
 ### 1.3.0 (2020-03-02)
 
 ##### Chores
