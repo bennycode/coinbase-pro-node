@@ -71,10 +71,12 @@ describe('WebSocketClient', () => {
 
       client.on(WebSocketEvent.ON_MESSAGE_TICKER, tickerMessage => {
         expect(tickerMessage.trade_id).toBe(3526965);
-        client.unsubscribe({
-          name: WebSocketChannelName.TICKER,
-          product_ids: productIds,
-        });
+        client.unsubscribe([
+          {
+            name: WebSocketChannelName.TICKER,
+            product_ids: productIds,
+          },
+        ]);
       });
 
       client.on(WebSocketEvent.ON_MESSAGE, event => {
@@ -85,10 +87,12 @@ describe('WebSocketClient', () => {
 
       await client.connect();
 
-      client.subscribe({
-        name: WebSocketChannelName.TICKER,
-        product_ids: productIds,
-      });
+      client.subscribe([
+        {
+          name: WebSocketChannelName.TICKER,
+          product_ids: productIds,
+        },
+      ]);
     });
 
     it('receives typed messages from "matches" channel', async done => {
@@ -116,10 +120,12 @@ describe('WebSocketClient', () => {
 
       client.on(WebSocketEvent.ON_MESSAGE_MATCHES, message => {
         expect(message.trade_id).toBe(9713921);
-        client.unsubscribe({
-          name: WebSocketChannelName.MATCHES,
-          product_ids: productIds,
-        });
+        client.unsubscribe([
+          {
+            name: WebSocketChannelName.MATCHES,
+            product_ids: productIds,
+          },
+        ]);
       });
 
       client.on(WebSocketEvent.ON_MESSAGE, event => {
@@ -130,10 +136,12 @@ describe('WebSocketClient', () => {
 
       await client.connect();
 
-      client.subscribe({
-        name: WebSocketChannelName.MATCHES,
-        product_ids: productIds,
-      });
+      client.subscribe([
+        {
+          name: WebSocketChannelName.MATCHES,
+          product_ids: productIds,
+        },
+      ]);
     });
   });
 
