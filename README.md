@@ -87,7 +87,7 @@ client.ws.on(WebSocketEvent.ON_MESSAGE_TICKER, message => {
   // 6. Receive message from WebSocket channel
   console.log(`Received message of type "${message.type}".`, message);
   // 7. Unsubscribe from WebSocket channel
-  client.ws.unsubscribe(channel);
+  client.ws.unsubscribe([channel]);
   // 8. Disconnect & end program
   client.ws.disconnect();
 });
@@ -96,7 +96,7 @@ client.ws.on(WebSocketEvent.ON_MESSAGE_TICKER, message => {
   // 4. Connect to WebSocket
   await client.ws.connect();
   // 5. Subscribe to WebSocket channel
-  client.ws.subscribe(channel);
+  client.ws.subscribe([channel]);
 })();
 ```
 
