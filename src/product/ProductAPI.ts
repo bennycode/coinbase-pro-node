@@ -182,23 +182,21 @@ export class ProductAPI {
       const fromInMillis = new Date(params.start).getTime();
       const toInMillis = new Date(params.end).getTime();
       const candleSizeInMillis = params.granularity * 1000;
+
       const bucketsInMillis = CandleBucketUtil.getBucketsInMillis(fromInMillis, toInMillis, candleSizeInMillis);
       const buckets = CandleBucketUtil.getBuckets(bucketsInMillis);
-      rawCandles = await Promise.all(
-        buckets.map(bucket => {
-          return this.apiClient.get<RawCandle[]>(resource, {
-            params: {
-              granularity: params.granularity,
-              start: bucket.start,
-              stop: bucket.stop,
-            },
-          });
-        })
-      ).then(data => {
-        return data.reduce((candles, response) => {
-          return candles.concat(response.data);
-        }, rawCandles);
-      });
+
+      for (let index = 0; index < buckets.length; index++) {
+        const bucket = buckets[index];
+        const response = await this.apiClient.get<RawCandle[]>(resource, {
+          params: {
+            end: bucket.stop,
+            granularity: params.granularity,
+            start: bucket.start,
+          },
+        });
+        rawCandles.push(...response.data);
+      }
     } else {
       const response = await this.apiClient.get<RawCandle[]>(resource, {params});
       rawCandles = response.data;
