@@ -196,12 +196,8 @@ describe('ProductAPI', () => {
         start: from,
       });
 
-      expect(candles.length)
-        .withContext('7 days * 24 hours = 168 hours / candles')
-        .toBe(168);
-      expect(candles[0].timeString)
-        .withContext('Starting time of first time slice')
-        .toBe(from);
+      expect(candles.length).withContext('7 days * 24 hours = 168 hours / candles').toBe(168);
+      expect(candles[0].timeString).withContext('Starting time of first time slice').toBe(from);
       expect(candles[candles.length - 1].timeString)
         .withContext('Starting time of last time slice')
         .toBe('2020-03-15T23:00:00.000Z');
