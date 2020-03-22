@@ -171,7 +171,25 @@ describe('ProductAPI', () => {
   });
 
   describe('getCandles', () => {
-    it('sorts candles by date (oldest first)', async () => {
+    it('returns the latest candles when not giving any parameters', async () => {
+      nock(global.REST_URL)
+        .get(`${ProductAPI.URL.PRODUCTS}/BTC-USD/candles`)
+        .query(() => true)
+        .reply(200, [
+          [1558261140, 8089.99, 8101.7, 8101.7, 8099.68, 14.62],
+          [1558261200, 8099.52, 8129.9, 8099.52, 8109.66, 12.16],
+          [1558261260, 8109.88, 8109.88, 8109.88, 8109.88, 0.038],
+        ]);
+
+      const candles = await global.client.rest.product.getCandles('BTC-USD');
+
+      expect(candles.length).toEqual(3);
+      expect(candles[0].time).toEqual(1558261140000);
+      expect(candles[1].time).toEqual(1558261200000);
+      expect(candles[2].time).toEqual(1558261260000);
+    });
+
+    it('sorts candles ascending by timestamp', async () => {
       const from = '2020-03-09T00:00:00.000Z';
       const to = '2020-03-15T23:59:59.999Z';
 

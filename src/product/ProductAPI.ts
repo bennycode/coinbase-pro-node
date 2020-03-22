@@ -1,5 +1,6 @@
 import {AxiosInstance, AxiosResponse} from 'axios';
 import {ISO_8601_MS_UTC, OrderSide} from '../payload/common';
+import {CandleBucketUtil} from './CandleBucketUtil';
 
 export interface Product {
   base_currency: string;
@@ -175,9 +176,33 @@ export class ProductAPI {
    */
   async getCandles(productId: string, params?: CandlesRequestParameters): Promise<Candle[]> {
     const resource = `${ProductAPI.URL.PRODUCTS}/${productId}/candles`;
-    const response = await this.apiClient.get<RawCandle[]>(resource, {params});
+    let rawCandles: RawCandle[] = [];
 
-    const candles = response.data
+    if (params && params.start && params.end && params.granularity) {
+      const fromInMillis = new Date(params.start).getTime();
+      const toInMillis = new Date(params.end).getTime();
+      const candleSizeInMillis = params.granularity * 1000;
+
+      const bucketsInMillis = CandleBucketUtil.getBucketsInMillis(fromInMillis, toInMillis, candleSizeInMillis);
+      const buckets = CandleBucketUtil.getBuckets(bucketsInMillis);
+
+      for (let index = 0; index < buckets.length; index++) {
+        const bucket = buckets[index];
+        const response = await this.apiClient.get<RawCandle[]>(resource, {
+          params: {
+            end: bucket.stop,
+            granularity: params.granularity,
+            start: bucket.start,
+          },
+        });
+        rawCandles.push(...response.data);
+      }
+    } else {
+      const response = await this.apiClient.get<RawCandle[]>(resource, {params});
+      rawCandles = response.data;
+    }
+
+    return rawCandles
       .map(([time, low, high, open, close, volume]) => ({
         close,
         high,
@@ -188,8 +213,6 @@ export class ProductAPI {
         volume,
       }))
       .sort((a, b) => a.time - b.time);
-
-    return candles;
   }
 
   /**

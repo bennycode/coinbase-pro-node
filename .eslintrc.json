@@ -36,7 +36,7 @@
     "@typescript-eslint/no-namespace": "off",
     "@typescript-eslint/no-this-alias": "error",
     "@typescript-eslint/no-unused-vars": "error",
-    "@typescript-eslint/prefer-for-of": "error",
+    "@typescript-eslint/prefer-for-of": "off",
     "@typescript-eslint/prefer-readonly": "error",
     "@typescript-eslint/typedef": "off",
     "curly": "error",
