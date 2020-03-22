@@ -66,8 +66,11 @@ export enum CandleGranularity {
 }
 
 export interface CandlesRequestParameters {
+  /** Ending date (inclusive) as ISO 8601 string, i.e. "2020-03-15T23:59:59.999Z" */
   end?: ISO_8601_MS_UTC;
+  /** Desired time slice in seconds. */
   granularity: CandleGranularity;
+  /** Starting date (inclusive) as ISO 8601 string, i.e. "2020-03-09T00:00:00.000Z" */
   start?: ISO_8601_MS_UTC;
 }
 
@@ -142,8 +145,10 @@ export interface Candle {
   low: Low;
   /** Opening price (first trade) in the bucket interval */
   open: Open;
-  /** Bucket start time */
+  /** Bucket start time converted to milliseconds (note: Coinbase Pro actually uses seconds) */
   time: Timestamp;
+  /** Bucket start time in simplified extended ISO 8601 format */
+  timeString: ISO_8601_MS_UTC;
   /** Volume of trading activity during the bucket interval */
   volume: Volume;
 }
@@ -199,16 +204,17 @@ export class ProductAPI {
       rawCandles = response.data;
     }
 
-    const candles = rawCandles.map(([time, low, high, open, close, volume]) => ({
-      close,
-      high,
-      low,
-      open,
-      time,
-      volume,
-    }));
-
-    return candles.sort((candleA, candleB) => candleA.time - candleB.time);
+    return rawCandles
+      .map(([time, low, high, open, close, volume]) => ({
+        close,
+        high,
+        low,
+        open,
+        time: time * 1000, // Map seconds to milliseconds
+        timeString: new Date(time * 1000).toISOString(),
+        volume,
+      }))
+      .sort((a, b) => a.time - b.time);
   }
 
   /**

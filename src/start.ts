@@ -1,4 +1,5 @@
 import {CoinbasePro} from './CoinbasePro';
+import {CandleGranularity} from './product';
 
 require('dotenv').config();
 
@@ -27,9 +28,20 @@ if (process.env.USE_SANDBOX === 'true') {
 }
 
 async function main(): Promise<void> {
-  const payload = await client.rest.account.listAccounts();
-  const message = `You can trade "${payload.length}" different symbols.`;
-  console.info(message);
+  // const payload = await client.rest.account.listAccounts();
+  // const message = `You can trade "${payload.length}" different symbols.`;
+  // console.info(message);
+
+  const from = '2020-03-09T00:00:00.000Z';
+  const to = '2020-03-15T23:59:59.999Z';
+
+  const candles = await client.rest.product.getCandles('BTC-USD', {
+    end: to,
+    granularity: CandleGranularity.ONE_HOUR,
+    start: from,
+  });
+
+  console.info(candles.length);
 }
 
 main().catch(console.error);

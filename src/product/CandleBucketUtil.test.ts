@@ -80,16 +80,12 @@ describe('CandleBucketUtil', () => {
       const oneDayIntervalsInMillis = CandleBucketUtil.getBucketsInMillis(fromInMillis, toInMillis, oneDayInMillis);
       const oneDayIntervals = CandleBucketUtil.getBuckets(oneDayIntervalsInMillis);
 
-      expect(oneDayIntervals)
-        .withContext('One day interval')
-        .toEqual(expectedOneDayIntervals);
+      expect(oneDayIntervals).withContext('One day interval').toEqual(expectedOneDayIntervals);
 
       const sixHoursIntervalsInMillis = CandleBucketUtil.getBucketsInMillis(fromInMillis, toInMillis, sixHoursInMillis);
       const sixHoursIntervals = CandleBucketUtil.getBuckets(sixHoursIntervalsInMillis);
 
-      expect(sixHoursIntervals)
-        .withContext('Six hours interval')
-        .toEqual(expectedSixHoursIntervals);
+      expect(sixHoursIntervals).withContext('Six hours interval').toEqual(expectedSixHoursIntervals);
     });
   });
 });

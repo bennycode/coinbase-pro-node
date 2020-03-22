@@ -3,7 +3,7 @@
     "url": "https://github.com/bennyn/coinbase-pro-node/issues"
   },
   "dependencies": {
-    "@types/ws": "7.2.2",
+    "@types/ws": "7.2.3",
     "axios": "0.19.2",
     "axios-rate-limit": "1.2.1",
     "bufferutil": "4.0.1",
@@ -14,24 +14,25 @@
   "description": "Coinbase Pro API for Node.js, written in TypeScript and covered by tests.",
   "devDependencies": {
     "@types/jasmine": "3.5.9",
-    "@typescript-eslint/eslint-plugin": "2.23.0",
-    "@typescript-eslint/parser": "2.23.0",
+    "@typescript-eslint/eslint-plugin": "2.24.0",
+    "@typescript-eslint/parser": "2.24.0",
     "cross-env": "7.0.2",
     "dotenv": "8.2.0",
     "eslint": "6.8.0",
-    "eslint-config-prettier": "6.10.0",
-    "eslint-plugin-no-unsanitized": "3.0.2",
+    "eslint-config-prettier": "6.10.1",
+    "eslint-plugin-no-unsanitized": "3.1.0",
     "eslint-plugin-prettier": "3.1.2",
     "generate-changelog": "1.8.0",
     "husky": "4.2.3",
     "jasmine": "3.5.0",
     "lint-staged": "10.0.8",
-    "nock": "12.0.2",
+    "nock": "12.0.3",
     "nyc": "15.0.0",
-    "prettier": "1.19.1",
+    "prettier": "2.0.1",
     "pretty-quick": "2.0.1",
     "rimraf": "3.0.2",
-    "ts-node": "8.6.2",
+    "ts-node": "8.8.1",
+    "typedoc": "0.17.3",
     "typescript": "3.8.3"
   },
   "engines": {
@@ -74,6 +75,7 @@
     "changelog:commit": "git add CHANGELOG.md && git commit -m \"docs: updated CHANGELOG.md\"",
     "clean": "rimraf .nyc_output coverage dist",
     "dist": "yarn clean && yarn build",
+    "docs": "yarn typedoc",
     "fix": "yarn fix:other && yarn fix:code",
     "fix:code": "yarn lint:code --fix",
     "fix:other": "yarn prettier --write",
@@ -91,5 +93,5 @@
     "test": "nyc --nycrc-path=nyc.config.coverage.json jasmine --config=jasmine.json",
     "test:dev": "nyc --nycrc-path=nyc.config.json jasmine --config=jasmine.json"
   },
-  "version": "1.4.0"
+  "version": "1.4.1"
 }
