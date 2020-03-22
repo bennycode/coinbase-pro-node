@@ -1,3 +1,13 @@
+#### 1.4.1 (2020-03-22)
+
+##### Documentation Changes
+
+- Add TypeDoc setup ([#95](https://github.com/bennyn/coinbase-pro-node/pull/95)) ([2db970d3](https://github.com/bennyn/coinbase-pro-node/commit/2db970d3ebbf81d2cf0e8fd5424a32aa68a14134))
+
+##### Bug Fixes
+
+- Convert candlestick times to milliseconds ([#94](https://github.com/bennyn/coinbase-pro-node/pull/94)) ([35a66dfd](https://github.com/bennyn/coinbase-pro-node/commit/35a66dfd04d6c63934d43923f638cc46d47ed8e0))
+
 ### 1.4.0 (2020-03-20)
 
 ##### Chores
