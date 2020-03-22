@@ -1,0 +1,12 @@
+{
+  "exclude": ["**/payload/**/*", "**/test/**/*", "**/*+(index|start|.test*).ts"],
+  "excludeExternals": true,
+  "excludeNotExported": true,
+  "excludePrivate": true,
+  "excludeProtected": true,
+  "includeDeclarations": false,
+  "inputFiles": ["./src"],
+  "mode": "modules",
+  "out": "docs",
+  "theme": "default"
+}

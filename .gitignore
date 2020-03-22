@@ -9,6 +9,7 @@
 config.json
 coverage/
 dist/
+docs/
 lerna-debug.log
 node_modules/
 npm-debug.log*

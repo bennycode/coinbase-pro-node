@@ -32,6 +32,7 @@
     "pretty-quick": "2.0.1",
     "rimraf": "3.0.2",
     "ts-node": "8.6.2",
+    "typedoc": "0.17.3",
     "typescript": "3.8.3"
   },
   "engines": {
@@ -74,6 +75,7 @@
     "changelog:commit": "git add CHANGELOG.md && git commit -m \"docs: updated CHANGELOG.md\"",
     "clean": "rimraf .nyc_output coverage dist",
     "dist": "yarn clean && yarn build",
+    "docs": "yarn typedoc",
     "fix": "yarn fix:other && yarn fix:code",
     "fix:code": "yarn lint:code --fix",
     "fix:other": "yarn prettier --write",
