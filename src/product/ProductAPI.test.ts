@@ -1,10 +1,11 @@
 import nock from 'nock';
-import {OrderBookLevel, ProductAPI} from '.';
+import {CandleGranularity, OrderBookLevel, ProductAPI} from '.';
 import Level1OrderBookBTCEUR from '../test/fixtures/rest/products/BTC-EUR/book/level-1.json';
 import Level2OrderBookBTCEUR from '../test/fixtures/rest/products/BTC-EUR/book/level-2.json';
 import Level2OrderBookBTCUSD from '../test/fixtures/rest/products/BTC-USD/book/level-2.json';
 import Level3OrderBookBTCUSD from '../test/fixtures/rest/products/BTC-USD/book/level-3.json';
 import TradesBTCEUR from '../test/fixtures/rest/products/BTC-EUR/trades/GET-200.json';
+import CandlesBTCUSD from '../test/fixtures/rest/products/BTC-USD/candles/GET-200.json';
 
 describe('ProductAPI', () => {
   describe('getProducts', () => {
@@ -170,22 +171,40 @@ describe('ProductAPI', () => {
   });
 
   describe('getCandles', () => {
-    it('correctly returns candle objects', async () => {
+    it('sorts candles by date (oldest first)', async () => {
+      const from = '2020-03-09T00:00:00.000Z';
+      const to = '2020-03-15T23:59:59.999Z';
+
       nock(global.REST_URL)
         .get(`${ProductAPI.URL.PRODUCTS}/BTC-USD/candles`)
         .query(() => true)
-        .reply(200, [
-          [1558261260, 8109.88, 8109.88, 8109.88, 8109.88, 0.038],
-          [1558261200, 8099.52, 8129.9, 8099.52, 8109.66, 12.16],
-          [1558261140, 8089.99, 8101.7, 8101.7, 8099.68, 14.62],
-        ]);
+        .reply(() => {
+          const min = new Date(from).getTime();
+          const max = new Date(to).getTime();
+          // Note: Fixture test set is larger than the requested time slice, so we have to filter:
+          const data = CandlesBTCUSD.filter(candle => {
+            const [time] = candle;
+            const timeInMillis = time * 1000;
+            return timeInMillis >= min && timeInMillis <= max;
+          });
+          return [200, JSON.stringify(data)];
+        });
 
-      const candles = await global.client.rest.product.getCandles('BTC-USD');
+      const candles = await global.client.rest.product.getCandles('BTC-USD', {
+        end: to,
+        granularity: CandleGranularity.ONE_HOUR,
+        start: from,
+      });
 
-      expect(candles.length).toEqual(3);
-      expect(candles[0].time).toEqual(1558261260);
-      expect(candles[1].time).toEqual(1558261200);
-      expect(candles[2].time).toEqual(1558261140);
+      expect(candles.length)
+        .withContext('7 days * 24 hours = 168 hours / candles')
+        .toBe(168);
+      expect(candles[0].timeString)
+        .withContext('Starting time of first time slice')
+        .toBe(from);
+      expect(candles[candles.length - 1].timeString)
+        .withContext('Starting time of last time slice')
+        .toBe('2020-03-15T23:00:00.000Z');
     });
   });
 });
