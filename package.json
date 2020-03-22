@@ -9,14 +9,14 @@
     "bufferutil": "4.0.1",
     "reconnecting-websocket": "4.4.0",
     "utf-8-validate": "5.0.2",
-    "ws": "7.2.1"
+    "ws": "7.2.3"
   },
   "description": "Coinbase Pro API for Node.js, written in TypeScript and covered by tests.",
   "devDependencies": {
-    "@types/jasmine": "3.5.7",
-    "@typescript-eslint/eslint-plugin": "2.21.0",
-    "@typescript-eslint/parser": "2.21.0",
-    "cross-env": "7.0.0",
+    "@types/jasmine": "3.5.9",
+    "@typescript-eslint/eslint-plugin": "2.23.0",
+    "@typescript-eslint/parser": "2.23.0",
+    "cross-env": "7.0.2",
     "dotenv": "8.2.0",
     "eslint": "6.8.0",
     "eslint-config-prettier": "6.10.0",
@@ -91,5 +91,5 @@
     "test": "nyc --nycrc-path=nyc.config.coverage.json jasmine --config=jasmine.json",
     "test:dev": "nyc --nycrc-path=nyc.config.json jasmine --config=jasmine.json"
   },
-  "version": "1.2.0"
+  "version": "1.4.0"
 }

@@ -115,6 +115,10 @@ export enum WebSocketResponseType {
    * go through the order lifecycle.
    */
   FULL_ACTIVATE = 'activate',
+  /**
+   * Latest match between two orders.
+   */
+  LAST_MATCH = 'last_match',
 }
 
 export type WebSocketResponse = {type: WebSocketResponseType} & WebSocketMessage;
@@ -153,6 +157,8 @@ export type WebSocketMatchMessage = {
   type: WebSocketResponseType.FULL_MATCH;
 };
 
+export type WebSocketLastMatchMessage = Omit<WebSocketMatchMessage, 'type'> & {type: WebSocketResponseType.LAST_MATCH};
+
 export enum WebSocketEvent {
   ON_CLOSE = 'WebSocketEvent.ON_CLOSE',
   ON_ERROR = 'WebSocketEvent.ON_ERROR',
@@ -169,7 +175,10 @@ export interface WebSocketClient {
 
   on(event: WebSocketEvent.ON_MESSAGE, listener: (response: WebSocketResponse) => void): this;
 
-  on(event: WebSocketEvent.ON_MESSAGE_MATCHES, listener: (matchMessage: WebSocketMatchMessage) => void): this;
+  on(
+    event: WebSocketEvent.ON_MESSAGE_MATCHES,
+    listener: (matchMessage: WebSocketLastMatchMessage | WebSocketMatchMessage) => void
+  ): this;
 
   on(event: WebSocketEvent.ON_MESSAGE_TICKER, listener: (tickerMessage: WebSocketTickerMessage) => void): this;
 
@@ -212,15 +221,19 @@ export class WebSocketClient extends EventEmitter {
 
       this.socket.onmessage = (event: MessageEvent): void => {
         const response: WebSocketResponse = JSON.parse(event.data);
+
+        // Emit generic event
+        this.emit(WebSocketEvent.ON_MESSAGE, response);
+
+        // Emit specific event
         switch (response.type) {
           case WebSocketResponseType.TICKER:
             this.emit(WebSocketEvent.ON_MESSAGE_TICKER, response);
             break;
           case WebSocketResponseType.FULL_MATCH:
+          case WebSocketResponseType.LAST_MATCH:
             this.emit(WebSocketEvent.ON_MESSAGE_MATCHES, response);
             break;
-          default:
-            this.emit(WebSocketEvent.ON_MESSAGE, response);
         }
       };
 
@@ -249,18 +262,16 @@ export class WebSocketClient extends EventEmitter {
     this.socket.send(JSON.stringify(message));
   }
 
-  subscribe(channel: WebSocketChannel): void {
+  subscribe(channels: WebSocketChannel[]): void {
     this.sendMessage({
-      channels: [channel],
-      product_ids: channel.product_ids,
+      channels,
       type: WebSocketRequestType.SUBSCRIBE,
     });
   }
 
-  unsubscribe(channel: WebSocketChannel): void {
+  unsubscribe(channels: WebSocketChannel[]): void {
     this.sendMessage({
-      channels: [channel],
-      product_ids: channel.product_ids,
+      channels,
       type: WebSocketRequestType.UNSUBSCRIBE,
     });
   }

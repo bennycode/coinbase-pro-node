@@ -66,16 +66,38 @@ console.log(message);
 **Subscribe to tickers**
 
 ```javascript
-client.ws.on(WebSocketEvent.ON_MESSAGE_TICKER, message => {
-  console.log(`Received message of type "${message.type}".`);
+const {CoinbasePro, WebSocketChannelName, WebSocketEvent} = require('coinbase-pro-node');
+
+// 1. Setup Coinbase Pro client
+const client = new CoinbasePro({
+  apiKey: '',
+  apiSecret: '',
+  passphrase: '',
+  useSandbox: false,
 });
 
-await client.ws.connect();
-
-client.ws.subscribe({
+// 2. Setup WebSocket channel info
+const channel = {
   name: WebSocketChannelName.TICKER,
   product_ids: ['BTC-USD', 'ETH-EUR'],
+};
+
+// 3. Listen to WebSocket channel updates
+client.ws.on(WebSocketEvent.ON_MESSAGE_TICKER, message => {
+  // 6. Receive message from WebSocket channel
+  console.log(`Received message of type "${message.type}".`, message);
+  // 7. Unsubscribe from WebSocket channel
+  client.ws.unsubscribe([channel]);
+  // 8. Disconnect & end program
+  client.ws.disconnect();
 });
+
+(async () => {
+  // 4. Connect to WebSocket
+  await client.ws.connect();
+  // 5. Subscribe to WebSocket channel
+  client.ws.subscribe([channel]);
+})();
 ```
 
 ## Resources
