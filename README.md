@@ -45,6 +45,8 @@ const auth = {
   apiKey: '',
   apiSecret: '',
   passphrase: '',
+  // The Sandbox is for testing only and offers a subset of the products/assets:
+  // https://docs.pro.coinbase.com/#sandbox
   useSandbox: true,
 };
 
