@@ -6,6 +6,8 @@ import Level2OrderBookBTCUSD from '../test/fixtures/rest/products/BTC-USD/book/l
 import Level3OrderBookBTCUSD from '../test/fixtures/rest/products/BTC-USD/book/level-3.json';
 import TradesBTCEUR from '../test/fixtures/rest/products/BTC-EUR/trades/GET-200.json';
 import CandlesBTCUSD from '../test/fixtures/rest/products/BTC-USD/candles/GET-200.json';
+import FirstCandleBatch from '../test/fixtures/rest/products/BTC-USD/candles/2020-03-09.json';
+import SecondCandleBatch from '../test/fixtures/rest/products/BTC-USD/candles/2020-03-21.json';
 
 describe('ProductAPI', () => {
   describe('getProducts', () => {
@@ -219,6 +221,32 @@ describe('ProductAPI', () => {
       expect(candles[candles.length - 1].timeString)
         .withContext('Starting time of last time slice')
         .toBe('2020-03-15T23:00:00.000Z');
+    });
+
+    fit('makes multiple requests when the selection of start/end time and granularity will result in more than 300 data points', async () => {
+      const from = '2020-03-09T00:00:00.000Z';
+      const to = '2020-03-22T23:59:59.999Z';
+
+      nock(global.REST_URL)
+        .get(`${ProductAPI.URL.PRODUCTS}/BTC-USD/candles`)
+        .query(() => true)
+        .reply(uri => {
+          if (uri.includes('start=2020-03-09T00:00:00.000Z')) {
+            return [200, JSON.stringify(FirstCandleBatch)];
+          } else if (uri.includes('start=2020-03-21T12:00:00.000Z')) {
+            return [200, JSON.stringify(SecondCandleBatch)];
+          }
+          return [500];
+        })
+        .persist(true);
+
+      const candles = await global.client.rest.product.getCandles('BTC-USD', {
+        end: to,
+        granularity: CandleGranularity.ONE_HOUR,
+        start: from,
+      });
+
+      expect(candles.length).withContext('14 days * 24 hours = 336 hours / candles').toBe(336);
     });
   });
 });

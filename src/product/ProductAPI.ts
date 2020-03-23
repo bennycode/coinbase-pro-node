@@ -213,6 +213,7 @@ export class ProductAPI {
         volume,
       }))
       .sort((a, b) => a.time - b.time);
+    // TODO: Filter duplicates
   }
 
   /**
