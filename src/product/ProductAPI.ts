@@ -202,7 +202,13 @@ export class ProductAPI {
       rawCandles = response.data;
     }
 
-    return rawCandles
+    const filteredCandles: {[time: string]: RawCandle} = {};
+    rawCandles.forEach(rawCandle => {
+      const [time] = rawCandle;
+      filteredCandles[time] = rawCandle;
+    });
+
+    return Array.from(Object.values(filteredCandles))
       .map(([time, low, high, open, close, volume]) => ({
         close,
         high,
@@ -213,7 +219,6 @@ export class ProductAPI {
         volume,
       }))
       .sort((a, b) => a.time - b.time);
-    // TODO: Filter duplicates
   }
 
   /**
