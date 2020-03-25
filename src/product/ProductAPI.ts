@@ -184,12 +184,6 @@ export class ProductAPI {
       const candleSizeInMillis = params.granularity * 1000;
 
       const bucketsInMillis = CandleBucketUtil.getBucketsInMillis(fromInMillis, toInMillis, candleSizeInMillis);
-      // TODO: Move code to "getBuckets"
-      for (let index = 0; index < bucketsInMillis.length; index++) {
-        if (index % 2 === 1) {
-          bucketsInMillis[index] = bucketsInMillis[index] - 1;
-        }
-      }
       const buckets = CandleBucketUtil.getBuckets(bucketsInMillis);
 
       for (let index = 0; index < buckets.length; index++) {
@@ -208,13 +202,7 @@ export class ProductAPI {
       rawCandles = response.data;
     }
 
-    const filteredCandles: {[time: string]: RawCandle} = {};
-    rawCandles.forEach(rawCandle => {
-      const [time] = rawCandle;
-      filteredCandles[time] = rawCandle;
-    });
-
-    return Array.from(Object.values(filteredCandles))
+    return rawCandles
       .map(([time, low, high, open, close, volume]) => ({
         close,
         high,

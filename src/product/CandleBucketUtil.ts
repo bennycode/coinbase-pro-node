@@ -28,17 +28,26 @@ export class CandleBucketUtil {
   }
 
   static getBuckets(bucketsInMillis: number[]): CandleBatchBucket[] {
-    const buckets = [];
+    const bucketsCopy = [...bucketsInMillis];
 
-    for (let i = 0; i < bucketsInMillis.length - 1; i++) {
-      const start = new Date(bucketsInMillis[i]).toISOString();
-      const stop = new Date(bucketsInMillis[i + 1]).toISOString();
-      buckets.push({
+    for (let index = 0; index < bucketsCopy.length; index++) {
+      if (index % 2 === 1) {
+        // TODO: Organize times in pairs
+        bucketsCopy[index] = bucketsCopy[index] - 1;
+      }
+    }
+
+    const bucketsInISO = [];
+
+    for (let i = 0; i < bucketsCopy.length - 1; i++) {
+      const start = new Date(bucketsCopy[i]).toISOString();
+      const stop = new Date(bucketsCopy[i + 1]).toISOString();
+      bucketsInISO.push({
         start,
         stop,
       });
     }
 
-    return buckets;
+    return bucketsInISO;
   }
 }

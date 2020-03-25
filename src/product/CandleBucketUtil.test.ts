@@ -42,7 +42,7 @@ describe('CandleBucketUtil', () => {
       const expectedOneDayIntervals: CandleBatchBucket[] = [
         {
           start: '2019-01-01T00:00:00.000Z',
-          stop: '2019-10-28T00:00:00.000Z',
+          stop: '2019-10-27T23:59:59.999Z',
         },
         {
           start: '2019-10-28T00:00:00.000Z',

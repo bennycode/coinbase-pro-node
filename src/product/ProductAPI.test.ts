@@ -223,7 +223,7 @@ describe('ProductAPI', () => {
         .toBe('2020-03-15T23:00:00.000Z');
     });
 
-    fit('makes multiple requests when the selection of start/end time and granularity will result in more than 300 data points', async () => {
+    xit('makes multiple requests when the selection of start/end time and granularity will result in more than 300 data points', async () => {
       const from = '2020-03-09T00:00:00.000Z';
       const to = '2020-03-22T23:59:59.999Z';
 
