@@ -184,6 +184,12 @@ export class ProductAPI {
       const candleSizeInMillis = params.granularity * 1000;
 
       const bucketsInMillis = CandleBucketUtil.getBucketsInMillis(fromInMillis, toInMillis, candleSizeInMillis);
+      // TODO: Move code to "getBuckets"
+      for (let index = 0; index < bucketsInMillis.length; index++) {
+        if (index % 2 === 1) {
+          bucketsInMillis[index] = bucketsInMillis[index] - 1;
+        }
+      }
       const buckets = CandleBucketUtil.getBuckets(bucketsInMillis);
 
       for (let index = 0; index < buckets.length; index++) {
