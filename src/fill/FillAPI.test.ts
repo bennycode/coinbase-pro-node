@@ -9,7 +9,7 @@ describe('FillAPI', () => {
   beforeAll(() => {
     nock(global.REST_URL)
       .get(FillAPI.URL.FILLS)
-      .query(() => true)
+      .query(true)
       .reply(uri => {
         const url = new URL(`${global.REST_URL}${uri}`);
         const query = querystring.parse(url.search);

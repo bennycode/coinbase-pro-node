@@ -10,7 +10,7 @@ describe('TimeAPI', () => {
 
       nock(global.REST_URL)
         .get(TimeAPI.URL.TIME)
-        .query(() => true)
+        .query(true)
         .reply(() => {
           const date = new Date('2015-01-07T23:47:25.201Z');
           return [

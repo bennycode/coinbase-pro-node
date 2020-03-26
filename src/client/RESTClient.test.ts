@@ -32,7 +32,7 @@ describe('RESTClient', () => {
     beforeAll(() => {
       nock(global.REST_URL)
         .get(AccountAPI.URL.ACCOUNTS)
-        .query(() => true)
+        .query(true)
         .reply(() => [200, JSON.stringify(listAccounts)])
         .persist();
     });

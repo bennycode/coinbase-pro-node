@@ -17,7 +17,7 @@ global.REST_URL = CoinbasePro.SETUP.SANDBOX.REST;
 beforeEach(() => {
   nock(global.REST_URL)
     .get(TimeAPI.URL.TIME)
-    .query(() => true)
+    .query(true)
     .reply(() => {
       const now = new Date();
       return [

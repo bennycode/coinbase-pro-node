@@ -10,11 +10,13 @@ import FirstCandleBatch from '../test/fixtures/rest/products/BTC-USD/candles/202
 import SecondCandleBatch from '../test/fixtures/rest/products/BTC-USD/candles/2020-03-20-05-00.json';
 
 describe('ProductAPI', () => {
+  afterEach(() => nock.cleanAll());
+
   describe('getProducts', () => {
     it('returns list of products', async () => {
       nock(global.REST_URL)
         .get(ProductAPI.URL.PRODUCTS)
-        .query(() => true)
+        .query(true)
         .reply(
           200,
           JSON.stringify([
@@ -128,7 +130,7 @@ describe('ProductAPI', () => {
     it('returns ticker information', async () => {
       nock(global.REST_URL)
         .get(`${ProductAPI.URL.PRODUCTS}/BTC-USD/ticker`)
-        .query(() => true)
+        .query(true)
         .reply(
           200,
           JSON.stringify({
@@ -153,7 +155,7 @@ describe('ProductAPI', () => {
     it('returns correct product stats', async () => {
       nock(global.REST_URL)
         .get(`${ProductAPI.URL.PRODUCTS}/BTC-USD/stats`)
-        .query(() => true)
+        .query(true)
         .reply(
           200,
           JSON.stringify({
@@ -197,7 +199,7 @@ describe('ProductAPI', () => {
 
       nock(global.REST_URL)
         .get(`${ProductAPI.URL.PRODUCTS}/BTC-USD/candles`)
-        .query(() => true)
+        .query(true)
         .reply(() => {
           const min = new Date(from).getTime();
           const max = new Date(to).getTime();
@@ -228,8 +230,9 @@ describe('ProductAPI', () => {
       const to = '2020-03-20T09:59:59.999Z';
 
       nock(global.REST_URL)
+        .persist(true)
         .get(`${ProductAPI.URL.PRODUCTS}/BTC-USD/candles`)
-        .query(() => true)
+        .query(true)
         .reply(uri => {
           if (uri.includes('start=2020-03-20T00:00:00.000Z')) {
             return [200, JSON.stringify(FirstCandleBatch)];
@@ -237,8 +240,7 @@ describe('ProductAPI', () => {
             return [200, JSON.stringify(SecondCandleBatch)];
           }
           return [500];
-        })
-        .persist(true);
+        });
 
       const candles = await global.client.rest.product.getCandles('BTC-USD', {
         end: to,

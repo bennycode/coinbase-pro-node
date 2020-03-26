@@ -9,7 +9,7 @@ describe('OrderAPI', () => {
     it('places market buy orders', async () => {
       nock(global.REST_URL)
         .post(OrderAPI.URL.ORDERS)
-        .query(() => true)
+        .query(true)
         .reply((_uri, body) => {
           const newOrder: NewOrder = typeof body === 'string' ? JSON.parse(body) : body;
 
@@ -50,7 +50,7 @@ describe('OrderAPI', () => {
     it('returns list of open orders', async () => {
       nock(global.REST_URL)
         .get(OrderAPI.URL.ORDERS)
-        .query(() => true)
+        .query(true)
         .reply(
           200,
           JSON.stringify([
@@ -86,7 +86,7 @@ describe('OrderAPI', () => {
 
       nock(global.REST_URL)
         .get(`${OrderAPI.URL.ORDERS}/${orderId}`)
-        .query(() => true)
+        .query(true)
         .reply(
           200,
           JSON.stringify({
@@ -115,10 +115,7 @@ describe('OrderAPI', () => {
     });
 
     it('returns null if an order cannot be found', async () => {
-      nock(global.REST_URL)
-        .get(`${OrderAPI.URL.ORDERS}/123`)
-        .query(() => true)
-        .reply(404);
+      nock(global.REST_URL).get(`${OrderAPI.URL.ORDERS}/123`).query(true).reply(404);
 
       const order = await global.client.rest.order.getOrder('123');
 
@@ -126,10 +123,7 @@ describe('OrderAPI', () => {
     });
 
     it('rethrows errors with status code other than 404', async () => {
-      nock(global.REST_URL)
-        .get(`${OrderAPI.URL.ORDERS}/123`)
-        .query(() => true)
-        .reply(500);
+      nock(global.REST_URL).get(`${OrderAPI.URL.ORDERS}/123`).query(true).reply(500);
 
       try {
         await global.client.rest.order.getOrder('123');
@@ -143,7 +137,7 @@ describe('OrderAPI', () => {
     it('correctly deletes all open orders if no productId is passed', async () => {
       nock(global.REST_URL)
         .delete(`${OrderAPI.URL.ORDERS}`)
-        .query(() => true)
+        .query(true)
         .reply(200, ['8eba9e7b-08d6-4667-90ca-6db445d743c1']);
 
       const canceledOrderIds = await global.client.rest.order.cancelOpenOrders();
