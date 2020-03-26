@@ -37,10 +37,10 @@ describe('CandleBucketUtil', () => {
     });
   });
 
-  describe('getBuckets', () => {
+  describe('getBucketsInISO', () => {
     it('converts millisecond buckets into ISO string buckets', () => {
       const bucketsInMillis = [1546300800000, 1572220799999, 1572220800000, 1577836800000];
-      const bucketsInISO = CandleBucketUtil.getBuckets(bucketsInMillis);
+      const bucketsInISO = CandleBucketUtil.getBucketsInISO(bucketsInMillis);
       expect(bucketsInISO).toEqual([
         {
           start: '2019-01-01T00:00:00.000Z',

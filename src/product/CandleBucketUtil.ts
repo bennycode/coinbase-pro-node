@@ -33,7 +33,7 @@ export class CandleBucketUtil {
     return bucketsInMillis;
   }
 
-  static getBuckets(bucketsInMillis: number[]): CandleBatchBucket[] {
+  static getBucketsInISO(bucketsInMillis: number[]): CandleBatchBucket[] {
     const bucketsInISO = [];
 
     for (let i = 0; i < bucketsInMillis.length - 1; i += 2) {
