@@ -1,4 +1,4 @@
-import {CandleBatchBucket, CandleBucketUtil, CandleGranularity} from '.';
+import {CandleBucketUtil, CandleGranularity} from '.';
 
 describe('CandleBucketUtil', () => {
   describe('expectedBuckets', () => {
@@ -25,7 +25,7 @@ describe('CandleBucketUtil', () => {
 
   describe('getBucketsInMillis', () => {
     it('returns the intervals in milliseconds if historic rates API requests must be batched', () => {
-      const expected = [1546300800000, 1572220800000, 1577836800000];
+      const expected = [1546300800000, 1572220799999, 1572220800000, 1577836800000];
 
       const fromInMillis = new Date('2019-01-01T00:00:00.000Z').getTime();
       const toInMillis = new Date('2020-01-01T00:00:00.000Z').getTime();
@@ -38,8 +38,10 @@ describe('CandleBucketUtil', () => {
   });
 
   describe('getBuckets', () => {
-    it('returns the intervals if historic rates API requests must be batched', () => {
-      const expectedOneDayIntervals: CandleBatchBucket[] = [
+    it('converts millisecond buckets into ISO string buckets', () => {
+      const bucketsInMillis = [1546300800000, 1572220799999, 1572220800000, 1577836800000];
+      const bucketsInISO = CandleBucketUtil.getBuckets(bucketsInMillis);
+      expect(bucketsInISO).toEqual([
         {
           start: '2019-01-01T00:00:00.000Z',
           stop: '2019-10-27T23:59:59.999Z',
@@ -48,44 +50,7 @@ describe('CandleBucketUtil', () => {
           start: '2019-10-28T00:00:00.000Z',
           stop: '2020-01-01T00:00:00.000Z',
         },
-      ];
-      const expectedSixHoursIntervals: CandleBatchBucket[] = [
-        {
-          start: '2019-01-01T00:00:00.000Z',
-          stop: '2019-03-17T00:00:00.000Z',
-        },
-        {
-          start: '2019-03-17T00:00:00.000Z',
-          stop: '2019-05-31T00:00:00.000Z',
-        },
-        {
-          start: '2019-05-31T00:00:00.000Z',
-          stop: '2019-08-14T00:00:00.000Z',
-        },
-        {
-          start: '2019-08-14T00:00:00.000Z',
-          stop: '2019-10-28T00:00:00.000Z',
-        },
-        {
-          start: '2019-10-28T00:00:00.000Z',
-          stop: '2020-01-01T00:00:00.000Z',
-        },
-      ];
-
-      const fromInMillis = new Date('2019-01-01T00:00:00.000Z').getTime();
-      const toInMillis = new Date('2020-01-01T00:00:00.000Z').getTime();
-      const oneDayInMillis = CandleGranularity.ONE_DAY * 1000;
-      const sixHoursInMillis = CandleGranularity.SIX_HOURS * 1000;
-
-      const oneDayIntervalsInMillis = CandleBucketUtil.getBucketsInMillis(fromInMillis, toInMillis, oneDayInMillis);
-      const oneDayIntervals = CandleBucketUtil.getBuckets(oneDayIntervalsInMillis);
-
-      expect(oneDayIntervals).withContext('One day interval').toEqual(expectedOneDayIntervals);
-
-      const sixHoursIntervalsInMillis = CandleBucketUtil.getBucketsInMillis(fromInMillis, toInMillis, sixHoursInMillis);
-      const sixHoursIntervals = CandleBucketUtil.getBuckets(sixHoursIntervalsInMillis);
-
-      expect(sixHoursIntervals).withContext('Six hours interval').toEqual(expectedSixHoursIntervals);
+      ]);
     });
   });
 });
