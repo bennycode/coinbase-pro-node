@@ -9,7 +9,7 @@ describe('UserAPI', () => {
   beforeAll(() => {
     nock(global.REST_URL)
       .get(`${UserAPI.URL.USERS}/self/verify`)
-      .query(() => true)
+      .query(true)
       .reply(() => {
         return [200, JSON.stringify(verifyPayload)];
       })
@@ -17,7 +17,7 @@ describe('UserAPI', () => {
 
     nock(global.REST_URL)
       .get(`${UserAPI.URL.USERS}/self/trailing-volume`)
-      .query(() => true)
+      .query(true)
       .reply(() => [200, JSON.stringify(trailingVolume)])
       .persist();
   });

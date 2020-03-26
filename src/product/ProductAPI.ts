@@ -184,10 +184,10 @@ export class ProductAPI {
       const candleSizeInMillis = params.granularity * 1000;
 
       const bucketsInMillis = CandleBucketUtil.getBucketsInMillis(fromInMillis, toInMillis, candleSizeInMillis);
-      const buckets = CandleBucketUtil.getBuckets(bucketsInMillis);
+      const bucketsInISO = CandleBucketUtil.getBucketsInISO(bucketsInMillis);
 
-      for (let index = 0; index < buckets.length; index++) {
-        const bucket = buckets[index];
+      for (let index = 0; index < bucketsInISO.length; index++) {
+        const bucket = bucketsInISO[index];
         const response = await this.apiClient.get<RawCandle[]>(resource, {
           params: {
             end: bucket.stop,

@@ -16,29 +16,35 @@ export class CandleBucketUtil {
   }
 
   static getBucketsInMillis(fromInMillis: number, toInMillis: number, candleSizeInMillis: number): number[] {
-    const buckets = [];
+    const bucketsInMillis = [];
     const batch = MAXIMUM_HISTORIC_DATA_POINTS * candleSizeInMillis;
+
     let current = fromInMillis;
+    bucketsInMillis.push(current); // push initial start
+    current = current + batch;
+
     while (current < toInMillis) {
-      buckets.push(current);
+      bucketsInMillis.push(current - 1); // intermediate stop
+      bucketsInMillis.push(current); // intermediate start
       current = current + batch;
     }
-    buckets.push(toInMillis);
-    return buckets;
+
+    bucketsInMillis.push(toInMillis); // push initial stop
+    return bucketsInMillis;
   }
 
-  static getBuckets(bucketsInMillis: number[]): CandleBatchBucket[] {
-    const buckets = [];
+  static getBucketsInISO(bucketsInMillis: number[]): CandleBatchBucket[] {
+    const bucketsInISO = [];
 
-    for (let i = 0; i < bucketsInMillis.length - 1; i++) {
+    for (let i = 0; i < bucketsInMillis.length - 1; i += 2) {
       const start = new Date(bucketsInMillis[i]).toISOString();
       const stop = new Date(bucketsInMillis[i + 1]).toISOString();
-      buckets.push({
+      bucketsInISO.push({
         start,
         stop,
       });
     }
 
-    return buckets;
+    return bucketsInISO;
   }
 }

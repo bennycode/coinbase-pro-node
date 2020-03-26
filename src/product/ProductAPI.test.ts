@@ -6,13 +6,17 @@ import Level2OrderBookBTCUSD from '../test/fixtures/rest/products/BTC-USD/book/l
 import Level3OrderBookBTCUSD from '../test/fixtures/rest/products/BTC-USD/book/level-3.json';
 import TradesBTCEUR from '../test/fixtures/rest/products/BTC-EUR/trades/GET-200.json';
 import CandlesBTCUSD from '../test/fixtures/rest/products/BTC-USD/candles/GET-200.json';
+import FirstCandleBatch from '../test/fixtures/rest/products/BTC-USD/candles/2020-03-20-00-00.json';
+import SecondCandleBatch from '../test/fixtures/rest/products/BTC-USD/candles/2020-03-20-05-00.json';
 
 describe('ProductAPI', () => {
+  afterEach(() => nock.cleanAll());
+
   describe('getProducts', () => {
     it('returns list of products', async () => {
       nock(global.REST_URL)
         .get(ProductAPI.URL.PRODUCTS)
-        .query(() => true)
+        .query(true)
         .reply(
           200,
           JSON.stringify([
@@ -126,7 +130,7 @@ describe('ProductAPI', () => {
     it('returns ticker information', async () => {
       nock(global.REST_URL)
         .get(`${ProductAPI.URL.PRODUCTS}/BTC-USD/ticker`)
-        .query(() => true)
+        .query(true)
         .reply(
           200,
           JSON.stringify({
@@ -151,7 +155,7 @@ describe('ProductAPI', () => {
     it('returns correct product stats', async () => {
       nock(global.REST_URL)
         .get(`${ProductAPI.URL.PRODUCTS}/BTC-USD/stats`)
-        .query(() => true)
+        .query(true)
         .reply(
           200,
           JSON.stringify({
@@ -195,7 +199,7 @@ describe('ProductAPI', () => {
 
       nock(global.REST_URL)
         .get(`${ProductAPI.URL.PRODUCTS}/BTC-USD/candles`)
-        .query(() => true)
+        .query(true)
         .reply(() => {
           const min = new Date(from).getTime();
           const max = new Date(to).getTime();
@@ -219,6 +223,32 @@ describe('ProductAPI', () => {
       expect(candles[candles.length - 1].timeString)
         .withContext('Starting time of last time slice')
         .toBe('2020-03-15T23:00:00.000Z');
+    });
+
+    it('makes multiple requests when the selection of start/end time and granularity will result in more than 300 data points', async () => {
+      const from = '2020-03-20T00:00:00.000Z';
+      const to = '2020-03-20T09:59:59.999Z';
+
+      nock(global.REST_URL)
+        .persist(true)
+        .get(`${ProductAPI.URL.PRODUCTS}/BTC-USD/candles`)
+        .query(true)
+        .reply(uri => {
+          if (uri.includes('start=2020-03-20T00:00:00.000Z')) {
+            return [200, JSON.stringify(FirstCandleBatch)];
+          } else if (uri.includes('start=2020-03-20T05:00:00.000Z')) {
+            return [200, JSON.stringify(SecondCandleBatch)];
+          }
+          return [500];
+        });
+
+      const candles = await global.client.rest.product.getCandles('BTC-USD', {
+        end: to,
+        granularity: CandleGranularity.ONE_MINUTE,
+        start: from,
+      });
+
+      expect(candles.length).withContext('10 hours are 600 minutes').toBe(600);
     });
   });
 });
