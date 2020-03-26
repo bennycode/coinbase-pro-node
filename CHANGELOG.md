@@ -1,3 +1,24 @@
+#### 1.4.2 (2020-03-26)
+
+##### Chores
+
+- Reduce Prettier output ([bc2bbcd5](https://github.com/bennyn/coinbase-pro-node/commit/bc2bbcd5a4ca67c11b673732ff85deb55e26d843))
+- **deps:**
+  - yarn upgrade --latest ([28a0f92b](https://github.com/bennyn/coinbase-pro-node/commit/28a0f92b2650f0eee51657f8bc31502a3e27d636))
+  - yarn upgrade --latest ([19b769b5](https://github.com/bennyn/coinbase-pro-node/commit/19b769b5e564a6aef12d00dabb3c5203362b30e7))
+
+##### Documentation Changes
+
+- Mention sandbox implications ([71d4bf9d](https://github.com/bennyn/coinbase-pro-node/commit/71d4bf9daf9aa361bf202a1e139060c5169a80b3))
+
+##### New Features
+
+- Batch historic rates requests to bypass time range errors ([#96](https://github.com/bennyn/coinbase-pro-node/pull/96)) ([b41a6e21](https://github.com/bennyn/coinbase-pro-node/commit/b41a6e21906a2569256cda733701573cb75ce19f))
+
+##### Bug Fixes
+
+- Don't fetch candle starting at end time ([#99](https://github.com/bennyn/coinbase-pro-node/pull/99)) ([26c70962](https://github.com/bennyn/coinbase-pro-node/commit/26c70962bfa8c1a8b8498fcb745378c4255b91ca))
+
 #### 1.4.1 (2020-03-22)
 
 ##### Documentation Changes
