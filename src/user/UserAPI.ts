@@ -18,9 +18,13 @@ export class UserAPI {
 
   constructor(private readonly apiClient: AxiosInstance) {}
 
-  // https://docs.pro.coinbase.com/#subscribe
+  /**
+   * Verify your authentication with Coinbase Pro.
+   * @returns Your account
+   * @see https://docs.pro.coinbase.com/#subscribe
+   */
   async verifyAuthentication(): Promise<VerifiedUser> {
-    const resource = [UserAPI.URL.USERS, 'self', 'verify'].join('/');
+    const resource = `${UserAPI.URL.USERS}/self/verify`;
     const response = await this.apiClient.get<VerifiedUser>(resource);
     return response.data;
   }
