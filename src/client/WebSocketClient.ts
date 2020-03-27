@@ -219,6 +219,10 @@ export class WebSocketClient extends EventEmitter {
         this.emit(WebSocketEvent.ON_CLOSE, event);
       };
 
+      this.socket.onerror = (event: ErrorEvent): void => {
+        this.emit(WebSocketEvent.ON_ERROR, event);
+      };
+
       this.socket.onmessage = (event: MessageEvent): void => {
         const response: WebSocketResponse = JSON.parse(event.data);
 
