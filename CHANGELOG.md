@@ -1,3 +1,13 @@
+### 1.5.0 (2020-03-27)
+
+##### Documentation Changes
+
+- Document self verification ([7dc106b2](https://github.com/bennyn/coinbase-pro-node/commit/7dc106b26270b517c642f652356f31493dd55a5d))
+
+##### New Features
+
+- Emit WebSocket errors ([#101](https://github.com/bennyn/coinbase-pro-node/pull/101)) ([d3b6e3b7](https://github.com/bennyn/coinbase-pro-node/commit/d3b6e3b7d8b835d21cae6304c0031f4dd5aaf1c6))
+
 #### 1.4.2 (2020-03-26)
 
 ##### Chores
