@@ -6,9 +6,9 @@ import tickerUnsubscribeSuccess from '../test/fixtures/ws/ticker/unsubscribe-suc
 import {
   WebSocketChannelName,
   WebSocketClient,
+  WebSocketEvent,
   WebSocketRequest,
   WebSocketRequestType,
-  WebSocketEvent,
   WebSocketResponseType,
 } from './WebSocketClient';
 
@@ -142,6 +142,15 @@ describe('WebSocketClient', () => {
           product_ids: productIds,
         },
       ]);
+    });
+  });
+
+  describe('connect', () => {
+    it('attaches an error listener', async done => {
+      const invalidUrl = 'ws://localhost:50001';
+      const client = new WebSocketClient(invalidUrl);
+      client.on(WebSocketEvent.ON_ERROR, done);
+      await client.connect();
     });
   });
 
