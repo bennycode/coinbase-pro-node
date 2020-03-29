@@ -5,7 +5,7 @@
   "dependencies": {
     "@types/ws": "7.2.3",
     "axios": "0.19.2",
-    "axios-rate-limit": "1.2.1",
+    "axios-retry": "3.1.2",
     "bufferutil": "4.0.1",
     "reconnecting-websocket": "4.4.0",
     "utf-8-validate": "5.0.2",

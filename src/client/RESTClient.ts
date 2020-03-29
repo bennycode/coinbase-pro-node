@@ -1,5 +1,4 @@
-import axios, {AxiosInstance, AxiosInterceptorManager, AxiosRequestConfig, AxiosResponse} from 'axios';
-import rateLimit from 'axios-rate-limit';
+import axios, {AxiosError, AxiosInstance, AxiosInterceptorManager, AxiosRequestConfig, AxiosResponse} from 'axios';
 import {AccountAPI} from '../account/AccountAPI';
 import {RequestSigner} from '../auth/RequestSigner';
 import {ClientAuthentication} from '../CoinbasePro';
@@ -10,6 +9,7 @@ import {UserAPI} from '../user/UserAPI';
 import {FillAPI} from '../fill/FillAPI';
 import querystring from 'querystring';
 import {ProfileAPI} from '../profile/ProfileAPI';
+import axiosRetry, {isNetworkOrIdempotentRequestError} from 'axios-retry';
 
 export class RESTClient {
   get defaults(): AxiosRequestConfig {
@@ -39,13 +39,32 @@ export class RESTClient {
      * - 5 requests per second, up to 10 requests per second in bursts for private endpoints
      * @see https://docs.pro.coinbase.com/#rate-limits
      */
-    this.httpClient = rateLimit(
-      axios.create({
-        baseURL: baseURL,
-        timeout: 5000,
-      }),
-      {maxRequests: 3, perMilliseconds: 1000}
-    );
+    this.httpClient = axios.create({
+      baseURL: baseURL,
+      timeout: 5000,
+    });
+
+    axiosRetry(this.httpClient, {
+      retries: Infinity,
+      retryCondition: (error: AxiosError) => {
+        const gotRateLimited = error.response?.status === 429;
+        const inAirplaneMode = error.code === 'ECONNABORTED';
+        return isNetworkOrIdempotentRequestError(error) || inAirplaneMode || gotRateLimited;
+      },
+      retryDelay: (retryCount: number, error: AxiosError) => {
+        const errorMessage = error.response?.data.message || error.message;
+        console.warn(
+          `#${retryCount} There was an error querying "${error.config.baseURL}${error.request.path}": ${errorMessage}`
+        );
+        /**
+         * Rate limits:
+         * - 3 requests per second, up to 6 requests per second in bursts for public endpoints
+         * - 5 requests per second, up to 10 requests per second in bursts for private endpoints
+         * @see https://docs.pro.coinbase.com/#rate-limits
+         */
+        return 200;
+      },
+    });
 
     this.httpClient.interceptors.request.use(async config => {
       const baseURL = String(config.baseURL);
