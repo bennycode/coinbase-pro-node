@@ -69,12 +69,12 @@ describe('ProfileAPI', () => {
     it('rethrows errors with status code other than 404', async () => {
       const profileId = '86602c68-306a-4500-ac73-4ce56a91d83d';
 
-      nock(global.REST_URL).get(`${ProfileAPI.URL.PROFILES}/${profileId}`).query(true).reply(500);
+      nock(global.REST_URL).get(`${ProfileAPI.URL.PROFILES}/${profileId}`).query(true).reply(403);
 
       try {
         await global.client.rest.profile.getProfile(profileId);
       } catch (error) {
-        expect(error.response.status).toBe(500);
+        expect(error.response.status).toBe(403);
       }
     });
   });
