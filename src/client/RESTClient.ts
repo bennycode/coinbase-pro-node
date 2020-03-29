@@ -62,7 +62,7 @@ export class RESTClient {
          * - 5 requests per second, up to 10 requests per second in bursts for private endpoints
          * @see https://docs.pro.coinbase.com/#rate-limits
          */
-        return 200;
+        return 1000;
       },
     });
 
