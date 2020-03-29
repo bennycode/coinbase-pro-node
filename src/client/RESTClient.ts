@@ -36,12 +36,7 @@ export class RESTClient {
 
   constructor(baseURL: string, auth: ClientAuthentication) {
     this.logger = util.debuglog('coinbase-pro-node');
-    /**
-     * Rate limits:
-     * - 3 requests per second, up to 6 requests per second in bursts for public endpoints
-     * - 5 requests per second, up to 10 requests per second in bursts for private endpoints
-     * @see https://docs.pro.coinbase.com/#rate-limits
-     */
+
     this.httpClient = axios.create({
       baseURL: baseURL,
       timeout: 5000,
