@@ -10,6 +10,7 @@ import {FillAPI} from '../fill/FillAPI';
 import querystring from 'querystring';
 import {ProfileAPI} from '../profile/ProfileAPI';
 import axiosRetry, {isNetworkOrIdempotentRequestError} from 'axios-retry';
+import util from 'util';
 
 export class RESTClient {
   get defaults(): AxiosRequestConfig {
@@ -31,8 +32,10 @@ export class RESTClient {
   readonly user: UserAPI;
 
   private readonly httpClient: AxiosInstance;
+  private readonly logger: (msg: string, ...param: any[]) => void;
 
   constructor(baseURL: string, auth: ClientAuthentication) {
+    this.logger = util.debuglog('coinbase-pro-node');
     /**
      * Rate limits:
      * - 3 requests per second, up to 6 requests per second in bursts for public endpoints
@@ -53,7 +56,7 @@ export class RESTClient {
       },
       retryDelay: (retryCount: number, error: AxiosError) => {
         const errorMessage = error.response?.data.message || error.message;
-        console.warn(
+        this.logger(
           `#${retryCount} There was an error querying "${error.config.baseURL}${error.request.path}": ${errorMessage}`
         );
         /**
