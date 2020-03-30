@@ -73,6 +73,7 @@
     "build": "tsc",
     "changelog:commit": "git add CHANGELOG.md && git commit -m \"docs: updated CHANGELOG.md\"",
     "clean": "rimraf .nyc_output coverage dist",
+    "demo": "cross-env NODE_DEBUG=coinbase-pro-node* ts-node src/demo.ts",
     "dist": "yarn clean && yarn build",
     "docs": "yarn typedoc",
     "fix": "yarn fix:other && yarn fix:code",
@@ -88,7 +89,6 @@
     "release:major": "generate-changelog -M && yarn changelog:commit && npm version major",
     "release:minor": "generate-changelog -m && yarn changelog:commit && npm version minor",
     "release:patch": "generate-changelog -p && yarn changelog:commit && npm version patch",
-    "start": "cross-env NODE_DEBUG=coinbase-pro-node* ts-node src/start.ts",
     "test": "nyc --nycrc-path=nyc.config.coverage.json jasmine --config=jasmine.json",
     "test:dev": "nyc --nycrc-path=nyc.config.json jasmine --config=jasmine.json"
   },
