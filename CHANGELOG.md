@@ -1,3 +1,18 @@
+#### 1.5.1 (2020-03-30)
+
+##### Chores
+
+- **deps:** Remove unused sub-dependencies ([a2a97b39](https://github.com/bennyn/coinbase-pro-node/commit/a2a97b395cd748a6e5bbc9f11f2dd72549eb0839))
+
+##### New Features
+
+- Improve rate limiting to fetch candles ([#103](https://github.com/bennyn/coinbase-pro-node/pull/103)) ([23e83556](https://github.com/bennyn/coinbase-pro-node/commit/23e83556b8a8f80a0879f059255bf62700b5a772))
+
+##### Refactors
+
+- Unify persistence of interceptors ([2da51762](https://github.com/bennyn/coinbase-pro-node/commit/2da51762b4628e548dadafc376e7ea68845013e0))
+- Rename demo script ([a9d944ae](https://github.com/bennyn/coinbase-pro-node/commit/a9d944ae8257b529d694fb670e5fa7477d6dab52))
+
 ### 1.5.0 (2020-03-27)
 
 ##### Documentation Changes
