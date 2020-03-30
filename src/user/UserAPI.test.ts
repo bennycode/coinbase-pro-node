@@ -8,18 +8,18 @@ describe('UserAPI', () => {
 
   beforeAll(() => {
     nock(global.REST_URL)
+      .persist()
       .get(`${UserAPI.URL.USERS}/self/verify`)
       .query(true)
       .reply(() => {
         return [200, JSON.stringify(verifyPayload)];
-      })
-      .persist();
+      });
 
     nock(global.REST_URL)
+      .persist()
       .get(`${UserAPI.URL.USERS}/self/trailing-volume`)
       .query(true)
-      .reply(() => [200, JSON.stringify(trailingVolume)])
-      .persist();
+      .reply(() => [200, JSON.stringify(trailingVolume)]);
   });
 
   describe('verifyAuthentication', () => {

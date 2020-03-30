@@ -10,28 +10,28 @@ describe('AccountAPI', () => {
 
   beforeAll(() => {
     nock(global.REST_URL)
+      .persist()
       .get(AccountAPI.URL.ACCOUNTS)
       .query(true)
-      .reply(() => [200, JSON.stringify(listAccounts)])
-      .persist();
+      .reply(() => [200, JSON.stringify(listAccounts)]);
 
     nock(global.REST_URL)
+      .persist()
       .get(`${AccountAPI.URL.ACCOUNTS}/322dfa88-e10d-4678-856d-2930eac3e62d`)
       .query(true)
-      .reply(() => [200, JSON.stringify(getAccount)])
-      .persist();
+      .reply(() => [200, JSON.stringify(getAccount)]);
 
     nock(global.REST_URL)
+      .persist()
       .get(`${AccountAPI.URL.ACCOUNTS}/322dfa88-e10d-4678-856d-2930eac3e62d/ledger`)
       .query(true)
-      .reply(() => [200, JSON.stringify(getAccountHistory)])
-      .persist();
+      .reply(() => [200, JSON.stringify(getAccountHistory)]);
 
     nock(global.REST_URL)
+      .persist()
       .get(`${AccountAPI.URL.ACCOUNTS}/322dfa88-e10d-4678-856d-2930eac3e62d/holds`)
       .query(true)
-      .reply(() => [200, JSON.stringify(getHolds)])
-      .persist();
+      .reply(() => [200, JSON.stringify(getHolds)]);
   });
 
   describe('listAccounts', () => {

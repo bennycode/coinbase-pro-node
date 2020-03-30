@@ -230,7 +230,7 @@ describe('ProductAPI', () => {
       const to = '2020-03-20T09:59:59.999Z';
 
       nock(global.REST_URL)
-        .persist(true)
+        .persist()
         .get(`${ProductAPI.URL.PRODUCTS}/BTC-USD/candles`)
         .query(true)
         .reply(uri => {

@@ -16,6 +16,7 @@ global.REST_URL = CoinbasePro.SETUP.SANDBOX.REST;
 
 beforeEach(() => {
   nock(global.REST_URL)
+    .persist()
     .get(TimeAPI.URL.TIME)
     .query(true)
     .reply(() => {
@@ -27,8 +28,7 @@ beforeEach(() => {
           iso: now.toISOString(),
         }),
       ];
-    })
-    .persist();
+    });
 
   global.client = new CoinbasePro({
     apiKey: '',

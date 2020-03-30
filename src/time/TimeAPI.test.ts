@@ -9,6 +9,7 @@ describe('TimeAPI', () => {
       nock.cleanAll();
 
       nock(global.REST_URL)
+        .persist()
         .get(TimeAPI.URL.TIME)
         .query(true)
         .reply(() => {
@@ -20,8 +21,7 @@ describe('TimeAPI', () => {
               iso: date.toISOString(),
             }),
           ];
-        })
-        .persist();
+        });
     });
 
     it('returns decimal seconds since Unix Epoch', async () => {

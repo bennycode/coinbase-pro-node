@@ -8,6 +8,7 @@ describe('FillAPI', () => {
 
   beforeAll(() => {
     nock(global.REST_URL)
+      .persist()
       .get(FillAPI.URL.FILLS)
       .query(true)
       .reply(uri => {
@@ -24,8 +25,7 @@ describe('FillAPI', () => {
         }
 
         return [200, JSON.stringify(payload)];
-      })
-      .persist();
+      });
   });
 
   describe('getFillsByOrderId', () => {
