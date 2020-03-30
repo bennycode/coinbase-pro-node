@@ -123,12 +123,12 @@ describe('OrderAPI', () => {
     });
 
     it('rethrows errors with status code other than 404', async () => {
-      nock(global.REST_URL).get(`${OrderAPI.URL.ORDERS}/123`).query(true).reply(500);
+      nock(global.REST_URL).get(`${OrderAPI.URL.ORDERS}/123`).query(true).reply(403);
 
       try {
         await global.client.rest.order.getOrder('123');
       } catch (error) {
-        expect(error.response.status).toBe(500);
+        expect(error.response.status).toBe(403);
       }
     });
   });

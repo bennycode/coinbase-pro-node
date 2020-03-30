@@ -31,10 +31,10 @@ describe('RESTClient', () => {
 
     beforeAll(() => {
       nock(global.REST_URL)
+        .persist()
         .get(AccountAPI.URL.ACCOUNTS)
         .query(true)
-        .reply(() => [200, JSON.stringify(listAccounts)])
-        .persist();
+        .reply(() => [200, JSON.stringify(listAccounts)]);
     });
 
     it('supports custom HTTP interceptors', async () => {
@@ -51,6 +51,42 @@ describe('RESTClient', () => {
       client.interceptors.request.eject(myInterceptor);
       await client.account.listAccounts();
       expect(onRequest).toHaveBeenCalledTimes(1);
+    });
+  });
+
+  describe('retries', () => {
+    it('retries on HTTP 5xx status codes', async () => {
+      nock(global.REST_URL)
+        .get(AccountAPI.URL.ACCOUNTS)
+        .query(true)
+        .reply(() => [
+          500,
+          JSON.stringify({
+            message: 'Test Error',
+          }),
+        ]);
+
+      nock(global.REST_URL)
+        .get(AccountAPI.URL.ACCOUNTS)
+        .query(true)
+        .reply(() => [200, JSON.stringify(listAccounts)]);
+
+      const client = createClient();
+      const promise = client.account.listAccounts();
+      await expectAsync(promise).toBeResolved();
+    });
+
+    it('retries when getting rate limited', async () => {
+      nock(global.REST_URL).get(AccountAPI.URL.ACCOUNTS).query(true).reply(429);
+
+      nock(global.REST_URL)
+        .get(AccountAPI.URL.ACCOUNTS)
+        .query(true)
+        .reply(() => [200, JSON.stringify(listAccounts)]);
+
+      const client = createClient();
+      const promise = client.account.listAccounts();
+      await expectAsync(promise).toBeResolved();
     });
   });
 });
