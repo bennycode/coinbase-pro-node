@@ -1,3 +1,13 @@
+### 1.6.0 (2020-03-31)
+
+##### Chores
+
+- **deps-dev:** bump lint-staged from 10.0.9 to 10.0.10 ([#104](https://github.com/bennyn/coinbase-pro-node/pull/104)) ([3fdb6e64](https://github.com/bennyn/coinbase-pro-node/commit/3fdb6e6448056e5146b1b65ba0362b1faba3e4bb))
+
+##### New Features
+
+- Accept custom WebSocket reconnect options ([#106](https://github.com/bennyn/coinbase-pro-node/pull/106)) ([75032291](https://github.com/bennyn/coinbase-pro-node/commit/75032291e4997d733b75e9561e29f1a27aa2e7be))
+
 #### 1.5.1 (2020-03-30)
 
 ##### Chores
