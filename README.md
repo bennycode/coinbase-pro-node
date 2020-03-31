@@ -96,7 +96,7 @@ client.ws.on(WebSocketEvent.ON_MESSAGE_TICKER, message => {
 
 (async () => {
   // 4. Connect to WebSocket
-  await client.ws.connect();
+  client.ws.connect();
   // 5. Subscribe to WebSocket channel
   client.ws.subscribe([channel]);
 })();

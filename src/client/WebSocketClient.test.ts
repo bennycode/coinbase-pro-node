@@ -11,6 +11,7 @@ import {
   WebSocketRequestType,
   WebSocketResponseType,
 } from './WebSocketClient';
+import ReconnectingWebSocket from 'reconnecting-websocket';
 
 const WEBSOCKET_PORT = 8087;
 const WEBSOCKET_URL = `ws://localhost:${WEBSOCKET_PORT}`;
@@ -41,7 +42,7 @@ describe('WebSocketClient', () => {
     it('it signals an event when the WebSocket connection is established', async done => {
       const client = new WebSocketClient(WEBSOCKET_URL);
       client.on(WebSocketEvent.ON_OPEN, () => done());
-      await client.connect();
+      client.connect();
     });
   });
 
@@ -85,7 +86,7 @@ describe('WebSocketClient', () => {
         }
       });
 
-      await client.connect();
+      client.connect();
 
       client.subscribe([
         {
@@ -134,7 +135,7 @@ describe('WebSocketClient', () => {
         }
       });
 
-      await client.connect();
+      client.connect();
 
       client.subscribe([
         {
@@ -150,7 +151,24 @@ describe('WebSocketClient', () => {
       const invalidUrl = 'ws://localhost:50001';
       const client = new WebSocketClient(invalidUrl);
       client.on(WebSocketEvent.ON_ERROR, done);
-      await client.connect();
+      client.connect();
+    });
+
+    it('throws an error when trying to overwrite an existing connection', async done => {
+      const client = new WebSocketClient(WEBSOCKET_URL);
+      client.connect();
+      try {
+        client.connect();
+        done.fail('No error has been thrown');
+      } catch (error) {
+        done();
+      }
+    });
+
+    it('supports custom reconnect options', async () => {
+      const client = new WebSocketClient(WEBSOCKET_URL);
+      const socket = client.connect({startClosed: true});
+      expect(socket.readyState).toBe(ReconnectingWebSocket.CLOSED);
     });
   });
 
@@ -178,7 +196,7 @@ describe('WebSocketClient', () => {
         client.disconnect();
       });
 
-      await client.connect();
+      client.connect();
     });
   });
 
@@ -229,7 +247,7 @@ describe('WebSocketClient', () => {
         client.sendMessage(message, signature);
       });
 
-      await client.connect();
+      client.connect();
     });
   });
 });
