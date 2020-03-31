@@ -201,56 +201,67 @@ export class WebSocketClient extends EventEmitter {
     this.baseURL = baseURL;
   }
 
-  connect(): Promise<ReconnectingWebSocket> {
-    return new Promise(resolve => {
-      const options: Options = {
-        WebSocket,
-        connectionTimeout: 4000,
-        debug: false,
-        maxReconnectionDelay: 10000,
-        maxRetries: Infinity,
-        minReconnectionDelay: 4000,
-        reconnectionDelayGrowFactor: 1.3,
-      };
+  /**
+   * The websocket feed is publicly available, but connections to it are rate-limited to 1 per 4 seconds per IP.
+   *
+   * @param reconnectOptions - Reconnect options to be used with the "reconnecting-websocket" package
+   * @see https://docs.pro.coinbase.com/#websocket-feed
+   */
+  connect(
+    reconnectOptions: Options = {
+      connectionTimeout: 1100,
+      debug: false,
+      maxReconnectionDelay: 10000,
+      maxRetries: Infinity,
+      minReconnectionDelay: 4000,
+      reconnectionDelayGrowFactor: 1,
+    }
+  ): ReconnectingWebSocket {
+    if (this.socket) {
+      throw Error(
+        `You established already a WebSocket connection. Please call "disconnect" first before creating a new one.`
+      );
+    }
 
-      this.socket = new ReconnectingWebSocket(this.baseURL, [], options);
+    this.socket = new ReconnectingWebSocket(this.baseURL, [], {...reconnectOptions, ...{WebSocket}});
 
-      this.socket.onclose = (event: CloseEvent): void => {
-        this.emit(WebSocketEvent.ON_CLOSE, event);
-      };
+    this.socket.onclose = (event: CloseEvent): void => {
+      this.emit(WebSocketEvent.ON_CLOSE, event);
+    };
 
-      this.socket.onerror = (event: ErrorEvent): void => {
-        this.emit(WebSocketEvent.ON_ERROR, event);
-      };
+    this.socket.onerror = (event: ErrorEvent): void => {
+      this.emit(WebSocketEvent.ON_ERROR, event);
+    };
 
-      this.socket.onmessage = (event: MessageEvent): void => {
-        const response: WebSocketResponse = JSON.parse(event.data);
+    this.socket.onmessage = (event: MessageEvent): void => {
+      const response: WebSocketResponse = JSON.parse(event.data);
 
-        // Emit generic event
-        this.emit(WebSocketEvent.ON_MESSAGE, response);
+      // Emit generic event
+      this.emit(WebSocketEvent.ON_MESSAGE, response);
 
-        // Emit specific event
-        switch (response.type) {
-          case WebSocketResponseType.TICKER:
-            this.emit(WebSocketEvent.ON_MESSAGE_TICKER, response);
-            break;
-          case WebSocketResponseType.FULL_MATCH:
-          case WebSocketResponseType.LAST_MATCH:
-            this.emit(WebSocketEvent.ON_MESSAGE_MATCHES, response);
-            break;
-        }
-      };
+      // Emit specific event
+      switch (response.type) {
+        case WebSocketResponseType.TICKER:
+          this.emit(WebSocketEvent.ON_MESSAGE_TICKER, response);
+          break;
+        case WebSocketResponseType.FULL_MATCH:
+        case WebSocketResponseType.LAST_MATCH:
+          this.emit(WebSocketEvent.ON_MESSAGE_MATCHES, response);
+          break;
+      }
+    };
 
-      this.socket.onopen = (): void => {
-        this.emit(WebSocketEvent.ON_OPEN);
-        resolve(this.socket);
-      };
-    });
+    this.socket.onopen = (): void => {
+      this.emit(WebSocketEvent.ON_OPEN);
+    };
+
+    return this.socket;
   }
 
   disconnect(reason: string = 'Unknown reason'): void {
     if (this.socket) {
       this.socket.close(WebSocketClient.CLOSE_EVENT_CODE.NORMAL_CLOSURE, reason);
+      this.socket = undefined;
     }
   }
 
