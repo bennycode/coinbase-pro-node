@@ -203,7 +203,8 @@ export class WebSocketClient extends EventEmitter {
 
   /**
    * The websocket feed is publicly available, but connections to it are rate-limited to 1 per 4 seconds per IP.
-   * @param reconnectOptions - Reconnecting options to be used with the "reconnecting-websocket" package
+   *
+   * @param reconnectOptions - Reconnect options to be used with the "reconnecting-websocket" package
    * @see https://docs.pro.coinbase.com/#websocket-feed
    */
   connect(
