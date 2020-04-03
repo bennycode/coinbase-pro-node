@@ -116,7 +116,8 @@ Feel free to check [issues page](https://github.com/bennyn/coinbase-pro-node/iss
 
 The following commits will help you getting started quickly with the code base:
 
-- [Add REST API endpoint](https://github.com/bennyn/coinbase-pro-node/commit/8a150fecb7d32b7b7cd39a8109985f665aaee26e)
+- [Add REST API endpoint](https://github.com/bennyn/coinbase-pro-node/commit/9920c2f4343985c349b68e2a47d7fe2c42e23e34)
+- [Add REST API endpoint (with fixtures)](https://github.com/bennyn/coinbase-pro-node/commit/8a150fecb7d32b7b7cd39a8109985f665aaee26e)
 
 ## Maintainers
 
