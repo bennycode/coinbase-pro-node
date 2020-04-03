@@ -6,6 +6,7 @@ import {OrderAPI} from '../order/OrderAPI';
 import {ProductAPI} from '../product/ProductAPI';
 import {TimeAPI} from '../time/TimeAPI';
 import {UserAPI} from '../user/UserAPI';
+import {FeeAPI} from '../fee/FeeAPI';
 import {FillAPI} from '../fill/FillAPI';
 import querystring from 'querystring';
 import {ProfileAPI} from '../profile/ProfileAPI';
@@ -25,6 +26,7 @@ export class RESTClient {
   }
 
   readonly account: AccountAPI;
+  readonly fee: FeeAPI;
   readonly fill: FillAPI;
   readonly order: OrderAPI;
   readonly product: ProductAPI;
@@ -92,6 +94,7 @@ export class RESTClient {
     });
 
     this.account = new AccountAPI(this.httpClient);
+    this.fee = new FeeAPI(this.httpClient);
     this.fill = new FillAPI(this.httpClient);
     this.order = new OrderAPI(this.httpClient);
     this.product = new ProductAPI(this.httpClient);
