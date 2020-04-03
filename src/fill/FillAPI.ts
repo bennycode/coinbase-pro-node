@@ -11,7 +11,7 @@ export interface Fill {
   fee: string;
   liquidity: Liquidity;
   order_id: UUID_V4;
-  price: '7755.01000000';
+  price: string;
   product_id: string;
   profile_id: UUID_V4;
   settled: boolean;
