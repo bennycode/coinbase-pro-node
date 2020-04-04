@@ -1,3 +1,18 @@
+#### 1.6.1 (2020-04-04)
+
+##### Documentation Changes
+
+- Add contribution example ([c08c424e](https://github.com/bennyn/coinbase-pro-node/commit/c08c424e401bb7a0a8aea59e1765f51f5a553a01))
+
+##### New Features
+
+- Add WebSocket event for subscription updates ([#110](https://github.com/bennyn/coinbase-pro-node/pull/110)) ([4915c515](https://github.com/bennyn/coinbase-pro-node/commit/4915c5159cbabd331b837cf33259932acc78edf8))
+- Get current fees ([#109](https://github.com/bennyn/coinbase-pro-node/pull/109)) ([9920c2f4](https://github.com/bennyn/coinbase-pro-node/commit/9920c2f4343985c349b68e2a47d7fe2c42e23e34))
+
+##### Bug Fixes
+
+- Correct type of fill price ([4a80aa27](https://github.com/bennyn/coinbase-pro-node/commit/4a80aa275432824ec52d59a3947ed3359ff301f9))
+
 ### 1.6.0 (2020-03-31)
 
 ##### Chores
