@@ -32,7 +32,14 @@ export class CoinbasePro {
     },
   };
 
-  constructor(auth: ClientAuthentication) {
+  constructor(
+    auth: ClientAuthentication = {
+      apiKey: '',
+      apiSecret: '',
+      passphrase: '',
+      useSandbox: false,
+    }
+  ) {
     this.url = auth.useSandbox === true ? CoinbasePro.SETUP.SANDBOX : CoinbasePro.SETUP.PRODUCTION;
     this.rest = new RESTClient(this.url.REST, auth);
     this.ws = new WebSocketClient(this.url.WebSocket);

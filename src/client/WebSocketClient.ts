@@ -28,7 +28,6 @@ export enum WebSocketChannelName {
 
 export interface WebSocketRequest {
   channels: WebSocketChannel[] | string[];
-  product_ids?: string[];
   type: WebSocketRequestType;
 }
 
@@ -159,6 +158,11 @@ export type WebSocketMatchMessage = {
 
 export type WebSocketLastMatchMessage = Omit<WebSocketMatchMessage, 'type'> & {type: WebSocketResponseType.LAST_MATCH};
 
+export type WebSocketSubscription = {
+  type: WebSocketResponseType.SUBSCRIPTIONS;
+  channels: WebSocketChannel[];
+};
+
 export enum WebSocketEvent {
   ON_CLOSE = 'WebSocketEvent.ON_CLOSE',
   ON_ERROR = 'WebSocketEvent.ON_ERROR',
@@ -166,6 +170,7 @@ export enum WebSocketEvent {
   ON_MESSAGE_MATCHES = 'WebSocketEvent.ON_MESSAGE_MATCHES',
   ON_MESSAGE_TICKER = 'WebSocketEvent.ON_MESSAGE_TICKER',
   ON_OPEN = 'WebSocketEvent.ON_OPEN',
+  ON_SUBSCRIPTION_UPDATE = 'WebSocketEvent.ON_SUBSCRIPTION_UPDATE',
 }
 
 export interface WebSocketClient {
@@ -181,6 +186,8 @@ export interface WebSocketClient {
   ): this;
 
   on(event: WebSocketEvent.ON_MESSAGE_TICKER, listener: (tickerMessage: WebSocketTickerMessage) => void): this;
+
+  on(event: WebSocketEvent.ON_SUBSCRIPTION_UPDATE, listener: (subscriptions: WebSocketSubscription) => void): this;
 
   on(event: WebSocketEvent.ON_OPEN, listener: (event: Event) => void): this;
 }
@@ -204,26 +211,19 @@ export class WebSocketClient extends EventEmitter {
   /**
    * The websocket feed is publicly available, but connections to it are rate-limited to 1 per 4 seconds per IP.
    *
-   * @param reconnectOptions - Reconnect options to be used with the "reconnecting-websocket" package
+   * @param reconnectOptions - Reconnect options to be used with the "reconnecting-websocket" package. Note: Options
+   *   will be merged with sensible default values.
    * @see https://docs.pro.coinbase.com/#websocket-feed
    */
-  connect(
-    reconnectOptions: Options = {
-      connectionTimeout: 1100,
-      debug: false,
-      maxReconnectionDelay: 10000,
-      maxRetries: Infinity,
-      minReconnectionDelay: 4000,
-      reconnectionDelayGrowFactor: 1,
-    }
-  ): ReconnectingWebSocket {
+  connect(reconnectOptions?: Options): ReconnectingWebSocket {
     if (this.socket) {
       throw Error(
         `You established already a WebSocket connection. Please call "disconnect" first before creating a new one.`
       );
     }
 
-    this.socket = new ReconnectingWebSocket(this.baseURL, [], {...reconnectOptions, ...{WebSocket}});
+    const options = this.mergeOptions(reconnectOptions);
+    this.socket = new ReconnectingWebSocket(this.baseURL, [], options);
 
     this.socket.onclose = (event: CloseEvent): void => {
       this.emit(WebSocketEvent.ON_CLOSE, event);
@@ -241,6 +241,9 @@ export class WebSocketClient extends EventEmitter {
 
       // Emit specific event
       switch (response.type) {
+        case WebSocketResponseType.SUBSCRIPTIONS:
+          this.emit(WebSocketEvent.ON_SUBSCRIPTION_UPDATE, response);
+          break;
         case WebSocketResponseType.TICKER:
           this.emit(WebSocketEvent.ON_MESSAGE_TICKER, response);
           break;
@@ -267,7 +270,7 @@ export class WebSocketClient extends EventEmitter {
 
   sendMessage(message: WebSocketRequest, signature?: SignedRequest): void {
     if (!this.socket) {
-      throw new Error('You need to connect to the WebSocket first!');
+      throw new Error(`Failed to send message of type "${message.type}": You need to connect to the WebSocket first.`);
     }
 
     if (signature) {
@@ -289,5 +292,19 @@ export class WebSocketClient extends EventEmitter {
       channels,
       type: WebSocketRequestType.UNSUBSCRIBE,
     });
+  }
+
+  private mergeOptions(reconnectOptions?: Options): Options {
+    const defaultOptions: Options = {
+      WebSocket,
+      connectionTimeout: 2000,
+      debug: false,
+      maxReconnectionDelay: 4000,
+      maxRetries: Infinity,
+      minReconnectionDelay: 1000,
+      reconnectionDelayGrowFactor: 1,
+    };
+
+    return {...defaultOptions, ...reconnectOptions};
   }
 }
