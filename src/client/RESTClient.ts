@@ -56,12 +56,12 @@ export class RESTClient extends EventEmitter {
     axiosRetry(this.httpClient, {
       retries: Infinity,
       retryCondition: (error: AxiosError) => {
-        const gotRateLimited = error.response!.status === 429;
+        const gotRateLimited = error.response?.status === 429;
         const inAirPlaneMode = error.code === 'ECONNABORTED';
         return isNetworkOrIdempotentRequestError(error) || inAirPlaneMode || gotRateLimited;
       },
       retryDelay: (retryCount: number, error: AxiosError) => {
-        const errorMessage = error.response!.data.message || error.message;
+        const errorMessage = error.response?.data.message || error.message;
         this.logger(
           `#${retryCount} There was an error querying "${error.config.baseURL}${error.request.path}": ${errorMessage}`
         );

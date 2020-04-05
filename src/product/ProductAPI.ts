@@ -209,17 +209,7 @@ export class ProductAPI {
       rawCandles = response.data;
     }
 
-    return rawCandles
-      .map(([time, low, high, open, close, volume]) => ({
-        close,
-        high,
-        low,
-        open,
-        time: time * 1000, // Map seconds to milliseconds
-        timeString: new Date(time * 1000).toISOString(),
-        volume,
-      }))
-      .sort((a, b) => a.time - b.time);
+    return rawCandles.map(this.mapCandle).sort((a, b) => a.time - b.time);
   }
 
   /**
@@ -234,10 +224,10 @@ export class ProductAPI {
       end: new Date().toISOString(),
       granularity,
     });
-    const latestCandle = candles[candles.length - 1];
     this.watchCandlesConfig[productId] = this.watchCandlesConfig[productId] || {};
-    this.watchCandlesConfig[productId][granularity] = latestCandle.timeString;
-    return this.runCandleWatcher(productId, granularity);
+    const latestCandle = candles[candles.length - 1];
+    this.emitCandle(productId, granularity, latestCandle);
+    return this.startCandleInterval(productId, granularity);
   }
 
   /**
@@ -324,28 +314,49 @@ export class ProductAPI {
     return response.data;
   }
 
-  private runCandleWatcher(productId: string, granularity: CandleGranularity): NodeJS.Timeout {
+  private mapCandle(payload: number[]): Candle {
+    const [time, low, high, open, close, volume] = payload;
+    return {
+      close,
+      high,
+      low,
+      open,
+      time: time * 1000, // Map seconds to milliseconds
+      timeString: new Date(time * 1000).toISOString(),
+      volume,
+    };
+  }
+
+  private emitCandle(productId: string, granularity: CandleGranularity, matchedCandle: Candle): void {
+    // Emit matched candle
+    this.restClient.emit(ProductEvent.NEW_CANDLE, productId, granularity, matchedCandle);
+    // Cache timestamp of upcoming candle
+    const interval = granularity * 1000;
+    const nextTimestamp = new Date(matchedCandle.timeString).getTime() + interval;
+    this.watchCandlesConfig[productId][granularity] = new Date(nextTimestamp).toISOString();
+  }
+
+  private async checkNewCandles(productId: string, granularity: CandleGranularity): Promise<void> {
+    const expectedTimestampISO = this.watchCandlesConfig[productId][granularity];
+
+    const candles = await this.getCandles('BTC-USD', {
+      granularity,
+      start: expectedTimestampISO,
+    });
+
+    const matches = candles.filter(candle => candle.timeString === expectedTimestampISO);
+    if (matches.length > 0) {
+      const matchedCandle = matches[0];
+      this.emitCandle(productId, granularity, matchedCandle);
+    }
+  }
+
+  private startCandleInterval(productId: string, granularity: CandleGranularity): NodeJS.Timeout {
     // Check for new candles in the smallest candle interval, which is 1 minute
     const updateInterval = CandleGranularity.ONE_MINUTE * 1000;
-
-    return (setInterval(async () => {
-      const expectedTimestampISO = this.watchCandlesConfig[productId][granularity];
-
-      const candles = await this.getCandles('BTC-USD', {
-        granularity,
-        start: expectedTimestampISO,
-      });
-
-      const matches = candles.filter(candle => candle.timeString === expectedTimestampISO);
-      if (matches.length > 0) {
-        const matchedCandle = matches[0];
-        // Emit new candle
-        this.restClient.emit(ProductEvent.NEW_CANDLE, productId, granularity, matchedCandle);
-        // Calculate timestamp of next candle
-        const interval = granularity * 1000;
-        const nextTimestamp = new Date(matchedCandle.timeString).getTime() + interval;
-        this.watchCandlesConfig[productId][granularity] = new Date(nextTimestamp).toISOString();
-      }
-    }, updateInterval) as unknown) as NodeJS.Timeout;
+    return (setInterval(
+      this.checkNewCandles.bind(this, productId, granularity),
+      updateInterval
+    ) as unknown) as NodeJS.Timeout;
   }
 }

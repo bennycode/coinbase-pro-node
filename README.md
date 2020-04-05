@@ -13,9 +13,10 @@ This project was created to continue an active **Coinbase Pro API** after Coinba
 - **Typed.** Source code is 100% TypeScript. No need to install external typings.
 - **Tested.** Code coverage is 100%. No surprises when using "coinbase-pro-node".
 - **Convenient.** Request throttling is built-in. Don't worry about rate limiting.
-- **Robust.** WebSocket reconnection is built-in. No problems if your Wi-Fi is gone.
-- **Easy-to-use.** HTTP client with Promise API. No callbacks required.
+- **Comfortable.** More than an API client. You will get extras like candle watching.
 - **Maintained.** Automated security updates. No threats from outdated dependencies.
+- **Modern.** HTTP client with Promise API. Don't lose yourself in callback hell.
+- **Robust.** WebSocket reconnection is built-in. No problems if your Wi-Fi is gone.
 
 ## Installation
 
