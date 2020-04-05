@@ -36,9 +36,7 @@ describe('RESTClient', () => {
     it('supports custom HTTP interceptors', async () => {
       const client = createClient();
 
-      const onRequest = jasmine.createSpy('onRequest').and.callFake((config: AxiosRequestConfig) => {
-        return config;
-      });
+      const onRequest = jasmine.createSpy('onRequest').and.callFake((config: AxiosRequestConfig) => config);
 
       const myInterceptor = client.interceptors.request.use(onRequest);
       await client.account.listAccounts();

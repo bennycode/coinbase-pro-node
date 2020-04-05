@@ -292,24 +292,36 @@ describe('ProductAPI', () => {
           return [200, JSON.stringify(firstResponse)];
         });
 
+      // Repeat first response
       nock(global.REST_URL)
-        .persist(true)
+        .get(`${ProductAPI.URL.PRODUCTS}/${productId}/candles`)
+        .query(true)
+        .reply(() => {
+          return [200, JSON.stringify(firstResponse)];
+        });
+
+      nock(global.REST_URL)
         .get(`${ProductAPI.URL.PRODUCTS}/${productId}/candles`)
         .query(true)
         .reply(() => {
           return [200, JSON.stringify(CandlesBTCUSD)];
         });
 
-      global.client.rest.on(
-        ProductEvent.NEW_CANDLE,
-        (_productId: string, _granularity: CandleGranularity, candle: Candle) => {
+      const onNewCandle = jasmine
+        .createSpy('onNewCandle')
+        .and.callFake((productId: string, granularity: CandleGranularity, candle: Candle) => {
+          expect(productId).toBe(productId);
+          expect(granularity).toBe(granularity);
           if (candle.timeString === expectedISO) {
+            expect(onNewCandle).toHaveBeenCalledTimes(2);
             done();
           }
-        }
-      );
+        });
+
+      global.client.rest.on(ProductEvent.NEW_CANDLE, onNewCandle);
 
       await global.client.rest.product.watchCandles(productId, granularity);
+      jasmine.clock().tick(updateInterval);
       jasmine.clock().tick(updateInterval);
     });
   });
