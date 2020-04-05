@@ -1,12 +1,13 @@
 {
-  "exclude": ["**/payload/**/*", "**/test/**/*", "**/*+(index|start|.test*).ts"],
+  "disableOutputCheck": true,
+  "exclude": ["**/payload/**/*", "**/test/**/*", "**/*+(index|demo*|.test*).ts"],
   "excludeExternals": true,
   "excludeNotExported": true,
   "excludePrivate": true,
   "excludeProtected": true,
   "includeDeclarations": false,
-  "inputFiles": ["./src"],
+  "inputFiles": ["src"],
   "mode": "modules",
   "out": "docs",
-  "theme": "default"
+  "theme": "markdown"
 }
