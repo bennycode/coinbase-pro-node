@@ -3,7 +3,7 @@ import {AccountAPI} from '../account/AccountAPI';
 import {RequestSigner} from '../auth/RequestSigner';
 import {ClientAuthentication} from '../CoinbasePro';
 import {OrderAPI} from '../order/OrderAPI';
-import {ProductAPI} from '../product/ProductAPI';
+import {Candle, CandleGranularity, ProductAPI, ProductEvent} from '../product/ProductAPI';
 import {TimeAPI} from '../time/TimeAPI';
 import {UserAPI} from '../user/UserAPI';
 import {FeeAPI} from '../fee/FeeAPI';
@@ -12,8 +12,17 @@ import querystring from 'querystring';
 import {ProfileAPI} from '../profile/ProfileAPI';
 import axiosRetry, {isNetworkOrIdempotentRequestError} from 'axios-retry';
 import util from 'util';
+import {EventEmitter} from 'events';
+import {getErrorMessage, gotRateLimited, inAirPlaneMode} from '../error/ErrorUtil';
 
-export class RESTClient {
+export interface RESTClient {
+  on(
+    event: ProductEvent.NEW_CANDLE,
+    listener: (productId: string, granularity: CandleGranularity, candle: Candle) => void
+  ): this;
+}
+
+export class RESTClient extends EventEmitter {
   get defaults(): AxiosRequestConfig {
     return this.httpClient.defaults;
   }
@@ -37,6 +46,7 @@ export class RESTClient {
   private readonly logger: (msg: string, ...param: any[]) => void;
 
   constructor(baseURL: string, auth: ClientAuthentication) {
+    super();
     this.logger = util.debuglog('coinbase-pro-node');
 
     this.httpClient = axios.create({
@@ -47,12 +57,10 @@ export class RESTClient {
     axiosRetry(this.httpClient, {
       retries: Infinity,
       retryCondition: (error: AxiosError) => {
-        const gotRateLimited = error.response!.status === 429;
-        const inAirPlaneMode = error.code === 'ECONNABORTED';
-        return isNetworkOrIdempotentRequestError(error) || inAirPlaneMode || gotRateLimited;
+        return isNetworkOrIdempotentRequestError(error) || inAirPlaneMode(error) || gotRateLimited(error);
       },
       retryDelay: (retryCount: number, error: AxiosError) => {
-        const errorMessage = error.response!.data.message || error.message;
+        const errorMessage = getErrorMessage(error);
         this.logger(
           `#${retryCount} There was an error querying "${error.config.baseURL}${error.request.path}": ${errorMessage}`
         );
@@ -97,7 +105,7 @@ export class RESTClient {
     this.fee = new FeeAPI(this.httpClient);
     this.fill = new FillAPI(this.httpClient);
     this.order = new OrderAPI(this.httpClient);
-    this.product = new ProductAPI(this.httpClient);
+    this.product = new ProductAPI(this.httpClient, this);
     this.profile = new ProfileAPI(this.httpClient);
     this.user = new UserAPI(this.httpClient);
   }

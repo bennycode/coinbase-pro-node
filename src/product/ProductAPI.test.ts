@@ -1,5 +1,5 @@
 import nock from 'nock';
-import {CandleGranularity, OrderBookLevel, ProductAPI} from '.';
+import {Candle, CandleGranularity, OrderBookLevel, ProductAPI, ProductEvent} from '.';
 import Level1OrderBookBTCEUR from '../test/fixtures/rest/products/BTC-EUR/book/level-1.json';
 import Level2OrderBookBTCEUR from '../test/fixtures/rest/products/BTC-EUR/book/level-2.json';
 import Level2OrderBookBTCUSD from '../test/fixtures/rest/products/BTC-USD/book/level-2.json';
@@ -72,7 +72,7 @@ describe('ProductAPI', () => {
       const productId = 'BTC-EUR';
       nock(global.REST_URL)
         .get(`${ProductAPI.URL.PRODUCTS}/${productId}/trades`)
-        .reply(() => [200, JSON.stringify(TradesBTCEUR)]);
+        .reply(200, JSON.stringify(TradesBTCEUR));
       const trades = await global.client.rest.product.getTrades(productId);
       expect(trades.length).toBe(100);
     });
@@ -83,7 +83,7 @@ describe('ProductAPI', () => {
       const productId = 'BTC-EUR';
       nock(global.REST_URL)
         .get(`${ProductAPI.URL.PRODUCTS}/${productId}/book?level=1`)
-        .reply(() => [200, JSON.stringify(Level1OrderBookBTCEUR)]);
+        .reply(200, JSON.stringify(Level1OrderBookBTCEUR));
 
       const orderBook = await global.client.rest.product.getProductOrderBook(productId);
       expect(orderBook.asks.length).toBe(1);
@@ -93,11 +93,11 @@ describe('ProductAPI', () => {
     it('lists up to 50 bids and asks with a depth of level 2', async () => {
       nock(global.REST_URL)
         .get(`${ProductAPI.URL.PRODUCTS}/BTC-USD/book?level=2`)
-        .reply(() => [200, JSON.stringify(Level2OrderBookBTCUSD)]);
+        .reply(200, JSON.stringify(Level2OrderBookBTCUSD));
 
       nock(global.REST_URL)
         .get(`${ProductAPI.URL.PRODUCTS}/BTC-EUR/book?level=2`)
-        .reply(() => [200, JSON.stringify(Level2OrderBookBTCEUR)]);
+        .reply(200, JSON.stringify(Level2OrderBookBTCEUR));
 
       const orderBookBTCUSD = await global.client.rest.product.getProductOrderBook('BTC-USD', {
         level: OrderBookLevel.TOP_50_BIDS_AND_ASKS,
@@ -118,7 +118,7 @@ describe('ProductAPI', () => {
 
       nock(global.REST_URL)
         .get(`${ProductAPI.URL.PRODUCTS}/${productId}/book?level=${level}`)
-        .reply(() => [200, JSON.stringify(Level3OrderBookBTCUSD)]);
+        .reply(200, JSON.stringify(Level3OrderBookBTCUSD));
 
       const orderBook = await global.client.rest.product.getProductOrderBook(productId, {level});
       expect(orderBook.asks.length).toBe(60);
@@ -249,6 +249,80 @@ describe('ProductAPI', () => {
       });
 
       expect(candles.length).withContext('10 hours are 600 minutes').toBe(600);
+    });
+  });
+
+  describe('watchCandles', () => {
+    beforeEach(() => jasmine.clock().install());
+
+    afterEach(() => jasmine.clock().uninstall());
+
+    it('starts an interval to check for new candles', async () => {
+      const productId = 'BTC-USD';
+      const granularity = CandleGranularity.ONE_HOUR;
+      const updateInterval = 60000;
+
+      nock(global.REST_URL)
+        .get(`${ProductAPI.URL.PRODUCTS}/${productId}/candles`)
+        .query(true)
+        .reply(200, JSON.stringify(CandlesBTCUSD));
+
+      const spy = spyOn<any>(global.client.rest.product, 'checkNewCandles').and.callThrough();
+
+      const interval = await global.client.rest.product.watchCandles(productId, granularity);
+      expect(interval).toBeDefined();
+
+      jasmine.clock().tick(updateInterval);
+      expect(spy).toHaveBeenCalledWith(productId, granularity);
+    });
+
+    it('emits new candles', async done => {
+      const productId = 'BTC-USD';
+      const granularity = CandleGranularity.ONE_HOUR;
+      const updateInterval = 60000;
+
+      const firstResponse = [...CandlesBTCUSD];
+      const nextCandle = firstResponse.shift() as number[];
+      const expectedISO = new Date(nextCandle[0] * 1000).toISOString();
+
+      nock(global.REST_URL)
+        .get(`${ProductAPI.URL.PRODUCTS}/${productId}/candles`)
+        .query(true)
+        .reply(() => {
+          return [200, JSON.stringify(firstResponse)];
+        });
+
+      // Repeat first response
+      nock(global.REST_URL)
+        .get(`${ProductAPI.URL.PRODUCTS}/${productId}/candles`)
+        .query(true)
+        .reply(() => {
+          return [200, JSON.stringify(firstResponse)];
+        });
+
+      nock(global.REST_URL)
+        .get(`${ProductAPI.URL.PRODUCTS}/${productId}/candles`)
+        .query(true)
+        .reply(() => {
+          return [200, JSON.stringify(CandlesBTCUSD)];
+        });
+
+      const onNewCandle = jasmine
+        .createSpy('onNewCandle')
+        .and.callFake((productId: string, granularity: CandleGranularity, candle: Candle) => {
+          expect(productId).toBe(productId);
+          expect(granularity).toBe(granularity);
+          if (candle.timeString === expectedISO) {
+            expect(onNewCandle).toHaveBeenCalledTimes(2);
+            done();
+          }
+        });
+
+      global.client.rest.on(ProductEvent.NEW_CANDLE, onNewCandle);
+
+      await global.client.rest.product.watchCandles(productId, granularity);
+      jasmine.clock().tick(updateInterval);
+      jasmine.clock().tick(updateInterval);
     });
   });
 });

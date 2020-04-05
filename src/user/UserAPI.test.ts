@@ -19,7 +19,7 @@ describe('UserAPI', () => {
       .persist()
       .get(`${UserAPI.URL.USERS}/self/trailing-volume`)
       .query(true)
-      .reply(() => [200, JSON.stringify(trailingVolume)]);
+      .reply(200, JSON.stringify(trailingVolume));
   });
 
   describe('verifyAuthentication', () => {

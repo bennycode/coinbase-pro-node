@@ -1,6 +1,7 @@
 import {AxiosInstance, AxiosResponse} from 'axios';
 import {ISO_8601_MS_UTC, OrderSide} from '../payload/common';
 import {CandleBucketUtil} from './CandleBucketUtil';
+import {RESTClient} from '..';
 
 export interface Product {
   base_currency: string;
@@ -155,12 +156,18 @@ export interface Candle {
 
 type RawCandle = [Timestamp, Low, High, Open, Close, Volume];
 
+export enum ProductEvent {
+  NEW_CANDLE = 'ProductEvent.NEW_CANDLE',
+}
+
 export class ProductAPI {
   static readonly URL = {
     PRODUCTS: `/products`,
   };
 
-  constructor(private readonly apiClient: AxiosInstance) {}
+  private watchCandlesConfig: {[productId: string]: {[granularity: number]: ISO_8601_MS_UTC}} = {};
+
+  constructor(private readonly apiClient: AxiosInstance, private readonly restClient: RESTClient) {}
 
   /**
    * Get historic rates for a product. Rates are returned in grouped buckets (candlesticks) based on requested
@@ -202,17 +209,25 @@ export class ProductAPI {
       rawCandles = response.data;
     }
 
-    return rawCandles
-      .map(([time, low, high, open, close, volume]) => ({
-        close,
-        high,
-        low,
-        open,
-        time: time * 1000, // Map seconds to milliseconds
-        timeString: new Date(time * 1000).toISOString(),
-        volume,
-      }))
-      .sort((a, b) => a.time - b.time);
+    return rawCandles.map(this.mapCandle).sort((a, b) => a.time - b.time);
+  }
+
+  /**
+   * Watch a specific product ID for new candles. Candles will be emitted through the `ProductEvent.NEW_CANDLE` event.
+   *
+   * @param productId - Representation for base and counter
+   * @param granularity - Desired candle size
+   * @returns Handle to stop the watch interval.
+   */
+  async watchCandles(productId: string, granularity: CandleGranularity): Promise<NodeJS.Timeout> {
+    const candles = await this.getCandles('BTC-USD', {
+      end: new Date().toISOString(),
+      granularity,
+    });
+    this.watchCandlesConfig[productId] = this.watchCandlesConfig[productId] || {};
+    const latestCandle = candles[candles.length - 1];
+    this.emitCandle(productId, granularity, latestCandle);
+    return this.startCandleInterval(productId, granularity);
   }
 
   /**
@@ -297,5 +312,51 @@ export class ProductAPI {
     const resource = `${ProductAPI.URL.PRODUCTS}/${productId}/ticker`;
     const response = await this.apiClient.get<ProductTicker>(resource);
     return response.data;
+  }
+
+  private mapCandle(payload: number[]): Candle {
+    const [time, low, high, open, close, volume] = payload;
+    return {
+      close,
+      high,
+      low,
+      open,
+      time: time * 1000, // Map seconds to milliseconds
+      timeString: new Date(time * 1000).toISOString(),
+      volume,
+    };
+  }
+
+  private emitCandle(productId: string, granularity: CandleGranularity, matchedCandle: Candle): void {
+    // Emit matched candle
+    this.restClient.emit(ProductEvent.NEW_CANDLE, productId, granularity, matchedCandle);
+    // Cache timestamp of upcoming candle
+    const interval = granularity * 1000;
+    const nextTimestamp = new Date(matchedCandle.timeString).getTime() + interval;
+    this.watchCandlesConfig[productId][granularity] = new Date(nextTimestamp).toISOString();
+  }
+
+  private async checkNewCandles(productId: string, granularity: CandleGranularity): Promise<void> {
+    const expectedTimestampISO = this.watchCandlesConfig[productId][granularity];
+
+    const candles = await this.getCandles('BTC-USD', {
+      granularity,
+      start: expectedTimestampISO,
+    });
+
+    const matches = candles.filter(candle => candle.timeString === expectedTimestampISO);
+    if (matches.length > 0) {
+      const matchedCandle = matches[0];
+      this.emitCandle(productId, granularity, matchedCandle);
+    }
+  }
+
+  private startCandleInterval(productId: string, granularity: CandleGranularity): NodeJS.Timeout {
+    // Check for new candles in the smallest candle interval possible, which is 1 minute
+    const updateInterval = CandleGranularity.ONE_MINUTE * 1000;
+    return (setInterval(
+      this.checkNewCandles.bind(this, productId, granularity),
+      updateInterval
+    ) as unknown) as NodeJS.Timeout;
   }
 }
