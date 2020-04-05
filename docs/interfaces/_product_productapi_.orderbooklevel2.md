@@ -1,0 +1,41 @@
+[coinbase-pro-node](../README.md) › [Globals](../globals.md) › ["product/ProductAPI"](../modules/_product_productapi_.md) › [OrderBookLevel2](_product_productapi_.orderbooklevel2.md)
+
+# Interface: OrderBookLevel2
+
+Top 50 bids and asks (aggregated) BUT if there are not 50 then less bids and asks are returned.
+
+## Hierarchy
+
+- **OrderBookLevel2**
+
+## Index
+
+### Properties
+
+- [asks](_product_productapi_.orderbooklevel2.md#asks)
+- [bids](_product_productapi_.orderbooklevel2.md#bids)
+- [sequence](_product_productapi_.orderbooklevel2.md#sequence)
+
+## Properties
+
+### asks
+
+• **asks**: _AggregatedOrder[]_
+
+_Defined in [src/product/ProductAPI.ts:114](https://github.com/bennyn/coinbase-pro-node/blob/411b7a7/src/product/ProductAPI.ts#L114)_
+
+---
+
+### bids
+
+• **bids**: _AggregatedOrder[]_
+
+_Defined in [src/product/ProductAPI.ts:113](https://github.com/bennyn/coinbase-pro-node/blob/411b7a7/src/product/ProductAPI.ts#L113)_
+
+---
+
+### sequence
+
+• **sequence**: _SequenceNumber_
+
+_Defined in [src/product/ProductAPI.ts:112](https://github.com/bennyn/coinbase-pro-node/blob/411b7a7/src/product/ProductAPI.ts#L112)_
