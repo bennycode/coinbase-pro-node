@@ -1,3 +1,9 @@
+#### 1.7.1 (2020-04-05)
+
+##### Documentation Changes
+
+- Add documentation site generator ([#112](https://github.com/bennyn/coinbase-pro-node/pull/112)) ([9c3356d1](https://github.com/bennyn/coinbase-pro-node/commit/9c3356d10922a0d543649312c6424175e04e4438))
+
 ### 1.7.0 (2020-04-05)
 
 ##### New Features
