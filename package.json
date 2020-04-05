@@ -94,5 +94,5 @@
     "test:dev": "nyc --nycrc-path=nyc.config.json jasmine --config=jasmine.json",
     "test:types": "tsc --noEmit"
   },
-  "version": "1.6.1"
+  "version": "1.7.0"
 }
