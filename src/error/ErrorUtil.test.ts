@@ -13,7 +13,7 @@ describe('ErrorUtil', () => {
   });
 
   describe('gotRateLimited', () => {
-    it('recognizes errors causes by rate limiting', () => {
+    it('recognizes errors caused by rate limiting', () => {
       const someError = new Error('Something went wrong.') as AxiosError;
 
       expect(gotRateLimited(someError)).toBe(false);
