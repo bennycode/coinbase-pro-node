@@ -1,3 +1,9 @@
+### 1.7.0 (2020-04-05)
+
+##### New Features
+
+- Watch candles ([#111](https://github.com/bennyn/coinbase-pro-node/pull/111)) ([2a30f9c5](https://github.com/bennyn/coinbase-pro-node/commit/2a30f9c5481d78c42cf1701d4e0d1328f09d1084))
+
 #### 1.6.1 (2020-04-04)
 
 ##### Documentation Changes
