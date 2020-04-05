@@ -5,8 +5,8 @@
   "excludePrivate": true,
   "excludeProtected": true,
   "includeDeclarations": false,
-  "inputFiles": ["./src"],
+  "inputFiles": ["src"],
   "mode": "modules",
-  "out": "docs",
+  "out": "docs/api",
   "theme": "markdown"
 }
