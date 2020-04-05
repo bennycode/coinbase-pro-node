@@ -1,2 +1,2 @@
 - [Home](/)
-- [API](api/globals.md)
+- [API](globals.md)
