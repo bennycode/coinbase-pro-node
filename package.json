@@ -78,7 +78,7 @@
     "demo:ws": "cross-env NODE_DEBUG=coinbase-pro-node* ts-node src/demo-ws.ts",
     "docs": "yarn docs:build && yarn docs:start",
     "docs:build": "yarn typedoc",
-    "docs:release": "yarn docs:build && git add docs/* && git commit -m \"docs: Updated API docs\"",
+    "docs:release": "yarn docs:build && git add docs/* && git commit -m \"docs: Updated API\"",
     "docs:start": "docsify serve docs",
     "dist": "yarn clean && yarn build",
     "fix": "yarn fix:other && yarn fix:code",
