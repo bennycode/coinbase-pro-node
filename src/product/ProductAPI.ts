@@ -66,14 +66,19 @@ export enum CandleGranularity {
   ONE_DAY = 86400,
 }
 
-export interface CandlesRequestParameters {
-  /** Ending date (inclusive) as ISO 8601 string, i.e. "2020-03-15T23:59:59.999Z" */
-  end?: ISO_8601_MS_UTC;
+export interface BaseHistoricRateRequest {
   /** Desired time slice in seconds. */
   granularity: CandleGranularity;
-  /** Starting date (inclusive) as ISO 8601 string, i.e. "2020-03-09T00:00:00.000Z" */
-  start?: ISO_8601_MS_UTC;
 }
+
+export interface HistoricRateRequestWithTimeSpan extends BaseHistoricRateRequest {
+  /** Opening time (ISO 8601) of last candle, i.e. "2020-03-15T23:59:59.999Z" */
+  end: ISO_8601_MS_UTC;
+  /** Opening time (ISO 8601) of first candle, i.e. "2020-03-09T00:00:00.000Z" */
+  start: ISO_8601_MS_UTC;
+}
+
+export type HistoricRateRequest = BaseHistoricRateRequest | HistoricRateRequestWithTimeSpan;
 
 export enum OrderBookLevel {
   ONLY_BEST_BID_AND_ASK = 1,
@@ -146,10 +151,10 @@ export interface Candle {
   low: Low;
   /** Opening price (first trade) in the bucket interval */
   open: Open;
-  /** Bucket start time converted to milliseconds (note: Coinbase Pro actually uses seconds) */
-  time: Timestamp;
   /** Bucket start time in simplified extended ISO 8601 format */
-  timeString: ISO_8601_MS_UTC;
+  openTimeString: ISO_8601_MS_UTC;
+  /** Bucket start time converted to milliseconds (note: Coinbase Pro actually uses seconds) */
+  openTime: Timestamp;
   /** Volume of trading activity during the bucket interval */
   volume: Volume;
 }
@@ -181,13 +186,14 @@ export class ProductAPI {
    * @param [params] - Desired timespan
    * @see https://docs.pro.coinbase.com/#get-historic-rates
    */
-  async getCandles(productId: string, params?: CandlesRequestParameters): Promise<Candle[]> {
+  async getCandles(productId: string, params: HistoricRateRequest): Promise<Candle[]> {
     const resource = `${ProductAPI.URL.PRODUCTS}/${productId}/candles`;
     let rawCandles: RawCandle[] = [];
 
-    if (params && params.start && params.end && params.granularity) {
-      const fromInMillis = new Date(params.start).getTime();
-      const toInMillis = new Date(params.end).getTime();
+    const potentialParams = params as HistoricRateRequestWithTimeSpan;
+    if (potentialParams.start && potentialParams.end) {
+      const fromInMillis = new Date(potentialParams.start).getTime();
+      const toInMillis = new Date(potentialParams.end).getTime();
       const candleSizeInMillis = params.granularity * 1000;
 
       const bucketsInMillis = CandleBucketUtil.getBucketsInMillis(fromInMillis, toInMillis, candleSizeInMillis);
@@ -209,7 +215,7 @@ export class ProductAPI {
       rawCandles = response.data;
     }
 
-    return rawCandles.map(this.mapCandle).sort((a, b) => a.time - b.time);
+    return rawCandles.map(this.mapCandle).sort((a, b) => a.openTime - b.openTime);
   }
 
   /**
@@ -316,13 +322,14 @@ export class ProductAPI {
 
   private mapCandle(payload: number[]): Candle {
     const [time, low, high, open, close, volume] = payload;
+    const openTime = time * 1000; // Map seconds to milliseconds
     return {
       close,
       high,
       low,
       open,
-      time: time * 1000, // Map seconds to milliseconds
-      timeString: new Date(time * 1000).toISOString(),
+      openTime,
+      openTimeString: new Date(openTime).toISOString(),
       volume,
     };
   }
@@ -332,7 +339,7 @@ export class ProductAPI {
     this.restClient.emit(ProductEvent.NEW_CANDLE, productId, granularity, matchedCandle);
     // Cache timestamp of upcoming candle
     const interval = granularity * 1000;
-    const nextTimestamp = new Date(matchedCandle.timeString).getTime() + interval;
+    const nextTimestamp = new Date(matchedCandle.openTime).getTime() + interval;
     this.watchCandlesConfig[productId][granularity] = new Date(nextTimestamp).toISOString();
   }
 
@@ -344,7 +351,7 @@ export class ProductAPI {
       start: expectedTimestampISO,
     });
 
-    const matches = candles.filter(candle => candle.timeString === expectedTimestampISO);
+    const matches = candles.filter(candle => candle.openTimeString === expectedTimestampISO);
     if (matches.length > 0) {
       const matchedCandle = matches[0];
       this.emitCandle(productId, granularity, matchedCandle);

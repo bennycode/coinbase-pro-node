@@ -185,12 +185,14 @@ describe('ProductAPI', () => {
           [1558261260, 8109.88, 8109.88, 8109.88, 8109.88, 0.038],
         ]);
 
-      const candles = await global.client.rest.product.getCandles('BTC-USD');
+      const candles = await global.client.rest.product.getCandles('BTC-USD', {
+        granularity: CandleGranularity.ONE_MINUTE,
+      });
 
       expect(candles.length).toEqual(3);
-      expect(candles[0].time).toEqual(1558261140000);
-      expect(candles[1].time).toEqual(1558261200000);
-      expect(candles[2].time).toEqual(1558261260000);
+      expect(candles[0].openTime).toEqual(1558261140000);
+      expect(candles[1].openTime).toEqual(1558261200000);
+      expect(candles[2].openTime).toEqual(1558261260000);
     });
 
     it('sorts candles ascending by timestamp', async () => {
@@ -219,8 +221,8 @@ describe('ProductAPI', () => {
       });
 
       expect(candles.length).withContext('7 days * 24 hours = 168 hours / candles').toBe(168);
-      expect(candles[0].timeString).withContext('Starting time of first time slice').toBe(from);
-      expect(candles[candles.length - 1].timeString)
+      expect(candles[0].openTimeString).withContext('Starting time of first time slice').toBe(from);
+      expect(candles[candles.length - 1].openTimeString)
         .withContext('Starting time of last time slice')
         .toBe('2020-03-15T23:00:00.000Z');
     });
@@ -312,7 +314,7 @@ describe('ProductAPI', () => {
         .and.callFake((productId: string, granularity: CandleGranularity, candle: Candle) => {
           expect(productId).toBe(productId);
           expect(granularity).toBe(granularity);
-          if (candle.timeString === expectedISO) {
+          if (candle.openTimeString === expectedISO) {
             expect(onNewCandle).toHaveBeenCalledTimes(2);
             done();
           }
