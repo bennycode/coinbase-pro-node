@@ -30,7 +30,8 @@ if (process.env.USE_SANDBOX === 'true') {
 }
 
 async function main(): Promise<void> {
-  const candles = await client.rest.product.getCandles(`ETH-BTC`, {
+  // https://pro.coinbase.com/trade/BTC-USD
+  const candles = await client.rest.product.getCandles('BTC-USD', {
     end: '2020-04-11T10:00:00.000Z',
     granularity: CandleGranularity.ONE_HOUR,
     start: '2020-04-11T08:00:00.000Z',
