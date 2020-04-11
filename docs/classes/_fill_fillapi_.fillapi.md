@@ -27,7 +27,7 @@
 
 \+ **new FillAPI**(`apiClient`: AxiosInstance): _[FillAPI](_fill_fillapi_.fillapi.md)_
 
-_Defined in [src/fill/FillAPI.ts:28](https://github.com/bennyn/coinbase-pro-node/blob/a33aec9/src/fill/FillAPI.ts#L28)_
+_Defined in [src/fill/FillAPI.ts:28](https://github.com/bennyn/coinbase-pro-node/blob/1656a9e/src/fill/FillAPI.ts#L28)_
 
 **Parameters:**
 
@@ -43,7 +43,7 @@ _Defined in [src/fill/FillAPI.ts:28](https://github.com/bennyn/coinbase-pro-node
 
 ▸ **getFillsByOrderId**(`orderId`: string): _Promise‹[Fill](../interfaces/_fill_fillapi_.fill.md)[]›_
 
-_Defined in [src/fill/FillAPI.ts:34](https://github.com/bennyn/coinbase-pro-node/blob/a33aec9/src/fill/FillAPI.ts#L34)_
+_Defined in [src/fill/FillAPI.ts:34](https://github.com/bennyn/coinbase-pro-node/blob/1656a9e/src/fill/FillAPI.ts#L34)_
 
 **Parameters:**
 
@@ -59,7 +59,7 @@ _Defined in [src/fill/FillAPI.ts:34](https://github.com/bennyn/coinbase-pro-node
 
 ▸ **getFillsByProductId**(`productId`: string): _Promise‹[Fill](../interfaces/_fill_fillapi_.fill.md)[]›_
 
-_Defined in [src/fill/FillAPI.ts:46](https://github.com/bennyn/coinbase-pro-node/blob/a33aec9/src/fill/FillAPI.ts#L46)_
+_Defined in [src/fill/FillAPI.ts:46](https://github.com/bennyn/coinbase-pro-node/blob/1656a9e/src/fill/FillAPI.ts#L46)_
 
 **Parameters:**
 
@@ -75,10 +75,10 @@ _Defined in [src/fill/FillAPI.ts:46](https://github.com/bennyn/coinbase-pro-node
 
 ### ▪ **URL**: _object_
 
-_Defined in [src/fill/FillAPI.ts:26](https://github.com/bennyn/coinbase-pro-node/blob/a33aec9/src/fill/FillAPI.ts#L26)_
+_Defined in [src/fill/FillAPI.ts:26](https://github.com/bennyn/coinbase-pro-node/blob/1656a9e/src/fill/FillAPI.ts#L26)_
 
 ### FILLS
 
 • **FILLS**: _string_ = `/fills`
 
-_Defined in [src/fill/FillAPI.ts:27](https://github.com/bennyn/coinbase-pro-node/blob/a33aec9/src/fill/FillAPI.ts#L27)_
+_Defined in [src/fill/FillAPI.ts:27](https://github.com/bennyn/coinbase-pro-node/blob/1656a9e/src/fill/FillAPI.ts#L27)_

@@ -23,7 +23,7 @@
 
 • **available**: _string_
 
-_Defined in [src/account/AccountAPI.ts:4](https://github.com/bennyn/coinbase-pro-node/blob/a33aec9/src/account/AccountAPI.ts#L4)_
+_Defined in [src/account/AccountAPI.ts:4](https://github.com/bennyn/coinbase-pro-node/blob/1656a9e/src/account/AccountAPI.ts#L4)_
 
 ---
 
@@ -31,7 +31,7 @@ _Defined in [src/account/AccountAPI.ts:4](https://github.com/bennyn/coinbase-pro
 
 • **balance**: _string_
 
-_Defined in [src/account/AccountAPI.ts:5](https://github.com/bennyn/coinbase-pro-node/blob/a33aec9/src/account/AccountAPI.ts#L5)_
+_Defined in [src/account/AccountAPI.ts:5](https://github.com/bennyn/coinbase-pro-node/blob/1656a9e/src/account/AccountAPI.ts#L5)_
 
 ---
 
@@ -39,7 +39,7 @@ _Defined in [src/account/AccountAPI.ts:5](https://github.com/bennyn/coinbase-pro
 
 • **currency**: _string_
 
-_Defined in [src/account/AccountAPI.ts:6](https://github.com/bennyn/coinbase-pro-node/blob/a33aec9/src/account/AccountAPI.ts#L6)_
+_Defined in [src/account/AccountAPI.ts:6](https://github.com/bennyn/coinbase-pro-node/blob/1656a9e/src/account/AccountAPI.ts#L6)_
 
 ---
 
@@ -47,7 +47,7 @@ _Defined in [src/account/AccountAPI.ts:6](https://github.com/bennyn/coinbase-pro
 
 • **hold**: _string_
 
-_Defined in [src/account/AccountAPI.ts:7](https://github.com/bennyn/coinbase-pro-node/blob/a33aec9/src/account/AccountAPI.ts#L7)_
+_Defined in [src/account/AccountAPI.ts:7](https://github.com/bennyn/coinbase-pro-node/blob/1656a9e/src/account/AccountAPI.ts#L7)_
 
 ---
 
@@ -55,7 +55,7 @@ _Defined in [src/account/AccountAPI.ts:7](https://github.com/bennyn/coinbase-pro
 
 • **id**: _string_
 
-_Defined in [src/account/AccountAPI.ts:8](https://github.com/bennyn/coinbase-pro-node/blob/a33aec9/src/account/AccountAPI.ts#L8)_
+_Defined in [src/account/AccountAPI.ts:8](https://github.com/bennyn/coinbase-pro-node/blob/1656a9e/src/account/AccountAPI.ts#L8)_
 
 ---
 
@@ -63,4 +63,4 @@ _Defined in [src/account/AccountAPI.ts:8](https://github.com/bennyn/coinbase-pro
 
 • **profile_id**: _string_
 
-_Defined in [src/account/AccountAPI.ts:9](https://github.com/bennyn/coinbase-pro-node/blob/a33aec9/src/account/AccountAPI.ts#L9)_
+_Defined in [src/account/AccountAPI.ts:9](https://github.com/bennyn/coinbase-pro-node/blob/1656a9e/src/account/AccountAPI.ts#L9)_
