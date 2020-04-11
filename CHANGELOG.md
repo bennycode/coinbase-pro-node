@@ -1,3 +1,9 @@
+#### 1.8.1 (2020-04-11)
+
+##### New Features
+
+- Add candle interval mappings ([#121](https://github.com/bennyn/coinbase-pro-node/pull/121)) ([82c6e41f](https://github.com/bennyn/coinbase-pro-node/commit/82c6e41f5e58d0f691d88cbe0e7997c2dd823aac))
+
 ### 1.8.0 (2020-04-11)
 
 ##### Chores
