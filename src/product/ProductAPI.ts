@@ -66,19 +66,19 @@ export enum CandleGranularity {
   ONE_DAY = 86400,
 }
 
-export interface BaseCandlesRequestParameters {
+export interface BaseHistoricRateRequest {
   /** Desired time slice in seconds. */
   granularity: CandleGranularity;
 }
 
-export interface CandlesRequestParametersWithTimeSpan extends BaseCandlesRequestParameters {
+export interface HistoricRateRequestWithTimeSpan extends BaseHistoricRateRequest {
   /** Opening time (ISO 8601) of last candle, i.e. "2020-03-15T23:59:59.999Z" */
   end: ISO_8601_MS_UTC;
   /** Opening time (ISO 8601) of first candle, i.e. "2020-03-09T00:00:00.000Z" */
   start: ISO_8601_MS_UTC;
 }
 
-export type CandlesRequestParameters = BaseCandlesRequestParameters | CandlesRequestParametersWithTimeSpan;
+export type HistoricRateRequest = BaseHistoricRateRequest | HistoricRateRequestWithTimeSpan;
 
 export enum OrderBookLevel {
   ONLY_BEST_BID_AND_ASK = 1,
@@ -186,11 +186,11 @@ export class ProductAPI {
    * @param [params] - Desired timespan
    * @see https://docs.pro.coinbase.com/#get-historic-rates
    */
-  async getCandles(productId: string, params: CandlesRequestParameters): Promise<Candle[]> {
+  async getCandles(productId: string, params: HistoricRateRequest): Promise<Candle[]> {
     const resource = `${ProductAPI.URL.PRODUCTS}/${productId}/candles`;
     let rawCandles: RawCandle[] = [];
 
-    const potentialParams = params as CandlesRequestParametersWithTimeSpan;
+    const potentialParams = params as HistoricRateRequestWithTimeSpan;
     if (potentialParams.start && potentialParams.end) {
       const fromInMillis = new Date(potentialParams.start).getTime();
       const toInMillis = new Date(potentialParams.end).getTime();
