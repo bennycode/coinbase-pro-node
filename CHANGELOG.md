@@ -1,3 +1,20 @@
+### 1.8.0 (2020-04-11)
+
+##### Chores
+
+- **deps-dev:**
+  - bump prettier from 2.0.2 to 2.0.3 ([#119](https://github.com/bennyn/coinbase-pro-node/pull/119)) ([3f6238eb](https://github.com/bennyn/coinbase-pro-node/commit/3f6238eb3850158c46418cfc6f85fc165cf5b735))
+  - bump lint-staged from 10.0.10 to 10.1.2 ([#117](https://github.com/bennyn/coinbase-pro-node/pull/117)) ([515223d3](https://github.com/bennyn/coinbase-pro-node/commit/515223d37ee46620e08ff7517dbeb937b113c7ec))
+  - bump @typescript-eslint/eslint-plugin ([#118](https://github.com/bennyn/coinbase-pro-node/pull/118)) ([3d3655da](https://github.com/bennyn/coinbase-pro-node/commit/3d3655da2c7833fcb5066ea32f1518d75539ef7c))
+  - bump ts-node from 8.8.1 to 8.8.2 ([#116](https://github.com/bennyn/coinbase-pro-node/pull/116)) ([4dbbe066](https://github.com/bennyn/coinbase-pro-node/commit/4dbbe066e19dde6b876efcad4cec131b9923d0b9))
+  - bump nyc from 15.0.0 to 15.0.1 ([#115](https://github.com/bennyn/coinbase-pro-node/pull/115)) ([0b2f9a35](https://github.com/bennyn/coinbase-pro-node/commit/0b2f9a35c115b9014b6a524250280e957d83e632))
+  - bump typedoc from 0.17.3 to 0.17.4 ([#114](https://github.com/bennyn/coinbase-pro-node/pull/114)) ([7e74808a](https://github.com/bennyn/coinbase-pro-node/commit/7e74808a11cda716e0d6198646f35c249ecf4c60))
+  - bump @typescript-eslint/parser from 2.25.0 to 2.26.0 ([#113](https://github.com/bennyn/coinbase-pro-node/pull/113)) ([137c9532](https://github.com/bennyn/coinbase-pro-node/commit/137c9532883bedb099e250a4f5f5156416940220))
+
+##### Refactors
+
+- Define opening time in candles ([#120](https://github.com/bennyn/coinbase-pro-node/pull/120)) ([1268bc91](https://github.com/bennyn/coinbase-pro-node/commit/1268bc91b1376e25012cf036bce4734e1896a184))
+
 #### 1.7.1 (2020-04-05)
 
 ##### Documentation Changes
