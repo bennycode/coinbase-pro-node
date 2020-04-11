@@ -322,13 +322,14 @@ export class ProductAPI {
 
   private mapCandle(payload: number[]): Candle {
     const [time, low, high, open, close, volume] = payload;
+    const openTime = time * 1000; // Map seconds to milliseconds
     return {
       close,
       high,
       low,
       open,
-      openTime: time * 1000, // Map seconds to milliseconds
-      openTimeString: new Date(time * 1000).toISOString(),
+      openTime,
+      openTimeString: new Date(openTime).toISOString(),
       volume,
     };
   }

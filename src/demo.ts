@@ -6,33 +6,31 @@ require('dotenv').config();
 let client: CoinbasePro;
 
 if (process.env.USE_SANDBOX === 'true') {
-  console.info('Using Coinbase Public Sandbox...');
+  console.info('Using Coinbase Public Sandbox with API key...');
 
   client = new CoinbasePro({
     apiKey: process.env.COINBASE_PRO_API_KEY!,
     apiSecret: process.env.COINBASE_PRO_API_SECRET!,
     passphrase: process.env.COINBASE_PRO_PASSPHRASE!,
-    useSandbox: false,
+    useSandbox: true,
   });
 } else if (process.env.USE_SANDBOX === 'false') {
-  console.info('Using Coinbase Production Environment...');
+  console.info('Using Coinbase Production Environment with API key...');
 
   client = new CoinbasePro({
     apiKey: process.env.COINBASE_PRO_SANDBOX_API_KEY!,
     apiSecret: process.env.COINBASE_PRO_SANDBOX_API_SECRET!,
     passphrase: process.env.COINBASE_PRO_SANDBOX_PASSPHRASE!,
-    useSandbox: true,
+    useSandbox: false,
   });
 } else {
-  throw Error('No environment specified.');
+  console.info('Using Coinbase Production Environment without API key...');
+
+  client = new CoinbasePro();
 }
 
 async function main(): Promise<void> {
-  const payload = await client.rest.account.listAccounts();
-  const message = `You can trade "${payload.length}" different symbols.`;
-  console.info(message);
-
-  const candles = await client.rest.product.getCandles(`BTC-USD`, {
+  const candles = await client.rest.product.getCandles(`ETH-BTC`, {
     end: '2020-04-11T10:00:00.000Z',
     granularity: CandleGranularity.ONE_HOUR,
     start: '2020-04-11T08:00:00.000Z',
