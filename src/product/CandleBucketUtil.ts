@@ -10,6 +10,20 @@ export interface CandleBatchBucket {
 }
 
 export class CandleBucketUtil {
+  static getIntervals(): number[] {
+    return [60, 300, 900, 3600, 21600, 86400];
+  }
+
+  static mapInterval(intervals: number[], interval: number): number {
+    return intervals.reduce((previous, current) => {
+      return Math.abs(current - interval) < Math.abs(previous - interval) ? current : previous;
+    });
+  }
+
+  static mapGranularity(candleSizeInMillis: number): CandleGranularity {
+    return this.mapInterval(CandleBucketUtil.getIntervals(), candleSizeInMillis);
+  }
+
   static expectedBuckets(fromInMillis: number, toInMillis: number, candleSizeInMillis: CandleGranularity): number {
     const timeSpanInMillis = toInMillis - fromInMillis;
     return timeSpanInMillis / candleSizeInMillis;

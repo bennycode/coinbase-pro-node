@@ -1,6 +1,48 @@
 import {CandleBucketUtil, CandleGranularity} from '.';
 
 describe('CandleBucketUtil', () => {
+  describe('getIntervals', () => {
+    it('returns valid granularity values as numbers', () => {
+      const expected = [60, 300, 900, 3600, 21600, 86400];
+      const actual = CandleBucketUtil.getIntervals();
+      expect(actual).toEqual(expected);
+    });
+  });
+
+  describe('mapInterval', () => {
+    it('matches a value within a range', () => {
+      const range = [60, 300, 900, 3600, 21600, 86400];
+      const value = 3600;
+      expect(CandleBucketUtil.mapInterval(range, value)).toBe(3600);
+    });
+
+    it('caps a value at the maximum', () => {
+      const range = [60, 300, 900, 3600, 21600, 86400];
+      const value = 100000;
+      expect(CandleBucketUtil.mapInterval(range, value)).toBe(86400);
+    });
+
+    it('caps a value at the minimum', () => {
+      const range = [60, 300, 900, 3600, 21600, 86400];
+      const value = 10;
+      expect(CandleBucketUtil.mapInterval(range, value)).toBe(60);
+    });
+
+    it('gets the closest matching value', () => {
+      const range = [60, 300, 900, 3600, 21600, 86400];
+      const value = 700;
+      expect(CandleBucketUtil.mapInterval(range, value)).toBe(900);
+    });
+  });
+
+  describe('mapGranularity', () => {
+    it('maps a number to granularity', () => {
+      const number = 60;
+      const granularity = CandleBucketUtil.mapGranularity(number);
+      expect(granularity).toBe(CandleGranularity.ONE_MINUTE);
+    });
+  });
+
   describe('expectedBuckets', () => {
     it('calculates the amount of required candles for a week', () => {
       const fromInMillis = new Date('2020-02-03T00:00:00.000Z').getTime();
