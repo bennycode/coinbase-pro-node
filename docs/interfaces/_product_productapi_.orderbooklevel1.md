@@ -22,7 +22,7 @@ Represents only the best bid and ask.
 
 • **asks**: _AggregatedOrder[]_
 
-_Defined in [src/product/ProductAPI.ts:107](https://github.com/bennyn/coinbase-pro-node/blob/411b7a7/src/product/ProductAPI.ts#L107)_
+_Defined in [src/product/ProductAPI.ts:112](https://github.com/bennyn/coinbase-pro-node/blob/a33aec9/src/product/ProductAPI.ts#L112)_
 
 ---
 
@@ -30,7 +30,7 @@ _Defined in [src/product/ProductAPI.ts:107](https://github.com/bennyn/coinbase-p
 
 • **bids**: _AggregatedOrder[]_
 
-_Defined in [src/product/ProductAPI.ts:106](https://github.com/bennyn/coinbase-pro-node/blob/411b7a7/src/product/ProductAPI.ts#L106)_
+_Defined in [src/product/ProductAPI.ts:111](https://github.com/bennyn/coinbase-pro-node/blob/a33aec9/src/product/ProductAPI.ts#L111)_
 
 ---
 
@@ -38,4 +38,4 @@ _Defined in [src/product/ProductAPI.ts:106](https://github.com/bennyn/coinbase-p
 
 • **sequence**: _SequenceNumber_
 
-_Defined in [src/product/ProductAPI.ts:105](https://github.com/bennyn/coinbase-pro-node/blob/411b7a7/src/product/ProductAPI.ts#L105)_
+_Defined in [src/product/ProductAPI.ts:110](https://github.com/bennyn/coinbase-pro-node/blob/a33aec9/src/product/ProductAPI.ts#L110)_

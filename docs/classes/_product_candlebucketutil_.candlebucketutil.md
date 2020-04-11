@@ -20,7 +20,7 @@
 
 ▸ **expectedBuckets**(`fromInMillis`: number, `toInMillis`: number, `candleSizeInMillis`: [CandleGranularity](../enums/_product_productapi_.candlegranularity.md)): _number_
 
-_Defined in [src/product/CandleBucketUtil.ts:13](https://github.com/bennyn/coinbase-pro-node/blob/411b7a7/src/product/CandleBucketUtil.ts#L13)_
+_Defined in [src/product/CandleBucketUtil.ts:13](https://github.com/bennyn/coinbase-pro-node/blob/a33aec9/src/product/CandleBucketUtil.ts#L13)_
 
 **Parameters:**
 
@@ -38,7 +38,7 @@ _Defined in [src/product/CandleBucketUtil.ts:13](https://github.com/bennyn/coinb
 
 ▸ **getBucketsInISO**(`bucketsInMillis`: number[]): _[CandleBatchBucket](../interfaces/_product_candlebucketutil_.candlebatchbucket.md)[]_
 
-_Defined in [src/product/CandleBucketUtil.ts:36](https://github.com/bennyn/coinbase-pro-node/blob/411b7a7/src/product/CandleBucketUtil.ts#L36)_
+_Defined in [src/product/CandleBucketUtil.ts:36](https://github.com/bennyn/coinbase-pro-node/blob/a33aec9/src/product/CandleBucketUtil.ts#L36)_
 
 **Parameters:**
 
@@ -54,7 +54,7 @@ _Defined in [src/product/CandleBucketUtil.ts:36](https://github.com/bennyn/coinb
 
 ▸ **getBucketsInMillis**(`fromInMillis`: number, `toInMillis`: number, `candleSizeInMillis`: number): _number[]_
 
-_Defined in [src/product/CandleBucketUtil.ts:18](https://github.com/bennyn/coinbase-pro-node/blob/411b7a7/src/product/CandleBucketUtil.ts#L18)_
+_Defined in [src/product/CandleBucketUtil.ts:18](https://github.com/bennyn/coinbase-pro-node/blob/a33aec9/src/product/CandleBucketUtil.ts#L18)_
 
 **Parameters:**
 

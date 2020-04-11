@@ -15,7 +15,7 @@
 
 • **SUBSCRIBE**: = "subscribe"
 
-_Defined in [src/client/WebSocketClient.ts:35](https://github.com/bennyn/coinbase-pro-node/blob/411b7a7/src/client/WebSocketClient.ts#L35)_
+_Defined in [src/client/WebSocketClient.ts:35](https://github.com/bennyn/coinbase-pro-node/blob/a33aec9/src/client/WebSocketClient.ts#L35)_
 
 ---
 
@@ -23,4 +23,4 @@ _Defined in [src/client/WebSocketClient.ts:35](https://github.com/bennyn/coinbas
 
 • **UNSUBSCRIBE**: = "unsubscribe"
 
-_Defined in [src/client/WebSocketClient.ts:36](https://github.com/bennyn/coinbase-pro-node/blob/411b7a7/src/client/WebSocketClient.ts#L36)_
+_Defined in [src/client/WebSocketClient.ts:36](https://github.com/bennyn/coinbase-pro-node/blob/a33aec9/src/client/WebSocketClient.ts#L36)_

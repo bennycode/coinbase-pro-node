@@ -16,8 +16,9 @@
 
 ### Interfaces
 
+- [BaseHistoricRateRequest](../interfaces/_product_productapi_.basehistoricraterequest.md)
 - [Candle](../interfaces/_product_productapi_.candle.md)
-- [CandlesRequestParameters](../interfaces/_product_productapi_.candlesrequestparameters.md)
+- [HistoricRateRequestWithTimeSpan](../interfaces/_product_productapi_.historicraterequestwithtimespan.md)
 - [OrderBookLevel1](../interfaces/_product_productapi_.orderbooklevel1.md)
 - [OrderBookLevel2](../interfaces/_product_productapi_.orderbooklevel2.md)
 - [OrderBookLevel3](../interfaces/_product_productapi_.orderbooklevel3.md)
@@ -29,12 +30,21 @@
 
 ### Type aliases
 
+- [HistoricRateRequest](_product_productapi_.md#historicraterequest)
 - [OrderBook](_product_productapi_.md#orderbook)
 
 ## Type aliases
+
+### HistoricRateRequest
+
+Ƭ **HistoricRateRequest**: _[BaseHistoricRateRequest](../interfaces/_product_productapi_.basehistoricraterequest.md) | [HistoricRateRequestWithTimeSpan](../interfaces/_product_productapi_.historicraterequestwithtimespan.md)_
+
+_Defined in [src/product/ProductAPI.ts:81](https://github.com/bennyn/coinbase-pro-node/blob/a33aec9/src/product/ProductAPI.ts#L81)_
+
+---
 
 ### OrderBook
 
 Ƭ **OrderBook**: _[OrderBookLevel1](../interfaces/_product_productapi_.orderbooklevel1.md) | [OrderBookLevel2](../interfaces/_product_productapi_.orderbooklevel2.md) | [OrderBookLevel3](../interfaces/_product_productapi_.orderbooklevel3.md)_
 
-_Defined in [src/product/ProductAPI.ts:127](https://github.com/bennyn/coinbase-pro-node/blob/411b7a7/src/product/ProductAPI.ts#L127)_
+_Defined in [src/product/ProductAPI.ts:132](https://github.com/bennyn/coinbase-pro-node/blob/a33aec9/src/product/ProductAPI.ts#L132)_

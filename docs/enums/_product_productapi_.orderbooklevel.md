@@ -16,7 +16,7 @@
 
 • **FULL_ORDER_BOOK**: = 3
 
-_Defined in [src/product/ProductAPI.ts:81](https://github.com/bennyn/coinbase-pro-node/blob/411b7a7/src/product/ProductAPI.ts#L81)_
+_Defined in [src/product/ProductAPI.ts:86](https://github.com/bennyn/coinbase-pro-node/blob/a33aec9/src/product/ProductAPI.ts#L86)_
 
 ---
 
@@ -24,7 +24,7 @@ _Defined in [src/product/ProductAPI.ts:81](https://github.com/bennyn/coinbase-pr
 
 • **ONLY_BEST_BID_AND_ASK**: = 1
 
-_Defined in [src/product/ProductAPI.ts:79](https://github.com/bennyn/coinbase-pro-node/blob/411b7a7/src/product/ProductAPI.ts#L79)_
+_Defined in [src/product/ProductAPI.ts:84](https://github.com/bennyn/coinbase-pro-node/blob/a33aec9/src/product/ProductAPI.ts#L84)_
 
 ---
 
@@ -32,4 +32,4 @@ _Defined in [src/product/ProductAPI.ts:79](https://github.com/bennyn/coinbase-pr
 
 • **TOP_50_BIDS_AND_ASKS**: = 2
 
-_Defined in [src/product/ProductAPI.ts:80](https://github.com/bennyn/coinbase-pro-node/blob/411b7a7/src/product/ProductAPI.ts#L80)_
+_Defined in [src/product/ProductAPI.ts:85](https://github.com/bennyn/coinbase-pro-node/blob/a33aec9/src/product/ProductAPI.ts#L85)_

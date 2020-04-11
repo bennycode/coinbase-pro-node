@@ -14,8 +14,8 @@
 - [high](_product_productapi_.candle.md#high)
 - [low](_product_productapi_.candle.md#low)
 - [open](_product_productapi_.candle.md#open)
-- [time](_product_productapi_.candle.md#time)
-- [timeString](_product_productapi_.candle.md#timestring)
+- [openTime](_product_productapi_.candle.md#opentime)
+- [openTimeString](_product_productapi_.candle.md#opentimestring)
 - [volume](_product_productapi_.candle.md#volume)
 
 ## Properties
@@ -24,7 +24,7 @@
 
 • **close**: _Close_
 
-_Defined in [src/product/ProductAPI.ts:142](https://github.com/bennyn/coinbase-pro-node/blob/411b7a7/src/product/ProductAPI.ts#L142)_
+_Defined in [src/product/ProductAPI.ts:147](https://github.com/bennyn/coinbase-pro-node/blob/a33aec9/src/product/ProductAPI.ts#L147)_
 
 Closing price (last trade) in the bucket interval
 
@@ -34,7 +34,7 @@ Closing price (last trade) in the bucket interval
 
 • **high**: _High_
 
-_Defined in [src/product/ProductAPI.ts:144](https://github.com/bennyn/coinbase-pro-node/blob/411b7a7/src/product/ProductAPI.ts#L144)_
+_Defined in [src/product/ProductAPI.ts:149](https://github.com/bennyn/coinbase-pro-node/blob/a33aec9/src/product/ProductAPI.ts#L149)_
 
 Highest price during the bucket interval
 
@@ -44,7 +44,7 @@ Highest price during the bucket interval
 
 • **low**: _Low_
 
-_Defined in [src/product/ProductAPI.ts:146](https://github.com/bennyn/coinbase-pro-node/blob/411b7a7/src/product/ProductAPI.ts#L146)_
+_Defined in [src/product/ProductAPI.ts:151](https://github.com/bennyn/coinbase-pro-node/blob/a33aec9/src/product/ProductAPI.ts#L151)_
 
 Lowest price during the bucket interval
 
@@ -54,27 +54,27 @@ Lowest price during the bucket interval
 
 • **open**: _Open_
 
-_Defined in [src/product/ProductAPI.ts:148](https://github.com/bennyn/coinbase-pro-node/blob/411b7a7/src/product/ProductAPI.ts#L148)_
+_Defined in [src/product/ProductAPI.ts:153](https://github.com/bennyn/coinbase-pro-node/blob/a33aec9/src/product/ProductAPI.ts#L153)_
 
 Opening price (first trade) in the bucket interval
 
 ---
 
-### time
+### openTime
 
-• **time**: _Timestamp_
+• **openTime**: _Timestamp_
 
-_Defined in [src/product/ProductAPI.ts:150](https://github.com/bennyn/coinbase-pro-node/blob/411b7a7/src/product/ProductAPI.ts#L150)_
+_Defined in [src/product/ProductAPI.ts:157](https://github.com/bennyn/coinbase-pro-node/blob/a33aec9/src/product/ProductAPI.ts#L157)_
 
 Bucket start time converted to milliseconds (note: Coinbase Pro actually uses seconds)
 
 ---
 
-### timeString
+### openTimeString
 
-• **timeString**: _ISO_8601_MS_UTC_
+• **openTimeString**: _ISO_8601_MS_UTC_
 
-_Defined in [src/product/ProductAPI.ts:152](https://github.com/bennyn/coinbase-pro-node/blob/411b7a7/src/product/ProductAPI.ts#L152)_
+_Defined in [src/product/ProductAPI.ts:155](https://github.com/bennyn/coinbase-pro-node/blob/a33aec9/src/product/ProductAPI.ts#L155)_
 
 Bucket start time in simplified extended ISO 8601 format
 
@@ -84,6 +84,6 @@ Bucket start time in simplified extended ISO 8601 format
 
 • **volume**: _Volume_
 
-_Defined in [src/product/ProductAPI.ts:154](https://github.com/bennyn/coinbase-pro-node/blob/411b7a7/src/product/ProductAPI.ts#L154)_
+_Defined in [src/product/ProductAPI.ts:159](https://github.com/bennyn/coinbase-pro-node/blob/a33aec9/src/product/ProductAPI.ts#L159)_
 
 Volume of trading activity during the bucket interval
