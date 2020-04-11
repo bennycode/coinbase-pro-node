@@ -6,7 +6,7 @@ require('dotenv').config();
 let client: CoinbasePro;
 
 if (process.env.USE_SANDBOX === 'true') {
-  console.info('Using Coinbase Public Sandbox with API key...');
+  console.info("Using Coinbase Pro's public sandbox with API key...");
 
   client = new CoinbasePro({
     apiKey: process.env.COINBASE_PRO_API_KEY!,
@@ -15,7 +15,7 @@ if (process.env.USE_SANDBOX === 'true') {
     useSandbox: true,
   });
 } else if (process.env.USE_SANDBOX === 'false') {
-  console.info('Using Coinbase Production Environment with API key...');
+  console.info("Using Coinbase Pro's production environment with API key...");
 
   client = new CoinbasePro({
     apiKey: process.env.COINBASE_PRO_SANDBOX_API_KEY!,
@@ -24,7 +24,7 @@ if (process.env.USE_SANDBOX === 'true') {
     useSandbox: false,
   });
 } else {
-  console.info('Using Coinbase Production Environment without API key...');
+  console.info("Using Coinbase Pro's production environment without API key...");
 
   client = new CoinbasePro();
 }
