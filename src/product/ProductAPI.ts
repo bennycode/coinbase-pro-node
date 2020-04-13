@@ -361,9 +361,9 @@ export class ProductAPI {
   private startCandleInterval(productId: string, granularity: CandleGranularity): NodeJS.Timeout {
     // Check for new candles in the smallest candle interval possible, which is 1 minute
     const updateInterval = CandleGranularity.ONE_MINUTE * 1000;
-    return (
-      (setInterval(this.checkNewCandles.bind(this, productId, granularity), updateInterval) as unknown) as
-      NodeJS.Timeout
-    );
+    return (setInterval(
+      this.checkNewCandles.bind(this, productId, granularity),
+      updateInterval
+    ) as unknown) as NodeJS.Timeout;
   }
 }
