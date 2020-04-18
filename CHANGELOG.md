@@ -1,3 +1,19 @@
+#### 1.8.2 (2020-04-18)
+
+##### Chores
+
+- **deps-dev:**
+  - bump prettier from 2.0.3 to 2.0.4 ([#125](https://github.com/bennyn/coinbase-pro-node/pull/125)) ([1f2cc157](https://github.com/bennyn/coinbase-pro-node/commit/1f2cc15778dab1648065e8c33994f20d9d3a654c))
+  - bump @typescript-eslint/parser from 2.26.0 to 2.27.0 ([#127](https://github.com/bennyn/coinbase-pro-node/pull/127)) ([afdb5825](https://github.com/bennyn/coinbase-pro-node/commit/afdb582508d5f13222232d473c45a61f64900e05))
+  - bump husky from 4.2.3 to 4.2.5 ([#126](https://github.com/bennyn/coinbase-pro-node/pull/126)) ([ddd31e01](https://github.com/bennyn/coinbase-pro-node/commit/ddd31e01145d301adecfda60e00d1e9db1fc5b08))
+  - bump @typescript-eslint/eslint-plugin ([#124](https://github.com/bennyn/coinbase-pro-node/pull/124)) ([3be59b4c](https://github.com/bennyn/coinbase-pro-node/commit/3be59b4c7b18f3562db8383ee96c6f4333f81116))
+  - bump lint-staged from 10.1.2 to 10.1.3 ([#123](https://github.com/bennyn/coinbase-pro-node/pull/123)) ([2a5dd2f0](https://github.com/bennyn/coinbase-pro-node/commit/2a5dd2f0ee38c853b0e8c74cb3477cf797ee575c))
+  - bump eslint-plugin-prettier from 3.1.2 to 3.1.3 ([#122](https://github.com/bennyn/coinbase-pro-node/pull/122)) ([c7570e53](https://github.com/bennyn/coinbase-pro-node/commit/c7570e53e419b0296e2a1bca7d899be02c62a48f))
+
+##### Bug Fixes
+
+- Throw error on duplicate candle watching ([#128](https://github.com/bennyn/coinbase-pro-node/pull/128)) ([8dd239ba](https://github.com/bennyn/coinbase-pro-node/commit/8dd239ba3ca024002683866243cbb356f8e8ddef))
+
 #### 1.8.1 (2020-04-11)
 
 ##### New Features
