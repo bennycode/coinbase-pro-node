@@ -170,7 +170,14 @@ export class ProductAPI {
     PRODUCTS: `/products`,
   };
 
-  private watchCandlesConfig: {[productId: string]: {[granularity: number]: ISO_8601_MS_UTC}} = {};
+  private watchCandlesConfig: {
+    [productId: string]: {
+      [granularity: number]: {
+        expectedISO: ISO_8601_MS_UTC;
+        intervalId: NodeJS.Timeout;
+      };
+    };
+  } = {};
 
   constructor(private readonly apiClient: AxiosInstance, private readonly restClient: RESTClient) {}
 
@@ -226,14 +233,37 @@ export class ProductAPI {
    * @returns Handle to stop the watch interval.
    */
   async watchCandles(productId: string, granularity: CandleGranularity): Promise<NodeJS.Timeout> {
-    const candles = await this.getCandles('BTC-USD', {
+    this.watchCandlesConfig[productId] = this.watchCandlesConfig[productId] || {};
+
+    const candles = await this.getCandles(productId, {
       end: new Date().toISOString(),
       granularity,
     });
-    this.watchCandlesConfig[productId] = this.watchCandlesConfig[productId] || {};
     const latestCandle = candles[candles.length - 1];
-    this.emitCandle(productId, granularity, latestCandle);
-    return this.startCandleInterval(productId, granularity);
+
+    if (this.watchCandlesConfig[productId][granularity]) {
+      throw Error(
+        `You are already watching "${productId}" with an interval of "${granularity}" seconds. Please clear this interval before creating a new one.`
+      );
+    } else {
+      const intervalId = this.startCandleInterval(productId, granularity);
+
+      this.watchCandlesConfig[productId][granularity] = {
+        expectedISO: latestCandle.openTimeString,
+        intervalId: intervalId,
+      };
+
+      this.emitCandle(productId, granularity, latestCandle);
+      return intervalId;
+    }
+  }
+
+  unwatchCandles(productId: string, granularity: CandleGranularity, intervalId: NodeJS.Timeout): void {
+    clearInterval(intervalId);
+    delete this.watchCandlesConfig[productId][granularity];
+    if (Object.values(this.watchCandlesConfig[productId]).length === 0) {
+      delete this.watchCandlesConfig[productId];
+    }
   }
 
   /**
@@ -340,11 +370,11 @@ export class ProductAPI {
     // Cache timestamp of upcoming candle
     const interval = granularity * 1000;
     const nextTimestamp = new Date(matchedCandle.openTime).getTime() + interval;
-    this.watchCandlesConfig[productId][granularity] = new Date(nextTimestamp).toISOString();
+    this.watchCandlesConfig[productId][granularity].expectedISO = new Date(nextTimestamp).toISOString();
   }
 
   private async checkNewCandles(productId: string, granularity: CandleGranularity): Promise<void> {
-    const expectedTimestampISO = this.watchCandlesConfig[productId][granularity];
+    const expectedTimestampISO = this.watchCandlesConfig[productId][granularity].expectedISO;
 
     const candles = await this.getCandles('BTC-USD', {
       granularity,
