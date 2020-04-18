@@ -232,7 +232,7 @@ export class ProductAPI {
    * @param granularity - Desired candle size
    * @returns Handle to stop the watch interval.
    */
-  async watchCandles(productId: string, granularity: CandleGranularity): Promise<NodeJS.Timeout> {
+  async watchCandles(productId: string, granularity: CandleGranularity): Promise<void> {
     this.watchCandlesConfig[productId] = this.watchCandlesConfig[productId] || {};
 
     const candles = await this.getCandles(productId, {
@@ -254,11 +254,11 @@ export class ProductAPI {
       };
 
       this.emitCandle(productId, granularity, latestCandle);
-      return intervalId;
     }
   }
 
-  unwatchCandles(productId: string, granularity: CandleGranularity, intervalId: NodeJS.Timeout): void {
+  unwatchCandles(productId: string, granularity: CandleGranularity): void {
+    const intervalId = this.watchCandlesConfig[productId][granularity].intervalId;
     clearInterval(intervalId);
     delete this.watchCandlesConfig[productId][granularity];
     if (Object.values(this.watchCandlesConfig[productId]).length === 0) {
