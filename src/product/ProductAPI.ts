@@ -234,18 +234,19 @@ export class ProductAPI {
    */
   async watchCandles(productId: string, granularity: CandleGranularity): Promise<void> {
     this.watchCandlesConfig[productId] = this.watchCandlesConfig[productId] || {};
-
-    const candles = await this.getCandles(productId, {
-      end: new Date().toISOString(),
-      granularity,
-    });
-    const latestCandle = candles[candles.length - 1];
-
     if (this.watchCandlesConfig[productId][granularity]) {
-      throw Error(
+      throw new Error(
         `You are already watching "${productId}" with an interval of "${granularity}" seconds. Please clear this interval before creating a new one.`
       );
     } else {
+      // Fetch initial candles
+      const candles = await this.getCandles(productId, {
+        end: new Date().toISOString(),
+        granularity,
+      });
+      const latestCandle = candles[candles.length - 1];
+
+      // Create update interval
       const intervalId = this.startCandleInterval(productId, granularity);
 
       this.watchCandlesConfig[productId][granularity] = {
@@ -253,6 +254,7 @@ export class ProductAPI {
         intervalId: intervalId,
       };
 
+      // Emit initial candle
       this.emitCandle(productId, granularity, latestCandle);
     }
   }

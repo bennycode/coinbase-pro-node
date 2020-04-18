@@ -271,11 +271,28 @@ describe('ProductAPI', () => {
 
       const spy = spyOn<any>(global.client.rest.product, 'checkNewCandles').and.callThrough();
 
-      const interval = await global.client.rest.product.watchCandles(productId, granularity);
-      expect(interval).toBeDefined();
+      await global.client.rest.product.watchCandles(productId, granularity);
 
       jasmine.clock().tick(updateInterval);
       expect(spy).toHaveBeenCalledWith(productId, granularity);
+    });
+
+    it('throws an error when trying to watch a candle setup multiple times', async done => {
+      const productId = 'BTC-USD';
+      const granularity = CandleGranularity.ONE_HOUR;
+
+      nock(global.REST_URL)
+        .get(`${ProductAPI.URL.PRODUCTS}/${productId}/candles`)
+        .query(true)
+        .reply(200, JSON.stringify(CandlesBTCUSD));
+
+      await global.client.rest.product.watchCandles(productId, granularity);
+      try {
+        await global.client.rest.product.watchCandles(productId, granularity);
+        done.fail('No error has been thrown');
+      } catch (error) {
+        done();
+      }
     });
 
     it('emits new candles', async done => {
@@ -325,6 +342,23 @@ describe('ProductAPI', () => {
       await global.client.rest.product.watchCandles(productId, granularity);
       jasmine.clock().tick(updateInterval);
       jasmine.clock().tick(updateInterval);
+    });
+  });
+
+  describe('unwatchCandles', () => {
+    it('removes running candle watching intervals', async () => {
+      const productId = 'BTC-USD';
+
+      nock(global.REST_URL)
+        .persist(true)
+        .get(`${ProductAPI.URL.PRODUCTS}/${productId}/candles`)
+        .query(true)
+        .reply(200, JSON.stringify(CandlesBTCUSD));
+
+      await global.client.rest.product.watchCandles(productId, CandleGranularity.ONE_HOUR);
+      await global.client.rest.product.watchCandles(productId, CandleGranularity.SIX_HOURS);
+      await global.client.rest.product.unwatchCandles(productId, CandleGranularity.ONE_HOUR);
+      await global.client.rest.product.unwatchCandles(productId, CandleGranularity.SIX_HOURS);
     });
   });
 });
