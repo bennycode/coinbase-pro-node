@@ -34,7 +34,7 @@
 
 Ƭ **WebSocketLastMatchMessage**: _Omit‹[WebSocketMatchMessage](_client_websocketclient_.md#websocketmatchmessage), "type"› & object_
 
-_Defined in [src/client/WebSocketClient.ts:159](https://github.com/bennyn/coinbase-pro-node/blob/1656a9e/src/client/WebSocketClient.ts#L159)_
+_Defined in [src/client/WebSocketClient.ts:159](https://github.com/bennyn/coinbase-pro-node/blob/c83e588/src/client/WebSocketClient.ts#L159)_
 
 ---
 
@@ -42,7 +42,7 @@ _Defined in [src/client/WebSocketClient.ts:159](https://github.com/bennyn/coinba
 
 Ƭ **WebSocketMatchMessage**: _object_
 
-_Defined in [src/client/WebSocketClient.ts:146](https://github.com/bennyn/coinbase-pro-node/blob/1656a9e/src/client/WebSocketClient.ts#L146)_
+_Defined in [src/client/WebSocketClient.ts:146](https://github.com/bennyn/coinbase-pro-node/blob/c83e588/src/client/WebSocketClient.ts#L146)_
 
 #### Type declaration:
 
@@ -72,7 +72,7 @@ _Defined in [src/client/WebSocketClient.ts:146](https://github.com/bennyn/coinba
 
 Ƭ **WebSocketResponse**: _object & WebSocketMessage_
 
-_Defined in [src/client/WebSocketClient.ts:123](https://github.com/bennyn/coinbase-pro-node/blob/1656a9e/src/client/WebSocketClient.ts#L123)_
+_Defined in [src/client/WebSocketClient.ts:123](https://github.com/bennyn/coinbase-pro-node/blob/c83e588/src/client/WebSocketClient.ts#L123)_
 
 ---
 
@@ -80,7 +80,7 @@ _Defined in [src/client/WebSocketClient.ts:123](https://github.com/bennyn/coinba
 
 Ƭ **WebSocketSubscription**: _object_
 
-_Defined in [src/client/WebSocketClient.ts:161](https://github.com/bennyn/coinbase-pro-node/blob/1656a9e/src/client/WebSocketClient.ts#L161)_
+_Defined in [src/client/WebSocketClient.ts:161](https://github.com/bennyn/coinbase-pro-node/blob/c83e588/src/client/WebSocketClient.ts#L161)_
 
 #### Type declaration:
 
@@ -94,7 +94,7 @@ _Defined in [src/client/WebSocketClient.ts:161](https://github.com/bennyn/coinba
 
 Ƭ **WebSocketTickerMessage**: _object_
 
-_Defined in [src/client/WebSocketClient.ts:128](https://github.com/bennyn/coinbase-pro-node/blob/1656a9e/src/client/WebSocketClient.ts#L128)_
+_Defined in [src/client/WebSocketClient.ts:128](https://github.com/bennyn/coinbase-pro-node/blob/c83e588/src/client/WebSocketClient.ts#L128)_
 
 #### Type declaration:
 

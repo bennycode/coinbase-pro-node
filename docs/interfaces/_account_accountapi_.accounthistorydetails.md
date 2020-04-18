@@ -20,7 +20,7 @@
 
 • **order_id**: _string_
 
-_Defined in [src/account/AccountAPI.ts:22](https://github.com/bennyn/coinbase-pro-node/blob/1656a9e/src/account/AccountAPI.ts#L22)_
+_Defined in [src/account/AccountAPI.ts:22](https://github.com/bennyn/coinbase-pro-node/blob/c83e588/src/account/AccountAPI.ts#L22)_
 
 ---
 
@@ -28,7 +28,7 @@ _Defined in [src/account/AccountAPI.ts:22](https://github.com/bennyn/coinbase-pr
 
 • **product_id**: _string_
 
-_Defined in [src/account/AccountAPI.ts:23](https://github.com/bennyn/coinbase-pro-node/blob/1656a9e/src/account/AccountAPI.ts#L23)_
+_Defined in [src/account/AccountAPI.ts:23](https://github.com/bennyn/coinbase-pro-node/blob/c83e588/src/account/AccountAPI.ts#L23)_
 
 ---
 
@@ -36,4 +36,4 @@ _Defined in [src/account/AccountAPI.ts:23](https://github.com/bennyn/coinbase-pr
 
 • **trade_id**: _string_
 
-_Defined in [src/account/AccountAPI.ts:24](https://github.com/bennyn/coinbase-pro-node/blob/1656a9e/src/account/AccountAPI.ts#L24)_
+_Defined in [src/account/AccountAPI.ts:24](https://github.com/bennyn/coinbase-pro-node/blob/c83e588/src/account/AccountAPI.ts#L24)_

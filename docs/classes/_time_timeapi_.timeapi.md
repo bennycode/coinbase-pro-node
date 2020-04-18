@@ -23,7 +23,7 @@
 
 ▸ **getClockSkew**(`baseURL`: string): _Promise‹number›_
 
-_Defined in [src/time/TimeAPI.ts:19](https://github.com/bennyn/coinbase-pro-node/blob/1656a9e/src/time/TimeAPI.ts#L19)_
+_Defined in [src/time/TimeAPI.ts:19](https://github.com/bennyn/coinbase-pro-node/blob/c83e588/src/time/TimeAPI.ts#L19)_
 
 **Parameters:**
 
@@ -39,7 +39,7 @@ _Defined in [src/time/TimeAPI.ts:19](https://github.com/bennyn/coinbase-pro-node
 
 ▸ **getTime**(`baseURL`: string): _Promise‹[TimeSkew](../interfaces/_time_timeapi_.timeskew.md)›_
 
-_Defined in [src/time/TimeAPI.ts:14](https://github.com/bennyn/coinbase-pro-node/blob/1656a9e/src/time/TimeAPI.ts#L14)_
+_Defined in [src/time/TimeAPI.ts:14](https://github.com/bennyn/coinbase-pro-node/blob/c83e588/src/time/TimeAPI.ts#L14)_
 
 **Parameters:**
 
@@ -55,10 +55,10 @@ _Defined in [src/time/TimeAPI.ts:14](https://github.com/bennyn/coinbase-pro-node
 
 ### ▪ **URL**: _object_
 
-_Defined in [src/time/TimeAPI.ts:9](https://github.com/bennyn/coinbase-pro-node/blob/1656a9e/src/time/TimeAPI.ts#L9)_
+_Defined in [src/time/TimeAPI.ts:9](https://github.com/bennyn/coinbase-pro-node/blob/c83e588/src/time/TimeAPI.ts#L9)_
 
 ### TIME
 
 • **TIME**: _string_ = `/time`
 
-_Defined in [src/time/TimeAPI.ts:10](https://github.com/bennyn/coinbase-pro-node/blob/1656a9e/src/time/TimeAPI.ts#L10)_
+_Defined in [src/time/TimeAPI.ts:10](https://github.com/bennyn/coinbase-pro-node/blob/c83e588/src/time/TimeAPI.ts#L10)_
