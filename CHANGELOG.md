@@ -1,3 +1,29 @@
+#### 1.8.3 (2020-04-20)
+
+##### Chores
+
+- **deps:**
+  - bump axios-retry from 3.1.2 to 3.1.5 ([#135](https://github.com/bennyn/coinbase-pro-node/pull/135)) ([13375497](https://github.com/bennyn/coinbase-pro-node/commit/1337549775717c96b1e90fc959f6fea7983dc8d5))
+  - bump @types/ws from 7.2.3 to 7.2.4 ([#132](https://github.com/bennyn/coinbase-pro-node/pull/132)) ([744e11b2](https://github.com/bennyn/coinbase-pro-node/commit/744e11b231b338c61055d77c0b95e69ccf8fb577))
+- **deps-dev:**
+  - bump @typescript-eslint/parser from 2.27.0 to 2.28.0 ([#133](https://github.com/bennyn/coinbase-pro-node/pull/133)) ([1e55d343](https://github.com/bennyn/coinbase-pro-node/commit/1e55d343eaa5ad096ac304be3883fbc77ad858ec))
+  - bump lint-staged from 10.1.3 to 10.1.6 ([#130](https://github.com/bennyn/coinbase-pro-node/pull/130)) ([f3d1b921](https://github.com/bennyn/coinbase-pro-node/commit/f3d1b9210b64c3c51e43d8678c1c7cc31b755c0f))
+  - bump @typescript-eslint/eslint-plugin ([#129](https://github.com/bennyn/coinbase-pro-node/pull/129)) ([a8b689c5](https://github.com/bennyn/coinbase-pro-node/commit/a8b689c5fdbbe0a4082a6be1caa1edbc160882b8))
+
+##### Documentation Changes
+
+- Update homepage url ([d721a409](https://github.com/bennyn/coinbase-pro-node/commit/d721a40979403bccd62c1f55552e66e35cf10623))
+- Serve all content over HTTPS ([48c253c0](https://github.com/bennyn/coinbase-pro-node/commit/48c253c098b00c2809a3b1bca047ff5459cfcb8a))
+
+##### New Features
+
+- Add utility to generate previous timestamp ([#136](https://github.com/bennyn/coinbase-pro-node/pull/136)) ([9fa65b96](https://github.com/bennyn/coinbase-pro-node/commit/9fa65b96101c2b5da7be9e46ea1819c256c07489))
+- Add utility to generate next timestamp ([#134](https://github.com/bennyn/coinbase-pro-node/pull/134)) ([850d5377](https://github.com/bennyn/coinbase-pro-node/commit/850d5377cfab0f0aff7e71f50949a48bfddfeb3a))
+
+##### Refactors
+
+- Require timestamp of last candle when watching candles ([#137](https://github.com/bennyn/coinbase-pro-node/pull/137)) ([cbf2d9b0](https://github.com/bennyn/coinbase-pro-node/commit/cbf2d9b05937a98ab7c0ea8c91ef32dfe40f932f))
+
 #### 1.8.2 (2020-04-18)
 
 ##### Chores
