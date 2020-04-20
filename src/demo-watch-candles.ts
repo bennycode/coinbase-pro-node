@@ -13,7 +13,7 @@ async function main(): Promise<void> {
     console.info('Recent candle', productId, granularity, candle.openTimeString);
   });
 
-  // 3. Get initial candle
+  // 3. Get latest candle
   const candles = await client.rest.product.getCandles(productId, {
     granularity,
   });
@@ -21,7 +21,7 @@ async function main(): Promise<void> {
   const latestOpen = latestCandle.openTimeString;
   console.info('Initial candle', productId, granularity, latestOpen);
 
-  // 4. Subscribe to following candles
+  // 4. Subscribe to upcoming candles
   client.rest.product.watchCandles(productId, granularity, latestOpen);
 }
 
