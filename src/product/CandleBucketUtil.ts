@@ -21,6 +21,17 @@ export class CandleBucketUtil {
     return new Date(nextTimestamp).toISOString();
   }
 
+  static removeUnitMillis(openTime: number | string, granularity: CandleGranularity, amount: number): number {
+    const granularityInMs = granularity * 1000;
+    const units = amount * granularityInMs;
+    return new Date(openTime).getTime() - units;
+  }
+
+  static removeUnitISO(openTime: number | string, granularity: CandleGranularity, amount: number): ISO_8601_MS_UTC {
+    const nextTimestamp = CandleBucketUtil.removeUnitMillis(openTime, granularity, amount);
+    return new Date(nextTimestamp).toISOString();
+  }
+
   static getIntervals(): number[] {
     return [60, 300, 900, 3600, 21600, 86400];
   }

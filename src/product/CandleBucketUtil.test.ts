@@ -35,6 +35,32 @@ describe('CandleBucketUtil', () => {
     });
   });
 
+  describe('removeUnitISO', () => {
+    it('calculates the previous timestamp', () => {
+      const time = '2020-04-20T11:38:00.000Z';
+      const granularity = CandleGranularity.ONE_HOUR;
+      const expected = '2020-04-20T10:38:00.000Z';
+      const actual = CandleBucketUtil.removeUnitISO(time, granularity, 1);
+      expect(actual).toBe(expected);
+    });
+
+    it('works with numbers', () => {
+      const time = new Date('2020-04-20T11:38:00.000Z').getTime();
+      const granularity = CandleGranularity.ONE_HOUR;
+      const expected = '2020-04-20T10:38:00.000Z';
+      const actual = CandleBucketUtil.removeUnitISO(time, granularity, 1);
+      expect(actual).toBe(expected);
+    });
+
+    it('works with multiple units', () => {
+      const time = '2020-04-20T11:38:00.000Z';
+      const granularity = CandleGranularity.ONE_MINUTE;
+      const expected = '2020-04-20T11:36:00.000Z';
+      const actual = CandleBucketUtil.removeUnitISO(time, granularity, 2);
+      expect(actual).toBe(expected);
+    });
+  });
+
   describe('mapInterval', () => {
     it('matches a value within a range', () => {
       const range = [60, 300, 900, 3600, 21600, 86400];
