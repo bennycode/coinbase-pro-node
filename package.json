@@ -45,7 +45,7 @@
     "!/dist/start.js",
     "!/dist/start.js.map"
   ],
-  "homepage": "https://documentup.com/bennyn/coinbase-pro-node",
+  "homepage": "https://benny.work/coinbase-pro-node",
   "keywords": [
     "API",
     "Bitcoin",
