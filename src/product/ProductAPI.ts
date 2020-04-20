@@ -366,13 +366,13 @@ export class ProductAPI {
     };
   }
 
-  private emitCandle(productId: string, granularity: CandleGranularity, matchedCandle: Candle): void {
+  private emitCandle(productId: string, granularity: CandleGranularity, candle: Candle): void {
     // Emit matched candle
-    this.restClient.emit(ProductEvent.NEW_CANDLE, productId, granularity, matchedCandle);
+    this.restClient.emit(ProductEvent.NEW_CANDLE, productId, granularity, candle);
     // Cache timestamp of upcoming candle
-    const interval = granularity * 1000;
-    const nextTimestamp = new Date(matchedCandle.openTime).getTime() + interval;
-    this.watchCandlesConfig[productId][granularity].expectedISO = new Date(nextTimestamp).toISOString();
+    const {openTime} = candle;
+    const nextOpenTime = CandleBucketUtil.addUnitISO(openTime, granularity, 1);
+    this.watchCandlesConfig[productId][granularity].expectedISO = nextOpenTime;
   }
 
   private async checkNewCandles(productId: string, granularity: CandleGranularity): Promise<void> {
