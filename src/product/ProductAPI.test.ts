@@ -271,7 +271,7 @@ describe('ProductAPI', () => {
 
       const spy = spyOn<any>(global.client.rest.product, 'checkNewCandles').and.callThrough();
 
-      await global.client.rest.product.watchCandles(productId, granularity);
+      global.client.rest.product.watchCandles(productId, granularity, '2020-03-08T23:00:00.000Z');
 
       jasmine.clock().tick(updateInterval);
       expect(spy).toHaveBeenCalledWith(productId, granularity);
@@ -286,9 +286,9 @@ describe('ProductAPI', () => {
         .query(true)
         .reply(200, JSON.stringify(CandlesBTCUSD));
 
-      await global.client.rest.product.watchCandles(productId, granularity);
+      global.client.rest.product.watchCandles(productId, granularity, '2020-03-08T23:00:00.000Z');
       try {
-        await global.client.rest.product.watchCandles(productId, granularity);
+        global.client.rest.product.watchCandles(productId, granularity, '2020-03-08T23:00:00.000Z');
         done.fail('No error has been thrown');
       } catch (error) {
         done();
@@ -299,47 +299,35 @@ describe('ProductAPI', () => {
       const productId = 'BTC-USD';
       const granularity = CandleGranularity.ONE_HOUR;
       const updateInterval = 60000;
+      const expectedISO = '2020-03-09T00:00:00.000Z';
 
-      const firstResponse = [...CandlesBTCUSD];
-      const nextCandle = firstResponse.shift() as number[];
-      const expectedISO = new Date(nextCandle[0] * 1000).toISOString();
+      // Simulate something not matching
+      nock(global.REST_URL)
+        .get(`${ProductAPI.URL.PRODUCTS}/${productId}/candles`)
+        .query(true)
+        .reply(200, JSON.stringify([]));
 
       nock(global.REST_URL)
         .get(`${ProductAPI.URL.PRODUCTS}/${productId}/candles`)
         .query(true)
-        .reply(() => {
-          return [200, JSON.stringify(firstResponse)];
-        });
-
-      // Repeat first response
-      nock(global.REST_URL)
-        .get(`${ProductAPI.URL.PRODUCTS}/${productId}/candles`)
-        .query(true)
-        .reply(() => {
-          return [200, JSON.stringify(firstResponse)];
-        });
-
-      nock(global.REST_URL)
-        .get(`${ProductAPI.URL.PRODUCTS}/${productId}/candles`)
-        .query(true)
-        .reply(() => {
-          return [200, JSON.stringify(CandlesBTCUSD)];
-        });
+        .reply(200, JSON.stringify(CandlesBTCUSD));
 
       const onNewCandle = jasmine
         .createSpy('onNewCandle')
-        .and.callFake((productId: string, granularity: CandleGranularity, candle: Candle) => {
-          expect(productId).toBe(productId);
-          expect(granularity).toBe(granularity);
-          if (candle.openTimeString === expectedISO) {
-            expect(onNewCandle).toHaveBeenCalledTimes(2);
+        .and.callFake((emittedProductId: string, emittedGranularity: CandleGranularity, candle: Candle) => {
+          expect(emittedProductId).toBe(productId);
+          expect(emittedGranularity).toBe(granularity);
+          const {openTimeString} = candle;
+          if (openTimeString === expectedISO) {
             done();
+          } else {
+            done.fail(`Received "${openTimeString}" but expected "${expectedISO}".`);
           }
         });
 
       global.client.rest.on(ProductEvent.NEW_CANDLE, onNewCandle);
 
-      await global.client.rest.product.watchCandles(productId, granularity);
+      global.client.rest.product.watchCandles(productId, granularity, '2020-03-08T23:00:00.000Z');
       jasmine.clock().tick(updateInterval);
       jasmine.clock().tick(updateInterval);
     });
@@ -355,10 +343,10 @@ describe('ProductAPI', () => {
         .query(true)
         .reply(200, JSON.stringify(CandlesBTCUSD));
 
-      await global.client.rest.product.watchCandles(productId, CandleGranularity.ONE_HOUR);
-      await global.client.rest.product.watchCandles(productId, CandleGranularity.SIX_HOURS);
-      await global.client.rest.product.unwatchCandles(productId, CandleGranularity.ONE_HOUR);
-      await global.client.rest.product.unwatchCandles(productId, CandleGranularity.SIX_HOURS);
+      global.client.rest.product.watchCandles(productId, CandleGranularity.ONE_HOUR, '2020-03-08T23:00:00.000Z');
+      global.client.rest.product.watchCandles(productId, CandleGranularity.SIX_HOURS, '2020-03-09T00:00:00.000Z');
+      global.client.rest.product.unwatchCandles(productId, CandleGranularity.ONE_HOUR);
+      global.client.rest.product.unwatchCandles(productId, CandleGranularity.SIX_HOURS);
     });
   });
 });

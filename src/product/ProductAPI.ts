@@ -230,32 +230,23 @@ export class ProductAPI {
    *
    * @param productId - Representation for base and counter
    * @param granularity - Desired candle size
+   * @param lastCandleTime - Timestamp (ISO 8601) of last candle received
    * @returns Handle to stop the watch interval.
    */
-  async watchCandles(productId: string, granularity: CandleGranularity): Promise<void> {
+  watchCandles(productId: string, granularity: CandleGranularity, lastCandleTime: ISO_8601_MS_UTC): void {
     this.watchCandlesConfig[productId] = this.watchCandlesConfig[productId] || {};
     if (this.watchCandlesConfig[productId][granularity]) {
       throw new Error(
         `You are already watching "${productId}" with an interval of "${granularity}" seconds. Please clear this interval before creating a new one.`
       );
     } else {
-      // Fetch initial candles
-      const candles = await this.getCandles(productId, {
-        end: new Date().toISOString(),
-        granularity,
-      });
-      const latestCandle = candles[candles.length - 1];
-
-      // Create update interval
+      const expectedISO = CandleBucketUtil.addUnitISO(lastCandleTime, granularity, 1);
       const intervalId = this.startCandleInterval(productId, granularity);
 
       this.watchCandlesConfig[productId][granularity] = {
-        expectedISO: latestCandle.openTimeString,
-        intervalId: intervalId,
+        expectedISO,
+        intervalId,
       };
-
-      // Emit initial candle
-      this.emitCandle(productId, granularity, latestCandle);
     }
   }
 
