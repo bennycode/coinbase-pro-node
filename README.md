@@ -1,6 +1,6 @@
 # Coinbase Pro API
 
-![Language Details](https://img.shields.io/github/languages/top/bennyn/coinbase-pro-node) [![Code Coverage](https://codecov.io/gh/bennyn/coinbase-pro-node/branch/master/graphs/badge.svg)](https://codecov.io/gh/bennyn/coinbase-pro-node) ![License](https://img.shields.io/npm/l/coinbase-pro-node.svg) ![Package Version](https://img.shields.io/npm/v/coinbase-pro-node.svg) ![Dependency Updates](https://img.shields.io/david/bennyn/coinbase-pro-node.svg)
+![Language Details](https://img.shields.io/github/languages/top/bennyn/coinbase-pro-node) ![Code Coverage](https://img.shields.io/codecov/c/github/bennyn/coinbase-pro-node/master) ![License](https://img.shields.io/npm/l/coinbase-pro-node.svg) ![Package Version](https://img.shields.io/npm/v/coinbase-pro-node.svg) ![Dependency Updates](https://img.shields.io/david/bennyn/coinbase-pro-node.svg)
 
 [Coinbase Pro][1] API for Node.js, written in TypeScript and covered by tests.
 
@@ -144,5 +144,5 @@ Give a ⭐️ if this project helped you!
 [1]: https://pro.coinbase.com/
 [2]: https://docs.pro.coinbase.com/
 [3]: https://github.com/coinbase/coinbase-pro-node
-[stack_exchange_bennyn_badge]: http://stackexchange.com/users/flair/203782.png?theme=default
-[stack_exchange_bennyn_url]: http://stackexchange.com/users/203782/benny-neugebauer?tab=accounts
+[stack_exchange_bennyn_badge]: https://stackexchange.com/users/flair/203782.png?theme=default
+[stack_exchange_bennyn_url]: https://stackexchange.com/users/203782/benny-neugebauer?tab=accounts
