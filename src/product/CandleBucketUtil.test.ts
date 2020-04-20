@@ -36,7 +36,7 @@ describe('CandleBucketUtil', () => {
   });
 
   describe('removeUnitISO', () => {
-    it('calculates the next timestamp', () => {
+    it('calculates the previous timestamp', () => {
       const time = '2020-04-20T11:38:00.000Z';
       const granularity = CandleGranularity.ONE_HOUR;
       const expected = '2020-04-20T10:38:00.000Z';
