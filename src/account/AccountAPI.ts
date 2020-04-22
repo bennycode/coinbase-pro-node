@@ -1,4 +1,6 @@
 import {AxiosInstance} from 'axios';
+import {Pagination, PAGINATION_LIMIT} from '../payload/common';
+import {RESTData} from '..';
 
 export interface Account {
   available: string;
@@ -58,12 +60,20 @@ export class AccountAPI {
    * balance. Items are paginated and sorted latest first.
    *
    * @param accountId - Account ID belonging to the API key’s profile
+   * @param pagination - Pagination field
    * @see https://docs.pro.coinbase.com/#get-account-history
    */
-  async getAccountHistory(accountId: string): Promise<AccountHistory[]> {
+  async getAccountHistory(accountId: string, pagination: Pagination): Promise<RESTData> {
     const resource = `${AccountAPI.URL.ACCOUNTS}/${accountId}/ledger`;
-    const response = await this.apiClient.get<AccountHistory[]>(resource);
-    return response.data;
+    const response = await this.apiClient.get<AccountHistory[]>(resource, {params: pagination});
+    return {
+      data: response.data,
+      pagination: {
+        after: response.headers['cb-after'],
+        before: response.headers['cb-before'],
+        limit: pagination?.limit ? pagination.limit : PAGINATION_LIMIT,
+      },
+    };
   }
 
   /**

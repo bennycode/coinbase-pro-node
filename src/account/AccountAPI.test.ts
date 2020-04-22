@@ -50,7 +50,7 @@ describe('AccountAPI', () => {
     it('lists the account activity', async () => {
       const accounts = await global.client.rest.account.listAccounts();
       const accountId = accounts[0].id;
-      const history = await global.client.rest.account.getAccountHistory(accountId);
+      const history = await global.client.rest.account.getAccountHistory(accountId, {limit: 100});
       expect(history).toBeDefined();
     });
   });
