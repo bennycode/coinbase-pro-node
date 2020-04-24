@@ -1,5 +1,5 @@
 import {AxiosInstance, AxiosResponse} from 'axios';
-import {ISO_8601_MS_UTC, OrderSide} from '../payload/common';
+import {ISO_8601_MS_UTC, OrderSide, Pagination} from '../payload/common';
 import {CandleBucketUtil} from './CandleBucketUtil';
 import {RESTClient} from '..';
 
@@ -274,11 +274,21 @@ export class ProductAPI {
    * Get latest trades for a product.
    *
    * @param productId - Representation for base and counter
+   * @param pagination
    */
-  async getTrades(productId: string): Promise<Trade[]> {
+  async getTrades(
+    productId: string,
+    pagination?: Pagination
+  ): Promise<{data: Trade[]; pagination: {after?: string; before?: string}}> {
     const resource = `${ProductAPI.URL.PRODUCTS}/${productId}/trades`;
-    const response = await this.apiClient.get<Trade[]>(resource);
-    return response.data;
+    const response = await this.apiClient.get<Trade[]>(resource, {params: pagination});
+    return {
+      data: response.data,
+      pagination: {
+        after: response.headers['cb-after'],
+        before: response.headers['cb-before'],
+      },
+    };
   }
 
   /**

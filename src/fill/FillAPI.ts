@@ -1,5 +1,5 @@
 import {AxiosInstance} from 'axios';
-import {ISO_8601_MS_UTC, UUID_V4, OrderSide} from '../payload/common';
+import {ISO_8601_MS_UTC, UUID_V4, OrderSide, Pagination} from '../payload/common';
 
 export enum Liquidity {
   MAKER = 'M',
@@ -29,23 +29,48 @@ export class FillAPI {
 
   constructor(private readonly apiClient: AxiosInstance) {}
 
-  // https://docs.pro.coinbase.com/#list-fills
-  // https://pro.coinbase.com/orders/filled
-  async getFillsByOrderId(orderId: string): Promise<Fill[]> {
+  /**
+   * Get a list of recent fills for a given Order of the API key's profile.
+   * @param orderId
+   * @param pagination
+   * @see https://docs.pro.coinbase.com/#list-fills
+   * @see https://pro.coinbase.com/orders/filled
+   */
+  async getFillsByOrderId(
+    orderId: string,
+    pagination?: Pagination
+  ): Promise<{data: Fill[]; pagination: {after?: string; before?: string}}> {
     const resource = FillAPI.URL.FILLS;
-    const response = await this.apiClient.get(resource, {params: {order_id: orderId}});
-    return response.data;
+    const response = await this.apiClient.get(resource, {params: {order_id: orderId, ...pagination}});
+    return {
+      data: response.data,
+      pagination: {
+        after: response.headers['cb-after'],
+        before: response.headers['cb-before'],
+      },
+    };
   }
 
-  // https://docs.pro.coinbase.com/#list-fills
-  // https://pro.coinbase.com/orders/filled
-  /* TODO: Implement "CB-BEFORE" header:
-   * The CB-BEFORE header will have this first trade id so that future requests using the cb-before parameter will
-   * fetch fills with a greater trade id (newer fills)
+  /**
+   * Get a list of recent fills for a given Product of the API key's profile.
+   *
+   * @param productId
+   * @param pagination
+   * @see https://docs.pro.coinbase.com/#list-fills
+   * @see https://pro.coinbase.com/orders/filled
    */
-  async getFillsByProductId(productId: string): Promise<Fill[]> {
+  async getFillsByProductId(
+    productId: string,
+    pagination?: Pagination
+  ): Promise<{data: Fill[]; pagination: {after?: string; before?: string}}> {
     const resource = FillAPI.URL.FILLS;
-    const response = await this.apiClient.get(resource, {params: {product_id: productId}});
-    return response.data;
+    const response = await this.apiClient.get(resource, {params: {product_id: productId, ...pagination}});
+    return {
+      data: response.data,
+      pagination: {
+        after: response.headers['cb-after'],
+        before: response.headers['cb-before'],
+      },
+    };
   }
 }
