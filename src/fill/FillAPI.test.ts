@@ -31,14 +31,14 @@ describe('FillAPI', () => {
   describe('getFillsByOrderId', () => {
     it('filters filled orders by order ID', async () => {
       const filledOrders = await global.client.rest.fill.getFillsByOrderId('0e8029ae-ba75-4e3a-9472-efc8183005c4');
-      expect(filledOrders[0].trade_id).toBe(2522525);
+      expect(filledOrders.data[0].trade_id).toBe(2522525);
     });
   });
 
   describe('getFillsByProductId', () => {
     it('filters filled orders by product ID', async () => {
       const filledOrders = await global.client.rest.fill.getFillsByProductId('BTC-EUR');
-      expect(filledOrders.length).toBe(2);
+      expect(filledOrders.data.length).toBe(2);
     });
   });
 });
