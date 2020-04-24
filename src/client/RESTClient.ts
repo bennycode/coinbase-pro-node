@@ -14,12 +14,6 @@ import axiosRetry, {isNetworkOrIdempotentRequestError} from 'axios-retry';
 import util from 'util';
 import {EventEmitter} from 'events';
 import {getErrorMessage, gotRateLimited, inAirPlaneMode} from '../error/ErrorUtil';
-import {Pagination} from '..';
-
-export interface RESTData {
-  data: any;
-  pagination: Pagination
-}
 
 export interface RESTClient {
   on(
