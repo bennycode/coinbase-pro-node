@@ -27,7 +27,7 @@
 
 \+ **new FillAPI**(`apiClient`: AxiosInstance): _[FillAPI](_fill_fillapi_.fillapi.md)_
 
-_Defined in [src/fill/FillAPI.ts:28](https://github.com/bennyn/coinbase-pro-node/blob/0085625/src/fill/FillAPI.ts#L28)_
+_Defined in [src/fill/FillAPI.ts:28](https://github.com/bennyn/coinbase-pro-node/blob/98aacfd/src/fill/FillAPI.ts#L28)_
 
 **Parameters:**
 
@@ -41,33 +41,47 @@ _Defined in [src/fill/FillAPI.ts:28](https://github.com/bennyn/coinbase-pro-node
 
 ### getFillsByOrderId
 
-▸ **getFillsByOrderId**(`orderId`: string): _Promise‹[Fill](../interfaces/_fill_fillapi_.fill.md)[]›_
+▸ **getFillsByOrderId**(`orderId`: string, `pagination?`: Pagination): _Promise‹object›_
 
-_Defined in [src/fill/FillAPI.ts:34](https://github.com/bennyn/coinbase-pro-node/blob/0085625/src/fill/FillAPI.ts#L34)_
+_Defined in [src/fill/FillAPI.ts:39](https://github.com/bennyn/coinbase-pro-node/blob/98aacfd/src/fill/FillAPI.ts#L39)_
+
+Get a list of recent fills for a given Order of the API key's profile.
+
+**`see`** https://docs.pro.coinbase.com/#list-fills
+
+**`see`** https://pro.coinbase.com/orders/filled
 
 **Parameters:**
 
-| Name      | Type   |
-| --------- | ------ |
-| `orderId` | string |
+| Name          | Type       |
+| ------------- | ---------- |
+| `orderId`     | string     |
+| `pagination?` | Pagination |
 
-**Returns:** _Promise‹[Fill](../interfaces/_fill_fillapi_.fill.md)[]›_
+**Returns:** _Promise‹object›_
 
 ---
 
 ### getFillsByProductId
 
-▸ **getFillsByProductId**(`productId`: string): _Promise‹[Fill](../interfaces/_fill_fillapi_.fill.md)[]›_
+▸ **getFillsByProductId**(`productId`: string, `pagination?`: Pagination): _Promise‹object›_
 
-_Defined in [src/fill/FillAPI.ts:46](https://github.com/bennyn/coinbase-pro-node/blob/0085625/src/fill/FillAPI.ts#L46)_
+_Defined in [src/fill/FillAPI.ts:62](https://github.com/bennyn/coinbase-pro-node/blob/98aacfd/src/fill/FillAPI.ts#L62)_
+
+Get a list of recent fills for a given Product of the API key's profile.
+
+**`see`** https://docs.pro.coinbase.com/#list-fills
+
+**`see`** https://pro.coinbase.com/orders/filled
 
 **Parameters:**
 
-| Name        | Type   |
-| ----------- | ------ |
-| `productId` | string |
+| Name          | Type       |
+| ------------- | ---------- |
+| `productId`   | string     |
+| `pagination?` | Pagination |
 
-**Returns:** _Promise‹[Fill](../interfaces/_fill_fillapi_.fill.md)[]›_
+**Returns:** _Promise‹object›_
 
 ## Object literals
 
@@ -75,10 +89,10 @@ _Defined in [src/fill/FillAPI.ts:46](https://github.com/bennyn/coinbase-pro-node
 
 ### ▪ **URL**: _object_
 
-_Defined in [src/fill/FillAPI.ts:26](https://github.com/bennyn/coinbase-pro-node/blob/0085625/src/fill/FillAPI.ts#L26)_
+_Defined in [src/fill/FillAPI.ts:26](https://github.com/bennyn/coinbase-pro-node/blob/98aacfd/src/fill/FillAPI.ts#L26)_
 
 ### FILLS
 
 • **FILLS**: _string_ = `/fills`
 
-_Defined in [src/fill/FillAPI.ts:27](https://github.com/bennyn/coinbase-pro-node/blob/0085625/src/fill/FillAPI.ts#L27)_
+_Defined in [src/fill/FillAPI.ts:27](https://github.com/bennyn/coinbase-pro-node/blob/98aacfd/src/fill/FillAPI.ts#L27)_

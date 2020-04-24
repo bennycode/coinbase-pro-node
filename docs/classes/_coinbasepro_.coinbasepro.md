@@ -28,7 +28,7 @@
 
 \+ **new CoinbasePro**(`auth`: [ClientAuthentication](../interfaces/_coinbasepro_.clientauthentication.md)): _[CoinbasePro](_coinbasepro_.coinbasepro.md)_
 
-_Defined in [src/CoinbasePro.ts:33](https://github.com/bennyn/coinbase-pro-node/blob/0085625/src/CoinbasePro.ts#L33)_
+_Defined in [src/CoinbasePro.ts:33](https://github.com/bennyn/coinbase-pro-node/blob/98aacfd/src/CoinbasePro.ts#L33)_
 
 **Parameters:**
 
@@ -50,7 +50,7 @@ _Defined in [src/CoinbasePro.ts:33](https://github.com/bennyn/coinbase-pro-node/
 
 • **rest**: _[RESTClient](_client_restclient_.restclient.md)_
 
-_Defined in [src/CoinbasePro.ts:17](https://github.com/bennyn/coinbase-pro-node/blob/0085625/src/CoinbasePro.ts#L17)_
+_Defined in [src/CoinbasePro.ts:17](https://github.com/bennyn/coinbase-pro-node/blob/98aacfd/src/CoinbasePro.ts#L17)_
 
 ---
 
@@ -58,7 +58,7 @@ _Defined in [src/CoinbasePro.ts:17](https://github.com/bennyn/coinbase-pro-node/
 
 • **url**: _[ClientConnection](../interfaces/_coinbasepro_.clientconnection.md)_
 
-_Defined in [src/CoinbasePro.ts:18](https://github.com/bennyn/coinbase-pro-node/blob/0085625/src/CoinbasePro.ts#L18)_
+_Defined in [src/CoinbasePro.ts:18](https://github.com/bennyn/coinbase-pro-node/blob/98aacfd/src/CoinbasePro.ts#L18)_
 
 ---
 
@@ -66,7 +66,7 @@ _Defined in [src/CoinbasePro.ts:18](https://github.com/bennyn/coinbase-pro-node/
 
 • **ws**: _[WebSocketClient](_client_websocketclient_.websocketclient.md)_
 
-_Defined in [src/CoinbasePro.ts:19](https://github.com/bennyn/coinbase-pro-node/blob/0085625/src/CoinbasePro.ts#L19)_
+_Defined in [src/CoinbasePro.ts:19](https://github.com/bennyn/coinbase-pro-node/blob/98aacfd/src/CoinbasePro.ts#L19)_
 
 ## Object literals
 
@@ -74,11 +74,11 @@ _Defined in [src/CoinbasePro.ts:19](https://github.com/bennyn/coinbase-pro-node/
 
 ### ▪ **SETUP**: _object_
 
-_Defined in [src/CoinbasePro.ts:21](https://github.com/bennyn/coinbase-pro-node/blob/0085625/src/CoinbasePro.ts#L21)_
+_Defined in [src/CoinbasePro.ts:21](https://github.com/bennyn/coinbase-pro-node/blob/98aacfd/src/CoinbasePro.ts#L21)_
 
 ▪ **PRODUCTION**: _object_
 
-_Defined in [src/CoinbasePro.ts:25](https://github.com/bennyn/coinbase-pro-node/blob/0085625/src/CoinbasePro.ts#L25)_
+_Defined in [src/CoinbasePro.ts:25](https://github.com/bennyn/coinbase-pro-node/blob/98aacfd/src/CoinbasePro.ts#L25)_
 
 - **REST**: _string_ = "https://api.pro.coinbase.com"
 
@@ -86,7 +86,7 @@ _Defined in [src/CoinbasePro.ts:25](https://github.com/bennyn/coinbase-pro-node/
 
 ▪ **SANDBOX**: _object_
 
-_Defined in [src/CoinbasePro.ts:29](https://github.com/bennyn/coinbase-pro-node/blob/0085625/src/CoinbasePro.ts#L29)_
+_Defined in [src/CoinbasePro.ts:29](https://github.com/bennyn/coinbase-pro-node/blob/98aacfd/src/CoinbasePro.ts#L29)_
 
 - **REST**: _string_ = "https://api-public.sandbox.pro.coinbase.com"
 
