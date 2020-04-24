@@ -1,3 +1,17 @@
+## 2.0.0 (2020-04-24)
+
+##### Documentation Changes
+
+- Use absolute url ([d3cad314](https://github.com/bennyn/coinbase-pro-node/commit/d3cad31442c7e0dcebc10c54664eaea358b60bfe))
+
+##### New Features
+
+- Support pagination ([#138](https://github.com/bennyn/coinbase-pro-node/pull/138)) ([0446a2ab](https://github.com/bennyn/coinbase-pro-node/commit/0446a2ab32784f3c1014d7e51fbd2052d5cb68b3))
+
+##### Bug Fixes
+
+- Use correct sandbox API key in demo ([fd741230](https://github.com/bennyn/coinbase-pro-node/commit/fd74123060102dc2e918da48aa2e095684349071))
+
 #### 1.8.3 (2020-04-20)
 
 ##### Chores
