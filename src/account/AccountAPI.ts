@@ -1,6 +1,5 @@
 import {AxiosInstance} from 'axios';
-import {Pagination, PAGINATION_LIMIT} from '../payload/common';
-import {RESTData} from '..';
+import {Pagination} from '../payload/common';
 
 export interface Account {
   available: string;
@@ -63,7 +62,10 @@ export class AccountAPI {
    * @param pagination - Pagination field
    * @see https://docs.pro.coinbase.com/#get-account-history
    */
-  async getAccountHistory(accountId: string, pagination: Pagination): Promise<RESTData> {
+  async getAccountHistory(
+    accountId: string,
+    pagination?: Pagination
+  ): Promise<{data: AccountHistory[]; pagination: {after?: string; before?: string}}> {
     const resource = `${AccountAPI.URL.ACCOUNTS}/${accountId}/ledger`;
     const response = await this.apiClient.get<AccountHistory[]>(resource, {params: pagination});
     return {
@@ -71,7 +73,6 @@ export class AccountAPI {
       pagination: {
         after: response.headers['cb-after'],
         before: response.headers['cb-before'],
-        limit: pagination?.limit ? pagination.limit : PAGINATION_LIMIT,
       },
     };
   }
@@ -82,12 +83,22 @@ export class AccountAPI {
    * canceled, any remaining hold is removed. For a withdraw, once it is completed, the hold is removed.
    *
    * @param accountId - Account ID belonging to the API key’s profile
+   * @param pagination
    * @see https://docs.pro.coinbase.com/#get-holds
    */
-  async getHolds(accountId: string): Promise<Hold[]> {
+  async getHolds(
+    accountId: string,
+    pagination?: Pagination
+  ): Promise<{data: Hold[]; pagination: {after?: string; before?: string}}> {
     const resource = `${AccountAPI.URL.ACCOUNTS}/${accountId}/holds`;
-    const response = await this.apiClient.get<Hold[]>(resource);
-    return response.data;
+    const response = await this.apiClient.get<Hold[]>(resource, {params: pagination});
+    return {
+      data: response.data,
+      pagination: {
+        after: response.headers['cb-after'],
+        before: response.headers['cb-before'],
+      },
+    };
   }
 
   /**
