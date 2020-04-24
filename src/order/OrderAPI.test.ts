@@ -75,8 +75,8 @@ describe('OrderAPI', () => {
 
       const openOrders = await global.client.rest.order.getOpenOrders();
 
-      expect(openOrders.length).toBe(1);
-      expect(openOrders[0].status).toBe(OrderStatus.OPEN);
+      expect(openOrders.data.length).toBe(1);
+      expect(openOrders.data[0].status).toBe(OrderStatus.OPEN);
     });
   });
 

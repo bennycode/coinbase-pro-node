@@ -1,5 +1,5 @@
 import {AxiosInstance} from 'axios';
-import {OrderSide} from '../payload/common';
+import {OrderSide, Pagination} from '../payload/common';
 
 export enum OrderType {
   LIMIT = 'limit',
@@ -73,14 +73,34 @@ export class OrderAPI {
     return response.data;
   }
 
-  // https://docs.pro.coinbase.com/#list-orders
-  async getOpenOrders(): Promise<Order[]> {
+  /**
+   * List your current open orders from the profile that the API key belongs to. Only open or un-settled
+   * orders are returned. As soon as an order is no longer open and settled, it will no longer appear
+   * in the default request.
+   *
+   * @param pagination
+   * @see https://docs.pro.coinbase.com/#list-orders
+   */
+  async getOpenOrders(
+    pagination?: Pagination
+  ): Promise<{data: Order[]; pagination: {after?: string; before?: string}}> {
     const resource = OrderAPI.URL.ORDERS;
-    const response = await this.apiClient.get(resource);
-    return response.data;
+    const response = await this.apiClient.get(resource, {params: pagination});
+    return {
+      data: response.data,
+      pagination: {
+        after: response.headers['cb-after'],
+        before: response.headers['cb-before'],
+      },
+    };
   }
 
-  // https://docs.pro.coinbase.com/#get-an-order
+  /**
+   * Get a single order by order id from the profile that the API key belongs to.
+   *
+   * @param orderId
+   * @see https://docs.pro.coinbase.com/#get-an-order
+   */
   async getOrder(orderId: string): Promise<Order | null> {
     const resource = `${OrderAPI.URL.ORDERS}/${orderId}`;
     try {
