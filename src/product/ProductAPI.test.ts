@@ -74,7 +74,7 @@ describe('ProductAPI', () => {
         .get(`${ProductAPI.URL.PRODUCTS}/${productId}/trades`)
         .reply(200, JSON.stringify(TradesBTCEUR));
       const trades = await global.client.rest.product.getTrades(productId);
-      expect(trades.length).toBe(100);
+      expect(trades.data.length).toBe(100);
     });
   });
 
