@@ -1,5 +1,5 @@
 import {Candle, CandleGranularity, ProductEvent} from '../product';
-import {CoinbasePro} from '../CoinbasePro';
+import {initClient} from './init-client';
 
 async function main(): Promise<void> {
   // 1. Base configuration
@@ -7,7 +7,7 @@ async function main(): Promise<void> {
   const granularity = CandleGranularity.ONE_MINUTE;
 
   // 2. Setup candle subscription
-  const client = new CoinbasePro();
+  const client = initClient();
 
   client.rest.on(ProductEvent.NEW_CANDLE, (productId: string, granularity: CandleGranularity, candle: Candle) => {
     console.info('Recent candle', productId, granularity, candle.openTimeString);
