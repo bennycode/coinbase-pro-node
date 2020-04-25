@@ -298,7 +298,7 @@ export class WebSocketClient extends EventEmitter {
     }).finally(() => {});
   }
 
-  private async sendMessage(message: WebSocketRequest): Promise<void> {
+  async sendMessage(message: WebSocketRequest): Promise<void> {
     if (!this.socket) {
       throw new Error(`Failed to send message of type "${message.type}": You need to connect to the WebSocket first.`);
     }

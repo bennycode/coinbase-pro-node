@@ -245,9 +245,9 @@ describe('WebSocketClient', () => {
     it('does not send a message when there is no active connection', async done => {
       const client = createWebSocketClient();
       try {
-        await client.unsubscribe({
-          name: WebSocketChannelName.HEARTBEAT,
-          product_ids: ['BTC-USD'],
+        await client.sendMessage({
+          channels: [WebSocketChannelName.HEARTBEAT],
+          type: WebSocketRequestType.UNSUBSCRIBE,
         });
         done.fail('No error has been thrown');
       } catch (error) {
