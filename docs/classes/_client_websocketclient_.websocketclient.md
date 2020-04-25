@@ -50,15 +50,23 @@
 
 ### constructor
 
-\+ **new WebSocketClient**(`baseURL`: string): _[WebSocketClient](_client_websocketclient_.websocketclient.md)_
+\+ **new WebSocketClient**(`baseURL`: string, `signRequest`: function): _[WebSocketClient](_client_websocketclient_.websocketclient.md)_
 
-_Defined in [src/client/WebSocketClient.ts:204](https://github.com/bennyn/coinbase-pro-node/blob/98aacfd/src/client/WebSocketClient.ts#L204)_
+_Defined in [src/client/WebSocketClient.ts:217](https://github.com/bennyn/coinbase-pro-node/blob/0c3235f/src/client/WebSocketClient.ts#L217)_
 
 **Parameters:**
 
-| Name      | Type   |
-| --------- | ------ |
-| `baseURL` | string |
+▪ **baseURL**: _string_
+
+▪ **signRequest**: _function_
+
+▸ (`setup`: [RequestSetup](../interfaces/_auth_requestsigner_.requestsetup.md)): _Promise‹[SignedRequest](../interfaces/_auth_requestsigner_.signedrequest.md)›_
+
+**Parameters:**
+
+| Name    | Type                                                               |
+| ------- | ------------------------------------------------------------------ |
+| `setup` | [RequestSetup](../interfaces/_auth_requestsigner_.requestsetup.md) |
 
 **Returns:** _[WebSocketClient](_client_websocketclient_.websocketclient.md)_
 
@@ -106,7 +114,7 @@ Defined in node_modules/@types/node/events.d.ts:20
 
 ▸ **connect**(`reconnectOptions?`: Options): _ReconnectingWebSocket_
 
-_Defined in [src/client/WebSocketClient.ts:218](https://github.com/bennyn/coinbase-pro-node/blob/98aacfd/src/client/WebSocketClient.ts#L218)_
+_Defined in [src/client/WebSocketClient.ts:231](https://github.com/bennyn/coinbase-pro-node/blob/0c3235f/src/client/WebSocketClient.ts#L231)_
 
 The websocket feed is publicly available, but connections to it are rate-limited to 1 per 4 seconds per IP.
 
@@ -126,7 +134,7 @@ The websocket feed is publicly available, but connections to it are rate-limited
 
 ▸ **disconnect**(`reason`: string): _void_
 
-_Defined in [src/client/WebSocketClient.ts:264](https://github.com/bennyn/coinbase-pro-node/blob/98aacfd/src/client/WebSocketClient.ts#L264)_
+_Defined in [src/client/WebSocketClient.ts:280](https://github.com/bennyn/coinbase-pro-node/blob/0c3235f/src/client/WebSocketClient.ts#L280)_
 
 **Parameters:**
 
@@ -261,7 +269,7 @@ Defined in node_modules/@types/node/events.d.ts:26
 
 _Overrides void_
 
-_Defined in [src/client/WebSocketClient.ts:177](https://github.com/bennyn/coinbase-pro-node/blob/98aacfd/src/client/WebSocketClient.ts#L177)_
+_Defined in [src/client/WebSocketClient.ts:188](https://github.com/bennyn/coinbase-pro-node/blob/0c3235f/src/client/WebSocketClient.ts#L188)_
 
 **Parameters:**
 
@@ -283,7 +291,7 @@ _Defined in [src/client/WebSocketClient.ts:177](https://github.com/bennyn/coinba
 
 _Overrides void_
 
-_Defined in [src/client/WebSocketClient.ts:179](https://github.com/bennyn/coinbase-pro-node/blob/98aacfd/src/client/WebSocketClient.ts#L179)_
+_Defined in [src/client/WebSocketClient.ts:190](https://github.com/bennyn/coinbase-pro-node/blob/0c3235f/src/client/WebSocketClient.ts#L190)_
 
 **Parameters:**
 
@@ -305,7 +313,7 @@ _Defined in [src/client/WebSocketClient.ts:179](https://github.com/bennyn/coinba
 
 _Overrides void_
 
-_Defined in [src/client/WebSocketClient.ts:181](https://github.com/bennyn/coinbase-pro-node/blob/98aacfd/src/client/WebSocketClient.ts#L181)_
+_Defined in [src/client/WebSocketClient.ts:192](https://github.com/bennyn/coinbase-pro-node/blob/0c3235f/src/client/WebSocketClient.ts#L192)_
 
 **Parameters:**
 
@@ -323,11 +331,33 @@ _Defined in [src/client/WebSocketClient.ts:181](https://github.com/bennyn/coinba
 
 **Returns:** _this_
 
+▸ **on**(`event`: [ON_MESSAGE_ERROR](../enums/_client_websocketclient_.websocketevent.md#on_message_error), `listener`: function): _this_
+
+_Overrides void_
+
+_Defined in [src/client/WebSocketClient.ts:194](https://github.com/bennyn/coinbase-pro-node/blob/0c3235f/src/client/WebSocketClient.ts#L194)_
+
+**Parameters:**
+
+▪ **event**: _[ON_MESSAGE_ERROR](../enums/_client_websocketclient_.websocketevent.md#on_message_error)_
+
+▪ **listener**: _function_
+
+▸ (`errorMessage`: [WebSocketErrorMessage](../modules/_client_websocketclient_.md#websocketerrormessage)): _void_
+
+**Parameters:**
+
+| Name           | Type                                                                                  |
+| -------------- | ------------------------------------------------------------------------------------- |
+| `errorMessage` | [WebSocketErrorMessage](../modules/_client_websocketclient_.md#websocketerrormessage) |
+
+**Returns:** _this_
+
 ▸ **on**(`event`: [ON_MESSAGE_MATCHES](../enums/_client_websocketclient_.websocketevent.md#on_message_matches), `listener`: function): _this_
 
 _Overrides void_
 
-_Defined in [src/client/WebSocketClient.ts:183](https://github.com/bennyn/coinbase-pro-node/blob/98aacfd/src/client/WebSocketClient.ts#L183)_
+_Defined in [src/client/WebSocketClient.ts:196](https://github.com/bennyn/coinbase-pro-node/blob/0c3235f/src/client/WebSocketClient.ts#L196)_
 
 **Parameters:**
 
@@ -349,7 +379,7 @@ _Defined in [src/client/WebSocketClient.ts:183](https://github.com/bennyn/coinba
 
 _Overrides void_
 
-_Defined in [src/client/WebSocketClient.ts:188](https://github.com/bennyn/coinbase-pro-node/blob/98aacfd/src/client/WebSocketClient.ts#L188)_
+_Defined in [src/client/WebSocketClient.ts:201](https://github.com/bennyn/coinbase-pro-node/blob/0c3235f/src/client/WebSocketClient.ts#L201)_
 
 **Parameters:**
 
@@ -371,7 +401,7 @@ _Defined in [src/client/WebSocketClient.ts:188](https://github.com/bennyn/coinba
 
 _Overrides void_
 
-_Defined in [src/client/WebSocketClient.ts:190](https://github.com/bennyn/coinbase-pro-node/blob/98aacfd/src/client/WebSocketClient.ts#L190)_
+_Defined in [src/client/WebSocketClient.ts:203](https://github.com/bennyn/coinbase-pro-node/blob/0c3235f/src/client/WebSocketClient.ts#L203)_
 
 **Parameters:**
 
@@ -393,7 +423,7 @@ _Defined in [src/client/WebSocketClient.ts:190](https://github.com/bennyn/coinba
 
 _Overrides void_
 
-_Defined in [src/client/WebSocketClient.ts:192](https://github.com/bennyn/coinbase-pro-node/blob/98aacfd/src/client/WebSocketClient.ts#L192)_
+_Defined in [src/client/WebSocketClient.ts:205](https://github.com/bennyn/coinbase-pro-node/blob/0c3235f/src/client/WebSocketClient.ts#L205)_
 
 **Parameters:**
 
@@ -567,18 +597,17 @@ Defined in node_modules/@types/node/events.d.ts:25
 
 ### sendMessage
 
-▸ **sendMessage**(`message`: [WebSocketRequest](../interfaces/_client_websocketclient_.websocketrequest.md), `signature?`: [SignedRequest](../interfaces/_auth_requestsigner_.signedrequest.md)): _void_
+▸ **sendMessage**(`message`: [WebSocketRequest](../interfaces/_client_websocketclient_.websocketrequest.md)): _Promise‹void›_
 
-_Defined in [src/client/WebSocketClient.ts:271](https://github.com/bennyn/coinbase-pro-node/blob/98aacfd/src/client/WebSocketClient.ts#L271)_
+_Defined in [src/client/WebSocketClient.ts:301](https://github.com/bennyn/coinbase-pro-node/blob/0c3235f/src/client/WebSocketClient.ts#L301)_
 
 **Parameters:**
 
-| Name         | Type                                                                           |
-| ------------ | ------------------------------------------------------------------------------ |
-| `message`    | [WebSocketRequest](../interfaces/_client_websocketclient_.websocketrequest.md) |
-| `signature?` | [SignedRequest](../interfaces/_auth_requestsigner_.signedrequest.md)           |
+| Name      | Type                                                                           |
+| --------- | ------------------------------------------------------------------------------ |
+| `message` | [WebSocketRequest](../interfaces/_client_websocketclient_.websocketrequest.md) |
 
-**Returns:** _void_
+**Returns:** _Promise‹void›_
 
 ---
 
@@ -604,15 +633,15 @@ Defined in node_modules/@types/node/events.d.ts:28
 
 ### subscribe
 
-▸ **subscribe**(`channels`: [WebSocketChannel](../interfaces/_client_websocketclient_.websocketchannel.md)[]): _void_
+▸ **subscribe**(`channel`: [WebSocketChannel](../interfaces/_client_websocketclient_.websocketchannel.md) | [WebSocketChannel](../interfaces/_client_websocketclient_.websocketchannel.md)[]): _void_
 
-_Defined in [src/client/WebSocketClient.ts:283](https://github.com/bennyn/coinbase-pro-node/blob/98aacfd/src/client/WebSocketClient.ts#L283)_
+_Defined in [src/client/WebSocketClient.ts:287](https://github.com/bennyn/coinbase-pro-node/blob/0c3235f/src/client/WebSocketClient.ts#L287)_
 
 **Parameters:**
 
-| Name       | Type                                                                             |
-| ---------- | -------------------------------------------------------------------------------- |
-| `channels` | [WebSocketChannel](../interfaces/_client_websocketclient_.websocketchannel.md)[] |
+| Name | Type |
+| --- | --- |
+| `channel` | [WebSocketChannel](../interfaces/_client_websocketclient_.websocketchannel.md) &#124; [WebSocketChannel](../interfaces/_client_websocketclient_.websocketchannel.md)[] |
 
 **Returns:** _void_
 
@@ -620,15 +649,15 @@ _Defined in [src/client/WebSocketClient.ts:283](https://github.com/bennyn/coinba
 
 ### unsubscribe
 
-▸ **unsubscribe**(`channels`: [WebSocketChannel](../interfaces/_client_websocketclient_.websocketchannel.md)[]): _void_
+▸ **unsubscribe**(`channel`: [WebSocketChannel](../interfaces/_client_websocketclient_.websocketchannel.md) | [WebSocketChannel](../interfaces/_client_websocketclient_.websocketchannel.md)[]): _void_
 
-_Defined in [src/client/WebSocketClient.ts:290](https://github.com/bennyn/coinbase-pro-node/blob/98aacfd/src/client/WebSocketClient.ts#L290)_
+_Defined in [src/client/WebSocketClient.ts:294](https://github.com/bennyn/coinbase-pro-node/blob/0c3235f/src/client/WebSocketClient.ts#L294)_
 
 **Parameters:**
 
-| Name       | Type                                                                             |
-| ---------- | -------------------------------------------------------------------------------- |
-| `channels` | [WebSocketChannel](../interfaces/_client_websocketclient_.websocketchannel.md)[] |
+| Name | Type |
+| --- | --- |
+| `channel` | [WebSocketChannel](../interfaces/_client_websocketclient_.websocketchannel.md) &#124; [WebSocketChannel](../interfaces/_client_websocketclient_.websocketchannel.md)[] |
 
 **Returns:** _void_
 
@@ -659,28 +688,28 @@ Defined in node_modules/@types/node/events.d.ts:17
 
 ### ▪ **CLOSE_EVENT_CODE**: _object_
 
-_Defined in [src/client/WebSocketClient.ts:196](https://github.com/bennyn/coinbase-pro-node/blob/98aacfd/src/client/WebSocketClient.ts#L196)_
+_Defined in [src/client/WebSocketClient.ts:209](https://github.com/bennyn/coinbase-pro-node/blob/0c3235f/src/client/WebSocketClient.ts#L209)_
 
 ### GOING_AWAY
 
 • **GOING_AWAY**: _number_ = 1001
 
-_Defined in [src/client/WebSocketClient.ts:197](https://github.com/bennyn/coinbase-pro-node/blob/98aacfd/src/client/WebSocketClient.ts#L197)_
+_Defined in [src/client/WebSocketClient.ts:210](https://github.com/bennyn/coinbase-pro-node/blob/0c3235f/src/client/WebSocketClient.ts#L210)_
 
 ### NORMAL_CLOSURE
 
 • **NORMAL_CLOSURE**: _number_ = 1000
 
-_Defined in [src/client/WebSocketClient.ts:198](https://github.com/bennyn/coinbase-pro-node/blob/98aacfd/src/client/WebSocketClient.ts#L198)_
+_Defined in [src/client/WebSocketClient.ts:211](https://github.com/bennyn/coinbase-pro-node/blob/0c3235f/src/client/WebSocketClient.ts#L211)_
 
 ### PROTOCOL_ERROR
 
 • **PROTOCOL_ERROR**: _number_ = 1002
 
-_Defined in [src/client/WebSocketClient.ts:199](https://github.com/bennyn/coinbase-pro-node/blob/98aacfd/src/client/WebSocketClient.ts#L199)_
+_Defined in [src/client/WebSocketClient.ts:212](https://github.com/bennyn/coinbase-pro-node/blob/0c3235f/src/client/WebSocketClient.ts#L212)_
 
 ### UNSUPPORTED_DATA
 
 • **UNSUPPORTED_DATA**: _number_ = 1003
 
-_Defined in [src/client/WebSocketClient.ts:200](https://github.com/bennyn/coinbase-pro-node/blob/98aacfd/src/client/WebSocketClient.ts#L200)_
+_Defined in [src/client/WebSocketClient.ts:213](https://github.com/bennyn/coinbase-pro-node/blob/0c3235f/src/client/WebSocketClient.ts#L213)_

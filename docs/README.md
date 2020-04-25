@@ -17,8 +17,9 @@ This project was created to continue an active **Coinbase Pro API** after Coinba
 - **Typed.** Source code is 100% TypeScript. No need to install external typings.
 - **Tested.** Code coverage is 100%. No surprises when using "coinbase-pro-node".
 - **Convenient.** Request throttling is built-in. Don't worry about rate limiting.
-- **Comfortable.** More than an API client. You will get extras like [candle watching](https://github.com/bennyn/coinbase-pro-node/blob/master/src/demo-watch-candles.ts).
+- **Comfortable.** More than an API client. You will get extras like [candle watching](https://github.com/bennyn/coinbase-pro-node/blob/master/src/demo/watch-candles.ts).
 - **Maintained.** Automated security updates. No threats from outdated dependencies.
+- **Documented.** Get started with [demo scripts][3] and [generated documentation][4].
 - **Modern.** HTTP client with Promise API. Don't lose yourself in callback hell.
 - **Robust.** WebSocket reconnection is built-in. No problems if your Wi-Fi is gone.
 
@@ -36,12 +37,30 @@ npm install coinbase-pro-node
 yarn add coinbase-pro-node
 ```
 
-## Usage
+## Setup
 
-**Node.js setup**
+**JavaScript**
 
 ```javascript
 const {CoinbasePro} = require('coinbase-pro-node');
+const client = new CoinbasePro();
+```
+
+**TypeScript**
+
+```typescript
+import {CoinbasePro} from 'coinbase-pro-node';
+const client = new CoinbasePro();
+```
+
+## Usage
+
+The [demo section][3] provides many examples on how to use "coinbase-pro-node". There is also an automatically generated [API documentation][4]. For a quick start, here is a simple example for a REST request:
+
+**REST Example**
+
+```typescript
+import {CoinbasePro} from 'coinbase-pro-node';
 
 // API Keys can be generated here:
 // https://pro.coinbase.com/profile/api
@@ -56,71 +75,30 @@ const auth = {
 };
 
 const client = new CoinbasePro(auth);
+
+client.rest.account.listAccounts().then(accounts => {
+  const message = `You can trade "${accounts.length}" different pairs.`;
+  console.log(message);
+});
 ```
 
-## REST Example
+**WebSocket Examples**
 
-**List accounts**
+If you want to listen to WebSocket messages, have a look at these demo scripts:
 
-```javascript
-const tradingAccounts = await client.rest.account.listAccounts();
-const message = `You can trade "${tradingAccounts.length}" different pairs.`;
-console.log(message);
-```
+- [Subscribe to "ticker" channel (real-time price updates)](https://github.com/bennyn/coinbase-pro-node/blob/master/src/demo/websocket-ticker.ts)
+- [Subscribe to authenticated "user" channel](https://github.com/bennyn/coinbase-pro-node/blob/master/src/demo/websocket-user.ts)
 
-## WebSocket Example
+**Real World Examples**
 
-**Subscribe to tickers**
-
-```javascript
-const {CoinbasePro, WebSocketChannelName, WebSocketEvent} = require('coinbase-pro-node');
-
-// 1. Setup Coinbase Pro client
-const client = new CoinbasePro();
-
-// 2. Setup WebSocket channel info
-const channel = {
-  name: WebSocketChannelName.TICKER,
-  product_ids: ['BTC-USD', 'ETH-EUR'],
-};
-
-// 3. Wait for open WebSocket to send messages
-client.ws.on(WebSocketEvent.ON_OPEN, () => {
-  // 7. Subscribe to WebSocket channel
-  client.ws.subscribe([channel]);
-});
-
-// 4. Listen to WebSocket subscription updates
-client.ws.on(WebSocketEvent.ON_SUBSCRIPTION_UPDATE, subscriptions => {
-  // When there are no more subscriptions...
-  if (subscriptions.channels.length === 0) {
-    // 10. Disconnect WebSocket (and end program)
-    client.ws.disconnect();
-  }
-});
-
-// 5. Listen to WebSocket channel updates
-client.ws.on(WebSocketEvent.ON_MESSAGE_TICKER, tickerMessage => {
-  // 8. Receive message from WebSocket channel
-  console.info(`Received message of type "${tickerMessage.type}".`, tickerMessage);
-  // 9. Unsubscribe from WebSocket channel
-  client.ws.unsubscribe([
-    {
-      name: WebSocketChannelName.TICKER,
-      product_ids: [tickerMessage.product_id],
-    },
-  ]);
-});
-
-// 6. Connect to WebSocket
-client.ws.connect({debug: true});
-```
+You can checkout [GitHub's dependency graph][6] to see who is using "coinbase-pro-node".
 
 ## Resources
 
 - [Coinbase Pro API Reference][2]
-- [Coinbase Pro API][3]
-- [Coinbase Pro Trading Toolkit](https://github.com/coinbase/coinbase-pro-trading-toolkit)
+- [coinbase-pro-node API docs][4]
+- [coinbase-pro-node npm page][5]
+- [coinbase-pro-node users][6]
 
 ## Contributing
 
@@ -147,6 +125,9 @@ Give a ⭐️ if this project helped you!
 
 [1]: https://pro.coinbase.com/
 [2]: https://docs.pro.coinbase.com/
-[3]: https://github.com/coinbase/coinbase-pro-node
+[3]: https://github.com/bennyn/coinbase-pro-node/tree/master/src/demo
+[4]: https://benny.work/coinbase-pro-node
+[5]: https://www.npmjs.com/package/coinbase-pro-node
+[6]: https://github.com/bennyn/coinbase-pro-node/network/dependents
 [stack_exchange_bennyn_badge]: https://stackexchange.com/users/flair/203782.png?theme=default
 [stack_exchange_bennyn_url]: https://stackexchange.com/users/203782/benny-neugebauer?tab=accounts

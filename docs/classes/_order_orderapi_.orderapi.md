@@ -29,7 +29,7 @@
 
 \+ **new OrderAPI**(`apiClient`: AxiosInstance): _[OrderAPI](_order_orderapi_.orderapi.md)_
 
-_Defined in [src/order/OrderAPI.ts:63](https://github.com/bennyn/coinbase-pro-node/blob/98aacfd/src/order/OrderAPI.ts#L63)_
+_Defined in [src/order/OrderAPI.ts:63](https://github.com/bennyn/coinbase-pro-node/blob/0c3235f/src/order/OrderAPI.ts#L63)_
 
 **Parameters:**
 
@@ -45,7 +45,7 @@ _Defined in [src/order/OrderAPI.ts:63](https://github.com/bennyn/coinbase-pro-no
 
 ▸ **cancelOpenOrders**(`productId?`: undefined | string): _Promise‹string[]›_
 
-_Defined in [src/order/OrderAPI.ts:68](https://github.com/bennyn/coinbase-pro-node/blob/98aacfd/src/order/OrderAPI.ts#L68)_
+_Defined in [src/order/OrderAPI.ts:68](https://github.com/bennyn/coinbase-pro-node/blob/0c3235f/src/order/OrderAPI.ts#L68)_
 
 **Parameters:**
 
@@ -61,7 +61,7 @@ _Defined in [src/order/OrderAPI.ts:68](https://github.com/bennyn/coinbase-pro-no
 
 ▸ **getOpenOrders**(`pagination?`: Pagination): _Promise‹object›_
 
-_Defined in [src/order/OrderAPI.ts:84](https://github.com/bennyn/coinbase-pro-node/blob/98aacfd/src/order/OrderAPI.ts#L84)_
+_Defined in [src/order/OrderAPI.ts:84](https://github.com/bennyn/coinbase-pro-node/blob/0c3235f/src/order/OrderAPI.ts#L84)_
 
 List your current open orders from the profile that the API key belongs to. Only open or un-settled orders are returned. As soon as an order is no longer open and settled, it will no longer appear in the default request.
 
@@ -81,7 +81,7 @@ List your current open orders from the profile that the API key belongs to. Only
 
 ▸ **getOrder**(`orderId`: string): _Promise‹[Order](../interfaces/_order_orderapi_.order.md) | null›_
 
-_Defined in [src/order/OrderAPI.ts:104](https://github.com/bennyn/coinbase-pro-node/blob/98aacfd/src/order/OrderAPI.ts#L104)_
+_Defined in [src/order/OrderAPI.ts:104](https://github.com/bennyn/coinbase-pro-node/blob/0c3235f/src/order/OrderAPI.ts#L104)_
 
 Get a single order by order id from the profile that the API key belongs to.
 
@@ -101,7 +101,7 @@ Get a single order by order id from the profile that the API key belongs to.
 
 ▸ **placeOrder**(`newOrder`: [NewOrder](../interfaces/_order_orderapi_.neworder.md)): _Promise‹[Order](../interfaces/_order_orderapi_.order.md)›_
 
-_Defined in [src/order/OrderAPI.ts:123](https://github.com/bennyn/coinbase-pro-node/blob/98aacfd/src/order/OrderAPI.ts#L123)_
+_Defined in [src/order/OrderAPI.ts:123](https://github.com/bennyn/coinbase-pro-node/blob/0c3235f/src/order/OrderAPI.ts#L123)_
 
 **Parameters:**
 
@@ -117,10 +117,10 @@ _Defined in [src/order/OrderAPI.ts:123](https://github.com/bennyn/coinbase-pro-n
 
 ### ▪ **URL**: _object_
 
-_Defined in [src/order/OrderAPI.ts:61](https://github.com/bennyn/coinbase-pro-node/blob/98aacfd/src/order/OrderAPI.ts#L61)_
+_Defined in [src/order/OrderAPI.ts:61](https://github.com/bennyn/coinbase-pro-node/blob/0c3235f/src/order/OrderAPI.ts#L61)_
 
 ### ORDERS
 
 • **ORDERS**: _string_ = `/orders`
 
-_Defined in [src/order/OrderAPI.ts:62](https://github.com/bennyn/coinbase-pro-node/blob/98aacfd/src/order/OrderAPI.ts#L62)_
+_Defined in [src/order/OrderAPI.ts:62](https://github.com/bennyn/coinbase-pro-node/blob/0c3235f/src/order/OrderAPI.ts#L62)_
