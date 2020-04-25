@@ -18,10 +18,10 @@ describe('RESTClient', () => {
 
   describe('defaults', () => {
     it('supports overriding the timeout limit', () => {
-      const client = createRESTClient();
-      expect(client.defaults.timeout).toBe(5000);
-      client.defaults.timeout = 2500;
-      expect(client.defaults.timeout).toBe(2500);
+      const rest = createRESTClient();
+      expect(rest.defaults.timeout).toBe(5000);
+      rest.defaults.timeout = 2500;
+      expect(rest.defaults.timeout).toBe(2500);
     });
   });
 
@@ -33,16 +33,16 @@ describe('RESTClient', () => {
     });
 
     it('supports custom HTTP interceptors', async () => {
-      const client = createRESTClient();
+      const rest = createRESTClient();
 
       const onRequest = jasmine.createSpy('onRequest').and.callFake((config: AxiosRequestConfig) => config);
 
-      const myInterceptor = client.interceptors.request.use(onRequest);
-      await client.account.listAccounts();
+      const myInterceptor = rest.interceptors.request.use(onRequest);
+      await rest.account.listAccounts();
       expect(onRequest).toHaveBeenCalledTimes(1);
 
-      client.interceptors.request.eject(myInterceptor);
-      await client.account.listAccounts();
+      rest.interceptors.request.eject(myInterceptor);
+      await rest.account.listAccounts();
       expect(onRequest).toHaveBeenCalledTimes(1);
     });
   });
@@ -61,8 +61,8 @@ describe('RESTClient', () => {
 
       nock(global.REST_URL).get(AccountAPI.URL.ACCOUNTS).query(true).reply(200, JSON.stringify(listAccounts));
 
-      const client = createRESTClient();
-      const promise = client.account.listAccounts();
+      const rest = createRESTClient();
+      const promise = rest.account.listAccounts();
       await expectAsync(promise).toBeResolved();
     });
 
@@ -71,8 +71,8 @@ describe('RESTClient', () => {
 
       nock(global.REST_URL).get(AccountAPI.URL.ACCOUNTS).query(true).reply(200, JSON.stringify(listAccounts));
 
-      const client = createRESTClient();
-      const promise = client.account.listAccounts();
+      const rest = createRESTClient();
+      const promise = rest.account.listAccounts();
       await expectAsync(promise).toBeResolved();
     });
   });

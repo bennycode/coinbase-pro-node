@@ -49,9 +49,9 @@ describe('WebSocketClient', () => {
 
   describe('constructor', () => {
     it('it signals an event when the WebSocket connection is established', async done => {
-      const client = createWebSocketClient();
-      client.on(WebSocketEvent.ON_OPEN, () => done());
-      client.connect();
+      const ws = createWebSocketClient();
+      ws.on(WebSocketEvent.ON_OPEN, () => done());
+      ws.connect();
     });
   });
 
@@ -76,30 +76,30 @@ describe('WebSocketClient', () => {
         });
       });
 
-      const client = createWebSocketClient();
+      const ws = createWebSocketClient();
       const channel = {
         name: WebSocketChannelName.TICKER,
         product_ids: ['BTC-USD'],
       };
 
-      client.on(WebSocketEvent.ON_MESSAGE_TICKER, tickerMessage => {
+      ws.on(WebSocketEvent.ON_MESSAGE_TICKER, tickerMessage => {
         expect(tickerMessage.trade_id).toBe(3526965);
-        client.unsubscribe(channel);
+        ws.unsubscribe(channel);
       });
 
-      client.on(WebSocketEvent.ON_SUBSCRIPTION_UPDATE, subscriptions => {
+      ws.on(WebSocketEvent.ON_SUBSCRIPTION_UPDATE, subscriptions => {
         if (subscriptions.channels.length === 0) {
-          client.disconnect();
+          ws.disconnect();
         }
       });
 
-      client.on(WebSocketEvent.ON_CLOSE, () => {
+      ws.on(WebSocketEvent.ON_CLOSE, () => {
         done();
       });
 
-      client.on(WebSocketEvent.ON_OPEN, () => client.subscribe(channel));
+      ws.on(WebSocketEvent.ON_OPEN, () => ws.subscribe(channel));
 
-      client.connect();
+      ws.connect();
     });
 
     it('receives typed messages from "matches" channel', async done => {
@@ -122,7 +122,7 @@ describe('WebSocketClient', () => {
         });
       });
 
-      const client = createWebSocketClient();
+      const ws = createWebSocketClient();
       const channels = [
         {
           name: WebSocketChannelName.MATCHES,
@@ -130,24 +130,24 @@ describe('WebSocketClient', () => {
         },
       ];
 
-      client.on(WebSocketEvent.ON_MESSAGE_MATCHES, message => {
+      ws.on(WebSocketEvent.ON_MESSAGE_MATCHES, message => {
         expect(message.trade_id).toBe(9713921);
-        client.unsubscribe(channels);
+        ws.unsubscribe(channels);
       });
 
-      client.on(WebSocketEvent.ON_SUBSCRIPTION_UPDATE, subscriptions => {
+      ws.on(WebSocketEvent.ON_SUBSCRIPTION_UPDATE, subscriptions => {
         if (subscriptions.channels.length === 0) {
-          client.disconnect();
+          ws.disconnect();
         }
       });
 
-      client.on(WebSocketEvent.ON_CLOSE, () => {
+      ws.on(WebSocketEvent.ON_CLOSE, () => {
         done();
       });
 
-      client.on(WebSocketEvent.ON_OPEN, () => client.subscribe(channels));
+      ws.on(WebSocketEvent.ON_OPEN, () => ws.subscribe(channels));
 
-      client.connect();
+      ws.connect();
     });
 
     it('receives typed error messages', async done => {
@@ -169,37 +169,37 @@ describe('WebSocketClient', () => {
         });
       });
 
-      const client = createWebSocketClient();
+      const ws = createWebSocketClient();
 
-      client.on(WebSocketEvent.ON_MESSAGE_ERROR, errorMessage => {
+      ws.on(WebSocketEvent.ON_MESSAGE_ERROR, errorMessage => {
         expect(errorMessage.type).toBe(WebSocketResponseType.ERROR);
         done();
       });
 
-      client.on(WebSocketEvent.ON_OPEN, () => {
-        client.subscribe({
+      ws.on(WebSocketEvent.ON_OPEN, () => {
+        ws.subscribe({
           name: WebSocketChannelName.USER,
           product_ids: ['BTC-USD'],
         });
       });
 
-      client.connect();
+      ws.connect();
     });
   });
 
   describe('connect', () => {
     it('attaches an error listener', async done => {
       const invalidUrl = 'ws://localhost:50001';
-      const client = createWebSocketClient(invalidUrl);
-      client.on(WebSocketEvent.ON_ERROR, done);
-      client.connect();
+      const ws = createWebSocketClient(invalidUrl);
+      ws.on(WebSocketEvent.ON_ERROR, done);
+      ws.connect();
     });
 
     it('throws an error when trying to overwrite an existing connection', async done => {
-      const client = createWebSocketClient();
-      client.connect();
+      const ws = createWebSocketClient();
+      ws.connect();
       try {
-        client.connect();
+        ws.connect();
         done.fail('No error has been thrown');
       } catch (error) {
         done();
@@ -207,45 +207,45 @@ describe('WebSocketClient', () => {
     });
 
     it('supports custom reconnect options', async () => {
-      const client = createWebSocketClient();
-      const socket = client.connect({startClosed: true});
+      const ws = createWebSocketClient();
+      const socket = ws.connect({startClosed: true});
       expect(socket.readyState).toBe(ReconnectingWebSocket.CLOSED);
     });
   });
 
   describe('disconnect', () => {
     it('does not do anything if there is no existing connection', () => {
-      const client = createWebSocketClient();
+      const ws = createWebSocketClient();
       const onClose = jasmine.createSpy('onClose');
 
-      client.on(WebSocketEvent.ON_CLOSE, () => {
+      ws.on(WebSocketEvent.ON_CLOSE, () => {
         onClose();
       });
 
-      client.disconnect();
+      ws.disconnect();
       expect(onClose).not.toHaveBeenCalled();
     });
 
     it('emits an event when an existing connection gets closed', async done => {
-      const client = createWebSocketClient();
+      const ws = createWebSocketClient();
 
-      client.on(WebSocketEvent.ON_CLOSE, () => {
+      ws.on(WebSocketEvent.ON_CLOSE, () => {
         done();
       });
 
-      client.on(WebSocketEvent.ON_OPEN, () => {
-        client.disconnect();
+      ws.on(WebSocketEvent.ON_OPEN, () => {
+        ws.disconnect();
       });
 
-      client.connect();
+      ws.connect();
     });
   });
 
   describe('sendMessage', () => {
     it('does not send a message when there is no active connection', async done => {
-      const client = createWebSocketClient();
+      const ws = createWebSocketClient();
       try {
-        await client.sendMessage({
+        await ws.sendMessage({
           channels: [WebSocketChannelName.HEARTBEAT],
           type: WebSocketRequestType.UNSUBSCRIBE,
         });
