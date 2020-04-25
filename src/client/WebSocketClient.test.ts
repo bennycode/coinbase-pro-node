@@ -67,17 +67,15 @@ describe('WebSocketClient', () => {
         });
       });
 
-      const productIds = ['BTC-USD'];
       const client = new WebSocketClient(WEBSOCKET_URL);
+      const channel = {
+        name: WebSocketChannelName.TICKER,
+        product_ids: ['BTC-USD'],
+      };
 
       client.on(WebSocketEvent.ON_MESSAGE_TICKER, tickerMessage => {
         expect(tickerMessage.trade_id).toBe(3526965);
-        client.unsubscribe([
-          {
-            name: WebSocketChannelName.TICKER,
-            product_ids: productIds,
-          },
-        ]);
+        client.unsubscribe(channel);
       });
 
       client.on(WebSocketEvent.ON_MESSAGE, event => {
@@ -86,14 +84,9 @@ describe('WebSocketClient', () => {
         }
       });
 
-      client.connect();
+      client.on(WebSocketEvent.ON_OPEN, () => client.subscribe(channel));
 
-      client.subscribe([
-        {
-          name: WebSocketChannelName.TICKER,
-          product_ids: productIds,
-        },
-      ]);
+      client.connect();
     });
 
     it('receives typed messages from "matches" channel', async done => {
@@ -116,17 +109,17 @@ describe('WebSocketClient', () => {
         });
       });
 
-      const productIds = ['BTC-USD'];
       const client = new WebSocketClient(WEBSOCKET_URL);
+      const channels = [
+        {
+          name: WebSocketChannelName.MATCHES,
+          product_ids: ['BTC-USD'],
+        },
+      ];
 
       client.on(WebSocketEvent.ON_MESSAGE_MATCHES, message => {
         expect(message.trade_id).toBe(9713921);
-        client.unsubscribe([
-          {
-            name: WebSocketChannelName.MATCHES,
-            product_ids: productIds,
-          },
-        ]);
+        client.unsubscribe(channels);
       });
 
       client.on(WebSocketEvent.ON_MESSAGE, event => {
@@ -135,14 +128,45 @@ describe('WebSocketClient', () => {
         }
       });
 
-      client.connect();
+      client.on(WebSocketEvent.ON_OPEN, () => client.subscribe(channels));
 
-      client.subscribe([
-        {
-          name: WebSocketChannelName.MATCHES,
-          product_ids: productIds,
-        },
-      ]);
+      client.connect();
+    });
+
+    it('receives typed error messages', async done => {
+      server.on('connection', ws => {
+        ws.on('message', (message: string) => {
+          const request = JSON.parse(message);
+
+          if (request.type === WebSocketRequestType.SUBSCRIBE) {
+            const response = JSON.stringify({
+              message: 'Failed to subscribe',
+              reason: 'user channel requires authentication',
+              type: WebSocketResponseType.ERROR,
+            });
+
+            server.clients.forEach(client => {
+              client.send(response);
+            });
+          }
+        });
+      });
+
+      const client = new WebSocketClient(WEBSOCKET_URL);
+
+      client.on(WebSocketEvent.ON_MESSAGE_ERROR, errorMessage => {
+        expect(errorMessage.type).toBe(WebSocketResponseType.ERROR);
+        done();
+      });
+
+      client.on(WebSocketEvent.ON_OPEN, () => {
+        client.subscribe({
+          name: WebSocketChannelName.USER,
+          product_ids: ['BTC-USD'],
+        });
+      });
+
+      client.connect();
     });
   });
 

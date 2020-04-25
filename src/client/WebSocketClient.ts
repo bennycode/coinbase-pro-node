@@ -123,7 +123,30 @@ export enum WebSocketResponseType {
 export type WebSocketResponse = {type: WebSocketResponseType} & WebSocketMessage;
 
 // Not exported because it will become "WebSocketResponse" once complete
-type WebSocketMessage = Record<string, string | number | boolean> | WebSocketTickerMessage | WebSocketMatchMessage;
+type WebSocketMessage =
+  | Record<string, string | number | boolean>
+  | WebSocketTickerMessage
+  | WebSocketMatchMessage
+  | WebSocketErrorMessage;
+
+export type WebSocketErrorMessage = {
+  type: WebSocketResponseType.ERROR;
+  message: string;
+  reason: string;
+};
+
+export type WebSocketMatchMessage = {
+  maker_order_id: UUID_V4;
+  price: string;
+  product_id: string;
+  sequence: number;
+  side: OrderSide;
+  size: string;
+  taker_order_id: UUID_V4;
+  time: ISO_8601_MS_UTC;
+  trade_id: number;
+  type: WebSocketResponseType.FULL_MATCH;
+};
 
 export type WebSocketTickerMessage = {
   best_ask: string;
@@ -143,19 +166,6 @@ export type WebSocketTickerMessage = {
   volume_30d: string;
 };
 
-export type WebSocketMatchMessage = {
-  maker_order_id: UUID_V4;
-  price: string;
-  product_id: string;
-  sequence: number;
-  side: OrderSide;
-  size: string;
-  taker_order_id: UUID_V4;
-  time: ISO_8601_MS_UTC;
-  trade_id: number;
-  type: WebSocketResponseType.FULL_MATCH;
-};
-
 export type WebSocketLastMatchMessage = Omit<WebSocketMatchMessage, 'type'> & {type: WebSocketResponseType.LAST_MATCH};
 
 export type WebSocketSubscription = {
@@ -167,6 +177,7 @@ export enum WebSocketEvent {
   ON_CLOSE = 'WebSocketEvent.ON_CLOSE',
   ON_ERROR = 'WebSocketEvent.ON_ERROR',
   ON_MESSAGE = 'WebSocketEvent.ON_MESSAGE',
+  ON_MESSAGE_ERROR = 'WebSocketEvent.ON_MESSAGE_ERROR',
   ON_MESSAGE_MATCHES = 'WebSocketEvent.ON_MESSAGE_MATCHES',
   ON_MESSAGE_TICKER = 'WebSocketEvent.ON_MESSAGE_TICKER',
   ON_OPEN = 'WebSocketEvent.ON_OPEN',
@@ -179,6 +190,8 @@ export interface WebSocketClient {
   on(event: WebSocketEvent.ON_ERROR, listener: (event: ErrorEvent) => void): this;
 
   on(event: WebSocketEvent.ON_MESSAGE, listener: (response: WebSocketResponse) => void): this;
+
+  on(event: WebSocketEvent.ON_MESSAGE_ERROR, listener: (errorMessage: WebSocketErrorMessage) => void): this;
 
   on(
     event: WebSocketEvent.ON_MESSAGE_MATCHES,
@@ -241,6 +254,9 @@ export class WebSocketClient extends EventEmitter {
 
       // Emit specific event
       switch (response.type) {
+        case WebSocketResponseType.ERROR:
+          this.emit(WebSocketEvent.ON_MESSAGE_ERROR, response);
+          break;
         case WebSocketResponseType.SUBSCRIPTIONS:
           this.emit(WebSocketEvent.ON_SUBSCRIPTION_UPDATE, response);
           break;
@@ -280,16 +296,16 @@ export class WebSocketClient extends EventEmitter {
     this.socket.send(JSON.stringify(message));
   }
 
-  subscribe(channels: WebSocketChannel[]): void {
+  subscribe(channel: WebSocketChannel | WebSocketChannel[]): void {
     this.sendMessage({
-      channels,
+      channels: Array.isArray(channel) ? channel : [channel],
       type: WebSocketRequestType.SUBSCRIBE,
     });
   }
 
-  unsubscribe(channels: WebSocketChannel[]): void {
+  unsubscribe(channel: WebSocketChannel | WebSocketChannel[]): void {
     this.sendMessage({
-      channels,
+      channels: Array.isArray(channel) ? channel : [channel],
       type: WebSocketRequestType.UNSUBSCRIBE,
     });
   }
