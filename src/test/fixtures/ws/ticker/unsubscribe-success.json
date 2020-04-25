@@ -1,5 +1,5 @@
 {
   "type": "subscriptions",
   "product_ids": [],
-  "channels": ["ticker"]
+  "channels": []
 }

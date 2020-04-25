@@ -78,10 +78,14 @@ describe('WebSocketClient', () => {
         client.unsubscribe(channel);
       });
 
-      client.on(WebSocketEvent.ON_MESSAGE, event => {
-        if (event.type === WebSocketResponseType.SUBSCRIPTIONS) {
-          done();
+      client.on(WebSocketEvent.ON_SUBSCRIPTION_UPDATE, subscriptions => {
+        if (subscriptions.channels.length === 0) {
+          client.disconnect();
         }
+      });
+
+      client.on(WebSocketEvent.ON_CLOSE, () => {
+        done();
       });
 
       client.on(WebSocketEvent.ON_OPEN, () => client.subscribe(channel));
@@ -122,10 +126,14 @@ describe('WebSocketClient', () => {
         client.unsubscribe(channels);
       });
 
-      client.on(WebSocketEvent.ON_MESSAGE, event => {
-        if (event.type === WebSocketResponseType.SUBSCRIPTIONS) {
-          done();
+      client.on(WebSocketEvent.ON_SUBSCRIPTION_UPDATE, subscriptions => {
+        if (subscriptions.channels.length === 0) {
+          client.disconnect();
         }
+      });
+
+      client.on(WebSocketEvent.ON_CLOSE, () => {
+        done();
       });
 
       client.on(WebSocketEvent.ON_OPEN, () => client.subscribe(channels));
