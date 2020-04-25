@@ -1,8 +1,8 @@
 import {EventEmitter} from 'events';
 import ReconnectingWebSocket, {Event, ErrorEvent, Options, CloseEvent} from 'reconnecting-websocket';
 import WebSocket from 'ws';
-import {SignedRequest} from '../auth/RequestSigner';
-import {OrderSide, ISO_8601_MS_UTC, UUID_V4} from '..';
+import {RequestSetup, SignedRequest} from '../auth/RequestSigner';
+import {OrderSide, ISO_8601_MS_UTC, UUID_V4, UserAPI} from '..';
 
 export interface WebSocketChannel {
   name: WebSocketChannelName;
@@ -216,7 +216,7 @@ export class WebSocketClient extends EventEmitter {
   private readonly baseURL: string;
   private socket: ReconnectingWebSocket | undefined;
 
-  constructor(baseURL: string) {
+  constructor(baseURL: string, private readonly signRequest: (setup: RequestSetup) => Promise<SignedRequest>) {
     super();
     this.baseURL = baseURL;
   }
@@ -284,30 +284,39 @@ export class WebSocketClient extends EventEmitter {
     }
   }
 
-  sendMessage(message: WebSocketRequest, signature?: SignedRequest): void {
-    if (!this.socket) {
-      throw new Error(`Failed to send message of type "${message.type}": You need to connect to the WebSocket first.`);
-    }
-
-    if (signature) {
-      Object.assign(message, signature);
-    }
-
-    this.socket.send(JSON.stringify(message));
-  }
-
   subscribe(channel: WebSocketChannel | WebSocketChannel[]): void {
     this.sendMessage({
       channels: Array.isArray(channel) ? channel : [channel],
       type: WebSocketRequestType.SUBSCRIBE,
-    });
+    }).finally(() => {});
   }
 
   unsubscribe(channel: WebSocketChannel | WebSocketChannel[]): void {
     this.sendMessage({
       channels: Array.isArray(channel) ? channel : [channel],
       type: WebSocketRequestType.UNSUBSCRIBE,
+    }).finally(() => {});
+  }
+
+  private async sendMessage(message: WebSocketRequest): Promise<void> {
+    if (!this.socket) {
+      throw new Error(`Failed to send message of type "${message.type}": You need to connect to the WebSocket first.`);
+    }
+
+    /**
+     * Authentication will result in a couple of benefits:
+     * 1. Messages where you're one of the parties are expanded and have more useful fields
+     * 2. You will receive private messages, such as lifecycle information about stop orders you placed
+     * @see https://docs.pro.coinbase.com/#subscribe
+     */
+    const signature = await this.signRequest({
+      httpMethod: 'GET',
+      payload: '',
+      requestPath: `${UserAPI.URL.USERS}/self/verify`,
     });
+    Object.assign(message, signature);
+
+    this.socket.send(JSON.stringify(message));
   }
 
   private mergeOptions(reconnectOptions?: Options): Options {
