@@ -1,3 +1,26 @@
+### 2.1.0 (2020-04-25)
+
+##### Chores
+
+- Use shorter names for test clients ([56f302db](https://github.com/bennyn/coinbase-pro-node/commit/56f302dbc0e74501bf162523e32a8277accda508))
+- Move demos into separate directory ([#140](https://github.com/bennyn/coinbase-pro-node/pull/140)) ([f5c526d5](https://github.com/bennyn/coinbase-pro-node/commit/f5c526d5db888c9cfdf195ec5d17a4eb3939f8c4))
+
+##### Documentation Changes
+
+- Link demo scripts ([773469f1](https://github.com/bennyn/coinbase-pro-node/commit/773469f15be0ce5560cd975027626a1012465cef))
+- Link dependents ([9f257763](https://github.com/bennyn/coinbase-pro-node/commit/9f2577638e8c2dc526f5917e7b304b58d54ab90b))
+- Use relative paths for HTML pages ([3530cec1](https://github.com/bennyn/coinbase-pro-node/commit/3530cec19bd8d2cef7287ff219c8e53f09834fe5))
+
+##### New Features
+
+- Authenticate when subscribing to WebSocket feed ([#142](https://github.com/bennyn/coinbase-pro-node/pull/142)) ([17e2ad59](https://github.com/bennyn/coinbase-pro-node/commit/17e2ad59dd589816d9c940d0c615ef2088d137bc))
+- Emit WebSocket message errors ([#141](https://github.com/bennyn/coinbase-pro-node/pull/141)) ([031f4d76](https://github.com/bennyn/coinbase-pro-node/commit/031f4d76caa3b10a049f129903044a24b9f0f8bf))
+
+##### Tests
+
+- Load environment variables in demo scripts ([80f70be9](https://github.com/bennyn/coinbase-pro-node/commit/80f70be9d20fefa6f232062cacf3464f7f3b5b1c))
+- Use subscription update events in WebSocket tests ([a04aa138](https://github.com/bennyn/coinbase-pro-node/commit/a04aa1387a767f10a991747e927716eba0a62841))
+
 ## 2.0.0 (2020-04-24)
 
 ##### Documentation Changes
