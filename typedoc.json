@@ -1,6 +1,6 @@
 {
   "disableOutputCheck": true,
-  "exclude": ["**/payload/**/*", "**/test/**/*", "**/*+(index|demo*|.test*).ts"],
+  "exclude": ["**/demo/**/*", "**/payload/**/*", "**/test/**/*", "**/*+(index|.test*).ts"],
   "excludeExternals": true,
   "excludeNotExported": true,
   "excludePrivate": true,
