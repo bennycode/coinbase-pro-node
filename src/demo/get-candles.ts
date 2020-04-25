@@ -1,5 +1,5 @@
-import {CoinbasePro} from './CoinbasePro';
-import {CandleGranularity} from './product';
+import {CoinbasePro} from '../CoinbasePro';
+import {CandleGranularity} from '../product';
 
 require('dotenv').config();
 

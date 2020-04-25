@@ -1,7 +1,7 @@
 {
   "all": false,
   "check-coverage": false,
-  "exclude": ["**/*.d.ts", "**/*.test*.ts", "**/index.ts", "**/demo*.ts"],
+  "exclude": ["**/*.d.ts", "**/*.test*.ts", "**/index.ts", "**/demo/**/*"],
   "extension": [".ts"],
   "include": ["src/**/*.ts"],
   "per-file": false,

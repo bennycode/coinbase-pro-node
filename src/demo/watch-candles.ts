@@ -1,5 +1,5 @@
-import {Candle, CandleGranularity, ProductEvent} from './product';
-import {CoinbasePro} from './CoinbasePro';
+import {Candle, CandleGranularity, ProductEvent} from '../product';
+import {CoinbasePro} from '../CoinbasePro';
 
 async function main(): Promise<void> {
   // 1. Base configuration
