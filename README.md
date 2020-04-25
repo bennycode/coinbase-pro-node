@@ -13,8 +13,9 @@ This project was created to continue an active **Coinbase Pro API** after Coinba
 - **Typed.** Source code is 100% TypeScript. No need to install external typings.
 - **Tested.** Code coverage is 100%. No surprises when using "coinbase-pro-node".
 - **Convenient.** Request throttling is built-in. Don't worry about rate limiting.
-- **Comfortable.** More than an API client. You will get extras like [candle watching](https://github.com/bennyn/coinbase-pro-node/blob/master/src/demo-watch-candles.ts).
+- **Comfortable.** More than an API client. You will get extras like [candle watching](https://github.com/bennyn/coinbase-pro-node/blob/master/src/demo/watch-candles.ts).
 - **Maintained.** Automated security updates. No threats from outdated dependencies.
+- **Documented.** Get started with [demo scripts][3] and [generated documentation][4].
 - **Modern.** HTTP client with Promise API. Don't lose yourself in callback hell.
 - **Robust.** WebSocket reconnection is built-in. No problems if your Wi-Fi is gone.
 
@@ -50,7 +51,7 @@ const client = new CoinbasePro();
 
 ## Usage
 
-The [demo section](https://github.com/bennyn/coinbase-pro-node/tree/master/src/demo) provides many examples on how to use "coinbase-pro-node". There is also an automatically generated [API documentation][4]. For a quick start, here is a simple example for a REST request:
+The [demo section][3] provides many examples on how to use "coinbase-pro-node". There is also an automatically generated [API documentation][4]. For a quick start, here is a simple example for a REST request:
 
 **REST Example**
 
@@ -120,6 +121,7 @@ Give a ⭐️ if this project helped you!
 
 [1]: https://pro.coinbase.com/
 [2]: https://docs.pro.coinbase.com/
+[3]: https://github.com/bennyn/coinbase-pro-node/tree/master/src/demo
 [4]: https://benny.work/coinbase-pro-node
 [5]: https://www.npmjs.com/package/coinbase-pro-node
 [6]: https://github.com/bennyn/coinbase-pro-node/network/dependents
