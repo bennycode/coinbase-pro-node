@@ -1,10 +1,8 @@
 import axios, {AxiosError, AxiosInstance, AxiosInterceptorManager, AxiosRequestConfig, AxiosResponse} from 'axios';
 import {AccountAPI} from '../account/AccountAPI';
-import {RequestSigner} from '../auth/RequestSigner';
-import {ClientAuthentication} from '../CoinbasePro';
+import {RequestSetup, SignedRequest} from '../auth/RequestSigner';
 import {OrderAPI} from '../order/OrderAPI';
 import {Candle, CandleGranularity, ProductAPI, ProductEvent} from '../product/ProductAPI';
-import {TimeAPI} from '../time/TimeAPI';
 import {UserAPI} from '../user/UserAPI';
 import {FeeAPI} from '../fee/FeeAPI';
 import {FillAPI} from '../fill/FillAPI';
@@ -45,7 +43,7 @@ export class RESTClient extends EventEmitter {
   private readonly httpClient: AxiosInstance;
   private readonly logger: (msg: string, ...param: any[]) => void;
 
-  constructor(baseURL: string, auth: ClientAuthentication) {
+  constructor(baseURL: string, private readonly signRequest: (setup: RequestSetup) => Promise<SignedRequest>) {
     super();
     this.logger = util.debuglog('coinbase-pro-node');
 
@@ -78,17 +76,12 @@ export class RESTClient extends EventEmitter {
       const baseURL = String(config.baseURL);
       const url = String(config.url);
       const requestPath = url.replace(baseURL, '');
-      const clockSkew = await TimeAPI.getClockSkew(baseURL);
 
-      const signedRequest = RequestSigner.signRequest(
-        auth,
-        {
-          httpMethod: String(config.method).toUpperCase(),
-          payload: RESTClient.stringifyPayload(config),
-          requestPath,
-        },
-        clockSkew
-      );
+      const signedRequest = await this.signRequest({
+        httpMethod: String(config.method).toUpperCase(),
+        payload: RESTClient.stringifyPayload(config),
+        requestPath,
+      });
 
       config.headers = {
         ...config.headers,

@@ -1,5 +1,7 @@
 import {RESTClient} from './client/RESTClient';
 import {WebSocketClient} from './client/WebSocketClient';
+import {TimeAPI} from './time/TimeAPI';
+import {RequestSetup, RequestSigner, SignedRequest} from './auth/RequestSigner';
 
 export interface ClientAuthentication {
   apiKey: string;
@@ -41,7 +43,15 @@ export class CoinbasePro {
     }
   ) {
     this.url = auth.useSandbox === true ? CoinbasePro.SETUP.SANDBOX : CoinbasePro.SETUP.PRODUCTION;
-    this.rest = new RESTClient(this.url.REST, auth);
-    this.ws = new WebSocketClient(this.url.WebSocket);
+
+    const signRequest = async (setup: RequestSetup): Promise<SignedRequest> => {
+      const baseURL = this.url.REST;
+      const clockSkew = await TimeAPI.getClockSkew(baseURL);
+
+      return RequestSigner.signRequest(auth, setup, clockSkew);
+    };
+
+    this.rest = new RESTClient(this.url.REST, signRequest);
+    this.ws = new WebSocketClient(this.url.WebSocket, signRequest);
   }
 }

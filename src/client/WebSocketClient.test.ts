@@ -1,5 +1,4 @@
 import WebSocket = require('ws');
-import {SignedRequest} from '../auth/RequestSigner';
 import tickerBTCUSD from '../test/fixtures/ws/ticker/BTC-USD.json';
 import matchesBTCUSD from '../test/fixtures/ws/matches/BTC-USD.json';
 import tickerUnsubscribeSuccess from '../test/fixtures/ws/ticker/unsubscribe-success.json';
@@ -7,7 +6,6 @@ import {
   WebSocketChannelName,
   WebSocketClient,
   WebSocketEvent,
-  WebSocketRequest,
   WebSocketRequestType,
   WebSocketResponseType,
 } from './WebSocketClient';
@@ -19,6 +17,17 @@ const WEBSOCKET_URL = `ws://localhost:${WEBSOCKET_PORT}`;
 let server: WebSocket.Server;
 
 describe('WebSocketClient', () => {
+  function createWebSocketClient(url: string = WEBSOCKET_URL): WebSocketClient {
+    return new WebSocketClient(url, () => {
+      return Promise.resolve({
+        key: '',
+        passphrase: '',
+        signature: '',
+        timestamp: Date.now() / 1000,
+      });
+    });
+  }
+
   beforeEach(done => {
     server = new WebSocket.Server({port: WEBSOCKET_PORT});
     server.on('listening', () => done());
@@ -40,7 +49,7 @@ describe('WebSocketClient', () => {
 
   describe('constructor', () => {
     it('it signals an event when the WebSocket connection is established', async done => {
-      const client = new WebSocketClient(WEBSOCKET_URL);
+      const client = createWebSocketClient();
       client.on(WebSocketEvent.ON_OPEN, () => done());
       client.connect();
     });
@@ -67,7 +76,7 @@ describe('WebSocketClient', () => {
         });
       });
 
-      const client = new WebSocketClient(WEBSOCKET_URL);
+      const client = createWebSocketClient();
       const channel = {
         name: WebSocketChannelName.TICKER,
         product_ids: ['BTC-USD'],
@@ -113,7 +122,7 @@ describe('WebSocketClient', () => {
         });
       });
 
-      const client = new WebSocketClient(WEBSOCKET_URL);
+      const client = createWebSocketClient();
       const channels = [
         {
           name: WebSocketChannelName.MATCHES,
@@ -160,7 +169,7 @@ describe('WebSocketClient', () => {
         });
       });
 
-      const client = new WebSocketClient(WEBSOCKET_URL);
+      const client = createWebSocketClient();
 
       client.on(WebSocketEvent.ON_MESSAGE_ERROR, errorMessage => {
         expect(errorMessage.type).toBe(WebSocketResponseType.ERROR);
@@ -181,13 +190,13 @@ describe('WebSocketClient', () => {
   describe('connect', () => {
     it('attaches an error listener', async done => {
       const invalidUrl = 'ws://localhost:50001';
-      const client = new WebSocketClient(invalidUrl);
+      const client = createWebSocketClient(invalidUrl);
       client.on(WebSocketEvent.ON_ERROR, done);
       client.connect();
     });
 
     it('throws an error when trying to overwrite an existing connection', async done => {
-      const client = new WebSocketClient(WEBSOCKET_URL);
+      const client = createWebSocketClient();
       client.connect();
       try {
         client.connect();
@@ -198,7 +207,7 @@ describe('WebSocketClient', () => {
     });
 
     it('supports custom reconnect options', async () => {
-      const client = new WebSocketClient(WEBSOCKET_URL);
+      const client = createWebSocketClient();
       const socket = client.connect({startClosed: true});
       expect(socket.readyState).toBe(ReconnectingWebSocket.CLOSED);
     });
@@ -206,7 +215,7 @@ describe('WebSocketClient', () => {
 
   describe('disconnect', () => {
     it('does not do anything if there is no existing connection', () => {
-      const client = new WebSocketClient(WEBSOCKET_URL);
+      const client = createWebSocketClient();
       const onClose = jasmine.createSpy('onClose');
 
       client.on(WebSocketEvent.ON_CLOSE, () => {
@@ -218,7 +227,7 @@ describe('WebSocketClient', () => {
     });
 
     it('emits an event when an existing connection gets closed', async done => {
-      const client = new WebSocketClient(WEBSOCKET_URL);
+      const client = createWebSocketClient();
 
       client.on(WebSocketEvent.ON_CLOSE, () => {
         done();
@@ -233,53 +242,18 @@ describe('WebSocketClient', () => {
   });
 
   describe('sendMessage', () => {
-    it('does not send a message when there is no active connection', () => {
-      const client = new WebSocketClient(WEBSOCKET_URL);
-      expect(() => {
-        client.sendMessage({
+    it('does not send a message when there is no active connection', async done => {
+      const client = createWebSocketClient();
+      try {
+        await client.sendMessage({
           channels: [WebSocketChannelName.HEARTBEAT],
           type: WebSocketRequestType.UNSUBSCRIBE,
         });
-      }).toThrow();
-    });
-
-    it('supports authenticated subscriptions', async done => {
-      server.on('connection', ws => {
-        ws.on('message', (message: string) => {
-          const request = JSON.parse(message);
-
-          expect(request.passphrase).toBeDefined();
-          expect(request.signature).toBeDefined();
-          expect(request.key).toBeDefined();
-
-          done();
-        });
-      });
-
-      const message: WebSocketRequest = {
-        channels: [
-          {
-            name: WebSocketChannelName.LEVEL2,
-            product_ids: ['ETH-USD', 'ETH-EUR'],
-          },
-        ],
-        type: WebSocketRequestType.SUBSCRIBE,
-      };
-
-      const signature: SignedRequest = {
-        key: 'a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1',
-        passphrase: 'a1a1a1a1a1a',
-        signature: 'A1A1A1a1a1a1a1a1A1a1A1A1A1a1a1A1a1111aaa1AA=',
-        timestamp: 1557702240.0149999,
-      };
-
-      const client = new WebSocketClient(WEBSOCKET_URL);
-
-      client.on(WebSocketEvent.ON_OPEN, () => {
-        client.sendMessage(message, signature);
-      });
-
-      client.connect();
+        done.fail('No error has been thrown');
+      } catch (error) {
+        expect(error).toBeDefined();
+        done();
+      }
     });
   });
 });
