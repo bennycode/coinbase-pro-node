@@ -250,6 +250,12 @@ export class ProductAPI {
     }
   }
 
+  /**
+   * Stop watching a specific candle interval.
+   *
+   * @param productId - Representation for base and counter
+   * @param granularity - Desired candle size
+   */
   unwatchCandles(productId: string, granularity: CandleGranularity): void {
     const intervalId = this.watchCandlesConfig[productId][granularity].intervalId;
     clearInterval(intervalId);
@@ -274,7 +280,8 @@ export class ProductAPI {
    * Get latest trades for a product.
    *
    * @param productId - Representation for base and counter
-   * @param pagination
+   * @param pagination - Pagination field
+   * @see https://docs.pro.coinbase.com/#get-trades
    */
   async getTrades(
     productId: string,
@@ -336,6 +343,7 @@ export class ProductAPI {
    * Get latest 24 hours of movement data for a product.
    *
    * @param productId - Representation for base and counter
+   * @see https://docs.pro.coinbase.com/#get-24hr-stats
    */
   async getProductStats(productId: string): Promise<ProductStats> {
     const resource = `${ProductAPI.URL.PRODUCTS}/${productId}/stats`;
@@ -345,7 +353,9 @@ export class ProductAPI {
 
   /**
    * Get snapshot information about the last trade (tick), best bid/ask and 24h volume.
+   *
    * @param productId - Representation for base and counter
+   * @see https://docs.pro.coinbase.com/#get-product-ticker
    */
   async getProductTicker(productId: string): Promise<ProductTicker> {
     const resource = `${ProductAPI.URL.PRODUCTS}/${productId}/ticker`;

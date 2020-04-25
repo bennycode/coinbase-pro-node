@@ -83,7 +83,7 @@ export class AccountAPI {
    * canceled, any remaining hold is removed. For a withdraw, once it is completed, the hold is removed.
    *
    * @param accountId - Account ID belonging to the API key’s profile
-   * @param pagination
+   * @param pagination - Pagination field
    * @see https://docs.pro.coinbase.com/#get-holds
    */
   async getHolds(

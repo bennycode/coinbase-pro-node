@@ -62,6 +62,7 @@ export class ProfileAPI {
   /**
    * Transfer funds from API key’s profile to another user owned profile.
    * This endpoint requires the “transfer” permission.
+   *
    * @see https://docs.pro.coinbase.com/#create-profile-transfer
    */
   async transferFunds(transfer: FundTransfer): Promise<void> {

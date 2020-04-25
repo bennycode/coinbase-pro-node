@@ -20,6 +20,7 @@ export class UserAPI {
 
   /**
    * Verify your authentication with Coinbase Pro.
+   *
    * @returns Your account
    * @see https://docs.pro.coinbase.com/#subscribe
    */
@@ -32,6 +33,7 @@ export class UserAPI {
   /**
    * This request will return your 30-day trailing volume for all products of the API key’s profile. This is a cached
    * value that’s calculated every day at midnight UTC.
+   *
    * @note This endpoint requires either the “view” or “trade” permission
    * @returns Your 30-day trailing volume for all products of the API key’s profile.
    * @see https://docs.pro.coinbase.com/#trailing-volume

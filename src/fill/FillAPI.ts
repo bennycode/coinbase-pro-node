@@ -31,8 +31,9 @@ export class FillAPI {
 
   /**
    * Get a list of recent fills for a given Order of the API key's profile.
-   * @param orderId
-   * @param pagination
+   *
+   * @param orderId - ID of previously placed order
+   * @param pagination - Pagination field
    * @see https://docs.pro.coinbase.com/#list-fills
    * @see https://pro.coinbase.com/orders/filled
    */
@@ -54,8 +55,8 @@ export class FillAPI {
   /**
    * Get a list of recent fills for a given Product of the API key's profile.
    *
-   * @param productId
-   * @param pagination
+   * @param productId - Representation for base and counter
+   * @param pagination - Pagination field
    * @see https://docs.pro.coinbase.com/#list-fills
    * @see https://pro.coinbase.com/orders/filled
    */

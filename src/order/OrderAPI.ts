@@ -64,7 +64,13 @@ export class OrderAPI {
 
   constructor(private readonly apiClient: AxiosInstance) {}
 
-  // https://docs.pro.coinbase.com/#cancel-all
+  /**
+   * Cancel a previously placed order. Order must belong to the profile that the API key belongs to. If no product is
+   * specified, all open orders from the profile that the API key belongs to will be canceled.
+   *
+   * @param productId - Representation for base and counter
+   * @see https://docs.pro.coinbase.com/#cancel-all
+   */
   async cancelOpenOrders(productId?: string): Promise<string[]> {
     const resource = OrderAPI.URL.ORDERS;
     const response = await this.apiClient.delete(resource, {
@@ -78,7 +84,7 @@ export class OrderAPI {
    * orders are returned. As soon as an order is no longer open and settled, it will no longer appear
    * in the default request.
    *
-   * @param pagination
+   * @param pagination - Pagination field
    * @see https://docs.pro.coinbase.com/#list-orders
    */
   async getOpenOrders(
@@ -98,7 +104,7 @@ export class OrderAPI {
   /**
    * Get a single order by order id from the profile that the API key belongs to.
    *
-   * @param orderId
+   * @param orderId - ID of previously placed order
    * @see https://docs.pro.coinbase.com/#get-an-order
    */
   async getOrder(orderId: string): Promise<Order | null> {
@@ -119,7 +125,13 @@ export class OrderAPI {
     }
   }
 
-  // https://docs.pro.coinbase.com/#place-a-new-order
+  /**
+   * You can place two types of orders: limit and market. Orders can only be placed if your account has sufficient
+   * funds. Once an order is placed, your account funds will be put on hold for the duration of the order.
+   *
+   * @param newOrder - Order type and parameters
+   * @see https://docs.pro.coinbase.com/#place-a-new-order
+   */
   async placeOrder(newOrder: NewOrder): Promise<Order> {
     const resource = OrderAPI.URL.ORDERS;
     const response = await this.apiClient.post<Order>(resource, newOrder);
