@@ -3,7 +3,7 @@ import getAccountHistory from '../test/fixtures/rest/accounts/322dfa88-e10d-4678
 import getHolds from '../test/fixtures/rest/accounts/322dfa88-e10d-4678-856d-2930eac3e62d/holds/GET-200.json';
 import listAccounts from '../test/fixtures/rest/accounts/GET-200.json';
 import nock from 'nock';
-import {AccountAPI} from './AccountAPI';
+import {AccountAPI, AccountType} from './AccountAPI';
 
 describe('AccountAPI', () => {
   afterAll(() => nock.cleanAll());
@@ -34,6 +34,26 @@ describe('AccountAPI', () => {
     it('gets a list of trading accounts', async () => {
       const accounts = await global.client.rest.account.listAccounts();
       expect(accounts.length).toBe(7);
+    });
+  });
+
+  describe('listCoinbaseAccounts', () => {
+    it('returns the list of the coinbase accounts for a given user', async () => {
+      const response = [
+        {
+          active: true,
+          balance: '0.00000000',
+          currency: 'ETH',
+          id: 'fc3a8a57-7142-542d-8436-95a3d82e1622',
+          name: 'ETH Wallet',
+          primary: false,
+          type: AccountType.WALLET,
+        },
+      ];
+      nock(global.REST_URL).get(AccountAPI.URL.COINBASE_ACCOUNT).reply(200, response);
+      const coinbaseAccounts = await global.client.rest.account.listCoinbaseAccounts();
+      expect(coinbaseAccounts.length).toBeGreaterThanOrEqual(1);
+      expect(coinbaseAccounts[0]).toEqual(response[0]);
     });
   });
 
