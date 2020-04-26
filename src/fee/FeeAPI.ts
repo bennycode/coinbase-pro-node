@@ -1,6 +1,11 @@
 import {AxiosInstance} from 'axios';
 
-export interface Fee {
+/**
+ * Your fee tier is based upon total USD trading volume over the trailing 30 day period.
+ *
+ * @see https://help.coinbase.com/en/pro/trading-and-funding/trading-rules-and-fees/fees.html
+ */
+export interface FeeTier {
   /** A maker fee is paid when you create ("make") liquidity on the order book, i.e. you create an order which is not matched immediately. */
   maker_fee_rate: string;
   /** A taker fee is paid when you remove ("take") liquidity from the order book, i.e. you create an order which matches an existing order (this includes all market orders). */
@@ -23,7 +28,7 @@ export class FeeAPI {
    * @see https://docs.pro.coinbase.com/#fees
    * @see https://help.coinbase.com/en/pro/trading-and-funding/trading-rules-and-fees/fees.html
    */
-  async getCurrentFees(): Promise<Fee> {
+  async getCurrentFees(): Promise<FeeTier> {
     const resource = FeeAPI.URL.FEES;
     const response = await this.apiClient.get(resource);
     return response.data;
