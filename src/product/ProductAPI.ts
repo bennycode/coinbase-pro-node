@@ -49,11 +49,11 @@ export interface ProductStats {
 }
 
 export interface Trade {
+  price: string;
+  side: OrderSide;
+  size: string;
   time: ISO_8601_MS_UTC;
   trade_id: number;
-  price: string;
-  size: string;
-  side: OrderSide;
 }
 
 /** Accepted granularity in seconds to group historic rates. */
@@ -107,16 +107,16 @@ type SequenceNumber = number;
 
 /** Represents only the best bid and ask. */
 export interface OrderBookLevel1 {
-  sequence: SequenceNumber;
-  bids: AggregatedOrder[];
   asks: AggregatedOrder[];
+  bids: AggregatedOrder[];
+  sequence: SequenceNumber;
 }
 
 /** Top 50 bids and asks (aggregated) BUT if there are not 50 then less bids and asks are returned. */
 export interface OrderBookLevel2 {
-  sequence: SequenceNumber;
-  bids: AggregatedOrder[];
   asks: AggregatedOrder[];
+  bids: AggregatedOrder[];
+  sequence: SequenceNumber;
 }
 
 /**
@@ -124,9 +124,9 @@ export interface OrderBookLevel2 {
  * book using the websocket stream. Abuse of Level 3 via polling will cause your access to be limited or blocked.
  */
 export interface OrderBookLevel3 {
-  sequence: SequenceNumber;
-  bids: NonAggregatedOrder[];
   asks: NonAggregatedOrder[];
+  bids: NonAggregatedOrder[];
+  sequence: SequenceNumber;
 }
 
 export type OrderBook = OrderBookLevel1 | OrderBookLevel2 | OrderBookLevel3;
@@ -151,10 +151,10 @@ export interface Candle {
   low: Low;
   /** Opening price (first trade) in the bucket interval */
   open: Open;
-  /** Bucket start time in simplified extended ISO 8601 format */
-  openTimeString: ISO_8601_MS_UTC;
   /** Bucket start time converted to milliseconds (note: Coinbase Pro actually uses seconds) */
   openTime: Timestamp;
+  /** Bucket start time in simplified extended ISO 8601 format */
+  openTimeString: ISO_8601_MS_UTC;
   /** Volume of trading activity during the bucket interval */
   volume: Volume;
 }
