@@ -4,6 +4,7 @@ export * from './client/RESTClient';
 export * from './client/WebSocketClient';
 // Export payload
 export * from './account/AccountAPI';
+export * from './fee/';
 export * from './fill/FillAPI';
 export * from './order/OrderAPI';
 export * from './payload/common';
