@@ -291,9 +291,9 @@ export class WebSocketClient extends EventEmitter {
     }).finally(() => {});
   }
 
-  unsubscribe(channel: WebSocketChannel | WebSocketChannel[]): void {
+  unsubscribe(channel: WebSocketChannelName | WebSocketChannel | WebSocketChannel[]): void {
     this.sendMessage({
-      channels: Array.isArray(channel) ? channel : [channel],
+      channels: this.mapChannels(channel),
       type: WebSocketRequestType.UNSUBSCRIBE,
     }).finally(() => {});
   }
@@ -331,5 +331,19 @@ export class WebSocketClient extends EventEmitter {
     };
 
     return {...defaultOptions, ...reconnectOptions};
+  }
+
+  private mapChannels(input: WebSocketChannelName | WebSocketChannel | WebSocketChannel[]): WebSocketChannel[] {
+    if (Array.isArray(input)) {
+      return input;
+    } else if (typeof input === 'string') {
+      return [
+        {
+          name: input,
+          product_ids: [],
+        },
+      ];
+    }
+    return [input];
   }
 }

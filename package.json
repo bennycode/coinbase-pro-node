@@ -73,7 +73,7 @@
     "build": "tsc",
     "changelog:commit": "git add CHANGELOG.md && git commit -m \"docs: Updated changelog\"",
     "clean": "rimraf .nyc_output coverage dist",
-    "demo": "cross-env NODE_DEBUG=coinbase-pro-node* ts-node src/demo/get-candles.ts",
+    "demo": "cross-env NODE_DEBUG=coinbase-pro-node* ts-node src/demo/rest-get-candles.ts",
     "demo:ws": "cross-env NODE_DEBUG=coinbase-pro-node* ts-node src/demo/websocket-ticker.ts",
     "docs": "yarn docs:build && yarn docs:start",
     "docs:build": "yarn typedoc",
