@@ -33,10 +33,10 @@ export class FeeUtil {
     const effectivePrice = total / amount;
     return {
       amount,
-      price,
-      fee,
-      total,
       effectivePrice,
+      fee,
+      price,
+      total,
     };
   }
 }
