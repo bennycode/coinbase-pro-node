@@ -5,8 +5,8 @@ import {TimeAPI} from '../../time/TimeAPI';
 declare global {
   module NodeJS {
     interface Global {
-      client: CoinbasePro;
       REST_URL: string;
+      client: CoinbasePro;
     }
   }
 }

@@ -13,7 +13,7 @@ export enum OrderSide {
 }
 
 export interface Pagination {
-  before?: string;
   after?: string;
+  before?: string;
   limit: number;
 }

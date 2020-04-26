@@ -13,7 +13,7 @@
     "project": "./tsconfig.json",
     "sourceType": "module"
   },
-  "plugins": ["@typescript-eslint", "prettier"],
+  "plugins": ["@typescript-eslint", "typescript-sort-keys", "prettier"],
   "rules": {
     "@typescript-eslint/array-type": "error",
     "@typescript-eslint/consistent-type-assertions": "error",
@@ -71,7 +71,7 @@
     "prettier/prettier": "error",
     "sort-imports": "off",
     "sort-keys": [
-      "error",
+      "warn",
       "asc",
       {
         "caseSensitive": true,
@@ -80,7 +80,9 @@
     ],
     "sort-vars": "error",
     "space-in-parens": "error",
-    "strict": ["error", "global"]
+    "strict": ["error", "global"],
+    "typescript-sort-keys/interface": "warn",
+    "typescript-sort-keys/string-enum": "warn"
   },
   "overrides": [
     {

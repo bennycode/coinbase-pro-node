@@ -41,48 +41,48 @@ export enum AccountType {
 }
 
 export interface CoinbaseAccount {
-  id: string;
-  name: string;
-  balance: string;
-  currency: string;
-  type: AccountType;
-  primary: boolean;
   active: boolean;
   available_on_consumer?: true;
-  hold_balance?: string;
-  hold_currency?: string;
+  balance: string;
+  currency: string;
   destination_tag_name?: string;
   destination_tag_regex?: string;
-  wire_deposit_information?: WireDepositInformation;
+  hold_balance?: string;
+  hold_currency?: string;
+  id: string;
+  name: string;
+  primary: boolean;
   sepa_deposit_information?: SEPADepositInformation;
+  type: AccountType;
+  wire_deposit_information?: WireDepositInformation;
 }
 
 export interface WireDepositInformation {
+  account_address: string;
+  account_name: string;
   account_number: string;
-  routing_number: string;
-  bank_name: string;
   bank_address: string;
   bank_country: {
     code: string;
     name: string;
   };
-  account_name: string;
-  account_address: string;
+  bank_name: string;
   reference: string;
+  routing_number: string;
 }
 
 export interface SEPADepositInformation {
-  iban: string;
-  swift: string;
-  bank_name: string;
+  account_address: string;
+  account_name: string;
   bank_address: string;
   bank_country: {
     code: string;
     name: string;
   };
-  account_name: string;
-  account_address: string;
+  bank_name: string;
+  iban: string;
   reference: string;
+  swift: string;
 }
 
 export class AccountAPI {
