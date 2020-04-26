@@ -20,7 +20,7 @@ describe('CurrencyAPI', () => {
           ])
         );
 
-      const currencies = await global.client.rest.currencies.listCurrencies();
+      const currencies = await global.client.rest.currency.listCurrencies();
 
       expect(currencies.length).toBe(1);
       expect(currencies[0].id).toBe('BTC');

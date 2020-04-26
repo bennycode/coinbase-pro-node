@@ -40,7 +40,7 @@ export class RESTClient extends EventEmitter {
   readonly product: ProductAPI;
   readonly profile: ProfileAPI;
   readonly user: UserAPI;
-  readonly currencies: CurrencyAPI;
+  readonly currency: CurrencyAPI;
 
   private readonly httpClient: AxiosInstance;
   private readonly logger: (msg: string, ...param: any[]) => void;
@@ -103,7 +103,7 @@ export class RESTClient extends EventEmitter {
     this.product = new ProductAPI(this.httpClient, this);
     this.profile = new ProfileAPI(this.httpClient);
     this.user = new UserAPI(this.httpClient);
-    this.currencies = new CurrencyAPI(this.httpClient);
+    this.currency = new CurrencyAPI(this.httpClient);
   }
 
   static stringifyPayload(config: AxiosRequestConfig): string {
