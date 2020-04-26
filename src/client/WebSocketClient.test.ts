@@ -47,11 +47,81 @@ describe('WebSocketClient', () => {
     }
   });
 
+  describe('connect', () => {
+    it('attaches an error listener', async done => {
+      const invalidUrl = 'ws://localhost:50001';
+      const ws = createWebSocketClient(invalidUrl);
+      ws.on(WebSocketEvent.ON_ERROR, done);
+      ws.connect();
+    });
+
+    it('throws an error when trying to overwrite an existing connection', async done => {
+      const ws = createWebSocketClient();
+      ws.connect();
+      try {
+        ws.connect();
+        done.fail('No error has been thrown');
+      } catch (error) {
+        done();
+      }
+    });
+
+    it('supports custom reconnect options', async () => {
+      const ws = createWebSocketClient();
+      const socket = ws.connect({startClosed: true});
+      expect(socket.readyState).toBe(ReconnectingWebSocket.CLOSED);
+    });
+  });
+
   describe('constructor', () => {
     it('it signals an event when the WebSocket connection is established', async done => {
       const ws = createWebSocketClient();
       ws.on(WebSocketEvent.ON_OPEN, () => done());
       ws.connect();
+    });
+  });
+
+  describe('disconnect', () => {
+    it('does not do anything if there is no existing connection', () => {
+      const ws = createWebSocketClient();
+      const onClose = jasmine.createSpy('onClose');
+
+      ws.on(WebSocketEvent.ON_CLOSE, () => {
+        onClose();
+      });
+
+      ws.disconnect();
+      expect(onClose).not.toHaveBeenCalled();
+    });
+
+    it('emits an event when an existing connection gets closed', async done => {
+      const ws = createWebSocketClient();
+
+      ws.on(WebSocketEvent.ON_CLOSE, () => {
+        done();
+      });
+
+      ws.on(WebSocketEvent.ON_OPEN, () => {
+        ws.disconnect();
+      });
+
+      ws.connect();
+    });
+  });
+
+  describe('sendMessage', () => {
+    it('does not send a message when there is no active connection', async done => {
+      const ws = createWebSocketClient();
+      try {
+        await ws.sendMessage({
+          channels: [WebSocketChannelName.HEARTBEAT],
+          type: WebSocketRequestType.UNSUBSCRIBE,
+        });
+        done.fail('No error has been thrown');
+      } catch (error) {
+        expect(error).toBeDefined();
+        done();
+      }
     });
   });
 
@@ -187,73 +257,25 @@ describe('WebSocketClient', () => {
     });
   });
 
-  describe('connect', () => {
-    it('attaches an error listener', async done => {
-      const invalidUrl = 'ws://localhost:50001';
-      const ws = createWebSocketClient(invalidUrl);
-      ws.on(WebSocketEvent.ON_ERROR, done);
-      ws.connect();
-    });
+  describe('unsubscribe', () => {
+    it('unsubscribes from all products on a channel', () => {
+      server.on('connection', ws => {
+        ws.on('message', (message: string) => {
+          const request = JSON.parse(message);
 
-    it('throws an error when trying to overwrite an existing connection', async done => {
-      const ws = createWebSocketClient();
-      ws.connect();
-      try {
-        ws.connect();
-        done.fail('No error has been thrown');
-      } catch (error) {
-        done();
-      }
-    });
-
-    it('supports custom reconnect options', async () => {
-      const ws = createWebSocketClient();
-      const socket = ws.connect({startClosed: true});
-      expect(socket.readyState).toBe(ReconnectingWebSocket.CLOSED);
-    });
-  });
-
-  describe('disconnect', () => {
-    it('does not do anything if there is no existing connection', () => {
-      const ws = createWebSocketClient();
-      const onClose = jasmine.createSpy('onClose');
-
-      ws.on(WebSocketEvent.ON_CLOSE, () => {
-        onClose();
-      });
-
-      ws.disconnect();
-      expect(onClose).not.toHaveBeenCalled();
-    });
-
-    it('emits an event when an existing connection gets closed', async done => {
-      const ws = createWebSocketClient();
-
-      ws.on(WebSocketEvent.ON_CLOSE, () => {
-        done();
-      });
-
-      ws.on(WebSocketEvent.ON_OPEN, () => {
-        ws.disconnect();
-      });
-
-      ws.connect();
-    });
-  });
-
-  describe('sendMessage', () => {
-    it('does not send a message when there is no active connection', async done => {
-      const ws = createWebSocketClient();
-      try {
-        await ws.sendMessage({
-          channels: [WebSocketChannelName.HEARTBEAT],
-          type: WebSocketRequestType.UNSUBSCRIBE,
+          if (request.type === WebSocketRequestType.UNSUBSCRIBE) {
+            server.clients.forEach(client => {
+              client.send(tickerUnsubscribeSuccess);
+            });
+          }
         });
-        done.fail('No error has been thrown');
-      } catch (error) {
-        expect(error).toBeDefined();
-        done();
-      }
+      });
+
+      const ws = createWebSocketClient();
+
+      ws.on(WebSocketEvent.ON_OPEN, () => ws.unsubscribe(WebSocketChannelName.TICKER));
+
+      ws.connect();
     });
   });
 });
