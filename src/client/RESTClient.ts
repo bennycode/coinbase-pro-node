@@ -12,6 +12,7 @@ import axiosRetry, {isNetworkOrIdempotentRequestError} from 'axios-retry';
 import util from 'util';
 import {EventEmitter} from 'events';
 import {getErrorMessage, gotRateLimited, inAirPlaneMode} from '../error/ErrorUtil';
+import {CurrencyAPI} from '../currency/CurrencyAPI';
 
 export interface RESTClient {
   on(
@@ -39,6 +40,7 @@ export class RESTClient extends EventEmitter {
   readonly product: ProductAPI;
   readonly profile: ProfileAPI;
   readonly user: UserAPI;
+  readonly currencies: CurrencyAPI;
 
   private readonly httpClient: AxiosInstance;
   private readonly logger: (msg: string, ...param: any[]) => void;
@@ -101,6 +103,7 @@ export class RESTClient extends EventEmitter {
     this.product = new ProductAPI(this.httpClient, this);
     this.profile = new ProfileAPI(this.httpClient);
     this.user = new UserAPI(this.httpClient);
+    this.currencies = new CurrencyAPI(this.httpClient);
   }
 
   static stringifyPayload(config: AxiosRequestConfig): string {
