@@ -8,7 +8,7 @@
   "include": ["src/**/*.ts"],
   "lines": 100,
   "per-file": false,
-  "reporter": ["html", "lcov"],
+  "reporter": ["html", "lcov", "text"],
   "require": ["ts-node/register"],
   "statements": 100
 }

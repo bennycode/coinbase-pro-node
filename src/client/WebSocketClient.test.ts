@@ -258,20 +258,31 @@ describe('WebSocketClient', () => {
   });
 
   describe('unsubscribe', () => {
-    it('unsubscribes from all products on a channel', () => {
+    it('unsubscribes from all products on a channel', done => {
       server.on('connection', ws => {
         ws.on('message', (message: string) => {
           const request = JSON.parse(message);
 
           if (request.type === WebSocketRequestType.UNSUBSCRIBE) {
+            const response = JSON.stringify(tickerUnsubscribeSuccess);
             server.clients.forEach(client => {
-              client.send(tickerUnsubscribeSuccess);
+              client.send(response);
             });
           }
         });
       });
 
       const ws = createWebSocketClient();
+
+      ws.on(WebSocketEvent.ON_SUBSCRIPTION_UPDATE, subscriptions => {
+        if (subscriptions.channels.length === 0) {
+          ws.disconnect();
+        }
+      });
+
+      ws.on(WebSocketEvent.ON_CLOSE, () => {
+        done();
+      });
 
       ws.on(WebSocketEvent.ON_OPEN, () => ws.unsubscribe(WebSocketChannelName.TICKER));
 
