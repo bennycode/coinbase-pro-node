@@ -35,9 +35,60 @@ export interface Hold {
   updated_at: string;
 }
 
+export enum AccountType {
+  FIAT = 'fiat',
+  WALLET = 'wallet',
+}
+
+export interface CoinbaseAccount {
+  id: string;
+  name: string;
+  balance: string;
+  currency: string;
+  type: AccountType;
+  primary: boolean;
+  active: boolean;
+  available_on_consumer?: true;
+  hold_balance?: string;
+  hold_currency?: string;
+  destination_tag_name?: string;
+  destination_tag_regex?: string;
+  wire_deposit_information?: WireDepositInformation;
+  sepa_deposit_information?: SEPADepositInformation;
+}
+
+export interface WireDepositInformation {
+  account_number: string;
+  routing_number: string;
+  bank_name: string;
+  bank_address: string;
+  bank_country: {
+    code: string;
+    name: string;
+  };
+  account_name: string;
+  account_address: string;
+  reference: string;
+}
+
+export interface SEPADepositInformation {
+  iban: string;
+  swift: string;
+  bank_name: string;
+  bank_address: string;
+  bank_country: {
+    code: string;
+    name: string;
+  };
+  account_name: string;
+  account_address: string;
+  reference: string;
+}
+
 export class AccountAPI {
   static readonly URL = {
     ACCOUNTS: `/accounts`,
+    COINBASE_ACCOUNT: `/coinbase-accounts`,
   };
 
   constructor(private readonly apiClient: AxiosInstance) {}
@@ -109,6 +160,17 @@ export class AccountAPI {
   async listAccounts(): Promise<Account[]> {
     const resource = AccountAPI.URL.ACCOUNTS;
     const response = await this.apiClient.get<Account[]>(resource);
+    return response.data;
+  }
+
+  /**
+   * Get a list of your coinbase accounts.
+   *
+   * @see https://docs.pro.coinbase.com/#coinbase-accounts
+   */
+  async listCoinbaseAccounts(): Promise<CoinbaseAccount[]> {
+    const resource = AccountAPI.URL.COINBASE_ACCOUNT;
+    const response = await this.apiClient.get(resource);
     return response.data;
   }
 }
