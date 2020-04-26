@@ -1,6 +1,6 @@
 import {initClient} from './init-client';
-import {CandleGranularity} from '../product';
-import {FeeUtil} from '../fee/FeeUtil';
+import {CandleGranularity} from '../product/';
+import {FeeUtil} from '../fee/';
 import {OrderSide, OrderType} from '..';
 
 async function main(): Promise<void> {
