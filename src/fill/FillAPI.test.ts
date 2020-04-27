@@ -12,8 +12,7 @@ describe('FillAPI', () => {
       .get(FillAPI.URL.FILLS)
       .query(true)
       .reply(uri => {
-        const url = new URL(`${global.REST_URL}${uri}`);
-        const query = querystring.parse(url.search);
+        const query = querystring.parse(`${global.REST_URL}${uri}`);
         let payload = BTCEUR;
 
         if (Object.keys(query).includes('?product_id')) {
