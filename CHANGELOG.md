@@ -1,3 +1,25 @@
+### 2.2.0 (2020-04-27)
+
+##### Chores
+
+- Sort keys in interfaces ([#147](https://github.com/bennyn/coinbase-pro-node/pull/147)) ([f9758ba9](https://github.com/bennyn/coinbase-pro-node/commit/f9758ba9e87b66c081b3c641679196ab4d06f7af))
+
+##### Documentation Changes
+
+- Fix relative API url in sidebar ([b1af82bc](https://github.com/bennyn/coinbase-pro-node/commit/b1af82bca1651ecb0333ab630577fb41046d502c))
+- Document public API ([17d06a95](https://github.com/bennyn/coinbase-pro-node/commit/17d06a9511930e90e59a007c8e2a400f5b1369f6))
+
+##### New Features
+
+- Estimate fees ([#148](https://github.com/bennyn/coinbase-pro-node/pull/148)) ([9b11493b](https://github.com/bennyn/coinbase-pro-node/commit/9b11493b2252cf949ee470c526e411b3cdb12248))
+- Unsubscribe entirely from a WebSocket channel ([#145](https://github.com/bennyn/coinbase-pro-node/pull/145)) ([f2569f07](https://github.com/bennyn/coinbase-pro-node/commit/f2569f07fc439df1f5c2cfcf982c6ca6eba1f2dc))
+- List Coinbase accounts ([#144](https://github.com/bennyn/coinbase-pro-node/pull/144)) ([309baa36](https://github.com/bennyn/coinbase-pro-node/commit/309baa3606ddbca05b9630e504b9ea1bbe2ed4e3))
+- List known currencies ([#143](https://github.com/bennyn/coinbase-pro-node/pull/143)) ([1f12bc1f](https://github.com/bennyn/coinbase-pro-node/commit/1f12bc1f233cb11b2942dec2c2d63e5352b852af))
+
+##### Refactors
+
+- Use barrel exports ([#149](https://github.com/bennyn/coinbase-pro-node/pull/149)) ([734ebaf0](https://github.com/bennyn/coinbase-pro-node/commit/734ebaf0e669958d6669cb73165f1fb42bb52ac5))
+
 ### 2.1.0 (2020-04-25)
 
 ##### Chores
