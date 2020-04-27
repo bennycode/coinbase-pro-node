@@ -1,5 +1,5 @@
-import {WebSocketChannelName, WebSocketEvent} from '../client/WebSocketClient';
 import {initClient} from './init-client';
+import {WebSocketChannelName, WebSocketEvent} from '..';
 
 // 1. Setup Coinbase Pro client
 const client = initClient();
