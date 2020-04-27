@@ -17,6 +17,7 @@
 ### Properties
 
 - [account](_client_restclient_.restclient.md#account)
+- [currency](_client_restclient_.restclient.md#currency)
 - [fee](_client_restclient_.restclient.md#fee)
 - [fill](_client_restclient_.restclient.md#fill)
 - [order](_client_restclient_.restclient.md#order)
@@ -56,7 +57,7 @@
 
 \+ **new RESTClient**(`baseURL`: string, `signRequest`: function): _[RESTClient](_client_restclient_.restclient.md)_
 
-_Defined in [src/client/RESTClient.ts:44](https://github.com/bennyn/coinbase-pro-node/blob/0c3235f/src/client/RESTClient.ts#L44)_
+_Defined in [src/client/RESTClient.ts:46](https://github.com/bennyn/coinbase-pro-node/blob/2c257dd/src/client/RESTClient.ts#L46)_
 
 **Parameters:**
 
@@ -80,7 +81,15 @@ _Defined in [src/client/RESTClient.ts:44](https://github.com/bennyn/coinbase-pro
 
 • **account**: _[AccountAPI](_account_accountapi_.accountapi.md)_
 
-_Defined in [src/client/RESTClient.ts:35](https://github.com/bennyn/coinbase-pro-node/blob/0c3235f/src/client/RESTClient.ts#L35)_
+_Defined in [src/client/RESTClient.ts:36](https://github.com/bennyn/coinbase-pro-node/blob/2c257dd/src/client/RESTClient.ts#L36)_
+
+---
+
+### currency
+
+• **currency**: _[CurrencyAPI](_currency_currencyapi_.currencyapi.md)_
+
+_Defined in [src/client/RESTClient.ts:43](https://github.com/bennyn/coinbase-pro-node/blob/2c257dd/src/client/RESTClient.ts#L43)_
 
 ---
 
@@ -88,7 +97,7 @@ _Defined in [src/client/RESTClient.ts:35](https://github.com/bennyn/coinbase-pro
 
 • **fee**: _[FeeAPI](_fee_feeapi_.feeapi.md)_
 
-_Defined in [src/client/RESTClient.ts:36](https://github.com/bennyn/coinbase-pro-node/blob/0c3235f/src/client/RESTClient.ts#L36)_
+_Defined in [src/client/RESTClient.ts:37](https://github.com/bennyn/coinbase-pro-node/blob/2c257dd/src/client/RESTClient.ts#L37)_
 
 ---
 
@@ -96,7 +105,7 @@ _Defined in [src/client/RESTClient.ts:36](https://github.com/bennyn/coinbase-pro
 
 • **fill**: _[FillAPI](_fill_fillapi_.fillapi.md)_
 
-_Defined in [src/client/RESTClient.ts:37](https://github.com/bennyn/coinbase-pro-node/blob/0c3235f/src/client/RESTClient.ts#L37)_
+_Defined in [src/client/RESTClient.ts:38](https://github.com/bennyn/coinbase-pro-node/blob/2c257dd/src/client/RESTClient.ts#L38)_
 
 ---
 
@@ -104,7 +113,7 @@ _Defined in [src/client/RESTClient.ts:37](https://github.com/bennyn/coinbase-pro
 
 • **order**: _[OrderAPI](_order_orderapi_.orderapi.md)_
 
-_Defined in [src/client/RESTClient.ts:38](https://github.com/bennyn/coinbase-pro-node/blob/0c3235f/src/client/RESTClient.ts#L38)_
+_Defined in [src/client/RESTClient.ts:39](https://github.com/bennyn/coinbase-pro-node/blob/2c257dd/src/client/RESTClient.ts#L39)_
 
 ---
 
@@ -112,7 +121,7 @@ _Defined in [src/client/RESTClient.ts:38](https://github.com/bennyn/coinbase-pro
 
 • **product**: _[ProductAPI](_product_productapi_.productapi.md)_
 
-_Defined in [src/client/RESTClient.ts:39](https://github.com/bennyn/coinbase-pro-node/blob/0c3235f/src/client/RESTClient.ts#L39)_
+_Defined in [src/client/RESTClient.ts:40](https://github.com/bennyn/coinbase-pro-node/blob/2c257dd/src/client/RESTClient.ts#L40)_
 
 ---
 
@@ -120,7 +129,7 @@ _Defined in [src/client/RESTClient.ts:39](https://github.com/bennyn/coinbase-pro
 
 • **profile**: _[ProfileAPI](_profile_profileapi_.profileapi.md)_
 
-_Defined in [src/client/RESTClient.ts:40](https://github.com/bennyn/coinbase-pro-node/blob/0c3235f/src/client/RESTClient.ts#L40)_
+_Defined in [src/client/RESTClient.ts:41](https://github.com/bennyn/coinbase-pro-node/blob/2c257dd/src/client/RESTClient.ts#L41)_
 
 ---
 
@@ -128,7 +137,7 @@ _Defined in [src/client/RESTClient.ts:40](https://github.com/bennyn/coinbase-pro
 
 • **user**: _[UserAPI](_user_userapi_.userapi.md)_
 
-_Defined in [src/client/RESTClient.ts:41](https://github.com/bennyn/coinbase-pro-node/blob/0c3235f/src/client/RESTClient.ts#L41)_
+_Defined in [src/client/RESTClient.ts:42](https://github.com/bennyn/coinbase-pro-node/blob/2c257dd/src/client/RESTClient.ts#L42)_
 
 ---
 
@@ -146,7 +155,7 @@ Defined in node_modules/@types/node/events.d.ts:18
 
 • **get defaults**(): _AxiosRequestConfig_
 
-_Defined in [src/client/RESTClient.ts:24](https://github.com/bennyn/coinbase-pro-node/blob/0c3235f/src/client/RESTClient.ts#L24)_
+_Defined in [src/client/RESTClient.ts:25](https://github.com/bennyn/coinbase-pro-node/blob/2c257dd/src/client/RESTClient.ts#L25)_
 
 **Returns:** _AxiosRequestConfig_
 
@@ -156,7 +165,7 @@ _Defined in [src/client/RESTClient.ts:24](https://github.com/bennyn/coinbase-pro
 
 • **get interceptors**(): _object_
 
-_Defined in [src/client/RESTClient.ts:28](https://github.com/bennyn/coinbase-pro-node/blob/0c3235f/src/client/RESTClient.ts#L28)_
+_Defined in [src/client/RESTClient.ts:29](https://github.com/bennyn/coinbase-pro-node/blob/2c257dd/src/client/RESTClient.ts#L29)_
 
 **Returns:** _object_
 
@@ -317,7 +326,7 @@ Defined in node_modules/@types/node/events.d.ts:26
 
 _Overrides void_
 
-_Defined in [src/client/RESTClient.ts:17](https://github.com/bennyn/coinbase-pro-node/blob/0c3235f/src/client/RESTClient.ts#L17)_
+_Defined in [src/client/RESTClient.ts:18](https://github.com/bennyn/coinbase-pro-node/blob/2c257dd/src/client/RESTClient.ts#L18)_
 
 **Parameters:**
 
@@ -536,7 +545,7 @@ Defined in node_modules/@types/node/events.d.ts:17
 
 ▸ **stringifyPayload**(`config`: AxiosRequestConfig): _string_
 
-_Defined in [src/client/RESTClient.ts:106](https://github.com/bennyn/coinbase-pro-node/blob/0c3235f/src/client/RESTClient.ts#L106)_
+_Defined in [src/client/RESTClient.ts:109](https://github.com/bennyn/coinbase-pro-node/blob/2c257dd/src/client/RESTClient.ts#L109)_
 
 **Parameters:**
 

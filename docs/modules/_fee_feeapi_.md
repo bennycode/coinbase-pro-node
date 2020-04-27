@@ -10,4 +10,4 @@
 
 ### Interfaces
 
-- [Fee](../interfaces/_fee_feeapi_.fee.md)
+- [FeeTier](../interfaces/_fee_feeapi_.feetier.md)
