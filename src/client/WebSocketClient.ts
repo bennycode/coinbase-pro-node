@@ -1,6 +1,6 @@
 import {EventEmitter} from 'events';
 import ReconnectingWebSocket, {Event, ErrorEvent, Options, CloseEvent} from 'reconnecting-websocket';
-import WebSocket from 'ws';
+import WebSocket, {MessageEvent} from 'ws';
 import {RequestSetup, SignedRequest} from '../auth/RequestSigner';
 import {OrderSide, ISO_8601_MS_UTC, UUID_V4, UserAPI} from '..';
 
@@ -247,7 +247,7 @@ export class WebSocketClient extends EventEmitter {
     };
 
     this.socket.onmessage = (event: MessageEvent): void => {
-      const response: WebSocketResponse = JSON.parse(event.data);
+      const response: WebSocketResponse = JSON.parse(event.data as string);
 
       // Emit generic event
       this.emit(WebSocketEvent.ON_MESSAGE, response);
