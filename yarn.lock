@@ -420,10 +420,10 @@ astral-regex@^1.0.0:
   resolved "https://registry.npmjs.org/astral-regex/-/astral-regex-1.0.0.tgz#6c8c3fb827dd43ee3918f27b82782ab7658a6fd9"
   integrity sha512-+Ryf6g3BKoRc7jfp7ad8tM4TtMiaWvbF/1/sQcZPkkS7ag3D5nMBCe2UfOTONtAkaG0tO0ij3C5Lwmf1EiyjHg==
 
-axios-retry@3.1.5:
-  version "3.1.5"
-  resolved "https://registry.npmjs.org/axios-retry/-/axios-retry-3.1.5.tgz#1472d7de80a5a9aeef433e4c0e0280cf9ef1e7ea"
-  integrity sha512-8OImX5nk7RAAexnSAI3mI1DyHi+ukpQnZhhjcq5odTBPD0/BjHS4pdcst4fNAREThck5psQtMzDvKbRwCZX5Qg==
+axios-retry@3.1.8:
+  version "3.1.8"
+  resolved "https://registry.npmjs.org/axios-retry/-/axios-retry-3.1.8.tgz#ffcfed757e1fab8cbf832f8505bb0e0af47c520c"
+  integrity sha512-yPw5Y4Bg6Dgmhm35KaJFtlh23s1TecW0HsUerK4/IS1UKl0gtN2aJqdEKtVomiOS/bDo5w4P3sqgki/M10eF8Q==
   dependencies:
     is-retry-allowed "^1.1.0"
 
