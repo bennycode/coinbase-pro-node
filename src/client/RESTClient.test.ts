@@ -1,6 +1,6 @@
 import {AxiosRequestConfig} from 'axios';
 import nock from 'nock';
-import {AccountAPI} from '../account/AccountAPI';
+import {AccountAPI} from '../account';
 import listAccounts from '../test/fixtures/rest/accounts/GET-200.json';
 import {RESTClient} from './RESTClient';
 

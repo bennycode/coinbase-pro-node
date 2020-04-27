@@ -1,18 +1,18 @@
 import axios, {AxiosError, AxiosInstance, AxiosInterceptorManager, AxiosRequestConfig, AxiosResponse} from 'axios';
-import {AccountAPI} from '../account/AccountAPI';
+import {AccountAPI} from '../account';
 import {RequestSetup, SignedRequest} from '../auth/RequestSigner';
-import {OrderAPI} from '../order/OrderAPI';
-import {Candle, CandleGranularity, ProductAPI, ProductEvent} from '../product/ProductAPI';
-import {UserAPI} from '../user/UserAPI';
-import {FeeAPI} from '../fee/FeeAPI';
-import {FillAPI} from '../fill/FillAPI';
+import {OrderAPI} from '../order';
+import {Candle, CandleGranularity, ProductAPI, ProductEvent} from '../product';
+import {UserAPI} from '../user';
+import {FeeAPI} from '../fee';
+import {FillAPI} from '../fill';
 import querystring from 'querystring';
-import {ProfileAPI} from '../profile/ProfileAPI';
+import {ProfileAPI} from '../profile';
 import axiosRetry, {isNetworkOrIdempotentRequestError} from 'axios-retry';
 import util from 'util';
 import {EventEmitter} from 'events';
 import {getErrorMessage, gotRateLimited, inAirPlaneMode} from '../error/ErrorUtil';
-import {CurrencyAPI} from '../currency/CurrencyAPI';
+import {CurrencyAPI} from '../currency';
 
 export interface RESTClient {
   on(

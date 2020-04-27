@@ -1,6 +1,6 @@
 import nock from 'nock';
 import {NewOrder, OrderAPI, OrderStatus, OrderType, SelfTradePrevention} from './OrderAPI';
-import {OrderSide} from '../payload/common';
+import {OrderSide} from '../payload';
 
 describe('OrderAPI', () => {
   afterEach(() => nock.cleanAll());

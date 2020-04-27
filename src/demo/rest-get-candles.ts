@@ -1,5 +1,5 @@
-import {CandleGranularity} from '../product';
 import {initClient} from './init-client';
+import {CandleGranularity} from '..';
 
 async function main(): Promise<void> {
   const client = initClient();
