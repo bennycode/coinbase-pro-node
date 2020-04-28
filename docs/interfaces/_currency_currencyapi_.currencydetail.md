@@ -26,7 +26,7 @@
 
 • **crypto_address_link**: _string_
 
-_Defined in [src/currency/CurrencyAPI.ts:13](https://github.com/bennyn/coinbase-pro-node/blob/2c257dd/src/currency/CurrencyAPI.ts#L13)_
+_Defined in [src/currency/CurrencyAPI.ts:13](https://github.com/bennyn/coinbase-pro-node/blob/1a12582/src/currency/CurrencyAPI.ts#L13)_
 
 ---
 
@@ -34,7 +34,7 @@ _Defined in [src/currency/CurrencyAPI.ts:13](https://github.com/bennyn/coinbase-
 
 • **crypto_transaction_link**: _string_
 
-_Defined in [src/currency/CurrencyAPI.ts:14](https://github.com/bennyn/coinbase-pro-node/blob/2c257dd/src/currency/CurrencyAPI.ts#L14)_
+_Defined in [src/currency/CurrencyAPI.ts:14](https://github.com/bennyn/coinbase-pro-node/blob/1a12582/src/currency/CurrencyAPI.ts#L14)_
 
 ---
 
@@ -42,7 +42,7 @@ _Defined in [src/currency/CurrencyAPI.ts:14](https://github.com/bennyn/coinbase-
 
 • **min_withdrawal_amount**: _number_
 
-_Defined in [src/currency/CurrencyAPI.ts:15](https://github.com/bennyn/coinbase-pro-node/blob/2c257dd/src/currency/CurrencyAPI.ts#L15)_
+_Defined in [src/currency/CurrencyAPI.ts:15](https://github.com/bennyn/coinbase-pro-node/blob/1a12582/src/currency/CurrencyAPI.ts#L15)_
 
 ---
 
@@ -50,7 +50,7 @@ _Defined in [src/currency/CurrencyAPI.ts:15](https://github.com/bennyn/coinbase-
 
 • **network_confirmations**: _number_
 
-_Defined in [src/currency/CurrencyAPI.ts:16](https://github.com/bennyn/coinbase-pro-node/blob/2c257dd/src/currency/CurrencyAPI.ts#L16)_
+_Defined in [src/currency/CurrencyAPI.ts:16](https://github.com/bennyn/coinbase-pro-node/blob/1a12582/src/currency/CurrencyAPI.ts#L16)_
 
 ---
 
@@ -58,7 +58,7 @@ _Defined in [src/currency/CurrencyAPI.ts:16](https://github.com/bennyn/coinbase-
 
 • **processing_time_seconds**: _number_
 
-_Defined in [src/currency/CurrencyAPI.ts:17](https://github.com/bennyn/coinbase-pro-node/blob/2c257dd/src/currency/CurrencyAPI.ts#L17)_
+_Defined in [src/currency/CurrencyAPI.ts:17](https://github.com/bennyn/coinbase-pro-node/blob/1a12582/src/currency/CurrencyAPI.ts#L17)_
 
 ---
 
@@ -66,7 +66,7 @@ _Defined in [src/currency/CurrencyAPI.ts:17](https://github.com/bennyn/coinbase-
 
 • **push_payment_methods**: _string[]_
 
-_Defined in [src/currency/CurrencyAPI.ts:18](https://github.com/bennyn/coinbase-pro-node/blob/2c257dd/src/currency/CurrencyAPI.ts#L18)_
+_Defined in [src/currency/CurrencyAPI.ts:18](https://github.com/bennyn/coinbase-pro-node/blob/1a12582/src/currency/CurrencyAPI.ts#L18)_
 
 ---
 
@@ -74,7 +74,7 @@ _Defined in [src/currency/CurrencyAPI.ts:18](https://github.com/bennyn/coinbase-
 
 • **sort_order**: _number_
 
-_Defined in [src/currency/CurrencyAPI.ts:19](https://github.com/bennyn/coinbase-pro-node/blob/2c257dd/src/currency/CurrencyAPI.ts#L19)_
+_Defined in [src/currency/CurrencyAPI.ts:19](https://github.com/bennyn/coinbase-pro-node/blob/1a12582/src/currency/CurrencyAPI.ts#L19)_
 
 ---
 
@@ -82,7 +82,7 @@ _Defined in [src/currency/CurrencyAPI.ts:19](https://github.com/bennyn/coinbase-
 
 • **symbol**: _string_
 
-_Defined in [src/currency/CurrencyAPI.ts:20](https://github.com/bennyn/coinbase-pro-node/blob/2c257dd/src/currency/CurrencyAPI.ts#L20)_
+_Defined in [src/currency/CurrencyAPI.ts:20](https://github.com/bennyn/coinbase-pro-node/blob/1a12582/src/currency/CurrencyAPI.ts#L20)_
 
 ---
 
@@ -90,4 +90,4 @@ _Defined in [src/currency/CurrencyAPI.ts:20](https://github.com/bennyn/coinbase-
 
 • **type**: _string_
 
-_Defined in [src/currency/CurrencyAPI.ts:21](https://github.com/bennyn/coinbase-pro-node/blob/2c257dd/src/currency/CurrencyAPI.ts#L21)_
+_Defined in [src/currency/CurrencyAPI.ts:21](https://github.com/bennyn/coinbase-pro-node/blob/1a12582/src/currency/CurrencyAPI.ts#L21)_

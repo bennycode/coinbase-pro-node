@@ -19,7 +19,7 @@
 
 • **epoch**: _number_
 
-_Defined in [src/time/TimeAPI.ts:4](https://github.com/bennyn/coinbase-pro-node/blob/2c257dd/src/time/TimeAPI.ts#L4)_
+_Defined in [src/time/TimeAPI.ts:4](https://github.com/bennyn/coinbase-pro-node/blob/1a12582/src/time/TimeAPI.ts#L4)_
 
 ---
 
@@ -27,4 +27,4 @@ _Defined in [src/time/TimeAPI.ts:4](https://github.com/bennyn/coinbase-pro-node/
 
 • **iso**: _string_
 
-_Defined in [src/time/TimeAPI.ts:5](https://github.com/bennyn/coinbase-pro-node/blob/2c257dd/src/time/TimeAPI.ts#L5)_
+_Defined in [src/time/TimeAPI.ts:5](https://github.com/bennyn/coinbase-pro-node/blob/1a12582/src/time/TimeAPI.ts#L5)_

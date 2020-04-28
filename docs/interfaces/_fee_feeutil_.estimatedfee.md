@@ -22,7 +22,7 @@
 
 • **amount**: _number_
 
-_Defined in [src/fee/FeeUtil.ts:5](https://github.com/bennyn/coinbase-pro-node/blob/2c257dd/src/fee/FeeUtil.ts#L5)_
+_Defined in [src/fee/FeeUtil.ts:5](https://github.com/bennyn/coinbase-pro-node/blob/1a12582/src/fee/FeeUtil.ts#L5)_
 
 ---
 
@@ -30,7 +30,7 @@ _Defined in [src/fee/FeeUtil.ts:5](https://github.com/bennyn/coinbase-pro-node/b
 
 • **effectivePrice**: _number_
 
-_Defined in [src/fee/FeeUtil.ts:6](https://github.com/bennyn/coinbase-pro-node/blob/2c257dd/src/fee/FeeUtil.ts#L6)_
+_Defined in [src/fee/FeeUtil.ts:6](https://github.com/bennyn/coinbase-pro-node/blob/1a12582/src/fee/FeeUtil.ts#L6)_
 
 ---
 
@@ -38,7 +38,7 @@ _Defined in [src/fee/FeeUtil.ts:6](https://github.com/bennyn/coinbase-pro-node/b
 
 • **fee**: _number_
 
-_Defined in [src/fee/FeeUtil.ts:7](https://github.com/bennyn/coinbase-pro-node/blob/2c257dd/src/fee/FeeUtil.ts#L7)_
+_Defined in [src/fee/FeeUtil.ts:7](https://github.com/bennyn/coinbase-pro-node/blob/1a12582/src/fee/FeeUtil.ts#L7)_
 
 ---
 
@@ -46,7 +46,7 @@ _Defined in [src/fee/FeeUtil.ts:7](https://github.com/bennyn/coinbase-pro-node/b
 
 • **price**: _number_
 
-_Defined in [src/fee/FeeUtil.ts:8](https://github.com/bennyn/coinbase-pro-node/blob/2c257dd/src/fee/FeeUtil.ts#L8)_
+_Defined in [src/fee/FeeUtil.ts:8](https://github.com/bennyn/coinbase-pro-node/blob/1a12582/src/fee/FeeUtil.ts#L8)_
 
 ---
 
@@ -54,4 +54,4 @@ _Defined in [src/fee/FeeUtil.ts:8](https://github.com/bennyn/coinbase-pro-node/b
 
 • **total**: _number_
 
-_Defined in [src/fee/FeeUtil.ts:9](https://github.com/bennyn/coinbase-pro-node/blob/2c257dd/src/fee/FeeUtil.ts#L9)_
+_Defined in [src/fee/FeeUtil.ts:9](https://github.com/bennyn/coinbase-pro-node/blob/1a12582/src/fee/FeeUtil.ts#L9)_
