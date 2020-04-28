@@ -1,3 +1,27 @@
+#### 2.2.1 (2020-04-28)
+
+##### Chores
+
+- **deps-dev:**
+  - bump typedoc from 0.17.4 to 0.17.6 ([#156](https://github.com/bennyn/coinbase-pro-node/pull/156)) ([159b3fd7](https://github.com/bennyn/coinbase-pro-node/commit/159b3fd7f1eb8b899a849f22d3b235d44d9d5c81))
+  - bump @typescript-eslint/parser from 2.28.0 to 2.29.0 ([#153](https://github.com/bennyn/coinbase-pro-node/pull/153)) ([90f4c453](https://github.com/bennyn/coinbase-pro-node/commit/90f4c453202b2507b90161e7dd1a2c7b0fbd0559))
+  - bump lint-staged from 10.1.6 to 10.1.7 ([#157](https://github.com/bennyn/coinbase-pro-node/pull/157)) ([8242be91](https://github.com/bennyn/coinbase-pro-node/commit/8242be9191bdeea4405d7316de87e46f3234dfab))
+  - bump prettier from 2.0.4 to 2.0.5 ([#158](https://github.com/bennyn/coinbase-pro-node/pull/158)) ([9f358997](https://github.com/bennyn/coinbase-pro-node/commit/9f35899738e80b578d16b6558eb4dce0e4a8d34b))
+  - bump eslint-config-prettier from 6.10.1 to 6.11.0 ([#152](https://github.com/bennyn/coinbase-pro-node/pull/152)) ([b5e42cd6](https://github.com/bennyn/coinbase-pro-node/commit/b5e42cd6321bee4adebeda22ed11eab0eb23d938))
+  - bump @typescript-eslint/eslint-plugin ([#151](https://github.com/bennyn/coinbase-pro-node/pull/151)) ([ca845f9b](https://github.com/bennyn/coinbase-pro-node/commit/ca845f9be2c564be277c0900ecfc46261e2ecd93))
+  - bump ts-node from 8.8.2 to 8.9.1 ([#150](https://github.com/bennyn/coinbase-pro-node/pull/150)) ([305e4b63](https://github.com/bennyn/coinbase-pro-node/commit/305e4b631c2ce3afa14faf346efde659f2b7091c))
+- **deps:**
+  - bump ws from 7.2.3 to 7.2.5 ([#155](https://github.com/bennyn/coinbase-pro-node/pull/155)) ([f38c7fbc](https://github.com/bennyn/coinbase-pro-node/commit/f38c7fbc530c26cf108dc5c5f79b3b7be2b836c6))
+  - bump axios-retry from 3.1.5 to 3.1.8 ([#154](https://github.com/bennyn/coinbase-pro-node/pull/154)) ([fa5b2005](https://github.com/bennyn/coinbase-pro-node/commit/fa5b200536de793a06aeb73e56b8959d6551030f))
+
+##### Bug Fixes
+
+- Use correct symbol when watching candles ([ea71b0cc](https://github.com/bennyn/coinbase-pro-node/commit/ea71b0cc7709defd3f067401c67743036490a72d))
+
+##### Refactors
+
+- Prefer Node.js typings ([#160](https://github.com/bennyn/coinbase-pro-node/pull/160)) ([bc233b88](https://github.com/bennyn/coinbase-pro-node/commit/bc233b8839e8c88be6b3b311e6eb3a634b6e7e5d))
+
 ### 2.2.0 (2020-04-27)
 
 ##### Chores
