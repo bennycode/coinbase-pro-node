@@ -389,7 +389,7 @@ export class ProductAPI {
   private async checkNewCandles(productId: string, granularity: CandleGranularity): Promise<void> {
     const expectedTimestampISO = this.watchCandlesConfig[productId][granularity].expectedISO;
 
-    const candles = await this.getCandles('BTC-USD', {
+    const candles = await this.getCandles(productId, {
       granularity,
       start: expectedTimestampISO,
     });
