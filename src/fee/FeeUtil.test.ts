@@ -14,12 +14,12 @@ describe('FeeUtil', () => {
         usd_volume: null,
       };
       const estimatedFee = FeeUtil.estimateFee(amountOfBTC, pricePerBTC, orderSide, type, fee, 'EUR');
-      expect(estimatedFee.effectivePricePerUnit).toBeCloseTo(7155.6, 2);
-      expect(estimatedFee.effectiveTotal).toBe(1431.12);
+      expect(estimatedFee.effectivePricePerUnit.valueOf()).toBe('7155.6');
+      expect(estimatedFee.effectiveTotal.valueOf()).toBe('1431.12');
       expect(estimatedFee.feeAsset).toBe('EUR');
-      expect(estimatedFee.pricePerUnit).toBe(pricePerBTC);
-      expect(estimatedFee.totalFee).toBe(7.12);
-      expect(estimatedFee.units).toBe(amountOfBTC);
+      expect(estimatedFee.pricePerUnit.valueOf()).toBe('7120');
+      expect(estimatedFee.totalFee.valueOf()).toBe('7.12');
+      expect(estimatedFee.amount.valueOf()).toBe('0.2');
     });
 
     it('estimates maker fees for buy orders (1 BTC)', () => {
@@ -33,12 +33,12 @@ describe('FeeUtil', () => {
         usd_volume: null,
       };
       const estimatedFee = FeeUtil.estimateFee(amountOfBTC, pricePerBTC, orderSide, type, fee, 'EUR');
-      expect(estimatedFee.effectivePricePerUnit).toBe(7155.6);
-      expect(estimatedFee.effectiveTotal).toBe(7155.6);
+      expect(estimatedFee.effectivePricePerUnit.valueOf()).toBe('7155.6');
+      expect(estimatedFee.effectiveTotal.valueOf()).toBe('7155.6');
       expect(estimatedFee.feeAsset).toBe('EUR');
-      expect(estimatedFee.pricePerUnit).toBe(pricePerBTC);
-      expect(estimatedFee.totalFee).toBe(35.6);
-      expect(estimatedFee.units).toBe(amountOfBTC);
+      expect(estimatedFee.pricePerUnit.valueOf()).toBe('7120');
+      expect(estimatedFee.totalFee.valueOf()).toBe('35.6');
+      expect(estimatedFee.amount.valueOf()).toBe('1');
     });
 
     it('estimates taker fees for buy orders (1 BTC)', () => {
@@ -52,12 +52,12 @@ describe('FeeUtil', () => {
         usd_volume: null,
       };
       const estimatedFee = FeeUtil.estimateFee(amountOfBTC, pricePerBTC, orderSide, type, fee, 'EUR');
-      expect(estimatedFee.effectivePricePerUnit).toBe(7137.8);
-      expect(estimatedFee.effectiveTotal).toBe(7137.8);
+      expect(estimatedFee.effectivePricePerUnit.valueOf()).toBe('7137.8');
+      expect(estimatedFee.effectiveTotal.valueOf()).toBe('7137.8');
       expect(estimatedFee.feeAsset).toBe('EUR');
-      expect(estimatedFee.pricePerUnit).toBe(pricePerBTC);
-      expect(estimatedFee.totalFee).toBe(17.8);
-      expect(estimatedFee.units).toBe(amountOfBTC);
+      expect(estimatedFee.pricePerUnit.valueOf()).toBe('7120');
+      expect(estimatedFee.totalFee.valueOf()).toBe('17.8');
+      expect(estimatedFee.amount.valueOf()).toBe('1');
     });
 
     it('estimates maker fees for buy orders (2 BTC)', () => {
@@ -71,12 +71,12 @@ describe('FeeUtil', () => {
         usd_volume: null,
       };
       const estimatedFee = FeeUtil.estimateFee(amountOfBTC, pricePerBTC, orderSide, type, fee, 'EUR');
-      expect(estimatedFee.effectivePricePerUnit).toBe(7155.6);
-      expect(estimatedFee.effectiveTotal).toBe(14311.2);
+      expect(estimatedFee.effectivePricePerUnit.valueOf()).toBe('7155.6');
+      expect(estimatedFee.effectiveTotal.valueOf()).toBe('14311.2');
       expect(estimatedFee.feeAsset).toBe('EUR');
-      expect(estimatedFee.pricePerUnit).toBe(pricePerBTC);
-      expect(estimatedFee.totalFee).toBe(71.2);
-      expect(estimatedFee.units).toBe(amountOfBTC);
+      expect(estimatedFee.pricePerUnit.valueOf()).toBe('7120');
+      expect(estimatedFee.totalFee.valueOf()).toBe('71.2');
+      expect(estimatedFee.amount.valueOf()).toBe('2');
     });
 
     it('estimates maker fees for sell orders (1 BTC)', () => {
@@ -90,12 +90,12 @@ describe('FeeUtil', () => {
         usd_volume: null,
       };
       const estimatedFee = FeeUtil.estimateFee(amountOfBTC, pricePerBTC, orderSide, type, fee, 'EUR');
-      expect(estimatedFee.effectivePricePerUnit).toBe(7084.4);
-      expect(estimatedFee.effectiveTotal).toBe(7084.4);
+      expect(estimatedFee.effectivePricePerUnit.valueOf()).toBe('7084.4');
+      expect(estimatedFee.effectiveTotal.valueOf()).toBe('7084.4');
       expect(estimatedFee.feeAsset).toBe('EUR');
-      expect(estimatedFee.pricePerUnit).toBe(pricePerBTC);
-      expect(estimatedFee.totalFee).toBe(35.6);
-      expect(estimatedFee.units).toBe(amountOfBTC);
+      expect(estimatedFee.pricePerUnit.valueOf()).toBe('7120');
+      expect(estimatedFee.totalFee.valueOf()).toBe('35.6');
+      expect(estimatedFee.amount.valueOf()).toBe('1');
     });
   });
 });
