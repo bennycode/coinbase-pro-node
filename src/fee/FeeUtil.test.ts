@@ -13,12 +13,13 @@ describe('FeeUtil', () => {
         taker_fee_rate: '0.0050',
         usd_volume: null,
       };
-      const estimatedFee = FeeUtil.estimateFee(amountOfBTC, pricePerBTC, orderSide, type, fee);
-      expect(estimatedFee.amount).toBe(amountOfBTC);
-      expect(estimatedFee.price).toBe(pricePerBTC);
-      expect(estimatedFee.fee).toBe(7.12);
-      expect(estimatedFee.total).toBe(1431.12);
-      expect(estimatedFee.effectivePrice).toBeCloseTo(7155.6, 2);
+      const estimatedFee = FeeUtil.estimateFee(amountOfBTC, pricePerBTC, orderSide, type, fee, 'EUR');
+      expect(estimatedFee.effectivePricePerUnit).toBeCloseTo(7155.6, 2);
+      expect(estimatedFee.effectiveTotal).toBe(1431.12);
+      expect(estimatedFee.feeAsset).toBe('EUR');
+      expect(estimatedFee.pricePerUnit).toBe(pricePerBTC);
+      expect(estimatedFee.totalFee).toBe(7.12);
+      expect(estimatedFee.units).toBe(amountOfBTC);
     });
 
     it('estimates maker fees for buy orders (1 BTC)', () => {
@@ -31,12 +32,13 @@ describe('FeeUtil', () => {
         taker_fee_rate: '0.0050',
         usd_volume: null,
       };
-      const estimatedFee = FeeUtil.estimateFee(amountOfBTC, pricePerBTC, orderSide, type, fee);
-      expect(estimatedFee.amount).toBe(amountOfBTC);
-      expect(estimatedFee.price).toBe(pricePerBTC);
-      expect(estimatedFee.fee).toBe(35.6);
-      expect(estimatedFee.total).toBe(7155.6);
-      expect(estimatedFee.effectivePrice).toBe(7155.6);
+      const estimatedFee = FeeUtil.estimateFee(amountOfBTC, pricePerBTC, orderSide, type, fee, 'EUR');
+      expect(estimatedFee.effectivePricePerUnit).toBe(7155.6);
+      expect(estimatedFee.effectiveTotal).toBe(7155.6);
+      expect(estimatedFee.feeAsset).toBe('EUR');
+      expect(estimatedFee.pricePerUnit).toBe(pricePerBTC);
+      expect(estimatedFee.totalFee).toBe(35.6);
+      expect(estimatedFee.units).toBe(amountOfBTC);
     });
 
     it('estimates taker fees for buy orders (1 BTC)', () => {
@@ -49,12 +51,13 @@ describe('FeeUtil', () => {
         taker_fee_rate: '0.0025',
         usd_volume: null,
       };
-      const estimatedFee = FeeUtil.estimateFee(amountOfBTC, pricePerBTC, orderSide, type, fee);
-      expect(estimatedFee.amount).toBe(amountOfBTC);
-      expect(estimatedFee.price).toBe(pricePerBTC);
-      expect(estimatedFee.fee).toBe(17.8);
-      expect(estimatedFee.total).toBe(7137.8);
-      expect(estimatedFee.effectivePrice).toBe(7137.8);
+      const estimatedFee = FeeUtil.estimateFee(amountOfBTC, pricePerBTC, orderSide, type, fee, 'EUR');
+      expect(estimatedFee.effectivePricePerUnit).toBe(7137.8);
+      expect(estimatedFee.effectiveTotal).toBe(7137.8);
+      expect(estimatedFee.feeAsset).toBe('EUR');
+      expect(estimatedFee.pricePerUnit).toBe(pricePerBTC);
+      expect(estimatedFee.totalFee).toBe(17.8);
+      expect(estimatedFee.units).toBe(amountOfBTC);
     });
 
     it('estimates maker fees for buy orders (2 BTC)', () => {
@@ -67,12 +70,13 @@ describe('FeeUtil', () => {
         taker_fee_rate: '0.0050',
         usd_volume: null,
       };
-      const estimatedFee = FeeUtil.estimateFee(amountOfBTC, pricePerBTC, orderSide, type, fee);
-      expect(estimatedFee.amount).toBe(amountOfBTC);
-      expect(estimatedFee.price).toBe(pricePerBTC);
-      expect(estimatedFee.fee).toBe(71.2);
-      expect(estimatedFee.total).toBe(14311.2);
-      expect(estimatedFee.effectivePrice).toBe(7155.6);
+      const estimatedFee = FeeUtil.estimateFee(amountOfBTC, pricePerBTC, orderSide, type, fee, 'EUR');
+      expect(estimatedFee.effectivePricePerUnit).toBe(7155.6);
+      expect(estimatedFee.effectiveTotal).toBe(14311.2);
+      expect(estimatedFee.feeAsset).toBe('EUR');
+      expect(estimatedFee.pricePerUnit).toBe(pricePerBTC);
+      expect(estimatedFee.totalFee).toBe(71.2);
+      expect(estimatedFee.units).toBe(amountOfBTC);
     });
 
     it('estimates maker fees for sell orders (1 BTC)', () => {
@@ -85,12 +89,13 @@ describe('FeeUtil', () => {
         taker_fee_rate: '0.0050',
         usd_volume: null,
       };
-      const estimatedFee = FeeUtil.estimateFee(amountOfBTC, pricePerBTC, orderSide, type, fee);
-      expect(estimatedFee.amount).toBe(amountOfBTC);
-      expect(estimatedFee.price).toBe(pricePerBTC);
-      expect(estimatedFee.fee).toBe(35.6);
-      expect(estimatedFee.total).toBe(7084.4);
-      expect(estimatedFee.effectivePrice).toBe(7084.4);
+      const estimatedFee = FeeUtil.estimateFee(amountOfBTC, pricePerBTC, orderSide, type, fee, 'EUR');
+      expect(estimatedFee.effectivePricePerUnit).toBe(7084.4);
+      expect(estimatedFee.effectiveTotal).toBe(7084.4);
+      expect(estimatedFee.feeAsset).toBe('EUR');
+      expect(estimatedFee.pricePerUnit).toBe(pricePerBTC);
+      expect(estimatedFee.totalFee).toBe(35.6);
+      expect(estimatedFee.units).toBe(amountOfBTC);
     });
   });
 });

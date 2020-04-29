@@ -2,11 +2,18 @@ import {OrderSide, OrderType} from '..';
 import {FeeTier} from './FeeAPI';
 
 export interface EstimatedFee {
-  amount: number;
-  effectivePrice: number;
-  fee: number;
-  price: number;
-  total: number;
+  /** Price per base unit in counter value after fees. */
+  effectivePricePerUnit: number;
+  /** What needs to be paid plus fee (BUY) / what you will receive minus fee (SELL). */
+  effectiveTotal: number;
+  /** Product with which the fees are paid. */
+  feeAsset: string;
+  /** Price per base unit in counter value. */
+  pricePerUnit: number;
+  /** Total fee, usually paid in counter value. */
+  totalFee: number;
+  /** Amount of base units. */
+  units: number;
 }
 
 export class FeeUtil {
@@ -22,7 +29,8 @@ export class FeeUtil {
     counterPrice: number,
     side: OrderSide,
     type: OrderType,
-    feeTier: FeeTier
+    feeTier: FeeTier,
+    feeAsset: string
   ): EstimatedFee {
     const feeRate = FeeUtil.getFeeRate(type, feeTier);
     const amount = baseAmount;
@@ -32,11 +40,12 @@ export class FeeUtil {
     const total = side === OrderSide.BUY ? subTotal + fee : subTotal - fee;
     const effectivePrice = total / amount;
     return {
-      amount,
-      effectivePrice,
-      fee,
-      price,
-      total,
+      units: amount,
+      effectivePricePerUnit: effectivePrice,
+      totalFee: fee,
+      feeAsset,
+      pricePerUnit: price,
+      effectiveTotal: total,
     };
   }
 }
