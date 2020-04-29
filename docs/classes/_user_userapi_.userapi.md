@@ -19,7 +19,7 @@
 
 ### Object literals
 
-- [URL](_user_userapi_.userapi.md#static-url)
+- [URL](_user_userapi_.userapi.md#static-readonly-url)
 
 ## Constructors
 
@@ -27,7 +27,7 @@
 
 \+ **new UserAPI**(`apiClient`: AxiosInstance): _[UserAPI](_user_userapi_.userapi.md)_
 
-_Defined in [src/user/UserAPI.ts:17](https://github.com/bennyn/coinbase-pro-node/blob/1a12582/src/user/UserAPI.ts#L17)_
+_Defined in [src/user/UserAPI.ts:17](https://github.com/bennyn/coinbase-pro-node/blob/68f4a94/src/user/UserAPI.ts#L17)_
 
 **Parameters:**
 
@@ -43,7 +43,7 @@ _Defined in [src/user/UserAPI.ts:17](https://github.com/bennyn/coinbase-pro-node
 
 ▸ **getTrailingVolume**(): _Promise‹[TrailingVolume](../interfaces/_user_userapi_.trailingvolume.md)[]›_
 
-_Defined in [src/user/UserAPI.ts:41](https://github.com/bennyn/coinbase-pro-node/blob/1a12582/src/user/UserAPI.ts#L41)_
+_Defined in [src/user/UserAPI.ts:41](https://github.com/bennyn/coinbase-pro-node/blob/68f4a94/src/user/UserAPI.ts#L41)_
 
 This request will return your 30-day trailing volume for all products of the API key’s profile. This is a cached value that’s calculated every day at midnight UTC.
 
@@ -61,7 +61,7 @@ Your 30-day trailing volume for all products of the API key’s profile.
 
 ▸ **verifyAuthentication**(): _Promise‹[VerifiedUser](../interfaces/_user_userapi_.verifieduser.md)›_
 
-_Defined in [src/user/UserAPI.ts:27](https://github.com/bennyn/coinbase-pro-node/blob/1a12582/src/user/UserAPI.ts#L27)_
+_Defined in [src/user/UserAPI.ts:27](https://github.com/bennyn/coinbase-pro-node/blob/68f4a94/src/user/UserAPI.ts#L27)_
 
 Verify your authentication with Coinbase Pro.
 
@@ -73,14 +73,14 @@ Your account
 
 ## Object literals
 
-### `Static` URL
+### `Static` `Readonly` URL
 
 ### ▪ **URL**: _object_
 
-_Defined in [src/user/UserAPI.ts:15](https://github.com/bennyn/coinbase-pro-node/blob/1a12582/src/user/UserAPI.ts#L15)_
+_Defined in [src/user/UserAPI.ts:15](https://github.com/bennyn/coinbase-pro-node/blob/68f4a94/src/user/UserAPI.ts#L15)_
 
 ### USERS
 
 • **USERS**: _string_ = `/users`
 
-_Defined in [src/user/UserAPI.ts:16](https://github.com/bennyn/coinbase-pro-node/blob/1a12582/src/user/UserAPI.ts#L16)_
+_Defined in [src/user/UserAPI.ts:16](https://github.com/bennyn/coinbase-pro-node/blob/68f4a94/src/user/UserAPI.ts#L16)_
