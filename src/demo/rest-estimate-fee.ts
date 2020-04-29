@@ -17,7 +17,7 @@ async function main(): Promise<void> {
 
   const amount = 1;
 
-  const estimatedFee = FeeUtil.estimateFee(amount, lastClosingPrice, OrderSide.BUY, OrderType.LIMIT, feeTier);
+  const estimatedFee = FeeUtil.estimateFee(amount, lastClosingPrice, OrderSide.BUY, OrderType.LIMIT, feeTier, counter);
 
   console.info(`Buying "${amount} ${base}" would cost around "${estimatedFee.effectivePricePerUnit} ${counter}".`);
 }
