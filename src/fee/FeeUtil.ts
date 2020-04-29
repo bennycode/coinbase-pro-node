@@ -1,12 +1,20 @@
 import {OrderSide, OrderType} from '..';
 import {FeeTier} from './FeeAPI';
+import Big, {BigSource} from 'big.js';
 
 export interface EstimatedFee {
-  amount: number;
-  effectivePrice: number;
-  fee: number;
-  price: number;
-  total: number;
+  /** Amount of base units. */
+  amount: Big;
+  /** Price per base unit in counter value after fees. */
+  effectivePricePerUnit: Big;
+  /** What needs to be paid plus fee (BUY) / what you will receive minus fee (SELL). */
+  effectiveTotal: Big;
+  /** Product with which the fees are paid. */
+  feeAsset: string;
+  /** Price per base unit in counter value. */
+  pricePerUnit: Big;
+  /** Total fee, usually paid in counter value. */
+  totalFee: Big;
 }
 
 export class FeeUtil {
@@ -18,25 +26,27 @@ export class FeeUtil {
   }
 
   static estimateFee(
-    baseAmount: number,
-    counterPrice: number,
+    baseAmount: BigSource,
+    counterPrice: BigSource,
     side: OrderSide,
     type: OrderType,
-    feeTier: FeeTier
+    feeTier: FeeTier,
+    feeAsset: string
   ): EstimatedFee {
     const feeRate = FeeUtil.getFeeRate(type, feeTier);
-    const amount = baseAmount;
-    const price = counterPrice;
-    const subTotal = baseAmount * price;
-    const fee = subTotal * feeRate;
-    const total = side === OrderSide.BUY ? subTotal + fee : subTotal - fee;
-    const effectivePrice = total / amount;
+    const amount = new Big(baseAmount);
+    const pricePerUnit = new Big(counterPrice);
+    const subTotal = amount.mul(pricePerUnit);
+    const totalFee = subTotal.mul(new Big(feeRate));
+    const effectiveTotal = side === OrderSide.BUY ? subTotal.plus(totalFee) : subTotal.minus(totalFee);
+    const effectivePricePerUnit = effectiveTotal.div(amount);
     return {
       amount,
-      effectivePrice,
-      fee,
-      price,
-      total,
+      effectivePricePerUnit,
+      effectiveTotal,
+      feeAsset,
+      pricePerUnit,
+      totalFee,
     };
   }
 }
