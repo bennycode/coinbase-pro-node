@@ -1,3 +1,9 @@
+#### 2.2.2 (2020-04-29)
+
+##### Refactors
+
+- Use arbitrary-precision when estimating fees ([#161](https://github.com/bennyn/coinbase-pro-node/pull/161)) ([9613ec12](https://github.com/bennyn/coinbase-pro-node/commit/9613ec1253423f4558609a541505bef7c8486bbe))
+
 #### 2.2.1 (2020-04-28)
 
 ##### Chores
