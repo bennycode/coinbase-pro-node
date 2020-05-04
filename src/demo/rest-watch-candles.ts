@@ -10,7 +10,7 @@ async function main(): Promise<void> {
   const client = initClient();
 
   client.rest.on(ProductEvent.NEW_CANDLE, (productId: string, granularity: CandleGranularity, candle: Candle) => {
-    console.info('Recent candle', productId, granularity, candle.openTimeString);
+    console.info('Recent candle', productId, granularity, candle.openTimeInISO);
   });
 
   // 3. Get latest candle
@@ -18,7 +18,7 @@ async function main(): Promise<void> {
     granularity,
   });
   const latestCandle = candles[candles.length - 1];
-  const latestOpen = latestCandle.openTimeString;
+  const latestOpen = latestCandle.openTimeInISO;
   console.info('Initial candle', productId, granularity, latestOpen);
 
   // 4. Subscribe to upcoming candles

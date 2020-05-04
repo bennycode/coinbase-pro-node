@@ -143,18 +143,26 @@ type Timestamp = number;
 type Volume = number;
 
 export interface Candle {
+  /** ID of base asset */
+  base: string;
   /** Closing price (last trade) in the bucket interval */
   close: Close;
+  /** ID of quote asset */
+  counter: string;
   /** Highest price during the bucket interval */
   high: High;
   /** Lowest price during the bucket interval */
   low: Low;
   /** Opening price (first trade) in the bucket interval */
   open: Open;
-  /** Bucket start time converted to milliseconds (note: Coinbase Pro actually uses seconds) */
-  openTime: Timestamp;
   /** Bucket start time in simplified extended ISO 8601 format */
-  openTimeString: ISO_8601_MS_UTC;
+  openTimeInISO: ISO_8601_MS_UTC;
+  /** Bucket start time converted to milliseconds (note: Coinbase Pro actually uses seconds) */
+  openTimeInMillis: number;
+  /** Product ID / Symbol */
+  productId: string;
+  /** Candle size in milliseconds */
+  sizeInMillis: number;
   /** Volume of trading activity during the bucket interval */
   volume: Volume;
 }
@@ -195,13 +203,15 @@ export class ProductAPI {
    */
   async getCandles(productId: string, params: HistoricRateRequest): Promise<Candle[]> {
     const resource = `${ProductAPI.URL.PRODUCTS}/${productId}/candles`;
+
+    const candleSizeInMillis = params.granularity * 1000;
+    const potentialParams = params as HistoricRateRequestWithTimeSpan;
+
     let rawCandles: RawCandle[] = [];
 
-    const potentialParams = params as HistoricRateRequestWithTimeSpan;
     if (potentialParams.start && potentialParams.end) {
       const fromInMillis = new Date(potentialParams.start).getTime();
       const toInMillis = new Date(potentialParams.end).getTime();
-      const candleSizeInMillis = params.granularity * 1000;
 
       const bucketsInMillis = CandleBucketUtil.getBucketsInMillis(fromInMillis, toInMillis, candleSizeInMillis);
       const bucketsInISO = CandleBucketUtil.getBucketsInISO(bucketsInMillis);
@@ -222,7 +232,9 @@ export class ProductAPI {
       rawCandles = response.data;
     }
 
-    return rawCandles.map(this.mapCandle).sort((a, b) => a.openTime - b.openTime);
+    return rawCandles
+      .map(candle => this.mapCandle(candle, candleSizeInMillis, productId))
+      .sort((a, b) => a.openTimeInMillis - b.openTimeInMillis);
   }
 
   /**
@@ -363,16 +375,21 @@ export class ProductAPI {
     return response.data;
   }
 
-  private mapCandle(payload: number[]): Candle {
+  private mapCandle(payload: number[], sizeInMillis: number, productId: string): Candle {
     const [time, low, high, open, close, volume] = payload;
-    const openTime = time * 1000; // Map seconds to milliseconds
+    const [base, counter] = productId.split('-');
+    const openTimeInMillis = time * 1000; // Map seconds to milliseconds
     return {
+      base,
       close,
+      counter,
       high,
       low,
       open,
-      openTime,
-      openTimeString: new Date(openTime).toISOString(),
+      openTimeInISO: new Date(openTimeInMillis).toISOString(),
+      openTimeInMillis,
+      productId: productId,
+      sizeInMillis,
       volume,
     };
   }
@@ -381,8 +398,7 @@ export class ProductAPI {
     // Emit matched candle
     this.restClient.emit(ProductEvent.NEW_CANDLE, productId, granularity, candle);
     // Cache timestamp of upcoming candle
-    const {openTime} = candle;
-    const nextOpenTime = CandleBucketUtil.addUnitISO(openTime, granularity, 1);
+    const nextOpenTime = CandleBucketUtil.addUnitISO(candle.openTimeInMillis, granularity, 1);
     this.watchCandlesConfig[productId][granularity].expectedISO = nextOpenTime;
   }
 
@@ -394,7 +410,7 @@ export class ProductAPI {
       start: expectedTimestampISO,
     });
 
-    const matches = candles.filter(candle => candle.openTimeString === expectedTimestampISO);
+    const matches = candles.filter(candle => candle.openTimeInISO === expectedTimestampISO);
     if (matches.length > 0) {
       const matchedCandle = matches[0];
       this.emitCandle(productId, granularity, matchedCandle);
