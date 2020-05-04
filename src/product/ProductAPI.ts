@@ -386,10 +386,10 @@ export class ProductAPI {
       high,
       low,
       open,
-      openTimeInMillis,
       openTimeInISO: new Date(openTimeInMillis).toISOString(),
-      sizeInMillis,
+      openTimeInMillis,
       productId: productId,
+      sizeInMillis,
       volume,
     };
   }
