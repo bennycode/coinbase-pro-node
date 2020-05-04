@@ -190,17 +190,19 @@ describe('ProductAPI', () => {
       });
 
       expect(candles.length).toEqual(3);
-      expect(candles[0].openTime).toEqual(1558261140000);
-      expect(candles[1].openTime).toEqual(1558261200000);
-      expect(candles[2].openTime).toEqual(1558261260000);
+      expect(candles[0].openTimeInMillis).toEqual(1558261140000);
+      expect(candles[1].openTimeInMillis).toEqual(1558261200000);
+      expect(candles[2].openTimeInMillis).toEqual(1558261260000);
+      expect(candles[2].sizeInMillis).toEqual(60000);
     });
 
     it('sorts candles ascending by timestamp', async () => {
       const from = '2020-03-09T00:00:00.000Z';
       const to = '2020-03-15T23:59:59.999Z';
+      const productId = 'BTC-USD';
 
       nock(global.REST_URL)
-        .get(`${ProductAPI.URL.PRODUCTS}/BTC-USD/candles`)
+        .get(`${ProductAPI.URL.PRODUCTS}/${productId}/candles`)
         .query(true)
         .reply(() => {
           const min = new Date(from).getTime();
@@ -214,15 +216,21 @@ describe('ProductAPI', () => {
           return [200, JSON.stringify(data)];
         });
 
-      const candles = await global.client.rest.product.getCandles('BTC-USD', {
+      const candles = await global.client.rest.product.getCandles(productId, {
         end: to,
         granularity: CandleGranularity.ONE_HOUR,
         start: from,
       });
 
+      const firstCandle = candles[0];
+
       expect(candles.length).withContext('7 days * 24 hours = 168 hours / candles').toBe(168);
-      expect(candles[0].openTimeString).withContext('Starting time of first time slice').toBe(from);
-      expect(candles[candles.length - 1].openTimeString)
+      expect(firstCandle.sizeInMillis).withContext('Candle size').toBe(3600000);
+      expect(firstCandle.base).withContext('Base asset').toBe('BTC');
+      expect(firstCandle.counter).withContext('Quote asset').toBe('USD');
+      expect(firstCandle.productId).withContext('Product ID').toBe(productId);
+      expect(firstCandle.openTimeInISO).withContext('Starting time of first time slice').toBe(from);
+      expect(candles[candles.length - 1].openTimeInISO)
         .withContext('Starting time of last time slice')
         .toBe('2020-03-15T23:00:00.000Z');
     });
@@ -317,11 +325,11 @@ describe('ProductAPI', () => {
         .and.callFake((emittedProductId: string, emittedGranularity: CandleGranularity, candle: Candle) => {
           expect(emittedProductId).toBe(productId);
           expect(emittedGranularity).toBe(granularity);
-          const {openTimeString} = candle;
-          if (openTimeString === expectedISO) {
+          const {openTimeInISO} = candle;
+          if (openTimeInISO === expectedISO) {
             done();
           } else {
-            done.fail(`Received "${openTimeString}" but expected "${expectedISO}".`);
+            done.fail(`Received "${openTimeInISO}" but expected "${expectedISO}".`);
           }
         });
 
