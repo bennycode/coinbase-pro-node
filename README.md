@@ -6,7 +6,7 @@
 
 ## Motivation
 
-The purpose of "coinbase-pro-node" is to continue an active **Coinbase Pro API** after Coinbase deprecated the official Node.js library on [January, 16 2020](https://github.com/coinbase/coinbase-node/issues/140#issuecomment-574990136). The official predecessor got deprecated on [July, 19th 2016](https://github.com/coinbase/coinbase-exchange-node/commit/b8347efdb4e2589367c1395b646d283c9c391681).
+The purpose of [coinbase-pro-node][5] is to continue an active **Coinbase Pro API** after Coinbase deprecated the official Node.js library on [January, 16 2020](https://github.com/coinbase/coinbase-node/issues/140#issuecomment-574990136). Its predecessor got deprecated on [July, 19th 2016](https://github.com/coinbase/coinbase-exchange-node/commit/b8347efdb4e2589367c1395b646d283c9c391681).
 
 ## Features
 
@@ -53,7 +53,7 @@ const client = new CoinbasePro();
 
 The [demo section][3] provides many examples on how to use "coinbase-pro-node". There is also an automatically generated [API documentation][4]. For a quick start, here is a simple example for a REST request:
 
-**REST Example**
+### REST example
 
 ```typescript
 import {CoinbasePro} from 'coinbase-pro-node';
@@ -78,34 +78,37 @@ client.rest.account.listAccounts().then(accounts => {
 });
 ```
 
-**WebSocket Examples**
+### WebSocket example
 
 If you want to listen to WebSocket messages, have a look at these demo scripts:
 
 - [Subscribe to "ticker" channel (real-time price updates)](https://github.com/bennyn/coinbase-pro-node/blob/master/src/demo/websocket-ticker.ts)
 - [Subscribe to authenticated "user" channel](https://github.com/bennyn/coinbase-pro-node/blob/master/src/demo/websocket-user.ts)
 
-**Real World Examples**
+### Demos
 
-You can checkout [GitHub's dependency graph][6] to see who is using "coinbase-pro-node".
+All [demo scripts][3] are executable from the root directory. If you want to use specific credentials with a demo script, simply add a `.env` file to the root of this package to [modify environment variables](https://github.com/motdotla/dotenv#usage) used in [init-client.ts](https://github.com/bennyn/coinbase-pro-node/blob/master/src/demo/init-client.ts).
 
-## Resources
+```bash
+npx ts-node ./src/demo/dump-candles.ts
+```
 
-- [Coinbase Pro API Reference][2]
-- [coinbase-pro-node API docs][4]
-- [coinbase-pro-node npm page][5]
-- [coinbase-pro-node users][6]
+### Real-world examples
+
+Checkout [GitHub's dependency graph][6] to see who uses "coinbase-pro-node" in production.
 
 ## Contributing
 
 Contributions, issues and feature requests are welcome!
 
-Feel free to check [issues page](https://github.com/bennyn/coinbase-pro-node/issues).
+Feel free to check the [issues page](https://github.com/bennyn/coinbase-pro-node/issues).
 
 The following commits will help you getting started quickly with the code base:
 
 - [Add REST API endpoint](https://github.com/bennyn/coinbase-pro-node/commit/9920c2f4343985c349b68e2a47d7fe2c42e23e34)
 - [Add REST API endpoint (with fixtures)](https://github.com/bennyn/coinbase-pro-node/commit/8a150fecb7d32b7b7cd39a8109985f665aaee26e)
+
+All resources can be found in the [Coinbase Pro API reference][2].
 
 ## Maintainers
 
