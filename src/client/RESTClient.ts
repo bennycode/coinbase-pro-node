@@ -13,6 +13,7 @@ import util from 'util';
 import {EventEmitter} from 'events';
 import {getErrorMessage, gotRateLimited, inAirPlaneMode} from '../error/ErrorUtil';
 import {CurrencyAPI} from '../currency';
+import {WithdrawAPI} from '../withdraw';
 
 export interface RESTClient {
   on(
@@ -41,6 +42,7 @@ export class RESTClient extends EventEmitter {
   readonly profile: ProfileAPI;
   readonly user: UserAPI;
   readonly currency: CurrencyAPI;
+  readonly withdraw: WithdrawAPI;
 
   private readonly httpClient: AxiosInstance;
   private readonly logger: (msg: string, ...param: any[]) => void;
@@ -104,6 +106,7 @@ export class RESTClient extends EventEmitter {
     this.profile = new ProfileAPI(this.httpClient);
     this.user = new UserAPI(this.httpClient);
     this.currency = new CurrencyAPI(this.httpClient);
+    this.withdraw = new WithdrawAPI(this.httpClient);
   }
 
   static stringifyPayload(config: AxiosRequestConfig): string {
