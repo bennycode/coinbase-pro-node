@@ -22,3 +22,4 @@
 - ["profile/ProfileAPI"](modules/_profile_profileapi_.md)
 - ["time/TimeAPI"](modules/_time_timeapi_.md)
 - ["user/UserAPI"](modules/_user_userapi_.md)
+- ["withdraw/WithdrawAPI"](modules/_withdraw_withdrawapi_.md)

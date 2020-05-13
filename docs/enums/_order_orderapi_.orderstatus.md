@@ -16,7 +16,7 @@
 
 • **ACTIVE**: = "active"
 
-_Defined in [src/order/OrderAPI.ts:37](https://github.com/bennyn/coinbase-pro-node/blob/68f4a94/src/order/OrderAPI.ts#L37)_
+_Defined in [src/order/OrderAPI.ts:37](https://github.com/bennyn/coinbase-pro-node/blob/08c3f97/src/order/OrderAPI.ts#L37)_
 
 ---
 
@@ -24,7 +24,7 @@ _Defined in [src/order/OrderAPI.ts:37](https://github.com/bennyn/coinbase-pro-no
 
 • **OPEN**: = "open"
 
-_Defined in [src/order/OrderAPI.ts:38](https://github.com/bennyn/coinbase-pro-node/blob/68f4a94/src/order/OrderAPI.ts#L38)_
+_Defined in [src/order/OrderAPI.ts:38](https://github.com/bennyn/coinbase-pro-node/blob/08c3f97/src/order/OrderAPI.ts#L38)_
 
 ---
 
@@ -32,4 +32,4 @@ _Defined in [src/order/OrderAPI.ts:38](https://github.com/bennyn/coinbase-pro-no
 
 • **PENDING**: = "pending"
 
-_Defined in [src/order/OrderAPI.ts:39](https://github.com/bennyn/coinbase-pro-node/blob/68f4a94/src/order/OrderAPI.ts#L39)_
+_Defined in [src/order/OrderAPI.ts:39](https://github.com/bennyn/coinbase-pro-node/blob/08c3f97/src/order/OrderAPI.ts#L39)_

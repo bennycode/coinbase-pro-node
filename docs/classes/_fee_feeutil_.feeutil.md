@@ -19,7 +19,7 @@
 
 ▸ **estimateFee**(`baseAmount`: BigSource, `counterPrice`: BigSource, `side`: OrderSide, `type`: [OrderType](../enums/_order_orderapi_.ordertype.md), `feeTier`: [FeeTier](../interfaces/_fee_feeapi_.feetier.md), `feeAsset`: string): _[EstimatedFee](../interfaces/_fee_feeutil_.estimatedfee.md)_
 
-_Defined in [src/fee/FeeUtil.ts:28](https://github.com/bennyn/coinbase-pro-node/blob/68f4a94/src/fee/FeeUtil.ts#L28)_
+_Defined in [src/fee/FeeUtil.ts:28](https://github.com/bennyn/coinbase-pro-node/blob/08c3f97/src/fee/FeeUtil.ts#L28)_
 
 **Parameters:**
 
@@ -40,7 +40,7 @@ _Defined in [src/fee/FeeUtil.ts:28](https://github.com/bennyn/coinbase-pro-node/
 
 ▸ **getFeeRate**(`type`: [OrderType](../enums/_order_orderapi_.ordertype.md), `feeTier`: [FeeTier](../interfaces/_fee_feeapi_.feetier.md)): _number_
 
-_Defined in [src/fee/FeeUtil.ts:21](https://github.com/bennyn/coinbase-pro-node/blob/68f4a94/src/fee/FeeUtil.ts#L21)_
+_Defined in [src/fee/FeeUtil.ts:21](https://github.com/bennyn/coinbase-pro-node/blob/08c3f97/src/fee/FeeUtil.ts#L21)_
 
 **Parameters:**
 

@@ -23,7 +23,7 @@
 
 • **amount**: _Big_
 
-_Defined in [src/fee/FeeUtil.ts:7](https://github.com/bennyn/coinbase-pro-node/blob/68f4a94/src/fee/FeeUtil.ts#L7)_
+_Defined in [src/fee/FeeUtil.ts:7](https://github.com/bennyn/coinbase-pro-node/blob/08c3f97/src/fee/FeeUtil.ts#L7)_
 
 Amount of base units.
 
@@ -33,7 +33,7 @@ Amount of base units.
 
 • **effectivePricePerUnit**: _Big_
 
-_Defined in [src/fee/FeeUtil.ts:9](https://github.com/bennyn/coinbase-pro-node/blob/68f4a94/src/fee/FeeUtil.ts#L9)_
+_Defined in [src/fee/FeeUtil.ts:9](https://github.com/bennyn/coinbase-pro-node/blob/08c3f97/src/fee/FeeUtil.ts#L9)_
 
 Price per base unit in counter value after fees.
 
@@ -43,7 +43,7 @@ Price per base unit in counter value after fees.
 
 • **effectiveTotal**: _Big_
 
-_Defined in [src/fee/FeeUtil.ts:11](https://github.com/bennyn/coinbase-pro-node/blob/68f4a94/src/fee/FeeUtil.ts#L11)_
+_Defined in [src/fee/FeeUtil.ts:11](https://github.com/bennyn/coinbase-pro-node/blob/08c3f97/src/fee/FeeUtil.ts#L11)_
 
 What needs to be paid plus fee (BUY) / what you will receive minus fee (SELL).
 
@@ -53,7 +53,7 @@ What needs to be paid plus fee (BUY) / what you will receive minus fee (SELL).
 
 • **feeAsset**: _string_
 
-_Defined in [src/fee/FeeUtil.ts:13](https://github.com/bennyn/coinbase-pro-node/blob/68f4a94/src/fee/FeeUtil.ts#L13)_
+_Defined in [src/fee/FeeUtil.ts:13](https://github.com/bennyn/coinbase-pro-node/blob/08c3f97/src/fee/FeeUtil.ts#L13)_
 
 Product with which the fees are paid.
 
@@ -63,7 +63,7 @@ Product with which the fees are paid.
 
 • **pricePerUnit**: _Big_
 
-_Defined in [src/fee/FeeUtil.ts:15](https://github.com/bennyn/coinbase-pro-node/blob/68f4a94/src/fee/FeeUtil.ts#L15)_
+_Defined in [src/fee/FeeUtil.ts:15](https://github.com/bennyn/coinbase-pro-node/blob/08c3f97/src/fee/FeeUtil.ts#L15)_
 
 Price per base unit in counter value.
 
@@ -73,6 +73,6 @@ Price per base unit in counter value.
 
 • **totalFee**: _Big_
 
-_Defined in [src/fee/FeeUtil.ts:17](https://github.com/bennyn/coinbase-pro-node/blob/68f4a94/src/fee/FeeUtil.ts#L17)_
+_Defined in [src/fee/FeeUtil.ts:17](https://github.com/bennyn/coinbase-pro-node/blob/08c3f97/src/fee/FeeUtil.ts#L17)_
 
 Total fee, usually paid in counter value.
