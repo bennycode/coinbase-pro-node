@@ -1,3 +1,27 @@
+### 2.3.0 (2020-05-13)
+
+##### Chores
+
+- **deps:**
+  - yarn upgrade --latest [ci skip](<[636f9520](https://github.com/bennyn/coinbase-pro-node/commit/636f952092f38418bdd0f047ea64187856a860af)>)
+  - bump ws from 7.2.5 to 7.3.0 ([#169](https://github.com/bennyn/coinbase-pro-node/pull/169)) ([dd5d71fa](https://github.com/bennyn/coinbase-pro-node/commit/dd5d71fa280b8ad7df8f6e6a3ae5932889e5d41a))
+- **deps-dev:**
+  - bump @typescript-eslint/parser from 2.30.0 to 2.31.0 ([#170](https://github.com/bennyn/coinbase-pro-node/pull/170)) ([df08dbe9](https://github.com/bennyn/coinbase-pro-node/commit/df08dbe90876866a21c5d8f012f3244ad97a8126))
+  - bump @typescript-eslint/eslint-plugin ([#168](https://github.com/bennyn/coinbase-pro-node/pull/168)) ([886a8507](https://github.com/bennyn/coinbase-pro-node/commit/886a8507e8b444e9b286ffd0b98b90060aca53b8))
+  - bump @typescript-eslint/eslint-plugin ([#163](https://github.com/bennyn/coinbase-pro-node/pull/163)) ([a41d0bbb](https://github.com/bennyn/coinbase-pro-node/commit/a41d0bbb721f66d77e0adf1ccb2d8721d9e5565c))
+  - bump ts-node from 8.9.1 to 8.10.1 ([#165](https://github.com/bennyn/coinbase-pro-node/pull/165)) ([4b77d9cc](https://github.com/bennyn/coinbase-pro-node/commit/4b77d9ccd92f4519bdb243d0af414c2fc49b93e8))
+  - bump lint-staged from 10.1.7 to 10.2.2 ([#164](https://github.com/bennyn/coinbase-pro-node/pull/164)) ([0bc564c7](https://github.com/bennyn/coinbase-pro-node/commit/0bc564c75cc49929793b9a52f48ba08de529dd4f))
+  - bump @typescript-eslint/parser from 2.29.0 to 2.30.0 ([#162](https://github.com/bennyn/coinbase-pro-node/pull/162)) ([55527436](https://github.com/bennyn/coinbase-pro-node/commit/55527436e1f942929ec55d1b09439779d023f332))
+
+##### Documentation Changes
+
+- Explain demo scripts ([#167](https://github.com/bennyn/coinbase-pro-node/pull/167)) ([86fe9a68](https://github.com/bennyn/coinbase-pro-node/commit/86fe9a683a9d0ff478ba46d96f13ebea878a4895))
+
+##### New Features
+
+- Withdraw funds to a crypto address ([#171](https://github.com/bennyn/coinbase-pro-node/pull/171)) ([a3c36e7b](https://github.com/bennyn/coinbase-pro-node/commit/a3c36e7bc0e03d47a104158622862a80fbc75237))
+- Extend candle info with base, counter and size ([#166](https://github.com/bennyn/coinbase-pro-node/pull/166)) ([ea0f8cc3](https://github.com/bennyn/coinbase-pro-node/commit/ea0f8cc348d0e9f084fd87894f5c0c59a3fb6a84))
+
 #### 2.2.2 (2020-04-29)
 
 ##### Refactors
