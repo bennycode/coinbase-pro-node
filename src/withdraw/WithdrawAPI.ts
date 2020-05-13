@@ -6,6 +6,14 @@ export interface CryptoWithdrawal {
   id: string;
 }
 
+interface CryptoWithdrawalRequest {
+  amount: number;
+  crypto_address: string;
+  currency: string;
+  destination_tag?: string;
+  no_destination_tag?: boolean;
+}
+
 export class WithdrawAPI {
   static readonly URL = {
     WITHDRAWALS: {
@@ -31,7 +39,7 @@ export class WithdrawAPI {
     destinationTag?: string
   ): Promise<CryptoWithdrawal> {
     const resource = WithdrawAPI.URL.WITHDRAWALS.CRYPTO;
-    const withdrawal: any = {amount, crypto_address: cryptoAddress, currency};
+    const withdrawal: CryptoWithdrawalRequest = {amount, crypto_address: cryptoAddress, currency};
     if (destinationTag) {
       withdrawal.destination_tag = destinationTag;
     } else {
