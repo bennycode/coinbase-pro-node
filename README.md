@@ -95,7 +95,7 @@ npx ts-node ./src/demo/dump-candles.ts
 
 ### Real-world examples
 
-Checkout [GitHub's dependency graph][6] to see who uses "coinbase-pro-node" in production.
+Checkout [GitHub's dependency graph][6] to see who uses "coinbase-pro-node" in production. There are also [npm packages][7] depending on "coinbase-pro-node".
 
 ## Contributing
 
@@ -128,5 +128,6 @@ Give a ⭐️ if this project helped you!
 [4]: https://benny.work/coinbase-pro-node
 [5]: https://www.npmjs.com/package/coinbase-pro-node
 [6]: https://github.com/bennyn/coinbase-pro-node/network/dependents
+[7]: https://www.npmjs.com/browse/depended/coinbase-pro-node
 [stack_exchange_bennyn_badge]: https://stackexchange.com/users/flair/203782.png?theme=default
 [stack_exchange_bennyn_url]: https://stackexchange.com/users/203782/benny-neugebauer?tab=accounts
