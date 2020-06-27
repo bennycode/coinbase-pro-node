@@ -1,21 +1,6 @@
-import {OrderSide, OrderType} from '..';
-import {FeeTier} from './FeeAPI';
+import {FeeEstimate, OrderSide, OrderType} from '..';
+import {FeeTier} from '.';
 import Big, {BigSource} from 'big.js';
-
-export interface EstimatedFee {
-  /** Amount of base units. */
-  amount: Big;
-  /** Price per base unit in counter value after fees. */
-  effectivePricePerUnit: Big;
-  /** What needs to be paid plus fee (BUY) / what you will receive minus fee (SELL). */
-  effectiveTotal: Big;
-  /** Product with which the fees are paid. */
-  feeAsset: string;
-  /** Price per base unit in counter value. */
-  pricePerUnit: Big;
-  /** Total fee, usually paid in counter value. */
-  totalFee: Big;
-}
 
 export class FeeUtil {
   static getFeeRate(type: OrderType, feeTier: FeeTier): number {
@@ -25,6 +10,17 @@ export class FeeUtil {
     return parseFloat(feeTier.maker_fee_rate);
   }
 
+  /**
+   * Calculate the fee which must be paid (mostly deducted from the revenues) when selling or buying a product.
+   *
+   * @param baseAmount - Amount you want to buy or sell
+   * @param counterPrice - Price on Coinbase Pro
+   * @param side - Whether you want to buy or sell
+   * @param type - Type of order which is used to determine fees (maker or taker)
+   * @param feeTier - Your account's fee tier
+   * @param feeAsset - Currency in which the fee should be paid
+   * @returns Estimated fee details
+   */
   static estimateFee(
     baseAmount: BigSource,
     counterPrice: BigSource,
@@ -32,21 +28,25 @@ export class FeeUtil {
     type: OrderType,
     feeTier: FeeTier,
     feeAsset: string
-  ): EstimatedFee {
-    const feeRate = FeeUtil.getFeeRate(type, feeTier);
+  ): FeeEstimate {
     const amount = new Big(baseAmount);
     const pricePerUnit = new Big(counterPrice);
+
     const subTotal = amount.mul(pricePerUnit);
+    const feeRate = FeeUtil.getFeeRate(type, feeTier);
     const totalFee = subTotal.mul(new Big(feeRate));
+
     const effectiveTotal = side === OrderSide.BUY ? subTotal.plus(totalFee) : subTotal.minus(totalFee);
     const effectivePricePerUnit = effectiveTotal.div(amount);
-    return {
+
+    return new FeeEstimate({
       amount,
       effectivePricePerUnit,
       effectiveTotal,
       feeAsset,
       pricePerUnit,
+      total: subTotal,
       totalFee,
-    };
+    });
   }
 }
