@@ -114,6 +114,7 @@ describe('FeeUtil', () => {
       const counter = 'BTC';
 
       const estimatedFee = FeeUtil.estimateFee(dashAmount, price, side, type, tier, counter);
+      // When buying, you pay more than you get (because of fees)
       expect(estimatedFee.effectivePricePerUnit.gt(estimatedFee.pricePerUnit)).toBeTrue();
 
       const fee = estimatedFee.toJSON();
@@ -140,6 +141,8 @@ describe('FeeUtil', () => {
       const counter = 'EUR';
 
       const estimatedFee = FeeUtil.estimateFee(btcAmount, price, side, type, tier, counter);
+      // When selling, you get less than you ask for (because of fees)
+      expect(estimatedFee.effectivePricePerUnit.lt(estimatedFee.pricePerUnit)).toBeTrue();
 
       // The order's "size"
       expect(estimatedFee.amount.toFixed(8)).toBe(btcAmount);
