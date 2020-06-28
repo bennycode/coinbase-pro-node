@@ -11,7 +11,7 @@ export class FeeUtil {
   }
 
   /**
-   * Calculate the fee which must be paid (mostly deducted from the revenues) when selling or buying a product.
+   * Calculate the fee which must be paid (often deducted from the revenues) when selling or buying a product.
    *
    * @param baseAmount - Amount you want to buy or sell
    * @param counterPrice - Price on Coinbase Pro
