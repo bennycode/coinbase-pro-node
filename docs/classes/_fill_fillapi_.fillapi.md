@@ -27,7 +27,7 @@
 
 \+ **new FillAPI**(`apiClient`: AxiosInstance): _[FillAPI](_fill_fillapi_.fillapi.md)_
 
-_Defined in [src/fill/FillAPI.ts:28](https://github.com/bennyn/coinbase-pro-node/blob/08c3f97/src/fill/FillAPI.ts#L28)_
+_Defined in [src/fill/FillAPI.ts:28](https://github.com/bennyn/coinbase-pro-node/blob/b48d104/src/fill/FillAPI.ts#L28)_
 
 **Parameters:**
 
@@ -43,7 +43,7 @@ _Defined in [src/fill/FillAPI.ts:28](https://github.com/bennyn/coinbase-pro-node
 
 ▸ **getFillsByOrderId**(`orderId`: string, `pagination?`: Pagination): _Promise‹object›_
 
-_Defined in [src/fill/FillAPI.ts:40](https://github.com/bennyn/coinbase-pro-node/blob/08c3f97/src/fill/FillAPI.ts#L40)_
+_Defined in [src/fill/FillAPI.ts:40](https://github.com/bennyn/coinbase-pro-node/blob/b48d104/src/fill/FillAPI.ts#L40)_
 
 Get a list of recent fills for a given Order of the API key's profile.
 
@@ -66,7 +66,7 @@ Get a list of recent fills for a given Order of the API key's profile.
 
 ▸ **getFillsByProductId**(`productId`: string, `pagination?`: Pagination): _Promise‹object›_
 
-_Defined in [src/fill/FillAPI.ts:63](https://github.com/bennyn/coinbase-pro-node/blob/08c3f97/src/fill/FillAPI.ts#L63)_
+_Defined in [src/fill/FillAPI.ts:63](https://github.com/bennyn/coinbase-pro-node/blob/b48d104/src/fill/FillAPI.ts#L63)_
 
 Get a list of recent fills for a given Product of the API key's profile.
 
@@ -89,10 +89,10 @@ Get a list of recent fills for a given Product of the API key's profile.
 
 ### ▪ **URL**: _object_
 
-_Defined in [src/fill/FillAPI.ts:26](https://github.com/bennyn/coinbase-pro-node/blob/08c3f97/src/fill/FillAPI.ts#L26)_
+_Defined in [src/fill/FillAPI.ts:26](https://github.com/bennyn/coinbase-pro-node/blob/b48d104/src/fill/FillAPI.ts#L26)_
 
 ### FILLS
 
 • **FILLS**: _string_ = `/fills`
 
-_Defined in [src/fill/FillAPI.ts:27](https://github.com/bennyn/coinbase-pro-node/blob/08c3f97/src/fill/FillAPI.ts#L27)_
+_Defined in [src/fill/FillAPI.ts:27](https://github.com/bennyn/coinbase-pro-node/blob/b48d104/src/fill/FillAPI.ts#L27)_

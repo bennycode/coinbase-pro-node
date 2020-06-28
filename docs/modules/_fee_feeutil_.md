@@ -7,7 +7,3 @@
 ### Classes
 
 - [FeeUtil](../classes/_fee_feeutil_.feeutil.md)
-
-### Interfaces
-
-- [EstimatedFee](../interfaces/_fee_feeutil_.estimatedfee.md)

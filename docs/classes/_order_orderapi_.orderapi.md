@@ -29,7 +29,7 @@
 
 \+ **new OrderAPI**(`apiClient`: AxiosInstance): _[OrderAPI](_order_orderapi_.orderapi.md)_
 
-_Defined in [src/order/OrderAPI.ts:63](https://github.com/bennyn/coinbase-pro-node/blob/08c3f97/src/order/OrderAPI.ts#L63)_
+_Defined in [src/order/OrderAPI.ts:102](https://github.com/bennyn/coinbase-pro-node/blob/b48d104/src/order/OrderAPI.ts#L102)_
 
 **Parameters:**
 
@@ -45,7 +45,7 @@ _Defined in [src/order/OrderAPI.ts:63](https://github.com/bennyn/coinbase-pro-no
 
 ▸ **cancelOpenOrders**(`productId?`: undefined | string): _Promise‹string[]›_
 
-_Defined in [src/order/OrderAPI.ts:74](https://github.com/bennyn/coinbase-pro-node/blob/08c3f97/src/order/OrderAPI.ts#L74)_
+_Defined in [src/order/OrderAPI.ts:113](https://github.com/bennyn/coinbase-pro-node/blob/b48d104/src/order/OrderAPI.ts#L113)_
 
 Cancel a previously placed order. Order must belong to the profile that the API key belongs to. If no product is specified, all open orders from the profile that the API key belongs to will be canceled.
 
@@ -65,7 +65,7 @@ Cancel a previously placed order. Order must belong to the profile that the API 
 
 ▸ **getOpenOrders**(`pagination?`: Pagination): _Promise‹object›_
 
-_Defined in [src/order/OrderAPI.ts:90](https://github.com/bennyn/coinbase-pro-node/blob/08c3f97/src/order/OrderAPI.ts#L90)_
+_Defined in [src/order/OrderAPI.ts:129](https://github.com/bennyn/coinbase-pro-node/blob/b48d104/src/order/OrderAPI.ts#L129)_
 
 List your current open orders from the profile that the API key belongs to. Only open or un-settled orders are returned. As soon as an order is no longer open and settled, it will no longer appear in the default request.
 
@@ -83,9 +83,9 @@ List your current open orders from the profile that the API key belongs to. Only
 
 ### getOrder
 
-▸ **getOrder**(`orderId`: string): _Promise‹[Order](../interfaces/_order_orderapi_.order.md) | null›_
+▸ **getOrder**(`orderId`: string): _Promise‹[Order](../modules/_order_orderapi_.md#order) | null›_
 
-_Defined in [src/order/OrderAPI.ts:110](https://github.com/bennyn/coinbase-pro-node/blob/08c3f97/src/order/OrderAPI.ts#L110)_
+_Defined in [src/order/OrderAPI.ts:149](https://github.com/bennyn/coinbase-pro-node/blob/b48d104/src/order/OrderAPI.ts#L149)_
 
 Get a single order by order id from the profile that the API key belongs to.
 
@@ -97,15 +97,15 @@ Get a single order by order id from the profile that the API key belongs to.
 | --------- | ------ | ----------------------------- |
 | `orderId` | string | ID of previously placed order |
 
-**Returns:** _Promise‹[Order](../interfaces/_order_orderapi_.order.md) | null›_
+**Returns:** _Promise‹[Order](../modules/_order_orderapi_.md#order) | null›_
 
 ---
 
 ### placeOrder
 
-▸ **placeOrder**(`newOrder`: [NewOrder](../interfaces/_order_orderapi_.neworder.md)): _Promise‹[Order](../interfaces/_order_orderapi_.order.md)›_
+▸ **placeOrder**(`newOrder`: [NewOrder](../modules/_order_orderapi_.md#neworder)): _Promise‹[Order](../modules/_order_orderapi_.md#order)›_
 
-_Defined in [src/order/OrderAPI.ts:135](https://github.com/bennyn/coinbase-pro-node/blob/08c3f97/src/order/OrderAPI.ts#L135)_
+_Defined in [src/order/OrderAPI.ts:174](https://github.com/bennyn/coinbase-pro-node/blob/b48d104/src/order/OrderAPI.ts#L174)_
 
 You can place two types of orders: limit and market. Orders can only be placed if your account has sufficient funds. Once an order is placed, your account funds will be put on hold for the duration of the order.
 
@@ -113,11 +113,11 @@ You can place two types of orders: limit and market. Orders can only be placed i
 
 **Parameters:**
 
-| Name       | Type                                                   | Description               |
-| ---------- | ------------------------------------------------------ | ------------------------- |
-| `newOrder` | [NewOrder](../interfaces/_order_orderapi_.neworder.md) | Order type and parameters |
+| Name       | Type                                                | Description               |
+| ---------- | --------------------------------------------------- | ------------------------- |
+| `newOrder` | [NewOrder](../modules/_order_orderapi_.md#neworder) | Order type and parameters |
 
-**Returns:** _Promise‹[Order](../interfaces/_order_orderapi_.order.md)›_
+**Returns:** _Promise‹[Order](../modules/_order_orderapi_.md#order)›_
 
 ## Object literals
 
@@ -125,10 +125,10 @@ You can place two types of orders: limit and market. Orders can only be placed i
 
 ### ▪ **URL**: _object_
 
-_Defined in [src/order/OrderAPI.ts:61](https://github.com/bennyn/coinbase-pro-node/blob/08c3f97/src/order/OrderAPI.ts#L61)_
+_Defined in [src/order/OrderAPI.ts:100](https://github.com/bennyn/coinbase-pro-node/blob/b48d104/src/order/OrderAPI.ts#L100)_
 
 ### ORDERS
 
 • **ORDERS**: _string_ = `/orders`
 
-_Defined in [src/order/OrderAPI.ts:62](https://github.com/bennyn/coinbase-pro-node/blob/08c3f97/src/order/OrderAPI.ts#L62)_
+_Defined in [src/order/OrderAPI.ts:101](https://github.com/bennyn/coinbase-pro-node/blob/b48d104/src/order/OrderAPI.ts#L101)_

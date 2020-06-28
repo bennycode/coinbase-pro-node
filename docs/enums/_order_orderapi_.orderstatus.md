@@ -7,6 +7,7 @@
 ### Enumeration members
 
 - [ACTIVE](_order_orderapi_.orderstatus.md#active)
+- [DONE](_order_orderapi_.orderstatus.md#done)
 - [OPEN](_order_orderapi_.orderstatus.md#open)
 - [PENDING](_order_orderapi_.orderstatus.md#pending)
 
@@ -16,7 +17,15 @@
 
 • **ACTIVE**: = "active"
 
-_Defined in [src/order/OrderAPI.ts:37](https://github.com/bennyn/coinbase-pro-node/blob/08c3f97/src/order/OrderAPI.ts#L37)_
+_Defined in [src/order/OrderAPI.ts:79](https://github.com/bennyn/coinbase-pro-node/blob/b48d104/src/order/OrderAPI.ts#L79)_
+
+---
+
+### DONE
+
+• **DONE**: = "done"
+
+_Defined in [src/order/OrderAPI.ts:80](https://github.com/bennyn/coinbase-pro-node/blob/b48d104/src/order/OrderAPI.ts#L80)_
 
 ---
 
@@ -24,7 +33,7 @@ _Defined in [src/order/OrderAPI.ts:37](https://github.com/bennyn/coinbase-pro-no
 
 • **OPEN**: = "open"
 
-_Defined in [src/order/OrderAPI.ts:38](https://github.com/bennyn/coinbase-pro-node/blob/08c3f97/src/order/OrderAPI.ts#L38)_
+_Defined in [src/order/OrderAPI.ts:81](https://github.com/bennyn/coinbase-pro-node/blob/b48d104/src/order/OrderAPI.ts#L81)_
 
 ---
 
@@ -32,4 +41,4 @@ _Defined in [src/order/OrderAPI.ts:38](https://github.com/bennyn/coinbase-pro-no
 
 • **PENDING**: = "pending"
 
-_Defined in [src/order/OrderAPI.ts:39](https://github.com/bennyn/coinbase-pro-node/blob/08c3f97/src/order/OrderAPI.ts#L39)_
+_Defined in [src/order/OrderAPI.ts:82](https://github.com/bennyn/coinbase-pro-node/blob/b48d104/src/order/OrderAPI.ts#L82)_
