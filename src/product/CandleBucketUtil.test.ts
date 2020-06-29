@@ -153,7 +153,7 @@ describe('CandleBucketUtil', () => {
     });
   });
 
-  describe('getMax', () => {
+  describe('getMaxPrice', () => {
     it('gets the maximum closing price by default', () => {
       const maximum = CandleBucketUtil.getMaxPrice(oneWeekInMinutes);
       expect(maximum).toBe(10519.83);
@@ -165,7 +165,7 @@ describe('CandleBucketUtil', () => {
     });
   });
 
-  describe('getMin', () => {
+  describe('getMinPrice', () => {
     it('gets the minimum closing price by default', () => {
       const maximum = CandleBucketUtil.getMinPrice(oneWeekInMinutes);
       expect(maximum).toBe(9626);
