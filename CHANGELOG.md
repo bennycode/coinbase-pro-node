@@ -1,3 +1,13 @@
+### 2.5.0 (2020-06-29)
+
+##### Chores
+
+- **deps-dev:** bump typedoc from 0.17.7 to 0.17.8 ([#194](https://github.com/bennyn/coinbase-pro-node/pull/194)) ([d1965001](https://github.com/bennyn/coinbase-pro-node/commit/d196500156948f26ca7f714374973e80425fd72c))
+
+##### New Features
+
+- Get minimum and maximum candle prices ([#195](https://github.com/bennyn/coinbase-pro-node/pull/195)) ([bdca39d2](https://github.com/bennyn/coinbase-pro-node/commit/bdca39d26bb40a5a063eeb6d7ab60352d021e240))
+
 ### 2.4.0 (2020-06-28)
 
 ##### Chores
