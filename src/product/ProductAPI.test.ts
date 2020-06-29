@@ -309,7 +309,6 @@ describe('ProductAPI', () => {
       const updateInterval = 60000;
       const expectedISO = '2020-03-09T00:00:00.000Z';
 
-      // Simulate something not matching
       nock(global.REST_URL)
         .get(`${ProductAPI.URL.PRODUCTS}/${productId}/candles`)
         .query(true)
@@ -320,22 +319,22 @@ describe('ProductAPI', () => {
         .query(true)
         .reply(200, JSON.stringify(CandlesBTCUSD));
 
-      const onNewCandle = jasmine
-        .createSpy('onNewCandle')
-        .and.callFake((emittedProductId: string, emittedGranularity: CandleGranularity, candle: Candle) => {
+      global.client.rest.on(
+        ProductEvent.NEW_CANDLE,
+        (emittedProductId: string, emittedGranularity: CandleGranularity, candle: Candle) => {
           expect(emittedProductId).toBe(productId);
           expect(emittedGranularity).toBe(granularity);
           const {openTimeInISO} = candle;
           if (openTimeInISO === expectedISO) {
             done();
           } else {
-            done.fail(`Received "${openTimeInISO}" but expected "${expectedISO}".`);
+            fail(`Received "${openTimeInISO}" but expected "${expectedISO}".`);
           }
-        });
-
-      global.client.rest.on(ProductEvent.NEW_CANDLE, onNewCandle);
+        }
+      );
 
       global.client.rest.product.watchCandles(productId, granularity, '2020-03-08T23:00:00.000Z');
+
       jasmine.clock().tick(updateInterval);
       jasmine.clock().tick(updateInterval);
     });
