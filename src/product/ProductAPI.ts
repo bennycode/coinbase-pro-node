@@ -72,9 +72,9 @@ export interface BaseHistoricRateRequest {
 }
 
 export interface HistoricRateRequestWithTimeSpan extends BaseHistoricRateRequest {
-  /** Opening time (ISO 8601) of last candle, i.e. "2020-03-15T23:59:59.999Z" */
+  /** Opening time (ISO 8601) of last candle, i.e. "2020-04-28T23:00:00.000Z" */
   end: ISO_8601_MS_UTC;
-  /** Opening time (ISO 8601) of first candle, i.e. "2020-03-09T00:00:00.000Z" */
+  /** Opening time (ISO 8601) of first candle, i.e. "2020-04-28T00:00:00.000Z" */
   start: ISO_8601_MS_UTC;
 }
 
