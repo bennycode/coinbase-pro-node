@@ -44,7 +44,8 @@
   },
   "files": [
     "dist",
-    "!/dist/demo"
+    "!/dist/demo",
+    "!/dist/test"
   ],
   "homepage": "https://benny.work/coinbase-pro-node",
   "keywords": [
