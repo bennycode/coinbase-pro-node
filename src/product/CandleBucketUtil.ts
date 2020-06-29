@@ -10,12 +10,12 @@ export interface CandleBatchBucket {
 }
 
 export class CandleBucketUtil {
-  static getMin(candles: Candle[], property: 'close' | 'high' | 'low' | 'open' = 'close'): number {
+  static getMinPrice(candles: Candle[], property: 'close' | 'high' | 'low' | 'open' = 'close'): number {
     const values: number[] = candles.map(candle => candle[property]);
     return Math.min(...values);
   }
 
-  static getMax(candles: Candle[], property: 'close' | 'high' | 'low' | 'open' = 'close'): number {
+  static getMaxPrice(candles: Candle[], property: 'close' | 'high' | 'low' | 'open' = 'close'): number {
     const values: number[] = candles.map(candle => candle[property]);
     return Math.max(...values);
   }

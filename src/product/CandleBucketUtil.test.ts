@@ -155,24 +155,24 @@ describe('CandleBucketUtil', () => {
 
   describe('getMax', () => {
     it('gets the maximum closing price by default', () => {
-      const maximum = CandleBucketUtil.getMax(oneWeekInMinutes);
+      const maximum = CandleBucketUtil.getMaxPrice(oneWeekInMinutes);
       expect(maximum).toBe(10519.83);
     });
 
     it('gets the maximum opening price', () => {
-      const maximum = CandleBucketUtil.getMax(oneWeekInMinutes, 'open');
+      const maximum = CandleBucketUtil.getMaxPrice(oneWeekInMinutes, 'open');
       expect(maximum).toBe(10519.84);
     });
   });
 
   describe('getMin', () => {
     it('gets the minimum closing price by default', () => {
-      const maximum = CandleBucketUtil.getMin(oneWeekInMinutes);
+      const maximum = CandleBucketUtil.getMinPrice(oneWeekInMinutes);
       expect(maximum).toBe(9626);
     });
 
     it('gets the minimum opening price', () => {
-      const maximum = CandleBucketUtil.getMin(oneWeekInMinutes, 'open');
+      const maximum = CandleBucketUtil.getMinPrice(oneWeekInMinutes, 'open');
       expect(maximum).toBe(9625.99);
     });
   });
