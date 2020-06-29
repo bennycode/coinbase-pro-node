@@ -1,4 +1,4 @@
-import {CandleGranularity} from '.';
+import {Candle, CandleGranularity} from '.';
 import {ISO_8601_MS_UTC} from '..';
 
 /** The maximum number of data points for a single historic rates API request on Coinbase Pro is 300 candles: https://docs.pro.coinbase.com/#get-historic-rates */
@@ -10,6 +10,16 @@ export interface CandleBatchBucket {
 }
 
 export class CandleBucketUtil {
+  static getMin(candles: Candle[], property: 'close' | 'high' | 'low' | 'open' = 'close'): number {
+    const values: number[] = candles.map(candle => candle[property]);
+    return Math.min(...values);
+  }
+
+  static getMax(candles: Candle[], property: 'close' | 'high' | 'low' | 'open' = 'close'): number {
+    const values: number[] = candles.map(candle => candle[property]);
+    return Math.max(...values);
+  }
+
   static addUnitMillis(openTime: number | string, granularity: CandleGranularity, amount: number): number {
     const granularityInMs = granularity * 1000;
     const units = amount * granularityInMs;

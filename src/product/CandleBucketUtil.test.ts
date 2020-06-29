@@ -1,6 +1,11 @@
 import {CandleBucketUtil, CandleGranularity} from '.';
+import oneWeekInMinutes from '../test/fixtures/rest/products/BTC-USD/candles/BTC-USD-1581292800000-60.json';
 
 describe('CandleBucketUtil', () => {
+  beforeAll(() => {
+    expect(oneWeekInMinutes.length).toBe(10080);
+  });
+
   describe('getIntervals', () => {
     it('returns valid granularity values as numbers', () => {
       const expected = [60, 300, 900, 3600, 21600, 86400];
@@ -145,6 +150,30 @@ describe('CandleBucketUtil', () => {
           stop: '2020-01-01T00:00:00.000Z',
         },
       ]);
+    });
+  });
+
+  describe('getMax', () => {
+    it('gets the maximum closing price by default', () => {
+      const maximum = CandleBucketUtil.getMax(oneWeekInMinutes);
+      expect(maximum).toBe(10519.83);
+    });
+
+    it('gets the maximum opening price', () => {
+      const maximum = CandleBucketUtil.getMax(oneWeekInMinutes, 'open');
+      expect(maximum).toBe(10519.84);
+    });
+  });
+
+  describe('getMin', () => {
+    it('gets the minimum closing price by default', () => {
+      const maximum = CandleBucketUtil.getMin(oneWeekInMinutes);
+      expect(maximum).toBe(9626);
+    });
+
+    it('gets the minimum opening price', () => {
+      const maximum = CandleBucketUtil.getMin(oneWeekInMinutes, 'open');
+      expect(maximum).toBe(9625.99);
     });
   });
 });
