@@ -309,15 +309,12 @@ describe('ProductAPI', () => {
       const updateInterval = 60000;
       const expectedISO = '2020-03-09T00:00:00.000Z';
 
-      nock(global.REST_URL)
-        .get(`${ProductAPI.URL.PRODUCTS}/${productId}/candles`)
-        .query(true)
-        .reply(200, JSON.stringify([]));
+      const responses = [JSON.stringify([]), JSON.stringify(CandlesBTCUSD)];
 
       nock(global.REST_URL)
         .get(`${ProductAPI.URL.PRODUCTS}/${productId}/candles`)
         .query(true)
-        .reply(200, JSON.stringify(CandlesBTCUSD));
+        .reply(() => [200, responses.shift()]);
 
       global.client.rest.on(
         ProductEvent.NEW_CANDLE,
