@@ -312,6 +312,7 @@ describe('ProductAPI', () => {
       const responses = [JSON.stringify([]), JSON.stringify(CandlesBTCUSD)];
 
       nock(global.REST_URL)
+        .persist(true)
         .get(`${ProductAPI.URL.PRODUCTS}/${productId}/candles`)
         .query(true)
         .reply(() => [200, responses.shift()]);
