@@ -22,5 +22,6 @@
 - ["product/ProductAPI"](modules/_product_productapi_.md)
 - ["profile/ProfileAPI"](modules/_profile_profileapi_.md)
 - ["time/TimeAPI"](modules/_time_timeapi_.md)
+- ["transfer/TransferAPI"](modules/_transfer_transferapi_.md)
 - ["user/UserAPI"](modules/_user_userapi_.md)
 - ["withdraw/WithdrawAPI"](modules/_withdraw_withdrawapi_.md)
