@@ -1,5 +1,5 @@
 import {getErrorMessage, gotRateLimited, inAirPlaneMode} from './ErrorUtil';
-import type {AxiosError} from 'axios';
+import {AxiosError} from 'axios';
 
 describe('ErrorUtil', () => {
   describe('inAirPlaneMode', () => {

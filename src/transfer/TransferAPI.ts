@@ -48,13 +48,14 @@ export class TransferAPI {
     pagination?: Pagination
   ): Promise<{data: TransferInformation[]; pagination: {after?: string; before?: string}}> {
     const resource = TransferAPI.URL.TRANSFERS;
-    const response = await this.apiClient.get<TransferInformation[]>(resource, {
-      params: {
-        ...pagination,
-        profile_id: profileId ? profileId : null,
-        type: transferType,
-      },
-    });
+    const params: any = {
+      ...pagination,
+      type: transferType,
+    };
+    if (profileId) {
+      params.profile_id = profileId;
+    }
+    const response = await this.apiClient.get<TransferInformation[]>(resource, {params});
     return {
       data: response.data,
       pagination: {
