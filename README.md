@@ -87,11 +87,13 @@ If you want to listen to WebSocket messages, have a look at these demo scripts:
 
 ### Demos
 
-All [demo scripts][3] are executable from the root directory. If you want to use specific credentials with a demo script, simply add a `.env` file to the root of this package to [modify environment variables](https://github.com/motdotla/dotenv#usage) used in [init-client.ts](https://github.com/bennyn/coinbase-pro-node/blob/master/src/demo/init-client.ts).
+All [demo scripts][3] are executable from the root directory. If you want to use specific credentials with a demo script, simply add a `.env` file to the root of this package to [modify environment variables](https://github.com/motdotla/dotenv/tree/v8.2.0#usage) used in [init-client.ts](https://github.com/bennyn/coinbase-pro-node/blob/master/src/demo/init-client.ts).
 
 ```bash
 npx ts-node ./src/demo/dump-candles.ts
 ```
+
+**Tip:** There is a [.env.defaults](https://github.com/bennyn/coinbase-pro-node/blob/master/.env.defaults) file which serves as a template. Just remove its `.defaults` extension and enter your credentials to get started. Do not commit this file (or your credentials) to any repository!
 
 ### Real-world examples
 

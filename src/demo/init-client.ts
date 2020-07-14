@@ -1,6 +1,6 @@
 import {CoinbasePro} from '..';
 
-require('dotenv').config();
+import 'dotenv-defaults/config';
 
 export function initClient(): CoinbasePro {
   if (process.env.USE_SANDBOX === 'true') {
