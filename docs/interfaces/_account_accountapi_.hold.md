@@ -24,7 +24,7 @@
 
 • **account_id**: _string_
 
-_Defined in [src/account/AccountAPI.ts:29](https://github.com/bennyn/coinbase-pro-node/blob/7d89521/src/account/AccountAPI.ts#L29)_
+_Defined in [src/account/AccountAPI.ts:29](https://github.com/bennyn/coinbase-pro-node/blob/89f41a9/src/account/AccountAPI.ts#L29)_
 
 ---
 
@@ -32,15 +32,15 @@ _Defined in [src/account/AccountAPI.ts:29](https://github.com/bennyn/coinbase-pr
 
 • **amount**: _string_
 
-_Defined in [src/account/AccountAPI.ts:30](https://github.com/bennyn/coinbase-pro-node/blob/7d89521/src/account/AccountAPI.ts#L30)_
+_Defined in [src/account/AccountAPI.ts:30](https://github.com/bennyn/coinbase-pro-node/blob/89f41a9/src/account/AccountAPI.ts#L30)_
 
 ---
 
 ### created_at
 
-• **created_at**: _string_
+• **created_at**: _ISO_8601_MS_UTC_
 
-_Defined in [src/account/AccountAPI.ts:31](https://github.com/bennyn/coinbase-pro-node/blob/7d89521/src/account/AccountAPI.ts#L31)_
+_Defined in [src/account/AccountAPI.ts:31](https://github.com/bennyn/coinbase-pro-node/blob/89f41a9/src/account/AccountAPI.ts#L31)_
 
 ---
 
@@ -48,7 +48,7 @@ _Defined in [src/account/AccountAPI.ts:31](https://github.com/bennyn/coinbase-pr
 
 • **id**: _string_
 
-_Defined in [src/account/AccountAPI.ts:32](https://github.com/bennyn/coinbase-pro-node/blob/7d89521/src/account/AccountAPI.ts#L32)_
+_Defined in [src/account/AccountAPI.ts:32](https://github.com/bennyn/coinbase-pro-node/blob/89f41a9/src/account/AccountAPI.ts#L32)_
 
 ---
 
@@ -56,7 +56,7 @@ _Defined in [src/account/AccountAPI.ts:32](https://github.com/bennyn/coinbase-pr
 
 • **ref**: _string_
 
-_Defined in [src/account/AccountAPI.ts:33](https://github.com/bennyn/coinbase-pro-node/blob/7d89521/src/account/AccountAPI.ts#L33)_
+_Defined in [src/account/AccountAPI.ts:33](https://github.com/bennyn/coinbase-pro-node/blob/89f41a9/src/account/AccountAPI.ts#L33)_
 
 ---
 
@@ -64,12 +64,12 @@ _Defined in [src/account/AccountAPI.ts:33](https://github.com/bennyn/coinbase-pr
 
 • **type**: _string_
 
-_Defined in [src/account/AccountAPI.ts:34](https://github.com/bennyn/coinbase-pro-node/blob/7d89521/src/account/AccountAPI.ts#L34)_
+_Defined in [src/account/AccountAPI.ts:34](https://github.com/bennyn/coinbase-pro-node/blob/89f41a9/src/account/AccountAPI.ts#L34)_
 
 ---
 
 ### updated_at
 
-• **updated_at**: _string_
+• **updated_at**: _ISO_8601_MS_UTC_
 
-_Defined in [src/account/AccountAPI.ts:35](https://github.com/bennyn/coinbase-pro-node/blob/7d89521/src/account/AccountAPI.ts#L35)_
+_Defined in [src/account/AccountAPI.ts:35](https://github.com/bennyn/coinbase-pro-node/blob/89f41a9/src/account/AccountAPI.ts#L35)_

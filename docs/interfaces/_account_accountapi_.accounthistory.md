@@ -23,7 +23,7 @@
 
 • **amount**: _string_
 
-_Defined in [src/account/AccountAPI.ts:14](https://github.com/bennyn/coinbase-pro-node/blob/7d89521/src/account/AccountAPI.ts#L14)_
+_Defined in [src/account/AccountAPI.ts:14](https://github.com/bennyn/coinbase-pro-node/blob/89f41a9/src/account/AccountAPI.ts#L14)_
 
 ---
 
@@ -31,15 +31,15 @@ _Defined in [src/account/AccountAPI.ts:14](https://github.com/bennyn/coinbase-pr
 
 • **balance**: _string_
 
-_Defined in [src/account/AccountAPI.ts:15](https://github.com/bennyn/coinbase-pro-node/blob/7d89521/src/account/AccountAPI.ts#L15)_
+_Defined in [src/account/AccountAPI.ts:15](https://github.com/bennyn/coinbase-pro-node/blob/89f41a9/src/account/AccountAPI.ts#L15)_
 
 ---
 
 ### created_at
 
-• **created_at**: _string_
+• **created_at**: _ISO_8601_MS_UTC_
 
-_Defined in [src/account/AccountAPI.ts:16](https://github.com/bennyn/coinbase-pro-node/blob/7d89521/src/account/AccountAPI.ts#L16)_
+_Defined in [src/account/AccountAPI.ts:16](https://github.com/bennyn/coinbase-pro-node/blob/89f41a9/src/account/AccountAPI.ts#L16)_
 
 ---
 
@@ -47,7 +47,7 @@ _Defined in [src/account/AccountAPI.ts:16](https://github.com/bennyn/coinbase-pr
 
 • **details**: _[AccountHistoryDetails](_account_accountapi_.accounthistorydetails.md)_
 
-_Defined in [src/account/AccountAPI.ts:17](https://github.com/bennyn/coinbase-pro-node/blob/7d89521/src/account/AccountAPI.ts#L17)_
+_Defined in [src/account/AccountAPI.ts:17](https://github.com/bennyn/coinbase-pro-node/blob/89f41a9/src/account/AccountAPI.ts#L17)_
 
 ---
 
@@ -55,7 +55,7 @@ _Defined in [src/account/AccountAPI.ts:17](https://github.com/bennyn/coinbase-pr
 
 • **id**: _string_
 
-_Defined in [src/account/AccountAPI.ts:18](https://github.com/bennyn/coinbase-pro-node/blob/7d89521/src/account/AccountAPI.ts#L18)_
+_Defined in [src/account/AccountAPI.ts:18](https://github.com/bennyn/coinbase-pro-node/blob/89f41a9/src/account/AccountAPI.ts#L18)_
 
 ---
 
@@ -63,4 +63,4 @@ _Defined in [src/account/AccountAPI.ts:18](https://github.com/bennyn/coinbase-pr
 
 • **type**: _string_
 
-_Defined in [src/account/AccountAPI.ts:19](https://github.com/bennyn/coinbase-pro-node/blob/7d89521/src/account/AccountAPI.ts#L19)_
+_Defined in [src/account/AccountAPI.ts:19](https://github.com/bennyn/coinbase-pro-node/blob/89f41a9/src/account/AccountAPI.ts#L19)_

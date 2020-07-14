@@ -26,7 +26,7 @@
 
 \+ **new WithdrawAPI**(`apiClient`: AxiosInstance): _[WithdrawAPI](_withdraw_withdrawapi_.withdrawapi.md)_
 
-_Defined in [src/withdraw/WithdrawAPI.ts:22](https://github.com/bennyn/coinbase-pro-node/blob/7d89521/src/withdraw/WithdrawAPI.ts#L22)_
+_Defined in [src/withdraw/WithdrawAPI.ts:22](https://github.com/bennyn/coinbase-pro-node/blob/89f41a9/src/withdraw/WithdrawAPI.ts#L22)_
 
 **Parameters:**
 
@@ -42,7 +42,7 @@ _Defined in [src/withdraw/WithdrawAPI.ts:22](https://github.com/bennyn/coinbase-
 
 ▸ **postCryptoWithdrawal**(`amount`: number, `currency`: string, `cryptoAddress`: string, `destinationTag?`: undefined | string): _Promise‹[CryptoWithdrawal](../interfaces/_withdraw_withdrawapi_.cryptowithdrawal.md)›_
 
-_Defined in [src/withdraw/WithdrawAPI.ts:35](https://github.com/bennyn/coinbase-pro-node/blob/7d89521/src/withdraw/WithdrawAPI.ts#L35)_
+_Defined in [src/withdraw/WithdrawAPI.ts:35](https://github.com/bennyn/coinbase-pro-node/blob/89f41a9/src/withdraw/WithdrawAPI.ts#L35)_
 
 Withdraws funds to a crypto address.
 
@@ -65,10 +65,10 @@ Withdraws funds to a crypto address.
 
 ### ▪ **URL**: _object_
 
-_Defined in [src/withdraw/WithdrawAPI.ts:18](https://github.com/bennyn/coinbase-pro-node/blob/7d89521/src/withdraw/WithdrawAPI.ts#L18)_
+_Defined in [src/withdraw/WithdrawAPI.ts:18](https://github.com/bennyn/coinbase-pro-node/blob/89f41a9/src/withdraw/WithdrawAPI.ts#L18)_
 
 ▪ **WITHDRAWALS**: _object_
 
-_Defined in [src/withdraw/WithdrawAPI.ts:19](https://github.com/bennyn/coinbase-pro-node/blob/7d89521/src/withdraw/WithdrawAPI.ts#L19)_
+_Defined in [src/withdraw/WithdrawAPI.ts:19](https://github.com/bennyn/coinbase-pro-node/blob/89f41a9/src/withdraw/WithdrawAPI.ts#L19)_
 
 - **CRYPTO**: _string_ = "/withdrawals/crypto"

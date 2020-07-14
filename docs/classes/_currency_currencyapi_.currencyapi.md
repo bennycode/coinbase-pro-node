@@ -26,7 +26,7 @@
 
 \+ **new CurrencyAPI**(`apiClient`: AxiosInstance): _[CurrencyAPI](_currency_currencyapi_.currencyapi.md)_
 
-_Defined in [src/currency/CurrencyAPI.ts:27](https://github.com/bennyn/coinbase-pro-node/blob/7d89521/src/currency/CurrencyAPI.ts#L27)_
+_Defined in [src/currency/CurrencyAPI.ts:27](https://github.com/bennyn/coinbase-pro-node/blob/89f41a9/src/currency/CurrencyAPI.ts#L27)_
 
 **Parameters:**
 
@@ -42,7 +42,7 @@ _Defined in [src/currency/CurrencyAPI.ts:27](https://github.com/bennyn/coinbase-
 
 ▸ **listCurrencies**(): _Promise‹[Currency](../interfaces/_currency_currencyapi_.currency.md)[]›_
 
-_Defined in [src/currency/CurrencyAPI.ts:38](https://github.com/bennyn/coinbase-pro-node/blob/7d89521/src/currency/CurrencyAPI.ts#L38)_
+_Defined in [src/currency/CurrencyAPI.ts:38](https://github.com/bennyn/coinbase-pro-node/blob/89f41a9/src/currency/CurrencyAPI.ts#L38)_
 
 List known currencies. Currency codes will conform to the ISO 4217 standard where possible. Currencies which have or had no representation in ISO 4217 may use a custom code.
 
@@ -56,10 +56,10 @@ List known currencies. Currency codes will conform to the ISO 4217 standard wher
 
 ### ▪ **URL**: _object_
 
-_Defined in [src/currency/CurrencyAPI.ts:25](https://github.com/bennyn/coinbase-pro-node/blob/7d89521/src/currency/CurrencyAPI.ts#L25)_
+_Defined in [src/currency/CurrencyAPI.ts:25](https://github.com/bennyn/coinbase-pro-node/blob/89f41a9/src/currency/CurrencyAPI.ts#L25)_
 
 ### CURRENCIES
 
 • **CURRENCIES**: _string_ = `/currencies`
 
-_Defined in [src/currency/CurrencyAPI.ts:26](https://github.com/bennyn/coinbase-pro-node/blob/7d89521/src/currency/CurrencyAPI.ts#L26)_
+_Defined in [src/currency/CurrencyAPI.ts:26](https://github.com/bennyn/coinbase-pro-node/blob/89f41a9/src/currency/CurrencyAPI.ts#L26)_
