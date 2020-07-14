@@ -36,15 +36,15 @@ export class RESTClient extends EventEmitter {
   }
 
   readonly account: AccountAPI;
+  readonly currency: CurrencyAPI;
   readonly fee: FeeAPI;
   readonly fill: FillAPI;
   readonly order: OrderAPI;
   readonly product: ProductAPI;
   readonly profile: ProfileAPI;
-  readonly user: UserAPI;
-  readonly currency: CurrencyAPI;
-  readonly withdraw: WithdrawAPI;
   readonly transfer: TransferAPI;
+  readonly user: UserAPI;
+  readonly withdraw: WithdrawAPI;
 
   private readonly httpClient: AxiosInstance;
   private readonly logger: (msg: string, ...param: any[]) => void;
@@ -101,15 +101,15 @@ export class RESTClient extends EventEmitter {
     });
 
     this.account = new AccountAPI(this.httpClient);
+    this.currency = new CurrencyAPI(this.httpClient);
     this.fee = new FeeAPI(this.httpClient);
     this.fill = new FillAPI(this.httpClient);
     this.order = new OrderAPI(this.httpClient);
     this.product = new ProductAPI(this.httpClient, this);
     this.profile = new ProfileAPI(this.httpClient);
-    this.user = new UserAPI(this.httpClient);
-    this.currency = new CurrencyAPI(this.httpClient);
-    this.withdraw = new WithdrawAPI(this.httpClient);
     this.transfer = new TransferAPI(this.httpClient);
+    this.user = new UserAPI(this.httpClient);
+    this.withdraw = new WithdrawAPI(this.httpClient);
   }
 
   static stringifyPayload(config: AxiosRequestConfig): string {

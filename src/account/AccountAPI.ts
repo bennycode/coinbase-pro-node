@@ -1,5 +1,5 @@
 import {AxiosInstance} from 'axios';
-import {Pagination} from '../payload/common';
+import {ISO_8601_MS_UTC, PaginatedData, Pagination} from '../payload/common';
 
 export interface Account {
   available: string;
@@ -13,7 +13,7 @@ export interface Account {
 export interface AccountHistory {
   amount: string;
   balance: string;
-  created_at: string;
+  created_at: ISO_8601_MS_UTC;
   details: AccountHistoryDetails;
   id: string;
   type: string;
@@ -28,11 +28,11 @@ export interface AccountHistoryDetails {
 export interface Hold {
   account_id: string;
   amount: string;
-  created_at: string;
+  created_at: ISO_8601_MS_UTC;
   id: string;
   ref: string;
   type: string;
-  updated_at: string;
+  updated_at: ISO_8601_MS_UTC;
 }
 
 export enum AccountType {
@@ -113,10 +113,7 @@ export class AccountAPI {
    * @param pagination - Pagination field
    * @see https://docs.pro.coinbase.com/#get-account-history
    */
-  async getAccountHistory(
-    accountId: string,
-    pagination?: Pagination
-  ): Promise<{data: AccountHistory[]; pagination: {after?: string; before?: string}}> {
+  async getAccountHistory(accountId: string, pagination?: Pagination): Promise<PaginatedData<AccountHistory>> {
     const resource = `${AccountAPI.URL.ACCOUNTS}/${accountId}/ledger`;
     const response = await this.apiClient.get<AccountHistory[]>(resource, {params: pagination});
     return {
@@ -137,10 +134,7 @@ export class AccountAPI {
    * @param pagination - Pagination field
    * @see https://docs.pro.coinbase.com/#get-holds
    */
-  async getHolds(
-    accountId: string,
-    pagination?: Pagination
-  ): Promise<{data: Hold[]; pagination: {after?: string; before?: string}}> {
+  async getHolds(accountId: string, pagination?: Pagination): Promise<PaginatedData<Hold>> {
     const resource = `${AccountAPI.URL.ACCOUNTS}/${accountId}/holds`;
     const response = await this.apiClient.get<Hold[]>(resource, {params: pagination});
     return {

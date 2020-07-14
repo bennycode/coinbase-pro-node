@@ -1,11 +1,11 @@
 import nock from 'nock';
-import {TransferAPI} from './TransferAPI';
+import {TransferAPI, TransferType} from './TransferAPI';
 
 describe('TransferAPI', () => {
   afterEach(() => nock.cleanAll());
 
   describe('getTransfers', () => {
-    it('Type: withdraw - returns id, created_at, and amount', async () => {
+    it('returns withdrawals', async () => {
       const response = [
         {
           account_id: 'bcf1fc34-3180-4acf-97be-c1c20a719e34',
@@ -31,11 +31,12 @@ describe('TransferAPI', () => {
         },
       ];
       nock(global.REST_URL).get(TransferAPI.URL.TRANSFERS).query(true).reply(200, response);
-      const withdrawals = await global.client.rest.transfer.getTransfers('withdraw');
+      const withdrawals = await global.client.rest.transfer.getTransfers(TransferType.WITHDRAW);
       expect(withdrawals.data.length).toBe(1);
       expect(withdrawals.data[0].id).toBe('6b09bf5e-c94c-405b-b7dc-ad2b27749ce5');
     });
-    it('Type: deposit - returns id, created_at, and amount', async () => {
+
+    it('returns deposits', async () => {
       const response = [
         {
           account_id: 'bf091906-ca7f-499e-95fa-5bc15e918b46',
@@ -60,7 +61,7 @@ describe('TransferAPI', () => {
         },
       ];
       nock(global.REST_URL).get(TransferAPI.URL.TRANSFERS).query(true).reply(200, response);
-      const deposits = await global.client.rest.transfer.getTransfers('deposit', 'test-profile-id');
+      const deposits = await global.client.rest.transfer.getTransfers(TransferType.DEPOSIT, 'test-profile-id');
       expect(deposits.data.length).toBe(1);
       expect(deposits.data[0].id).toBe('6cca6a14-a5e3-4219-9542-86123fc9d6c3');
     });
