@@ -1,5 +1,5 @@
 import {AxiosInstance, AxiosResponse} from 'axios';
-import {ISO_8601_MS_UTC, OrderSide, Pagination} from '../payload/common';
+import {ISO_8601_MS_UTC, OrderSide, PaginatedData, Pagination} from '../payload/common';
 import {CandleBucketUtil} from './CandleBucketUtil';
 import {RESTClient} from '..';
 
@@ -295,10 +295,7 @@ export class ProductAPI {
    * @param pagination - Pagination field
    * @see https://docs.pro.coinbase.com/#get-trades
    */
-  async getTrades(
-    productId: string,
-    pagination?: Pagination
-  ): Promise<{data: Trade[]; pagination: {after?: string; before?: string}}> {
+  async getTrades(productId: string, pagination?: Pagination): Promise<PaginatedData<Trade>> {
     const resource = `${ProductAPI.URL.PRODUCTS}/${productId}/trades`;
     const response = await this.apiClient.get<Trade[]>(resource, {params: pagination});
     return {

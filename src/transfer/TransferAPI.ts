@@ -1,5 +1,5 @@
 import {AxiosInstance} from 'axios';
-import {ISO_8601_MS_UTC, Pagination} from '../payload/common';
+import {ISO_8601_MS_UTC, PaginatedData, Pagination} from '../payload/common';
 
 export interface TransferInformation {
   account_id: string;
@@ -45,12 +45,11 @@ export class TransferAPI {
    * @see https://docs.pro.coinbase.com/#list-deposits
    * @see https://docs.pro.coinbase.com/#list-withdrawals
    */
-
   async getTransfers(
     transferType: TransferType,
     profileId?: string,
     pagination?: Pagination
-  ): Promise<{data: TransferInformation[]; pagination: {after?: string; before?: string}}> {
+  ): Promise<PaginatedData<TransferInformation>> {
     const resource = TransferAPI.URL.TRANSFERS;
     const params: Pagination & {
       profile_id?: string;

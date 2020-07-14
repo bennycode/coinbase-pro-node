@@ -1,5 +1,5 @@
 import {AxiosInstance} from 'axios';
-import {ISO_8601_MS_UTC, OrderSide, Pagination} from '../payload';
+import {ISO_8601_MS_UTC, OrderSide, PaginatedData, Pagination} from '../payload';
 
 export enum OrderType {
   LIMIT = 'limit',
@@ -126,11 +126,9 @@ export class OrderAPI {
    * @param pagination - Pagination field
    * @see https://docs.pro.coinbase.com/#list-orders
    */
-  async getOpenOrders(
-    pagination?: Pagination
-  ): Promise<{data: Order[]; pagination: {after?: string; before?: string}}> {
+  async getOpenOrders(pagination?: Pagination): Promise<PaginatedData<Order>> {
     const resource = OrderAPI.URL.ORDERS;
-    const response = await this.apiClient.get(resource, {params: pagination});
+    const response = await this.apiClient.get<Order[]>(resource, {params: pagination});
     return {
       data: response.data,
       pagination: {

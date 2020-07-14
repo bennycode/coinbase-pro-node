@@ -14,3 +14,8 @@ export interface Pagination {
   before?: string;
   limit?: number; // Default: 100, Maximum: 100
 }
+
+export type PaginatedData<PayloadType> = {
+  data: PayloadType[];
+  pagination: {after?: string; before?: string};
+};
