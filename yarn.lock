@@ -700,7 +700,14 @@ doctrine@^3.0.0:
   dependencies:
     esutils "^2.0.2"
 
-dotenv@8.2.0:
+dotenv-defaults@2.0.0:
+  version "2.0.0"
+  resolved "https://registry.npmjs.org/dotenv-defaults/-/dotenv-defaults-2.0.0.tgz#f48577d885c7755d2a4ce1f7f3706552c0cb367e"
+  integrity sha512-8X8gQoM+BH0L/v+GwgpeNwrthbG2uTDVr3vkbedQPLrIalZE0vxB9LbuD+7echbiP7fAY3tE+pZI11R1DtlUNg==
+  dependencies:
+    dotenv "^8.2.0"
+
+dotenv@^8.2.0:
   version "8.2.0"
   resolved "https://registry.npmjs.org/dotenv/-/dotenv-8.2.0.tgz#97e619259ada750eea3e4ea3e26bceea5424b16a"
   integrity sha512-8sJ78ElpbDJBHNeBzUbUVLsqKdccaa/BXF1uPTw3GrvQTBgrQrtObr2mUrE38vzYd8cEv+m/JBfDLioYcfXoaw==
