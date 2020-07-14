@@ -1,12 +1,12 @@
 import {AxiosInstance} from 'axios';
-import {Pagination} from '../payload/common';
+import {ISO_8601_MS_UTC, Pagination} from '../payload/common';
 
-export type TransferInformation = {
+export interface TransferInformation {
   account_id: string;
   amount: string;
-  canceled_at?: string;
-  completed_at?: string;
-  created_at: string;
+  canceled_at?: ISO_8601_MS_UTC;
+  completed_at?: ISO_8601_MS_UTC;
+  created_at: ISO_8601_MS_UTC;
   details: {
     coinbase_account_id?: string;
     coinbase_payment_method_id?: string;
@@ -20,11 +20,16 @@ export type TransferInformation = {
     sent_to_address?: string;
   };
   id: string;
-  processed_at?: string;
+  processed_at?: ISO_8601_MS_UTC;
   type: string;
   user_id: string;
   user_nonce?: string;
-};
+}
+
+export enum TransferType {
+  DEPOSIT = 'deposit',
+  WITHDRAW = 'withdraw',
+}
 
 export class TransferAPI {
   static readonly URL = {
@@ -35,7 +40,6 @@ export class TransferAPI {
 
   /**
    * Get a list of deposits/withdrawals from the profile of the API key, in descending order by created time.
-   * See the Pagination section for retrieving additional entries after the first page.
    *
    * @param pagination - Pagination field
    * @see https://docs.pro.coinbase.com/#list-deposits
@@ -43,12 +47,15 @@ export class TransferAPI {
    */
 
   async getTransfers(
-    transferType: string,
+    transferType: TransferType,
     profileId?: string,
     pagination?: Pagination
   ): Promise<{data: TransferInformation[]; pagination: {after?: string; before?: string}}> {
     const resource = TransferAPI.URL.TRANSFERS;
-    const params: any = {
+    const params: Pagination & {
+      profile_id?: string;
+      type: TransferType;
+    } = {
       ...pagination,
       type: transferType,
     };
