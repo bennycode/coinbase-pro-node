@@ -37,7 +37,7 @@ type BaseOrder = {
 };
 
 type BasePlacedOrder = {
-  created_at: string;
+  created_at: ISO_8601_MS_UTC;
   executed_value: string;
   fill_fees: string;
   filled_size: string;

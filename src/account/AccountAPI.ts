@@ -1,5 +1,5 @@
 import {AxiosInstance} from 'axios';
-import {PaginatedData, Pagination} from '../payload/common';
+import {ISO_8601_MS_UTC, PaginatedData, Pagination} from '../payload/common';
 
 export interface Account {
   available: string;
@@ -13,7 +13,7 @@ export interface Account {
 export interface AccountHistory {
   amount: string;
   balance: string;
-  created_at: string;
+  created_at: ISO_8601_MS_UTC;
   details: AccountHistoryDetails;
   id: string;
   type: string;
@@ -28,11 +28,11 @@ export interface AccountHistoryDetails {
 export interface Hold {
   account_id: string;
   amount: string;
-  created_at: string;
+  created_at: ISO_8601_MS_UTC;
   id: string;
   ref: string;
   type: string;
-  updated_at: string;
+  updated_at: ISO_8601_MS_UTC;
 }
 
 export enum AccountType {
