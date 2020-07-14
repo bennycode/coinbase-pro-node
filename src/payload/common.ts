@@ -9,10 +9,14 @@ export enum OrderSide {
   SELL = 'sell',
 }
 
+/** @see https://docs.pro.coinbase.com/#pagination */
 export interface Pagination {
+  /** Request page after (older) this pagination id. */
   after?: string;
+  /** Request page before (newer) this pagination id. */
   before?: string;
-  limit?: number; // Default: 100, Maximum: 100
+  /** Number of results per request. Maximum 100. Default 100. */
+  limit?: number;
 }
 
 export type PaginatedData<PayloadType> = {
