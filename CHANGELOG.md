@@ -1,3 +1,34 @@
+### 2.6.0 (2020-07-14)
+
+##### Chores
+
+- **deps-dev:**
+  - bump @typescript-eslint/eslint-plugin ([#204](https://github.com/bennyn/coinbase-pro-node/pull/204)) ([128ca396](https://github.com/bennyn/coinbase-pro-node/commit/128ca3967036cbad8f10638118887faa5f262d86))
+  - bump @typescript-eslint/parser from 3.5.0 to 3.6.0 ([#203](https://github.com/bennyn/coinbase-pro-node/pull/203)) ([e7c8a295](https://github.com/bennyn/coinbase-pro-node/commit/e7c8a295952e371654f9d564fc2d73ad125c7272))
+  - bump nock from 13.0.0 to 13.0.2 ([#197](https://github.com/bennyn/coinbase-pro-node/pull/197)) ([bb1fbdf3](https://github.com/bennyn/coinbase-pro-node/commit/bb1fbdf3bd6c9ca320880b363f557afb50177027))
+  - bump @typescript-eslint/parser from 3.4.0 to 3.5.0 ([#198](https://github.com/bennyn/coinbase-pro-node/pull/198)) ([21a8959f](https://github.com/bennyn/coinbase-pro-node/commit/21a8959fc5d107e545702a02efa36c97a120717e))
+  - bump typescript from 3.9.5 to 3.9.6 ([#202](https://github.com/bennyn/coinbase-pro-node/pull/202)) ([41652ab0](https://github.com/bennyn/coinbase-pro-node/commit/41652ab02cd537bcb447b3c224443fd1fb499d4a))
+  - bump @typescript-eslint/eslint-plugin ([#200](https://github.com/bennyn/coinbase-pro-node/pull/200)) ([9165e051](https://github.com/bennyn/coinbase-pro-node/commit/9165e051625e7d409af3a4a570951aa075604126))
+  - bump eslint from 7.3.1 to 7.4.0 ([#196](https://github.com/bennyn/coinbase-pro-node/pull/196)) ([09bc0c58](https://github.com/bennyn/coinbase-pro-node/commit/09bc0c58c6c4f1a35bd8cd1c970bb45f76ac537c))
+  - bump nock from 12.0.3 to 13.0.0 ([#193](https://github.com/bennyn/coinbase-pro-node/pull/193)) ([cd0af9dc](https://github.com/bennyn/coinbase-pro-node/commit/cd0af9dcbb6d0247920a8d673ea5003cc2f3803d))
+- **deps:**
+  - bump @types/ws from 7.2.5 to 7.2.6 ([#201](https://github.com/bennyn/coinbase-pro-node/pull/201)) ([0adc0537](https://github.com/bennyn/coinbase-pro-node/commit/0adc0537013d8b8662a5e56d7e494de50391193b))
+  - bump ws from 7.3.0 to 7.3.1 ([#199](https://github.com/bennyn/coinbase-pro-node/pull/199)) ([b830e719](https://github.com/bennyn/coinbase-pro-node/commit/b830e71927b30728860c871c75aa2e244b07ec03))
+- Don't upload fixtures on npm ([86794181](https://github.com/bennyn/coinbase-pro-node/commit/867941818d255214bd58fc17be9775fe2a34712c))
+
+##### Documentation Changes
+
+- Add template for environment variables used in demo scripts ([#208](https://github.com/bennyn/coinbase-pro-node/pull/208)) ([7cf25f6a](https://github.com/bennyn/coinbase-pro-node/commit/7cf25f6aaaba679b62487498c431f0c6da55fc7c))
+
+##### New Features
+
+- List deposits from a profile ([#205](https://github.com/bennyn/coinbase-pro-node/pull/205)) ([dfee037a](https://github.com/bennyn/coinbase-pro-node/commit/dfee037ab1da11df7f34caad040cafb728ba86ba))
+
+##### Refactors
+
+- Use generic return types for paginated data ([#207](https://github.com/bennyn/coinbase-pro-node/pull/207)) ([c9f863d3](https://github.com/bennyn/coinbase-pro-node/commit/c9f863d3e688a41db4a948da7a826f893a1e02ae))
+- Prefer callback over spy ([93785808](https://github.com/bennyn/coinbase-pro-node/commit/937858087dfd32095357a094e6410cd2c87f76db))
+
 ### 2.5.0 (2020-06-29)
 
 ##### Chores
