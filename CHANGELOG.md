@@ -1,3 +1,22 @@
+### 2.7.0 (2020-07-28)
+
+##### Chores
+
+- **deps-dev:**
+  - bump jasmine from 3.5.0 to 3.6.1 ([#217](https://github.com/bennyn/coinbase-pro-node/pull/217)) ([a223c0b0](https://github.com/bennyn/coinbase-pro-node/commit/a223c0b04154879f06793baef03863c7811fd52c))
+  - bump @typescript-eslint/parser from 3.6.1 to 3.7.0 ([#216](https://github.com/bennyn/coinbase-pro-node/pull/216)) ([b44ab726](https://github.com/bennyn/coinbase-pro-node/commit/b44ab7260ced3dbf973e99f664287c798413bac5))
+  - bump @typescript-eslint/eslint-plugin ([#215](https://github.com/bennyn/coinbase-pro-node/pull/215)) ([ef9d89ec](https://github.com/bennyn/coinbase-pro-node/commit/ef9d89ecab0223c4d526ee9d778fd5de6bd8d3c1))
+  - bump typescript from 3.9.6 to 3.9.7 ([#212](https://github.com/bennyn/coinbase-pro-node/pull/212)) ([66a8aae7](https://github.com/bennyn/coinbase-pro-node/commit/66a8aae7e7e91c443dd7e861b00fc95fb245cf42))
+  - bump eslint-plugin-typescript-sort-keys ([#214](https://github.com/bennyn/coinbase-pro-node/pull/214)) ([20239a1e](https://github.com/bennyn/coinbase-pro-node/commit/20239a1ef20062c06f9a61e725c8f76bcabc2bc1))
+  - bump @typescript-eslint/parser from 3.6.0 to 3.6.1 ([#213](https://github.com/bennyn/coinbase-pro-node/pull/213)) ([908f4625](https://github.com/bennyn/coinbase-pro-node/commit/908f4625fff8c5e2479aad536b88313680cf515d))
+  - bump eslint from 7.4.0 to 7.5.0 ([#211](https://github.com/bennyn/coinbase-pro-node/pull/211)) ([ab985cb7](https://github.com/bennyn/coinbase-pro-node/commit/ab985cb789af320c921db086e37d099ec3fef0e9))
+  - bump @typescript-eslint/eslint-plugin ([#210](https://github.com/bennyn/coinbase-pro-node/pull/210)) ([9e82f1c7](https://github.com/bennyn/coinbase-pro-node/commit/9e82f1c7f20de65d1d20dd202a65c1a426793177))
+- **deps:** bump lodash from 4.17.15 to 4.17.19 ([#209](https://github.com/bennyn/coinbase-pro-node/pull/209)) ([e3fcefb0](https://github.com/bennyn/coinbase-pro-node/commit/e3fcefb01c8343bcd7a1205f7244153043e139c3))
+
+##### New Features
+
+- Add default export ([#218](https://github.com/bennyn/coinbase-pro-node/pull/218)) ([82709e79](https://github.com/bennyn/coinbase-pro-node/commit/82709e7900c36db8ffeca5bc159618fea8904eb7))
+
 ### 2.6.0 (2020-07-14)
 
 ##### Chores
