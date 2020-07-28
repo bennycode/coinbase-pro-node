@@ -55,5 +55,3 @@ export class CoinbasePro {
     this.ws = new WebSocketClient(this.url.WebSocket, signRequest);
   }
 }
-
-export default CoinbasePro;
