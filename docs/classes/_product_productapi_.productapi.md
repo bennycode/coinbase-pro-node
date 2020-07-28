@@ -33,7 +33,7 @@
 
 \+ **new ProductAPI**(`apiClient`: AxiosInstance, `restClient`: [RESTClient](_client_restclient_.restclient.md)): _[ProductAPI](_product_productapi_.productapi.md)_
 
-_Defined in [src/product/ProductAPI.ts:188](https://github.com/bennyn/coinbase-pro-node/blob/89f41a9/src/product/ProductAPI.ts#L188)_
+_Defined in [src/product/ProductAPI.ts:188](https://github.com/bennyn/coinbase-pro-node/blob/6dc414a/src/product/ProductAPI.ts#L188)_
 
 **Parameters:**
 
@@ -50,7 +50,7 @@ _Defined in [src/product/ProductAPI.ts:188](https://github.com/bennyn/coinbase-p
 
 ▸ **getCandles**(`productId`: string, `params`: [HistoricRateRequest](../modules/_product_productapi_.md#historicraterequest)): _Promise‹[Candle](../interfaces/_product_productapi_.candle.md)[]›_
 
-_Defined in [src/product/ProductAPI.ts:204](https://github.com/bennyn/coinbase-pro-node/blob/89f41a9/src/product/ProductAPI.ts#L204)_
+_Defined in [src/product/ProductAPI.ts:204](https://github.com/bennyn/coinbase-pro-node/blob/6dc414a/src/product/ProductAPI.ts#L204)_
 
 Get historic rates for a product. Rates are returned in grouped buckets (candlesticks) based on requested granularity.
 
@@ -73,7 +73,7 @@ Note: The maximum number of data points for a single request is 300 candles. If 
 
 ▸ **getProductOrderBook**(`productId`: string, `params?`: undefined | object): _Promise‹[OrderBookLevel1](../interfaces/_product_productapi_.orderbooklevel1.md)›_
 
-_Defined in [src/product/ProductAPI.ts:318](https://github.com/bennyn/coinbase-pro-node/blob/89f41a9/src/product/ProductAPI.ts#L318)_
+_Defined in [src/product/ProductAPI.ts:318](https://github.com/bennyn/coinbase-pro-node/blob/6dc414a/src/product/ProductAPI.ts#L318)_
 
 Get a list of open orders for a product. The amount of detail shown can be customized with the level parameter. By default, only the inside (i.e. best) bid and ask are returned. This is equivalent to a book depth of 1 level.
 
@@ -90,7 +90,7 @@ Get a list of open orders for a product. The amount of detail shown can be custo
 
 ▸ **getProductOrderBook**(`productId`: string, `params?`: undefined | object): _Promise‹[OrderBookLevel2](../interfaces/_product_productapi_.orderbooklevel2.md)›_
 
-_Defined in [src/product/ProductAPI.ts:322](https://github.com/bennyn/coinbase-pro-node/blob/89f41a9/src/product/ProductAPI.ts#L322)_
+_Defined in [src/product/ProductAPI.ts:322](https://github.com/bennyn/coinbase-pro-node/blob/6dc414a/src/product/ProductAPI.ts#L322)_
 
 **Parameters:**
 
@@ -103,7 +103,7 @@ _Defined in [src/product/ProductAPI.ts:322](https://github.com/bennyn/coinbase-p
 
 ▸ **getProductOrderBook**(`productId`: string, `params?`: undefined | object): _Promise‹[OrderBookLevel3](../interfaces/_product_productapi_.orderbooklevel3.md)›_
 
-_Defined in [src/product/ProductAPI.ts:326](https://github.com/bennyn/coinbase-pro-node/blob/89f41a9/src/product/ProductAPI.ts#L326)_
+_Defined in [src/product/ProductAPI.ts:326](https://github.com/bennyn/coinbase-pro-node/blob/6dc414a/src/product/ProductAPI.ts#L326)_
 
 **Parameters:**
 
@@ -120,7 +120,7 @@ _Defined in [src/product/ProductAPI.ts:326](https://github.com/bennyn/coinbase-p
 
 ▸ **getProductStats**(`productId`: string): _Promise‹[ProductStats](../interfaces/_product_productapi_.productstats.md)›_
 
-_Defined in [src/product/ProductAPI.ts:357](https://github.com/bennyn/coinbase-pro-node/blob/89f41a9/src/product/ProductAPI.ts#L357)_
+_Defined in [src/product/ProductAPI.ts:357](https://github.com/bennyn/coinbase-pro-node/blob/6dc414a/src/product/ProductAPI.ts#L357)_
 
 Get latest 24 hours of movement data for a product.
 
@@ -140,7 +140,7 @@ Get latest 24 hours of movement data for a product.
 
 ▸ **getProductTicker**(`productId`: string): _Promise‹[ProductTicker](../interfaces/_product_productapi_.productticker.md)›_
 
-_Defined in [src/product/ProductAPI.ts:369](https://github.com/bennyn/coinbase-pro-node/blob/89f41a9/src/product/ProductAPI.ts#L369)_
+_Defined in [src/product/ProductAPI.ts:369](https://github.com/bennyn/coinbase-pro-node/blob/6dc414a/src/product/ProductAPI.ts#L369)_
 
 Get snapshot information about the last trade (tick), best bid/ask and 24h volume.
 
@@ -160,7 +160,7 @@ Get snapshot information about the last trade (tick), best bid/ask and 24h volum
 
 ▸ **getProducts**(): _Promise‹[Product](../interfaces/_product_productapi_.product.md)[]›_
 
-_Defined in [src/product/ProductAPI.ts:285](https://github.com/bennyn/coinbase-pro-node/blob/89f41a9/src/product/ProductAPI.ts#L285)_
+_Defined in [src/product/ProductAPI.ts:285](https://github.com/bennyn/coinbase-pro-node/blob/6dc414a/src/product/ProductAPI.ts#L285)_
 
 Get a list of available currency pairs for trading.
 
@@ -174,7 +174,7 @@ Get a list of available currency pairs for trading.
 
 ▸ **getTrades**(`productId`: string, `pagination?`: Pagination): _Promise‹PaginatedData‹[Trade](../interfaces/_product_productapi_.trade.md)››_
 
-_Defined in [src/product/ProductAPI.ts:298](https://github.com/bennyn/coinbase-pro-node/blob/89f41a9/src/product/ProductAPI.ts#L298)_
+_Defined in [src/product/ProductAPI.ts:298](https://github.com/bennyn/coinbase-pro-node/blob/6dc414a/src/product/ProductAPI.ts#L298)_
 
 Get latest trades for a product.
 
@@ -195,7 +195,7 @@ Get latest trades for a product.
 
 ▸ **unwatchCandles**(`productId`: string, `granularity`: [CandleGranularity](../enums/_product_productapi_.candlegranularity.md)): _void_
 
-_Defined in [src/product/ProductAPI.ts:271](https://github.com/bennyn/coinbase-pro-node/blob/89f41a9/src/product/ProductAPI.ts#L271)_
+_Defined in [src/product/ProductAPI.ts:271](https://github.com/bennyn/coinbase-pro-node/blob/6dc414a/src/product/ProductAPI.ts#L271)_
 
 Stop watching a specific candle interval.
 
@@ -214,7 +214,7 @@ Stop watching a specific candle interval.
 
 ▸ **watchCandles**(`productId`: string, `granularity`: [CandleGranularity](../enums/_product_productapi_.candlegranularity.md), `lastCandleTime`: ISO_8601_MS_UTC): _void_
 
-_Defined in [src/product/ProductAPI.ts:248](https://github.com/bennyn/coinbase-pro-node/blob/89f41a9/src/product/ProductAPI.ts#L248)_
+_Defined in [src/product/ProductAPI.ts:248](https://github.com/bennyn/coinbase-pro-node/blob/6dc414a/src/product/ProductAPI.ts#L248)_
 
 Watch a specific product ID for new candles. Candles will be emitted through the `ProductEvent.NEW_CANDLE` event.
 
@@ -236,10 +236,10 @@ Handle to stop the watch interval.
 
 ### ▪ **URL**: _object_
 
-_Defined in [src/product/ProductAPI.ts:177](https://github.com/bennyn/coinbase-pro-node/blob/89f41a9/src/product/ProductAPI.ts#L177)_
+_Defined in [src/product/ProductAPI.ts:177](https://github.com/bennyn/coinbase-pro-node/blob/6dc414a/src/product/ProductAPI.ts#L177)_
 
 ### PRODUCTS
 
 • **PRODUCTS**: _string_ = `/products`
 
-_Defined in [src/product/ProductAPI.ts:178](https://github.com/bennyn/coinbase-pro-node/blob/89f41a9/src/product/ProductAPI.ts#L178)_
+_Defined in [src/product/ProductAPI.ts:178](https://github.com/bennyn/coinbase-pro-node/blob/6dc414a/src/product/ProductAPI.ts#L178)_

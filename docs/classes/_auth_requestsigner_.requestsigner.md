@@ -18,7 +18,7 @@
 
 ▸ **signRequest**(`auth`: [ClientAuthentication](../interfaces/_coinbasepro_.clientauthentication.md), `setup`: [RequestSetup](../interfaces/_auth_requestsigner_.requestsetup.md), `clockSkew`: number): _[SignedRequest](../interfaces/_auth_requestsigner_.signedrequest.md)_
 
-_Defined in [src/auth/RequestSigner.ts:19](https://github.com/bennyn/coinbase-pro-node/blob/89f41a9/src/auth/RequestSigner.ts#L19)_
+_Defined in [src/auth/RequestSigner.ts:19](https://github.com/bennyn/coinbase-pro-node/blob/6dc414a/src/auth/RequestSigner.ts#L19)_
 
 **Parameters:**
 
