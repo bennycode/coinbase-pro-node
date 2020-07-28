@@ -1,3 +1,6 @@
+import {CoinbasePro} from './CoinbasePro';
+export default CoinbasePro;
+
 export * from './account';
 export * from './client';
 export * from './CoinbasePro';
