@@ -243,7 +243,7 @@ export class ProductAPI {
    * @param productId - Representation for base and counter
    * @param granularity - Desired candle size
    * @param lastCandleTime - Timestamp (ISO 8601) of last candle received
-   * @returns Handle to stop the watch interval.
+   * @returns Handle to stop the watch interval
    */
   watchCandles(productId: string, granularity: CandleGranularity, lastCandleTime: ISO_8601_MS_UTC): void {
     this.watchCandlesConfig[productId] = this.watchCandlesConfig[productId] || {};

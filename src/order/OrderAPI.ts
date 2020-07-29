@@ -108,6 +108,7 @@ export class OrderAPI {
    * specified, all open orders from the profile that the API key belongs to will be canceled.
    *
    * @param productId - Representation for base and counter
+   * @returns A list of ids of the canceled orders
    * @see https://docs.pro.coinbase.com/#cancel-all
    */
   async cancelOpenOrders(productId?: string): Promise<string[]> {
