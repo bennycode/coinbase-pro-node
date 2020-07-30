@@ -43,7 +43,7 @@ export class ProfileAPI {
    * This endpoint requires the “view” permission and is accessible by any profile’s API key.
    *
    * @param profileId - Profile ID
-   * @returns A single profile.
+   * @returns A single profile
    */
   async getProfile(profileId: string): Promise<Profile | null> {
     const resource = `${ProfileAPI.URL.PROFILES}/${profileId}`;
