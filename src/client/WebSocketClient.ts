@@ -2,7 +2,7 @@ import {EventEmitter} from 'events';
 import ReconnectingWebSocket, {Event, ErrorEvent, Options, CloseEvent} from 'reconnecting-websocket';
 import WebSocket from 'ws';
 import {RequestSetup, SignedRequest} from '../auth/RequestSigner';
-import {OrderSide, ISO_8601_MS_UTC, UUID_V4, UserAPI} from '..';
+import {OrderSide, ISO_8601_MS_UTC, UUID_V4, UserAPI, CurrencyDetail, Product} from '..';
 
 export interface WebSocketChannel {
   name: WebSocketChannelName;
@@ -125,6 +125,7 @@ export type WebSocketResponse = {type: WebSocketResponseType} & WebSocketMessage
 // Not exported because it will become "WebSocketResponse" once complete
 type WebSocketMessage =
   | Record<string, string | number | boolean>
+  | WebSocketStatusMessage
   | WebSocketTickerMessage
   | WebSocketMatchMessage
   | WebSocketErrorMessage;
@@ -146,6 +147,20 @@ export type WebSocketMatchMessage = {
   time: ISO_8601_MS_UTC;
   trade_id: number;
   type: WebSocketResponseType.FULL_MATCH;
+};
+
+export type WebSocketStatusMessage = {
+  currencies: {
+    convertible_to: string[];
+    details: CurrencyDetail;
+    id: string;
+    max_precision: string;
+    min_size: string;
+    name: string;
+    status: 'online';
+    status_message?: string;
+  }[];
+  products: Product[];
 };
 
 export type WebSocketTickerMessage = {
