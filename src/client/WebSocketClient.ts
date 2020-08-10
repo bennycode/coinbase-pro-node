@@ -153,6 +153,7 @@ export type WebSocketStatusMessage = {
   currencies: {
     convertible_to: string[];
     details: CurrencyDetail;
+    funding_account_id: string;
     id: string;
     max_precision: string;
     min_size: string;
@@ -160,7 +161,8 @@ export type WebSocketStatusMessage = {
     status: 'online';
     status_message?: string;
   }[];
-  products: Product[];
+  products: (Product & {type: 'spot'})[];
+  type: WebSocketResponseType.STATUS;
 };
 
 export type WebSocketTickerMessage = {
@@ -194,6 +196,7 @@ export enum WebSocketEvent {
   ON_MESSAGE = 'WebSocketEvent.ON_MESSAGE',
   ON_MESSAGE_ERROR = 'WebSocketEvent.ON_MESSAGE_ERROR',
   ON_MESSAGE_MATCHES = 'WebSocketEvent.ON_MESSAGE_MATCHES',
+  ON_MESSAGE_STATUS = 'WebSocketEvent.ON_MESSAGE_STATUS',
   ON_MESSAGE_TICKER = 'WebSocketEvent.ON_MESSAGE_TICKER',
   ON_OPEN = 'WebSocketEvent.ON_OPEN',
   ON_SUBSCRIPTION_UPDATE = 'WebSocketEvent.ON_SUBSCRIPTION_UPDATE',
@@ -212,6 +215,8 @@ export interface WebSocketClient {
     event: WebSocketEvent.ON_MESSAGE_MATCHES,
     listener: (matchMessage: WebSocketLastMatchMessage | WebSocketMatchMessage) => void
   ): this;
+
+  on(event: WebSocketEvent.ON_MESSAGE_STATUS, listener: (statusMessage: WebSocketStatusMessage) => void): this;
 
   on(event: WebSocketEvent.ON_MESSAGE_TICKER, listener: (tickerMessage: WebSocketTickerMessage) => void): this;
 
@@ -272,6 +277,8 @@ export class WebSocketClient extends EventEmitter {
         case WebSocketResponseType.ERROR:
           this.emit(WebSocketEvent.ON_MESSAGE_ERROR, response);
           break;
+        case WebSocketResponseType.STATUS:
+          this.emit(WebSocketEvent.ON_MESSAGE_STATUS, response);
         case WebSocketResponseType.SUBSCRIPTIONS:
           this.emit(WebSocketEvent.ON_SUBSCRIPTION_UPDATE, response);
           break;

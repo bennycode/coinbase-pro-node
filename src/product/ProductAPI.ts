@@ -26,6 +26,7 @@ export interface Product {
   quote_increment: string;
   status: 'online';
   status_message: string;
+  trading_disabled: boolean;
 }
 
 // Snapshot information about the last trade (tick), best bid/ask and 24h volume.
