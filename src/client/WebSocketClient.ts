@@ -279,6 +279,7 @@ export class WebSocketClient extends EventEmitter {
           break;
         case WebSocketResponseType.STATUS:
           this.emit(WebSocketEvent.ON_MESSAGE_STATUS, response);
+          break;
         case WebSocketResponseType.SUBSCRIPTIONS:
           this.emit(WebSocketEvent.ON_SUBSCRIPTION_UPDATE, response);
           break;
