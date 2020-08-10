@@ -1,5 +1,6 @@
 import WebSocket = require('ws');
 import tickerBTCUSD from '../test/fixtures/ws/ticker/BTC-USD.json';
+import statusPayload from '../test/fixtures/ws/status/status.json';
 import matchesBTCUSD from '../test/fixtures/ws/matches/BTC-USD.json';
 import tickerUnsubscribeSuccess from '../test/fixtures/ws/ticker/unsubscribe-success.json';
 import {
@@ -126,6 +127,40 @@ describe('WebSocketClient', () => {
   });
 
   describe('subscribe', () => {
+    it('receives typed messages from "status" channel', async (done: DoneFn) => {
+      server.on('connection', ws => {
+        ws.on('message', (message: string) => {
+          const request = JSON.parse(message);
+          if (request.type === WebSocketRequestType.SUBSCRIBE) {
+            const response = JSON.stringify(statusPayload);
+            server.clients.forEach(client => client.send(response));
+          }
+        });
+      });
+
+      const channel = {
+        name: WebSocketChannelName.STATUS,
+      };
+
+      const ws = createWebSocketClient();
+
+      ws.on(WebSocketEvent.ON_MESSAGE_STATUS, message => {
+        expect(message.currencies[2].details.sort_order).toBe(48);
+        expect(message.products[72].id).toBe('XRP-USD');
+        ws.disconnect();
+      });
+
+      ws.on(WebSocketEvent.ON_MESSAGE_ERROR, () => done.fail());
+
+      ws.on(WebSocketEvent.ON_OPEN, () => ws.subscribe(channel));
+
+      ws.on(WebSocketEvent.ON_CLOSE, done);
+
+      ws.on(WebSocketEvent.ON_OPEN, () => ws.subscribe(channel));
+
+      ws.connect();
+    });
+
     it('receives typed messages from "ticker" channel', async done => {
       server.on('connection', ws => {
         ws.on('message', (message: string) => {
@@ -140,17 +175,16 @@ describe('WebSocketClient', () => {
             response = JSON.stringify(tickerUnsubscribeSuccess);
           }
 
-          server.clients.forEach(client => {
-            client.send(response);
-          });
+          server.clients.forEach(client => client.send(response));
         });
       });
 
-      const ws = createWebSocketClient();
       const channel = {
         name: WebSocketChannelName.TICKER,
         product_ids: ['BTC-USD'],
       };
+
+      const ws = createWebSocketClient();
 
       ws.on(WebSocketEvent.ON_MESSAGE_TICKER, tickerMessage => {
         expect(tickerMessage.trade_id).toBe(3526965);
@@ -163,9 +197,7 @@ describe('WebSocketClient', () => {
         }
       });
 
-      ws.on(WebSocketEvent.ON_CLOSE, () => {
-        done();
-      });
+      ws.on(WebSocketEvent.ON_CLOSE, done);
 
       ws.on(WebSocketEvent.ON_OPEN, () => ws.subscribe(channel));
 
@@ -192,13 +224,14 @@ describe('WebSocketClient', () => {
         });
       });
 
-      const ws = createWebSocketClient();
       const channels = [
         {
           name: WebSocketChannelName.MATCHES,
           product_ids: ['BTC-USD'],
         },
       ];
+
+      const ws = createWebSocketClient();
 
       ws.on(WebSocketEvent.ON_MESSAGE_MATCHES, message => {
         expect(message.trade_id).toBe(9713921);
@@ -211,9 +244,7 @@ describe('WebSocketClient', () => {
         }
       });
 
-      ws.on(WebSocketEvent.ON_CLOSE, () => {
-        done();
-      });
+      ws.on(WebSocketEvent.ON_CLOSE, done);
 
       ws.on(WebSocketEvent.ON_OPEN, () => ws.subscribe(channels));
 
@@ -280,9 +311,7 @@ describe('WebSocketClient', () => {
         }
       });
 
-      ws.on(WebSocketEvent.ON_CLOSE, () => {
-        done();
-      });
+      ws.on(WebSocketEvent.ON_CLOSE, done);
 
       ws.on(WebSocketEvent.ON_OPEN, () => ws.unsubscribe(WebSocketChannelName.TICKER));
 

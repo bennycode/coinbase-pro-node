@@ -6,7 +6,7 @@ import {OrderSide, ISO_8601_MS_UTC, UUID_V4, UserAPI, CurrencyDetail, Product} f
 
 export interface WebSocketChannel {
   name: WebSocketChannelName;
-  product_ids: string[];
+  product_ids?: string[];
 }
 
 export enum WebSocketChannelName {
