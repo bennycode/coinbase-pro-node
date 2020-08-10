@@ -279,7 +279,17 @@ export class ProductAPI {
   }
 
   /**
-   * Get a list of available currency pairs for trading.
+   * Get trading details for a specified product.
+   *
+   * @see https://docs.pro.coinbase.com/#get-products
+   */
+  async getProduct(productId: string): Promise<Product | undefined> {
+    const products = await this.getProducts();
+    return products.find(product => product.id === productId);
+  }
+
+  /**
+   * Get trading details of all available currency pairs.
    *
    * @see https://docs.pro.coinbase.com/#get-products
    */
