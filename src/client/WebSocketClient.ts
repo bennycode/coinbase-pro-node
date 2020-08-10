@@ -2,11 +2,11 @@ import {EventEmitter} from 'events';
 import ReconnectingWebSocket, {Event, ErrorEvent, Options, CloseEvent} from 'reconnecting-websocket';
 import WebSocket from 'ws';
 import {RequestSetup, SignedRequest} from '../auth/RequestSigner';
-import {OrderSide, ISO_8601_MS_UTC, UUID_V4, UserAPI} from '..';
+import {OrderSide, ISO_8601_MS_UTC, UUID_V4, UserAPI, CurrencyDetail, Product} from '..';
 
 export interface WebSocketChannel {
   name: WebSocketChannelName;
-  product_ids: string[];
+  product_ids?: string[];
 }
 
 export enum WebSocketChannelName {
@@ -125,6 +125,7 @@ export type WebSocketResponse = {type: WebSocketResponseType} & WebSocketMessage
 // Not exported because it will become "WebSocketResponse" once complete
 type WebSocketMessage =
   | Record<string, string | number | boolean>
+  | WebSocketStatusMessage
   | WebSocketTickerMessage
   | WebSocketMatchMessage
   | WebSocketErrorMessage;
@@ -146,6 +147,22 @@ export type WebSocketMatchMessage = {
   time: ISO_8601_MS_UTC;
   trade_id: number;
   type: WebSocketResponseType.FULL_MATCH;
+};
+
+export type WebSocketStatusMessage = {
+  currencies: {
+    convertible_to: string[];
+    details: CurrencyDetail;
+    funding_account_id: string;
+    id: string;
+    max_precision: string;
+    min_size: string;
+    name: string;
+    status: 'online';
+    status_message?: string;
+  }[];
+  products: (Product & {type: 'spot'})[];
+  type: WebSocketResponseType.STATUS;
 };
 
 export type WebSocketTickerMessage = {
@@ -179,6 +196,7 @@ export enum WebSocketEvent {
   ON_MESSAGE = 'WebSocketEvent.ON_MESSAGE',
   ON_MESSAGE_ERROR = 'WebSocketEvent.ON_MESSAGE_ERROR',
   ON_MESSAGE_MATCHES = 'WebSocketEvent.ON_MESSAGE_MATCHES',
+  ON_MESSAGE_STATUS = 'WebSocketEvent.ON_MESSAGE_STATUS',
   ON_MESSAGE_TICKER = 'WebSocketEvent.ON_MESSAGE_TICKER',
   ON_OPEN = 'WebSocketEvent.ON_OPEN',
   ON_SUBSCRIPTION_UPDATE = 'WebSocketEvent.ON_SUBSCRIPTION_UPDATE',
@@ -197,6 +215,8 @@ export interface WebSocketClient {
     event: WebSocketEvent.ON_MESSAGE_MATCHES,
     listener: (matchMessage: WebSocketLastMatchMessage | WebSocketMatchMessage) => void
   ): this;
+
+  on(event: WebSocketEvent.ON_MESSAGE_STATUS, listener: (statusMessage: WebSocketStatusMessage) => void): this;
 
   on(event: WebSocketEvent.ON_MESSAGE_TICKER, listener: (tickerMessage: WebSocketTickerMessage) => void): this;
 
@@ -256,6 +276,9 @@ export class WebSocketClient extends EventEmitter {
       switch (response.type) {
         case WebSocketResponseType.ERROR:
           this.emit(WebSocketEvent.ON_MESSAGE_ERROR, response);
+          break;
+        case WebSocketResponseType.STATUS:
+          this.emit(WebSocketEvent.ON_MESSAGE_STATUS, response);
           break;
         case WebSocketResponseType.SUBSCRIPTIONS:
           this.emit(WebSocketEvent.ON_SUBSCRIPTION_UPDATE, response);

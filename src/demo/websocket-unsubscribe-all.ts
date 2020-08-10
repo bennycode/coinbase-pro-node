@@ -26,7 +26,7 @@ client.ws.on(WebSocketEvent.ON_SUBSCRIPTION_UPDATE, subscriptions => {
   const subscriptionCount = subscriptions.channels.length;
   const uniqueProductIds = new Set();
   const productIds = subscriptions.channels.map(subscription => subscription.product_ids);
-  productIds.forEach(ids => ids.forEach(id => uniqueProductIds.add(id)));
+  productIds.forEach(ids => (ids || []).forEach(id => uniqueProductIds.add(id)));
 
   console.info(
     `We have now "${subscriptionCount}" subscriptions for "${uniqueProductIds.size}" different products.`,

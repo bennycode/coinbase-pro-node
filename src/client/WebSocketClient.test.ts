@@ -1,13 +1,17 @@
 import WebSocket = require('ws');
 import tickerBTCUSD from '../test/fixtures/ws/ticker/BTC-USD.json';
+import statusPayload from '../test/fixtures/ws/status/status.json';
 import matchesBTCUSD from '../test/fixtures/ws/matches/BTC-USD.json';
-import tickerUnsubscribeSuccess from '../test/fixtures/ws/ticker/unsubscribe-success.json';
+import emptySubscriptions from '../test/fixtures/ws/empty-subscriptions.json';
 import {
   WebSocketChannelName,
   WebSocketClient,
   WebSocketEvent,
   WebSocketRequestType,
   WebSocketResponseType,
+  WebSocketRequest,
+  WebSocketChannel,
+  WebSocketErrorMessage,
 } from './WebSocketClient';
 import ReconnectingWebSocket from 'reconnecting-websocket';
 
@@ -126,73 +130,83 @@ describe('WebSocketClient', () => {
   });
 
   describe('subscribe', () => {
-    it('receives typed messages from "ticker" channel', async done => {
+    function mockWebSocketResponse(
+      done: DoneFn,
+      channels: WebSocketChannel | WebSocketChannel[],
+      payload: Object
+    ): WebSocketClient {
       server.on('connection', ws => {
         ws.on('message', (message: string) => {
-          const request = JSON.parse(message);
-          let response: string;
+          const request = JSON.parse(message) as WebSocketRequest;
 
           if (request.type === WebSocketRequestType.SUBSCRIBE) {
-            response = JSON.stringify(tickerBTCUSD);
+            // Send subscription confirmation
+            server.clients.forEach(client =>
+              client.send(
+                JSON.stringify({
+                  channels: request.channels,
+                  type: WebSocketResponseType.SUBSCRIPTIONS,
+                })
+              )
+            );
+            // Send event for subscription
+            server.clients.forEach(client => client.send(JSON.stringify(payload)));
           }
 
           if (request.type === WebSocketRequestType.UNSUBSCRIBE) {
-            response = JSON.stringify(tickerUnsubscribeSuccess);
+            // Send unsubscribe confirmation
+            server.clients.forEach(client => client.send(JSON.stringify(emptySubscriptions)));
           }
-
-          server.clients.forEach(client => {
-            client.send(response);
-          });
         });
       });
 
       const ws = createWebSocketClient();
+      ws.on(WebSocketEvent.ON_SUBSCRIPTION_UPDATE, subscriptions => {
+        // Disconnect when there are no more open subscriptions
+        if (subscriptions.channels.length === 0) {
+          ws.disconnect();
+        }
+      });
+      ws.on(WebSocketEvent.ON_CLOSE, done);
+      ws.on(WebSocketEvent.ON_MESSAGE_ERROR, (wsError: WebSocketErrorMessage) => done.fail(wsError.message));
+      // Send subscription once the WebSocket is ready
+      ws.on(WebSocketEvent.ON_OPEN, () => ws.subscribe(channels));
+      return ws;
+    }
+
+    it('receives typed messages from "status" channel', async (done: DoneFn) => {
+      const channel = {
+        name: WebSocketChannelName.STATUS,
+      };
+
+      const ws = mockWebSocketResponse(done, channel, statusPayload);
+
+      ws.on(WebSocketEvent.ON_MESSAGE_STATUS, message => {
+        expect(message.currencies[2].details.sort_order).toBe(48);
+        expect(message.products[72].id).toBe('XRP-USD');
+        ws.unsubscribe(channel);
+      });
+
+      ws.connect();
+    });
+
+    it('receives typed messages from "ticker" channel', async done => {
       const channel = {
         name: WebSocketChannelName.TICKER,
         product_ids: ['BTC-USD'],
       };
+
+      const ws = mockWebSocketResponse(done, channel, tickerBTCUSD);
 
       ws.on(WebSocketEvent.ON_MESSAGE_TICKER, tickerMessage => {
         expect(tickerMessage.trade_id).toBe(3526965);
         ws.unsubscribe(channel);
       });
 
-      ws.on(WebSocketEvent.ON_SUBSCRIPTION_UPDATE, subscriptions => {
-        if (subscriptions.channels.length === 0) {
-          ws.disconnect();
-        }
-      });
-
-      ws.on(WebSocketEvent.ON_CLOSE, () => {
-        done();
-      });
-
-      ws.on(WebSocketEvent.ON_OPEN, () => ws.subscribe(channel));
-
       ws.connect();
     });
 
-    it('receives typed messages from "matches" channel', async done => {
-      server.on('connection', ws => {
-        ws.on('message', (message: string) => {
-          const request = JSON.parse(message);
-          let response: string;
-
-          if (request.type === WebSocketRequestType.SUBSCRIBE) {
-            response = JSON.stringify(matchesBTCUSD);
-          }
-
-          if (request.type === WebSocketRequestType.UNSUBSCRIBE) {
-            response = JSON.stringify(tickerUnsubscribeSuccess);
-          }
-
-          server.clients.forEach(client => {
-            client.send(response);
-          });
-        });
-      });
-
-      const ws = createWebSocketClient();
+    it('receives typed messages from multiple "matches" channels', async done => {
       const channels = [
         {
           name: WebSocketChannelName.MATCHES,
@@ -200,22 +214,12 @@ describe('WebSocketClient', () => {
         },
       ];
 
+      const ws = mockWebSocketResponse(done, channels, matchesBTCUSD);
+
       ws.on(WebSocketEvent.ON_MESSAGE_MATCHES, message => {
         expect(message.trade_id).toBe(9713921);
         ws.unsubscribe(channels);
       });
-
-      ws.on(WebSocketEvent.ON_SUBSCRIPTION_UPDATE, subscriptions => {
-        if (subscriptions.channels.length === 0) {
-          ws.disconnect();
-        }
-      });
-
-      ws.on(WebSocketEvent.ON_CLOSE, () => {
-        done();
-      });
-
-      ws.on(WebSocketEvent.ON_OPEN, () => ws.subscribe(channels));
 
       ws.connect();
     });
@@ -259,15 +263,13 @@ describe('WebSocketClient', () => {
 
   describe('unsubscribe', () => {
     it('unsubscribes from all products on a channel', done => {
-      server.on('connection', ws => {
-        ws.on('message', (message: string) => {
+      server.on('connection', socket => {
+        socket.on('message', (message: string) => {
           const request = JSON.parse(message);
 
           if (request.type === WebSocketRequestType.UNSUBSCRIBE) {
-            const response = JSON.stringify(tickerUnsubscribeSuccess);
-            server.clients.forEach(client => {
-              client.send(response);
-            });
+            const response = JSON.stringify(emptySubscriptions);
+            server.clients.forEach(client => client.send(response));
           }
         });
       });
@@ -280,9 +282,7 @@ describe('WebSocketClient', () => {
         }
       });
 
-      ws.on(WebSocketEvent.ON_CLOSE, () => {
-        done();
-      });
+      ws.on(WebSocketEvent.ON_CLOSE, done);
 
       ws.on(WebSocketEvent.ON_OPEN, () => ws.unsubscribe(WebSocketChannelName.TICKER));
 
