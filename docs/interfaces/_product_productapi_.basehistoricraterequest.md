@@ -20,6 +20,6 @@
 
 • **granularity**: _[CandleGranularity](../enums/_product_productapi_.candlegranularity.md)_
 
-_Defined in [src/product/ProductAPI.ts:71](https://github.com/bennyn/coinbase-pro-node/blob/6dc414a/src/product/ProductAPI.ts#L71)_
+_Defined in [src/product/ProductAPI.ts:72](https://github.com/bennyn/coinbase-pro-node/blob/d0dceee/src/product/ProductAPI.ts#L72)_
 
 Desired time slice in seconds.

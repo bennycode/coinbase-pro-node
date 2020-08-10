@@ -29,7 +29,7 @@
 
 ▸ **addUnitISO**(`openTime`: number | string, `granularity`: [CandleGranularity](../enums/_product_productapi_.candlegranularity.md), `amount`: number): _ISO_8601_MS_UTC_
 
-_Defined in [src/product/CandleBucketUtil.ts:29](https://github.com/bennyn/coinbase-pro-node/blob/6dc414a/src/product/CandleBucketUtil.ts#L29)_
+_Defined in [src/product/CandleBucketUtil.ts:29](https://github.com/bennyn/coinbase-pro-node/blob/d0dceee/src/product/CandleBucketUtil.ts#L29)_
 
 **Parameters:**
 
@@ -47,7 +47,7 @@ _Defined in [src/product/CandleBucketUtil.ts:29](https://github.com/bennyn/coinb
 
 ▸ **addUnitMillis**(`openTime`: number | string, `granularity`: [CandleGranularity](../enums/_product_productapi_.candlegranularity.md), `amount`: number): _number_
 
-_Defined in [src/product/CandleBucketUtil.ts:23](https://github.com/bennyn/coinbase-pro-node/blob/6dc414a/src/product/CandleBucketUtil.ts#L23)_
+_Defined in [src/product/CandleBucketUtil.ts:23](https://github.com/bennyn/coinbase-pro-node/blob/d0dceee/src/product/CandleBucketUtil.ts#L23)_
 
 **Parameters:**
 
@@ -65,7 +65,7 @@ _Defined in [src/product/CandleBucketUtil.ts:23](https://github.com/bennyn/coinb
 
 ▸ **expectedBuckets**(`fromInMillis`: number, `toInMillis`: number, `candleSizeInMillis`: [CandleGranularity](../enums/_product_productapi_.candlegranularity.md)): _number_
 
-_Defined in [src/product/CandleBucketUtil.ts:59](https://github.com/bennyn/coinbase-pro-node/blob/6dc414a/src/product/CandleBucketUtil.ts#L59)_
+_Defined in [src/product/CandleBucketUtil.ts:59](https://github.com/bennyn/coinbase-pro-node/blob/d0dceee/src/product/CandleBucketUtil.ts#L59)_
 
 **Parameters:**
 
@@ -83,7 +83,7 @@ _Defined in [src/product/CandleBucketUtil.ts:59](https://github.com/bennyn/coinb
 
 ▸ **getBucketsInISO**(`bucketsInMillis`: number[]): _[CandleBatchBucket](../interfaces/_product_candlebucketutil_.candlebatchbucket.md)[]_
 
-_Defined in [src/product/CandleBucketUtil.ts:82](https://github.com/bennyn/coinbase-pro-node/blob/6dc414a/src/product/CandleBucketUtil.ts#L82)_
+_Defined in [src/product/CandleBucketUtil.ts:82](https://github.com/bennyn/coinbase-pro-node/blob/d0dceee/src/product/CandleBucketUtil.ts#L82)_
 
 **Parameters:**
 
@@ -99,7 +99,7 @@ _Defined in [src/product/CandleBucketUtil.ts:82](https://github.com/bennyn/coinb
 
 ▸ **getBucketsInMillis**(`fromInMillis`: number, `toInMillis`: number, `candleSizeInMillis`: number): _number[]_
 
-_Defined in [src/product/CandleBucketUtil.ts:64](https://github.com/bennyn/coinbase-pro-node/blob/6dc414a/src/product/CandleBucketUtil.ts#L64)_
+_Defined in [src/product/CandleBucketUtil.ts:64](https://github.com/bennyn/coinbase-pro-node/blob/d0dceee/src/product/CandleBucketUtil.ts#L64)_
 
 **Parameters:**
 
@@ -117,7 +117,7 @@ _Defined in [src/product/CandleBucketUtil.ts:64](https://github.com/bennyn/coinb
 
 ▸ **getIntervals**(): _number[]_
 
-_Defined in [src/product/CandleBucketUtil.ts:45](https://github.com/bennyn/coinbase-pro-node/blob/6dc414a/src/product/CandleBucketUtil.ts#L45)_
+_Defined in [src/product/CandleBucketUtil.ts:45](https://github.com/bennyn/coinbase-pro-node/blob/d0dceee/src/product/CandleBucketUtil.ts#L45)_
 
 **Returns:** _number[]_
 
@@ -127,7 +127,7 @@ _Defined in [src/product/CandleBucketUtil.ts:45](https://github.com/bennyn/coinb
 
 ▸ **getMaxPrice**(`candles`: [Candle](../interfaces/_product_productapi_.candle.md)[], `property`: "close" | "high" | "low" | "open"): _number_
 
-_Defined in [src/product/CandleBucketUtil.ts:18](https://github.com/bennyn/coinbase-pro-node/blob/6dc414a/src/product/CandleBucketUtil.ts#L18)_
+_Defined in [src/product/CandleBucketUtil.ts:18](https://github.com/bennyn/coinbase-pro-node/blob/d0dceee/src/product/CandleBucketUtil.ts#L18)_
 
 **Parameters:**
 
@@ -144,7 +144,7 @@ _Defined in [src/product/CandleBucketUtil.ts:18](https://github.com/bennyn/coinb
 
 ▸ **getMinPrice**(`candles`: [Candle](../interfaces/_product_productapi_.candle.md)[], `property`: "close" | "high" | "low" | "open"): _number_
 
-_Defined in [src/product/CandleBucketUtil.ts:13](https://github.com/bennyn/coinbase-pro-node/blob/6dc414a/src/product/CandleBucketUtil.ts#L13)_
+_Defined in [src/product/CandleBucketUtil.ts:13](https://github.com/bennyn/coinbase-pro-node/blob/d0dceee/src/product/CandleBucketUtil.ts#L13)_
 
 **Parameters:**
 
@@ -161,7 +161,7 @@ _Defined in [src/product/CandleBucketUtil.ts:13](https://github.com/bennyn/coinb
 
 ▸ **mapGranularity**(`candleSizeInMillis`: number): _[CandleGranularity](../enums/_product_productapi_.candlegranularity.md)_
 
-_Defined in [src/product/CandleBucketUtil.ts:55](https://github.com/bennyn/coinbase-pro-node/blob/6dc414a/src/product/CandleBucketUtil.ts#L55)_
+_Defined in [src/product/CandleBucketUtil.ts:55](https://github.com/bennyn/coinbase-pro-node/blob/d0dceee/src/product/CandleBucketUtil.ts#L55)_
 
 **Parameters:**
 
@@ -177,7 +177,7 @@ _Defined in [src/product/CandleBucketUtil.ts:55](https://github.com/bennyn/coinb
 
 ▸ **mapInterval**(`intervals`: number[], `interval`: number): _number_
 
-_Defined in [src/product/CandleBucketUtil.ts:49](https://github.com/bennyn/coinbase-pro-node/blob/6dc414a/src/product/CandleBucketUtil.ts#L49)_
+_Defined in [src/product/CandleBucketUtil.ts:49](https://github.com/bennyn/coinbase-pro-node/blob/d0dceee/src/product/CandleBucketUtil.ts#L49)_
 
 **Parameters:**
 
@@ -194,7 +194,7 @@ _Defined in [src/product/CandleBucketUtil.ts:49](https://github.com/bennyn/coinb
 
 ▸ **removeUnitISO**(`openTime`: number | string, `granularity`: [CandleGranularity](../enums/_product_productapi_.candlegranularity.md), `amount`: number): _ISO_8601_MS_UTC_
 
-_Defined in [src/product/CandleBucketUtil.ts:40](https://github.com/bennyn/coinbase-pro-node/blob/6dc414a/src/product/CandleBucketUtil.ts#L40)_
+_Defined in [src/product/CandleBucketUtil.ts:40](https://github.com/bennyn/coinbase-pro-node/blob/d0dceee/src/product/CandleBucketUtil.ts#L40)_
 
 **Parameters:**
 
@@ -212,7 +212,7 @@ _Defined in [src/product/CandleBucketUtil.ts:40](https://github.com/bennyn/coinb
 
 ▸ **removeUnitMillis**(`openTime`: number | string, `granularity`: [CandleGranularity](../enums/_product_productapi_.candlegranularity.md), `amount`: number): _number_
 
-_Defined in [src/product/CandleBucketUtil.ts:34](https://github.com/bennyn/coinbase-pro-node/blob/6dc414a/src/product/CandleBucketUtil.ts#L34)_
+_Defined in [src/product/CandleBucketUtil.ts:34](https://github.com/bennyn/coinbase-pro-node/blob/d0dceee/src/product/CandleBucketUtil.ts#L34)_
 
 **Parameters:**
 
