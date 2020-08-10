@@ -1,3 +1,24 @@
+### 2.8.0 (2020-08-10)
+
+##### Chores
+
+- **deps-dev:**
+  - bump @typescript-eslint/eslint-plugin ([#228](https://github.com/bennyn/coinbase-pro-node/pull/228)) ([5eb22752](https://github.com/bennyn/coinbase-pro-node/commit/5eb227528693c1f34f067b7579042b1d50d8ff4f))
+  - bump typedoc from 0.17.8 to 0.18.0 ([#227](https://github.com/bennyn/coinbase-pro-node/pull/227)) ([f7ef3df2](https://github.com/bennyn/coinbase-pro-node/commit/f7ef3df2ecfee78a556f76de42f83402a9c3296e))
+  - bump @typescript-eslint/parser from 3.7.1 to 3.8.0 ([#226](https://github.com/bennyn/coinbase-pro-node/pull/226)) ([e5562423](https://github.com/bennyn/coinbase-pro-node/commit/e5562423a04929130dcbfe41bf8934162dd7cbfd))
+  - bump @typescript-eslint/eslint-plugin ([#224](https://github.com/bennyn/coinbase-pro-node/pull/224)) ([6e8bb6b3](https://github.com/bennyn/coinbase-pro-node/commit/6e8bb6b31f02c27019034a524ec92050fb8b37b4))
+  - bump @typescript-eslint/parser from 3.7.0 to 3.7.1 ([#222](https://github.com/bennyn/coinbase-pro-node/pull/222)) ([bcec52f2](https://github.com/bennyn/coinbase-pro-node/commit/bcec52f2d8d2aa1d649e89a81b68d82b88cadfd5))
+  - bump nock from 13.0.2 to 13.0.3 ([#225](https://github.com/bennyn/coinbase-pro-node/pull/225)) ([0ce3c41e](https://github.com/bennyn/coinbase-pro-node/commit/0ce3c41ee1b199ee3f689b708f9f10e6f884665a))
+  - bump typedoc-plugin-markdown from 2.3.1 to 2.4.0 ([#223](https://github.com/bennyn/coinbase-pro-node/pull/223)) ([013a9a05](https://github.com/bennyn/coinbase-pro-node/commit/013a9a05feec4d3fa7bd121abcb4d29114c6cda5))
+  - bump @types/jasmine from 3.5.11 to 3.5.12 ([#221](https://github.com/bennyn/coinbase-pro-node/pull/221)) ([7b9a8836](https://github.com/bennyn/coinbase-pro-node/commit/7b9a8836668859d517a1bf16c861d235495e2de9))
+  - bump eslint from 7.5.0 to 7.6.0 ([#220](https://github.com/bennyn/coinbase-pro-node/pull/220)) ([83829004](https://github.com/bennyn/coinbase-pro-node/commit/83829004d102b987bd8eca1bec3a3fd4f34d6940))
+
+##### New Features
+
+- Add convenience method to fetch a product ([#230](https://github.com/bennyn/coinbase-pro-node/pull/230)) ([693fe2dd](https://github.com/bennyn/coinbase-pro-node/commit/693fe2dd6c8995a664e3bf55def68e219107d890))
+- Type payloads from WebSocket status channel ([#229](https://github.com/bennyn/coinbase-pro-node/pull/229)) ([be44e258](https://github.com/bennyn/coinbase-pro-node/commit/be44e25847d235822e042fbe13962890553cb1af))
+- Export TSDoc comments in declaration files ([#219](https://github.com/bennyn/coinbase-pro-node/pull/219)) ([7935bfc3](https://github.com/bennyn/coinbase-pro-node/commit/7935bfc3976e71f2169683fa4a4ef8f8500d2fe5))
+
 ### 2.7.0 (2020-07-28)
 
 ##### Chores
