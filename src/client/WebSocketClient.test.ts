@@ -144,6 +144,8 @@ describe('WebSocketClient', () => {
 
       const ws = createWebSocketClient();
 
+      ws.on(WebSocketEvent.ON_CLOSE, done);
+
       ws.on(WebSocketEvent.ON_MESSAGE_STATUS, message => {
         expect(message.currencies[2].details.sort_order).toBe(48);
         expect(message.products[72].id).toBe('XRP-USD');
@@ -151,10 +153,6 @@ describe('WebSocketClient', () => {
       });
 
       ws.on(WebSocketEvent.ON_MESSAGE_ERROR, () => done.fail());
-
-      ws.on(WebSocketEvent.ON_OPEN, () => ws.subscribe(channel));
-
-      ws.on(WebSocketEvent.ON_CLOSE, done);
 
       ws.on(WebSocketEvent.ON_OPEN, () => ws.subscribe(channel));
 
