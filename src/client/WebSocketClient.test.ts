@@ -144,8 +144,8 @@ describe('WebSocketClient', () => {
             server.clients.forEach(client =>
               client.send(
                 JSON.stringify({
-                  type: WebSocketResponseType.SUBSCRIPTIONS,
                   channels: request.channels,
+                  type: WebSocketResponseType.SUBSCRIPTIONS,
                 })
               )
             );
