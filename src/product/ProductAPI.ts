@@ -289,7 +289,7 @@ export class ProductAPI {
   }
 
   /**
-   * Get trading details of all available currency pairs.
+   * Get trading details of all available products.
    *
    * @see https://docs.pro.coinbase.com/#get-products
    */
