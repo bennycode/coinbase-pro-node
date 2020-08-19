@@ -92,7 +92,7 @@ type ActiveOrderPrice = string;
 /** Sum of the size of the orders at active order price. Size should not be multiplied by number of orders. */
 type OrderSumSize = string;
 /** Number of orders at active order price. */
-type NumberOfOrders = string;
+type NumberOfOrders = number;
 type OrderId = string;
 /** Aggregated levels return only one size for each active order price. */
 type AggregatedOrder = [ActiveOrderPrice, OrderSumSize, NumberOfOrders];
