@@ -62,7 +62,7 @@
 
 _Overrides void_
 
-_Defined in [src/client/RESTClient.ts:50](https://github.com/bennyn/coinbase-pro-node/blob/d0dceee/src/client/RESTClient.ts#L50)_
+_Defined in [src/client/RESTClient.ts:50](https://github.com/bennyn/coinbase-pro-node/blob/2af663b/src/client/RESTClient.ts#L50)_
 
 **Parameters:**
 
@@ -86,7 +86,7 @@ _Defined in [src/client/RESTClient.ts:50](https://github.com/bennyn/coinbase-pro
 
 • **account**: _[AccountAPI](_account_accountapi_.accountapi.md)_
 
-_Defined in [src/client/RESTClient.ts:38](https://github.com/bennyn/coinbase-pro-node/blob/d0dceee/src/client/RESTClient.ts#L38)_
+_Defined in [src/client/RESTClient.ts:38](https://github.com/bennyn/coinbase-pro-node/blob/2af663b/src/client/RESTClient.ts#L38)_
 
 ---
 
@@ -94,7 +94,7 @@ _Defined in [src/client/RESTClient.ts:38](https://github.com/bennyn/coinbase-pro
 
 • **currency**: _[CurrencyAPI](_currency_currencyapi_.currencyapi.md)_
 
-_Defined in [src/client/RESTClient.ts:39](https://github.com/bennyn/coinbase-pro-node/blob/d0dceee/src/client/RESTClient.ts#L39)_
+_Defined in [src/client/RESTClient.ts:39](https://github.com/bennyn/coinbase-pro-node/blob/2af663b/src/client/RESTClient.ts#L39)_
 
 ---
 
@@ -102,7 +102,7 @@ _Defined in [src/client/RESTClient.ts:39](https://github.com/bennyn/coinbase-pro
 
 • **fee**: _[FeeAPI](_fee_feeapi_.feeapi.md)_
 
-_Defined in [src/client/RESTClient.ts:40](https://github.com/bennyn/coinbase-pro-node/blob/d0dceee/src/client/RESTClient.ts#L40)_
+_Defined in [src/client/RESTClient.ts:40](https://github.com/bennyn/coinbase-pro-node/blob/2af663b/src/client/RESTClient.ts#L40)_
 
 ---
 
@@ -110,7 +110,7 @@ _Defined in [src/client/RESTClient.ts:40](https://github.com/bennyn/coinbase-pro
 
 • **fill**: _[FillAPI](_fill_fillapi_.fillapi.md)_
 
-_Defined in [src/client/RESTClient.ts:41](https://github.com/bennyn/coinbase-pro-node/blob/d0dceee/src/client/RESTClient.ts#L41)_
+_Defined in [src/client/RESTClient.ts:41](https://github.com/bennyn/coinbase-pro-node/blob/2af663b/src/client/RESTClient.ts#L41)_
 
 ---
 
@@ -118,7 +118,7 @@ _Defined in [src/client/RESTClient.ts:41](https://github.com/bennyn/coinbase-pro
 
 • **order**: _[OrderAPI](_order_orderapi_.orderapi.md)_
 
-_Defined in [src/client/RESTClient.ts:42](https://github.com/bennyn/coinbase-pro-node/blob/d0dceee/src/client/RESTClient.ts#L42)_
+_Defined in [src/client/RESTClient.ts:42](https://github.com/bennyn/coinbase-pro-node/blob/2af663b/src/client/RESTClient.ts#L42)_
 
 ---
 
@@ -126,7 +126,7 @@ _Defined in [src/client/RESTClient.ts:42](https://github.com/bennyn/coinbase-pro
 
 • **product**: _[ProductAPI](_product_productapi_.productapi.md)_
 
-_Defined in [src/client/RESTClient.ts:43](https://github.com/bennyn/coinbase-pro-node/blob/d0dceee/src/client/RESTClient.ts#L43)_
+_Defined in [src/client/RESTClient.ts:43](https://github.com/bennyn/coinbase-pro-node/blob/2af663b/src/client/RESTClient.ts#L43)_
 
 ---
 
@@ -134,7 +134,7 @@ _Defined in [src/client/RESTClient.ts:43](https://github.com/bennyn/coinbase-pro
 
 • **profile**: _[ProfileAPI](_profile_profileapi_.profileapi.md)_
 
-_Defined in [src/client/RESTClient.ts:44](https://github.com/bennyn/coinbase-pro-node/blob/d0dceee/src/client/RESTClient.ts#L44)_
+_Defined in [src/client/RESTClient.ts:44](https://github.com/bennyn/coinbase-pro-node/blob/2af663b/src/client/RESTClient.ts#L44)_
 
 ---
 
@@ -142,7 +142,7 @@ _Defined in [src/client/RESTClient.ts:44](https://github.com/bennyn/coinbase-pro
 
 • **transfer**: _[TransferAPI](_transfer_transferapi_.transferapi.md)_
 
-_Defined in [src/client/RESTClient.ts:45](https://github.com/bennyn/coinbase-pro-node/blob/d0dceee/src/client/RESTClient.ts#L45)_
+_Defined in [src/client/RESTClient.ts:45](https://github.com/bennyn/coinbase-pro-node/blob/2af663b/src/client/RESTClient.ts#L45)_
 
 ---
 
@@ -150,7 +150,7 @@ _Defined in [src/client/RESTClient.ts:45](https://github.com/bennyn/coinbase-pro
 
 • **user**: _[UserAPI](_user_userapi_.userapi.md)_
 
-_Defined in [src/client/RESTClient.ts:46](https://github.com/bennyn/coinbase-pro-node/blob/d0dceee/src/client/RESTClient.ts#L46)_
+_Defined in [src/client/RESTClient.ts:46](https://github.com/bennyn/coinbase-pro-node/blob/2af663b/src/client/RESTClient.ts#L46)_
 
 ---
 
@@ -158,7 +158,7 @@ _Defined in [src/client/RESTClient.ts:46](https://github.com/bennyn/coinbase-pro
 
 • **withdraw**: _[WithdrawAPI](_withdraw_withdrawapi_.withdrawapi.md)_
 
-_Defined in [src/client/RESTClient.ts:47](https://github.com/bennyn/coinbase-pro-node/blob/d0dceee/src/client/RESTClient.ts#L47)_
+_Defined in [src/client/RESTClient.ts:47](https://github.com/bennyn/coinbase-pro-node/blob/2af663b/src/client/RESTClient.ts#L47)_
 
 ---
 
@@ -190,7 +190,7 @@ Installing a listener using this symbol does not change the behavior once an `'e
 
 • **get defaults**(): _AxiosRequestConfig_
 
-_Defined in [src/client/RESTClient.ts:27](https://github.com/bennyn/coinbase-pro-node/blob/d0dceee/src/client/RESTClient.ts#L27)_
+_Defined in [src/client/RESTClient.ts:27](https://github.com/bennyn/coinbase-pro-node/blob/2af663b/src/client/RESTClient.ts#L27)_
 
 **Returns:** _AxiosRequestConfig_
 
@@ -200,7 +200,7 @@ _Defined in [src/client/RESTClient.ts:27](https://github.com/bennyn/coinbase-pro
 
 • **get interceptors**(): _object_
 
-_Defined in [src/client/RESTClient.ts:31](https://github.com/bennyn/coinbase-pro-node/blob/d0dceee/src/client/RESTClient.ts#L31)_
+_Defined in [src/client/RESTClient.ts:31](https://github.com/bennyn/coinbase-pro-node/blob/2af663b/src/client/RESTClient.ts#L31)_
 
 **Returns:** _object_
 
@@ -216,7 +216,7 @@ _Defined in [src/client/RESTClient.ts:31](https://github.com/bennyn/coinbase-pro
 
 _Inherited from [WebSocketClient](_client_websocketclient_.websocketclient.md).[addListener](_client_websocketclient_.websocketclient.md#addlistener)_
 
-Defined in node_modules/@types/node/globals.d.ts:553
+Defined in node_modules/@types/node/events.d.ts:62
 
 **Parameters:**
 
@@ -242,7 +242,7 @@ Defined in node_modules/@types/node/globals.d.ts:553
 
 _Inherited from [WebSocketClient](_client_websocketclient_.websocketclient.md).[emit](_client_websocketclient_.websocketclient.md#emit)_
 
-Defined in node_modules/@types/node/globals.d.ts:563
+Defined in node_modules/@types/node/events.d.ts:72
 
 **Parameters:**
 
@@ -261,7 +261,7 @@ Defined in node_modules/@types/node/globals.d.ts:563
 
 _Inherited from [WebSocketClient](_client_websocketclient_.websocketclient.md).[eventNames](_client_websocketclient_.websocketclient.md#eventnames)_
 
-Defined in node_modules/@types/node/globals.d.ts:568
+Defined in node_modules/@types/node/events.d.ts:77
 
 **Returns:** _Array‹string | symbol›_
 
@@ -273,7 +273,7 @@ Defined in node_modules/@types/node/globals.d.ts:568
 
 _Inherited from [WebSocketClient](_client_websocketclient_.websocketclient.md).[getMaxListeners](_client_websocketclient_.websocketclient.md#getmaxlisteners)_
 
-Defined in node_modules/@types/node/globals.d.ts:560
+Defined in node_modules/@types/node/events.d.ts:69
 
 **Returns:** _number_
 
@@ -285,7 +285,7 @@ Defined in node_modules/@types/node/globals.d.ts:560
 
 _Inherited from [WebSocketClient](_client_websocketclient_.websocketclient.md).[listenerCount](_client_websocketclient_.websocketclient.md#listenercount)_
 
-Defined in node_modules/@types/node/globals.d.ts:564
+Defined in node_modules/@types/node/events.d.ts:73
 
 **Parameters:**
 
@@ -303,7 +303,7 @@ Defined in node_modules/@types/node/globals.d.ts:564
 
 _Inherited from [WebSocketClient](_client_websocketclient_.websocketclient.md).[listeners](_client_websocketclient_.websocketclient.md#listeners)_
 
-Defined in node_modules/@types/node/globals.d.ts:561
+Defined in node_modules/@types/node/events.d.ts:70
 
 **Parameters:**
 
@@ -321,7 +321,7 @@ Defined in node_modules/@types/node/globals.d.ts:561
 
 _Inherited from [WebSocketClient](_client_websocketclient_.websocketclient.md).[off](_client_websocketclient_.websocketclient.md#off)_
 
-Defined in node_modules/@types/node/globals.d.ts:557
+Defined in node_modules/@types/node/events.d.ts:66
 
 **Parameters:**
 
@@ -347,7 +347,7 @@ Defined in node_modules/@types/node/globals.d.ts:557
 
 _Overrides void_
 
-_Defined in [src/client/RESTClient.ts:20](https://github.com/bennyn/coinbase-pro-node/blob/d0dceee/src/client/RESTClient.ts#L20)_
+_Defined in [src/client/RESTClient.ts:20](https://github.com/bennyn/coinbase-pro-node/blob/2af663b/src/client/RESTClient.ts#L20)_
 
 **Parameters:**
 
@@ -375,7 +375,7 @@ _Defined in [src/client/RESTClient.ts:20](https://github.com/bennyn/coinbase-pro
 
 _Inherited from [WebSocketClient](_client_websocketclient_.websocketclient.md).[once](_client_websocketclient_.websocketclient.md#once)_
 
-Defined in node_modules/@types/node/globals.d.ts:555
+Defined in node_modules/@types/node/events.d.ts:64
 
 **Parameters:**
 
@@ -401,7 +401,7 @@ Defined in node_modules/@types/node/globals.d.ts:555
 
 _Inherited from [WebSocketClient](_client_websocketclient_.websocketclient.md).[prependListener](_client_websocketclient_.websocketclient.md#prependlistener)_
 
-Defined in node_modules/@types/node/globals.d.ts:566
+Defined in node_modules/@types/node/events.d.ts:75
 
 **Parameters:**
 
@@ -427,7 +427,7 @@ Defined in node_modules/@types/node/globals.d.ts:566
 
 _Inherited from [WebSocketClient](_client_websocketclient_.websocketclient.md).[prependOnceListener](_client_websocketclient_.websocketclient.md#prependoncelistener)_
 
-Defined in node_modules/@types/node/globals.d.ts:567
+Defined in node_modules/@types/node/events.d.ts:76
 
 **Parameters:**
 
@@ -453,7 +453,7 @@ Defined in node_modules/@types/node/globals.d.ts:567
 
 _Inherited from [WebSocketClient](_client_websocketclient_.websocketclient.md).[rawListeners](_client_websocketclient_.websocketclient.md#rawlisteners)_
 
-Defined in node_modules/@types/node/globals.d.ts:562
+Defined in node_modules/@types/node/events.d.ts:71
 
 **Parameters:**
 
@@ -471,7 +471,7 @@ Defined in node_modules/@types/node/globals.d.ts:562
 
 _Inherited from [WebSocketClient](_client_websocketclient_.websocketclient.md).[removeAllListeners](_client_websocketclient_.websocketclient.md#removealllisteners)_
 
-Defined in node_modules/@types/node/globals.d.ts:558
+Defined in node_modules/@types/node/events.d.ts:67
 
 **Parameters:**
 
@@ -489,7 +489,7 @@ Defined in node_modules/@types/node/globals.d.ts:558
 
 _Inherited from [WebSocketClient](_client_websocketclient_.websocketclient.md).[removeListener](_client_websocketclient_.websocketclient.md#removelistener)_
 
-Defined in node_modules/@types/node/globals.d.ts:556
+Defined in node_modules/@types/node/events.d.ts:65
 
 **Parameters:**
 
@@ -515,7 +515,7 @@ Defined in node_modules/@types/node/globals.d.ts:556
 
 _Inherited from [WebSocketClient](_client_websocketclient_.websocketclient.md).[setMaxListeners](_client_websocketclient_.websocketclient.md#setmaxlisteners)_
 
-Defined in node_modules/@types/node/globals.d.ts:559
+Defined in node_modules/@types/node/events.d.ts:68
 
 **Parameters:**
 
@@ -552,7 +552,7 @@ Defined in node_modules/@types/node/events.d.ts:44
 
 ▸ **stringifyPayload**(`config`: AxiosRequestConfig): _string_
 
-_Defined in [src/client/RESTClient.ts:115](https://github.com/bennyn/coinbase-pro-node/blob/d0dceee/src/client/RESTClient.ts#L115)_
+_Defined in [src/client/RESTClient.ts:115](https://github.com/bennyn/coinbase-pro-node/blob/2af663b/src/client/RESTClient.ts#L115)_
 
 **Parameters:**
 
