@@ -20,25 +20,33 @@ export class CandleBucketUtil {
     return Math.max(...values);
   }
 
-  static addUnitMillis(openTime: number | string, granularity: CandleGranularity, amount: number): number {
-    const granularityInMs = granularity * 1000;
-    const units = amount * granularityInMs;
+  static addUnitMillis(openTime: number | string, granularityInSeconds: CandleGranularity, amount: number): number {
+    const granularityInMillis = granularityInSeconds * 1000;
+    const units = amount * granularityInMillis;
     return new Date(openTime).getTime() + units;
   }
 
-  static addUnitISO(openTime: number | string, granularity: CandleGranularity, amount: number): ISO_8601_MS_UTC {
-    const nextTimestamp = CandleBucketUtil.addUnitMillis(openTime, granularity, amount);
+  static addUnitISO(
+    openTime: number | string,
+    granularityInSeconds: CandleGranularity,
+    amount: number
+  ): ISO_8601_MS_UTC {
+    const nextTimestamp = CandleBucketUtil.addUnitMillis(openTime, granularityInSeconds, amount);
     return new Date(nextTimestamp).toISOString();
   }
 
-  static removeUnitMillis(openTime: number | string, granularity: CandleGranularity, amount: number): number {
-    const granularityInMs = granularity * 1000;
-    const units = amount * granularityInMs;
+  static removeUnitMillis(openTime: number | string, granularityInSeconds: CandleGranularity, amount: number): number {
+    const granularityInMillis = granularityInSeconds * 1000;
+    const units = amount * granularityInMillis;
     return new Date(openTime).getTime() - units;
   }
 
-  static removeUnitISO(openTime: number | string, granularity: CandleGranularity, amount: number): ISO_8601_MS_UTC {
-    const nextTimestamp = CandleBucketUtil.removeUnitMillis(openTime, granularity, amount);
+  static removeUnitISO(
+    openTime: number | string,
+    granularityInSeconds: CandleGranularity,
+    amount: number
+  ): ISO_8601_MS_UTC {
+    const nextTimestamp = CandleBucketUtil.removeUnitMillis(openTime, granularityInSeconds, amount);
     return new Date(nextTimestamp).toISOString();
   }
 
