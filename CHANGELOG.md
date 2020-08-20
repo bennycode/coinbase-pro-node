@@ -1,3 +1,22 @@
+#### 2.8.1 (2020-08-20)
+
+##### Chores
+
+- yarn upgrade --latest ([98ba4a99](https://github.com/bennyn/coinbase-pro-node/commit/98ba4a993eaa89ca5d5e15da365eb0048236d5fd))
+- **deps-dev:**
+  - bump @typescript-eslint/parser from 3.8.0 to 3.9.0 ([#233](https://github.com/bennyn/coinbase-pro-node/pull/233)) ([f772afc2](https://github.com/bennyn/coinbase-pro-node/commit/f772afc258b6cf5c2746b468754d30b9ccbdba53))
+  - bump @typescript-eslint/eslint-plugin ([#234](https://github.com/bennyn/coinbase-pro-node/pull/234)) ([a14d0563](https://github.com/bennyn/coinbase-pro-node/commit/a14d05634c9453b66df50221a43fb070e7fa56b0))
+  - bump nock from 13.0.3 to 13.0.4 ([#232](https://github.com/bennyn/coinbase-pro-node/pull/232)) ([3a6b8944](https://github.com/bennyn/coinbase-pro-node/commit/3a6b8944571605d558e16a275223e74da7df893b))
+  - bump eslint from 7.6.0 to 7.7.0 ([#231](https://github.com/bennyn/coinbase-pro-node/pull/231)) ([0613bd05](https://github.com/bennyn/coinbase-pro-node/commit/0613bd05c6c7516c7067c762182263eef9b33bb0))
+
+##### Bug Fixes
+
+- Change type for count of orders from `string` to `number` ([#235](https://github.com/bennyn/coinbase-pro-node/pull/235)) ([486c26ee](https://github.com/bennyn/coinbase-pro-node/commit/486c26ee8cf989ce62902f6946c024cdc3bf4ab6))
+
+##### Refactors
+
+- Highlight that granularity on Coinbase Pro is given in seconds ([#236](https://github.com/bennyn/coinbase-pro-node/pull/236)) ([2522167c](https://github.com/bennyn/coinbase-pro-node/commit/2522167c61ac75148959f7b6fa1178ab337f71c6))
+
 ### 2.8.0 (2020-08-10)
 
 ##### Chores
