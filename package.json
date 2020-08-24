@@ -5,7 +5,7 @@
   "dependencies": {
     "@types/big.js": "4.0.5",
     "@types/ws": "7.2.6",
-    "axios": "0.19.2",
+    "axios": "0.20.0",
     "axios-retry": "3.1.8",
     "big.js": "5.2.2",
     "bufferutil": "4.0.1",
