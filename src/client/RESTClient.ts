@@ -15,6 +15,7 @@ import {getErrorMessage, gotRateLimited, inAirPlaneMode} from '../error/ErrorUti
 import {CurrencyAPI} from '../currency';
 import {WithdrawAPI} from '../withdraw';
 import {TransferAPI} from '../transfer';
+import {TimeAPI} from '../time';
 
 export interface RESTClient {
   on(
@@ -42,6 +43,7 @@ export class RESTClient extends EventEmitter {
   readonly order: OrderAPI;
   readonly product: ProductAPI;
   readonly profile: ProfileAPI;
+  readonly time: TimeAPI;
   readonly transfer: TransferAPI;
   readonly user: UserAPI;
   readonly withdraw: WithdrawAPI;
@@ -107,6 +109,7 @@ export class RESTClient extends EventEmitter {
     this.order = new OrderAPI(this.httpClient);
     this.product = new ProductAPI(this.httpClient, this);
     this.profile = new ProfileAPI(this.httpClient);
+    this.time = new TimeAPI(baseURL);
     this.transfer = new TransferAPI(this.httpClient);
     this.user = new UserAPI(this.httpClient);
     this.withdraw = new WithdrawAPI(this.httpClient);
