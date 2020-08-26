@@ -26,7 +26,7 @@
 
 \+ **new TransferAPI**(`apiClient`: AxiosInstance): _[TransferAPI](_transfer_transferapi_.transferapi.md)_
 
-_Defined in [src/transfer/TransferAPI.ts:37](https://github.com/bennyn/coinbase-pro-node/blob/2af663b/src/transfer/TransferAPI.ts#L37)_
+_Defined in [src/transfer/TransferAPI.ts:37](https://github.com/bennyn/coinbase-pro-node/blob/64d8e93/src/transfer/TransferAPI.ts#L37)_
 
 **Parameters:**
 
@@ -42,7 +42,7 @@ _Defined in [src/transfer/TransferAPI.ts:37](https://github.com/bennyn/coinbase-
 
 ▸ **getTransfers**(`transferType`: [TransferType](../enums/_transfer_transferapi_.transfertype.md), `profileId?`: undefined | string, `pagination?`: Pagination): _Promise‹PaginatedData‹[TransferInformation](../interfaces/_transfer_transferapi_.transferinformation.md)››_
 
-_Defined in [src/transfer/TransferAPI.ts:48](https://github.com/bennyn/coinbase-pro-node/blob/2af663b/src/transfer/TransferAPI.ts#L48)_
+_Defined in [src/transfer/TransferAPI.ts:48](https://github.com/bennyn/coinbase-pro-node/blob/64d8e93/src/transfer/TransferAPI.ts#L48)_
 
 Get a list of deposits/withdrawals from the profile of the API key, in descending order by created time.
 
@@ -66,10 +66,10 @@ Get a list of deposits/withdrawals from the profile of the API key, in descendin
 
 ### ▪ **URL**: _object_
 
-_Defined in [src/transfer/TransferAPI.ts:35](https://github.com/bennyn/coinbase-pro-node/blob/2af663b/src/transfer/TransferAPI.ts#L35)_
+_Defined in [src/transfer/TransferAPI.ts:35](https://github.com/bennyn/coinbase-pro-node/blob/64d8e93/src/transfer/TransferAPI.ts#L35)_
 
 ### TRANSFERS
 
 • **TRANSFERS**: _string_ = `/transfers`
 
-_Defined in [src/transfer/TransferAPI.ts:36](https://github.com/bennyn/coinbase-pro-node/blob/2af663b/src/transfer/TransferAPI.ts#L36)_
+_Defined in [src/transfer/TransferAPI.ts:36](https://github.com/bennyn/coinbase-pro-node/blob/64d8e93/src/transfer/TransferAPI.ts#L36)_
