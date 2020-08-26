@@ -1,3 +1,19 @@
+### 2.9.0 (2020-08-26)
+
+##### Chores
+
+- yarn upgrade --latest ([271f91d6](https://github.com/bennyn/coinbase-pro-node/commit/271f91d6e58a67ec888ff1e7fb399da0b05f9e15))
+- **deps:** bump axios from 0.19.2 to 0.20.0 ([#241](https://github.com/bennyn/coinbase-pro-node/pull/241)) ([cde1e4b4](https://github.com/bennyn/coinbase-pro-node/commit/cde1e4b462011ebcb36500f8a48e436ea2dccaec))
+- **deps-dev:**
+  - bump pretty-quick from 2.0.1 to 3.0.0 ([#239](https://github.com/bennyn/coinbase-pro-node/pull/239)) ([28bbb6ef](https://github.com/bennyn/coinbase-pro-node/commit/28bbb6efd37b0f2183423d3a903234788024a7b5))
+  - bump ts-node from 8.10.2 to 9.0.0 ([#240](https://github.com/bennyn/coinbase-pro-node/pull/240)) ([3d548d1a](https://github.com/bennyn/coinbase-pro-node/commit/3d548d1a3d3df7287da985c1a5b6d16f91ba5232))
+  - bump @types/jasmine from 3.5.12 to 3.5.13 ([#237](https://github.com/bennyn/coinbase-pro-node/pull/237)) ([efda799b](https://github.com/bennyn/coinbase-pro-node/commit/efda799bf478a30a41595d2bc5e9660434bc4d16))
+  - bump dotenv-defaults from 2.0.0 to 2.0.1 ([#238](https://github.com/bennyn/coinbase-pro-node/pull/238)) ([102c9e95](https://github.com/bennyn/coinbase-pro-node/commit/102c9e955daf6abd5c21fed19176b0c161a99fee))
+
+##### New Features
+
+- Get the API server time ([#242](https://github.com/bennyn/coinbase-pro-node/pull/242)) ([1d109bde](https://github.com/bennyn/coinbase-pro-node/commit/1d109bde8f4ce1ce7367bbca9dd3ccc0409c601e))
+
 #### 2.8.1 (2020-08-20)
 
 ##### Chores
