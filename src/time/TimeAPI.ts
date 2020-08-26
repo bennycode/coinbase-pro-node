@@ -1,7 +1,9 @@
 import axios from 'axios';
 
 export interface TimeSkew {
+  /** The epoch field represents decimal seconds since Unix Epoch, i.e. "1420674445.201" */
   epoch: number;
+  /** Time in ISO 8601 format, i.e. "2015-01-07T23:47:25.201Z" */
   iso: string;
 }
 
