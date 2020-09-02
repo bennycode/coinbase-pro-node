@@ -70,4 +70,17 @@ export class TransferAPI {
       },
     };
   }
+
+  /**
+   * Get information on a single deposit/withdrawal.
+   *
+   * @param transferId - id of the requested resource
+   * @see https://docs.pro.coinbase.com/#single-deposit
+   * @see https://docs.pro.coinbase.com/#single-withdrawal
+   */
+  async getTransfer(transferId: string): Promise<TransferInformation> {
+    const resource = `${TransferAPI.URL.TRANSFERS}/${transferId}`;
+    const response = await this.apiClient.get<TransferInformation>(resource);
+    return response.data;
+  }
 }
