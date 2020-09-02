@@ -1,3 +1,15 @@
+### 2.10.0 (2020-09-02)
+
+##### Chores
+
+- **deps-dev:**
+  - bump typedoc from 0.18.0 to 0.19.0 ([#243](https://github.com/bennyn/coinbase-pro-node/pull/243)) ([dbf7f175](https://github.com/bennyn/coinbase-pro-node/commit/dbf7f175ba7f40959d63555c48a9587d4eef8f31))
+  - bump @types/jasmine from 3.5.13 to 3.5.14 ([#244](https://github.com/bennyn/coinbase-pro-node/pull/244)) ([fe639651](https://github.com/bennyn/coinbase-pro-node/commit/fe63965160974c7917794ffbbdc1695faf30685c))
+
+##### New Features
+
+- Get info on a specific deposit / withdrawal ([#245](https://github.com/bennyn/coinbase-pro-node/pull/245)) ([4380cb2f](https://github.com/bennyn/coinbase-pro-node/commit/4380cb2fc8fff1d3c9755c4ad97cce60a0b1e501))
+
 ### 2.9.0 (2020-08-26)
 
 ##### Chores
