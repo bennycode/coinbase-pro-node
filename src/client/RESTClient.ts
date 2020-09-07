@@ -24,6 +24,7 @@ export interface RESTClient {
   ): this;
 }
 
+// eslint-disable-next-line no-redeclare
 export class RESTClient extends EventEmitter {
   get defaults(): AxiosRequestConfig {
     return this.httpClient.defaults;
