@@ -225,6 +225,7 @@ export interface WebSocketClient {
   on(event: WebSocketEvent.ON_OPEN, listener: (event: Event) => void): this;
 }
 
+// eslint-disable-next-line no-redeclare
 export class WebSocketClient extends EventEmitter {
   static CLOSE_EVENT_CODE = {
     GOING_AWAY: 1001,
