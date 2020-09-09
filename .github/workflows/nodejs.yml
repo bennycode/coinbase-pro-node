@@ -34,4 +34,4 @@ jobs:
       - name: 'Automerge dependency updates from Dependabot'
         uses: ahmadnassri/action-dependabot-auto-merge@v1
         # Guarantee that commit comes from Dependabot (don't blindly trust external GitHub action checks)
-        if: github.actor == 'dependabot[bot]' && github.event_name == 'pull_request'
+        if: github.actor == 'dependabot[bot]'
