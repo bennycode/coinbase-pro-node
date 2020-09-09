@@ -1,0 +1,16 @@
+version: 2
+updates:
+  - package-ecosystem: npm
+    directory: '/'
+    schedule:
+      day: monday
+      interval: weekly
+      time: '02:00'
+    pull-request-branch-name:
+      separator: '-'
+    target-branch: master
+    commit-message:
+      prefix: chore
+      include: scope
+    labels:
+      - "type: chore \U0001F9F9"
