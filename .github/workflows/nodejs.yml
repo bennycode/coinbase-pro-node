@@ -1,6 +1,6 @@
 name: 'Continuous Integration'
 
-on: [push]
+on: [pull_request, push]
 
 jobs:
   'Build':
@@ -31,7 +31,6 @@ jobs:
           file: ./coverage/lcov.info
           flags: unittests
           token: ${{ secrets.CODECOV_TOKEN }}
-          yml: ./codecov.yml
       - name: 'Automerge dependency updates from Dependabot'
         uses: ahmadnassri/action-dependabot-auto-merge@v1
         # Guarantee that commit comes from Dependabot (don't blindly trust external GitHub action checks)
