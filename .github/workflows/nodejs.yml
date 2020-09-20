@@ -40,3 +40,5 @@ jobs:
         uses: ahmadnassri/action-dependabot-auto-merge@v1
         # Guarantee that commit comes from Dependabot (don't blindly trust external GitHub action checks)
         if: github.event_name == 'pull_request' && github.actor == 'dependabot[bot]'
+        with:
+          github-token: ${{ secrets.GH_TOKEN }}
