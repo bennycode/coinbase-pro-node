@@ -3,8 +3,7 @@ updates:
   - package-ecosystem: npm
     directory: '/'
     schedule:
-      interval: daily
-      time: '02:00'
+      interval: weekly
     pull-request-branch-name:
       separator: '-'
     target-branch: master
