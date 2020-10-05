@@ -12,3 +12,4 @@ updates:
       include: scope
     labels:
       - "type: chore \U0001F9F9"
+    open-pull-requests-limit: 10
