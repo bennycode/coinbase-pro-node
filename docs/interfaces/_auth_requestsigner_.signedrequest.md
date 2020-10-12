@@ -21,7 +21,7 @@
 
 • **key**: _string_
 
-_Defined in [src/auth/RequestSigner.ts:11](https://github.com/bennyn/coinbase-pro-node/blob/7b978cb/src/auth/RequestSigner.ts#L11)_
+_Defined in [src/auth/RequestSigner.ts:11](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/auth/RequestSigner.ts#L11)_
 
 ---
 
@@ -29,7 +29,7 @@ _Defined in [src/auth/RequestSigner.ts:11](https://github.com/bennyn/coinbase-pr
 
 • **passphrase**: _string_
 
-_Defined in [src/auth/RequestSigner.ts:12](https://github.com/bennyn/coinbase-pro-node/blob/7b978cb/src/auth/RequestSigner.ts#L12)_
+_Defined in [src/auth/RequestSigner.ts:12](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/auth/RequestSigner.ts#L12)_
 
 ---
 
@@ -37,7 +37,7 @@ _Defined in [src/auth/RequestSigner.ts:12](https://github.com/bennyn/coinbase-pr
 
 • **signature**: _string_
 
-_Defined in [src/auth/RequestSigner.ts:13](https://github.com/bennyn/coinbase-pro-node/blob/7b978cb/src/auth/RequestSigner.ts#L13)_
+_Defined in [src/auth/RequestSigner.ts:13](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/auth/RequestSigner.ts#L13)_
 
 ---
 
@@ -45,4 +45,4 @@ _Defined in [src/auth/RequestSigner.ts:13](https://github.com/bennyn/coinbase-pr
 
 • **timestamp**: _number_
 
-_Defined in [src/auth/RequestSigner.ts:14](https://github.com/bennyn/coinbase-pro-node/blob/7b978cb/src/auth/RequestSigner.ts#L14)_
+_Defined in [src/auth/RequestSigner.ts:14](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/auth/RequestSigner.ts#L14)_

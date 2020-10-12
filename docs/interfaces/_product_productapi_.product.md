@@ -34,7 +34,7 @@
 
 • **base_currency**: _string_
 
-_Defined in [src/product/ProductAPI.ts:7](https://github.com/bennyn/coinbase-pro-node/blob/7b978cb/src/product/ProductAPI.ts#L7)_
+_Defined in [src/product/ProductAPI.ts:7](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/product/ProductAPI.ts#L7)_
 
 ---
 
@@ -42,7 +42,7 @@ _Defined in [src/product/ProductAPI.ts:7](https://github.com/bennyn/coinbase-pro
 
 • **base_increment**: _string_
 
-_Defined in [src/product/ProductAPI.ts:8](https://github.com/bennyn/coinbase-pro-node/blob/7b978cb/src/product/ProductAPI.ts#L8)_
+_Defined in [src/product/ProductAPI.ts:8](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/product/ProductAPI.ts#L8)_
 
 ---
 
@@ -50,7 +50,7 @@ _Defined in [src/product/ProductAPI.ts:8](https://github.com/bennyn/coinbase-pro
 
 • **base_max_size**: _string_
 
-_Defined in [src/product/ProductAPI.ts:10](https://github.com/bennyn/coinbase-pro-node/blob/7b978cb/src/product/ProductAPI.ts#L10)_
+_Defined in [src/product/ProductAPI.ts:10](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/product/ProductAPI.ts#L10)_
 
 Maximum order size
 
@@ -60,7 +60,7 @@ Maximum order size
 
 • **base_min_size**: _string_
 
-_Defined in [src/product/ProductAPI.ts:12](https://github.com/bennyn/coinbase-pro-node/blob/7b978cb/src/product/ProductAPI.ts#L12)_
+_Defined in [src/product/ProductAPI.ts:12](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/product/ProductAPI.ts#L12)_
 
 Minimum order size
 
@@ -70,7 +70,7 @@ Minimum order size
 
 • **cancel_only**: _boolean_
 
-_Defined in [src/product/ProductAPI.ts:13](https://github.com/bennyn/coinbase-pro-node/blob/7b978cb/src/product/ProductAPI.ts#L13)_
+_Defined in [src/product/ProductAPI.ts:13](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/product/ProductAPI.ts#L13)_
 
 ---
 
@@ -78,7 +78,7 @@ _Defined in [src/product/ProductAPI.ts:13](https://github.com/bennyn/coinbase-pr
 
 • **display_name**: _string_
 
-_Defined in [src/product/ProductAPI.ts:14](https://github.com/bennyn/coinbase-pro-node/blob/7b978cb/src/product/ProductAPI.ts#L14)_
+_Defined in [src/product/ProductAPI.ts:14](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/product/ProductAPI.ts#L14)_
 
 ---
 
@@ -86,7 +86,7 @@ _Defined in [src/product/ProductAPI.ts:14](https://github.com/bennyn/coinbase-pr
 
 • **id**: _string_
 
-_Defined in [src/product/ProductAPI.ts:15](https://github.com/bennyn/coinbase-pro-node/blob/7b978cb/src/product/ProductAPI.ts#L15)_
+_Defined in [src/product/ProductAPI.ts:15](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/product/ProductAPI.ts#L15)_
 
 ---
 
@@ -94,7 +94,7 @@ _Defined in [src/product/ProductAPI.ts:15](https://github.com/bennyn/coinbase-pr
 
 • **limit_only**: _boolean_
 
-_Defined in [src/product/ProductAPI.ts:16](https://github.com/bennyn/coinbase-pro-node/blob/7b978cb/src/product/ProductAPI.ts#L16)_
+_Defined in [src/product/ProductAPI.ts:16](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/product/ProductAPI.ts#L16)_
 
 ---
 
@@ -102,7 +102,7 @@ _Defined in [src/product/ProductAPI.ts:16](https://github.com/bennyn/coinbase-pr
 
 • **margin_enabled**: _boolean_
 
-_Defined in [src/product/ProductAPI.ts:17](https://github.com/bennyn/coinbase-pro-node/blob/7b978cb/src/product/ProductAPI.ts#L17)_
+_Defined in [src/product/ProductAPI.ts:17](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/product/ProductAPI.ts#L17)_
 
 ---
 
@@ -110,7 +110,7 @@ _Defined in [src/product/ProductAPI.ts:17](https://github.com/bennyn/coinbase-pr
 
 • **max_market_funds**: _string_
 
-_Defined in [src/product/ProductAPI.ts:18](https://github.com/bennyn/coinbase-pro-node/blob/7b978cb/src/product/ProductAPI.ts#L18)_
+_Defined in [src/product/ProductAPI.ts:18](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/product/ProductAPI.ts#L18)_
 
 ---
 
@@ -118,7 +118,7 @@ _Defined in [src/product/ProductAPI.ts:18](https://github.com/bennyn/coinbase-pr
 
 • **min_market_funds**: _string_
 
-_Defined in [src/product/ProductAPI.ts:19](https://github.com/bennyn/coinbase-pro-node/blob/7b978cb/src/product/ProductAPI.ts#L19)_
+_Defined in [src/product/ProductAPI.ts:19](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/product/ProductAPI.ts#L19)_
 
 ---
 
@@ -126,7 +126,7 @@ _Defined in [src/product/ProductAPI.ts:19](https://github.com/bennyn/coinbase-pr
 
 • **post_only**: _boolean_
 
-_Defined in [src/product/ProductAPI.ts:20](https://github.com/bennyn/coinbase-pro-node/blob/7b978cb/src/product/ProductAPI.ts#L20)_
+_Defined in [src/product/ProductAPI.ts:20](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/product/ProductAPI.ts#L20)_
 
 ---
 
@@ -134,7 +134,7 @@ _Defined in [src/product/ProductAPI.ts:20](https://github.com/bennyn/coinbase-pr
 
 • **quote_currency**: _string_
 
-_Defined in [src/product/ProductAPI.ts:21](https://github.com/bennyn/coinbase-pro-node/blob/7b978cb/src/product/ProductAPI.ts#L21)_
+_Defined in [src/product/ProductAPI.ts:21](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/product/ProductAPI.ts#L21)_
 
 ---
 
@@ -142,7 +142,7 @@ _Defined in [src/product/ProductAPI.ts:21](https://github.com/bennyn/coinbase-pr
 
 • **quote_increment**: _string_
 
-_Defined in [src/product/ProductAPI.ts:26](https://github.com/bennyn/coinbase-pro-node/blob/7b978cb/src/product/ProductAPI.ts#L26)_
+_Defined in [src/product/ProductAPI.ts:26](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/product/ProductAPI.ts#L26)_
 
 Increment steps for min/max order size. The order price must be a multiple of this increment (i.e. if the increment is 0.01, order prices of 0.001 or 0.021 would be rejected).
 
@@ -152,7 +152,7 @@ Increment steps for min/max order size. The order price must be a multiple of th
 
 • **status**: _"online"_
 
-_Defined in [src/product/ProductAPI.ts:27](https://github.com/bennyn/coinbase-pro-node/blob/7b978cb/src/product/ProductAPI.ts#L27)_
+_Defined in [src/product/ProductAPI.ts:27](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/product/ProductAPI.ts#L27)_
 
 ---
 
@@ -160,7 +160,7 @@ _Defined in [src/product/ProductAPI.ts:27](https://github.com/bennyn/coinbase-pr
 
 • **status_message**: _string_
 
-_Defined in [src/product/ProductAPI.ts:28](https://github.com/bennyn/coinbase-pro-node/blob/7b978cb/src/product/ProductAPI.ts#L28)_
+_Defined in [src/product/ProductAPI.ts:28](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/product/ProductAPI.ts#L28)_
 
 ---
 
@@ -168,4 +168,4 @@ _Defined in [src/product/ProductAPI.ts:28](https://github.com/bennyn/coinbase-pr
 
 • **trading_disabled**: _boolean_
 
-_Defined in [src/product/ProductAPI.ts:29](https://github.com/bennyn/coinbase-pro-node/blob/7b978cb/src/product/ProductAPI.ts#L29)_
+_Defined in [src/product/ProductAPI.ts:29](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/product/ProductAPI.ts#L29)_

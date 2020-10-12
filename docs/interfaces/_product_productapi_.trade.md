@@ -22,7 +22,7 @@
 
 • **price**: _string_
 
-_Defined in [src/product/ProductAPI.ts:53](https://github.com/bennyn/coinbase-pro-node/blob/7b978cb/src/product/ProductAPI.ts#L53)_
+_Defined in [src/product/ProductAPI.ts:53](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/product/ProductAPI.ts#L53)_
 
 ---
 
@@ -30,7 +30,7 @@ _Defined in [src/product/ProductAPI.ts:53](https://github.com/bennyn/coinbase-pr
 
 • **side**: _OrderSide_
 
-_Defined in [src/product/ProductAPI.ts:54](https://github.com/bennyn/coinbase-pro-node/blob/7b978cb/src/product/ProductAPI.ts#L54)_
+_Defined in [src/product/ProductAPI.ts:54](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/product/ProductAPI.ts#L54)_
 
 ---
 
@@ -38,7 +38,7 @@ _Defined in [src/product/ProductAPI.ts:54](https://github.com/bennyn/coinbase-pr
 
 • **size**: _string_
 
-_Defined in [src/product/ProductAPI.ts:55](https://github.com/bennyn/coinbase-pro-node/blob/7b978cb/src/product/ProductAPI.ts#L55)_
+_Defined in [src/product/ProductAPI.ts:55](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/product/ProductAPI.ts#L55)_
 
 ---
 
@@ -46,7 +46,7 @@ _Defined in [src/product/ProductAPI.ts:55](https://github.com/bennyn/coinbase-pr
 
 • **time**: _ISO_8601_MS_UTC_
 
-_Defined in [src/product/ProductAPI.ts:56](https://github.com/bennyn/coinbase-pro-node/blob/7b978cb/src/product/ProductAPI.ts#L56)_
+_Defined in [src/product/ProductAPI.ts:56](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/product/ProductAPI.ts#L56)_
 
 ---
 
@@ -54,4 +54,4 @@ _Defined in [src/product/ProductAPI.ts:56](https://github.com/bennyn/coinbase-pr
 
 • **trade_id**: _number_
 
-_Defined in [src/product/ProductAPI.ts:57](https://github.com/bennyn/coinbase-pro-node/blob/7b978cb/src/product/ProductAPI.ts#L57)_
+_Defined in [src/product/ProductAPI.ts:57](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/product/ProductAPI.ts#L57)_

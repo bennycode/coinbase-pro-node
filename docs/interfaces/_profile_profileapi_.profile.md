@@ -23,7 +23,7 @@
 
 • **active**: _boolean_
 
-_Defined in [src/profile/ProfileAPI.ts:7](https://github.com/bennyn/coinbase-pro-node/blob/7b978cb/src/profile/ProfileAPI.ts#L7)_
+_Defined in [src/profile/ProfileAPI.ts:7](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/profile/ProfileAPI.ts#L7)_
 
 ---
 
@@ -31,7 +31,7 @@ _Defined in [src/profile/ProfileAPI.ts:7](https://github.com/bennyn/coinbase-pro
 
 • **created_at**: _ISO_8601_MS_UTC_
 
-_Defined in [src/profile/ProfileAPI.ts:8](https://github.com/bennyn/coinbase-pro-node/blob/7b978cb/src/profile/ProfileAPI.ts#L8)_
+_Defined in [src/profile/ProfileAPI.ts:8](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/profile/ProfileAPI.ts#L8)_
 
 ---
 
@@ -39,7 +39,7 @@ _Defined in [src/profile/ProfileAPI.ts:8](https://github.com/bennyn/coinbase-pro
 
 • **id**: _UUID_V4_
 
-_Defined in [src/profile/ProfileAPI.ts:9](https://github.com/bennyn/coinbase-pro-node/blob/7b978cb/src/profile/ProfileAPI.ts#L9)_
+_Defined in [src/profile/ProfileAPI.ts:9](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/profile/ProfileAPI.ts#L9)_
 
 ---
 
@@ -47,7 +47,7 @@ _Defined in [src/profile/ProfileAPI.ts:9](https://github.com/bennyn/coinbase-pro
 
 • **is_default**: _boolean_
 
-_Defined in [src/profile/ProfileAPI.ts:10](https://github.com/bennyn/coinbase-pro-node/blob/7b978cb/src/profile/ProfileAPI.ts#L10)_
+_Defined in [src/profile/ProfileAPI.ts:10](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/profile/ProfileAPI.ts#L10)_
 
 ---
 
@@ -55,7 +55,7 @@ _Defined in [src/profile/ProfileAPI.ts:10](https://github.com/bennyn/coinbase-pr
 
 • **name**: _Nickname_
 
-_Defined in [src/profile/ProfileAPI.ts:11](https://github.com/bennyn/coinbase-pro-node/blob/7b978cb/src/profile/ProfileAPI.ts#L11)_
+_Defined in [src/profile/ProfileAPI.ts:11](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/profile/ProfileAPI.ts#L11)_
 
 ---
 
@@ -63,4 +63,4 @@ _Defined in [src/profile/ProfileAPI.ts:11](https://github.com/bennyn/coinbase-pr
 
 • **user_id**: _string_
 
-_Defined in [src/profile/ProfileAPI.ts:12](https://github.com/bennyn/coinbase-pro-node/blob/7b978cb/src/profile/ProfileAPI.ts#L12)_
+_Defined in [src/profile/ProfileAPI.ts:12](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/profile/ProfileAPI.ts#L12)_

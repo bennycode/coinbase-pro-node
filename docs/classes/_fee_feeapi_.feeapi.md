@@ -26,7 +26,7 @@
 
 \+ **new FeeAPI**(`apiClient`: AxiosInstance): _[FeeAPI](_fee_feeapi_.feeapi.md)_
 
-_Defined in [src/fee/FeeAPI.ts:20](https://github.com/bennyn/coinbase-pro-node/blob/7b978cb/src/fee/FeeAPI.ts#L20)_
+_Defined in [src/fee/FeeAPI.ts:20](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/fee/FeeAPI.ts#L20)_
 
 **Parameters:**
 
@@ -42,7 +42,7 @@ _Defined in [src/fee/FeeAPI.ts:20](https://github.com/bennyn/coinbase-pro-node/b
 
 ▸ **getCurrentFees**(): _Promise‹[FeeTier](../interfaces/_fee_feeapi_.feetier.md)›_
 
-_Defined in [src/fee/FeeAPI.ts:31](https://github.com/bennyn/coinbase-pro-node/blob/7b978cb/src/fee/FeeAPI.ts#L31)_
+_Defined in [src/fee/FeeAPI.ts:31](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/fee/FeeAPI.ts#L31)_
 
 Get your current maker & taker fee rates, as well as your 30-day trailing volume. Quoted rates are subject to change.
 
@@ -58,10 +58,10 @@ Get your current maker & taker fee rates, as well as your 30-day trailing volume
 
 ### ▪ **URL**: _object_
 
-_Defined in [src/fee/FeeAPI.ts:18](https://github.com/bennyn/coinbase-pro-node/blob/7b978cb/src/fee/FeeAPI.ts#L18)_
+_Defined in [src/fee/FeeAPI.ts:18](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/fee/FeeAPI.ts#L18)_
 
 ### FEES
 
 • **FEES**: _string_ = `/fees`
 
-_Defined in [src/fee/FeeAPI.ts:19](https://github.com/bennyn/coinbase-pro-node/blob/7b978cb/src/fee/FeeAPI.ts#L19)_
+_Defined in [src/fee/FeeAPI.ts:19](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/fee/FeeAPI.ts#L19)_

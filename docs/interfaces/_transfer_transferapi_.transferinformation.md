@@ -28,7 +28,7 @@
 
 • **account_id**: _string_
 
-_Defined in [src/transfer/TransferAPI.ts:5](https://github.com/bennyn/coinbase-pro-node/blob/7b978cb/src/transfer/TransferAPI.ts#L5)_
+_Defined in [src/transfer/TransferAPI.ts:5](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/transfer/TransferAPI.ts#L5)_
 
 ---
 
@@ -36,7 +36,7 @@ _Defined in [src/transfer/TransferAPI.ts:5](https://github.com/bennyn/coinbase-p
 
 • **amount**: _string_
 
-_Defined in [src/transfer/TransferAPI.ts:6](https://github.com/bennyn/coinbase-pro-node/blob/7b978cb/src/transfer/TransferAPI.ts#L6)_
+_Defined in [src/transfer/TransferAPI.ts:6](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/transfer/TransferAPI.ts#L6)_
 
 ---
 
@@ -44,7 +44,7 @@ _Defined in [src/transfer/TransferAPI.ts:6](https://github.com/bennyn/coinbase-p
 
 • **canceled_at**? : _ISO_8601_MS_UTC_
 
-_Defined in [src/transfer/TransferAPI.ts:7](https://github.com/bennyn/coinbase-pro-node/blob/7b978cb/src/transfer/TransferAPI.ts#L7)_
+_Defined in [src/transfer/TransferAPI.ts:7](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/transfer/TransferAPI.ts#L7)_
 
 ---
 
@@ -52,7 +52,7 @@ _Defined in [src/transfer/TransferAPI.ts:7](https://github.com/bennyn/coinbase-p
 
 • **completed_at**? : _ISO_8601_MS_UTC_
 
-_Defined in [src/transfer/TransferAPI.ts:8](https://github.com/bennyn/coinbase-pro-node/blob/7b978cb/src/transfer/TransferAPI.ts#L8)_
+_Defined in [src/transfer/TransferAPI.ts:8](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/transfer/TransferAPI.ts#L8)_
 
 ---
 
@@ -60,7 +60,7 @@ _Defined in [src/transfer/TransferAPI.ts:8](https://github.com/bennyn/coinbase-p
 
 • **created_at**: _ISO_8601_MS_UTC_
 
-_Defined in [src/transfer/TransferAPI.ts:9](https://github.com/bennyn/coinbase-pro-node/blob/7b978cb/src/transfer/TransferAPI.ts#L9)_
+_Defined in [src/transfer/TransferAPI.ts:9](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/transfer/TransferAPI.ts#L9)_
 
 ---
 
@@ -68,7 +68,7 @@ _Defined in [src/transfer/TransferAPI.ts:9](https://github.com/bennyn/coinbase-p
 
 • **details**: _object_
 
-_Defined in [src/transfer/TransferAPI.ts:10](https://github.com/bennyn/coinbase-pro-node/blob/7b978cb/src/transfer/TransferAPI.ts#L10)_
+_Defined in [src/transfer/TransferAPI.ts:10](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/transfer/TransferAPI.ts#L10)_
 
 #### Type declaration:
 
@@ -98,7 +98,7 @@ _Defined in [src/transfer/TransferAPI.ts:10](https://github.com/bennyn/coinbase-
 
 • **id**: _string_
 
-_Defined in [src/transfer/TransferAPI.ts:22](https://github.com/bennyn/coinbase-pro-node/blob/7b978cb/src/transfer/TransferAPI.ts#L22)_
+_Defined in [src/transfer/TransferAPI.ts:22](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/transfer/TransferAPI.ts#L22)_
 
 ---
 
@@ -106,7 +106,7 @@ _Defined in [src/transfer/TransferAPI.ts:22](https://github.com/bennyn/coinbase-
 
 • **processed_at**? : _ISO_8601_MS_UTC_
 
-_Defined in [src/transfer/TransferAPI.ts:23](https://github.com/bennyn/coinbase-pro-node/blob/7b978cb/src/transfer/TransferAPI.ts#L23)_
+_Defined in [src/transfer/TransferAPI.ts:23](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/transfer/TransferAPI.ts#L23)_
 
 ---
 
@@ -114,7 +114,7 @@ _Defined in [src/transfer/TransferAPI.ts:23](https://github.com/bennyn/coinbase-
 
 • **type**: _string_
 
-_Defined in [src/transfer/TransferAPI.ts:24](https://github.com/bennyn/coinbase-pro-node/blob/7b978cb/src/transfer/TransferAPI.ts#L24)_
+_Defined in [src/transfer/TransferAPI.ts:24](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/transfer/TransferAPI.ts#L24)_
 
 ---
 
@@ -122,7 +122,7 @@ _Defined in [src/transfer/TransferAPI.ts:24](https://github.com/bennyn/coinbase-
 
 • **user_id**: _string_
 
-_Defined in [src/transfer/TransferAPI.ts:25](https://github.com/bennyn/coinbase-pro-node/blob/7b978cb/src/transfer/TransferAPI.ts#L25)_
+_Defined in [src/transfer/TransferAPI.ts:25](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/transfer/TransferAPI.ts#L25)_
 
 ---
 
@@ -130,4 +130,4 @@ _Defined in [src/transfer/TransferAPI.ts:25](https://github.com/bennyn/coinbase-
 
 • **user_nonce**? : _undefined | string_
 
-_Defined in [src/transfer/TransferAPI.ts:26](https://github.com/bennyn/coinbase-pro-node/blob/7b978cb/src/transfer/TransferAPI.ts#L26)_
+_Defined in [src/transfer/TransferAPI.ts:26](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/transfer/TransferAPI.ts#L26)_

@@ -25,7 +25,7 @@
 
 • **account_address**: _string_
 
-_Defined in [src/account/AccountAPI.ts:61](https://github.com/bennyn/coinbase-pro-node/blob/7b978cb/src/account/AccountAPI.ts#L61)_
+_Defined in [src/account/AccountAPI.ts:61](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/account/AccountAPI.ts#L61)_
 
 ---
 
@@ -33,7 +33,7 @@ _Defined in [src/account/AccountAPI.ts:61](https://github.com/bennyn/coinbase-pr
 
 • **account_name**: _string_
 
-_Defined in [src/account/AccountAPI.ts:62](https://github.com/bennyn/coinbase-pro-node/blob/7b978cb/src/account/AccountAPI.ts#L62)_
+_Defined in [src/account/AccountAPI.ts:62](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/account/AccountAPI.ts#L62)_
 
 ---
 
@@ -41,7 +41,7 @@ _Defined in [src/account/AccountAPI.ts:62](https://github.com/bennyn/coinbase-pr
 
 • **account_number**: _string_
 
-_Defined in [src/account/AccountAPI.ts:63](https://github.com/bennyn/coinbase-pro-node/blob/7b978cb/src/account/AccountAPI.ts#L63)_
+_Defined in [src/account/AccountAPI.ts:63](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/account/AccountAPI.ts#L63)_
 
 ---
 
@@ -49,7 +49,7 @@ _Defined in [src/account/AccountAPI.ts:63](https://github.com/bennyn/coinbase-pr
 
 • **bank_address**: _string_
 
-_Defined in [src/account/AccountAPI.ts:64](https://github.com/bennyn/coinbase-pro-node/blob/7b978cb/src/account/AccountAPI.ts#L64)_
+_Defined in [src/account/AccountAPI.ts:64](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/account/AccountAPI.ts#L64)_
 
 ---
 
@@ -57,7 +57,7 @@ _Defined in [src/account/AccountAPI.ts:64](https://github.com/bennyn/coinbase-pr
 
 • **bank_country**: _object_
 
-_Defined in [src/account/AccountAPI.ts:65](https://github.com/bennyn/coinbase-pro-node/blob/7b978cb/src/account/AccountAPI.ts#L65)_
+_Defined in [src/account/AccountAPI.ts:65](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/account/AccountAPI.ts#L65)_
 
 #### Type declaration:
 
@@ -71,7 +71,7 @@ _Defined in [src/account/AccountAPI.ts:65](https://github.com/bennyn/coinbase-pr
 
 • **bank_name**: _string_
 
-_Defined in [src/account/AccountAPI.ts:69](https://github.com/bennyn/coinbase-pro-node/blob/7b978cb/src/account/AccountAPI.ts#L69)_
+_Defined in [src/account/AccountAPI.ts:69](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/account/AccountAPI.ts#L69)_
 
 ---
 
@@ -79,7 +79,7 @@ _Defined in [src/account/AccountAPI.ts:69](https://github.com/bennyn/coinbase-pr
 
 • **reference**: _string_
 
-_Defined in [src/account/AccountAPI.ts:70](https://github.com/bennyn/coinbase-pro-node/blob/7b978cb/src/account/AccountAPI.ts#L70)_
+_Defined in [src/account/AccountAPI.ts:70](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/account/AccountAPI.ts#L70)_
 
 ---
 
@@ -87,4 +87,4 @@ _Defined in [src/account/AccountAPI.ts:70](https://github.com/bennyn/coinbase-pr
 
 • **routing_number**: _string_
 
-_Defined in [src/account/AccountAPI.ts:71](https://github.com/bennyn/coinbase-pro-node/blob/7b978cb/src/account/AccountAPI.ts#L71)_
+_Defined in [src/account/AccountAPI.ts:71](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/account/AccountAPI.ts#L71)_

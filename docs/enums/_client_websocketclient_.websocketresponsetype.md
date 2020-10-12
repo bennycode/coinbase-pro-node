@@ -27,7 +27,7 @@
 
 • **ERROR**: = "error"
 
-_Defined in [src/client/WebSocketClient.ts:41](https://github.com/bennyn/coinbase-pro-node/blob/7b978cb/src/client/WebSocketClient.ts#L41)_
+_Defined in [src/client/WebSocketClient.ts:41](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/client/WebSocketClient.ts#L41)_
 
 Most failure cases will cause an error message (a message with the type "error") to be emitted.
 
@@ -37,7 +37,7 @@ Most failure cases will cause an error message (a message with the type "error")
 
 • **FULL_ACTIVATE**: = "activate"
 
-_Defined in [src/client/WebSocketClient.ts:46](https://github.com/bennyn/coinbase-pro-node/blob/7b978cb/src/client/WebSocketClient.ts#L46)_
+_Defined in [src/client/WebSocketClient.ts:46](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/client/WebSocketClient.ts#L46)_
 
 An `activate` message is sent when a stop order is placed. When the stop is triggered the order will be placed and go through the order lifecycle.
 
@@ -47,7 +47,7 @@ An `activate` message is sent when a stop order is placed. When the stop is trig
 
 • **FULL_CHANGE**: = "change"
 
-_Defined in [src/client/WebSocketClient.ts:60](https://github.com/bennyn/coinbase-pro-node/blob/7b978cb/src/client/WebSocketClient.ts#L60)_
+_Defined in [src/client/WebSocketClient.ts:60](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/client/WebSocketClient.ts#L60)_
 
 An order has changed. This is the result of self-trade prevention adjusting the order size or available funds. Orders can only decrease in size or funds. All `change` messages are sent anytime an order changes in size; this includes resting orders (open) as well as received but not yet open. All `change` messages are also sent when a new market order goes through self trade prevention and the funds for the market order have changed.
 
@@ -61,7 +61,7 @@ Any `change` message where the price is `null` indicates that the `change` messa
 
 • **FULL_DONE**: = "done"
 
-_Defined in [src/client/WebSocketClient.ts:74](https://github.com/bennyn/coinbase-pro-node/blob/7b978cb/src/client/WebSocketClient.ts#L74)_
+_Defined in [src/client/WebSocketClient.ts:74](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/client/WebSocketClient.ts#L74)_
 
 The order is no longer on the order book. Sent for all orders for which there was a received message. This message can result from an order being canceled or filled. There will be no more messages for this `order_id ` after a done message. The `remaining_size` indicates how much of the order went unfilled; this will be "0" for `filled` orders.
 
@@ -75,7 +75,7 @@ A `done` message will be sent for received orders which are fully filled or canc
 
 • **FULL_MATCH**: = "match"
 
-_Defined in [src/client/WebSocketClient.ts:81](https://github.com/bennyn/coinbase-pro-node/blob/7b978cb/src/client/WebSocketClient.ts#L81)_
+_Defined in [src/client/WebSocketClient.ts:81](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/client/WebSocketClient.ts#L81)_
 
 A trade occurred between two orders. The aggressor or `taker` order is the one executing immediately after being received and the `maker` order is a resting order on the book. The `side` field indicates the maker order side. If the side is `sell` this indicates the maker was a sell order and the `match` is considered an up-tick. A `buy` side match is a down-tick.
 
@@ -85,7 +85,7 @@ A trade occurred between two orders. The aggressor or `taker` order is the one e
 
 • **FULL_OPEN**: = "open"
 
-_Defined in [src/client/WebSocketClient.ts:89](https://github.com/bennyn/coinbase-pro-node/blob/7b978cb/src/client/WebSocketClient.ts#L89)_
+_Defined in [src/client/WebSocketClient.ts:89](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/client/WebSocketClient.ts#L89)_
 
 The order is now open on the order book. This message will only be sent for orders which are not fully filled immediately. The `remaining_size` will indicate how much of the order is unfilled and going on the book.
 
@@ -97,7 +97,7 @@ There will be no `open` message for orders which will be filled immediately. The
 
 • **FULL_RECEIVED**: = "received"
 
-_Defined in [src/client/WebSocketClient.ts:104](https://github.com/bennyn/coinbase-pro-node/blob/7b978cb/src/client/WebSocketClient.ts#L104)_
+_Defined in [src/client/WebSocketClient.ts:104](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/client/WebSocketClient.ts#L104)_
 
 A valid order has been received and is now active. This message is emitted for every single valid order as soon as the matching engine receives it whether it fills immediately or not.
 
@@ -111,7 +111,7 @@ Market orders (indicated by the `order_type` field) may have an optional `funds`
 
 • **HEARTBEAT**: = "heartbeat"
 
-_Defined in [src/client/WebSocketClient.ts:106](https://github.com/bennyn/coinbase-pro-node/blob/7b978cb/src/client/WebSocketClient.ts#L106)_
+_Defined in [src/client/WebSocketClient.ts:106](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/client/WebSocketClient.ts#L106)_
 
 Heartbeats include sequence numbers and last trade ids that can be used to verify no messages were missed.
 
@@ -121,7 +121,7 @@ Heartbeats include sequence numbers and last trade ids that can be used to verif
 
 • **LAST_MATCH**: = "last_match"
 
-_Defined in [src/client/WebSocketClient.ts:110](https://github.com/bennyn/coinbase-pro-node/blob/7b978cb/src/client/WebSocketClient.ts#L110)_
+_Defined in [src/client/WebSocketClient.ts:110](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/client/WebSocketClient.ts#L110)_
 
 Latest match between two orders.
 
@@ -131,7 +131,7 @@ Latest match between two orders.
 
 • **LEVEL2_SNAPSHOT**: = "snapshot"
 
-_Defined in [src/client/WebSocketClient.ts:112](https://github.com/bennyn/coinbase-pro-node/blob/7b978cb/src/client/WebSocketClient.ts#L112)_
+_Defined in [src/client/WebSocketClient.ts:112](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/client/WebSocketClient.ts#L112)_
 
 When subscribing to the 'level2' channel it will send an initial snapshot message with the corresponding product ids, bids and asks to represent the entire order book.
 
@@ -141,7 +141,7 @@ When subscribing to the 'level2' channel it will send an initial snapshot messag
 
 • **LEVEL2_UPDATE**: = "l2update"
 
-_Defined in [src/client/WebSocketClient.ts:114](https://github.com/bennyn/coinbase-pro-node/blob/7b978cb/src/client/WebSocketClient.ts#L114)_
+_Defined in [src/client/WebSocketClient.ts:114](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/client/WebSocketClient.ts#L114)_
 
 Subsequent updates of a 'level2' subscription. The `time` property of `l2update` is the time of the event as recorded by our trading engine. Please note that `size` is the updated size at that price level, not a delta. A size of "0" indicates the price level can be removed.
 
@@ -151,7 +151,7 @@ Subsequent updates of a 'level2' subscription. The `time` property of `l2update`
 
 • **STATUS**: = "status"
 
-_Defined in [src/client/WebSocketClient.ts:116](https://github.com/bennyn/coinbase-pro-node/blob/7b978cb/src/client/WebSocketClient.ts#L116)_
+_Defined in [src/client/WebSocketClient.ts:116](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/client/WebSocketClient.ts#L116)_
 
 The status channel will send all products and currencies on a preset interval.
 
@@ -161,7 +161,7 @@ The status channel will send all products and currencies on a preset interval.
 
 • **SUBSCRIPTIONS**: = "subscriptions"
 
-_Defined in [src/client/WebSocketClient.ts:118](https://github.com/bennyn/coinbase-pro-node/blob/7b978cb/src/client/WebSocketClient.ts#L118)_
+_Defined in [src/client/WebSocketClient.ts:118](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/client/WebSocketClient.ts#L118)_
 
 Once a subscribe or unsubscribe message is received, the server will respond with a subscriptions message that lists all channels you are subscribed to.
 
@@ -171,6 +171,6 @@ Once a subscribe or unsubscribe message is received, the server will respond wit
 
 • **TICKER**: = "ticker"
 
-_Defined in [src/client/WebSocketClient.ts:120](https://github.com/bennyn/coinbase-pro-node/blob/7b978cb/src/client/WebSocketClient.ts#L120)_
+_Defined in [src/client/WebSocketClient.ts:120](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/client/WebSocketClient.ts#L120)_
 
 The ticker channel provides real-time price updates every time a match happens.

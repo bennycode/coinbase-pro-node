@@ -21,7 +21,7 @@
 
 • **amount**: _string_
 
-_Defined in [src/profile/ProfileAPI.ts:16](https://github.com/bennyn/coinbase-pro-node/blob/7b978cb/src/profile/ProfileAPI.ts#L16)_
+_Defined in [src/profile/ProfileAPI.ts:16](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/profile/ProfileAPI.ts#L16)_
 
 ---
 
@@ -29,7 +29,7 @@ _Defined in [src/profile/ProfileAPI.ts:16](https://github.com/bennyn/coinbase-pr
 
 • **currency**: _string_
 
-_Defined in [src/profile/ProfileAPI.ts:17](https://github.com/bennyn/coinbase-pro-node/blob/7b978cb/src/profile/ProfileAPI.ts#L17)_
+_Defined in [src/profile/ProfileAPI.ts:17](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/profile/ProfileAPI.ts#L17)_
 
 ---
 
@@ -37,7 +37,7 @@ _Defined in [src/profile/ProfileAPI.ts:17](https://github.com/bennyn/coinbase-pr
 
 • **from**: _UUID_V4_
 
-_Defined in [src/profile/ProfileAPI.ts:18](https://github.com/bennyn/coinbase-pro-node/blob/7b978cb/src/profile/ProfileAPI.ts#L18)_
+_Defined in [src/profile/ProfileAPI.ts:18](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/profile/ProfileAPI.ts#L18)_
 
 ---
 
@@ -45,4 +45,4 @@ _Defined in [src/profile/ProfileAPI.ts:18](https://github.com/bennyn/coinbase-pr
 
 • **to**: _UUID_V4_
 
-_Defined in [src/profile/ProfileAPI.ts:19](https://github.com/bennyn/coinbase-pro-node/blob/7b978cb/src/profile/ProfileAPI.ts#L19)_
+_Defined in [src/profile/ProfileAPI.ts:19](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/profile/ProfileAPI.ts#L19)_

@@ -33,7 +33,7 @@
 
 Ƭ **AutoCancelLimitOrder**: _[LimitOrder](_order_orderapi_.md#limitorder) & object_
 
-_Defined in [src/order/OrderAPI.ts:58](https://github.com/bennyn/coinbase-pro-node/blob/7b978cb/src/order/OrderAPI.ts#L58)_
+_Defined in [src/order/OrderAPI.ts:58](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/order/OrderAPI.ts#L58)_
 
 ---
 
@@ -41,7 +41,7 @@ _Defined in [src/order/OrderAPI.ts:58](https://github.com/bennyn/coinbase-pro-no
 
 Ƭ **FilledOrder**: _BasePlacedOrder & object_
 
-_Defined in [src/order/OrderAPI.ts:90](https://github.com/bennyn/coinbase-pro-node/blob/7b978cb/src/order/OrderAPI.ts#L90)_
+_Defined in [src/order/OrderAPI.ts:90](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/order/OrderAPI.ts#L90)_
 
 ---
 
@@ -49,7 +49,7 @@ _Defined in [src/order/OrderAPI.ts:90](https://github.com/bennyn/coinbase-pro-no
 
 Ƭ **LimitOrder**: _BaseOrder & object_
 
-_Defined in [src/order/OrderAPI.ts:68](https://github.com/bennyn/coinbase-pro-node/blob/7b978cb/src/order/OrderAPI.ts#L68)_
+_Defined in [src/order/OrderAPI.ts:68](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/order/OrderAPI.ts#L68)_
 
 ---
 
@@ -57,7 +57,7 @@ _Defined in [src/order/OrderAPI.ts:68](https://github.com/bennyn/coinbase-pro-no
 
 Ƭ **MarketOrder**: _BaseOrder & object & object | object_
 
-_Defined in [src/order/OrderAPI.ts:76](https://github.com/bennyn/coinbase-pro-node/blob/7b978cb/src/order/OrderAPI.ts#L76)_
+_Defined in [src/order/OrderAPI.ts:76](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/order/OrderAPI.ts#L76)_
 
 ---
 
@@ -65,7 +65,7 @@ _Defined in [src/order/OrderAPI.ts:76](https://github.com/bennyn/coinbase-pro-no
 
 Ƭ **NewOrder**: _[LimitOrder](_order_orderapi_.md#limitorder) | [AutoCancelLimitOrder](_order_orderapi_.md#autocancellimitorder) | [PostOnlyLimitOrder](_order_orderapi_.md#postonlylimitorder) | [MarketOrder](_order_orderapi_.md#marketorder)_
 
-_Defined in [src/order/OrderAPI.ts:56](https://github.com/bennyn/coinbase-pro-node/blob/7b978cb/src/order/OrderAPI.ts#L56)_
+_Defined in [src/order/OrderAPI.ts:56](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/order/OrderAPI.ts#L56)_
 
 ---
 
@@ -73,7 +73,7 @@ _Defined in [src/order/OrderAPI.ts:56](https://github.com/bennyn/coinbase-pro-no
 
 Ƭ **Order**: _[PendingOrder](_order_orderapi_.md#pendingorder) | [FilledOrder](_order_orderapi_.md#filledorder)_
 
-_Defined in [src/order/OrderAPI.ts:97](https://github.com/bennyn/coinbase-pro-node/blob/7b978cb/src/order/OrderAPI.ts#L97)_
+_Defined in [src/order/OrderAPI.ts:97](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/order/OrderAPI.ts#L97)_
 
 ---
 
@@ -81,7 +81,7 @@ _Defined in [src/order/OrderAPI.ts:97](https://github.com/bennyn/coinbase-pro-no
 
 Ƭ **PendingOrder**: _BasePlacedOrder & object_
 
-_Defined in [src/order/OrderAPI.ts:85](https://github.com/bennyn/coinbase-pro-node/blob/7b978cb/src/order/OrderAPI.ts#L85)_
+_Defined in [src/order/OrderAPI.ts:85](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/order/OrderAPI.ts#L85)_
 
 ---
 
@@ -89,4 +89,4 @@ _Defined in [src/order/OrderAPI.ts:85](https://github.com/bennyn/coinbase-pro-no
 
 Ƭ **PostOnlyLimitOrder**: _[LimitOrder](_order_orderapi_.md#limitorder) & object_
 
-_Defined in [src/order/OrderAPI.ts:63](https://github.com/bennyn/coinbase-pro-node/blob/7b978cb/src/order/OrderAPI.ts#L63)_
+_Defined in [src/order/OrderAPI.ts:63](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/order/OrderAPI.ts#L63)_

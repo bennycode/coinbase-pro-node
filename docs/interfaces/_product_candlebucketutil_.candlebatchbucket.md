@@ -19,7 +19,7 @@
 
 • **start**: _ISO_8601_MS_UTC_
 
-_Defined in [src/product/CandleBucketUtil.ts:8](https://github.com/bennyn/coinbase-pro-node/blob/7b978cb/src/product/CandleBucketUtil.ts#L8)_
+_Defined in [src/product/CandleBucketUtil.ts:8](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/product/CandleBucketUtil.ts#L8)_
 
 ---
 
@@ -27,4 +27,4 @@ _Defined in [src/product/CandleBucketUtil.ts:8](https://github.com/bennyn/coinba
 
 • **stop**: _ISO_8601_MS_UTC_
 
-_Defined in [src/product/CandleBucketUtil.ts:9](https://github.com/bennyn/coinbase-pro-node/blob/7b978cb/src/product/CandleBucketUtil.ts#L9)_
+_Defined in [src/product/CandleBucketUtil.ts:9](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/product/CandleBucketUtil.ts#L9)_

@@ -21,7 +21,7 @@
 
 • **exchange_volume**: _string_
 
-_Defined in [src/user/UserAPI.ts:8](https://github.com/bennyn/coinbase-pro-node/blob/7b978cb/src/user/UserAPI.ts#L8)_
+_Defined in [src/user/UserAPI.ts:8](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/user/UserAPI.ts#L8)_
 
 ---
 
@@ -29,7 +29,7 @@ _Defined in [src/user/UserAPI.ts:8](https://github.com/bennyn/coinbase-pro-node/
 
 • **product_id**: _string_
 
-_Defined in [src/user/UserAPI.ts:9](https://github.com/bennyn/coinbase-pro-node/blob/7b978cb/src/user/UserAPI.ts#L9)_
+_Defined in [src/user/UserAPI.ts:9](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/user/UserAPI.ts#L9)_
 
 ---
 
@@ -37,7 +37,7 @@ _Defined in [src/user/UserAPI.ts:9](https://github.com/bennyn/coinbase-pro-node/
 
 • **recorded_at**: _string_
 
-_Defined in [src/user/UserAPI.ts:10](https://github.com/bennyn/coinbase-pro-node/blob/7b978cb/src/user/UserAPI.ts#L10)_
+_Defined in [src/user/UserAPI.ts:10](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/user/UserAPI.ts#L10)_
 
 ---
 
@@ -45,4 +45,4 @@ _Defined in [src/user/UserAPI.ts:10](https://github.com/bennyn/coinbase-pro-node
 
 • **volume**: _string_
 
-_Defined in [src/user/UserAPI.ts:11](https://github.com/bennyn/coinbase-pro-node/blob/7b978cb/src/user/UserAPI.ts#L11)_
+_Defined in [src/user/UserAPI.ts:11](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/user/UserAPI.ts#L11)_

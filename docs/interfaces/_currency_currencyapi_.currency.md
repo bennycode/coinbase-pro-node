@@ -23,7 +23,7 @@
 
 • **details**: _[CurrencyDetail](_currency_currencyapi_.currencydetail.md)_
 
-_Defined in [src/currency/CurrencyAPI.ts:4](https://github.com/bennyn/coinbase-pro-node/blob/7b978cb/src/currency/CurrencyAPI.ts#L4)_
+_Defined in [src/currency/CurrencyAPI.ts:4](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/currency/CurrencyAPI.ts#L4)_
 
 ---
 
@@ -31,7 +31,7 @@ _Defined in [src/currency/CurrencyAPI.ts:4](https://github.com/bennyn/coinbase-p
 
 • **id**: _string_
 
-_Defined in [src/currency/CurrencyAPI.ts:5](https://github.com/bennyn/coinbase-pro-node/blob/7b978cb/src/currency/CurrencyAPI.ts#L5)_
+_Defined in [src/currency/CurrencyAPI.ts:5](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/currency/CurrencyAPI.ts#L5)_
 
 ---
 
@@ -39,7 +39,7 @@ _Defined in [src/currency/CurrencyAPI.ts:5](https://github.com/bennyn/coinbase-p
 
 • **max_precision**: _string_
 
-_Defined in [src/currency/CurrencyAPI.ts:6](https://github.com/bennyn/coinbase-pro-node/blob/7b978cb/src/currency/CurrencyAPI.ts#L6)_
+_Defined in [src/currency/CurrencyAPI.ts:6](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/currency/CurrencyAPI.ts#L6)_
 
 ---
 
@@ -47,7 +47,7 @@ _Defined in [src/currency/CurrencyAPI.ts:6](https://github.com/bennyn/coinbase-p
 
 • **min_size**: _string_
 
-_Defined in [src/currency/CurrencyAPI.ts:7](https://github.com/bennyn/coinbase-pro-node/blob/7b978cb/src/currency/CurrencyAPI.ts#L7)_
+_Defined in [src/currency/CurrencyAPI.ts:7](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/currency/CurrencyAPI.ts#L7)_
 
 ---
 
@@ -55,7 +55,7 @@ _Defined in [src/currency/CurrencyAPI.ts:7](https://github.com/bennyn/coinbase-p
 
 • **name**: _string_
 
-_Defined in [src/currency/CurrencyAPI.ts:8](https://github.com/bennyn/coinbase-pro-node/blob/7b978cb/src/currency/CurrencyAPI.ts#L8)_
+_Defined in [src/currency/CurrencyAPI.ts:8](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/currency/CurrencyAPI.ts#L8)_
 
 ---
 
@@ -63,4 +63,4 @@ _Defined in [src/currency/CurrencyAPI.ts:8](https://github.com/bennyn/coinbase-p
 
 • **status**: _string_
 
-_Defined in [src/currency/CurrencyAPI.ts:9](https://github.com/bennyn/coinbase-pro-node/blob/7b978cb/src/currency/CurrencyAPI.ts#L9)_
+_Defined in [src/currency/CurrencyAPI.ts:9](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/currency/CurrencyAPI.ts#L9)_

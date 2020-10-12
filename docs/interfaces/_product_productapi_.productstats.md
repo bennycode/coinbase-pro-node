@@ -23,7 +23,7 @@
 
 • **high**: _string_
 
-_Defined in [src/product/ProductAPI.ts:44](https://github.com/bennyn/coinbase-pro-node/blob/7b978cb/src/product/ProductAPI.ts#L44)_
+_Defined in [src/product/ProductAPI.ts:44](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/product/ProductAPI.ts#L44)_
 
 ---
 
@@ -31,7 +31,7 @@ _Defined in [src/product/ProductAPI.ts:44](https://github.com/bennyn/coinbase-pr
 
 • **last**: _string_
 
-_Defined in [src/product/ProductAPI.ts:45](https://github.com/bennyn/coinbase-pro-node/blob/7b978cb/src/product/ProductAPI.ts#L45)_
+_Defined in [src/product/ProductAPI.ts:45](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/product/ProductAPI.ts#L45)_
 
 ---
 
@@ -39,7 +39,7 @@ _Defined in [src/product/ProductAPI.ts:45](https://github.com/bennyn/coinbase-pr
 
 • **low**: _string_
 
-_Defined in [src/product/ProductAPI.ts:46](https://github.com/bennyn/coinbase-pro-node/blob/7b978cb/src/product/ProductAPI.ts#L46)_
+_Defined in [src/product/ProductAPI.ts:46](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/product/ProductAPI.ts#L46)_
 
 ---
 
@@ -47,7 +47,7 @@ _Defined in [src/product/ProductAPI.ts:46](https://github.com/bennyn/coinbase-pr
 
 • **open**: _string_
 
-_Defined in [src/product/ProductAPI.ts:47](https://github.com/bennyn/coinbase-pro-node/blob/7b978cb/src/product/ProductAPI.ts#L47)_
+_Defined in [src/product/ProductAPI.ts:47](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/product/ProductAPI.ts#L47)_
 
 ---
 
@@ -55,7 +55,7 @@ _Defined in [src/product/ProductAPI.ts:47](https://github.com/bennyn/coinbase-pr
 
 • **volume**: _string_
 
-_Defined in [src/product/ProductAPI.ts:48](https://github.com/bennyn/coinbase-pro-node/blob/7b978cb/src/product/ProductAPI.ts#L48)_
+_Defined in [src/product/ProductAPI.ts:48](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/product/ProductAPI.ts#L48)_
 
 ---
 
@@ -63,4 +63,4 @@ _Defined in [src/product/ProductAPI.ts:48](https://github.com/bennyn/coinbase-pr
 
 • **volume_30day**: _string_
 
-_Defined in [src/product/ProductAPI.ts:49](https://github.com/bennyn/coinbase-pro-node/blob/7b978cb/src/product/ProductAPI.ts#L49)_
+_Defined in [src/product/ProductAPI.ts:49](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/product/ProductAPI.ts#L49)_

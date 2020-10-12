@@ -16,7 +16,7 @@
 
 ▸ **getErrorMessage**(`error`: AxiosError): _string_
 
-_Defined in [src/error/ErrorUtil.ts:11](https://github.com/bennyn/coinbase-pro-node/blob/7b978cb/src/error/ErrorUtil.ts#L11)_
+_Defined in [src/error/ErrorUtil.ts:11](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/error/ErrorUtil.ts#L11)_
 
 **Parameters:**
 
@@ -32,7 +32,7 @@ _Defined in [src/error/ErrorUtil.ts:11](https://github.com/bennyn/coinbase-pro-n
 
 ▸ **gotRateLimited**(`error`: AxiosError): _boolean_
 
-_Defined in [src/error/ErrorUtil.ts:7](https://github.com/bennyn/coinbase-pro-node/blob/7b978cb/src/error/ErrorUtil.ts#L7)_
+_Defined in [src/error/ErrorUtil.ts:7](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/error/ErrorUtil.ts#L7)_
 
 **Parameters:**
 
@@ -48,7 +48,7 @@ _Defined in [src/error/ErrorUtil.ts:7](https://github.com/bennyn/coinbase-pro-no
 
 ▸ **inAirPlaneMode**(`error`: AxiosError): _boolean_
 
-_Defined in [src/error/ErrorUtil.ts:3](https://github.com/bennyn/coinbase-pro-node/blob/7b978cb/src/error/ErrorUtil.ts#L3)_
+_Defined in [src/error/ErrorUtil.ts:3](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/error/ErrorUtil.ts#L3)_
 
 **Parameters:**
 

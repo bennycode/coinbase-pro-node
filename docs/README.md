@@ -103,6 +103,10 @@ npx ts-node ./src/demo/dump-candles.ts
 
 Checkout [GitHub's dependency graph][6] to see who uses "coinbase-pro-node" in production. There are also [npm packages][7] depending on "coinbase-pro-node".
 
+## Maintainers
+
+[![Benny Neugebauer on Stack Exchange][stack_exchange_bennyn_badge]][stack_exchange_bennyn_url]
+
 ## Contributing
 
 Contributions, issues and feature requests are welcome!
@@ -116,17 +120,18 @@ The following commits will help you getting started quickly with the code base:
 
 All resources can be found in the [Coinbase Pro API reference][2].
 
-## Maintainers
-
-[![Benny Neugebauer on Stack Exchange][stack_exchange_bennyn_badge]][stack_exchange_bennyn_url]
-
 ## License
 
 This project is [MIT](./LICENSE) licensed.
 
-## Show your support
+## ⭐️ Show your support ⭐️
 
-Give a ⭐️ if this project helped you!
+[Please leave a star](https://github.com/bennyn/coinbase-pro-node/stargazers) if you find this project useful.
+
+If you like this project, you might also like these related projects:
+
+- [**trading-signals**](https://github.com/bennyn/trading-signals), Technical indicators written in TypeScript with arbitrary-precision arithmetic.
+- [**binance-api-node**](https://github.com/Ashlar/binance-api-node), Heavily tested and Promise-based Binance API.
 
 [1]: https://pro.coinbase.com/
 [2]: https://docs.pro.coinbase.com/
