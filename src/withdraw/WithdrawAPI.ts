@@ -7,6 +7,7 @@ export interface CryptoWithdrawal {
 }
 
 interface CryptoWithdrawalRequest {
+  add_network_fee_to_total?: boolean;
   amount: number;
   crypto_address: string;
   currency: string;
@@ -30,16 +31,24 @@ export class WithdrawAPI {
    * @param currency - The type of currency
    * @param cryptoAddress - A crypto address of the recipient
    * @param destinationTag - A destination tag for currencies that support one
+   * @param addNetworkFeeToTotal - A boolean flag to add the network fee on top of the amount.
+   * If this is blank, it will default to deducting the network fee from the amount.
    * @see https://docs.pro.coinbase.com/#crypto
    */
   async postCryptoWithdrawal(
     amount: number,
     currency: string,
     cryptoAddress: string,
-    destinationTag?: string
+    destinationTag?: string,
+    addNetworkFeeToTotal?: boolean
   ): Promise<CryptoWithdrawal> {
     const resource = WithdrawAPI.URL.WITHDRAWALS.CRYPTO;
-    const withdrawal: CryptoWithdrawalRequest = {amount, crypto_address: cryptoAddress, currency};
+    const withdrawal: CryptoWithdrawalRequest = {
+      add_network_fee_to_total: addNetworkFeeToTotal,
+      amount,
+      crypto_address: cryptoAddress,
+      currency,
+    };
     if (destinationTag) {
       withdrawal.destination_tag = destinationTag;
     } else {
