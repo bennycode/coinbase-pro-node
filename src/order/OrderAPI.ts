@@ -104,8 +104,8 @@ export class OrderAPI {
   constructor(private readonly apiClient: AxiosInstance) {}
 
   /**
-   * Cancel a previously placed order. Order must belong to the profile that the API key belongs to. If no product is
-   * specified, all open orders from the profile that the API key belongs to will be canceled.
+   * With best effort, cancel all open orders from the profile that the API key belongs to.
+   * The response is a list of ids of the canceled orders.
    *
    * @param productId - Representation for base and counter
    * @returns A list of ids of the canceled orders
@@ -116,6 +116,18 @@ export class OrderAPI {
     const response = await this.apiClient.delete(resource, {
       params: productId ? {product_id: productId} : {},
     });
+    return response.data;
+  }
+
+  /**
+   * Cancel a previously placed order. Order must belong to the profile that the API key belongs to.
+   * @param orderId - ID of the order to cancel
+   * @returns The ID of the canceled order
+   * @see https://docs.pro.coinbase.com/#cancel-an-order
+   */
+  async cancelOrder(orderId: string): Promise<string> {
+    const resource = `${OrderAPI.URL.ORDERS}/${orderId}`;
+    const response = await this.apiClient.delete(resource);
     return response.data;
   }
 
