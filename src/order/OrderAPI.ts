@@ -105,7 +105,6 @@ export class OrderAPI {
 
   /**
    * With best effort, cancel all open orders from the profile that the API key belongs to.
-   * The response is a list of ids of the canceled orders.
    *
    * @param productId - Representation for base and counter
    * @returns A list of ids of the canceled orders
@@ -121,13 +120,17 @@ export class OrderAPI {
 
   /**
    * Cancel a previously placed order. Order must belong to the profile that the API key belongs to.
+   *
    * @param orderId - ID of the order to cancel
+   * @param productId - While not required, the request will be more performant if you include the product ID
    * @returns The ID of the canceled order
    * @see https://docs.pro.coinbase.com/#cancel-an-order
    */
-  async cancelOrder(orderId: string): Promise<string> {
+  async cancelOrder(orderId: string, productId?: string): Promise<string> {
     const resource = `${OrderAPI.URL.ORDERS}/${orderId}`;
-    const response = await this.apiClient.delete(resource);
+    const response = await this.apiClient.delete(resource, {
+      params: productId ? {product_id: productId} : {},
+    });
     return response.data;
   }
 
