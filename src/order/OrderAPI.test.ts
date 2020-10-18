@@ -133,6 +133,18 @@ describe('OrderAPI', () => {
     });
   });
 
+  describe('cancelOrder', () => {
+    it('correctly deletes order', async () => {
+      nock(global.REST_URL)
+        .delete(`${OrderAPI.URL.ORDERS}/8eba9e7b-08d6-4667-90ca-6db445d743c1`)
+        .query(true)
+        .reply(200, '8eba9e7b-08d6-4667-90ca-6db445d743c1');
+
+      const canceledOrderId = await global.client.rest.order.cancelOrder('8eba9e7b-08d6-4667-90ca-6db445d743c1');
+      expect(canceledOrderId).toEqual('8eba9e7b-08d6-4667-90ca-6db445d743c1');
+    });
+  });
+
   describe('cancelOpenOrders', () => {
     it('correctly deletes all open orders if no productId is passed', async () => {
       nock(global.REST_URL)
