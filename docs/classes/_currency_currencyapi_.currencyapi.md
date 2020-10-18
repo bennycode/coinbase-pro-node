@@ -1,4 +1,6 @@
-[coinbase-pro-node](../README.md) › [Globals](../globals.md) › ["currency/CurrencyAPI"](../modules/_currency_currencyapi_.md) › [CurrencyAPI](_currency_currencyapi_.currencyapi.md)
+**[coinbase-pro-node](../README.md)**
+
+> [Globals](../globals.md) / ["currency/CurrencyAPI"](../modules/_currency_currencyapi_.md) / CurrencyAPI
 
 # Class: CurrencyAPI
 
@@ -18,48 +20,48 @@
 
 ### Object literals
 
-- [URL](_currency_currencyapi_.currencyapi.md#static-readonly-url)
+- [URL](_currency_currencyapi_.currencyapi.md#url)
 
 ## Constructors
 
 ### constructor
 
-\+ **new CurrencyAPI**(`apiClient`: AxiosInstance): _[CurrencyAPI](_currency_currencyapi_.currencyapi.md)_
+\+ **new CurrencyAPI**(`apiClient`: AxiosInstance): [CurrencyAPI](_currency_currencyapi_.currencyapi.md)
 
-_Defined in [src/currency/CurrencyAPI.ts:32](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/currency/CurrencyAPI.ts#L32)_
+_Defined in [src/currency/CurrencyAPI.ts:32](https://github.com/bennyn/coinbase-pro-node/blob/7eff64a/src/currency/CurrencyAPI.ts#L32)_
 
-**Parameters:**
+#### Parameters:
 
 | Name        | Type          |
 | ----------- | ------------- |
 | `apiClient` | AxiosInstance |
 
-**Returns:** _[CurrencyAPI](_currency_currencyapi_.currencyapi.md)_
+**Returns:** [CurrencyAPI](_currency_currencyapi_.currencyapi.md)
 
 ## Methods
 
 ### listCurrencies
 
-▸ **listCurrencies**(): _Promise‹[Currency](../interfaces/_currency_currencyapi_.currency.md)[]›_
+▸ **listCurrencies**(): Promise\<[Currency](../interfaces/_currency_currencyapi_.currency.md)[]>
 
-_Defined in [src/currency/CurrencyAPI.ts:43](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/currency/CurrencyAPI.ts#L43)_
+_Defined in [src/currency/CurrencyAPI.ts:43](https://github.com/bennyn/coinbase-pro-node/blob/7eff64a/src/currency/CurrencyAPI.ts#L43)_
 
 List known currencies. Currency codes will conform to the ISO 4217 standard where possible. Currencies which have or had no representation in ISO 4217 may use a custom code.
 
 **`see`** https://docs.pro.coinbase.com/#get-currencies
 
-**Returns:** _Promise‹[Currency](../interfaces/_currency_currencyapi_.currency.md)[]›_
+**Returns:** Promise\<[Currency](../interfaces/_currency_currencyapi_.currency.md)[]>
 
 ## Object literals
 
-### `Static` `Readonly` URL
+### URL
 
-### ▪ **URL**: _object_
+▪ `Static` `Readonly` **URL**: object
 
-_Defined in [src/currency/CurrencyAPI.ts:30](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/currency/CurrencyAPI.ts#L30)_
+_Defined in [src/currency/CurrencyAPI.ts:30](https://github.com/bennyn/coinbase-pro-node/blob/7eff64a/src/currency/CurrencyAPI.ts#L30)_
 
-### CURRENCIES
+#### Properties:
 
-• **CURRENCIES**: _string_ = `/currencies`
-
-_Defined in [src/currency/CurrencyAPI.ts:31](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/currency/CurrencyAPI.ts#L31)_
+| Name         | Type   | Value           |
+| ------------ | ------ | --------------- |
+| `CURRENCIES` | string | \`/currencies\` |

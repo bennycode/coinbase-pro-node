@@ -1,4 +1,6 @@
-[coinbase-pro-node](../README.md) › [Globals](../globals.md) › ["client/WebSocketClient"](../modules/_client_websocketclient_.md) › [WebSocketEvent](_client_websocketclient_.websocketevent.md)
+**[coinbase-pro-node](../README.md)**
+
+> [Globals](../globals.md) / ["client/WebSocketClient"](../modules/_client_websocketclient_.md) / WebSocketEvent
 
 # Enumeration: WebSocketEvent
 
@@ -22,7 +24,7 @@
 
 • **ON_CLOSE**: = "WebSocketEvent.ON_CLOSE"
 
-_Defined in [src/client/WebSocketClient.ts:194](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/client/WebSocketClient.ts#L194)_
+_Defined in [src/client/WebSocketClient.ts:194](https://github.com/bennyn/coinbase-pro-node/blob/7eff64a/src/client/WebSocketClient.ts#L194)_
 
 ---
 
@@ -30,7 +32,7 @@ _Defined in [src/client/WebSocketClient.ts:194](https://github.com/bennyn/coinba
 
 • **ON_ERROR**: = "WebSocketEvent.ON_ERROR"
 
-_Defined in [src/client/WebSocketClient.ts:195](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/client/WebSocketClient.ts#L195)_
+_Defined in [src/client/WebSocketClient.ts:195](https://github.com/bennyn/coinbase-pro-node/blob/7eff64a/src/client/WebSocketClient.ts#L195)_
 
 ---
 
@@ -38,7 +40,7 @@ _Defined in [src/client/WebSocketClient.ts:195](https://github.com/bennyn/coinba
 
 • **ON_MESSAGE**: = "WebSocketEvent.ON_MESSAGE"
 
-_Defined in [src/client/WebSocketClient.ts:196](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/client/WebSocketClient.ts#L196)_
+_Defined in [src/client/WebSocketClient.ts:196](https://github.com/bennyn/coinbase-pro-node/blob/7eff64a/src/client/WebSocketClient.ts#L196)_
 
 ---
 
@@ -46,7 +48,7 @@ _Defined in [src/client/WebSocketClient.ts:196](https://github.com/bennyn/coinba
 
 • **ON_MESSAGE_ERROR**: = "WebSocketEvent.ON_MESSAGE_ERROR"
 
-_Defined in [src/client/WebSocketClient.ts:197](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/client/WebSocketClient.ts#L197)_
+_Defined in [src/client/WebSocketClient.ts:197](https://github.com/bennyn/coinbase-pro-node/blob/7eff64a/src/client/WebSocketClient.ts#L197)_
 
 ---
 
@@ -54,7 +56,7 @@ _Defined in [src/client/WebSocketClient.ts:197](https://github.com/bennyn/coinba
 
 • **ON_MESSAGE_MATCHES**: = "WebSocketEvent.ON_MESSAGE_MATCHES"
 
-_Defined in [src/client/WebSocketClient.ts:198](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/client/WebSocketClient.ts#L198)_
+_Defined in [src/client/WebSocketClient.ts:198](https://github.com/bennyn/coinbase-pro-node/blob/7eff64a/src/client/WebSocketClient.ts#L198)_
 
 ---
 
@@ -62,7 +64,7 @@ _Defined in [src/client/WebSocketClient.ts:198](https://github.com/bennyn/coinba
 
 • **ON_MESSAGE_STATUS**: = "WebSocketEvent.ON_MESSAGE_STATUS"
 
-_Defined in [src/client/WebSocketClient.ts:199](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/client/WebSocketClient.ts#L199)_
+_Defined in [src/client/WebSocketClient.ts:199](https://github.com/bennyn/coinbase-pro-node/blob/7eff64a/src/client/WebSocketClient.ts#L199)_
 
 ---
 
@@ -70,7 +72,7 @@ _Defined in [src/client/WebSocketClient.ts:199](https://github.com/bennyn/coinba
 
 • **ON_MESSAGE_TICKER**: = "WebSocketEvent.ON_MESSAGE_TICKER"
 
-_Defined in [src/client/WebSocketClient.ts:200](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/client/WebSocketClient.ts#L200)_
+_Defined in [src/client/WebSocketClient.ts:200](https://github.com/bennyn/coinbase-pro-node/blob/7eff64a/src/client/WebSocketClient.ts#L200)_
 
 ---
 
@@ -78,7 +80,7 @@ _Defined in [src/client/WebSocketClient.ts:200](https://github.com/bennyn/coinba
 
 • **ON_OPEN**: = "WebSocketEvent.ON_OPEN"
 
-_Defined in [src/client/WebSocketClient.ts:201](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/client/WebSocketClient.ts#L201)_
+_Defined in [src/client/WebSocketClient.ts:201](https://github.com/bennyn/coinbase-pro-node/blob/7eff64a/src/client/WebSocketClient.ts#L201)_
 
 ---
 
@@ -86,4 +88,4 @@ _Defined in [src/client/WebSocketClient.ts:201](https://github.com/bennyn/coinba
 
 • **ON_SUBSCRIPTION_UPDATE**: = "WebSocketEvent.ON_SUBSCRIPTION_UPDATE"
 
-_Defined in [src/client/WebSocketClient.ts:202](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/client/WebSocketClient.ts#L202)_
+_Defined in [src/client/WebSocketClient.ts:202](https://github.com/bennyn/coinbase-pro-node/blob/7eff64a/src/client/WebSocketClient.ts#L202)_

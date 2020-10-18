@@ -1,4 +1,6 @@
-[coinbase-pro-node](../README.md) › [Globals](../globals.md) › ["product/ProductAPI"](../modules/_product_productapi_.md) › [Trade](_product_productapi_.trade.md)
+**[coinbase-pro-node](../README.md)**
+
+> [Globals](../globals.md) / ["product/ProductAPI"](../modules/_product_productapi_.md) / Trade
 
 # Interface: Trade
 
@@ -20,38 +22,38 @@
 
 ### price
 
-• **price**: _string_
+• **price**: string
 
-_Defined in [src/product/ProductAPI.ts:53](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/product/ProductAPI.ts#L53)_
+_Defined in [src/product/ProductAPI.ts:53](https://github.com/bennyn/coinbase-pro-node/blob/7eff64a/src/product/ProductAPI.ts#L53)_
 
 ---
 
 ### side
 
-• **side**: _OrderSide_
+• **side**: OrderSide
 
-_Defined in [src/product/ProductAPI.ts:54](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/product/ProductAPI.ts#L54)_
+_Defined in [src/product/ProductAPI.ts:54](https://github.com/bennyn/coinbase-pro-node/blob/7eff64a/src/product/ProductAPI.ts#L54)_
 
 ---
 
 ### size
 
-• **size**: _string_
+• **size**: string
 
-_Defined in [src/product/ProductAPI.ts:55](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/product/ProductAPI.ts#L55)_
+_Defined in [src/product/ProductAPI.ts:55](https://github.com/bennyn/coinbase-pro-node/blob/7eff64a/src/product/ProductAPI.ts#L55)_
 
 ---
 
 ### time
 
-• **time**: _ISO_8601_MS_UTC_
+• **time**: ISO_8601_MS_UTC
 
-_Defined in [src/product/ProductAPI.ts:56](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/product/ProductAPI.ts#L56)_
+_Defined in [src/product/ProductAPI.ts:56](https://github.com/bennyn/coinbase-pro-node/blob/7eff64a/src/product/ProductAPI.ts#L56)_
 
 ---
 
 ### trade_id
 
-• **trade_id**: _number_
+• **trade_id**: number
 
-_Defined in [src/product/ProductAPI.ts:57](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/product/ProductAPI.ts#L57)_
+_Defined in [src/product/ProductAPI.ts:57](https://github.com/bennyn/coinbase-pro-node/blob/7eff64a/src/product/ProductAPI.ts#L57)_

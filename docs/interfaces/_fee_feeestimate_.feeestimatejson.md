@@ -1,4 +1,6 @@
-[coinbase-pro-node](../README.md) › [Globals](../globals.md) › ["fee/FeeEstimate"](../modules/_fee_feeestimate_.md) › [FeeEstimateJSON](_fee_feeestimate_.feeestimatejson.md)
+**[coinbase-pro-node](../README.md)**
+
+> [Globals](../globals.md) / ["fee/FeeEstimate"](../modules/_fee_feeestimate_.md) / FeeEstimateJSON
 
 # Interface: FeeEstimateJSON
 
@@ -22,54 +24,54 @@
 
 ### amount
 
-• **amount**: _string_
+• **amount**: string
 
-_Defined in [src/fee/FeeEstimate.ts:14](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/fee/FeeEstimate.ts#L14)_
+_Defined in [src/fee/FeeEstimate.ts:14](https://github.com/bennyn/coinbase-pro-node/blob/7eff64a/src/fee/FeeEstimate.ts#L14)_
 
 ---
 
 ### effectivePricePerUnit
 
-• **effectivePricePerUnit**: _string_
+• **effectivePricePerUnit**: string
 
-_Defined in [src/fee/FeeEstimate.ts:15](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/fee/FeeEstimate.ts#L15)_
+_Defined in [src/fee/FeeEstimate.ts:15](https://github.com/bennyn/coinbase-pro-node/blob/7eff64a/src/fee/FeeEstimate.ts#L15)_
 
 ---
 
 ### effectiveTotal
 
-• **effectiveTotal**: _string_
+• **effectiveTotal**: string
 
-_Defined in [src/fee/FeeEstimate.ts:16](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/fee/FeeEstimate.ts#L16)_
+_Defined in [src/fee/FeeEstimate.ts:16](https://github.com/bennyn/coinbase-pro-node/blob/7eff64a/src/fee/FeeEstimate.ts#L16)_
 
 ---
 
 ### feeAsset
 
-• **feeAsset**: _string_
+• **feeAsset**: string
 
-_Defined in [src/fee/FeeEstimate.ts:17](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/fee/FeeEstimate.ts#L17)_
+_Defined in [src/fee/FeeEstimate.ts:17](https://github.com/bennyn/coinbase-pro-node/blob/7eff64a/src/fee/FeeEstimate.ts#L17)_
 
 ---
 
 ### pricePerUnit
 
-• **pricePerUnit**: _string_
+• **pricePerUnit**: string
 
-_Defined in [src/fee/FeeEstimate.ts:18](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/fee/FeeEstimate.ts#L18)_
+_Defined in [src/fee/FeeEstimate.ts:18](https://github.com/bennyn/coinbase-pro-node/blob/7eff64a/src/fee/FeeEstimate.ts#L18)_
 
 ---
 
 ### total
 
-• **total**: _string_
+• **total**: string
 
-_Defined in [src/fee/FeeEstimate.ts:19](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/fee/FeeEstimate.ts#L19)_
+_Defined in [src/fee/FeeEstimate.ts:19](https://github.com/bennyn/coinbase-pro-node/blob/7eff64a/src/fee/FeeEstimate.ts#L19)_
 
 ---
 
 ### totalFee
 
-• **totalFee**: _string_
+• **totalFee**: string
 
-_Defined in [src/fee/FeeEstimate.ts:20](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/fee/FeeEstimate.ts#L20)_
+_Defined in [src/fee/FeeEstimate.ts:20](https://github.com/bennyn/coinbase-pro-node/blob/7eff64a/src/fee/FeeEstimate.ts#L20)_

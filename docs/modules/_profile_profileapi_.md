@@ -1,4 +1,6 @@
-[coinbase-pro-node](../README.md) › [Globals](../globals.md) › ["profile/ProfileAPI"](_profile_profileapi_.md)
+**[coinbase-pro-node](../README.md)**
+
+> [Globals](../globals.md) / "profile/ProfileAPI"
 
 # Module: "profile/ProfileAPI"
 

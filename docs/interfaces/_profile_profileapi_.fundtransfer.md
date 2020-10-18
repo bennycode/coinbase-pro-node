@@ -1,4 +1,6 @@
-[coinbase-pro-node](../README.md) › [Globals](../globals.md) › ["profile/ProfileAPI"](../modules/_profile_profileapi_.md) › [FundTransfer](_profile_profileapi_.fundtransfer.md)
+**[coinbase-pro-node](../README.md)**
+
+> [Globals](../globals.md) / ["profile/ProfileAPI"](../modules/_profile_profileapi_.md) / FundTransfer
 
 # Interface: FundTransfer
 
@@ -19,30 +21,30 @@
 
 ### amount
 
-• **amount**: _string_
+• **amount**: string
 
-_Defined in [src/profile/ProfileAPI.ts:16](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/profile/ProfileAPI.ts#L16)_
+_Defined in [src/profile/ProfileAPI.ts:16](https://github.com/bennyn/coinbase-pro-node/blob/7eff64a/src/profile/ProfileAPI.ts#L16)_
 
 ---
 
 ### currency
 
-• **currency**: _string_
+• **currency**: string
 
-_Defined in [src/profile/ProfileAPI.ts:17](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/profile/ProfileAPI.ts#L17)_
+_Defined in [src/profile/ProfileAPI.ts:17](https://github.com/bennyn/coinbase-pro-node/blob/7eff64a/src/profile/ProfileAPI.ts#L17)_
 
 ---
 
 ### from
 
-• **from**: _UUID_V4_
+• **from**: UUID_V4
 
-_Defined in [src/profile/ProfileAPI.ts:18](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/profile/ProfileAPI.ts#L18)_
+_Defined in [src/profile/ProfileAPI.ts:18](https://github.com/bennyn/coinbase-pro-node/blob/7eff64a/src/profile/ProfileAPI.ts#L18)_
 
 ---
 
 ### to
 
-• **to**: _UUID_V4_
+• **to**: UUID_V4
 
-_Defined in [src/profile/ProfileAPI.ts:19](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/profile/ProfileAPI.ts#L19)_
+_Defined in [src/profile/ProfileAPI.ts:19](https://github.com/bennyn/coinbase-pro-node/blob/7eff64a/src/profile/ProfileAPI.ts#L19)_

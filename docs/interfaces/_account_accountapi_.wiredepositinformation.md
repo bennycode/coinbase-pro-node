@@ -1,4 +1,6 @@
-[coinbase-pro-node](../README.md) › [Globals](../globals.md) › ["account/AccountAPI"](../modules/_account_accountapi_.md) › [WireDepositInformation](_account_accountapi_.wiredepositinformation.md)
+**[coinbase-pro-node](../README.md)**
+
+> [Globals](../globals.md) / ["account/AccountAPI"](../modules/_account_accountapi_.md) / WireDepositInformation
 
 # Interface: WireDepositInformation
 
@@ -23,68 +25,69 @@
 
 ### account_address
 
-• **account_address**: _string_
+• **account_address**: string
 
-_Defined in [src/account/AccountAPI.ts:61](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/account/AccountAPI.ts#L61)_
+_Defined in [src/account/AccountAPI.ts:61](https://github.com/bennyn/coinbase-pro-node/blob/7eff64a/src/account/AccountAPI.ts#L61)_
 
 ---
 
 ### account_name
 
-• **account_name**: _string_
+• **account_name**: string
 
-_Defined in [src/account/AccountAPI.ts:62](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/account/AccountAPI.ts#L62)_
+_Defined in [src/account/AccountAPI.ts:62](https://github.com/bennyn/coinbase-pro-node/blob/7eff64a/src/account/AccountAPI.ts#L62)_
 
 ---
 
 ### account_number
 
-• **account_number**: _string_
+• **account_number**: string
 
-_Defined in [src/account/AccountAPI.ts:63](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/account/AccountAPI.ts#L63)_
+_Defined in [src/account/AccountAPI.ts:63](https://github.com/bennyn/coinbase-pro-node/blob/7eff64a/src/account/AccountAPI.ts#L63)_
 
 ---
 
 ### bank_address
 
-• **bank_address**: _string_
+• **bank_address**: string
 
-_Defined in [src/account/AccountAPI.ts:64](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/account/AccountAPI.ts#L64)_
+_Defined in [src/account/AccountAPI.ts:64](https://github.com/bennyn/coinbase-pro-node/blob/7eff64a/src/account/AccountAPI.ts#L64)_
 
 ---
 
 ### bank_country
 
-• **bank_country**: _object_
+• **bank_country**: { code: string ; name: string }
 
-_Defined in [src/account/AccountAPI.ts:65](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/account/AccountAPI.ts#L65)_
+_Defined in [src/account/AccountAPI.ts:65](https://github.com/bennyn/coinbase-pro-node/blob/7eff64a/src/account/AccountAPI.ts#L65)_
 
 #### Type declaration:
 
-- **code**: _string_
-
-- **name**: _string_
+| Name   | Type   |
+| ------ | ------ |
+| `code` | string |
+| `name` | string |
 
 ---
 
 ### bank_name
 
-• **bank_name**: _string_
+• **bank_name**: string
 
-_Defined in [src/account/AccountAPI.ts:69](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/account/AccountAPI.ts#L69)_
+_Defined in [src/account/AccountAPI.ts:69](https://github.com/bennyn/coinbase-pro-node/blob/7eff64a/src/account/AccountAPI.ts#L69)_
 
 ---
 
 ### reference
 
-• **reference**: _string_
+• **reference**: string
 
-_Defined in [src/account/AccountAPI.ts:70](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/account/AccountAPI.ts#L70)_
+_Defined in [src/account/AccountAPI.ts:70](https://github.com/bennyn/coinbase-pro-node/blob/7eff64a/src/account/AccountAPI.ts#L70)_
 
 ---
 
 ### routing_number
 
-• **routing_number**: _string_
+• **routing_number**: string
 
-_Defined in [src/account/AccountAPI.ts:71](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/account/AccountAPI.ts#L71)_
+_Defined in [src/account/AccountAPI.ts:71](https://github.com/bennyn/coinbase-pro-node/blob/7eff64a/src/account/AccountAPI.ts#L71)_

@@ -1,4 +1,6 @@
-[coinbase-pro-node](../README.md) › [Globals](../globals.md) › ["CoinbasePro"](../modules/_coinbasepro_.md) › [ClientConnection](_coinbasepro_.clientconnection.md)
+**[coinbase-pro-node](../README.md)**
+
+> [Globals](../globals.md) / ["CoinbasePro"](../modules/_coinbasepro_.md) / ClientConnection
 
 # Interface: ClientConnection
 
@@ -17,14 +19,14 @@
 
 ### REST
 
-• **REST**: _string_
+• **REST**: string
 
-_Defined in [src/CoinbasePro.ts:13](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/CoinbasePro.ts#L13)_
+_Defined in [src/CoinbasePro.ts:13](https://github.com/bennyn/coinbase-pro-node/blob/7eff64a/src/CoinbasePro.ts#L13)_
 
 ---
 
 ### WebSocket
 
-• **WebSocket**: _string_
+• **WebSocket**: string
 
-_Defined in [src/CoinbasePro.ts:14](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/CoinbasePro.ts#L14)_
+_Defined in [src/CoinbasePro.ts:14](https://github.com/bennyn/coinbase-pro-node/blob/7eff64a/src/CoinbasePro.ts#L14)_

@@ -1,4 +1,6 @@
-[coinbase-pro-node](../README.md) › [Globals](../globals.md) › ["order/OrderAPI"](../modules/_order_orderapi_.md) › [TimeInForce](_order_orderapi_.timeinforce.md)
+**[coinbase-pro-node](../README.md)**
+
+> [Globals](../globals.md) / ["order/OrderAPI"](../modules/_order_orderapi_.md) / TimeInForce
 
 # Enumeration: TimeInForce
 
@@ -17,7 +19,7 @@
 
 • **FILL_OR_KILL**: = "FOK"
 
-_Defined in [src/order/OrderAPI.ts:10](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/order/OrderAPI.ts#L10)_
+_Defined in [src/order/OrderAPI.ts:10](https://github.com/bennyn/coinbase-pro-node/blob/7eff64a/src/order/OrderAPI.ts#L10)_
 
 ---
 
@@ -25,7 +27,7 @@ _Defined in [src/order/OrderAPI.ts:10](https://github.com/bennyn/coinbase-pro-no
 
 • **GOOD_TILL_CANCELED**: = "GTC"
 
-_Defined in [src/order/OrderAPI.ts:11](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/order/OrderAPI.ts#L11)_
+_Defined in [src/order/OrderAPI.ts:11](https://github.com/bennyn/coinbase-pro-node/blob/7eff64a/src/order/OrderAPI.ts#L11)_
 
 ---
 
@@ -33,7 +35,7 @@ _Defined in [src/order/OrderAPI.ts:11](https://github.com/bennyn/coinbase-pro-no
 
 • **GOOD_TILL_TIME**: = "GTT"
 
-_Defined in [src/order/OrderAPI.ts:12](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/order/OrderAPI.ts#L12)_
+_Defined in [src/order/OrderAPI.ts:12](https://github.com/bennyn/coinbase-pro-node/blob/7eff64a/src/order/OrderAPI.ts#L12)_
 
 ---
 
@@ -41,4 +43,4 @@ _Defined in [src/order/OrderAPI.ts:12](https://github.com/bennyn/coinbase-pro-no
 
 • **IMMEDIATE_OR_CANCEL**: = "IOC"
 
-_Defined in [src/order/OrderAPI.ts:13](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/order/OrderAPI.ts#L13)_
+_Defined in [src/order/OrderAPI.ts:13](https://github.com/bennyn/coinbase-pro-node/blob/7eff64a/src/order/OrderAPI.ts#L13)_

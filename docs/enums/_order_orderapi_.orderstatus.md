@@ -1,4 +1,6 @@
-[coinbase-pro-node](../README.md) › [Globals](../globals.md) › ["order/OrderAPI"](../modules/_order_orderapi_.md) › [OrderStatus](_order_orderapi_.orderstatus.md)
+**[coinbase-pro-node](../README.md)**
+
+> [Globals](../globals.md) / ["order/OrderAPI"](../modules/_order_orderapi_.md) / OrderStatus
 
 # Enumeration: OrderStatus
 
@@ -17,7 +19,7 @@
 
 • **ACTIVE**: = "active"
 
-_Defined in [src/order/OrderAPI.ts:79](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/order/OrderAPI.ts#L79)_
+_Defined in [src/order/OrderAPI.ts:79](https://github.com/bennyn/coinbase-pro-node/blob/7eff64a/src/order/OrderAPI.ts#L79)_
 
 ---
 
@@ -25,7 +27,7 @@ _Defined in [src/order/OrderAPI.ts:79](https://github.com/bennyn/coinbase-pro-no
 
 • **DONE**: = "done"
 
-_Defined in [src/order/OrderAPI.ts:80](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/order/OrderAPI.ts#L80)_
+_Defined in [src/order/OrderAPI.ts:80](https://github.com/bennyn/coinbase-pro-node/blob/7eff64a/src/order/OrderAPI.ts#L80)_
 
 ---
 
@@ -33,7 +35,7 @@ _Defined in [src/order/OrderAPI.ts:80](https://github.com/bennyn/coinbase-pro-no
 
 • **OPEN**: = "open"
 
-_Defined in [src/order/OrderAPI.ts:81](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/order/OrderAPI.ts#L81)_
+_Defined in [src/order/OrderAPI.ts:81](https://github.com/bennyn/coinbase-pro-node/blob/7eff64a/src/order/OrderAPI.ts#L81)_
 
 ---
 
@@ -41,4 +43,4 @@ _Defined in [src/order/OrderAPI.ts:81](https://github.com/bennyn/coinbase-pro-no
 
 • **PENDING**: = "pending"
 
-_Defined in [src/order/OrderAPI.ts:82](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/order/OrderAPI.ts#L82)_
+_Defined in [src/order/OrderAPI.ts:82](https://github.com/bennyn/coinbase-pro-node/blob/7eff64a/src/order/OrderAPI.ts#L82)_

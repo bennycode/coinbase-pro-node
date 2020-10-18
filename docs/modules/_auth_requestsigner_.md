@@ -1,4 +1,6 @@
-[coinbase-pro-node](../README.md) › [Globals](../globals.md) › ["auth/RequestSigner"](_auth_requestsigner_.md)
+**[coinbase-pro-node](../README.md)**
+
+> [Globals](../globals.md) / "auth/RequestSigner"
 
 # Module: "auth/RequestSigner"
 

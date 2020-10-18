@@ -1,4 +1,6 @@
-[coinbase-pro-node](../README.md) › [Globals](../globals.md) › ["withdraw/WithdrawAPI"](_withdraw_withdrawapi_.md)
+**[coinbase-pro-node](../README.md)**
+
+> [Globals](../globals.md) / "withdraw/WithdrawAPI"
 
 # Module: "withdraw/WithdrawAPI"
 

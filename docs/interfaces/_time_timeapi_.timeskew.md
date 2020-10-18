@@ -1,4 +1,6 @@
-[coinbase-pro-node](../README.md) › [Globals](../globals.md) › ["time/TimeAPI"](../modules/_time_timeapi_.md) › [TimeSkew](_time_timeapi_.timeskew.md)
+**[coinbase-pro-node](../README.md)**
+
+> [Globals](../globals.md) / ["time/TimeAPI"](../modules/_time_timeapi_.md) / TimeSkew
 
 # Interface: TimeSkew
 
@@ -17,9 +19,9 @@
 
 ### epoch
 
-• **epoch**: _number_
+• **epoch**: number
 
-_Defined in [src/time/TimeAPI.ts:5](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/time/TimeAPI.ts#L5)_
+_Defined in [src/time/TimeAPI.ts:5](https://github.com/bennyn/coinbase-pro-node/blob/7eff64a/src/time/TimeAPI.ts#L5)_
 
 The epoch field represents decimal seconds since Unix Epoch, i.e. "1420674445.201"
 
@@ -27,8 +29,8 @@ The epoch field represents decimal seconds since Unix Epoch, i.e. "1420674445.20
 
 ### iso
 
-• **iso**: _string_
+• **iso**: string
 
-_Defined in [src/time/TimeAPI.ts:7](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/time/TimeAPI.ts#L7)_
+_Defined in [src/time/TimeAPI.ts:7](https://github.com/bennyn/coinbase-pro-node/blob/7eff64a/src/time/TimeAPI.ts#L7)_
 
 Time in ISO 8601 format, i.e. "2015-01-07T23:47:25.201Z"

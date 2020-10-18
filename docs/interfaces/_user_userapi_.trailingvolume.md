@@ -1,4 +1,6 @@
-[coinbase-pro-node](../README.md) › [Globals](../globals.md) › ["user/UserAPI"](../modules/_user_userapi_.md) › [TrailingVolume](_user_userapi_.trailingvolume.md)
+**[coinbase-pro-node](../README.md)**
+
+> [Globals](../globals.md) / ["user/UserAPI"](../modules/_user_userapi_.md) / TrailingVolume
 
 # Interface: TrailingVolume
 
@@ -19,30 +21,30 @@
 
 ### exchange_volume
 
-• **exchange_volume**: _string_
+• **exchange_volume**: string
 
-_Defined in [src/user/UserAPI.ts:8](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/user/UserAPI.ts#L8)_
+_Defined in [src/user/UserAPI.ts:8](https://github.com/bennyn/coinbase-pro-node/blob/7eff64a/src/user/UserAPI.ts#L8)_
 
 ---
 
 ### product_id
 
-• **product_id**: _string_
+• **product_id**: string
 
-_Defined in [src/user/UserAPI.ts:9](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/user/UserAPI.ts#L9)_
+_Defined in [src/user/UserAPI.ts:9](https://github.com/bennyn/coinbase-pro-node/blob/7eff64a/src/user/UserAPI.ts#L9)_
 
 ---
 
 ### recorded_at
 
-• **recorded_at**: _string_
+• **recorded_at**: string
 
-_Defined in [src/user/UserAPI.ts:10](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/user/UserAPI.ts#L10)_
+_Defined in [src/user/UserAPI.ts:10](https://github.com/bennyn/coinbase-pro-node/blob/7eff64a/src/user/UserAPI.ts#L10)_
 
 ---
 
 ### volume
 
-• **volume**: _string_
+• **volume**: string
 
-_Defined in [src/user/UserAPI.ts:11](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/user/UserAPI.ts#L11)_
+_Defined in [src/user/UserAPI.ts:11](https://github.com/bennyn/coinbase-pro-node/blob/7eff64a/src/user/UserAPI.ts#L11)_

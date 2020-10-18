@@ -1,4 +1,6 @@
-[coinbase-pro-node](../README.md) › [Globals](../globals.md) › ["user/UserAPI"](../modules/_user_userapi_.md) › [UserAPI](_user_userapi_.userapi.md)
+**[coinbase-pro-node](../README.md)**
+
+> [Globals](../globals.md) / ["user/UserAPI"](../modules/_user_userapi_.md) / UserAPI
 
 # Class: UserAPI
 
@@ -19,31 +21,31 @@
 
 ### Object literals
 
-- [URL](_user_userapi_.userapi.md#static-readonly-url)
+- [URL](_user_userapi_.userapi.md#url)
 
 ## Constructors
 
 ### constructor
 
-\+ **new UserAPI**(`apiClient`: AxiosInstance): _[UserAPI](_user_userapi_.userapi.md)_
+\+ **new UserAPI**(`apiClient`: AxiosInstance): [UserAPI](_user_userapi_.userapi.md)
 
-_Defined in [src/user/UserAPI.ts:17](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/user/UserAPI.ts#L17)_
+_Defined in [src/user/UserAPI.ts:17](https://github.com/bennyn/coinbase-pro-node/blob/7eff64a/src/user/UserAPI.ts#L17)_
 
-**Parameters:**
+#### Parameters:
 
 | Name        | Type          |
 | ----------- | ------------- |
 | `apiClient` | AxiosInstance |
 
-**Returns:** _[UserAPI](_user_userapi_.userapi.md)_
+**Returns:** [UserAPI](_user_userapi_.userapi.md)
 
 ## Methods
 
 ### getTrailingVolume
 
-▸ **getTrailingVolume**(): _Promise‹[TrailingVolume](../interfaces/_user_userapi_.trailingvolume.md)[]›_
+▸ **getTrailingVolume**(): Promise\<[TrailingVolume](../interfaces/_user_userapi_.trailingvolume.md)[]>
 
-_Defined in [src/user/UserAPI.ts:41](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/user/UserAPI.ts#L41)_
+_Defined in [src/user/UserAPI.ts:41](https://github.com/bennyn/coinbase-pro-node/blob/7eff64a/src/user/UserAPI.ts#L41)_
 
 This request will return your 30-day trailing volume for all products of the API key’s profile. This is a cached value that’s calculated every day at midnight UTC.
 
@@ -51,7 +53,7 @@ This request will return your 30-day trailing volume for all products of the API
 
 **`see`** https://docs.pro.coinbase.com/#trailing-volume
 
-**Returns:** _Promise‹[TrailingVolume](../interfaces/_user_userapi_.trailingvolume.md)[]›_
+**Returns:** Promise\<[TrailingVolume](../interfaces/_user_userapi_.trailingvolume.md)[]>
 
 Your 30-day trailing volume for all products of the API key’s profile
 
@@ -59,28 +61,28 @@ Your 30-day trailing volume for all products of the API key’s profile
 
 ### verifyAuthentication
 
-▸ **verifyAuthentication**(): _Promise‹[VerifiedUser](../interfaces/_user_userapi_.verifieduser.md)›_
+▸ **verifyAuthentication**(): Promise\<[VerifiedUser](../interfaces/_user_userapi_.verifieduser.md)>
 
-_Defined in [src/user/UserAPI.ts:27](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/user/UserAPI.ts#L27)_
+_Defined in [src/user/UserAPI.ts:27](https://github.com/bennyn/coinbase-pro-node/blob/7eff64a/src/user/UserAPI.ts#L27)_
 
 Verify your authentication with Coinbase Pro.
 
 **`see`** https://docs.pro.coinbase.com/#subscribe
 
-**Returns:** _Promise‹[VerifiedUser](../interfaces/_user_userapi_.verifieduser.md)›_
+**Returns:** Promise\<[VerifiedUser](../interfaces/_user_userapi_.verifieduser.md)>
 
 Your account
 
 ## Object literals
 
-### `Static` `Readonly` URL
+### URL
 
-### ▪ **URL**: _object_
+▪ `Static` `Readonly` **URL**: object
 
-_Defined in [src/user/UserAPI.ts:15](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/user/UserAPI.ts#L15)_
+_Defined in [src/user/UserAPI.ts:15](https://github.com/bennyn/coinbase-pro-node/blob/7eff64a/src/user/UserAPI.ts#L15)_
 
-### USERS
+#### Properties:
 
-• **USERS**: _string_ = `/users`
-
-_Defined in [src/user/UserAPI.ts:16](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/user/UserAPI.ts#L16)_
+| Name    | Type   | Value      |
+| ------- | ------ | ---------- |
+| `USERS` | string | \`/users\` |

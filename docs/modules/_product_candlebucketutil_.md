@@ -1,4 +1,6 @@
-[coinbase-pro-node](../README.md) › [Globals](../globals.md) › ["product/CandleBucketUtil"](_product_candlebucketutil_.md)
+**[coinbase-pro-node](../README.md)**
+
+> [Globals](../globals.md) / "product/CandleBucketUtil"
 
 # Module: "product/CandleBucketUtil"
 

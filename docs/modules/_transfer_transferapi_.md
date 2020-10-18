@@ -1,4 +1,6 @@
-[coinbase-pro-node](../README.md) › [Globals](../globals.md) › ["transfer/TransferAPI"](_transfer_transferapi_.md)
+**[coinbase-pro-node](../README.md)**
+
+> [Globals](../globals.md) / "transfer/TransferAPI"
 
 # Module: "transfer/TransferAPI"
 

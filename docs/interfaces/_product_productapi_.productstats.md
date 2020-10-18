@@ -1,4 +1,6 @@
-[coinbase-pro-node](../README.md) › [Globals](../globals.md) › ["product/ProductAPI"](../modules/_product_productapi_.md) › [ProductStats](_product_productapi_.productstats.md)
+**[coinbase-pro-node](../README.md)**
+
+> [Globals](../globals.md) / ["product/ProductAPI"](../modules/_product_productapi_.md) / ProductStats
 
 # Interface: ProductStats
 
@@ -21,46 +23,46 @@
 
 ### high
 
-• **high**: _string_
+• **high**: string
 
-_Defined in [src/product/ProductAPI.ts:44](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/product/ProductAPI.ts#L44)_
+_Defined in [src/product/ProductAPI.ts:44](https://github.com/bennyn/coinbase-pro-node/blob/7eff64a/src/product/ProductAPI.ts#L44)_
 
 ---
 
 ### last
 
-• **last**: _string_
+• **last**: string
 
-_Defined in [src/product/ProductAPI.ts:45](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/product/ProductAPI.ts#L45)_
+_Defined in [src/product/ProductAPI.ts:45](https://github.com/bennyn/coinbase-pro-node/blob/7eff64a/src/product/ProductAPI.ts#L45)_
 
 ---
 
 ### low
 
-• **low**: _string_
+• **low**: string
 
-_Defined in [src/product/ProductAPI.ts:46](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/product/ProductAPI.ts#L46)_
+_Defined in [src/product/ProductAPI.ts:46](https://github.com/bennyn/coinbase-pro-node/blob/7eff64a/src/product/ProductAPI.ts#L46)_
 
 ---
 
 ### open
 
-• **open**: _string_
+• **open**: string
 
-_Defined in [src/product/ProductAPI.ts:47](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/product/ProductAPI.ts#L47)_
+_Defined in [src/product/ProductAPI.ts:47](https://github.com/bennyn/coinbase-pro-node/blob/7eff64a/src/product/ProductAPI.ts#L47)_
 
 ---
 
 ### volume
 
-• **volume**: _string_
+• **volume**: string
 
-_Defined in [src/product/ProductAPI.ts:48](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/product/ProductAPI.ts#L48)_
+_Defined in [src/product/ProductAPI.ts:48](https://github.com/bennyn/coinbase-pro-node/blob/7eff64a/src/product/ProductAPI.ts#L48)_
 
 ---
 
 ### volume_30day
 
-• **volume_30day**: _string_
+• **volume_30day**: string
 
-_Defined in [src/product/ProductAPI.ts:49](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/product/ProductAPI.ts#L49)_
+_Defined in [src/product/ProductAPI.ts:49](https://github.com/bennyn/coinbase-pro-node/blob/7eff64a/src/product/ProductAPI.ts#L49)_

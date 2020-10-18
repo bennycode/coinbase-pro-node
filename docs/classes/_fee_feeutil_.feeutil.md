@@ -1,4 +1,6 @@
-[coinbase-pro-node](../README.md) › [Globals](../globals.md) › ["fee/FeeUtil"](../modules/_fee_feeutil_.md) › [FeeUtil](_fee_feeutil_.feeutil.md)
+**[coinbase-pro-node](../README.md)**
+
+> [Globals](../globals.md) / ["fee/FeeUtil"](../modules/_fee_feeutil_.md) / FeeUtil
 
 # Class: FeeUtil
 
@@ -10,20 +12,20 @@
 
 ### Methods
 
-- [estimateFee](_fee_feeutil_.feeutil.md#static-estimatefee)
-- [getFeeRate](_fee_feeutil_.feeutil.md#static-getfeerate)
+- [estimateFee](_fee_feeutil_.feeutil.md#estimatefee)
+- [getFeeRate](_fee_feeutil_.feeutil.md#getfeerate)
 
 ## Methods
 
-### `Static` estimateFee
+### estimateFee
 
-▸ **estimateFee**(`baseAmount`: BigSource, `counterPrice`: BigSource, `side`: OrderSide, `type`: [OrderType](../enums/_order_orderapi_.ordertype.md), `feeTier`: [FeeTier](../interfaces/_fee_feeapi_.feetier.md), `feeAsset`: string): _[FeeEstimate](_fee_feeestimate_.feeestimate.md)_
+▸ `Static`**estimateFee**(`baseAmount`: BigSource, `counterPrice`: BigSource, `side`: OrderSide, `type`: [OrderType](../enums/_order_orderapi_.ordertype.md), `feeTier`: [FeeTier](../interfaces/_fee_feeapi_.feetier.md), `feeAsset`: string): [FeeEstimate](_fee_feeestimate_.feeestimate.md)
 
-_Defined in [src/fee/FeeUtil.ts:24](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/fee/FeeUtil.ts#L24)_
+_Defined in [src/fee/FeeUtil.ts:24](https://github.com/bennyn/coinbase-pro-node/blob/7eff64a/src/fee/FeeUtil.ts#L24)_
 
 Calculate the fee which must be paid (often deducted from the revenues) when selling or buying a product.
 
-**Parameters:**
+#### Parameters:
 
 | Name | Type | Description |
 | --- | --- | --- |
@@ -34,23 +36,23 @@ Calculate the fee which must be paid (often deducted from the revenues) when sel
 | `feeTier` | [FeeTier](../interfaces/_fee_feeapi_.feetier.md) | Your account's fee tier |
 | `feeAsset` | string | Currency in which the fee should be paid |
 
-**Returns:** _[FeeEstimate](_fee_feeestimate_.feeestimate.md)_
+**Returns:** [FeeEstimate](_fee_feeestimate_.feeestimate.md)
 
 Estimated fee details
 
 ---
 
-### `Static` getFeeRate
+### getFeeRate
 
-▸ **getFeeRate**(`type`: [OrderType](../enums/_order_orderapi_.ordertype.md), `feeTier`: [FeeTier](../interfaces/_fee_feeapi_.feetier.md)): _number_
+▸ `Static`**getFeeRate**(`type`: [OrderType](../enums/_order_orderapi_.ordertype.md), `feeTier`: [FeeTier](../interfaces/_fee_feeapi_.feetier.md)): number
 
-_Defined in [src/fee/FeeUtil.ts:6](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/fee/FeeUtil.ts#L6)_
+_Defined in [src/fee/FeeUtil.ts:6](https://github.com/bennyn/coinbase-pro-node/blob/7eff64a/src/fee/FeeUtil.ts#L6)_
 
-**Parameters:**
+#### Parameters:
 
 | Name      | Type                                                |
 | --------- | --------------------------------------------------- |
 | `type`    | [OrderType](../enums/_order_orderapi_.ordertype.md) |
 | `feeTier` | [FeeTier](../interfaces/_fee_feeapi_.feetier.md)    |
 
-**Returns:** _number_
+**Returns:** number

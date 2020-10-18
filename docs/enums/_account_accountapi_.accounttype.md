@@ -1,4 +1,6 @@
-[coinbase-pro-node](../README.md) › [Globals](../globals.md) › ["account/AccountAPI"](../modules/_account_accountapi_.md) › [AccountType](_account_accountapi_.accounttype.md)
+**[coinbase-pro-node](../README.md)**
+
+> [Globals](../globals.md) / ["account/AccountAPI"](../modules/_account_accountapi_.md) / AccountType
 
 # Enumeration: AccountType
 
@@ -15,7 +17,7 @@
 
 • **FIAT**: = "fiat"
 
-_Defined in [src/account/AccountAPI.ts:39](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/account/AccountAPI.ts#L39)_
+_Defined in [src/account/AccountAPI.ts:39](https://github.com/bennyn/coinbase-pro-node/blob/7eff64a/src/account/AccountAPI.ts#L39)_
 
 ---
 
@@ -23,4 +25,4 @@ _Defined in [src/account/AccountAPI.ts:39](https://github.com/bennyn/coinbase-pr
 
 • **WALLET**: = "wallet"
 
-_Defined in [src/account/AccountAPI.ts:40](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/account/AccountAPI.ts#L40)_
+_Defined in [src/account/AccountAPI.ts:40](https://github.com/bennyn/coinbase-pro-node/blob/7eff64a/src/account/AccountAPI.ts#L40)_

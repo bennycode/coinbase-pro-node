@@ -1,4 +1,6 @@
-[coinbase-pro-node](../README.md) › [Globals](../globals.md) › ["fee/FeeUtil"](_fee_feeutil_.md)
+**[coinbase-pro-node](../README.md)**
+
+> [Globals](../globals.md) / "fee/FeeUtil"
 
 # Module: "fee/FeeUtil"
 

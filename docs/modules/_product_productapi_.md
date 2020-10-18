@@ -1,4 +1,6 @@
-[coinbase-pro-node](../README.md) › [Globals](../globals.md) › ["product/ProductAPI"](_product_productapi_.md)
+**[coinbase-pro-node](../README.md)**
+
+> [Globals](../globals.md) / "product/ProductAPI"
 
 # Module: "product/ProductAPI"
 
@@ -37,14 +39,14 @@
 
 ### HistoricRateRequest
 
-Ƭ **HistoricRateRequest**: _[BaseHistoricRateRequest](../interfaces/_product_productapi_.basehistoricraterequest.md) | [HistoricRateRequestWithTimeSpan](../interfaces/_product_productapi_.historicraterequestwithtimespan.md)_
+Ƭ **HistoricRateRequest**: [BaseHistoricRateRequest](../interfaces/_product_productapi_.basehistoricraterequest.md) \| [HistoricRateRequestWithTimeSpan](../interfaces/_product_productapi_.historicraterequestwithtimespan.md)
 
-_Defined in [src/product/ProductAPI.ts:82](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/product/ProductAPI.ts#L82)_
+_Defined in [src/product/ProductAPI.ts:82](https://github.com/bennyn/coinbase-pro-node/blob/7eff64a/src/product/ProductAPI.ts#L82)_
 
 ---
 
 ### OrderBook
 
-Ƭ **OrderBook**: _[OrderBookLevel1](../interfaces/_product_productapi_.orderbooklevel1.md) | [OrderBookLevel2](../interfaces/_product_productapi_.orderbooklevel2.md) | [OrderBookLevel3](../interfaces/_product_productapi_.orderbooklevel3.md)_
+Ƭ **OrderBook**: [OrderBookLevel1](../interfaces/_product_productapi_.orderbooklevel1.md) \| [OrderBookLevel2](../interfaces/_product_productapi_.orderbooklevel2.md) \| [OrderBookLevel3](../interfaces/_product_productapi_.orderbooklevel3.md)
 
-_Defined in [src/product/ProductAPI.ts:133](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/product/ProductAPI.ts#L133)_
+_Defined in [src/product/ProductAPI.ts:133](https://github.com/bennyn/coinbase-pro-node/blob/7eff64a/src/product/ProductAPI.ts#L133)_

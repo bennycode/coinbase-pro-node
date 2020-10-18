@@ -1,4 +1,6 @@
-[coinbase-pro-node](../README.md) › [Globals](../globals.md) › ["CoinbasePro"](../modules/_coinbasepro_.md) › [CoinbasePro](_coinbasepro_.coinbasepro.md)
+**[coinbase-pro-node](../README.md)**
+
+> [Globals](../globals.md) / ["CoinbasePro"](../modules/_coinbasepro_.md) / CoinbasePro
 
 # Class: CoinbasePro
 
@@ -14,27 +16,27 @@
 
 ### Properties
 
-- [rest](_coinbasepro_.coinbasepro.md#readonly-rest)
-- [url](_coinbasepro_.coinbasepro.md#readonly-url)
-- [ws](_coinbasepro_.coinbasepro.md#readonly-ws)
+- [rest](_coinbasepro_.coinbasepro.md#rest)
+- [url](_coinbasepro_.coinbasepro.md#url)
+- [ws](_coinbasepro_.coinbasepro.md#ws)
 
 ### Object literals
 
-- [SETUP](_coinbasepro_.coinbasepro.md#static-readonly-setup)
+- [SETUP](_coinbasepro_.coinbasepro.md#setup)
 
 ## Constructors
 
 ### constructor
 
-\+ **new CoinbasePro**(`auth`: [ClientAuthentication](../interfaces/_coinbasepro_.clientauthentication.md)): _[CoinbasePro](_coinbasepro_.coinbasepro.md)_
+\+ **new CoinbasePro**(`auth`: [ClientAuthentication](../interfaces/_coinbasepro_.clientauthentication.md)): [CoinbasePro](_coinbasepro_.coinbasepro.md)
 
-_Defined in [src/CoinbasePro.ts:34](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/CoinbasePro.ts#L34)_
+_Defined in [src/CoinbasePro.ts:34](https://github.com/bennyn/coinbase-pro-node/blob/7eff64a/src/CoinbasePro.ts#L34)_
 
-**Parameters:**
+#### Parameters:
 
-| Name   | Type                                                                        | Default |
-| ------ | --------------------------------------------------------------------------- | ------- |
-| `auth` | [ClientAuthentication](../interfaces/_coinbasepro_.clientauthentication.md) | {       |
+| Name   | Type                                                                        | Default value |
+| ------ | --------------------------------------------------------------------------- | ------------- |
+| `auth` | [ClientAuthentication](../interfaces/_coinbasepro_.clientauthentication.md) | {             |
 
       apiKey: '',
       apiSecret: '',
@@ -42,52 +44,43 @@ _Defined in [src/CoinbasePro.ts:34](https://github.com/bennyn/coinbase-pro-node/
       useSandbox: false,
     } |
 
-**Returns:** _[CoinbasePro](_coinbasepro_.coinbasepro.md)_
+**Returns:** [CoinbasePro](_coinbasepro_.coinbasepro.md)
 
 ## Properties
 
-### `Readonly` rest
+### rest
 
-• **rest**: _[RESTClient](_client_restclient_.restclient.md)_
+• `Readonly` **rest**: [RESTClient](_client_restclient_.restclient.md)
 
-_Defined in [src/CoinbasePro.ts:18](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/CoinbasePro.ts#L18)_
-
----
-
-### `Readonly` url
-
-• **url**: _[ClientConnection](../interfaces/_coinbasepro_.clientconnection.md)_
-
-_Defined in [src/CoinbasePro.ts:19](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/CoinbasePro.ts#L19)_
+_Defined in [src/CoinbasePro.ts:18](https://github.com/bennyn/coinbase-pro-node/blob/7eff64a/src/CoinbasePro.ts#L18)_
 
 ---
 
-### `Readonly` ws
+### url
 
-• **ws**: _[WebSocketClient](_client_websocketclient_.websocketclient.md)_
+• `Readonly` **url**: [ClientConnection](../interfaces/_coinbasepro_.clientconnection.md)
 
-_Defined in [src/CoinbasePro.ts:20](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/CoinbasePro.ts#L20)_
+_Defined in [src/CoinbasePro.ts:19](https://github.com/bennyn/coinbase-pro-node/blob/7eff64a/src/CoinbasePro.ts#L19)_
+
+---
+
+### ws
+
+• `Readonly` **ws**: [WebSocketClient](_client_websocketclient_.websocketclient.md)
+
+_Defined in [src/CoinbasePro.ts:20](https://github.com/bennyn/coinbase-pro-node/blob/7eff64a/src/CoinbasePro.ts#L20)_
 
 ## Object literals
 
-### `Static` `Readonly` SETUP
+### SETUP
 
-### ▪ **SETUP**: _object_
+▪ `Static` `Readonly` **SETUP**: object
 
-_Defined in [src/CoinbasePro.ts:22](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/CoinbasePro.ts#L22)_
+_Defined in [src/CoinbasePro.ts:22](https://github.com/bennyn/coinbase-pro-node/blob/7eff64a/src/CoinbasePro.ts#L22)_
 
-▪ **PRODUCTION**: _object_
+#### Properties:
 
-_Defined in [src/CoinbasePro.ts:26](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/CoinbasePro.ts#L26)_
-
-- **REST**: _string_ = "https://api.pro.coinbase.com"
-
-- **WebSocket**: _string_ = "wss://ws-feed.pro.coinbase.com"
-
-▪ **SANDBOX**: _object_
-
-_Defined in [src/CoinbasePro.ts:30](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/CoinbasePro.ts#L30)_
-
-- **REST**: _string_ = "https://api-public.sandbox.pro.coinbase.com"
-
-- **WebSocket**: _string_ = "wss://ws-feed-public.sandbox.pro.coinbase.com"
+| Name | Type | Value |
+| --- | --- | --- |
+| `PRODUCTION` | object | { REST: string = "https://api.pro.coinbase.com"; WebSocket: string = "wss://ws-feed.pro.coinbase.com" } |
+| `SANDBOX` | object | { REST: string = "https://api-public.sandbox.pro.coinbase.com"; WebSocket: string = "wss://ws-feed-public.sandbox.pro.coinbase.com" } |

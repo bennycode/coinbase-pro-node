@@ -1,4 +1,6 @@
-[coinbase-pro-node](../README.md) › [Globals](../globals.md) › ["CoinbasePro"](_coinbasepro_.md)
+**[coinbase-pro-node](../README.md)**
+
+> [Globals](../globals.md) / "CoinbasePro"
 
 # Module: "CoinbasePro"
 

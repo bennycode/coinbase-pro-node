@@ -1,4 +1,6 @@
-[coinbase-pro-node](../README.md) › [Globals](../globals.md) › ["user/UserAPI"](_user_userapi_.md)
+**[coinbase-pro-node](../README.md)**
+
+> [Globals](../globals.md) / "user/UserAPI"
 
 # Module: "user/UserAPI"
 

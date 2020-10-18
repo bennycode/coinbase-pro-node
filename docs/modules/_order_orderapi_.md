@@ -1,4 +1,6 @@
-[coinbase-pro-node](../README.md) › [Globals](../globals.md) › ["order/OrderAPI"](_order_orderapi_.md)
+**[coinbase-pro-node](../README.md)**
+
+> [Globals](../globals.md) / "order/OrderAPI"
 
 # Module: "order/OrderAPI"
 
@@ -31,62 +33,62 @@
 
 ### AutoCancelLimitOrder
 
-Ƭ **AutoCancelLimitOrder**: _[LimitOrder](_order_orderapi_.md#limitorder) & object_
+Ƭ **AutoCancelLimitOrder**: [LimitOrder](_order_orderapi_.md#limitorder) & { cancel*after: [CancelOrderPeriod](../enums/\_order_orderapi*.cancelorderperiod.md) ; time*in_force: [GOOD\_TILL\_TIME](../enums/\_order_orderapi*.timeinforce.md#good_till_time) }
 
-_Defined in [src/order/OrderAPI.ts:58](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/order/OrderAPI.ts#L58)_
+_Defined in [src/order/OrderAPI.ts:58](https://github.com/bennyn/coinbase-pro-node/blob/7eff64a/src/order/OrderAPI.ts#L58)_
 
 ---
 
 ### FilledOrder
 
-Ƭ **FilledOrder**: _BasePlacedOrder & object_
+Ƭ **FilledOrder**: BasePlacedOrder & { done*at: ISO_8601_MS_UTC ; done_reason: \"filled\" ; profile_id: string ; status: [DONE](../enums/\_order_orderapi*.orderstatus.md#done) }
 
-_Defined in [src/order/OrderAPI.ts:90](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/order/OrderAPI.ts#L90)_
+_Defined in [src/order/OrderAPI.ts:90](https://github.com/bennyn/coinbase-pro-node/blob/7eff64a/src/order/OrderAPI.ts#L90)_
 
 ---
 
 ### LimitOrder
 
-Ƭ **LimitOrder**: _BaseOrder & object_
+Ƭ **LimitOrder**: BaseOrder & { price: string ; size: string ; time*in_force?: [TimeInForce](../enums/\_order_orderapi*.timeinforce.md) ; type: [LIMIT](../enums/_order_orderapi_.ordertype.md#limit) }
 
-_Defined in [src/order/OrderAPI.ts:68](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/order/OrderAPI.ts#L68)_
+_Defined in [src/order/OrderAPI.ts:68](https://github.com/bennyn/coinbase-pro-node/blob/7eff64a/src/order/OrderAPI.ts#L68)_
 
 ---
 
 ### MarketOrder
 
-Ƭ **MarketOrder**: _BaseOrder & object & object | object_
+Ƭ **MarketOrder**: BaseOrder & { type: [MARKET](../enums/_order_orderapi_.ordertype.md#market) } & { size: string } \| { funds: string }
 
-_Defined in [src/order/OrderAPI.ts:76](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/order/OrderAPI.ts#L76)_
+_Defined in [src/order/OrderAPI.ts:76](https://github.com/bennyn/coinbase-pro-node/blob/7eff64a/src/order/OrderAPI.ts#L76)_
 
 ---
 
 ### NewOrder
 
-Ƭ **NewOrder**: _[LimitOrder](_order_orderapi_.md#limitorder) | [AutoCancelLimitOrder](_order_orderapi_.md#autocancellimitorder) | [PostOnlyLimitOrder](_order_orderapi_.md#postonlylimitorder) | [MarketOrder](_order_orderapi_.md#marketorder)_
+Ƭ **NewOrder**: [LimitOrder](_order_orderapi_.md#limitorder) \| [AutoCancelLimitOrder](_order_orderapi_.md#autocancellimitorder) \| [PostOnlyLimitOrder](_order_orderapi_.md#postonlylimitorder) \| [MarketOrder](_order_orderapi_.md#marketorder)
 
-_Defined in [src/order/OrderAPI.ts:56](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/order/OrderAPI.ts#L56)_
+_Defined in [src/order/OrderAPI.ts:56](https://github.com/bennyn/coinbase-pro-node/blob/7eff64a/src/order/OrderAPI.ts#L56)_
 
 ---
 
 ### Order
 
-Ƭ **Order**: _[PendingOrder](_order_orderapi_.md#pendingorder) | [FilledOrder](_order_orderapi_.md#filledorder)_
+Ƭ **Order**: [PendingOrder](_order_orderapi_.md#pendingorder) \| [FilledOrder](_order_orderapi_.md#filledorder)
 
-_Defined in [src/order/OrderAPI.ts:97](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/order/OrderAPI.ts#L97)_
+_Defined in [src/order/OrderAPI.ts:97](https://github.com/bennyn/coinbase-pro-node/blob/7eff64a/src/order/OrderAPI.ts#L97)_
 
 ---
 
 ### PendingOrder
 
-Ƭ **PendingOrder**: _BasePlacedOrder & object_
+Ƭ **PendingOrder**: BasePlacedOrder & { status: [PENDING](../enums/_order_orderapi_.orderstatus.md#pending) ; stp: [SelfTradePrevention](../enums/_order_orderapi_.selftradeprevention.md) }
 
-_Defined in [src/order/OrderAPI.ts:85](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/order/OrderAPI.ts#L85)_
+_Defined in [src/order/OrderAPI.ts:85](https://github.com/bennyn/coinbase-pro-node/blob/7eff64a/src/order/OrderAPI.ts#L85)_
 
 ---
 
 ### PostOnlyLimitOrder
 
-Ƭ **PostOnlyLimitOrder**: _[LimitOrder](_order_orderapi_.md#limitorder) & object_
+Ƭ **PostOnlyLimitOrder**: [LimitOrder](_order_orderapi_.md#limitorder) & { post*only: boolean ; time_in_force: [GOOD\_TILL\_CANCELED](../enums/\_order_orderapi*.timeinforce.md#good*till_canceled) \| [GOOD\_TILL\_TIME](../enums/\_order_orderapi*.timeinforce.md#good_till_time) }
 
-_Defined in [src/order/OrderAPI.ts:63](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/order/OrderAPI.ts#L63)_
+_Defined in [src/order/OrderAPI.ts:63](https://github.com/bennyn/coinbase-pro-node/blob/7eff64a/src/order/OrderAPI.ts#L63)_

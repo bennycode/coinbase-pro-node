@@ -1,4 +1,6 @@
-[coinbase-pro-node](../README.md) › [Globals](../globals.md) › ["account/AccountAPI"](_account_accountapi_.md)
+**[coinbase-pro-node](../README.md)**
+
+> [Globals](../globals.md) / "account/AccountAPI"
 
 # Module: "account/AccountAPI"
 

@@ -1,4 +1,6 @@
-[coinbase-pro-node](../README.md) › [Globals](../globals.md) › ["currency/CurrencyAPI"](_currency_currencyapi_.md)
+**[coinbase-pro-node](../README.md)**
+
+> [Globals](../globals.md) / "currency/CurrencyAPI"
 
 # Module: "currency/CurrencyAPI"
 

@@ -1,4 +1,6 @@
-[coinbase-pro-node](../README.md) › [Globals](../globals.md) › ["order/OrderAPI"](../modules/_order_orderapi_.md) › [OrderType](_order_orderapi_.ordertype.md)
+**[coinbase-pro-node](../README.md)**
+
+> [Globals](../globals.md) / ["order/OrderAPI"](../modules/_order_orderapi_.md) / OrderType
 
 # Enumeration: OrderType
 
@@ -15,7 +17,7 @@
 
 • **LIMIT**: = "limit"
 
-_Defined in [src/order/OrderAPI.ts:5](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/order/OrderAPI.ts#L5)_
+_Defined in [src/order/OrderAPI.ts:5](https://github.com/bennyn/coinbase-pro-node/blob/7eff64a/src/order/OrderAPI.ts#L5)_
 
 ---
 
@@ -23,4 +25,4 @@ _Defined in [src/order/OrderAPI.ts:5](https://github.com/bennyn/coinbase-pro-nod
 
 • **MARKET**: = "market"
 
-_Defined in [src/order/OrderAPI.ts:6](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/order/OrderAPI.ts#L6)_
+_Defined in [src/order/OrderAPI.ts:6](https://github.com/bennyn/coinbase-pro-node/blob/7eff64a/src/order/OrderAPI.ts#L6)_

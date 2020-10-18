@@ -1,4 +1,6 @@
-[coinbase-pro-node](../README.md) › [Globals](../globals.md) › ["account/AccountAPI"](../modules/_account_accountapi_.md) › [Account](_account_accountapi_.account.md)
+**[coinbase-pro-node](../README.md)**
+
+> [Globals](../globals.md) / ["account/AccountAPI"](../modules/_account_accountapi_.md) / Account
 
 # Interface: Account
 
@@ -21,46 +23,46 @@
 
 ### available
 
-• **available**: _string_
+• **available**: string
 
-_Defined in [src/account/AccountAPI.ts:5](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/account/AccountAPI.ts#L5)_
+_Defined in [src/account/AccountAPI.ts:5](https://github.com/bennyn/coinbase-pro-node/blob/7eff64a/src/account/AccountAPI.ts#L5)_
 
 ---
 
 ### balance
 
-• **balance**: _string_
+• **balance**: string
 
-_Defined in [src/account/AccountAPI.ts:6](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/account/AccountAPI.ts#L6)_
+_Defined in [src/account/AccountAPI.ts:6](https://github.com/bennyn/coinbase-pro-node/blob/7eff64a/src/account/AccountAPI.ts#L6)_
 
 ---
 
 ### currency
 
-• **currency**: _string_
+• **currency**: string
 
-_Defined in [src/account/AccountAPI.ts:7](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/account/AccountAPI.ts#L7)_
+_Defined in [src/account/AccountAPI.ts:7](https://github.com/bennyn/coinbase-pro-node/blob/7eff64a/src/account/AccountAPI.ts#L7)_
 
 ---
 
 ### hold
 
-• **hold**: _string_
+• **hold**: string
 
-_Defined in [src/account/AccountAPI.ts:8](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/account/AccountAPI.ts#L8)_
+_Defined in [src/account/AccountAPI.ts:8](https://github.com/bennyn/coinbase-pro-node/blob/7eff64a/src/account/AccountAPI.ts#L8)_
 
 ---
 
 ### id
 
-• **id**: _string_
+• **id**: string
 
-_Defined in [src/account/AccountAPI.ts:9](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/account/AccountAPI.ts#L9)_
+_Defined in [src/account/AccountAPI.ts:9](https://github.com/bennyn/coinbase-pro-node/blob/7eff64a/src/account/AccountAPI.ts#L9)_
 
 ---
 
 ### profile_id
 
-• **profile_id**: _string_
+• **profile_id**: string
 
-_Defined in [src/account/AccountAPI.ts:10](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/account/AccountAPI.ts#L10)_
+_Defined in [src/account/AccountAPI.ts:10](https://github.com/bennyn/coinbase-pro-node/blob/7eff64a/src/account/AccountAPI.ts#L10)_

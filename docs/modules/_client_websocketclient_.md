@@ -1,4 +1,6 @@
-[coinbase-pro-node](../README.md) › [Globals](../globals.md) › ["client/WebSocketClient"](_client_websocketclient_.md)
+**[coinbase-pro-node](../README.md)**
+
+> [Globals](../globals.md) / "client/WebSocketClient"
 
 # Module: "client/WebSocketClient"
 
@@ -34,130 +36,112 @@
 
 ### WebSocketErrorMessage
 
-Ƭ **WebSocketErrorMessage**: _object_
+Ƭ **WebSocketErrorMessage**: { message: string ; reason: string ; type: [ERROR](../enums/_client_websocketclient_.websocketresponsetype.md#error) }
 
-_Defined in [src/client/WebSocketClient.ts:133](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/client/WebSocketClient.ts#L133)_
+_Defined in [src/client/WebSocketClient.ts:133](https://github.com/bennyn/coinbase-pro-node/blob/7eff64a/src/client/WebSocketClient.ts#L133)_
 
 #### Type declaration:
 
-- **message**: _string_
-
-- **reason**: _string_
-
-- **type**: _[ERROR](../enums/_client_websocketclient_.websocketresponsetype.md#error)_
+| Name      | Type                                                                      |
+| --------- | ------------------------------------------------------------------------- |
+| `message` | string                                                                    |
+| `reason`  | string                                                                    |
+| `type`    | [ERROR](../enums/_client_websocketclient_.websocketresponsetype.md#error) |
 
 ---
 
 ### WebSocketLastMatchMessage
 
-Ƭ **WebSocketLastMatchMessage**: _Omit‹[WebSocketMatchMessage](_client_websocketclient_.md#websocketmatchmessage), "type"› & object_
+Ƭ **WebSocketLastMatchMessage**: Omit\<[WebSocketMatchMessage](_client_websocketclient_.md#websocketmatchmessage), \"type\"> & { type: [LAST_MATCH](../enums/_client_websocketclient_.websocketresponsetype.md#last_match) }
 
-_Defined in [src/client/WebSocketClient.ts:186](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/client/WebSocketClient.ts#L186)_
+_Defined in [src/client/WebSocketClient.ts:186](https://github.com/bennyn/coinbase-pro-node/blob/7eff64a/src/client/WebSocketClient.ts#L186)_
 
 ---
 
 ### WebSocketMatchMessage
 
-Ƭ **WebSocketMatchMessage**: _object_
+Ƭ **WebSocketMatchMessage**: { maker*order_id: UUID_V4 ; price: string ; product_id: string ; sequence: number ; side: OrderSide ; size: string ; taker_order_id: UUID_V4 ; time: ISO_8601_MS_UTC ; trade_id: number ; type: [FULL\_MATCH](../enums/\_client_websocketclient*.websocketresponsetype.md#full_match) }
 
-_Defined in [src/client/WebSocketClient.ts:139](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/client/WebSocketClient.ts#L139)_
+_Defined in [src/client/WebSocketClient.ts:139](https://github.com/bennyn/coinbase-pro-node/blob/7eff64a/src/client/WebSocketClient.ts#L139)_
 
 #### Type declaration:
 
-- **maker_order_id**: _UUID_V4_
-
-- **price**: _string_
-
-- **product_id**: _string_
-
-- **sequence**: _number_
-
-- **side**: _OrderSide_
-
-- **size**: _string_
-
-- **taker_order_id**: _UUID_V4_
-
-- **time**: _ISO_8601_MS_UTC_
-
-- **trade_id**: _number_
-
-- **type**: _[FULL_MATCH](../enums/_client_websocketclient_.websocketresponsetype.md#full_match)_
+| Name             | Type                                                                                |
+| ---------------- | ----------------------------------------------------------------------------------- |
+| `maker_order_id` | UUID_V4                                                                             |
+| `price`          | string                                                                              |
+| `product_id`     | string                                                                              |
+| `sequence`       | number                                                                              |
+| `side`           | OrderSide                                                                           |
+| `size`           | string                                                                              |
+| `taker_order_id` | UUID_V4                                                                             |
+| `time`           | ISO_8601_MS_UTC                                                                     |
+| `trade_id`       | number                                                                              |
+| `type`           | [FULL_MATCH](../enums/_client_websocketclient_.websocketresponsetype.md#full_match) |
 
 ---
 
 ### WebSocketResponse
 
-Ƭ **WebSocketResponse**: _object & WebSocketMessage_
+Ƭ **WebSocketResponse**: { type: [WebSocketResponseType](../enums/_client_websocketclient_.websocketresponsetype.md) } & WebSocketMessage
 
-_Defined in [src/client/WebSocketClient.ts:123](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/client/WebSocketClient.ts#L123)_
+_Defined in [src/client/WebSocketClient.ts:123](https://github.com/bennyn/coinbase-pro-node/blob/7eff64a/src/client/WebSocketClient.ts#L123)_
 
 ---
 
 ### WebSocketStatusMessage
 
-Ƭ **WebSocketStatusMessage**: _object_
+Ƭ **WebSocketStatusMessage**: { currencies: { convertible*to: string[] ; details: [CurrencyDetail](../interfaces/\_currency_currencyapi*.currencydetail.md) ; funding*account_id: string ; id: string ; max_precision: string ; min_size: string ; name: string ; status: \"online\" ; status_message?: undefined \| string }[] ; products: [Product](../interfaces/\_product_productapi*.product.md) & { type: \"spot\" }[] ; type: [STATUS](../enums/_client_websocketclient_.websocketresponsetype.md#status) }
 
-_Defined in [src/client/WebSocketClient.ts:152](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/client/WebSocketClient.ts#L152)_
+_Defined in [src/client/WebSocketClient.ts:152](https://github.com/bennyn/coinbase-pro-node/blob/7eff64a/src/client/WebSocketClient.ts#L152)_
 
 #### Type declaration:
 
-- **currencies**: _object[]_
-
-- **products**: _[Product](../interfaces/_product_productapi_.product.md) & object[]_
-
-- **type**: _[STATUS](../enums/_client_websocketclient_.websocketresponsetype.md#status)_
+| Name | Type |
+| --- | --- |
+| `currencies` | { convertible*to: string[] ; details: [CurrencyDetail](../interfaces/\_currency_currencyapi*.currencydetail.md) ; funding_account_id: string ; id: string ; max_precision: string ; min_size: string ; name: string ; status: \"online\" ; status_message?: undefined \| string }[] |
+| `products` | [Product](../interfaces/_product_productapi_.product.md) & { type: \"spot\" }[] |
+| `type` | [STATUS](../enums/_client_websocketclient_.websocketresponsetype.md#status) |
 
 ---
 
 ### WebSocketSubscription
 
-Ƭ **WebSocketSubscription**: _object_
+Ƭ **WebSocketSubscription**: { channels: [WebSocketChannel](../interfaces/_client_websocketclient_.websocketchannel.md)[] ; type: [SUBSCRIPTIONS](../enums/_client_websocketclient_.websocketresponsetype.md#subscriptions) }
 
-_Defined in [src/client/WebSocketClient.ts:188](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/client/WebSocketClient.ts#L188)_
+_Defined in [src/client/WebSocketClient.ts:188](https://github.com/bennyn/coinbase-pro-node/blob/7eff64a/src/client/WebSocketClient.ts#L188)_
 
 #### Type declaration:
 
-- **channels**: _[WebSocketChannel](../interfaces/_client_websocketclient_.websocketchannel.md)[]_
-
-- **type**: _[SUBSCRIPTIONS](../enums/_client_websocketclient_.websocketresponsetype.md#subscriptions)_
+| Name       | Type                                                                                      |
+| ---------- | ----------------------------------------------------------------------------------------- |
+| `channels` | [WebSocketChannel](../interfaces/_client_websocketclient_.websocketchannel.md)[]          |
+| `type`     | [SUBSCRIPTIONS](../enums/_client_websocketclient_.websocketresponsetype.md#subscriptions) |
 
 ---
 
 ### WebSocketTickerMessage
 
-Ƭ **WebSocketTickerMessage**: _object_
+Ƭ **WebSocketTickerMessage**: { best*ask: string ; best_bid: string ; high_24h: string ; last_size: string ; low_24h: string ; open_24h: string ; price: string ; product_id: string ; sequence: number ; side: OrderSide ; time: ISO_8601_MS_UTC ; trade_id: number ; type: [TICKER](../enums/\_client_websocketclient*.websocketresponsetype.md#ticker) ; volume_24h: string ; volume_30d: string }
 
-_Defined in [src/client/WebSocketClient.ts:168](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/client/WebSocketClient.ts#L168)_
+_Defined in [src/client/WebSocketClient.ts:168](https://github.com/bennyn/coinbase-pro-node/blob/7eff64a/src/client/WebSocketClient.ts#L168)_
 
 #### Type declaration:
 
-- **best_ask**: _string_
-
-- **best_bid**: _string_
-
-- **high_24h**: _string_
-
-- **last_size**: _string_
-
-- **low_24h**: _string_
-
-- **open_24h**: _string_
-
-- **price**: _string_
-
-- **product_id**: _string_
-
-- **sequence**: _number_
-
-- **side**: _OrderSide_
-
-- **time**: _ISO_8601_MS_UTC_
-
-- **trade_id**: _number_
-
-- **type**: _[TICKER](../enums/_client_websocketclient_.websocketresponsetype.md#ticker)_
-
-- **volume_24h**: _string_
-
-- **volume_30d**: _string_
+| Name         | Type                                                                        |
+| ------------ | --------------------------------------------------------------------------- |
+| `best_ask`   | string                                                                      |
+| `best_bid`   | string                                                                      |
+| `high_24h`   | string                                                                      |
+| `last_size`  | string                                                                      |
+| `low_24h`    | string                                                                      |
+| `open_24h`   | string                                                                      |
+| `price`      | string                                                                      |
+| `product_id` | string                                                                      |
+| `sequence`   | number                                                                      |
+| `side`       | OrderSide                                                                   |
+| `time`       | ISO_8601_MS_UTC                                                             |
+| `trade_id`   | number                                                                      |
+| `type`       | [TICKER](../enums/_client_websocketclient_.websocketresponsetype.md#ticker) |
+| `volume_24h` | string                                                                      |
+| `volume_30d` | string                                                                      |

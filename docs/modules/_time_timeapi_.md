@@ -1,4 +1,6 @@
-[coinbase-pro-node](../README.md) › [Globals](../globals.md) › ["time/TimeAPI"](_time_timeapi_.md)
+**[coinbase-pro-node](../README.md)**
+
+> [Globals](../globals.md) / "time/TimeAPI"
 
 # Module: "time/TimeAPI"
 

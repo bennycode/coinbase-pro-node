@@ -1,4 +1,6 @@
-[coinbase-pro-node](../README.md) › [Globals](../globals.md) › ["client/WebSocketClient"](../modules/_client_websocketclient_.md) › [WebSocketRequestType](_client_websocketclient_.websocketrequesttype.md)
+**[coinbase-pro-node](../README.md)**
+
+> [Globals](../globals.md) / ["client/WebSocketClient"](../modules/_client_websocketclient_.md) / WebSocketRequestType
 
 # Enumeration: WebSocketRequestType
 
@@ -15,7 +17,7 @@
 
 • **SUBSCRIBE**: = "subscribe"
 
-_Defined in [src/client/WebSocketClient.ts:35](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/client/WebSocketClient.ts#L35)_
+_Defined in [src/client/WebSocketClient.ts:35](https://github.com/bennyn/coinbase-pro-node/blob/7eff64a/src/client/WebSocketClient.ts#L35)_
 
 ---
 
@@ -23,4 +25,4 @@ _Defined in [src/client/WebSocketClient.ts:35](https://github.com/bennyn/coinbas
 
 • **UNSUBSCRIBE**: = "unsubscribe"
 
-_Defined in [src/client/WebSocketClient.ts:36](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/client/WebSocketClient.ts#L36)_
+_Defined in [src/client/WebSocketClient.ts:36](https://github.com/bennyn/coinbase-pro-node/blob/7eff64a/src/client/WebSocketClient.ts#L36)_

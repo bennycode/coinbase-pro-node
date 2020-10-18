@@ -1,4 +1,6 @@
-[coinbase-pro-node](../README.md) › [Globals](../globals.md) › ["product/ProductAPI"](../modules/_product_productapi_.md) › [OrderBookLevel2](_product_productapi_.orderbooklevel2.md)
+**[coinbase-pro-node](../README.md)**
+
+> [Globals](../globals.md) / ["product/ProductAPI"](../modules/_product_productapi_.md) / OrderBookLevel2
 
 # Interface: OrderBookLevel2
 
@@ -20,22 +22,22 @@ Top 50 bids and asks (aggregated) BUT if there are not 50 then less bids and ask
 
 ### asks
 
-• **asks**: _AggregatedOrder[]_
+• **asks**: AggregatedOrder[]
 
-_Defined in [src/product/ProductAPI.ts:118](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/product/ProductAPI.ts#L118)_
+_Defined in [src/product/ProductAPI.ts:118](https://github.com/bennyn/coinbase-pro-node/blob/7eff64a/src/product/ProductAPI.ts#L118)_
 
 ---
 
 ### bids
 
-• **bids**: _AggregatedOrder[]_
+• **bids**: AggregatedOrder[]
 
-_Defined in [src/product/ProductAPI.ts:119](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/product/ProductAPI.ts#L119)_
+_Defined in [src/product/ProductAPI.ts:119](https://github.com/bennyn/coinbase-pro-node/blob/7eff64a/src/product/ProductAPI.ts#L119)_
 
 ---
 
 ### sequence
 
-• **sequence**: _SequenceNumber_
+• **sequence**: SequenceNumber
 
-_Defined in [src/product/ProductAPI.ts:120](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/product/ProductAPI.ts#L120)_
+_Defined in [src/product/ProductAPI.ts:120](https://github.com/bennyn/coinbase-pro-node/blob/7eff64a/src/product/ProductAPI.ts#L120)_

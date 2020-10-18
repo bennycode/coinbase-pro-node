@@ -1,4 +1,6 @@
-[coinbase-pro-node](../README.md) › [Globals](../globals.md) › ["auth/RequestSigner"](../modules/_auth_requestsigner_.md) › [RequestSetup](_auth_requestsigner_.requestsetup.md)
+**[coinbase-pro-node](../README.md)**
+
+> [Globals](../globals.md) / ["auth/RequestSigner"](../modules/_auth_requestsigner_.md) / RequestSetup
 
 # Interface: RequestSetup
 
@@ -18,22 +20,22 @@
 
 ### httpMethod
 
-• **httpMethod**: _string_
+• **httpMethod**: string
 
-_Defined in [src/auth/RequestSigner.ts:5](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/auth/RequestSigner.ts#L5)_
+_Defined in [src/auth/RequestSigner.ts:5](https://github.com/bennyn/coinbase-pro-node/blob/7eff64a/src/auth/RequestSigner.ts#L5)_
 
 ---
 
 ### payload
 
-• **payload**: _string_
+• **payload**: string
 
-_Defined in [src/auth/RequestSigner.ts:6](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/auth/RequestSigner.ts#L6)_
+_Defined in [src/auth/RequestSigner.ts:6](https://github.com/bennyn/coinbase-pro-node/blob/7eff64a/src/auth/RequestSigner.ts#L6)_
 
 ---
 
 ### requestPath
 
-• **requestPath**: _string_
+• **requestPath**: string
 
-_Defined in [src/auth/RequestSigner.ts:7](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/auth/RequestSigner.ts#L7)_
+_Defined in [src/auth/RequestSigner.ts:7](https://github.com/bennyn/coinbase-pro-node/blob/7eff64a/src/auth/RequestSigner.ts#L7)_

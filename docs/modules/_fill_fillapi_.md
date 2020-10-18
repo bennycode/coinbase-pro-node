@@ -1,4 +1,6 @@
-[coinbase-pro-node](../README.md) › [Globals](../globals.md) › ["fill/FillAPI"](_fill_fillapi_.md)
+**[coinbase-pro-node](../README.md)**
+
+> [Globals](../globals.md) / "fill/FillAPI"
 
 # Module: "fill/FillAPI"
 

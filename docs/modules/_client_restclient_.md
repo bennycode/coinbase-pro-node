@@ -1,4 +1,6 @@
-[coinbase-pro-node](../README.md) › [Globals](../globals.md) › ["client/RESTClient"](_client_restclient_.md)
+**[coinbase-pro-node](../README.md)**
+
+> [Globals](../globals.md) / "client/RESTClient"
 
 # Module: "client/RESTClient"
 

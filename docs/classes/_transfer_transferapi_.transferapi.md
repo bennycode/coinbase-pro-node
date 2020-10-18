@@ -1,4 +1,6 @@
-[coinbase-pro-node](../README.md) › [Globals](../globals.md) › ["transfer/TransferAPI"](../modules/_transfer_transferapi_.md) › [TransferAPI](_transfer_transferapi_.transferapi.md)
+**[coinbase-pro-node](../README.md)**
+
+> [Globals](../globals.md) / ["transfer/TransferAPI"](../modules/_transfer_transferapi_.md) / TransferAPI
 
 # Class: TransferAPI
 
@@ -19,31 +21,31 @@
 
 ### Object literals
 
-- [URL](_transfer_transferapi_.transferapi.md#static-readonly-url)
+- [URL](_transfer_transferapi_.transferapi.md#url)
 
 ## Constructors
 
 ### constructor
 
-\+ **new TransferAPI**(`apiClient`: AxiosInstance): _[TransferAPI](_transfer_transferapi_.transferapi.md)_
+\+ **new TransferAPI**(`apiClient`: AxiosInstance): [TransferAPI](_transfer_transferapi_.transferapi.md)
 
-_Defined in [src/transfer/TransferAPI.ts:37](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/transfer/TransferAPI.ts#L37)_
+_Defined in [src/transfer/TransferAPI.ts:37](https://github.com/bennyn/coinbase-pro-node/blob/7eff64a/src/transfer/TransferAPI.ts#L37)_
 
-**Parameters:**
+#### Parameters:
 
 | Name        | Type          |
 | ----------- | ------------- |
 | `apiClient` | AxiosInstance |
 
-**Returns:** _[TransferAPI](_transfer_transferapi_.transferapi.md)_
+**Returns:** [TransferAPI](_transfer_transferapi_.transferapi.md)
 
 ## Methods
 
 ### getTransfer
 
-▸ **getTransfer**(`transferId`: string): _Promise‹[TransferInformation](../interfaces/_transfer_transferapi_.transferinformation.md)›_
+▸ **getTransfer**(`transferId`: string): Promise\<[TransferInformation](../interfaces/_transfer_transferapi_.transferinformation.md)>
 
-_Defined in [src/transfer/TransferAPI.ts:81](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/transfer/TransferAPI.ts#L81)_
+_Defined in [src/transfer/TransferAPI.ts:81](https://github.com/bennyn/coinbase-pro-node/blob/7eff64a/src/transfer/TransferAPI.ts#L81)_
 
 Get information on a single deposit/withdrawal.
 
@@ -51,21 +53,21 @@ Get information on a single deposit/withdrawal.
 
 **`see`** https://docs.pro.coinbase.com/#single-withdrawal
 
-**Parameters:**
+#### Parameters:
 
 | Name         | Type   | Description                  |
 | ------------ | ------ | ---------------------------- |
 | `transferId` | string | id of the requested resource |
 
-**Returns:** _Promise‹[TransferInformation](../interfaces/_transfer_transferapi_.transferinformation.md)›_
+**Returns:** Promise\<[TransferInformation](../interfaces/_transfer_transferapi_.transferinformation.md)>
 
 ---
 
 ### getTransfers
 
-▸ **getTransfers**(`transferType`: [TransferType](../enums/_transfer_transferapi_.transfertype.md), `profileId?`: undefined | string, `pagination?`: Pagination): _Promise‹PaginatedData‹[TransferInformation](../interfaces/_transfer_transferapi_.transferinformation.md)››_
+▸ **getTransfers**(`transferType`: [TransferType](../enums/_transfer_transferapi_.transfertype.md), `profileId?`: undefined \| string, `pagination?`: Pagination): Promise\<PaginatedData\<[TransferInformation](../interfaces/_transfer_transferapi_.transferinformation.md)>>
 
-_Defined in [src/transfer/TransferAPI.ts:48](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/transfer/TransferAPI.ts#L48)_
+_Defined in [src/transfer/TransferAPI.ts:48](https://github.com/bennyn/coinbase-pro-node/blob/7eff64a/src/transfer/TransferAPI.ts#L48)_
 
 Get a list of deposits/withdrawals from the profile of the API key, in descending order by created time.
 
@@ -73,26 +75,26 @@ Get a list of deposits/withdrawals from the profile of the API key, in descendin
 
 **`see`** https://docs.pro.coinbase.com/#list-withdrawals
 
-**Parameters:**
+#### Parameters:
 
 | Name           | Type                                                            | Description      |
 | -------------- | --------------------------------------------------------------- | ---------------- |
 | `transferType` | [TransferType](../enums/_transfer_transferapi_.transfertype.md) | -                |
-| `profileId?`   | undefined &#124; string                                         | -                |
+| `profileId?`   | undefined \| string                                             | -                |
 | `pagination?`  | Pagination                                                      | Pagination field |
 
-**Returns:** _Promise‹PaginatedData‹[TransferInformation](../interfaces/_transfer_transferapi_.transferinformation.md)››_
+**Returns:** Promise\<PaginatedData\<[TransferInformation](../interfaces/_transfer_transferapi_.transferinformation.md)>>
 
 ## Object literals
 
-### `Static` `Readonly` URL
+### URL
 
-### ▪ **URL**: _object_
+▪ `Static` `Readonly` **URL**: object
 
-_Defined in [src/transfer/TransferAPI.ts:35](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/transfer/TransferAPI.ts#L35)_
+_Defined in [src/transfer/TransferAPI.ts:35](https://github.com/bennyn/coinbase-pro-node/blob/7eff64a/src/transfer/TransferAPI.ts#L35)_
 
-### TRANSFERS
+#### Properties:
 
-• **TRANSFERS**: _string_ = `/transfers`
-
-_Defined in [src/transfer/TransferAPI.ts:36](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/transfer/TransferAPI.ts#L36)_
+| Name        | Type   | Value          |
+| ----------- | ------ | -------------- |
+| `TRANSFERS` | string | \`/transfers\` |

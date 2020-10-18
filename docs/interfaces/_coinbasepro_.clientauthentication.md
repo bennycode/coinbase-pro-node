@@ -1,4 +1,6 @@
-[coinbase-pro-node](../README.md) › [Globals](../globals.md) › ["CoinbasePro"](../modules/_coinbasepro_.md) › [ClientAuthentication](_coinbasepro_.clientauthentication.md)
+**[coinbase-pro-node](../README.md)**
+
+> [Globals](../globals.md) / ["CoinbasePro"](../modules/_coinbasepro_.md) / ClientAuthentication
 
 # Interface: ClientAuthentication
 
@@ -19,30 +21,30 @@
 
 ### apiKey
 
-• **apiKey**: _string_
+• **apiKey**: string
 
-_Defined in [src/CoinbasePro.ts:6](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/CoinbasePro.ts#L6)_
+_Defined in [src/CoinbasePro.ts:6](https://github.com/bennyn/coinbase-pro-node/blob/7eff64a/src/CoinbasePro.ts#L6)_
 
 ---
 
 ### apiSecret
 
-• **apiSecret**: _string_
+• **apiSecret**: string
 
-_Defined in [src/CoinbasePro.ts:7](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/CoinbasePro.ts#L7)_
+_Defined in [src/CoinbasePro.ts:7](https://github.com/bennyn/coinbase-pro-node/blob/7eff64a/src/CoinbasePro.ts#L7)_
 
 ---
 
 ### passphrase
 
-• **passphrase**: _string_
+• **passphrase**: string
 
-_Defined in [src/CoinbasePro.ts:8](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/CoinbasePro.ts#L8)_
+_Defined in [src/CoinbasePro.ts:8](https://github.com/bennyn/coinbase-pro-node/blob/7eff64a/src/CoinbasePro.ts#L8)_
 
 ---
 
 ### useSandbox
 
-• **useSandbox**: _boolean_
+• **useSandbox**: boolean
 
-_Defined in [src/CoinbasePro.ts:9](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/CoinbasePro.ts#L9)_
+_Defined in [src/CoinbasePro.ts:9](https://github.com/bennyn/coinbase-pro-node/blob/7eff64a/src/CoinbasePro.ts#L9)_

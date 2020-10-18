@@ -1,4 +1,6 @@
-[coinbase-pro-node](../README.md) › [Globals](../globals.md) › ["product/ProductAPI"](../modules/_product_productapi_.md) › [CandleGranularity](_product_productapi_.candlegranularity.md)
+**[coinbase-pro-node](../README.md)**
+
+> [Globals](../globals.md) / ["product/ProductAPI"](../modules/_product_productapi_.md) / CandleGranularity
 
 # Enumeration: CandleGranularity
 
@@ -21,7 +23,7 @@ Accepted granularity in seconds to group historic rates.
 
 • **FIFTEEN_MINUTES**: = 900
 
-_Defined in [src/product/ProductAPI.ts:64](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/product/ProductAPI.ts#L64)_
+_Defined in [src/product/ProductAPI.ts:64](https://github.com/bennyn/coinbase-pro-node/blob/7eff64a/src/product/ProductAPI.ts#L64)_
 
 ---
 
@@ -29,7 +31,7 @@ _Defined in [src/product/ProductAPI.ts:64](https://github.com/bennyn/coinbase-pr
 
 • **FIVE_MINUTES**: = 300
 
-_Defined in [src/product/ProductAPI.ts:63](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/product/ProductAPI.ts#L63)_
+_Defined in [src/product/ProductAPI.ts:63](https://github.com/bennyn/coinbase-pro-node/blob/7eff64a/src/product/ProductAPI.ts#L63)_
 
 ---
 
@@ -37,7 +39,7 @@ _Defined in [src/product/ProductAPI.ts:63](https://github.com/bennyn/coinbase-pr
 
 • **ONE_DAY**: = 86400
 
-_Defined in [src/product/ProductAPI.ts:67](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/product/ProductAPI.ts#L67)_
+_Defined in [src/product/ProductAPI.ts:67](https://github.com/bennyn/coinbase-pro-node/blob/7eff64a/src/product/ProductAPI.ts#L67)_
 
 ---
 
@@ -45,7 +47,7 @@ _Defined in [src/product/ProductAPI.ts:67](https://github.com/bennyn/coinbase-pr
 
 • **ONE_HOUR**: = 3600
 
-_Defined in [src/product/ProductAPI.ts:65](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/product/ProductAPI.ts#L65)_
+_Defined in [src/product/ProductAPI.ts:65](https://github.com/bennyn/coinbase-pro-node/blob/7eff64a/src/product/ProductAPI.ts#L65)_
 
 ---
 
@@ -53,7 +55,7 @@ _Defined in [src/product/ProductAPI.ts:65](https://github.com/bennyn/coinbase-pr
 
 • **ONE_MINUTE**: = 60
 
-_Defined in [src/product/ProductAPI.ts:62](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/product/ProductAPI.ts#L62)_
+_Defined in [src/product/ProductAPI.ts:62](https://github.com/bennyn/coinbase-pro-node/blob/7eff64a/src/product/ProductAPI.ts#L62)_
 
 ---
 
@@ -61,4 +63,4 @@ _Defined in [src/product/ProductAPI.ts:62](https://github.com/bennyn/coinbase-pr
 
 • **SIX_HOURS**: = 21600
 
-_Defined in [src/product/ProductAPI.ts:66](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/product/ProductAPI.ts#L66)_
+_Defined in [src/product/ProductAPI.ts:66](https://github.com/bennyn/coinbase-pro-node/blob/7eff64a/src/product/ProductAPI.ts#L66)_

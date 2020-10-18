@@ -1,4 +1,6 @@
-[coinbase-pro-node](../README.md) › [Globals](../globals.md) › ["withdraw/WithdrawAPI"](../modules/_withdraw_withdrawapi_.md) › [CryptoWithdrawal](_withdraw_withdrawapi_.cryptowithdrawal.md)
+**[coinbase-pro-node](../README.md)**
+
+> [Globals](../globals.md) / ["withdraw/WithdrawAPI"](../modules/_withdraw_withdrawapi_.md) / CryptoWithdrawal
 
 # Interface: CryptoWithdrawal
 
@@ -18,22 +20,22 @@
 
 ### amount
 
-• **amount**: _number_
+• **amount**: number
 
-_Defined in [src/withdraw/WithdrawAPI.ts:4](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/withdraw/WithdrawAPI.ts#L4)_
+_Defined in [src/withdraw/WithdrawAPI.ts:4](https://github.com/bennyn/coinbase-pro-node/blob/7eff64a/src/withdraw/WithdrawAPI.ts#L4)_
 
 ---
 
 ### currency
 
-• **currency**: _string_
+• **currency**: string
 
-_Defined in [src/withdraw/WithdrawAPI.ts:5](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/withdraw/WithdrawAPI.ts#L5)_
+_Defined in [src/withdraw/WithdrawAPI.ts:5](https://github.com/bennyn/coinbase-pro-node/blob/7eff64a/src/withdraw/WithdrawAPI.ts#L5)_
 
 ---
 
 ### id
 
-• **id**: _string_
+• **id**: string
 
-_Defined in [src/withdraw/WithdrawAPI.ts:6](https://github.com/bennyn/coinbase-pro-node/blob/ea7299d/src/withdraw/WithdrawAPI.ts#L6)_
+_Defined in [src/withdraw/WithdrawAPI.ts:6](https://github.com/bennyn/coinbase-pro-node/blob/7eff64a/src/withdraw/WithdrawAPI.ts#L6)_

@@ -1,6 +1,6 @@
-[coinbase-pro-node](README.md) › [Globals](globals.md)
+**[coinbase-pro-node](README.md)**
 
-# coinbase-pro-node
+> [Globals](globals.md)
 
 # Coinbase Pro API
 
