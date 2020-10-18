@@ -1,3 +1,14 @@
+### 2.12.0 (2020-10-18)
+
+##### Chores
+
+- yarn upgrade --latest ([f25ba578](https://github.com/bennyn/coinbase-pro-node/commit/f25ba57804becc145beac34a18f7f3393475bd4d))
+
+##### New Features
+
+- Support product ids in order cancellations ([02fd7634](https://github.com/bennyn/coinbase-pro-node/commit/02fd76342f48cd29a3eaaf6d5f7eedd0ae2b4f8c))
+- Add ability to cancel a single order using the order id ([#283](https://github.com/bennyn/coinbase-pro-node/pull/283)) ([98eb86eb](https://github.com/bennyn/coinbase-pro-node/commit/98eb86eb70110135247b626ec4d63fe44d486924))
+
 ### 2.11.0 (2020-10-12)
 
 ##### Chores
