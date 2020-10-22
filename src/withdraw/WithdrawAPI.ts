@@ -15,10 +15,15 @@ interface CryptoWithdrawalRequest {
   no_destination_tag?: boolean;
 }
 
+export interface WithdrawalFeeEstimate {
+  fee: string;
+}
+
 export class WithdrawAPI {
   static readonly URL = {
     WITHDRAWALS: {
       CRYPTO: '/withdrawals/crypto',
+      FEE_ESTIMATE: '/withdrawals/fee-estimate',
     },
   };
 
@@ -55,6 +60,21 @@ export class WithdrawAPI {
       withdrawal.no_destination_tag = true;
     }
     const response = await this.apiClient.post(resource, withdrawal);
+    return response.data;
+  }
+
+  /**
+   * Gets the network fee estimate when sending to the given address.
+   *
+   * @param currency - The type of currency
+   * @param cryptoAddress - A crypto address of the recipient
+   * @see https://docs.pro.coinbase.com/#fee-estimate
+   */
+  async getFeeEstimate(currency: string, cryptoAddress: string): Promise<WithdrawalFeeEstimate> {
+    const resource = WithdrawAPI.URL.WITHDRAWALS.FEE_ESTIMATE;
+    const response = await this.apiClient.get<WithdrawalFeeEstimate>(resource, {
+      params: {crypto_address: cryptoAddress, currency},
+    });
     return response.data;
   }
 }

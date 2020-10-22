@@ -1,7 +1,10 @@
 import nock from 'nock';
-import {WithdrawAPI, CryptoWithdrawal} from './WithdrawAPI';
+import {WithdrawAPI, CryptoWithdrawal, WithdrawalFeeEstimate} from './WithdrawAPI';
 
 describe('WithdrawAPI', () => {
+  const currency = 'BTC';
+  const cryptoAddress = '1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa';
+  const expectedFeeEstimate: WithdrawalFeeEstimate = {fee: '.01'};
   const withdrawalId = 'fake-withdrawal-id-abcd-01234';
 
   afterAll(() => nock.cleanAll());
@@ -18,13 +21,14 @@ describe('WithdrawAPI', () => {
           id: withdrawalId,
         };
         return [200, JSON.stringify(response)];
-      });
+      })
+      .get(WithdrawAPI.URL.WITHDRAWALS.FEE_ESTIMATE)
+      .query({crypto_address: cryptoAddress, currency})
+      .reply(200, JSON.stringify(expectedFeeEstimate));
   });
 
   describe('postCryptoWithdrawal', () => {
     const amount = 1.23;
-    const currency = 'BTC';
-    const cryptoAddress = '1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa';
     const destinationTag = 'satoshi-nakamoto';
 
     it('creates a new withdrawal to crypto address', async () => {
@@ -40,6 +44,13 @@ describe('WithdrawAPI', () => {
         destinationTag
       );
       expect(withdrawal).toEqual({amount, currency, id: withdrawalId});
+    });
+  });
+
+  describe('getFeeEstimate', () => {
+    it('gets a fee estimate', async () => {
+      const estimate = await global.client.rest.withdraw.getFeeEstimate(currency, cryptoAddress);
+      expect(estimate).toEqual(expectedFeeEstimate);
     });
   });
 });
