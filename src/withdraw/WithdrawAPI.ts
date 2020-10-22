@@ -15,7 +15,7 @@ interface CryptoWithdrawalRequest {
   no_destination_tag?: boolean;
 }
 
-interface FeeEstimate {
+export interface WithdrawalFeeEstimate {
   fee: string;
 }
 
@@ -70,9 +70,9 @@ export class WithdrawAPI {
    * @param cryptoAddress - A crypto address of the recipient
    * @see https://docs.pro.coinbase.com//#fee-estimate
    */
-  async getFeeEstimate(currency: string, cryptoAddress: string): Promise<FeeEstimate> {
+  async getFeeEstimate(currency: string, cryptoAddress: string): Promise<WithdrawalFeeEstimate> {
     const resource = WithdrawAPI.URL.WITHDRAWALS.FEE_ESTIMATE;
-    const response = await this.apiClient.get<FeeEstimate>(resource, {
+    const response = await this.apiClient.get<WithdrawalFeeEstimate>(resource, {
       params: {crypto_address: cryptoAddress, currency},
     });
     return response.data;
