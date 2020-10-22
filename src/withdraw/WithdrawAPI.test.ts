@@ -23,7 +23,7 @@ describe('WithdrawAPI', () => {
         return [200, JSON.stringify(response)];
       })
       .get(WithdrawAPI.URL.WITHDRAWALS.FEE_ESTIMATE)
-      .query({currency, crypto_address: cryptoAddress})
+      .query({crypto_address: cryptoAddress, currency})
       .reply(200, JSON.stringify(expectedFeeEstimate));
   });
 
