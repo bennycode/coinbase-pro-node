@@ -73,7 +73,7 @@ export class WithdrawAPI {
   async getFeeEstimate(currency: string, cryptoAddress: string): Promise<FeeEstimate> {
     const resource = WithdrawAPI.URL.WITHDRAWALS.FEE_ESTIMATE;
     const response = await this.apiClient.get<FeeEstimate>(resource, {
-      params: {currency, crypto_address: cryptoAddress},
+      params: {crypto_address: cryptoAddress, currency},
     });
     return response.data;
   }
