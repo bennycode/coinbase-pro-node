@@ -6,7 +6,7 @@ updates:
       interval: weekly
     pull-request-branch-name:
       separator: '-'
-    target-branch: master
+    target-branch: main
     commit-message:
       prefix: chore
       include: scope
