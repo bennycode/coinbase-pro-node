@@ -16,6 +16,7 @@
 
 ### Methods
 
+- [getFeeEstimate](_withdraw_withdrawapi_.withdrawapi.md#getfeeestimate)
 - [postCryptoWithdrawal](_withdraw_withdrawapi_.withdrawapi.md#postcryptowithdrawal)
 
 ### Object literals
@@ -28,7 +29,7 @@
 
 \+ **new WithdrawAPI**(`apiClient`: AxiosInstance): [WithdrawAPI](_withdraw_withdrawapi_.withdrawapi.md)
 
-_Defined in [src/withdraw/WithdrawAPI.ts:23](https://github.com/bennyn/coinbase-pro-node/blob/7eff64a/src/withdraw/WithdrawAPI.ts#L23)_
+_Defined in [src/withdraw/WithdrawAPI.ts:28](https://github.com/bennyn/coinbase-pro-node/blob/26bf4d8/src/withdraw/WithdrawAPI.ts#L28)_
 
 #### Parameters:
 
@@ -40,11 +41,32 @@ _Defined in [src/withdraw/WithdrawAPI.ts:23](https://github.com/bennyn/coinbase-
 
 ## Methods
 
+### getFeeEstimate
+
+▸ **getFeeEstimate**(`currency`: string, `cryptoAddress`: string): Promise\<[WithdrawalFeeEstimate](../interfaces/_withdraw_withdrawapi_.withdrawalfeeestimate.md)>
+
+_Defined in [src/withdraw/WithdrawAPI.ts:73](https://github.com/bennyn/coinbase-pro-node/blob/26bf4d8/src/withdraw/WithdrawAPI.ts#L73)_
+
+Gets the network fee estimate when sending to the given address.
+
+**`see`** https://docs.pro.coinbase.com/#fee-estimate
+
+#### Parameters:
+
+| Name            | Type   | Description                       |
+| --------------- | ------ | --------------------------------- |
+| `currency`      | string | The type of currency              |
+| `cryptoAddress` | string | A crypto address of the recipient |
+
+**Returns:** Promise\<[WithdrawalFeeEstimate](../interfaces/_withdraw_withdrawapi_.withdrawalfeeestimate.md)>
+
+---
+
 ### postCryptoWithdrawal
 
 ▸ **postCryptoWithdrawal**(`amount`: number, `currency`: string, `cryptoAddress`: string, `destinationTag?`: undefined \| string, `addNetworkFeeToTotal?`: undefined \| false \| true): Promise\<[CryptoWithdrawal](../interfaces/_withdraw_withdrawapi_.cryptowithdrawal.md)>
 
-_Defined in [src/withdraw/WithdrawAPI.ts:38](https://github.com/bennyn/coinbase-pro-node/blob/7eff64a/src/withdraw/WithdrawAPI.ts#L38)_
+_Defined in [src/withdraw/WithdrawAPI.ts:43](https://github.com/bennyn/coinbase-pro-node/blob/26bf4d8/src/withdraw/WithdrawAPI.ts#L43)_
 
 Withdraws funds to a crypto address.
 
@@ -68,10 +90,10 @@ Withdraws funds to a crypto address.
 
 ▪ `Static` `Readonly` **URL**: object
 
-_Defined in [src/withdraw/WithdrawAPI.ts:19](https://github.com/bennyn/coinbase-pro-node/blob/7eff64a/src/withdraw/WithdrawAPI.ts#L19)_
+_Defined in [src/withdraw/WithdrawAPI.ts:23](https://github.com/bennyn/coinbase-pro-node/blob/26bf4d8/src/withdraw/WithdrawAPI.ts#L23)_
 
 #### Properties:
 
-| Name          | Type   | Value                                      |
-| ------------- | ------ | ------------------------------------------ |
-| `WITHDRAWALS` | object | { CRYPTO: string = "/withdrawals/crypto" } |
+| Name | Type | Value |
+| --- | --- | --- |
+| `WITHDRAWALS` | object | { CRYPTO: string = "/withdrawals/crypto"; FEE_ESTIMATE: string = "/withdrawals/fee-estimate" } |

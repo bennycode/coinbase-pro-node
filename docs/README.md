@@ -4,7 +4,7 @@
 
 # Coinbase Pro API
 
-![Language Details](https://img.shields.io/github/languages/top/bennyn/coinbase-pro-node) ![Code Coverage](https://img.shields.io/codecov/c/github/bennyn/coinbase-pro-node/master) ![License](https://img.shields.io/npm/l/coinbase-pro-node.svg) ![Package Version](https://img.shields.io/npm/v/coinbase-pro-node.svg) ![Dependency Updates](https://img.shields.io/david/bennyn/coinbase-pro-node.svg)
+![Language Details](https://img.shields.io/github/languages/top/bennyn/coinbase-pro-node) ![Code Coverage](https://img.shields.io/codecov/c/github/bennyn/coinbase-pro-node/main) ![License](https://img.shields.io/npm/l/coinbase-pro-node.svg) ![Package Version](https://img.shields.io/npm/v/coinbase-pro-node.svg) ![Dependency Updates](https://img.shields.io/david/bennyn/coinbase-pro-node.svg)
 
 [Coinbase Pro][1] API for Node.js, written in TypeScript and covered by tests.
 
@@ -17,7 +17,7 @@ The purpose of [coinbase-pro-node][5] is to continue an active **Coinbase Pro AP
 - **Typed.** Source code is 100% TypeScript. No need to install external typings.
 - **Tested.** Code coverage is 100%. No surprises when using "coinbase-pro-node".
 - **Convenient.** Request throttling is built-in. Don't worry about rate limiting.
-- **Comfortable.** More than an API client. You will get extras like [candle watching](https://github.com/bennyn/coinbase-pro-node/blob/master/src/demo/rest-watch-candles.ts).
+- **Comfortable.** More than an API client. You will get extras like [candle watching](https://github.com/bennyn/coinbase-pro-node/blob/main/src/demo/rest-watch-candles.ts).
 - **Maintained.** Automated security updates. No threats from outdated dependencies.
 - **Documented.** Get started with [demo scripts][3] and [generated documentation][4].
 - **Modern.** HTTP client with Promise API. Don't lose yourself in callback hell.
@@ -86,18 +86,18 @@ client.rest.account.listAccounts().then(accounts => {
 
 If you want to listen to WebSocket messages, have a look at these demo scripts:
 
-- [Subscribe to "ticker" channel (real-time price updates)](https://github.com/bennyn/coinbase-pro-node/blob/master/src/demo/websocket-ticker.ts)
-- [Subscribe to authenticated "user" channel](https://github.com/bennyn/coinbase-pro-node/blob/master/src/demo/websocket-user.ts)
+- [Subscribe to "ticker" channel (real-time price updates)](https://github.com/bennyn/coinbase-pro-node/blob/main/src/demo/websocket-ticker.ts)
+- [Subscribe to authenticated "user" channel](https://github.com/bennyn/coinbase-pro-node/blob/main/src/demo/websocket-user.ts)
 
 ### Demos
 
-All [demo scripts][3] are executable from the root directory. If you want to use specific credentials with a demo script, simply add a `.env` file to the root of this package to [modify environment variables](https://github.com/motdotla/dotenv/tree/v8.2.0#usage) used in [init-client.ts](https://github.com/bennyn/coinbase-pro-node/blob/master/src/demo/init-client.ts).
+All [demo scripts][3] are executable from the root directory. If you want to use specific credentials with a demo script, simply add a `.env` file to the root of this package to [modify environment variables](https://github.com/motdotla/dotenv/tree/v8.2.0#usage) used in [init-client.ts](https://github.com/bennyn/coinbase-pro-node/blob/main/src/demo/init-client.ts).
 
 ```bash
 npx ts-node ./src/demo/dump-candles.ts
 ```
 
-**Tip:** There is a [.env.defaults](https://github.com/bennyn/coinbase-pro-node/blob/master/.env.defaults) file which serves as a template. Just remove its `.defaults` extension and enter your credentials to get started. Do not commit this file (or your credentials) to any repository!
+**Tip:** There is a [.env.defaults](https://github.com/bennyn/coinbase-pro-node/blob/main/.env.defaults) file which serves as a template. Just remove its `.defaults` extension and enter your credentials to get started. Do not commit this file (or your credentials) to any repository!
 
 ### Real-world examples
 
@@ -135,7 +135,7 @@ If you like this project, you might also like these related projects:
 
 [1]: https://pro.coinbase.com/
 [2]: https://docs.pro.coinbase.com/
-[3]: https://github.com/bennyn/coinbase-pro-node/tree/master/src/demo
+[3]: https://github.com/bennyn/coinbase-pro-node/tree/main/src/demo
 [4]: https://benny.work/coinbase-pro-node
 [5]: https://www.npmjs.com/package/coinbase-pro-node
 [6]: https://github.com/bennyn/coinbase-pro-node/network/dependents

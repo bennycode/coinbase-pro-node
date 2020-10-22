@@ -28,9 +28,9 @@
 
 ### constructor
 
-\+ **new CoinbasePro**(`auth`: [ClientAuthentication](../interfaces/_coinbasepro_.clientauthentication.md)): [CoinbasePro](_coinbasepro_.coinbasepro.md)
+\+ **new CoinbasePro**(`auth?`: [ClientAuthentication](../interfaces/_coinbasepro_.clientauthentication.md)): [CoinbasePro](_coinbasepro_.coinbasepro.md)
 
-_Defined in [src/CoinbasePro.ts:34](https://github.com/bennyn/coinbase-pro-node/blob/7eff64a/src/CoinbasePro.ts#L34)_
+_Defined in [src/CoinbasePro.ts:34](https://github.com/bennyn/coinbase-pro-node/blob/26bf4d8/src/CoinbasePro.ts#L34)_
 
 #### Parameters:
 
@@ -52,7 +52,7 @@ _Defined in [src/CoinbasePro.ts:34](https://github.com/bennyn/coinbase-pro-node/
 
 • `Readonly` **rest**: [RESTClient](_client_restclient_.restclient.md)
 
-_Defined in [src/CoinbasePro.ts:18](https://github.com/bennyn/coinbase-pro-node/blob/7eff64a/src/CoinbasePro.ts#L18)_
+_Defined in [src/CoinbasePro.ts:18](https://github.com/bennyn/coinbase-pro-node/blob/26bf4d8/src/CoinbasePro.ts#L18)_
 
 ---
 
@@ -60,7 +60,7 @@ _Defined in [src/CoinbasePro.ts:18](https://github.com/bennyn/coinbase-pro-node/
 
 • `Readonly` **url**: [ClientConnection](../interfaces/_coinbasepro_.clientconnection.md)
 
-_Defined in [src/CoinbasePro.ts:19](https://github.com/bennyn/coinbase-pro-node/blob/7eff64a/src/CoinbasePro.ts#L19)_
+_Defined in [src/CoinbasePro.ts:19](https://github.com/bennyn/coinbase-pro-node/blob/26bf4d8/src/CoinbasePro.ts#L19)_
 
 ---
 
@@ -68,7 +68,7 @@ _Defined in [src/CoinbasePro.ts:19](https://github.com/bennyn/coinbase-pro-node/
 
 • `Readonly` **ws**: [WebSocketClient](_client_websocketclient_.websocketclient.md)
 
-_Defined in [src/CoinbasePro.ts:20](https://github.com/bennyn/coinbase-pro-node/blob/7eff64a/src/CoinbasePro.ts#L20)_
+_Defined in [src/CoinbasePro.ts:20](https://github.com/bennyn/coinbase-pro-node/blob/26bf4d8/src/CoinbasePro.ts#L20)_
 
 ## Object literals
 
@@ -76,7 +76,7 @@ _Defined in [src/CoinbasePro.ts:20](https://github.com/bennyn/coinbase-pro-node/
 
 ▪ `Static` `Readonly` **SETUP**: object
 
-_Defined in [src/CoinbasePro.ts:22](https://github.com/bennyn/coinbase-pro-node/blob/7eff64a/src/CoinbasePro.ts#L22)_
+_Defined in [src/CoinbasePro.ts:22](https://github.com/bennyn/coinbase-pro-node/blob/26bf4d8/src/CoinbasePro.ts#L22)_
 
 #### Properties:
 

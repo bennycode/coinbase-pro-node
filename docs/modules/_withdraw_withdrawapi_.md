@@ -13,3 +13,4 @@
 ### Interfaces
 
 - [CryptoWithdrawal](../interfaces/_withdraw_withdrawapi_.cryptowithdrawal.md)
+- [WithdrawalFeeEstimate](../interfaces/_withdraw_withdrawapi_.withdrawalfeeestimate.md)

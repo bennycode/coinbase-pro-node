@@ -1,0 +1,23 @@
+**[coinbase-pro-node](../README.md)**
+
+> [Globals](../globals.md) / ["withdraw/WithdrawAPI"](../modules/_withdraw_withdrawapi_.md) / WithdrawalFeeEstimate
+
+# Interface: WithdrawalFeeEstimate
+
+## Hierarchy
+
+- **WithdrawalFeeEstimate**
+
+## Index
+
+### Properties
+
+- [fee](_withdraw_withdrawapi_.withdrawalfeeestimate.md#fee)
+
+## Properties
+
+### fee
+
+• **fee**: string
+
+_Defined in [src/withdraw/WithdrawAPI.ts:19](https://github.com/bennyn/coinbase-pro-node/blob/26bf4d8/src/withdraw/WithdrawAPI.ts#L19)_

@@ -18,7 +18,7 @@
 
 • **ONE_DAY**: = "day"
 
-_Defined in [src/order/OrderAPI.ts:17](https://github.com/bennyn/coinbase-pro-node/blob/7eff64a/src/order/OrderAPI.ts#L17)_
+_Defined in [src/order/OrderAPI.ts:17](https://github.com/bennyn/coinbase-pro-node/blob/26bf4d8/src/order/OrderAPI.ts#L17)_
 
 ---
 
@@ -26,7 +26,7 @@ _Defined in [src/order/OrderAPI.ts:17](https://github.com/bennyn/coinbase-pro-no
 
 • **ONE_HOUR**: = "hour"
 
-_Defined in [src/order/OrderAPI.ts:18](https://github.com/bennyn/coinbase-pro-node/blob/7eff64a/src/order/OrderAPI.ts#L18)_
+_Defined in [src/order/OrderAPI.ts:18](https://github.com/bennyn/coinbase-pro-node/blob/26bf4d8/src/order/OrderAPI.ts#L18)_
 
 ---
 
@@ -34,4 +34,4 @@ _Defined in [src/order/OrderAPI.ts:18](https://github.com/bennyn/coinbase-pro-no
 
 • **ONE_MINUTE**: = "min"
 
-_Defined in [src/order/OrderAPI.ts:19](https://github.com/bennyn/coinbase-pro-node/blob/7eff64a/src/order/OrderAPI.ts#L19)_
+_Defined in [src/order/OrderAPI.ts:19](https://github.com/bennyn/coinbase-pro-node/blob/26bf4d8/src/order/OrderAPI.ts#L19)_

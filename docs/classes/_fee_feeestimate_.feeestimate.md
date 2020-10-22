@@ -35,7 +35,7 @@
 
 \+ **new FeeEstimate**(`params`: [FeeEstimatePayload](../interfaces/_fee_feeestimate_.feeestimatepayload.md)): [FeeEstimate](_fee_feeestimate_.feeestimate.md)
 
-_Defined in [src/fee/FeeEstimate.ts:37](https://github.com/bennyn/coinbase-pro-node/blob/7eff64a/src/fee/FeeEstimate.ts#L37)_
+_Defined in [src/fee/FeeEstimate.ts:37](https://github.com/bennyn/coinbase-pro-node/blob/26bf4d8/src/fee/FeeEstimate.ts#L37)_
 
 #### Parameters:
 
@@ -51,7 +51,7 @@ _Defined in [src/fee/FeeEstimate.ts:37](https://github.com/bennyn/coinbase-pro-n
 
 • `Readonly` **amount**: Big
 
-_Defined in [src/fee/FeeEstimate.ts:25](https://github.com/bennyn/coinbase-pro-node/blob/7eff64a/src/fee/FeeEstimate.ts#L25)_
+_Defined in [src/fee/FeeEstimate.ts:25](https://github.com/bennyn/coinbase-pro-node/blob/26bf4d8/src/fee/FeeEstimate.ts#L25)_
 
 Amount of base units.
 
@@ -61,7 +61,7 @@ Amount of base units.
 
 • `Readonly` **effectivePricePerUnit**: Big
 
-_Defined in [src/fee/FeeEstimate.ts:27](https://github.com/bennyn/coinbase-pro-node/blob/7eff64a/src/fee/FeeEstimate.ts#L27)_
+_Defined in [src/fee/FeeEstimate.ts:27](https://github.com/bennyn/coinbase-pro-node/blob/26bf4d8/src/fee/FeeEstimate.ts#L27)_
 
 Price per base unit in counter value plus fee (BUY) / minus fee (SELL).
 
@@ -71,7 +71,7 @@ Price per base unit in counter value plus fee (BUY) / minus fee (SELL).
 
 • `Readonly` **effectiveTotal**: Big
 
-_Defined in [src/fee/FeeEstimate.ts:29](https://github.com/bennyn/coinbase-pro-node/blob/7eff64a/src/fee/FeeEstimate.ts#L29)_
+_Defined in [src/fee/FeeEstimate.ts:29](https://github.com/bennyn/coinbase-pro-node/blob/26bf4d8/src/fee/FeeEstimate.ts#L29)_
 
 What needs to be paid plus fee (BUY) / what you will receive minus fee (SELL).
 
@@ -81,7 +81,7 @@ What needs to be paid plus fee (BUY) / what you will receive minus fee (SELL).
 
 • `Readonly` **feeAsset**: string
 
-_Defined in [src/fee/FeeEstimate.ts:31](https://github.com/bennyn/coinbase-pro-node/blob/7eff64a/src/fee/FeeEstimate.ts#L31)_
+_Defined in [src/fee/FeeEstimate.ts:31](https://github.com/bennyn/coinbase-pro-node/blob/26bf4d8/src/fee/FeeEstimate.ts#L31)_
 
 Product with which the fees are paid.
 
@@ -91,7 +91,7 @@ Product with which the fees are paid.
 
 • `Readonly` **pricePerUnit**: Big
 
-_Defined in [src/fee/FeeEstimate.ts:33](https://github.com/bennyn/coinbase-pro-node/blob/7eff64a/src/fee/FeeEstimate.ts#L33)_
+_Defined in [src/fee/FeeEstimate.ts:33](https://github.com/bennyn/coinbase-pro-node/blob/26bf4d8/src/fee/FeeEstimate.ts#L33)_
 
 Price per base unit in counter value.
 
@@ -101,7 +101,7 @@ Price per base unit in counter value.
 
 • `Readonly` **total**: Big
 
-_Defined in [src/fee/FeeEstimate.ts:37](https://github.com/bennyn/coinbase-pro-node/blob/7eff64a/src/fee/FeeEstimate.ts#L37)_
+_Defined in [src/fee/FeeEstimate.ts:37](https://github.com/bennyn/coinbase-pro-node/blob/26bf4d8/src/fee/FeeEstimate.ts#L37)_
 
 Executed value (total before fees).
 
@@ -111,7 +111,7 @@ Executed value (total before fees).
 
 • `Readonly` **totalFee**: Big
 
-_Defined in [src/fee/FeeEstimate.ts:35](https://github.com/bennyn/coinbase-pro-node/blob/7eff64a/src/fee/FeeEstimate.ts#L35)_
+_Defined in [src/fee/FeeEstimate.ts:35](https://github.com/bennyn/coinbase-pro-node/blob/26bf4d8/src/fee/FeeEstimate.ts#L35)_
 
 Total fee, usually paid in counter value.
 
@@ -121,7 +121,7 @@ Total fee, usually paid in counter value.
 
 ▸ **toJSON**(): [FeeEstimateJSON](../interfaces/_fee_feeestimate_.feeestimatejson.md)
 
-_Defined in [src/fee/FeeEstimate.ts:49](https://github.com/bennyn/coinbase-pro-node/blob/7eff64a/src/fee/FeeEstimate.ts#L49)_
+_Defined in [src/fee/FeeEstimate.ts:49](https://github.com/bennyn/coinbase-pro-node/blob/26bf4d8/src/fee/FeeEstimate.ts#L49)_
 
 **Returns:** [FeeEstimateJSON](../interfaces/_fee_feeestimate_.feeestimatejson.md)
 
@@ -131,6 +131,6 @@ _Defined in [src/fee/FeeEstimate.ts:49](https://github.com/bennyn/coinbase-pro-n
 
 ▸ **toString**(): string
 
-_Defined in [src/fee/FeeEstimate.ts:61](https://github.com/bennyn/coinbase-pro-node/blob/7eff64a/src/fee/FeeEstimate.ts#L61)_
+_Defined in [src/fee/FeeEstimate.ts:61](https://github.com/bennyn/coinbase-pro-node/blob/26bf4d8/src/fee/FeeEstimate.ts#L61)_
 
 **Returns:** string
