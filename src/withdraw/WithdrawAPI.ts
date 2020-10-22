@@ -68,7 +68,7 @@ export class WithdrawAPI {
    *
    * @param currency - The type of currency
    * @param cryptoAddress - A crypto address of the recipient
-   * @see https://docs.pro.coinbase.com//#fee-estimate
+   * @see https://docs.pro.coinbase.com/#fee-estimate
    */
   async getFeeEstimate(currency: string, cryptoAddress: string): Promise<WithdrawalFeeEstimate> {
     const resource = WithdrawAPI.URL.WITHDRAWALS.FEE_ESTIMATE;
