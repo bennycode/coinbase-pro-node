@@ -1,3 +1,14 @@
+### 2.13.0 (2020-10-22)
+
+##### Chores
+
+- Rename branch 'master' to 'main' ([#285](https://github.com/bennyn/coinbase-pro-node/pull/285)) ([81d9bb41](https://github.com/bennyn/coinbase-pro-node/commit/81d9bb413f40b7d9bf711b859b33d19472b239de))
+- yarn upgrade --latest ([c4908e26](https://github.com/bennyn/coinbase-pro-node/commit/c4908e26f2a9add26cb8a0f65bde9118eb1138ac))
+
+##### New Features
+
+- Ability to get withdrawal fee estimate ([#284](https://github.com/bennyn/coinbase-pro-node/pull/284)) ([4e940978](https://github.com/bennyn/coinbase-pro-node/commit/4e9409780abf7618ae6e00ea52f055c00da9c4d0))
+
 ### 2.12.0 (2020-10-18)
 
 ##### Chores
