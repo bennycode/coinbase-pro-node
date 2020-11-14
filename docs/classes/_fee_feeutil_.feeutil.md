@@ -21,7 +21,7 @@
 
 ▸ `Static`**estimateFee**(`baseAmount`: BigSource, `counterPrice`: BigSource, `side`: OrderSide, `type`: [OrderType](../enums/_order_orderapi_.ordertype.md), `feeTier`: [FeeTier](../interfaces/_fee_feeapi_.feetier.md), `feeAsset`: string): [FeeEstimate](_fee_feeestimate_.feeestimate.md)
 
-_Defined in [src/fee/FeeUtil.ts:24](https://github.com/bennycode/coinbase-pro-node/blob/accd6f4/src/fee/FeeUtil.ts#L24)_
+_Defined in [src/fee/FeeUtil.ts:24](https://github.com/bennycode/coinbase-pro-node/blob/06bdaca/src/fee/FeeUtil.ts#L24)_
 
 Calculate the fee which must be paid (often deducted from the revenues) when selling or buying a product.
 
@@ -46,7 +46,7 @@ Estimated fee details
 
 ▸ `Static`**getFeeRate**(`type`: [OrderType](../enums/_order_orderapi_.ordertype.md), `feeTier`: [FeeTier](../interfaces/_fee_feeapi_.feetier.md)): number
 
-_Defined in [src/fee/FeeUtil.ts:6](https://github.com/bennycode/coinbase-pro-node/blob/accd6f4/src/fee/FeeUtil.ts#L6)_
+_Defined in [src/fee/FeeUtil.ts:6](https://github.com/bennycode/coinbase-pro-node/blob/06bdaca/src/fee/FeeUtil.ts#L6)_
 
 #### Parameters:
 
