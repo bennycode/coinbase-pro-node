@@ -1,3 +1,19 @@
+#### 2.13.2 (2020-11-14)
+
+##### Chores
+
+- Update GitHub's checkout action ([#308](https://github.com/bennycode/coinbase-pro-node/pull/308)) ([aa8ae38a](https://github.com/bennycode/coinbase-pro-node/commit/aa8ae38ad0cf72ed706c516b9fa8b822426714d5))
+- **deps-dev:**
+  - bump eslint from 7.12.1 to 7.13.0 ([#305](https://github.com/bennycode/coinbase-pro-node/pull/305)) ([c891bbcc](https://github.com/bennycode/coinbase-pro-node/commit/c891bbcc2f34c51bd00e9f7048ab16f2d7542875))
+  - bump @types/jasmine from 3.6.0 to 3.6.1 ([#302](https://github.com/bennycode/coinbase-pro-node/pull/302)) ([039d7f62](https://github.com/bennycode/coinbase-pro-node/commit/039d7f628a1d4ba5f65ce2386cf6cb0e2102a5e0))
+  - bump @typescript-eslint/parser from 4.6.0 to 4.6.1 ([#303](https://github.com/bennycode/coinbase-pro-node/pull/303)) ([15ac7365](https://github.com/bennycode/coinbase-pro-node/commit/15ac7365520871eeea8aaae8152bb8901039b753))
+  - bump @typescript-eslint/eslint-plugin ([#301](https://github.com/bennycode/coinbase-pro-node/pull/301)) ([4ef8d6e6](https://github.com/bennycode/coinbase-pro-node/commit/4ef8d6e6467ef794cabe0491333885d4afd673ce))
+- **deps:** bump ws from 7.3.1 to 7.4.0 ([#304](https://github.com/bennycode/coinbase-pro-node/pull/304)) ([1db09af9](https://github.com/bennycode/coinbase-pro-node/commit/1db09af9934fcfd306bd2c48e630198a1cec37d9))
+
+##### Bug Fixes
+
+- Watch newer candles if a candle got skipped ([#307](https://github.com/bennycode/coinbase-pro-node/pull/307)) ([9c275ec2](https://github.com/bennycode/coinbase-pro-node/commit/9c275ec2ad6ecef23c1747ba63dc3ba5c9753b36))
+
 #### 2.13.1 (2020-11-05)
 
 ##### Chores
