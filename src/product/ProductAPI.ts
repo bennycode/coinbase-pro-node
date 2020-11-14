@@ -418,7 +418,9 @@ export class ProductAPI {
       start: expectedTimestampISO,
     });
 
-    const matches = candles.filter(candle => candle.openTimeInISO === expectedTimestampISO);
+    // Also handles the case when candles are skipped by the exchange
+    // @see https://github.com/bennycode/coinbase-pro-node/issues/306
+    const matches = candles.filter(candle => candle.openTimeInMillis >= new Date(expectedTimestampISO).getTime());
     if (matches.length > 0) {
       const matchedCandle = matches[0];
       this.emitCandle(productId, granularity, matchedCandle);
