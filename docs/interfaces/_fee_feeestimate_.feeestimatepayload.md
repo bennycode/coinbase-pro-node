@@ -26,7 +26,7 @@
 
 • **amount**: Big
 
-_Defined in [src/fee/FeeEstimate.ts:4](https://github.com/bennycode/coinbase-pro-node/blob/06bdaca/src/fee/FeeEstimate.ts#L4)_
+_Defined in [src/fee/FeeEstimate.ts:4](https://github.com/bennycode/coinbase-pro-node/blob/ee94ab6/src/fee/FeeEstimate.ts#L4)_
 
 ---
 
@@ -34,7 +34,7 @@ _Defined in [src/fee/FeeEstimate.ts:4](https://github.com/bennycode/coinbase-pro
 
 • **effectivePricePerUnit**: Big
 
-_Defined in [src/fee/FeeEstimate.ts:5](https://github.com/bennycode/coinbase-pro-node/blob/06bdaca/src/fee/FeeEstimate.ts#L5)_
+_Defined in [src/fee/FeeEstimate.ts:5](https://github.com/bennycode/coinbase-pro-node/blob/ee94ab6/src/fee/FeeEstimate.ts#L5)_
 
 ---
 
@@ -42,7 +42,7 @@ _Defined in [src/fee/FeeEstimate.ts:5](https://github.com/bennycode/coinbase-pro
 
 • **effectiveTotal**: Big
 
-_Defined in [src/fee/FeeEstimate.ts:6](https://github.com/bennycode/coinbase-pro-node/blob/06bdaca/src/fee/FeeEstimate.ts#L6)_
+_Defined in [src/fee/FeeEstimate.ts:6](https://github.com/bennycode/coinbase-pro-node/blob/ee94ab6/src/fee/FeeEstimate.ts#L6)_
 
 ---
 
@@ -50,7 +50,7 @@ _Defined in [src/fee/FeeEstimate.ts:6](https://github.com/bennycode/coinbase-pro
 
 • **feeAsset**: string
 
-_Defined in [src/fee/FeeEstimate.ts:7](https://github.com/bennycode/coinbase-pro-node/blob/06bdaca/src/fee/FeeEstimate.ts#L7)_
+_Defined in [src/fee/FeeEstimate.ts:7](https://github.com/bennycode/coinbase-pro-node/blob/ee94ab6/src/fee/FeeEstimate.ts#L7)_
 
 ---
 
@@ -58,7 +58,7 @@ _Defined in [src/fee/FeeEstimate.ts:7](https://github.com/bennycode/coinbase-pro
 
 • **pricePerUnit**: Big
 
-_Defined in [src/fee/FeeEstimate.ts:8](https://github.com/bennycode/coinbase-pro-node/blob/06bdaca/src/fee/FeeEstimate.ts#L8)_
+_Defined in [src/fee/FeeEstimate.ts:8](https://github.com/bennycode/coinbase-pro-node/blob/ee94ab6/src/fee/FeeEstimate.ts#L8)_
 
 ---
 
@@ -66,7 +66,7 @@ _Defined in [src/fee/FeeEstimate.ts:8](https://github.com/bennycode/coinbase-pro
 
 • **total**: Big
 
-_Defined in [src/fee/FeeEstimate.ts:9](https://github.com/bennycode/coinbase-pro-node/blob/06bdaca/src/fee/FeeEstimate.ts#L9)_
+_Defined in [src/fee/FeeEstimate.ts:9](https://github.com/bennycode/coinbase-pro-node/blob/ee94ab6/src/fee/FeeEstimate.ts#L9)_
 
 ---
 
@@ -74,4 +74,4 @@ _Defined in [src/fee/FeeEstimate.ts:9](https://github.com/bennycode/coinbase-pro
 
 • **totalFee**: Big
 
-_Defined in [src/fee/FeeEstimate.ts:10](https://github.com/bennycode/coinbase-pro-node/blob/06bdaca/src/fee/FeeEstimate.ts#L10)_
+_Defined in [src/fee/FeeEstimate.ts:10](https://github.com/bennycode/coinbase-pro-node/blob/ee94ab6/src/fee/FeeEstimate.ts#L10)_
