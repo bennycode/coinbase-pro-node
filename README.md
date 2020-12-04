@@ -132,7 +132,7 @@ If you like this project, you might also like these related projects:
 [1]: https://pro.coinbase.com/
 [2]: https://docs.pro.coinbase.com/
 [3]: https://github.com/bennycode/coinbase-pro-node/tree/main/src/demo
-[4]: https://benny.work/coinbase-pro-node
+[4]: https://bennycode.com/coinbase-pro-node
 [5]: https://www.npmjs.com/package/coinbase-pro-node
 [6]: https://github.com/bennycode/coinbase-pro-node/network/dependents
 [7]: https://www.npmjs.com/browse/depended/coinbase-pro-node
