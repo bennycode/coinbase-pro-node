@@ -120,7 +120,7 @@ export enum WebSocketResponseType {
   TICKER = 'ticker',
 }
 
-export type WebSocketResponse = {type: WebSocketResponseType} & WebSocketMessage;
+export type WebSocketResponse = WebSocketMessage & {type: WebSocketResponseType};
 
 // Not exported because it will become "WebSocketResponse" once complete
 type WebSocketMessage =
@@ -130,13 +130,13 @@ type WebSocketMessage =
   | WebSocketMatchMessage
   | WebSocketErrorMessage;
 
-export type WebSocketErrorMessage = {
+export interface WebSocketErrorMessage {
   message: string;
   reason: string;
   type: WebSocketResponseType.ERROR;
-};
+}
 
-export type WebSocketMatchMessage = {
+export interface WebSocketMatchMessage {
   maker_order_id: UUID_V4;
   price: string;
   product_id: string;
@@ -147,9 +147,9 @@ export type WebSocketMatchMessage = {
   time: ISO_8601_MS_UTC;
   trade_id: number;
   type: WebSocketResponseType.FULL_MATCH;
-};
+}
 
-export type WebSocketStatusMessage = {
+export interface WebSocketStatusMessage {
   currencies: {
     convertible_to: string[];
     details: CurrencyDetail;
@@ -163,9 +163,9 @@ export type WebSocketStatusMessage = {
   }[];
   products: (Product & {type: 'spot'})[];
   type: WebSocketResponseType.STATUS;
-};
+}
 
-export type WebSocketTickerMessage = {
+export interface WebSocketTickerMessage {
   best_ask: string;
   best_bid: string;
   high_24h: string;
@@ -181,14 +181,14 @@ export type WebSocketTickerMessage = {
   type: WebSocketResponseType.TICKER;
   volume_24h: string;
   volume_30d: string;
-};
+}
 
 export type WebSocketLastMatchMessage = Omit<WebSocketMatchMessage, 'type'> & {type: WebSocketResponseType.LAST_MATCH};
 
-export type WebSocketSubscription = {
+export interface WebSocketSubscription {
   channels: WebSocketChannel[];
   type: WebSocketResponseType.SUBSCRIPTIONS;
-};
+}
 
 export enum WebSocketEvent {
   ON_CLOSE = 'WebSocketEvent.ON_CLOSE',

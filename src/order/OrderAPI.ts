@@ -55,23 +55,23 @@ type BasePlacedOrder = {
 
 export type NewOrder = LimitOrder | AutoCancelLimitOrder | PostOnlyLimitOrder | MarketOrder;
 
-export type AutoCancelLimitOrder = LimitOrder & {
+export interface AutoCancelLimitOrder extends LimitOrder {
   cancel_after: CancelOrderPeriod;
   time_in_force: TimeInForce.GOOD_TILL_TIME;
-};
+}
 
-export type PostOnlyLimitOrder = LimitOrder & {
+export interface PostOnlyLimitOrder extends LimitOrder {
   post_only: boolean;
   time_in_force: TimeInForce.GOOD_TILL_CANCELED | TimeInForce.GOOD_TILL_TIME;
-};
+}
 
-export type LimitOrder = BaseOrder & {
+export interface LimitOrder extends BaseOrder {
   price: string;
   size: string;
   /** Default is 'GTC'. */
   time_in_force?: TimeInForce;
   type: OrderType.LIMIT;
-};
+}
 
 export type MarketOrder = BaseOrder & {type: OrderType.MARKET} & ({size: string} | {funds: string});
 
@@ -82,17 +82,17 @@ export enum OrderStatus {
   PENDING = 'pending',
 }
 
-export type PendingOrder = BasePlacedOrder & {
+export interface PendingOrder extends BasePlacedOrder {
   status: OrderStatus.PENDING;
   stp: SelfTradePrevention;
-};
+}
 
-export type FilledOrder = BasePlacedOrder & {
+export interface FilledOrder extends BasePlacedOrder {
   done_at: ISO_8601_MS_UTC;
   done_reason: 'filled';
   profile_id: string;
   status: OrderStatus.DONE;
-};
+}
 
 export type Order = PendingOrder | FilledOrder;
 

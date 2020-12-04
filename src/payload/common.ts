@@ -19,7 +19,7 @@ export interface Pagination {
   limit?: number;
 }
 
-export type PaginatedData<PayloadType> = {
+export interface PaginatedData<PayloadType> {
   data: PayloadType[];
   pagination: {after?: string; before?: string};
-};
+}
