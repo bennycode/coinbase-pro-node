@@ -3,11 +3,9 @@
     "url": "https://github.com/bennycode/coinbase-pro-node/issues"
   },
   "dependencies": {
-    "@types/big.js": "6.0.0",
     "@types/ws": "7.4.0",
     "axios": "0.21.0",
     "axios-retry": "3.1.9",
-    "big.js": "6.0.3",
     "bufferutil": "4.0.2",
     "reconnecting-websocket": "4.4.0",
     "utf-8-validate": "5.0.3",
@@ -77,7 +75,6 @@
     "changelog:commit": "git add CHANGELOG.md && git commit -m \"docs: Updated changelog\"",
     "clean": "rimraf .nyc_output coverage dist",
     "demo:dump:candles": "cross-env NODE_DEBUG=coinbase-pro-node* ts-node src/demo/dump-candles.ts",
-    "demo:rest:estimate:fee": "cross-env NODE_DEBUG=coinbase-pro-node* ts-node src/demo/rest-estimate-fee.ts",
     "demo:rest:get:candles": "cross-env NODE_DEBUG=coinbase-pro-node* ts-node src/demo/rest-get-candles.ts",
     "demo:websocket:ticker": "cross-env NODE_DEBUG=coinbase-pro-node* ts-node src/demo/websocket-ticker.ts",
     "demo:websocket:user": "cross-env NODE_DEBUG=coinbase-pro-node* ts-node src/demo/websocket-user.ts",
