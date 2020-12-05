@@ -17,7 +17,7 @@
 
 • **MAKER**: = "M"
 
-_Defined in [src/fill/FillAPI.ts:5](https://github.com/bennycode/coinbase-pro-node/blob/ee94ab6/src/fill/FillAPI.ts#L5)_
+_Defined in [src/fill/FillAPI.ts:5](https://github.com/bennycode/coinbase-pro-node/blob/cb84fec/src/fill/FillAPI.ts#L5)_
 
 ---
 
@@ -25,4 +25,4 @@ _Defined in [src/fill/FillAPI.ts:5](https://github.com/bennycode/coinbase-pro-no
 
 • **TAKER**: = "T"
 
-_Defined in [src/fill/FillAPI.ts:6](https://github.com/bennycode/coinbase-pro-node/blob/ee94ab6/src/fill/FillAPI.ts#L6)_
+_Defined in [src/fill/FillAPI.ts:6](https://github.com/bennycode/coinbase-pro-node/blob/cb84fec/src/fill/FillAPI.ts#L6)_

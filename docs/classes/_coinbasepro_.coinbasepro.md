@@ -30,7 +30,7 @@
 
 \+ **new CoinbasePro**(`auth?`: [ClientAuthentication](../interfaces/_coinbasepro_.clientauthentication.md)): [CoinbasePro](_coinbasepro_.coinbasepro.md)
 
-_Defined in [src/CoinbasePro.ts:34](https://github.com/bennycode/coinbase-pro-node/blob/ee94ab6/src/CoinbasePro.ts#L34)_
+_Defined in [src/CoinbasePro.ts:34](https://github.com/bennycode/coinbase-pro-node/blob/cb84fec/src/CoinbasePro.ts#L34)_
 
 #### Parameters:
 
@@ -52,7 +52,7 @@ _Defined in [src/CoinbasePro.ts:34](https://github.com/bennycode/coinbase-pro-no
 
 • `Readonly` **rest**: [RESTClient](_client_restclient_.restclient.md)
 
-_Defined in [src/CoinbasePro.ts:18](https://github.com/bennycode/coinbase-pro-node/blob/ee94ab6/src/CoinbasePro.ts#L18)_
+_Defined in [src/CoinbasePro.ts:18](https://github.com/bennycode/coinbase-pro-node/blob/cb84fec/src/CoinbasePro.ts#L18)_
 
 ---
 
@@ -60,7 +60,7 @@ _Defined in [src/CoinbasePro.ts:18](https://github.com/bennycode/coinbase-pro-no
 
 • `Readonly` **url**: [ClientConnection](../interfaces/_coinbasepro_.clientconnection.md)
 
-_Defined in [src/CoinbasePro.ts:19](https://github.com/bennycode/coinbase-pro-node/blob/ee94ab6/src/CoinbasePro.ts#L19)_
+_Defined in [src/CoinbasePro.ts:19](https://github.com/bennycode/coinbase-pro-node/blob/cb84fec/src/CoinbasePro.ts#L19)_
 
 ---
 
@@ -68,7 +68,7 @@ _Defined in [src/CoinbasePro.ts:19](https://github.com/bennycode/coinbase-pro-no
 
 • `Readonly` **ws**: [WebSocketClient](_client_websocketclient_.websocketclient.md)
 
-_Defined in [src/CoinbasePro.ts:20](https://github.com/bennycode/coinbase-pro-node/blob/ee94ab6/src/CoinbasePro.ts#L20)_
+_Defined in [src/CoinbasePro.ts:20](https://github.com/bennycode/coinbase-pro-node/blob/cb84fec/src/CoinbasePro.ts#L20)_
 
 ## Object literals
 
@@ -76,7 +76,7 @@ _Defined in [src/CoinbasePro.ts:20](https://github.com/bennycode/coinbase-pro-no
 
 ▪ `Static` `Readonly` **SETUP**: object
 
-_Defined in [src/CoinbasePro.ts:22](https://github.com/bennycode/coinbase-pro-node/blob/ee94ab6/src/CoinbasePro.ts#L22)_
+_Defined in [src/CoinbasePro.ts:22](https://github.com/bennycode/coinbase-pro-node/blob/cb84fec/src/CoinbasePro.ts#L22)_
 
 #### Properties:
 

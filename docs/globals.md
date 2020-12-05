@@ -16,8 +16,6 @@
 - ["currency/CurrencyAPI"](modules/_currency_currencyapi_.md)
 - ["error/ErrorUtil"](modules/_error_errorutil_.md)
 - ["fee/FeeAPI"](modules/_fee_feeapi_.md)
-- ["fee/FeeEstimate"](modules/_fee_feeestimate_.md)
-- ["fee/FeeUtil"](modules/_fee_feeutil_.md)
 - ["fill/FillAPI"](modules/_fill_fillapi_.md)
 - ["order/OrderAPI"](modules/_order_orderapi_.md)
 - ["product/CandleBucketUtil"](modules/_product_candlebucketutil_.md)

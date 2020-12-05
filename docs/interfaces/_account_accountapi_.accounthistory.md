@@ -25,7 +25,7 @@
 
 • **amount**: string
 
-_Defined in [src/account/AccountAPI.ts:14](https://github.com/bennycode/coinbase-pro-node/blob/ee94ab6/src/account/AccountAPI.ts#L14)_
+_Defined in [src/account/AccountAPI.ts:14](https://github.com/bennycode/coinbase-pro-node/blob/cb84fec/src/account/AccountAPI.ts#L14)_
 
 ---
 
@@ -33,7 +33,7 @@ _Defined in [src/account/AccountAPI.ts:14](https://github.com/bennycode/coinbase
 
 • **balance**: string
 
-_Defined in [src/account/AccountAPI.ts:15](https://github.com/bennycode/coinbase-pro-node/blob/ee94ab6/src/account/AccountAPI.ts#L15)_
+_Defined in [src/account/AccountAPI.ts:15](https://github.com/bennycode/coinbase-pro-node/blob/cb84fec/src/account/AccountAPI.ts#L15)_
 
 ---
 
@@ -41,7 +41,7 @@ _Defined in [src/account/AccountAPI.ts:15](https://github.com/bennycode/coinbase
 
 • **created_at**: ISO_8601_MS_UTC
 
-_Defined in [src/account/AccountAPI.ts:16](https://github.com/bennycode/coinbase-pro-node/blob/ee94ab6/src/account/AccountAPI.ts#L16)_
+_Defined in [src/account/AccountAPI.ts:16](https://github.com/bennycode/coinbase-pro-node/blob/cb84fec/src/account/AccountAPI.ts#L16)_
 
 ---
 
@@ -49,7 +49,7 @@ _Defined in [src/account/AccountAPI.ts:16](https://github.com/bennycode/coinbase
 
 • **details**: [AccountHistoryDetails](_account_accountapi_.accounthistorydetails.md)
 
-_Defined in [src/account/AccountAPI.ts:17](https://github.com/bennycode/coinbase-pro-node/blob/ee94ab6/src/account/AccountAPI.ts#L17)_
+_Defined in [src/account/AccountAPI.ts:17](https://github.com/bennycode/coinbase-pro-node/blob/cb84fec/src/account/AccountAPI.ts#L17)_
 
 ---
 
@@ -57,7 +57,7 @@ _Defined in [src/account/AccountAPI.ts:17](https://github.com/bennycode/coinbase
 
 • **id**: string
 
-_Defined in [src/account/AccountAPI.ts:18](https://github.com/bennycode/coinbase-pro-node/blob/ee94ab6/src/account/AccountAPI.ts#L18)_
+_Defined in [src/account/AccountAPI.ts:18](https://github.com/bennycode/coinbase-pro-node/blob/cb84fec/src/account/AccountAPI.ts#L18)_
 
 ---
 
@@ -65,4 +65,4 @@ _Defined in [src/account/AccountAPI.ts:18](https://github.com/bennycode/coinbase
 
 • **type**: string
 
-_Defined in [src/account/AccountAPI.ts:19](https://github.com/bennycode/coinbase-pro-node/blob/ee94ab6/src/account/AccountAPI.ts#L19)_
+_Defined in [src/account/AccountAPI.ts:19](https://github.com/bennycode/coinbase-pro-node/blob/cb84fec/src/account/AccountAPI.ts#L19)_
