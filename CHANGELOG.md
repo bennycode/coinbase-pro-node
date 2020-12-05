@@ -1,3 +1,14 @@
+### 2.14.0 (2020-12-05)
+
+##### Chores
+
+- Update GitHub username ([6ed234e8](https://github.com/bennycode/coinbase-pro-node/commit/6ed234e8ffbb52b3de00951de21c2a1fcc2ffa3e))
+- Pin docsify version ([ca0ac7bd](https://github.com/bennycode/coinbase-pro-node/commit/ca0ac7bd03830ae858e0bda59a6edbb1f8461086))
+
+##### Refactors
+
+- Remove fee util and calculations with Big.js ([#324](https://github.com/bennycode/coinbase-pro-node/pull/324)) ([21dc305b](https://github.com/bennycode/coinbase-pro-node/commit/21dc305b1c65b060a09c121851f9cba2e4f0c252))
+
 #### 2.13.3 (2020-12-04)
 
 ##### Chores
