@@ -1,3 +1,9 @@
+### 2.16.0 (2021-01-01)
+
+##### New Features
+
+- Support custom URLs to use a proxy server ([#345](https://github.com/bennycode/coinbase-pro-node/pull/345)) ([ebcb8d2f](https://github.com/bennycode/coinbase-pro-node/commit/ebcb8d2fcee0199890d086f272b97ee2f4b1857f))
+
 ### 2.15.0 (2021-01-01)
 
 ##### Chores
