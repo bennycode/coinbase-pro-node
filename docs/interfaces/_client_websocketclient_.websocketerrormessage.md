@@ -22,7 +22,7 @@
 
 • **message**: string
 
-_Defined in [src/client/WebSocketClient.ts:134](https://github.com/bennycode/coinbase-pro-node/blob/e6678df/src/client/WebSocketClient.ts#L134)_
+_Defined in [src/client/WebSocketClient.ts:134](https://github.com/bennycode/coinbase-pro-node/blob/e431220/src/client/WebSocketClient.ts#L134)_
 
 ---
 
@@ -30,7 +30,7 @@ _Defined in [src/client/WebSocketClient.ts:134](https://github.com/bennycode/coi
 
 • **reason**: string
 
-_Defined in [src/client/WebSocketClient.ts:135](https://github.com/bennycode/coinbase-pro-node/blob/e6678df/src/client/WebSocketClient.ts#L135)_
+_Defined in [src/client/WebSocketClient.ts:135](https://github.com/bennycode/coinbase-pro-node/blob/e431220/src/client/WebSocketClient.ts#L135)_
 
 ---
 
@@ -38,4 +38,4 @@ _Defined in [src/client/WebSocketClient.ts:135](https://github.com/bennycode/coi
 
 • **type**: [ERROR](../enums/_client_websocketclient_.websocketresponsetype.md#error)
 
-_Defined in [src/client/WebSocketClient.ts:136](https://github.com/bennycode/coinbase-pro-node/blob/e6678df/src/client/WebSocketClient.ts#L136)_
+_Defined in [src/client/WebSocketClient.ts:136](https://github.com/bennycode/coinbase-pro-node/blob/e431220/src/client/WebSocketClient.ts#L136)_

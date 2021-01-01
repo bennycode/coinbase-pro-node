@@ -32,7 +32,7 @@
 
 \+ **new OrderAPI**(`apiClient`: AxiosInstance): [OrderAPI](_order_orderapi_.orderapi.md)
 
-_Defined in [src/order/OrderAPI.ts:102](https://github.com/bennycode/coinbase-pro-node/blob/e6678df/src/order/OrderAPI.ts#L102)_
+_Defined in [src/order/OrderAPI.ts:102](https://github.com/bennycode/coinbase-pro-node/blob/e431220/src/order/OrderAPI.ts#L102)_
 
 #### Parameters:
 
@@ -48,7 +48,7 @@ _Defined in [src/order/OrderAPI.ts:102](https://github.com/bennycode/coinbase-pr
 
 ▸ **cancelOpenOrders**(`productId?`: undefined \| string): Promise<string[]\>
 
-_Defined in [src/order/OrderAPI.ts:113](https://github.com/bennycode/coinbase-pro-node/blob/e6678df/src/order/OrderAPI.ts#L113)_
+_Defined in [src/order/OrderAPI.ts:113](https://github.com/bennycode/coinbase-pro-node/blob/e431220/src/order/OrderAPI.ts#L113)_
 
 With best effort, cancel all open orders from the profile that the API key belongs to.
 
@@ -70,7 +70,7 @@ A list of ids of the canceled orders
 
 ▸ **cancelOrder**(`orderId`: string, `productId?`: undefined \| string): Promise<string\>
 
-_Defined in [src/order/OrderAPI.ts:129](https://github.com/bennycode/coinbase-pro-node/blob/e6678df/src/order/OrderAPI.ts#L129)_
+_Defined in [src/order/OrderAPI.ts:129](https://github.com/bennycode/coinbase-pro-node/blob/e431220/src/order/OrderAPI.ts#L129)_
 
 Cancel a previously placed order. Order must belong to the profile that the API key belongs to.
 
@@ -93,7 +93,7 @@ The ID of the canceled order
 
 ▸ **getOpenOrders**(`pagination?`: Pagination): Promise<PaginatedData<[Order](../modules/_order_orderapi_.md#order)\>\>
 
-_Defined in [src/order/OrderAPI.ts:145](https://github.com/bennycode/coinbase-pro-node/blob/e6678df/src/order/OrderAPI.ts#L145)_
+_Defined in [src/order/OrderAPI.ts:145](https://github.com/bennycode/coinbase-pro-node/blob/e431220/src/order/OrderAPI.ts#L145)_
 
 List your current open orders from the profile that the API key belongs to. Only open or un-settled orders are returned. As soon as an order is no longer open and settled, it will no longer appear in the default request.
 
@@ -113,7 +113,7 @@ List your current open orders from the profile that the API key belongs to. Only
 
 ▸ **getOrder**(`orderId`: string): Promise<[Order](../modules/_order_orderapi_.md#order) \| null\>
 
-_Defined in [src/order/OrderAPI.ts:163](https://github.com/bennycode/coinbase-pro-node/blob/e6678df/src/order/OrderAPI.ts#L163)_
+_Defined in [src/order/OrderAPI.ts:163](https://github.com/bennycode/coinbase-pro-node/blob/e431220/src/order/OrderAPI.ts#L163)_
 
 Get a single order by order id from the profile that the API key belongs to.
 
@@ -133,7 +133,7 @@ Get a single order by order id from the profile that the API key belongs to.
 
 ▸ **placeOrder**(`newOrder`: [NewOrder](../modules/_order_orderapi_.md#neworder)): Promise<[Order](../modules/_order_orderapi_.md#order)\>
 
-_Defined in [src/order/OrderAPI.ts:188](https://github.com/bennycode/coinbase-pro-node/blob/e6678df/src/order/OrderAPI.ts#L188)_
+_Defined in [src/order/OrderAPI.ts:188](https://github.com/bennycode/coinbase-pro-node/blob/e431220/src/order/OrderAPI.ts#L188)_
 
 You can place two types of orders: limit and market. Orders can only be placed if your account has sufficient funds. Once an order is placed, your account funds will be put on hold for the duration of the order.
 
@@ -153,7 +153,7 @@ You can place two types of orders: limit and market. Orders can only be placed i
 
 ▪ `Static` `Readonly` **URL**: object
 
-_Defined in [src/order/OrderAPI.ts:100](https://github.com/bennycode/coinbase-pro-node/blob/e6678df/src/order/OrderAPI.ts#L100)_
+_Defined in [src/order/OrderAPI.ts:100](https://github.com/bennycode/coinbase-pro-node/blob/e431220/src/order/OrderAPI.ts#L100)_
 
 #### Properties:
 

@@ -29,7 +29,7 @@
 
 \+ **new WithdrawAPI**(`apiClient`: AxiosInstance): [WithdrawAPI](_withdraw_withdrawapi_.withdrawapi.md)
 
-_Defined in [src/withdraw/WithdrawAPI.ts:28](https://github.com/bennycode/coinbase-pro-node/blob/e6678df/src/withdraw/WithdrawAPI.ts#L28)_
+_Defined in [src/withdraw/WithdrawAPI.ts:28](https://github.com/bennycode/coinbase-pro-node/blob/e431220/src/withdraw/WithdrawAPI.ts#L28)_
 
 #### Parameters:
 
@@ -45,7 +45,7 @@ _Defined in [src/withdraw/WithdrawAPI.ts:28](https://github.com/bennycode/coinba
 
 ▸ **getFeeEstimate**(`currency`: string, `cryptoAddress`: string): Promise<[WithdrawalFeeEstimate](../interfaces/_withdraw_withdrawapi_.withdrawalfeeestimate.md)\>
 
-_Defined in [src/withdraw/WithdrawAPI.ts:73](https://github.com/bennycode/coinbase-pro-node/blob/e6678df/src/withdraw/WithdrawAPI.ts#L73)_
+_Defined in [src/withdraw/WithdrawAPI.ts:73](https://github.com/bennycode/coinbase-pro-node/blob/e431220/src/withdraw/WithdrawAPI.ts#L73)_
 
 Gets the network fee estimate when sending to the given address.
 
@@ -66,7 +66,7 @@ Gets the network fee estimate when sending to the given address.
 
 ▸ **postCryptoWithdrawal**(`amount`: number, `currency`: string, `cryptoAddress`: string, `destinationTag?`: undefined \| string, `addNetworkFeeToTotal?`: undefined \| false \| true): Promise<[CryptoWithdrawal](../interfaces/_withdraw_withdrawapi_.cryptowithdrawal.md)\>
 
-_Defined in [src/withdraw/WithdrawAPI.ts:43](https://github.com/bennycode/coinbase-pro-node/blob/e6678df/src/withdraw/WithdrawAPI.ts#L43)_
+_Defined in [src/withdraw/WithdrawAPI.ts:43](https://github.com/bennycode/coinbase-pro-node/blob/e431220/src/withdraw/WithdrawAPI.ts#L43)_
 
 Withdraws funds to a crypto address.
 
@@ -90,7 +90,7 @@ Withdraws funds to a crypto address.
 
 ▪ `Static` `Readonly` **URL**: object
 
-_Defined in [src/withdraw/WithdrawAPI.ts:23](https://github.com/bennycode/coinbase-pro-node/blob/e6678df/src/withdraw/WithdrawAPI.ts#L23)_
+_Defined in [src/withdraw/WithdrawAPI.ts:23](https://github.com/bennycode/coinbase-pro-node/blob/e431220/src/withdraw/WithdrawAPI.ts#L23)_
 
 #### Properties:
 
