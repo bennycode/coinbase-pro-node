@@ -1,5 +1,6 @@
 import crypto from 'crypto';
 import {ClientAuthentication} from '../CoinbasePro';
+import {Buffer} from 'buffer/';
 
 export interface RequestSetup {
   httpMethod: string;
