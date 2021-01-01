@@ -2,12 +2,28 @@ import {RESTClient} from './client/RESTClient';
 import {WebSocketClient} from './client/WebSocketClient';
 import {RequestSetup, RequestSigner, SignedRequest} from './auth/RequestSigner';
 
-export interface ClientAuthentication {
+export interface ClientAuthenticationBase {
+  apiKey: string;
+  apiSecret: string;
+  passphrase: string;
+}
+
+export interface ClientAuthenticationBaseUrls extends ClientAuthenticationBase {
   apiKey: string;
   apiSecret: string;
   passphrase: string;
   useSandbox: boolean;
 }
+
+export interface ClientAuthenticationCustomUrls extends ClientAuthenticationBase {
+  apiKey: string;
+  apiSecret: string;
+  httpUrl: string;
+  passphrase: string;
+  wsUrl: string;
+}
+
+export type ClientAuthentication = ClientAuthenticationBaseUrls | ClientAuthenticationCustomUrls;
 
 export interface ClientConnection {
   REST: string;
@@ -41,7 +57,18 @@ export class CoinbasePro {
       useSandbox: false,
     }
   ) {
-    this.url = auth.useSandbox === true ? CoinbasePro.SETUP.SANDBOX : CoinbasePro.SETUP.PRODUCTION;
+    if (typeof (auth as ClientAuthenticationBaseUrls).useSandbox === 'boolean') {
+      this.url =
+        (auth as ClientAuthenticationBaseUrls).useSandbox === true
+          ? CoinbasePro.SETUP.SANDBOX
+          : CoinbasePro.SETUP.PRODUCTION;
+    } else {
+      const {httpUrl, wsUrl} = auth as ClientAuthenticationCustomUrls;
+      this.url = {
+        REST: httpUrl,
+        WebSocket: wsUrl,
+      };
+    }
 
     const signRequest = async (setup: RequestSetup): Promise<SignedRequest> => {
       const clockSkew = await this.rest.time.getClockSkew();
