@@ -25,7 +25,7 @@
 
 • **high**: string
 
-_Defined in [src/product/ProductAPI.ts:44](https://github.com/bennycode/coinbase-pro-node/blob/cb84fec/src/product/ProductAPI.ts#L44)_
+_Defined in [src/product/ProductAPI.ts:44](https://github.com/bennycode/coinbase-pro-node/blob/e6678df/src/product/ProductAPI.ts#L44)_
 
 ---
 
@@ -33,7 +33,7 @@ _Defined in [src/product/ProductAPI.ts:44](https://github.com/bennycode/coinbase
 
 • **last**: string
 
-_Defined in [src/product/ProductAPI.ts:45](https://github.com/bennycode/coinbase-pro-node/blob/cb84fec/src/product/ProductAPI.ts#L45)_
+_Defined in [src/product/ProductAPI.ts:45](https://github.com/bennycode/coinbase-pro-node/blob/e6678df/src/product/ProductAPI.ts#L45)_
 
 ---
 
@@ -41,7 +41,7 @@ _Defined in [src/product/ProductAPI.ts:45](https://github.com/bennycode/coinbase
 
 • **low**: string
 
-_Defined in [src/product/ProductAPI.ts:46](https://github.com/bennycode/coinbase-pro-node/blob/cb84fec/src/product/ProductAPI.ts#L46)_
+_Defined in [src/product/ProductAPI.ts:46](https://github.com/bennycode/coinbase-pro-node/blob/e6678df/src/product/ProductAPI.ts#L46)_
 
 ---
 
@@ -49,7 +49,7 @@ _Defined in [src/product/ProductAPI.ts:46](https://github.com/bennycode/coinbase
 
 • **open**: string
 
-_Defined in [src/product/ProductAPI.ts:47](https://github.com/bennycode/coinbase-pro-node/blob/cb84fec/src/product/ProductAPI.ts#L47)_
+_Defined in [src/product/ProductAPI.ts:47](https://github.com/bennycode/coinbase-pro-node/blob/e6678df/src/product/ProductAPI.ts#L47)_
 
 ---
 
@@ -57,7 +57,7 @@ _Defined in [src/product/ProductAPI.ts:47](https://github.com/bennycode/coinbase
 
 • **volume**: string
 
-_Defined in [src/product/ProductAPI.ts:48](https://github.com/bennycode/coinbase-pro-node/blob/cb84fec/src/product/ProductAPI.ts#L48)_
+_Defined in [src/product/ProductAPI.ts:48](https://github.com/bennycode/coinbase-pro-node/blob/e6678df/src/product/ProductAPI.ts#L48)_
 
 ---
 
@@ -65,4 +65,4 @@ _Defined in [src/product/ProductAPI.ts:48](https://github.com/bennycode/coinbase
 
 • **volume_30day**: string
 
-_Defined in [src/product/ProductAPI.ts:49](https://github.com/bennycode/coinbase-pro-node/blob/cb84fec/src/product/ProductAPI.ts#L49)_
+_Defined in [src/product/ProductAPI.ts:49](https://github.com/bennycode/coinbase-pro-node/blob/e6678df/src/product/ProductAPI.ts#L49)_
