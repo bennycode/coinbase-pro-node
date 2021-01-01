@@ -29,5 +29,19 @@ describe('CoinbasePro', () => {
 
       expect(client.url.REST).toBe(CoinbasePro.SETUP.SANDBOX.REST);
     });
+
+    it('supports custom URLs to use a proxy server', () => {
+      const proxyUrl = 'http://localhost:3000/rest-proxy';
+
+      const client = new CoinbasePro({
+        apiKey: '',
+        apiSecret: '',
+        passphrase: '',
+        httpUrl: proxyUrl,
+        wsUrl: 'wss://ws-feed-public.sandbox.pro.coinbase.com',
+      });
+
+      expect(client.url.REST).toBe(proxyUrl);
+    });
   });
 });
