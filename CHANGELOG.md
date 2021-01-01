@@ -1,3 +1,31 @@
+### 2.15.0 (2021-01-01)
+
+##### Chores
+
+- **deps-dev:**
+  - bump @typescript-eslint/eslint-plugin ([#342](https://github.com/bennycode/coinbase-pro-node/pull/342)) ([44e9e507](https://github.com/bennycode/coinbase-pro-node/commit/44e9e507ae5f0c1a7e6967cb0535574a1d78e008))
+  - bump @typescript-eslint/parser from 4.10.0 to 4.11.0 ([#340](https://github.com/bennycode/coinbase-pro-node/pull/340)) ([62e3550a](https://github.com/bennycode/coinbase-pro-node/commit/62e3550acec527773899efa5925bcc2004e317c1))
+  - bump eslint from 7.15.0 to 7.16.0 ([#337](https://github.com/bennycode/coinbase-pro-node/pull/337)) ([a96c5949](https://github.com/bennycode/coinbase-pro-node/commit/a96c594973e7a07a6915d245f8be0bf6c1c389b0))
+  - bump @typescript-eslint/parser from 4.9.1 to 4.10.0 ([#338](https://github.com/bennycode/coinbase-pro-node/pull/338)) ([027aa756](https://github.com/bennycode/coinbase-pro-node/commit/027aa756101f8344a98debdc57e6909ff61b5fd4))
+  - bump eslint-config-prettier from 7.0.0 to 7.1.0 ([#336](https://github.com/bennycode/coinbase-pro-node/pull/336)) ([e2904d40](https://github.com/bennycode/coinbase-pro-node/commit/e2904d40c976341bf63598abb7fb744d5f96878b))
+  - bump @typescript-eslint/eslint-plugin ([#335](https://github.com/bennycode/coinbase-pro-node/pull/335)) ([c9e12242](https://github.com/bennycode/coinbase-pro-node/commit/c9e12242e023703ad06f2296d21e272252ad2b61))
+  - bump @typescript-eslint/parser from 4.9.0 to 4.9.1 ([#334](https://github.com/bennycode/coinbase-pro-node/pull/334)) ([7757bbf3](https://github.com/bennycode/coinbase-pro-node/commit/7757bbf304a4c9007d4431a49e74f2203ddf7c7b))
+  - bump typescript from 4.1.2 to 4.1.3 ([#330](https://github.com/bennycode/coinbase-pro-node/pull/330)) ([60f0507a](https://github.com/bennycode/coinbase-pro-node/commit/60f0507afd961b7dc8cba662dd6b0f333b1cdd26))
+  - bump @typescript-eslint/eslint-plugin ([#331](https://github.com/bennycode/coinbase-pro-node/pull/331)) ([54abd291](https://github.com/bennycode/coinbase-pro-node/commit/54abd29161e5ba51620168244161d0a9032799f6))
+  - bump ts-node from 9.1.0 to 9.1.1 ([#333](https://github.com/bennycode/coinbase-pro-node/pull/333)) ([fca5d70d](https://github.com/bennycode/coinbase-pro-node/commit/fca5d70db4cacc406129b19b747e4fe74f405752))
+  - bump husky from 4.3.0 to 4.3.6 ([#332](https://github.com/bennycode/coinbase-pro-node/pull/332)) ([39deaa6d](https://github.com/bennycode/coinbase-pro-node/commit/39deaa6dfbc41f6a58932f8367b68693faa4c810))
+  - bump typedoc-plugin-markdown from 3.0.11 to 3.1.1 ([#328](https://github.com/bennycode/coinbase-pro-node/pull/328)) ([78bca74e](https://github.com/bennycode/coinbase-pro-node/commit/78bca74ec344313fd19e5b692e83c27ae033e14e))
+  - bump eslint-plugin-prettier from 3.2.0 to 3.3.0 ([#329](https://github.com/bennycode/coinbase-pro-node/pull/329)) ([c2272049](https://github.com/bennycode/coinbase-pro-node/commit/c2272049ea0babc063e74cd143725c9a40c67b4f))
+  - bump eslint from 7.14.0 to 7.15.0 ([#326](https://github.com/bennycode/coinbase-pro-node/pull/326)) ([b57aad32](https://github.com/bennycode/coinbase-pro-node/commit/b57aad3230d3b32933064a7b4f15988fa4bbaee2))
+  - bump eslint-config-prettier from 6.15.0 to 7.0.0 ([#325](https://github.com/bennycode/coinbase-pro-node/pull/325)) ([5469c1fb](https://github.com/bennycode/coinbase-pro-node/commit/5469c1fbf7b50d0877413ee80be444257df06be8))
+- **deps:**
+  - bump axios from 0.21.0 to 0.21.1 ([#341](https://github.com/bennycode/coinbase-pro-node/pull/341)) ([7ffc4d49](https://github.com/bennycode/coinbase-pro-node/commit/7ffc4d4916d4569d16639d12c1a34bbe0c697a8b))
+  - bump ws from 7.4.0 to 7.4.1 ([#327](https://github.com/bennycode/coinbase-pro-node/pull/327)) ([d63e6835](https://github.com/bennycode/coinbase-pro-node/commit/d63e6835eaebae508c2bd45251532c3edb677b56))
+
+##### Refactors
+
+- Use Browser-compatible Buffer API ([#344](https://github.com/bennycode/coinbase-pro-node/pull/344)) ([0fd74d83](https://github.com/bennycode/coinbase-pro-node/commit/0fd74d836baf9da9db3e3543d2898c0da8eb3b2b))
+
 ### 2.14.0 (2020-12-05)
 
 ##### Chores
