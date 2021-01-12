@@ -24,7 +24,7 @@ Top 50 bids and asks (aggregated) BUT if there are not 50 then less bids and ask
 
 • **asks**: AggregatedOrder[]
 
-_Defined in [src/product/ProductAPI.ts:118](https://github.com/bennycode/coinbase-pro-node/blob/493485c/src/product/ProductAPI.ts#L118)_
+_Defined in [src/product/ProductAPI.ts:118](https://github.com/bennycode/coinbase-pro-node/blob/a3ed45b/src/product/ProductAPI.ts#L118)_
 
 ---
 
@@ -32,7 +32,7 @@ _Defined in [src/product/ProductAPI.ts:118](https://github.com/bennycode/coinbas
 
 • **bids**: AggregatedOrder[]
 
-_Defined in [src/product/ProductAPI.ts:119](https://github.com/bennycode/coinbase-pro-node/blob/493485c/src/product/ProductAPI.ts#L119)_
+_Defined in [src/product/ProductAPI.ts:119](https://github.com/bennycode/coinbase-pro-node/blob/a3ed45b/src/product/ProductAPI.ts#L119)_
 
 ---
 
@@ -40,4 +40,4 @@ _Defined in [src/product/ProductAPI.ts:119](https://github.com/bennycode/coinbas
 
 • **sequence**: SequenceNumber
 
-_Defined in [src/product/ProductAPI.ts:120](https://github.com/bennycode/coinbase-pro-node/blob/493485c/src/product/ProductAPI.ts#L120)_
+_Defined in [src/product/ProductAPI.ts:120](https://github.com/bennycode/coinbase-pro-node/blob/a3ed45b/src/product/ProductAPI.ts#L120)_

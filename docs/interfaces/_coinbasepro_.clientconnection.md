@@ -21,7 +21,7 @@
 
 • **REST**: string
 
-_Defined in [src/CoinbasePro.ts:29](https://github.com/bennycode/coinbase-pro-node/blob/493485c/src/CoinbasePro.ts#L29)_
+_Defined in [src/CoinbasePro.ts:29](https://github.com/bennycode/coinbase-pro-node/blob/a3ed45b/src/CoinbasePro.ts#L29)_
 
 ---
 
@@ -29,4 +29,4 @@ _Defined in [src/CoinbasePro.ts:29](https://github.com/bennycode/coinbase-pro-no
 
 • **WebSocket**: string
 
-_Defined in [src/CoinbasePro.ts:30](https://github.com/bennycode/coinbase-pro-node/blob/493485c/src/CoinbasePro.ts#L30)_
+_Defined in [src/CoinbasePro.ts:30](https://github.com/bennycode/coinbase-pro-node/blob/a3ed45b/src/CoinbasePro.ts#L30)_
