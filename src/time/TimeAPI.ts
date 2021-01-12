@@ -28,8 +28,8 @@ export class TimeAPI {
    * Get the absolute difference between server time and local time.
    */
   async getClockSkew(): Promise<number> {
-    const time = await this.getTime();
+    const {epoch} = await this.getTime();
     const now = Date.now() / 1000;
-    return time.epoch - now;
+    return parseFloat(`${epoch}`) - now;
   }
 }
