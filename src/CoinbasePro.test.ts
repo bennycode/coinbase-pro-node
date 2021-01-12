@@ -36,8 +36,8 @@ describe('CoinbasePro', () => {
       const client = new CoinbasePro({
         apiKey: '',
         apiSecret: '',
-        passphrase: '',
         httpUrl: proxyUrl,
+        passphrase: '',
         wsUrl: 'wss://ws-feed-public.sandbox.pro.coinbase.com',
       });
 
