@@ -46,7 +46,7 @@ describe('TimeAPI', () => {
       const mockDate = new Date(1610486424105);
       jasmine.clock().mockDate(mockDate);
 
-      const mockPayload: TimeSkew = {iso: '2021-01-12T21:20:24Z', epoch: 1610486424};
+      const mockPayload: TimeSkew = {epoch: 1610486424, iso: '2021-01-12T21:20:24Z'};
 
       const timeApi = new TimeAPI(global.REST_URL);
 
