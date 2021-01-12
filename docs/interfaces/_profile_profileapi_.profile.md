@@ -25,7 +25,7 @@
 
 • **active**: boolean
 
-_Defined in [src/profile/ProfileAPI.ts:7](https://github.com/bennycode/coinbase-pro-node/blob/e431220/src/profile/ProfileAPI.ts#L7)_
+_Defined in [src/profile/ProfileAPI.ts:7](https://github.com/bennycode/coinbase-pro-node/blob/493485c/src/profile/ProfileAPI.ts#L7)_
 
 ---
 
@@ -33,7 +33,7 @@ _Defined in [src/profile/ProfileAPI.ts:7](https://github.com/bennycode/coinbase-
 
 • **created_at**: ISO_8601_MS_UTC
 
-_Defined in [src/profile/ProfileAPI.ts:8](https://github.com/bennycode/coinbase-pro-node/blob/e431220/src/profile/ProfileAPI.ts#L8)_
+_Defined in [src/profile/ProfileAPI.ts:8](https://github.com/bennycode/coinbase-pro-node/blob/493485c/src/profile/ProfileAPI.ts#L8)_
 
 ---
 
@@ -41,7 +41,7 @@ _Defined in [src/profile/ProfileAPI.ts:8](https://github.com/bennycode/coinbase-
 
 • **id**: UUID_V4
 
-_Defined in [src/profile/ProfileAPI.ts:9](https://github.com/bennycode/coinbase-pro-node/blob/e431220/src/profile/ProfileAPI.ts#L9)_
+_Defined in [src/profile/ProfileAPI.ts:9](https://github.com/bennycode/coinbase-pro-node/blob/493485c/src/profile/ProfileAPI.ts#L9)_
 
 ---
 
@@ -49,7 +49,7 @@ _Defined in [src/profile/ProfileAPI.ts:9](https://github.com/bennycode/coinbase-
 
 • **is_default**: boolean
 
-_Defined in [src/profile/ProfileAPI.ts:10](https://github.com/bennycode/coinbase-pro-node/blob/e431220/src/profile/ProfileAPI.ts#L10)_
+_Defined in [src/profile/ProfileAPI.ts:10](https://github.com/bennycode/coinbase-pro-node/blob/493485c/src/profile/ProfileAPI.ts#L10)_
 
 ---
 
@@ -57,7 +57,7 @@ _Defined in [src/profile/ProfileAPI.ts:10](https://github.com/bennycode/coinbase
 
 • **name**: Nickname
 
-_Defined in [src/profile/ProfileAPI.ts:11](https://github.com/bennycode/coinbase-pro-node/blob/e431220/src/profile/ProfileAPI.ts#L11)_
+_Defined in [src/profile/ProfileAPI.ts:11](https://github.com/bennycode/coinbase-pro-node/blob/493485c/src/profile/ProfileAPI.ts#L11)_
 
 ---
 
@@ -65,4 +65,4 @@ _Defined in [src/profile/ProfileAPI.ts:11](https://github.com/bennycode/coinbase
 
 • **user_id**: string
 
-_Defined in [src/profile/ProfileAPI.ts:12](https://github.com/bennycode/coinbase-pro-node/blob/e431220/src/profile/ProfileAPI.ts#L12)_
+_Defined in [src/profile/ProfileAPI.ts:12](https://github.com/bennycode/coinbase-pro-node/blob/493485c/src/profile/ProfileAPI.ts#L12)_

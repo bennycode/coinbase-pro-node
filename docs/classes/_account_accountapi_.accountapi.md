@@ -32,7 +32,7 @@
 
 \+ **new AccountAPI**(`apiClient`: AxiosInstance): [AccountAPI](_account_accountapi_.accountapi.md)
 
-_Defined in [src/account/AccountAPI.ts:92](https://github.com/bennycode/coinbase-pro-node/blob/e431220/src/account/AccountAPI.ts#L92)_
+_Defined in [src/account/AccountAPI.ts:92](https://github.com/bennycode/coinbase-pro-node/blob/493485c/src/account/AccountAPI.ts#L92)_
 
 #### Parameters:
 
@@ -48,7 +48,7 @@ _Defined in [src/account/AccountAPI.ts:92](https://github.com/bennycode/coinbase
 
 ▸ **getAccount**(`accountId`: string): Promise<[Account](../interfaces/_account_accountapi_.account.md)\>
 
-_Defined in [src/account/AccountAPI.ts:102](https://github.com/bennycode/coinbase-pro-node/blob/e431220/src/account/AccountAPI.ts#L102)_
+_Defined in [src/account/AccountAPI.ts:102](https://github.com/bennycode/coinbase-pro-node/blob/493485c/src/account/AccountAPI.ts#L102)_
 
 Get information for a single account. API key must belong to the same profile as the account.
 
@@ -68,7 +68,7 @@ Get information for a single account. API key must belong to the same profile as
 
 ▸ **getAccountHistory**(`accountId`: string, `pagination?`: Pagination): Promise<PaginatedData<[AccountHistory](../interfaces/_account_accountapi_.accounthistory.md)\>\>
 
-_Defined in [src/account/AccountAPI.ts:116](https://github.com/bennycode/coinbase-pro-node/blob/e431220/src/account/AccountAPI.ts#L116)_
+_Defined in [src/account/AccountAPI.ts:116](https://github.com/bennycode/coinbase-pro-node/blob/493485c/src/account/AccountAPI.ts#L116)_
 
 List account activity of the API key’s profile. Account activity either increases or decreases your account balance. Items are paginated and sorted latest first.
 
@@ -89,7 +89,7 @@ List account activity of the API key’s profile. Account activity either increa
 
 ▸ **getHolds**(`accountId`: string, `pagination?`: Pagination): Promise<PaginatedData<[Hold](../interfaces/_account_accountapi_.hold.md)\>\>
 
-_Defined in [src/account/AccountAPI.ts:137](https://github.com/bennycode/coinbase-pro-node/blob/e431220/src/account/AccountAPI.ts#L137)_
+_Defined in [src/account/AccountAPI.ts:137](https://github.com/bennycode/coinbase-pro-node/blob/493485c/src/account/AccountAPI.ts#L137)_
 
 List holds of an account that belong to the same profile as the API key. Holds are placed on an account for any active orders or pending withdraw requests. As an order is filled, the hold amount is updated. If an order is canceled, any remaining hold is removed. For a withdraw, once it is completed, the hold is removed.
 
@@ -110,7 +110,7 @@ List holds of an account that belong to the same profile as the API key. Holds a
 
 ▸ **listAccounts**(): Promise<[Account](../interfaces/_account_accountapi_.account.md)[]\>
 
-_Defined in [src/account/AccountAPI.ts:154](https://github.com/bennycode/coinbase-pro-node/blob/e431220/src/account/AccountAPI.ts#L154)_
+_Defined in [src/account/AccountAPI.ts:154](https://github.com/bennycode/coinbase-pro-node/blob/493485c/src/account/AccountAPI.ts#L154)_
 
 Get a list of trading accounts from the profile of the API key.
 
@@ -124,7 +124,7 @@ Get a list of trading accounts from the profile of the API key.
 
 ▸ **listCoinbaseAccounts**(): Promise<[CoinbaseAccount](../interfaces/_account_accountapi_.coinbaseaccount.md)[]\>
 
-_Defined in [src/account/AccountAPI.ts:165](https://github.com/bennycode/coinbase-pro-node/blob/e431220/src/account/AccountAPI.ts#L165)_
+_Defined in [src/account/AccountAPI.ts:165](https://github.com/bennycode/coinbase-pro-node/blob/493485c/src/account/AccountAPI.ts#L165)_
 
 Get a list of your coinbase accounts.
 
@@ -138,7 +138,7 @@ Get a list of your coinbase accounts.
 
 ▪ `Static` `Readonly` **URL**: object
 
-_Defined in [src/account/AccountAPI.ts:89](https://github.com/bennycode/coinbase-pro-node/blob/e431220/src/account/AccountAPI.ts#L89)_
+_Defined in [src/account/AccountAPI.ts:89](https://github.com/bennycode/coinbase-pro-node/blob/493485c/src/account/AccountAPI.ts#L89)_
 
 #### Properties:
 

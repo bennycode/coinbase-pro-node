@@ -34,7 +34,7 @@
 
 _Inherited from [AutoCancelLimitOrder](_order_orderapi_.autocancellimitorder.md).[client_oid](_order_orderapi_.autocancellimitorder.md#client_oid)_
 
-_Defined in [src/order/OrderAPI.ts:31](https://github.com/bennycode/coinbase-pro-node/blob/e431220/src/order/OrderAPI.ts#L31)_
+_Defined in [src/order/OrderAPI.ts:31](https://github.com/bennycode/coinbase-pro-node/blob/493485c/src/order/OrderAPI.ts#L31)_
 
 ---
 
@@ -42,7 +42,7 @@ _Defined in [src/order/OrderAPI.ts:31](https://github.com/bennycode/coinbase-pro
 
 • **post_only**: boolean
 
-_Defined in [src/order/OrderAPI.ts:64](https://github.com/bennycode/coinbase-pro-node/blob/e431220/src/order/OrderAPI.ts#L64)_
+_Defined in [src/order/OrderAPI.ts:64](https://github.com/bennycode/coinbase-pro-node/blob/493485c/src/order/OrderAPI.ts#L64)_
 
 ---
 
@@ -52,7 +52,7 @@ _Defined in [src/order/OrderAPI.ts:64](https://github.com/bennycode/coinbase-pro
 
 _Inherited from [AutoCancelLimitOrder](_order_orderapi_.autocancellimitorder.md).[price](_order_orderapi_.autocancellimitorder.md#price)_
 
-_Defined in [src/order/OrderAPI.ts:69](https://github.com/bennycode/coinbase-pro-node/blob/e431220/src/order/OrderAPI.ts#L69)_
+_Defined in [src/order/OrderAPI.ts:69](https://github.com/bennycode/coinbase-pro-node/blob/493485c/src/order/OrderAPI.ts#L69)_
 
 ---
 
@@ -62,7 +62,7 @@ _Defined in [src/order/OrderAPI.ts:69](https://github.com/bennycode/coinbase-pro
 
 _Inherited from [AutoCancelLimitOrder](_order_orderapi_.autocancellimitorder.md).[product_id](_order_orderapi_.autocancellimitorder.md#product_id)_
 
-_Defined in [src/order/OrderAPI.ts:32](https://github.com/bennycode/coinbase-pro-node/blob/e431220/src/order/OrderAPI.ts#L32)_
+_Defined in [src/order/OrderAPI.ts:32](https://github.com/bennycode/coinbase-pro-node/blob/493485c/src/order/OrderAPI.ts#L32)_
 
 ---
 
@@ -72,7 +72,7 @@ _Defined in [src/order/OrderAPI.ts:32](https://github.com/bennycode/coinbase-pro
 
 _Inherited from [AutoCancelLimitOrder](_order_orderapi_.autocancellimitorder.md).[side](_order_orderapi_.autocancellimitorder.md#side)_
 
-_Defined in [src/order/OrderAPI.ts:33](https://github.com/bennycode/coinbase-pro-node/blob/e431220/src/order/OrderAPI.ts#L33)_
+_Defined in [src/order/OrderAPI.ts:33](https://github.com/bennycode/coinbase-pro-node/blob/493485c/src/order/OrderAPI.ts#L33)_
 
 ---
 
@@ -82,7 +82,7 @@ _Defined in [src/order/OrderAPI.ts:33](https://github.com/bennycode/coinbase-pro
 
 _Inherited from [AutoCancelLimitOrder](_order_orderapi_.autocancellimitorder.md).[size](_order_orderapi_.autocancellimitorder.md#size)_
 
-_Defined in [src/order/OrderAPI.ts:70](https://github.com/bennycode/coinbase-pro-node/blob/e431220/src/order/OrderAPI.ts#L70)_
+_Defined in [src/order/OrderAPI.ts:70](https://github.com/bennycode/coinbase-pro-node/blob/493485c/src/order/OrderAPI.ts#L70)_
 
 ---
 
@@ -92,7 +92,7 @@ _Defined in [src/order/OrderAPI.ts:70](https://github.com/bennycode/coinbase-pro
 
 _Inherited from [AutoCancelLimitOrder](_order_orderapi_.autocancellimitorder.md).[stop](_order_orderapi_.autocancellimitorder.md#stop)_
 
-_Defined in [src/order/OrderAPI.ts:34](https://github.com/bennycode/coinbase-pro-node/blob/e431220/src/order/OrderAPI.ts#L34)_
+_Defined in [src/order/OrderAPI.ts:34](https://github.com/bennycode/coinbase-pro-node/blob/493485c/src/order/OrderAPI.ts#L34)_
 
 ---
 
@@ -102,7 +102,7 @@ _Defined in [src/order/OrderAPI.ts:34](https://github.com/bennycode/coinbase-pro
 
 _Inherited from [AutoCancelLimitOrder](_order_orderapi_.autocancellimitorder.md).[stop_price](_order_orderapi_.autocancellimitorder.md#stop_price)_
 
-_Defined in [src/order/OrderAPI.ts:35](https://github.com/bennycode/coinbase-pro-node/blob/e431220/src/order/OrderAPI.ts#L35)_
+_Defined in [src/order/OrderAPI.ts:35](https://github.com/bennycode/coinbase-pro-node/blob/493485c/src/order/OrderAPI.ts#L35)_
 
 ---
 
@@ -112,7 +112,7 @@ _Defined in [src/order/OrderAPI.ts:35](https://github.com/bennycode/coinbase-pro
 
 _Inherited from [AutoCancelLimitOrder](_order_orderapi_.autocancellimitorder.md).[stp](_order_orderapi_.autocancellimitorder.md#stp)_
 
-_Defined in [src/order/OrderAPI.ts:36](https://github.com/bennycode/coinbase-pro-node/blob/e431220/src/order/OrderAPI.ts#L36)_
+_Defined in [src/order/OrderAPI.ts:36](https://github.com/bennycode/coinbase-pro-node/blob/493485c/src/order/OrderAPI.ts#L36)_
 
 ---
 
@@ -122,7 +122,7 @@ _Defined in [src/order/OrderAPI.ts:36](https://github.com/bennycode/coinbase-pro
 
 _Overrides [LimitOrder](_order_orderapi_.limitorder.md).[time_in_force](_order_orderapi_.limitorder.md#time_in_force)_
 
-_Defined in [src/order/OrderAPI.ts:65](https://github.com/bennycode/coinbase-pro-node/blob/e431220/src/order/OrderAPI.ts#L65)_
+_Defined in [src/order/OrderAPI.ts:65](https://github.com/bennycode/coinbase-pro-node/blob/493485c/src/order/OrderAPI.ts#L65)_
 
 ---
 
@@ -132,4 +132,4 @@ _Defined in [src/order/OrderAPI.ts:65](https://github.com/bennycode/coinbase-pro
 
 _Inherited from [AutoCancelLimitOrder](_order_orderapi_.autocancellimitorder.md).[type](_order_orderapi_.autocancellimitorder.md#type)_
 
-_Defined in [src/order/OrderAPI.ts:73](https://github.com/bennycode/coinbase-pro-node/blob/e431220/src/order/OrderAPI.ts#L73)_
+_Defined in [src/order/OrderAPI.ts:73](https://github.com/bennycode/coinbase-pro-node/blob/493485c/src/order/OrderAPI.ts#L73)_

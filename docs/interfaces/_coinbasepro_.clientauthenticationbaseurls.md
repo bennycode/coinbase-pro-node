@@ -27,7 +27,7 @@
 
 _Overrides [ClientAuthenticationBase](_coinbasepro_.clientauthenticationbase.md).[apiKey](_coinbasepro_.clientauthenticationbase.md#apikey)_
 
-_Defined in [src/CoinbasePro.ts:12](https://github.com/bennycode/coinbase-pro-node/blob/e431220/src/CoinbasePro.ts#L12)_
+_Defined in [src/CoinbasePro.ts:12](https://github.com/bennycode/coinbase-pro-node/blob/493485c/src/CoinbasePro.ts#L12)_
 
 ---
 
@@ -37,7 +37,7 @@ _Defined in [src/CoinbasePro.ts:12](https://github.com/bennycode/coinbase-pro-no
 
 _Overrides [ClientAuthenticationBase](_coinbasepro_.clientauthenticationbase.md).[apiSecret](_coinbasepro_.clientauthenticationbase.md#apisecret)_
 
-_Defined in [src/CoinbasePro.ts:13](https://github.com/bennycode/coinbase-pro-node/blob/e431220/src/CoinbasePro.ts#L13)_
+_Defined in [src/CoinbasePro.ts:13](https://github.com/bennycode/coinbase-pro-node/blob/493485c/src/CoinbasePro.ts#L13)_
 
 ---
 
@@ -47,7 +47,7 @@ _Defined in [src/CoinbasePro.ts:13](https://github.com/bennycode/coinbase-pro-no
 
 _Overrides [ClientAuthenticationBase](_coinbasepro_.clientauthenticationbase.md).[passphrase](_coinbasepro_.clientauthenticationbase.md#passphrase)_
 
-_Defined in [src/CoinbasePro.ts:14](https://github.com/bennycode/coinbase-pro-node/blob/e431220/src/CoinbasePro.ts#L14)_
+_Defined in [src/CoinbasePro.ts:14](https://github.com/bennycode/coinbase-pro-node/blob/493485c/src/CoinbasePro.ts#L14)_
 
 ---
 
@@ -55,4 +55,4 @@ _Defined in [src/CoinbasePro.ts:14](https://github.com/bennycode/coinbase-pro-no
 
 • **useSandbox**: boolean
 
-_Defined in [src/CoinbasePro.ts:15](https://github.com/bennycode/coinbase-pro-node/blob/e431220/src/CoinbasePro.ts#L15)_
+_Defined in [src/CoinbasePro.ts:15](https://github.com/bennycode/coinbase-pro-node/blob/493485c/src/CoinbasePro.ts#L15)_

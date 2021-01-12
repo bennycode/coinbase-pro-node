@@ -28,7 +28,7 @@
 
 _Overrides [ClientAuthenticationBase](_coinbasepro_.clientauthenticationbase.md).[apiKey](_coinbasepro_.clientauthenticationbase.md#apikey)_
 
-_Defined in [src/CoinbasePro.ts:19](https://github.com/bennycode/coinbase-pro-node/blob/e431220/src/CoinbasePro.ts#L19)_
+_Defined in [src/CoinbasePro.ts:19](https://github.com/bennycode/coinbase-pro-node/blob/493485c/src/CoinbasePro.ts#L19)_
 
 ---
 
@@ -38,7 +38,7 @@ _Defined in [src/CoinbasePro.ts:19](https://github.com/bennycode/coinbase-pro-no
 
 _Overrides [ClientAuthenticationBase](_coinbasepro_.clientauthenticationbase.md).[apiSecret](_coinbasepro_.clientauthenticationbase.md#apisecret)_
 
-_Defined in [src/CoinbasePro.ts:20](https://github.com/bennycode/coinbase-pro-node/blob/e431220/src/CoinbasePro.ts#L20)_
+_Defined in [src/CoinbasePro.ts:20](https://github.com/bennycode/coinbase-pro-node/blob/493485c/src/CoinbasePro.ts#L20)_
 
 ---
 
@@ -46,7 +46,7 @@ _Defined in [src/CoinbasePro.ts:20](https://github.com/bennycode/coinbase-pro-no
 
 • **httpUrl**: string
 
-_Defined in [src/CoinbasePro.ts:21](https://github.com/bennycode/coinbase-pro-node/blob/e431220/src/CoinbasePro.ts#L21)_
+_Defined in [src/CoinbasePro.ts:21](https://github.com/bennycode/coinbase-pro-node/blob/493485c/src/CoinbasePro.ts#L21)_
 
 ---
 
@@ -56,7 +56,7 @@ _Defined in [src/CoinbasePro.ts:21](https://github.com/bennycode/coinbase-pro-no
 
 _Overrides [ClientAuthenticationBase](_coinbasepro_.clientauthenticationbase.md).[passphrase](_coinbasepro_.clientauthenticationbase.md#passphrase)_
 
-_Defined in [src/CoinbasePro.ts:22](https://github.com/bennycode/coinbase-pro-node/blob/e431220/src/CoinbasePro.ts#L22)_
+_Defined in [src/CoinbasePro.ts:22](https://github.com/bennycode/coinbase-pro-node/blob/493485c/src/CoinbasePro.ts#L22)_
 
 ---
 
@@ -64,4 +64,4 @@ _Defined in [src/CoinbasePro.ts:22](https://github.com/bennycode/coinbase-pro-no
 
 • **wsUrl**: string
 
-_Defined in [src/CoinbasePro.ts:23](https://github.com/bennycode/coinbase-pro-node/blob/e431220/src/CoinbasePro.ts#L23)_
+_Defined in [src/CoinbasePro.ts:23](https://github.com/bennycode/coinbase-pro-node/blob/493485c/src/CoinbasePro.ts#L23)_

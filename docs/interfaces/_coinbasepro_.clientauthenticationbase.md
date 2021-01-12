@@ -26,7 +26,7 @@
 
 • **apiKey**: string
 
-_Defined in [src/CoinbasePro.ts:6](https://github.com/bennycode/coinbase-pro-node/blob/e431220/src/CoinbasePro.ts#L6)_
+_Defined in [src/CoinbasePro.ts:6](https://github.com/bennycode/coinbase-pro-node/blob/493485c/src/CoinbasePro.ts#L6)_
 
 ---
 
@@ -34,7 +34,7 @@ _Defined in [src/CoinbasePro.ts:6](https://github.com/bennycode/coinbase-pro-nod
 
 • **apiSecret**: string
 
-_Defined in [src/CoinbasePro.ts:7](https://github.com/bennycode/coinbase-pro-node/blob/e431220/src/CoinbasePro.ts#L7)_
+_Defined in [src/CoinbasePro.ts:7](https://github.com/bennycode/coinbase-pro-node/blob/493485c/src/CoinbasePro.ts#L7)_
 
 ---
 
@@ -42,4 +42,4 @@ _Defined in [src/CoinbasePro.ts:7](https://github.com/bennycode/coinbase-pro-nod
 
 • **passphrase**: string
 
-_Defined in [src/CoinbasePro.ts:8](https://github.com/bennycode/coinbase-pro-node/blob/e431220/src/CoinbasePro.ts#L8)_
+_Defined in [src/CoinbasePro.ts:8](https://github.com/bennycode/coinbase-pro-node/blob/493485c/src/CoinbasePro.ts#L8)_

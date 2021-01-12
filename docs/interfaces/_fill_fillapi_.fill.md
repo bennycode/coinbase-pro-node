@@ -32,7 +32,7 @@
 
 • **created_at**: ISO_8601_MS_UTC
 
-_Defined in [src/fill/FillAPI.ts:10](https://github.com/bennycode/coinbase-pro-node/blob/e431220/src/fill/FillAPI.ts#L10)_
+_Defined in [src/fill/FillAPI.ts:10](https://github.com/bennycode/coinbase-pro-node/blob/493485c/src/fill/FillAPI.ts#L10)_
 
 ---
 
@@ -40,7 +40,7 @@ _Defined in [src/fill/FillAPI.ts:10](https://github.com/bennycode/coinbase-pro-n
 
 • **fee**: string
 
-_Defined in [src/fill/FillAPI.ts:11](https://github.com/bennycode/coinbase-pro-node/blob/e431220/src/fill/FillAPI.ts#L11)_
+_Defined in [src/fill/FillAPI.ts:11](https://github.com/bennycode/coinbase-pro-node/blob/493485c/src/fill/FillAPI.ts#L11)_
 
 ---
 
@@ -48,7 +48,7 @@ _Defined in [src/fill/FillAPI.ts:11](https://github.com/bennycode/coinbase-pro-n
 
 • **liquidity**: [Liquidity](../enums/_fill_fillapi_.liquidity.md)
 
-_Defined in [src/fill/FillAPI.ts:12](https://github.com/bennycode/coinbase-pro-node/blob/e431220/src/fill/FillAPI.ts#L12)_
+_Defined in [src/fill/FillAPI.ts:12](https://github.com/bennycode/coinbase-pro-node/blob/493485c/src/fill/FillAPI.ts#L12)_
 
 ---
 
@@ -56,7 +56,7 @@ _Defined in [src/fill/FillAPI.ts:12](https://github.com/bennycode/coinbase-pro-n
 
 • **order_id**: UUID_V4
 
-_Defined in [src/fill/FillAPI.ts:13](https://github.com/bennycode/coinbase-pro-node/blob/e431220/src/fill/FillAPI.ts#L13)_
+_Defined in [src/fill/FillAPI.ts:13](https://github.com/bennycode/coinbase-pro-node/blob/493485c/src/fill/FillAPI.ts#L13)_
 
 ---
 
@@ -64,7 +64,7 @@ _Defined in [src/fill/FillAPI.ts:13](https://github.com/bennycode/coinbase-pro-n
 
 • **price**: string
 
-_Defined in [src/fill/FillAPI.ts:14](https://github.com/bennycode/coinbase-pro-node/blob/e431220/src/fill/FillAPI.ts#L14)_
+_Defined in [src/fill/FillAPI.ts:14](https://github.com/bennycode/coinbase-pro-node/blob/493485c/src/fill/FillAPI.ts#L14)_
 
 ---
 
@@ -72,7 +72,7 @@ _Defined in [src/fill/FillAPI.ts:14](https://github.com/bennycode/coinbase-pro-n
 
 • **product_id**: string
 
-_Defined in [src/fill/FillAPI.ts:15](https://github.com/bennycode/coinbase-pro-node/blob/e431220/src/fill/FillAPI.ts#L15)_
+_Defined in [src/fill/FillAPI.ts:15](https://github.com/bennycode/coinbase-pro-node/blob/493485c/src/fill/FillAPI.ts#L15)_
 
 ---
 
@@ -80,7 +80,7 @@ _Defined in [src/fill/FillAPI.ts:15](https://github.com/bennycode/coinbase-pro-n
 
 • **profile_id**: UUID_V4
 
-_Defined in [src/fill/FillAPI.ts:16](https://github.com/bennycode/coinbase-pro-node/blob/e431220/src/fill/FillAPI.ts#L16)_
+_Defined in [src/fill/FillAPI.ts:16](https://github.com/bennycode/coinbase-pro-node/blob/493485c/src/fill/FillAPI.ts#L16)_
 
 ---
 
@@ -88,7 +88,7 @@ _Defined in [src/fill/FillAPI.ts:16](https://github.com/bennycode/coinbase-pro-n
 
 • **settled**: boolean
 
-_Defined in [src/fill/FillAPI.ts:17](https://github.com/bennycode/coinbase-pro-node/blob/e431220/src/fill/FillAPI.ts#L17)_
+_Defined in [src/fill/FillAPI.ts:17](https://github.com/bennycode/coinbase-pro-node/blob/493485c/src/fill/FillAPI.ts#L17)_
 
 ---
 
@@ -96,7 +96,7 @@ _Defined in [src/fill/FillAPI.ts:17](https://github.com/bennycode/coinbase-pro-n
 
 • **side**: OrderSide
 
-_Defined in [src/fill/FillAPI.ts:18](https://github.com/bennycode/coinbase-pro-node/blob/e431220/src/fill/FillAPI.ts#L18)_
+_Defined in [src/fill/FillAPI.ts:18](https://github.com/bennycode/coinbase-pro-node/blob/493485c/src/fill/FillAPI.ts#L18)_
 
 ---
 
@@ -104,7 +104,7 @@ _Defined in [src/fill/FillAPI.ts:18](https://github.com/bennycode/coinbase-pro-n
 
 • **size**: string
 
-_Defined in [src/fill/FillAPI.ts:19](https://github.com/bennycode/coinbase-pro-node/blob/e431220/src/fill/FillAPI.ts#L19)_
+_Defined in [src/fill/FillAPI.ts:19](https://github.com/bennycode/coinbase-pro-node/blob/493485c/src/fill/FillAPI.ts#L19)_
 
 ---
 
@@ -112,7 +112,7 @@ _Defined in [src/fill/FillAPI.ts:19](https://github.com/bennycode/coinbase-pro-n
 
 • **trade_id**: number
 
-_Defined in [src/fill/FillAPI.ts:20](https://github.com/bennycode/coinbase-pro-node/blob/e431220/src/fill/FillAPI.ts#L20)_
+_Defined in [src/fill/FillAPI.ts:20](https://github.com/bennycode/coinbase-pro-node/blob/493485c/src/fill/FillAPI.ts#L20)_
 
 ---
 
@@ -120,7 +120,7 @@ _Defined in [src/fill/FillAPI.ts:20](https://github.com/bennycode/coinbase-pro-n
 
 • **usd_volume**: string
 
-_Defined in [src/fill/FillAPI.ts:21](https://github.com/bennycode/coinbase-pro-node/blob/e431220/src/fill/FillAPI.ts#L21)_
+_Defined in [src/fill/FillAPI.ts:21](https://github.com/bennycode/coinbase-pro-node/blob/493485c/src/fill/FillAPI.ts#L21)_
 
 ---
 
@@ -128,4 +128,4 @@ _Defined in [src/fill/FillAPI.ts:21](https://github.com/bennycode/coinbase-pro-n
 
 • **user_id**: string
 
-_Defined in [src/fill/FillAPI.ts:22](https://github.com/bennycode/coinbase-pro-node/blob/e431220/src/fill/FillAPI.ts#L22)_
+_Defined in [src/fill/FillAPI.ts:22](https://github.com/bennycode/coinbase-pro-node/blob/493485c/src/fill/FillAPI.ts#L22)_
