@@ -1,6 +1,4 @@
-**[coinbase-pro-node](README.md)**
-
-> [Globals](globals.md)
+coinbase-pro-node / [Exports](modules.md)
 
 # Coinbase Pro API
 
