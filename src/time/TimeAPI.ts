@@ -22,8 +22,8 @@ export class TimeAPI {
   async getTime(): Promise<TimeSkew> {
     const response = await axios.get<TimeSkew>(`${this.baseURL}${TimeAPI.URL.TIME}`, {
       headers: {
-        'Content-Type': 'application/json;charset=utf-8',
         Accept: 'application/json',
+        'Content-Type': 'application/json;charset=utf-8',
       },
     });
     return response.data;
