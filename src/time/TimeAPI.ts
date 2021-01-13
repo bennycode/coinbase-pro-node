@@ -20,7 +20,12 @@ export class TimeAPI {
    * @see https://docs.pro.coinbase.com/#time
    */
   async getTime(): Promise<TimeSkew> {
-    const response = await axios.get<TimeSkew>(`${this.baseURL}${TimeAPI.URL.TIME}`);
+    const response = await axios.get<TimeSkew>(`${this.baseURL}${TimeAPI.URL.TIME}`, {
+      headers: {
+        'Content-Type': 'application/json;charset=utf-8',
+        Accept: 'application/json',
+      },
+    });
     return response.data;
   }
 
