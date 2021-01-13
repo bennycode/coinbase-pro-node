@@ -1,3 +1,13 @@
+#### 2.16.2 (2021-01-13)
+
+##### Chores
+
+- Update to TypeDoc v0.20 ([b5ecde34](https://github.com/bennycode/coinbase-pro-node/commit/b5ecde34befe0c0156e58700843f640ef527073f))
+
+##### Bug Fixes
+
+- Enforce JSON content type ([79a6e2a8](https://github.com/bennycode/coinbase-pro-node/commit/79a6e2a802ba54b1bf7342e1b5e35dbede667420))
+
 #### 2.16.1 (2021-01-12)
 
 ##### Chores
