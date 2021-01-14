@@ -40,7 +40,7 @@
 
 **Returns:** [_OrderAPI_](orderapi.orderapi.md)
 
-Defined in: [order/OrderAPI.ts:102](https://github.com/bennycode/coinbase-pro-node/blob/7d07dce/src/order/OrderAPI.ts#L102)
+Defined in: [order/OrderAPI.ts:102](https://github.com/bennycode/coinbase-pro-node/blob/ac883aa/src/order/OrderAPI.ts#L102)
 
 ## Properties
 
@@ -54,7 +54,7 @@ Defined in: [order/OrderAPI.ts:102](https://github.com/bennycode/coinbase-pro-no
 | -------- | -------- |
 | `ORDERS` | _string_ |
 
-Defined in: [order/OrderAPI.ts:100](https://github.com/bennycode/coinbase-pro-node/blob/7d07dce/src/order/OrderAPI.ts#L100)
+Defined in: [order/OrderAPI.ts:100](https://github.com/bennycode/coinbase-pro-node/blob/ac883aa/src/order/OrderAPI.ts#L100)
 
 ## Methods
 
@@ -76,7 +76,7 @@ With best effort, cancel all open orders from the profile that the API key belon
 
 A list of ids of the canceled orders
 
-Defined in: [order/OrderAPI.ts:113](https://github.com/bennycode/coinbase-pro-node/blob/7d07dce/src/order/OrderAPI.ts#L113)
+Defined in: [order/OrderAPI.ts:113](https://github.com/bennycode/coinbase-pro-node/blob/ac883aa/src/order/OrderAPI.ts#L113)
 
 ---
 
@@ -99,7 +99,7 @@ Cancel a previously placed order. Order must belong to the profile that the API 
 
 The ID of the canceled order
 
-Defined in: [order/OrderAPI.ts:129](https://github.com/bennycode/coinbase-pro-node/blob/7d07dce/src/order/OrderAPI.ts#L129)
+Defined in: [order/OrderAPI.ts:129](https://github.com/bennycode/coinbase-pro-node/blob/ac883aa/src/order/OrderAPI.ts#L129)
 
 ---
 
@@ -119,7 +119,7 @@ List your current open orders from the profile that the API key belongs to. Only
 
 **Returns:** _Promise_<_PaginatedData_<[_Order_](../../modules/order_orderapi.md#order)\>\>
 
-Defined in: [order/OrderAPI.ts:145](https://github.com/bennycode/coinbase-pro-node/blob/7d07dce/src/order/OrderAPI.ts#L145)
+Defined in: [order/OrderAPI.ts:145](https://github.com/bennycode/coinbase-pro-node/blob/ac883aa/src/order/OrderAPI.ts#L145)
 
 ---
 
@@ -139,7 +139,7 @@ Get a single order by order id from the profile that the API key belongs to.
 
 **Returns:** _Promise_<_null_ \| [_PendingOrder_](../../interfaces/order/orderapi.pendingorder.md) \| [_FilledOrder_](../../interfaces/order/orderapi.filledorder.md)\>
 
-Defined in: [order/OrderAPI.ts:163](https://github.com/bennycode/coinbase-pro-node/blob/7d07dce/src/order/OrderAPI.ts#L163)
+Defined in: [order/OrderAPI.ts:163](https://github.com/bennycode/coinbase-pro-node/blob/ac883aa/src/order/OrderAPI.ts#L163)
 
 ---
 
@@ -159,4 +159,4 @@ You can place two types of orders: limit and market. Orders can only be placed i
 
 **Returns:** _Promise_<[_Order_](../../modules/order_orderapi.md#order)\>
 
-Defined in: [order/OrderAPI.ts:188](https://github.com/bennycode/coinbase-pro-node/blob/7d07dce/src/order/OrderAPI.ts#L188)
+Defined in: [order/OrderAPI.ts:188](https://github.com/bennycode/coinbase-pro-node/blob/ac883aa/src/order/OrderAPI.ts#L188)

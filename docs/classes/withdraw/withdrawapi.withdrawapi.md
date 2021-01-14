@@ -37,7 +37,7 @@
 
 **Returns:** [_WithdrawAPI_](withdrawapi.withdrawapi.md)
 
-Defined in: [withdraw/WithdrawAPI.ts:28](https://github.com/bennycode/coinbase-pro-node/blob/7d07dce/src/withdraw/WithdrawAPI.ts#L28)
+Defined in: [withdraw/WithdrawAPI.ts:28](https://github.com/bennycode/coinbase-pro-node/blob/ac883aa/src/withdraw/WithdrawAPI.ts#L28)
 
 ## Properties
 
@@ -51,7 +51,7 @@ Defined in: [withdraw/WithdrawAPI.ts:28](https://github.com/bennycode/coinbase-p
 | --- | --- |
 | `WITHDRAWALS` | { `CRYPTO`: _string_ = '/withdrawals/crypto'; `FEE_ESTIMATE`: _string_ = '/withdrawals/fee-estimate' } |
 
-Defined in: [withdraw/WithdrawAPI.ts:23](https://github.com/bennycode/coinbase-pro-node/blob/7d07dce/src/withdraw/WithdrawAPI.ts#L23)
+Defined in: [withdraw/WithdrawAPI.ts:23](https://github.com/bennycode/coinbase-pro-node/blob/ac883aa/src/withdraw/WithdrawAPI.ts#L23)
 
 ## Methods
 
@@ -72,7 +72,7 @@ Gets the network fee estimate when sending to the given address.
 
 **Returns:** _Promise_<[_WithdrawalFeeEstimate_](../../interfaces/withdraw/withdrawapi.withdrawalfeeestimate.md)\>
 
-Defined in: [withdraw/WithdrawAPI.ts:73](https://github.com/bennycode/coinbase-pro-node/blob/7d07dce/src/withdraw/WithdrawAPI.ts#L73)
+Defined in: [withdraw/WithdrawAPI.ts:73](https://github.com/bennycode/coinbase-pro-node/blob/ac883aa/src/withdraw/WithdrawAPI.ts#L73)
 
 ---
 
@@ -96,4 +96,4 @@ Withdraws funds to a crypto address.
 
 **Returns:** _Promise_<[_CryptoWithdrawal_](../../interfaces/withdraw/withdrawapi.cryptowithdrawal.md)\>
 
-Defined in: [withdraw/WithdrawAPI.ts:43](https://github.com/bennycode/coinbase-pro-node/blob/7d07dce/src/withdraw/WithdrawAPI.ts#L43)
+Defined in: [withdraw/WithdrawAPI.ts:43](https://github.com/bennycode/coinbase-pro-node/blob/ac883aa/src/withdraw/WithdrawAPI.ts#L43)

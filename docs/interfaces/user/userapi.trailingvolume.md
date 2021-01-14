@@ -23,7 +23,7 @@
 
 • **exchange_volume**: _string_
 
-Defined in: [user/UserAPI.ts:8](https://github.com/bennycode/coinbase-pro-node/blob/7d07dce/src/user/UserAPI.ts#L8)
+Defined in: [user/UserAPI.ts:8](https://github.com/bennycode/coinbase-pro-node/blob/ac883aa/src/user/UserAPI.ts#L8)
 
 ---
 
@@ -31,7 +31,7 @@ Defined in: [user/UserAPI.ts:8](https://github.com/bennycode/coinbase-pro-node/b
 
 • **product_id**: _string_
 
-Defined in: [user/UserAPI.ts:9](https://github.com/bennycode/coinbase-pro-node/blob/7d07dce/src/user/UserAPI.ts#L9)
+Defined in: [user/UserAPI.ts:9](https://github.com/bennycode/coinbase-pro-node/blob/ac883aa/src/user/UserAPI.ts#L9)
 
 ---
 
@@ -39,7 +39,7 @@ Defined in: [user/UserAPI.ts:9](https://github.com/bennycode/coinbase-pro-node/b
 
 • **recorded_at**: _string_
 
-Defined in: [user/UserAPI.ts:10](https://github.com/bennycode/coinbase-pro-node/blob/7d07dce/src/user/UserAPI.ts#L10)
+Defined in: [user/UserAPI.ts:10](https://github.com/bennycode/coinbase-pro-node/blob/ac883aa/src/user/UserAPI.ts#L10)
 
 ---
 
@@ -47,4 +47,4 @@ Defined in: [user/UserAPI.ts:10](https://github.com/bennycode/coinbase-pro-node/
 
 • **volume**: _string_
 
-Defined in: [user/UserAPI.ts:11](https://github.com/bennycode/coinbase-pro-node/blob/7d07dce/src/user/UserAPI.ts#L11)
+Defined in: [user/UserAPI.ts:11](https://github.com/bennycode/coinbase-pro-node/blob/ac883aa/src/user/UserAPI.ts#L11)
