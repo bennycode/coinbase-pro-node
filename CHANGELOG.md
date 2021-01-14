@@ -1,3 +1,13 @@
+#### 2.16.3 (2021-01-14)
+
+##### Bug Fixes
+
+- Parse time from string ([#367](https://github.com/bennycode/coinbase-pro-node/pull/367)) ([e57aff08](https://github.com/bennycode/coinbase-pro-node/commit/e57aff0873a0e2a23091e4a9bc866cece3dd3b48))
+
+##### Tests
+
+- Add test for epoch parsing ([1fd652f9](https://github.com/bennycode/coinbase-pro-node/commit/1fd652f9db285908ea4ba71782eac2409972f149))
+
 #### 2.16.2 (2021-01-13)
 
 ##### Chores
