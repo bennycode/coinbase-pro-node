@@ -19,7 +19,7 @@ export class TimeAPI {
    *
    * @see https://docs.pro.coinbase.com/#time
    */
-  async getTime(): Promise<TimeSkew> {
+  async getTime(): Promise<TimeSkew | string> {
     const response = await axios.get<TimeSkew>(`${this.baseURL}${TimeAPI.URL.TIME}`, {
       headers: {
         Accept: 'application/json',
@@ -33,9 +33,9 @@ export class TimeAPI {
    * Get the absolute difference between server time and local time.
    */
   async getClockSkew(): Promise<number> {
-    var time = await this.getTime();
+    const time = await this.getTime();
+    const epoch = (typeof time === 'string') ? parseFloat(time.match(/epoch":(.*)\./i)![1]) : time.epoch;
     const now = Date.now() / 1000;
-    if(typeof(time)==="string") { var epoch = parseFloat(time.match(/epoch":(.*)\./i)[1]) } else { var {epoch}=time; };           
     return epoch - now;
   }
 }
