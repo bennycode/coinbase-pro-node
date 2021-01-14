@@ -12,8 +12,7 @@ export class TimeAPI {
     TIME: `/time`,
   };
 
-  constructor(private readonly baseURL: string) {
-  }
+  constructor(private readonly baseURL: string) {}
 
   /**
    * Get the server time from Coinbase Pro API. It has been reported that sometimes the return value is a string:
@@ -35,7 +34,7 @@ export class TimeAPI {
   async getClockSkew(): Promise<number> {
     const time = await this.getTime();
     /** @see https://github.com/bennycode/coinbase-pro-node/issues/354 */
-    const epoch = (typeof time === 'string') ? parseFloat(time.match(/epoch":(.*)\./i)![1]) : time.epoch;
+    const epoch = typeof time === 'string' ? parseFloat(time.match(/epoch":(.*)\./i)![1]) : time.epoch;
     const now = Date.now() / 1000;
     return epoch - now;
   }
