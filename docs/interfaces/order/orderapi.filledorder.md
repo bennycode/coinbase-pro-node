@@ -38,7 +38,7 @@
 
 • **created_at**: _string_
 
-Defined in: [order/OrderAPI.ts:40](https://github.com/bennycode/coinbase-pro-node/blob/ac883aa/src/order/OrderAPI.ts#L40)
+Defined in: [order/OrderAPI.ts:40](https://github.com/bennycode/coinbase-pro-node/blob/3350621/src/order/OrderAPI.ts#L40)
 
 ---
 
@@ -46,7 +46,7 @@ Defined in: [order/OrderAPI.ts:40](https://github.com/bennycode/coinbase-pro-nod
 
 • **done_at**: _string_
 
-Defined in: [order/OrderAPI.ts:91](https://github.com/bennycode/coinbase-pro-node/blob/ac883aa/src/order/OrderAPI.ts#L91)
+Defined in: [order/OrderAPI.ts:91](https://github.com/bennycode/coinbase-pro-node/blob/3350621/src/order/OrderAPI.ts#L91)
 
 ---
 
@@ -54,7 +54,7 @@ Defined in: [order/OrderAPI.ts:91](https://github.com/bennycode/coinbase-pro-nod
 
 • **done_reason**: _filled_
 
-Defined in: [order/OrderAPI.ts:92](https://github.com/bennycode/coinbase-pro-node/blob/ac883aa/src/order/OrderAPI.ts#L92)
+Defined in: [order/OrderAPI.ts:92](https://github.com/bennycode/coinbase-pro-node/blob/3350621/src/order/OrderAPI.ts#L92)
 
 ---
 
@@ -62,7 +62,7 @@ Defined in: [order/OrderAPI.ts:92](https://github.com/bennycode/coinbase-pro-nod
 
 • **executed_value**: _string_
 
-Defined in: [order/OrderAPI.ts:41](https://github.com/bennycode/coinbase-pro-node/blob/ac883aa/src/order/OrderAPI.ts#L41)
+Defined in: [order/OrderAPI.ts:41](https://github.com/bennycode/coinbase-pro-node/blob/3350621/src/order/OrderAPI.ts#L41)
 
 ---
 
@@ -70,7 +70,7 @@ Defined in: [order/OrderAPI.ts:41](https://github.com/bennycode/coinbase-pro-nod
 
 • **fill_fees**: _string_
 
-Defined in: [order/OrderAPI.ts:42](https://github.com/bennycode/coinbase-pro-node/blob/ac883aa/src/order/OrderAPI.ts#L42)
+Defined in: [order/OrderAPI.ts:42](https://github.com/bennycode/coinbase-pro-node/blob/3350621/src/order/OrderAPI.ts#L42)
 
 ---
 
@@ -78,7 +78,7 @@ Defined in: [order/OrderAPI.ts:42](https://github.com/bennycode/coinbase-pro-nod
 
 • **filled_size**: _string_
 
-Defined in: [order/OrderAPI.ts:43](https://github.com/bennycode/coinbase-pro-node/blob/ac883aa/src/order/OrderAPI.ts#L43)
+Defined in: [order/OrderAPI.ts:43](https://github.com/bennycode/coinbase-pro-node/blob/3350621/src/order/OrderAPI.ts#L43)
 
 ---
 
@@ -86,7 +86,7 @@ Defined in: [order/OrderAPI.ts:43](https://github.com/bennycode/coinbase-pro-nod
 
 • **id**: _string_
 
-Defined in: [order/OrderAPI.ts:44](https://github.com/bennycode/coinbase-pro-node/blob/ac883aa/src/order/OrderAPI.ts#L44)
+Defined in: [order/OrderAPI.ts:44](https://github.com/bennycode/coinbase-pro-node/blob/3350621/src/order/OrderAPI.ts#L44)
 
 ---
 
@@ -94,7 +94,7 @@ Defined in: [order/OrderAPI.ts:44](https://github.com/bennycode/coinbase-pro-nod
 
 • **post_only**: _false_
 
-Defined in: [order/OrderAPI.ts:45](https://github.com/bennycode/coinbase-pro-node/blob/ac883aa/src/order/OrderAPI.ts#L45)
+Defined in: [order/OrderAPI.ts:45](https://github.com/bennycode/coinbase-pro-node/blob/3350621/src/order/OrderAPI.ts#L45)
 
 ---
 
@@ -102,7 +102,7 @@ Defined in: [order/OrderAPI.ts:45](https://github.com/bennycode/coinbase-pro-nod
 
 • **price**: _string_
 
-Defined in: [order/OrderAPI.ts:46](https://github.com/bennycode/coinbase-pro-node/blob/ac883aa/src/order/OrderAPI.ts#L46)
+Defined in: [order/OrderAPI.ts:46](https://github.com/bennycode/coinbase-pro-node/blob/3350621/src/order/OrderAPI.ts#L46)
 
 ---
 
@@ -110,7 +110,7 @@ Defined in: [order/OrderAPI.ts:46](https://github.com/bennycode/coinbase-pro-nod
 
 • **product_id**: _string_
 
-Defined in: [order/OrderAPI.ts:47](https://github.com/bennycode/coinbase-pro-node/blob/ac883aa/src/order/OrderAPI.ts#L47)
+Defined in: [order/OrderAPI.ts:47](https://github.com/bennycode/coinbase-pro-node/blob/3350621/src/order/OrderAPI.ts#L47)
 
 ---
 
@@ -118,7 +118,7 @@ Defined in: [order/OrderAPI.ts:47](https://github.com/bennycode/coinbase-pro-nod
 
 • **profile_id**: _string_
 
-Defined in: [order/OrderAPI.ts:93](https://github.com/bennycode/coinbase-pro-node/blob/ac883aa/src/order/OrderAPI.ts#L93)
+Defined in: [order/OrderAPI.ts:93](https://github.com/bennycode/coinbase-pro-node/blob/3350621/src/order/OrderAPI.ts#L93)
 
 ---
 
@@ -126,7 +126,7 @@ Defined in: [order/OrderAPI.ts:93](https://github.com/bennycode/coinbase-pro-nod
 
 • **settled**: _boolean_
 
-Defined in: [order/OrderAPI.ts:48](https://github.com/bennycode/coinbase-pro-node/blob/ac883aa/src/order/OrderAPI.ts#L48)
+Defined in: [order/OrderAPI.ts:48](https://github.com/bennycode/coinbase-pro-node/blob/3350621/src/order/OrderAPI.ts#L48)
 
 ---
 
@@ -134,7 +134,7 @@ Defined in: [order/OrderAPI.ts:48](https://github.com/bennycode/coinbase-pro-nod
 
 • **side**: OrderSide
 
-Defined in: [order/OrderAPI.ts:49](https://github.com/bennycode/coinbase-pro-node/blob/ac883aa/src/order/OrderAPI.ts#L49)
+Defined in: [order/OrderAPI.ts:49](https://github.com/bennycode/coinbase-pro-node/blob/3350621/src/order/OrderAPI.ts#L49)
 
 ---
 
@@ -142,7 +142,7 @@ Defined in: [order/OrderAPI.ts:49](https://github.com/bennycode/coinbase-pro-nod
 
 • **size**: _string_
 
-Defined in: [order/OrderAPI.ts:50](https://github.com/bennycode/coinbase-pro-node/blob/ac883aa/src/order/OrderAPI.ts#L50)
+Defined in: [order/OrderAPI.ts:50](https://github.com/bennycode/coinbase-pro-node/blob/3350621/src/order/OrderAPI.ts#L50)
 
 ---
 
@@ -150,7 +150,7 @@ Defined in: [order/OrderAPI.ts:50](https://github.com/bennycode/coinbase-pro-nod
 
 • **status**: [_DONE_](../../enums/order/orderapi.orderstatus.md#done)
 
-Defined in: [order/OrderAPI.ts:94](https://github.com/bennycode/coinbase-pro-node/blob/ac883aa/src/order/OrderAPI.ts#L94)
+Defined in: [order/OrderAPI.ts:94](https://github.com/bennycode/coinbase-pro-node/blob/3350621/src/order/OrderAPI.ts#L94)
 
 ---
 
@@ -158,7 +158,7 @@ Defined in: [order/OrderAPI.ts:94](https://github.com/bennycode/coinbase-pro-nod
 
 • **time_in_force**: [_TimeInForce_](../../enums/order/orderapi.timeinforce.md)
 
-Defined in: [order/OrderAPI.ts:52](https://github.com/bennycode/coinbase-pro-node/blob/ac883aa/src/order/OrderAPI.ts#L52)
+Defined in: [order/OrderAPI.ts:52](https://github.com/bennycode/coinbase-pro-node/blob/3350621/src/order/OrderAPI.ts#L52)
 
 ---
 
@@ -166,4 +166,4 @@ Defined in: [order/OrderAPI.ts:52](https://github.com/bennycode/coinbase-pro-nod
 
 • **type**: [_OrderType_](../../enums/order/orderapi.ordertype.md)
 
-Defined in: [order/OrderAPI.ts:53](https://github.com/bennycode/coinbase-pro-node/blob/ac883aa/src/order/OrderAPI.ts#L53)
+Defined in: [order/OrderAPI.ts:53](https://github.com/bennycode/coinbase-pro-node/blob/3350621/src/order/OrderAPI.ts#L53)

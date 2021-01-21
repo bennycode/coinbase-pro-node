@@ -20,4 +20,4 @@
 
 • **id**: _string_
 
-Defined in: [user/UserAPI.ts:4](https://github.com/bennycode/coinbase-pro-node/blob/ac883aa/src/user/UserAPI.ts#L4)
+Defined in: [user/UserAPI.ts:4](https://github.com/bennycode/coinbase-pro-node/blob/3350621/src/user/UserAPI.ts#L4)

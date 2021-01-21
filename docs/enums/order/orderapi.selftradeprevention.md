@@ -19,7 +19,7 @@
 
 • **CANCEL_BOTH**: = "cb"
 
-Defined in: [order/OrderAPI.ts:24](https://github.com/bennycode/coinbase-pro-node/blob/ac883aa/src/order/OrderAPI.ts#L24)
+Defined in: [order/OrderAPI.ts:24](https://github.com/bennycode/coinbase-pro-node/blob/3350621/src/order/OrderAPI.ts#L24)
 
 ---
 
@@ -27,7 +27,7 @@ Defined in: [order/OrderAPI.ts:24](https://github.com/bennycode/coinbase-pro-nod
 
 • **CANCEL_NEWEST**: = "cn"
 
-Defined in: [order/OrderAPI.ts:25](https://github.com/bennycode/coinbase-pro-node/blob/ac883aa/src/order/OrderAPI.ts#L25)
+Defined in: [order/OrderAPI.ts:25](https://github.com/bennycode/coinbase-pro-node/blob/3350621/src/order/OrderAPI.ts#L25)
 
 ---
 
@@ -35,7 +35,7 @@ Defined in: [order/OrderAPI.ts:25](https://github.com/bennycode/coinbase-pro-nod
 
 • **CANCEL_OLDEST**: = "co"
 
-Defined in: [order/OrderAPI.ts:26](https://github.com/bennycode/coinbase-pro-node/blob/ac883aa/src/order/OrderAPI.ts#L26)
+Defined in: [order/OrderAPI.ts:26](https://github.com/bennycode/coinbase-pro-node/blob/3350621/src/order/OrderAPI.ts#L26)
 
 ---
 
@@ -43,4 +43,4 @@ Defined in: [order/OrderAPI.ts:26](https://github.com/bennycode/coinbase-pro-nod
 
 • **DECREMENT_AND_CANCEL**: = "dc"
 
-Defined in: [order/OrderAPI.ts:27](https://github.com/bennycode/coinbase-pro-node/blob/ac883aa/src/order/OrderAPI.ts#L27)
+Defined in: [order/OrderAPI.ts:27](https://github.com/bennycode/coinbase-pro-node/blob/3350621/src/order/OrderAPI.ts#L27)
