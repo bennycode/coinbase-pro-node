@@ -49,6 +49,8 @@ export class CoinbasePro {
     },
   };
 
+  private clockSkew: number = -1;
+
   constructor(
     auth: ClientAuthentication = {
       apiKey: '',
@@ -71,9 +73,16 @@ export class CoinbasePro {
     }
 
     const signRequest = async (setup: RequestSetup): Promise<SignedRequest> => {
-      const time = await this.rest.time.getTime();
-      const clockSkew = await this.rest.time.getClockSkew(time);
-      return RequestSigner.signRequest(auth, setup, clockSkew);
+      /**
+       * Cache clock skew to reduce the amount of API requests:
+       * https://github.com/bennycode/coinbase-pro-node/issues/368#issuecomment-762122575
+       */
+      if (this.clockSkew === -1) {
+        const time = await this.rest.time.getTime();
+        this.clockSkew = await this.rest.time.getClockSkew(time);
+      }
+
+      return RequestSigner.signRequest(auth, setup, this.clockSkew);
     };
 
     this.rest = new RESTClient(this.url.REST, signRequest);
