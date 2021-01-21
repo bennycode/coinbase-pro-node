@@ -45,13 +45,11 @@ describe('TimeAPI', () => {
       const mockDate = new Date(1610486424105);
       jasmine.clock().mockDate(mockDate);
 
-      const mockPayload: string = '{"iso":"2021-01-12T21:20:24Z","epoch":1610486424.}';
+      const mockPayload = '{"iso":"2021-01-12T21:20:24Z","epoch":1610486424.}';
 
       const timeApi = new TimeAPI(global.REST_URL);
 
-      spyOn(timeApi, 'getTime').and.returnValue(Promise.resolve(mockPayload));
-
-      const clockSkew = await timeApi.getClockSkew();
+      const clockSkew = await timeApi.getClockSkew(mockPayload);
 
       expect(clockSkew).toBe(-0.10500001907348633);
     });

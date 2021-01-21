@@ -71,7 +71,8 @@ export class CoinbasePro {
     }
 
     const signRequest = async (setup: RequestSetup): Promise<SignedRequest> => {
-      const clockSkew = await this.rest.time.getClockSkew();
+      const time = await this.rest.time.getTime();
+      const clockSkew = await this.rest.time.getClockSkew(time);
       return RequestSigner.signRequest(auth, setup, clockSkew);
     };
 

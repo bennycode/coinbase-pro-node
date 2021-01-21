@@ -20,7 +20,7 @@ export class TimeAPI {
    *
    * @see https://docs.pro.coinbase.com/#time
    */
-  async getTime(): Promise<TimeSkew | string> {
+  async getTime(): Promise<TimeSkew> {
     const response = await axios.get<TimeSkew>(`${this.baseURL}${TimeAPI.URL.TIME}`, {
       // This trick forces axios to set JSON headers
       data: {},
@@ -31,8 +31,7 @@ export class TimeAPI {
   /**
    * Get the absolute difference between server time and local time.
    */
-  async getClockSkew(): Promise<number> {
-    const time = await this.getTime();
+  async getClockSkew(time: TimeSkew | string): Promise<number> {
     /** @see https://github.com/bennycode/coinbase-pro-node/issues/354 */
     const epoch = typeof time === 'string' ? parseFloat(time.match(/epoch":(.*)\./i)![1]) : time.epoch;
     const now = Date.now() / 1000;
