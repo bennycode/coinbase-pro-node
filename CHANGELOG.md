@@ -1,3 +1,20 @@
+#### 2.16.4 (2021-01-21)
+
+##### Chores
+
+- **deps-dev:**
+  - bump eslint from 7.17.0 to 7.18.0 ([#371](https://github.com/bennycode/coinbase-pro-node/pull/371)) ([9ed9e0cd](https://github.com/bennycode/coinbase-pro-node/commit/9ed9e0cd0b24e59dcf8e644c58c4696ab10b23cd))
+  - bump typedoc from 0.20.14 to 0.20.16 ([#370](https://github.com/bennycode/coinbase-pro-node/pull/370)) ([640227fe](https://github.com/bennycode/coinbase-pro-node/commit/640227fee2d01e9e3579ce393f9bc016c710d5a2))
+  - bump husky from 4.3.7 to 4.3.8 ([#369](https://github.com/bennycode/coinbase-pro-node/pull/369)) ([9d0b511b](https://github.com/bennycode/coinbase-pro-node/commit/9d0b511bf1c857de7762df35a37aa14e7f6f61a6))
+
+##### New Features
+
+- Cache clock skew ([#373](https://github.com/bennycode/coinbase-pro-node/pull/373)) ([7e20b50e](https://github.com/bennycode/coinbase-pro-node/commit/7e20b50ed00d2ea17e3b76155b17f4b4325bebda))
+
+##### Refactors
+
+- Add backward compatibility for `getTime` contract ([bfd1369f](https://github.com/bennycode/coinbase-pro-node/commit/bfd1369faa37b61b2e445d8d28ce336ede86660a))
+
 #### 2.16.3 (2021-01-14)
 
 ##### Bug Fixes
