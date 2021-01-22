@@ -260,6 +260,7 @@ export class WebSocketClient extends EventEmitter {
     this.socket = new ReconnectingWebSocket(this.baseURL, [], options);
 
     this.socket.onclose = (event: CloseEvent): void => {
+      clearInterval(this.pingint); // Issue #374. Keep WebSocket alive
       this.emit(WebSocketEvent.ON_CLOSE, event);
     };
 
@@ -296,9 +297,14 @@ export class WebSocketClient extends EventEmitter {
 
     this.socket.onopen = (): void => {
       this.emit(WebSocketEvent.ON_OPEN);
+      this.pingint=setInterval(this.ping, 60000, this.socket); // Issue #374. Keep WebSocket alive
     };
 
     return this.socket;
+  }
+
+  ping(socket) { // Issue #374. Keep WebSocket alive
+    socket._ws.ping(() => {});
   }
 
   disconnect(reason: string = 'Unknown reason'): void {
