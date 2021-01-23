@@ -240,7 +240,7 @@ export class WebSocketClient extends EventEmitter {
   private pingInterval?: NodeJS.Timeout;
   private pongTimeout?: NodeJS.Timeout;
 
-  private readonly pingTime: number;
+  private pingTime: number;
   private readonly pongTime: number;
 
   constructor(baseURL: string, private readonly signRequest: (setup: RequestSetup) => Promise<SignedRequest>) {

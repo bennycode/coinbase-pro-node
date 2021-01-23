@@ -22,6 +22,7 @@
     "@typescript-eslint/no-namespace": "off",
     "@typescript-eslint/no-this-alias": "error",
     "@typescript-eslint/prefer-for-of": "off",
+    "@typescript-eslint/prefer-readonly": "off",
     "@typescript-eslint/typedef": "off",
     "curly": "error",
     "dot-notation": "off",
