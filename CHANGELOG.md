@@ -1,3 +1,9 @@
+### 2.17.0 (2021-01-23)
+
+##### New Features
+
+- Keep WebSocket alive with ping / pong messages ([#377](https://github.com/bennycode/coinbase-pro-node/pull/377)) ([8d293018](https://github.com/bennycode/coinbase-pro-node/commit/8d29301821b989417cef47ccf20b1b96e2074fb7))
+
 #### 2.16.4 (2021-01-21)
 
 ##### Chores
