@@ -237,9 +237,17 @@ export class WebSocketClient extends EventEmitter {
   private readonly baseURL: string;
   private socket: ReconnectingWebSocket | undefined;
 
+  private pingInterval?: NodeJS.Timeout;
+  private pongTimeout?: NodeJS.Timeout;
+
+  private readonly pingTime: number;
+  private readonly pongTime: number;
+
   constructor(baseURL: string, private readonly signRequest: (setup: RequestSetup) => Promise<SignedRequest>) {
     super();
     this.baseURL = baseURL;
+    this.pingTime = 10_000;
+    this.pongTime = this.pingTime * 1.5;
   }
 
   /**
@@ -260,10 +268,12 @@ export class WebSocketClient extends EventEmitter {
     this.socket = new ReconnectingWebSocket(this.baseURL, [], options);
 
     this.socket.onclose = (event: CloseEvent): void => {
+      this.cleanupListener();
       this.emit(WebSocketEvent.ON_CLOSE, event);
     };
 
     this.socket.onerror = (event: ErrorEvent): void => {
+      this.cleanupListener();
       this.emit(WebSocketEvent.ON_ERROR, event);
     };
 
@@ -296,6 +306,17 @@ export class WebSocketClient extends EventEmitter {
 
     this.socket.onopen = (): void => {
       this.emit(WebSocketEvent.ON_OPEN);
+      /**
+       * The 'ws' package for Node.js exposes a "ping" function, but the WebSocket API in browsers doesn't. Since
+       * "coinbase-pro-node" can run in both environments (Node.js & web browsers), we have to check for the existence
+       * of "ping".
+       *
+       * Unfortunately, the "real" WebSocket connection isn't exposed from the "reconnecting-websocket" package:
+       * https://github.com/pladaria/reconnecting-websocket/pull/148
+       */
+      const realWebSocket = this.socket?._ws;
+      const hasPingSupport = realWebSocket && typeof realWebSocket.ping === 'function';
+      this.setupHeartbeat(hasPingSupport, realWebSocket);
     };
 
     return this.socket;
@@ -306,20 +327,6 @@ export class WebSocketClient extends EventEmitter {
       this.socket.close(WebSocketClient.CLOSE_EVENT_CODE.NORMAL_CLOSURE, reason);
       this.socket = undefined;
     }
-  }
-
-  subscribe(channel: WebSocketChannel | WebSocketChannel[]): void {
-    this.sendMessage({
-      channels: Array.isArray(channel) ? channel : [channel],
-      type: WebSocketRequestType.SUBSCRIBE,
-    }).finally(() => {});
-  }
-
-  unsubscribe(channel: WebSocketChannelName | WebSocketChannel | WebSocketChannel[]): void {
-    this.sendMessage({
-      channels: this.mapChannels(channel),
-      type: WebSocketRequestType.UNSUBSCRIBE,
-    }).finally(() => {});
   }
 
   async sendMessage(message: WebSocketRequest): Promise<void> {
@@ -343,6 +350,61 @@ export class WebSocketClient extends EventEmitter {
     this.socket.send(JSON.stringify(message));
   }
 
+  subscribe(channel: WebSocketChannel | WebSocketChannel[]): void {
+    this.sendMessage({
+      channels: Array.isArray(channel) ? channel : [channel],
+      type: WebSocketRequestType.SUBSCRIBE,
+    }).finally(() => {});
+  }
+
+  unsubscribe(channel: WebSocketChannelName | WebSocketChannel | WebSocketChannel[]): void {
+    this.sendMessage({
+      channels: this.mapChannels(channel),
+      type: WebSocketRequestType.UNSUBSCRIBE,
+    }).finally(() => {});
+  }
+
+  private cleanupListener(): void {
+    if (this.pingInterval) {
+      clearInterval(this.pingInterval);
+    }
+
+    if (this.pongTimeout) {
+      clearTimeout(this.pongTimeout);
+    }
+  }
+
+  private heartbeat(): void {
+    if (this.pongTimeout) {
+      clearTimeout(this.pongTimeout);
+    }
+
+    /**
+     * Enforce a reconnect when not receiving any 'pong' from Coinbase Pro in time.
+     * @see https://github.com/bennycode/coinbase-pro-node/issues/374
+     */
+    this.pongTimeout = setTimeout(this.onPongTimeout, this.pongTime);
+  }
+
+  private onPongTimeout(): void {
+    this.socket?.reconnect();
+  }
+
+  /**
+   * Setup a heartbeat with ping/pong interval to avoid broken WebSocket connections:
+   * @see https://github.com/websockets/ws#how-to-detect-and-close-broken-connections
+   */
+  private setupHeartbeat(hasPingSupport: boolean, webSocket: WebSocket): void {
+    if (hasPingSupport) {
+      // Subscribe to pongs
+      webSocket.on('pong', this.heartbeat);
+
+      // Send pings
+      this.pingInterval = (setInterval(() => {
+        webSocket.ping(() => {});
+      }, this.pingTime) as unknown) as NodeJS.Timeout;
+    }
+  }
   private mergeOptions(reconnectOptions?: Options): Options {
     const defaultOptions: Options = {
       WebSocket,
