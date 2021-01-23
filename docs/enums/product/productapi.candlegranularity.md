@@ -23,7 +23,7 @@ Accepted granularity in seconds to group historic rates.
 
 • **FIFTEEN_MINUTES**: = 900
 
-Defined in: [product/ProductAPI.ts:64](https://github.com/bennycode/coinbase-pro-node/blob/3350621/src/product/ProductAPI.ts#L64)
+Defined in: [product/ProductAPI.ts:64](https://github.com/bennycode/coinbase-pro-node/blob/bf1bcdd/src/product/ProductAPI.ts#L64)
 
 ---
 
@@ -31,7 +31,7 @@ Defined in: [product/ProductAPI.ts:64](https://github.com/bennycode/coinbase-pro
 
 • **FIVE_MINUTES**: = 300
 
-Defined in: [product/ProductAPI.ts:63](https://github.com/bennycode/coinbase-pro-node/blob/3350621/src/product/ProductAPI.ts#L63)
+Defined in: [product/ProductAPI.ts:63](https://github.com/bennycode/coinbase-pro-node/blob/bf1bcdd/src/product/ProductAPI.ts#L63)
 
 ---
 
@@ -39,7 +39,7 @@ Defined in: [product/ProductAPI.ts:63](https://github.com/bennycode/coinbase-pro
 
 • **ONE_DAY**: = 86400
 
-Defined in: [product/ProductAPI.ts:67](https://github.com/bennycode/coinbase-pro-node/blob/3350621/src/product/ProductAPI.ts#L67)
+Defined in: [product/ProductAPI.ts:67](https://github.com/bennycode/coinbase-pro-node/blob/bf1bcdd/src/product/ProductAPI.ts#L67)
 
 ---
 
@@ -47,7 +47,7 @@ Defined in: [product/ProductAPI.ts:67](https://github.com/bennycode/coinbase-pro
 
 • **ONE_HOUR**: = 3600
 
-Defined in: [product/ProductAPI.ts:65](https://github.com/bennycode/coinbase-pro-node/blob/3350621/src/product/ProductAPI.ts#L65)
+Defined in: [product/ProductAPI.ts:65](https://github.com/bennycode/coinbase-pro-node/blob/bf1bcdd/src/product/ProductAPI.ts#L65)
 
 ---
 
@@ -55,7 +55,7 @@ Defined in: [product/ProductAPI.ts:65](https://github.com/bennycode/coinbase-pro
 
 • **ONE_MINUTE**: = 60
 
-Defined in: [product/ProductAPI.ts:62](https://github.com/bennycode/coinbase-pro-node/blob/3350621/src/product/ProductAPI.ts#L62)
+Defined in: [product/ProductAPI.ts:62](https://github.com/bennycode/coinbase-pro-node/blob/bf1bcdd/src/product/ProductAPI.ts#L62)
 
 ---
 
@@ -63,4 +63,4 @@ Defined in: [product/ProductAPI.ts:62](https://github.com/bennycode/coinbase-pro
 
 • **SIX_HOURS**: = 21600
 
-Defined in: [product/ProductAPI.ts:66](https://github.com/bennycode/coinbase-pro-node/blob/3350621/src/product/ProductAPI.ts#L66)
+Defined in: [product/ProductAPI.ts:66](https://github.com/bennycode/coinbase-pro-node/blob/bf1bcdd/src/product/ProductAPI.ts#L66)

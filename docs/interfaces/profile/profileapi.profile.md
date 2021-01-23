@@ -25,7 +25,7 @@
 
 • **active**: _boolean_
 
-Defined in: [profile/ProfileAPI.ts:7](https://github.com/bennycode/coinbase-pro-node/blob/3350621/src/profile/ProfileAPI.ts#L7)
+Defined in: [profile/ProfileAPI.ts:7](https://github.com/bennycode/coinbase-pro-node/blob/bf1bcdd/src/profile/ProfileAPI.ts#L7)
 
 ---
 
@@ -33,7 +33,7 @@ Defined in: [profile/ProfileAPI.ts:7](https://github.com/bennycode/coinbase-pro-
 
 • **created_at**: _string_
 
-Defined in: [profile/ProfileAPI.ts:8](https://github.com/bennycode/coinbase-pro-node/blob/3350621/src/profile/ProfileAPI.ts#L8)
+Defined in: [profile/ProfileAPI.ts:8](https://github.com/bennycode/coinbase-pro-node/blob/bf1bcdd/src/profile/ProfileAPI.ts#L8)
 
 ---
 
@@ -41,7 +41,7 @@ Defined in: [profile/ProfileAPI.ts:8](https://github.com/bennycode/coinbase-pro-
 
 • **id**: _string_
 
-Defined in: [profile/ProfileAPI.ts:9](https://github.com/bennycode/coinbase-pro-node/blob/3350621/src/profile/ProfileAPI.ts#L9)
+Defined in: [profile/ProfileAPI.ts:9](https://github.com/bennycode/coinbase-pro-node/blob/bf1bcdd/src/profile/ProfileAPI.ts#L9)
 
 ---
 
@@ -49,7 +49,7 @@ Defined in: [profile/ProfileAPI.ts:9](https://github.com/bennycode/coinbase-pro-
 
 • **is_default**: _boolean_
 
-Defined in: [profile/ProfileAPI.ts:10](https://github.com/bennycode/coinbase-pro-node/blob/3350621/src/profile/ProfileAPI.ts#L10)
+Defined in: [profile/ProfileAPI.ts:10](https://github.com/bennycode/coinbase-pro-node/blob/bf1bcdd/src/profile/ProfileAPI.ts#L10)
 
 ---
 
@@ -57,7 +57,7 @@ Defined in: [profile/ProfileAPI.ts:10](https://github.com/bennycode/coinbase-pro
 
 • **name**: _string_
 
-Defined in: [profile/ProfileAPI.ts:11](https://github.com/bennycode/coinbase-pro-node/blob/3350621/src/profile/ProfileAPI.ts#L11)
+Defined in: [profile/ProfileAPI.ts:11](https://github.com/bennycode/coinbase-pro-node/blob/bf1bcdd/src/profile/ProfileAPI.ts#L11)
 
 ---
 
@@ -65,4 +65,4 @@ Defined in: [profile/ProfileAPI.ts:11](https://github.com/bennycode/coinbase-pro
 
 • **user_id**: _string_
 
-Defined in: [profile/ProfileAPI.ts:12](https://github.com/bennycode/coinbase-pro-node/blob/3350621/src/profile/ProfileAPI.ts#L12)
+Defined in: [profile/ProfileAPI.ts:12](https://github.com/bennycode/coinbase-pro-node/blob/bf1bcdd/src/profile/ProfileAPI.ts#L12)

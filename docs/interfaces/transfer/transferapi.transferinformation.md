@@ -30,7 +30,7 @@
 
 • **account_id**: _string_
 
-Defined in: [transfer/TransferAPI.ts:5](https://github.com/bennycode/coinbase-pro-node/blob/3350621/src/transfer/TransferAPI.ts#L5)
+Defined in: [transfer/TransferAPI.ts:5](https://github.com/bennycode/coinbase-pro-node/blob/bf1bcdd/src/transfer/TransferAPI.ts#L5)
 
 ---
 
@@ -38,7 +38,7 @@ Defined in: [transfer/TransferAPI.ts:5](https://github.com/bennycode/coinbase-pr
 
 • **amount**: _string_
 
-Defined in: [transfer/TransferAPI.ts:6](https://github.com/bennycode/coinbase-pro-node/blob/3350621/src/transfer/TransferAPI.ts#L6)
+Defined in: [transfer/TransferAPI.ts:6](https://github.com/bennycode/coinbase-pro-node/blob/bf1bcdd/src/transfer/TransferAPI.ts#L6)
 
 ---
 
@@ -46,7 +46,7 @@ Defined in: [transfer/TransferAPI.ts:6](https://github.com/bennycode/coinbase-pr
 
 • `Optional` **canceled_at**: _undefined_ \| _string_
 
-Defined in: [transfer/TransferAPI.ts:7](https://github.com/bennycode/coinbase-pro-node/blob/3350621/src/transfer/TransferAPI.ts#L7)
+Defined in: [transfer/TransferAPI.ts:7](https://github.com/bennycode/coinbase-pro-node/blob/bf1bcdd/src/transfer/TransferAPI.ts#L7)
 
 ---
 
@@ -54,7 +54,7 @@ Defined in: [transfer/TransferAPI.ts:7](https://github.com/bennycode/coinbase-pr
 
 • `Optional` **completed_at**: _undefined_ \| _string_
 
-Defined in: [transfer/TransferAPI.ts:8](https://github.com/bennycode/coinbase-pro-node/blob/3350621/src/transfer/TransferAPI.ts#L8)
+Defined in: [transfer/TransferAPI.ts:8](https://github.com/bennycode/coinbase-pro-node/blob/bf1bcdd/src/transfer/TransferAPI.ts#L8)
 
 ---
 
@@ -62,7 +62,7 @@ Defined in: [transfer/TransferAPI.ts:8](https://github.com/bennycode/coinbase-pr
 
 • **created_at**: _string_
 
-Defined in: [transfer/TransferAPI.ts:9](https://github.com/bennycode/coinbase-pro-node/blob/3350621/src/transfer/TransferAPI.ts#L9)
+Defined in: [transfer/TransferAPI.ts:9](https://github.com/bennycode/coinbase-pro-node/blob/bf1bcdd/src/transfer/TransferAPI.ts#L9)
 
 ---
 
@@ -85,7 +85,7 @@ Defined in: [transfer/TransferAPI.ts:9](https://github.com/bennycode/coinbase-pr
 | `destination_tag_name?`       | _undefined_ \| _string_ |
 | `sent_to_address?`            | _undefined_ \| _string_ |
 
-Defined in: [transfer/TransferAPI.ts:10](https://github.com/bennycode/coinbase-pro-node/blob/3350621/src/transfer/TransferAPI.ts#L10)
+Defined in: [transfer/TransferAPI.ts:10](https://github.com/bennycode/coinbase-pro-node/blob/bf1bcdd/src/transfer/TransferAPI.ts#L10)
 
 ---
 
@@ -93,7 +93,7 @@ Defined in: [transfer/TransferAPI.ts:10](https://github.com/bennycode/coinbase-p
 
 • **id**: _string_
 
-Defined in: [transfer/TransferAPI.ts:22](https://github.com/bennycode/coinbase-pro-node/blob/3350621/src/transfer/TransferAPI.ts#L22)
+Defined in: [transfer/TransferAPI.ts:22](https://github.com/bennycode/coinbase-pro-node/blob/bf1bcdd/src/transfer/TransferAPI.ts#L22)
 
 ---
 
@@ -101,7 +101,7 @@ Defined in: [transfer/TransferAPI.ts:22](https://github.com/bennycode/coinbase-p
 
 • `Optional` **processed_at**: _undefined_ \| _string_
 
-Defined in: [transfer/TransferAPI.ts:23](https://github.com/bennycode/coinbase-pro-node/blob/3350621/src/transfer/TransferAPI.ts#L23)
+Defined in: [transfer/TransferAPI.ts:23](https://github.com/bennycode/coinbase-pro-node/blob/bf1bcdd/src/transfer/TransferAPI.ts#L23)
 
 ---
 
@@ -109,7 +109,7 @@ Defined in: [transfer/TransferAPI.ts:23](https://github.com/bennycode/coinbase-p
 
 • **type**: _string_
 
-Defined in: [transfer/TransferAPI.ts:24](https://github.com/bennycode/coinbase-pro-node/blob/3350621/src/transfer/TransferAPI.ts#L24)
+Defined in: [transfer/TransferAPI.ts:24](https://github.com/bennycode/coinbase-pro-node/blob/bf1bcdd/src/transfer/TransferAPI.ts#L24)
 
 ---
 
@@ -117,7 +117,7 @@ Defined in: [transfer/TransferAPI.ts:24](https://github.com/bennycode/coinbase-p
 
 • **user_id**: _string_
 
-Defined in: [transfer/TransferAPI.ts:25](https://github.com/bennycode/coinbase-pro-node/blob/3350621/src/transfer/TransferAPI.ts#L25)
+Defined in: [transfer/TransferAPI.ts:25](https://github.com/bennycode/coinbase-pro-node/blob/bf1bcdd/src/transfer/TransferAPI.ts#L25)
 
 ---
 
@@ -125,4 +125,4 @@ Defined in: [transfer/TransferAPI.ts:25](https://github.com/bennycode/coinbase-p
 
 • `Optional` **user_nonce**: _undefined_ \| _string_
 
-Defined in: [transfer/TransferAPI.ts:26](https://github.com/bennycode/coinbase-pro-node/blob/3350621/src/transfer/TransferAPI.ts#L26)
+Defined in: [transfer/TransferAPI.ts:26](https://github.com/bennycode/coinbase-pro-node/blob/bf1bcdd/src/transfer/TransferAPI.ts#L26)
