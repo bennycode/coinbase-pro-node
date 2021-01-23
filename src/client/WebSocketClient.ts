@@ -260,6 +260,7 @@ export class WebSocketClient extends EventEmitter {
     this.socket = new ReconnectingWebSocket(this.baseURL, [], options);
 
     this.socket.onclose = (event: CloseEvent): void => {
+      clearInterval(this.pingint);
       this.emit(WebSocketEvent.ON_CLOSE, event);
     };
 
@@ -296,6 +297,7 @@ export class WebSocketClient extends EventEmitter {
 
     this.socket.onopen = (): void => {
       this.emit(WebSocketEvent.ON_OPEN);
+      const pingint: ReturnType<typeof setInterval> = setInterval(() => { this.socket._ws.ping( () => {} )} , 60000);
     };
 
     return this.socket;
