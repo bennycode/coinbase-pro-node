@@ -314,7 +314,7 @@ export class WebSocketClient extends EventEmitter {
        * Unfortunately, the "real" WebSocket connection isn't exposed from the "reconnecting-websocket" package:
        * https://github.com/pladaria/reconnecting-websocket/pull/148
        */
-      const realWebSocket = this.socket?._ws;
+      const realWebSocket = this.socket?.['_ws'];
       const hasPingSupport = realWebSocket && typeof realWebSocket.ping === 'function';
       this.setupHeartbeat(hasPingSupport, realWebSocket);
     };
@@ -405,6 +405,7 @@ export class WebSocketClient extends EventEmitter {
       }, this.pingTime) as unknown) as NodeJS.Timeout;
     }
   }
+
   private mergeOptions(reconnectOptions?: Options): Options {
     const defaultOptions: Options = {
       WebSocket,

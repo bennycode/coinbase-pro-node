@@ -299,7 +299,7 @@ describe('WebSocketClient', () => {
       });
 
       const ws = createWebSocketClient();
-      ws.pingTime = 100;
+      ws['pingTime'] = 100;
 
       ws.connect();
     });
@@ -308,23 +308,23 @@ describe('WebSocketClient', () => {
   describe('heartbeat', () => {
     it('resets pong timeouts', () => {
       const ws = createWebSocketClient();
-      ws.pongTimeout = setTimeout(() => {
+      ws['pongTimeout'] = setTimeout(() => {
         fail('I should not get invoked');
       }, 1000);
-      ws.heartbeat();
+      ws['heartbeat']();
     });
   });
 
   describe('onPongTimeout', () => {
     it('does not fail when there is no active socket', () => {
       const ws = createWebSocketClient();
-      ws.onPongTimeout();
+      ws['onPongTimeout']();
     });
 
     it('reconnects a socket when the pong timeout is exceeded', () => {
       const ws = createWebSocketClient();
       ws.connect();
-      ws.onPongTimeout();
+      ws['onPongTimeout']();
     });
   });
 
@@ -332,15 +332,15 @@ describe('WebSocketClient', () => {
     it('removes ping & pong listener', () => {
       const ws = createWebSocketClient();
 
-      ws.pingInterval = setInterval(() => {
+      ws['pingInterval'] = setInterval(() => {
         fail('I should not get invoked');
       }, 1000);
 
-      ws.pongTimeout = setTimeout(() => {
+      ws['pongTimeout'] = setTimeout(() => {
         fail('I should not get invoked');
       }, 1000);
 
-      ws.cleanupListener();
+      ws['cleanupListener']();
     });
   });
 });
