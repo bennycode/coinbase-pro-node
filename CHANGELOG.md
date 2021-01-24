@@ -1,3 +1,21 @@
+#### 2.17.1 (2021-01-24)
+
+##### Chores
+
+- **deps-dev:**
+  - bump @typescript-eslint/eslint-plugin ([#383](https://github.com/bennycode/coinbase-pro-node/pull/383)) ([bf66ca2d](https://github.com/bennycode/coinbase-pro-node/commit/bf66ca2d0cd455653aa5feb77d6f68bd5852f971))
+  - bump @types/jasmine from 3.6.2 to 3.6.3 ([#382](https://github.com/bennycode/coinbase-pro-node/pull/382)) ([c2acdc2b](https://github.com/bennycode/coinbase-pro-node/commit/c2acdc2b26e50d4fe7edeb71ef55e2d3f3043978))
+  - bump typedoc from 0.20.16 to 0.20.17 ([#381](https://github.com/bennycode/coinbase-pro-node/pull/381)) ([63428c28](https://github.com/bennycode/coinbase-pro-node/commit/63428c28daa2cb4b53ce04f4fdd0cf025dfc21e0))
+  - bump jasmine from 3.6.3 to 3.6.4 ([#385](https://github.com/bennycode/coinbase-pro-node/pull/385)) ([b4b24051](https://github.com/bennycode/coinbase-pro-node/commit/b4b240518469f38e8a639eedcb9f9dee3b00ce7b))
+  - bump nock from 13.0.5 to 13.0.6 ([#384](https://github.com/bennycode/coinbase-pro-node/pull/384)) ([7cb7f7be](https://github.com/bennycode/coinbase-pro-node/commit/7cb7f7befe995b993014b697a331aa8761ade7be))
+  - bump typedoc-plugin-markdown from 3.4.0 to 3.4.3 ([#380](https://github.com/bennycode/coinbase-pro-node/pull/380)) ([3c1a76d8](https://github.com/bennycode/coinbase-pro-node/commit/3c1a76d8f95ec7a2de81ac6e71c66576ece1eb3f))
+  - bump eslint-config-prettier from 7.1.0 to 7.2.0 ([#379](https://github.com/bennycode/coinbase-pro-node/pull/379)) ([3f6745f0](https://github.com/bennycode/coinbase-pro-node/commit/3f6745f0663fff91481b32a7db7dcbc758b38bde))
+  - bump @typescript-eslint/parser from 4.13.0 to 4.14.0 ([#378](https://github.com/bennycode/coinbase-pro-node/pull/378)) ([8087e2c9](https://github.com/bennycode/coinbase-pro-node/commit/8087e2c9c7e0b405ad743f0bd6ad232b3d2e3de4))
+
+##### Bug Fixes
+
+- Bind context of heartbeat ([53050966](https://github.com/bennycode/coinbase-pro-node/commit/530509664dcfefaa671f1df725f576bb46e2a18f))
+
 ### 2.17.0 (2021-01-23)
 
 ##### New Features
