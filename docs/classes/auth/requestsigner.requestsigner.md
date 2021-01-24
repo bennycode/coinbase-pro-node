@@ -42,4 +42,4 @@
 
 **Returns:** [_SignedRequest_](../../interfaces/auth/requestsigner.signedrequest.md)
 
-Defined in: [auth/RequestSigner.ts:20](https://github.com/bennycode/coinbase-pro-node/blob/bf1bcdd/src/auth/RequestSigner.ts#L20)
+Defined in: [auth/RequestSigner.ts:20](https://github.com/bennycode/coinbase-pro-node/blob/aa07e6d/src/auth/RequestSigner.ts#L20)

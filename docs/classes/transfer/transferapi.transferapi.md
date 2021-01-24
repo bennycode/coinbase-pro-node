@@ -37,7 +37,7 @@
 
 **Returns:** [_TransferAPI_](transferapi.transferapi.md)
 
-Defined in: [transfer/TransferAPI.ts:37](https://github.com/bennycode/coinbase-pro-node/blob/bf1bcdd/src/transfer/TransferAPI.ts#L37)
+Defined in: [transfer/TransferAPI.ts:37](https://github.com/bennycode/coinbase-pro-node/blob/aa07e6d/src/transfer/TransferAPI.ts#L37)
 
 ## Properties
 
@@ -51,7 +51,7 @@ Defined in: [transfer/TransferAPI.ts:37](https://github.com/bennycode/coinbase-p
 | ----------- | -------- |
 | `TRANSFERS` | _string_ |
 
-Defined in: [transfer/TransferAPI.ts:35](https://github.com/bennycode/coinbase-pro-node/blob/bf1bcdd/src/transfer/TransferAPI.ts#L35)
+Defined in: [transfer/TransferAPI.ts:35](https://github.com/bennycode/coinbase-pro-node/blob/aa07e6d/src/transfer/TransferAPI.ts#L35)
 
 ## Methods
 
@@ -73,7 +73,7 @@ Get information on a single deposit/withdrawal.
 
 **Returns:** _Promise_<[_TransferInformation_](../../interfaces/transfer/transferapi.transferinformation.md)\>
 
-Defined in: [transfer/TransferAPI.ts:81](https://github.com/bennycode/coinbase-pro-node/blob/bf1bcdd/src/transfer/TransferAPI.ts#L81)
+Defined in: [transfer/TransferAPI.ts:81](https://github.com/bennycode/coinbase-pro-node/blob/aa07e6d/src/transfer/TransferAPI.ts#L81)
 
 ---
 
@@ -97,4 +97,4 @@ Get a list of deposits/withdrawals from the profile of the API key, in descendin
 
 **Returns:** _Promise_<_PaginatedData_<[_TransferInformation_](../../interfaces/transfer/transferapi.transferinformation.md)\>\>
 
-Defined in: [transfer/TransferAPI.ts:48](https://github.com/bennycode/coinbase-pro-node/blob/bf1bcdd/src/transfer/TransferAPI.ts#L48)
+Defined in: [transfer/TransferAPI.ts:48](https://github.com/bennycode/coinbase-pro-node/blob/aa07e6d/src/transfer/TransferAPI.ts#L48)

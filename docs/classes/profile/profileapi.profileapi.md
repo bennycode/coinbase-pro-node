@@ -38,7 +38,7 @@
 
 **Returns:** [_ProfileAPI_](profileapi.profileapi.md)
 
-Defined in: [profile/ProfileAPI.ts:25](https://github.com/bennycode/coinbase-pro-node/blob/bf1bcdd/src/profile/ProfileAPI.ts#L25)
+Defined in: [profile/ProfileAPI.ts:25](https://github.com/bennycode/coinbase-pro-node/blob/aa07e6d/src/profile/ProfileAPI.ts#L25)
 
 ## Properties
 
@@ -52,7 +52,7 @@ Defined in: [profile/ProfileAPI.ts:25](https://github.com/bennycode/coinbase-pro
 | ---------- | -------- |
 | `PROFILES` | _string_ |
 
-Defined in: [profile/ProfileAPI.ts:23](https://github.com/bennycode/coinbase-pro-node/blob/bf1bcdd/src/profile/ProfileAPI.ts#L23)
+Defined in: [profile/ProfileAPI.ts:23](https://github.com/bennycode/coinbase-pro-node/blob/aa07e6d/src/profile/ProfileAPI.ts#L23)
 
 ## Methods
 
@@ -72,7 +72,7 @@ Get a single profile by profile ID. This endpoint requires the “view” permis
 
 A single profile
 
-Defined in: [profile/ProfileAPI.ts:48](https://github.com/bennycode/coinbase-pro-node/blob/bf1bcdd/src/profile/ProfileAPI.ts#L48)
+Defined in: [profile/ProfileAPI.ts:48](https://github.com/bennycode/coinbase-pro-node/blob/aa07e6d/src/profile/ProfileAPI.ts#L48)
 
 ---
 
@@ -86,7 +86,7 @@ List your profiles. Profiles are equivalent to portfolios. This endpoint require
 
 **Returns:** _Promise_<[_Profile_](../../interfaces/profile/profileapi.profile.md)[]\>
 
-Defined in: [profile/ProfileAPI.ts:35](https://github.com/bennycode/coinbase-pro-node/blob/bf1bcdd/src/profile/ProfileAPI.ts#L35)
+Defined in: [profile/ProfileAPI.ts:35](https://github.com/bennycode/coinbase-pro-node/blob/aa07e6d/src/profile/ProfileAPI.ts#L35)
 
 ---
 
@@ -106,4 +106,4 @@ Transfer funds from API key’s profile to another user owned profile. This endp
 
 **Returns:** _Promise_<_void_\>
 
-Defined in: [profile/ProfileAPI.ts:68](https://github.com/bennycode/coinbase-pro-node/blob/bf1bcdd/src/profile/ProfileAPI.ts#L68)
+Defined in: [profile/ProfileAPI.ts:68](https://github.com/bennycode/coinbase-pro-node/blob/aa07e6d/src/profile/ProfileAPI.ts#L68)
