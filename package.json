@@ -79,6 +79,7 @@
     "demo:rest:get:candles": "cross-env NODE_DEBUG=coinbase-pro-node* ts-node src/demo/rest-get-candles.ts",
     "demo:websocket:ticker": "cross-env NODE_DEBUG=coinbase-pro-node* ts-node src/demo/websocket-ticker.ts",
     "demo:websocket:user": "cross-env NODE_DEBUG=coinbase-pro-node* ts-node src/demo/websocket-user.ts",
+    "demo:websocket:user:js": "yarn dist && cross-env NODE_DEBUG=coinbase-pro-node* node dist/demo/websocket-user.js",
     "docs": "yarn docs:build && yarn docs:start",
     "docs:build": "yarn typedoc",
     "docs:release": "yarn docs:build && git add docs/* && git commit -m \"docs: Updated API\"",

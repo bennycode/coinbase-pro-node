@@ -397,7 +397,7 @@ export class WebSocketClient extends EventEmitter {
   private setupHeartbeat(hasPingSupport: boolean, webSocket: WebSocket): void {
     if (hasPingSupport) {
       // Subscribe to pongs
-      webSocket.on('pong', this.heartbeat);
+      webSocket.on('pong', this.heartbeat.bind(this));
 
       // Send pings
       this.pingInterval = (setInterval(() => {
