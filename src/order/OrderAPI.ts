@@ -145,13 +145,14 @@ export class OrderAPI {
   async getOpenOrders(pagination?: Pagination): Promise<PaginatedData<Order>> {
     const resource = OrderAPI.URL.ORDERS;
     const response = await this.apiClient.get<Order[]>(resource, {params: pagination});
-    return ({
+    const returnval = {
       data: response.data,
       pagination: {
         after: response.headers['cb-after'],
         before: response.headers['cb-before'],
       },
-    });
+    };
+	return returnval;
   }
 
   /**

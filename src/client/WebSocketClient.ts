@@ -417,7 +417,8 @@ export class WebSocketClient extends EventEmitter {
       reconnectionDelayGrowFactor: 1,
     };
 
-    return ({...defaultOptions, ...reconnectOptions});
+    const returnval = {...defaultOptions, ...reconnectOptions};
+	return returnval;
   }
 
   private mapChannels(input: WebSocketChannelName | WebSocketChannel | WebSocketChannel[]): WebSocketChannel[] {

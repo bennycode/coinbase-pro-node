@@ -40,13 +40,14 @@ export class FillAPI {
   async getFillsByOrderId(orderId: string, pagination?: Pagination): Promise<PaginatedData<Fill>> {
     const resource = FillAPI.URL.FILLS;
     const response = await this.apiClient.get<Fill[]>(resource, {params: {order_id: orderId, ...pagination}});
-    return ({
+    const returnval = {
       data: response.data,
       pagination: {
         after: response.headers['cb-after'],
         before: response.headers['cb-before'],
       },
-    });
+    };
+	return returnval;
   }
 
   /**
@@ -60,12 +61,13 @@ export class FillAPI {
   async getFillsByProductId(productId: string, pagination?: Pagination): Promise<PaginatedData<Fill>> {
     const resource = FillAPI.URL.FILLS;
     const response = await this.apiClient.get(resource, {params: {product_id: productId, ...pagination}});
-    return ({
+    const returnval = {
       data: response.data,
       pagination: {
         after: response.headers['cb-after'],
         before: response.headers['cb-before'],
       },
-    });
+    };
+	return returnval;
   }
 }

@@ -23,12 +23,12 @@ export class RequestSigner {
     const key = Buffer.from(auth.apiSecret, 'base64');
     const hmac = crypto.createHmac('sha256', key);
     const signature = hmac.update(what).digest('base64');
-
-    return ({
+	const returnval = {
       key: auth.apiKey,
       passphrase: auth.passphrase,
       signature,
       timestamp,
-    });
+    };
+	return returnval
   }
 }

@@ -309,13 +309,14 @@ export class ProductAPI {
   async getTrades(productId: string, pagination?: Pagination): Promise<PaginatedData<Trade>> {
     const resource = `${ProductAPI.URL.PRODUCTS}/${productId}/trades`;
     const response = await this.apiClient.get<Trade[]>(resource, {params: pagination});
-    return ({
+    const returnvalue = {
       data: response.data,
       pagination: {
         after: response.headers['cb-after'],
         before: response.headers['cb-before'],
       },
-    });
+    };
+	return returnvalue;
   }
 
   /**
@@ -387,7 +388,7 @@ export class ProductAPI {
     const [time, low, high, open, close, volume] = payload;
     const [base, counter] = productId.split('-');
     const openTimeInMillis = time * 1000; // Map seconds to milliseconds
-    return ({
+    const returnval = {
       base,
       close,
       counter,
@@ -399,7 +400,8 @@ export class ProductAPI {
       productId: productId,
       sizeInMillis,
       volume,
-    });
+    };
+	return returnval;
   }
 
   private emitCandle(productId: string, granularity: CandleGranularity, candle: Candle): void {

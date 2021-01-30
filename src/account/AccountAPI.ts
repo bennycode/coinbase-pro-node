@@ -116,13 +116,14 @@ export class AccountAPI {
   async getAccountHistory(accountId: string, pagination?: Pagination): Promise<PaginatedData<AccountHistory>> {
     const resource = `${AccountAPI.URL.ACCOUNTS}/${accountId}/ledger`;
     const response = await this.apiClient.get<AccountHistory[]>(resource, {params: pagination});
-    return ({
+    const returnval = {
       data: response.data,
       pagination: {
         after: response.headers['cb-after'],
         before: response.headers['cb-before'],
       },
-    });
+    };
+	return returnval;
   }
 
   /**
@@ -137,13 +138,14 @@ export class AccountAPI {
   async getHolds(accountId: string, pagination?: Pagination): Promise<PaginatedData<Hold>> {
     const resource = `${AccountAPI.URL.ACCOUNTS}/${accountId}/holds`;
     const response = await this.apiClient.get<Hold[]>(resource, {params: pagination});
-    return ({
+    const returnval = {
       data: response.data,
       pagination: {
         after: response.headers['cb-after'],
         before: response.headers['cb-before'],
       },
-    });
+    };
+	return returnval;
   }
 
   /**
