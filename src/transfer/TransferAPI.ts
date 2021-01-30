@@ -62,13 +62,13 @@ export class TransferAPI {
       params.profile_id = profileId;
     }
     const response = await this.apiClient.get<TransferInformation[]>(resource, {params});
-    return {
+    return ({
       data: response.data,
       pagination: {
         after: response.headers['cb-after'],
         before: response.headers['cb-before'],
       },
-    };
+    });
   }
 
   /**

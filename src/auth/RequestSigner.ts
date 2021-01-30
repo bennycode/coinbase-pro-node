@@ -24,11 +24,11 @@ export class RequestSigner {
     const hmac = crypto.createHmac('sha256', key);
     const signature = hmac.update(what).digest('base64');
 
-    return {
+    return ({
       key: auth.apiKey,
       passphrase: auth.passphrase,
       signature,
       timestamp,
-    };
+    });
   }
 }
