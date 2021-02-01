@@ -32,9 +32,9 @@ export class ProfileAPI {
    *
    * @see https://docs.pro.coinbase.com/#list-profiles
    */
-  async listProfiles(): Promise<Profile[]> {
+  async listProfiles(active?: Profile): Promise<Profile[]> {
     const resource = ProfileAPI.URL.PROFILES;
-    const response = await this.apiClient.get<Profile[]>(resource);
+    const response = await this.apiClient.get<Profile[]>(resource,active);
     return response.data;
   }
 
