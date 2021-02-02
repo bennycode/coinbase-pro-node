@@ -30,11 +30,20 @@ export class ProfileAPI {
    * List your profiles. Profiles are equivalent to portfolios.
    * This endpoint requires the “view” permission and is accessible by any profile’s API key.
    *
+   * @param active - Only return active profiles if set true
    * @see https://docs.pro.coinbase.com/#list-profiles
    */
-  async listProfiles(): Promise<Profile[]> {
+  async listProfiles(active?: true): Promise<Profile[]> {
     const resource = ProfileAPI.URL.PROFILES;
-    const response = await this.apiClient.get<Profile[]>(resource);
+    const config =
+      active === true
+        ? {
+            params: {
+              active,
+            },
+          }
+        : undefined;
+    const response = await this.apiClient.get<Profile[]>(resource, config);
     return response.data;
   }
 
