@@ -1,3 +1,19 @@
+#### 2.17.2 (2021-02-02)
+
+##### Chores
+
+- **deps-dev:**
+  - bump eslint from 7.18.0 to 7.19.0 ([#394](https://github.com/bennycode/coinbase-pro-node/pull/394)) ([dda465de](https://github.com/bennycode/coinbase-pro-node/commit/dda465ded30844abab220ce3532b7cac67cc1f17))
+  - bump @typescript-eslint/eslint-plugin ([#392](https://github.com/bennycode/coinbase-pro-node/pull/392)) ([4c90a60c](https://github.com/bennycode/coinbase-pro-node/commit/4c90a60cfc4db1930746864205432e07fd132886))
+  - bump typedoc-plugin-markdown from 3.4.3 to 3.4.5 ([#393](https://github.com/bennycode/coinbase-pro-node/pull/393)) ([f818a413](https://github.com/bennycode/coinbase-pro-node/commit/f818a413f0585ae82d5272e9add58e849791b47a))
+  - bump nock from 13.0.6 to 13.0.7 ([#390](https://github.com/bennycode/coinbase-pro-node/pull/390)) ([7be85f79](https://github.com/bennycode/coinbase-pro-node/commit/7be85f794a98a36400bd5356aea4f0750fa9dbfb))
+  - bump typedoc from 0.20.17 to 0.20.19 ([#391](https://github.com/bennycode/coinbase-pro-node/pull/391)) ([a070537d](https://github.com/bennycode/coinbase-pro-node/commit/a070537d212efc6ed4dd71249cbbdcaa96d4ba74))
+  - bump @typescript-eslint/parser from 4.14.0 to 4.14.1 ([#389](https://github.com/bennycode/coinbase-pro-node/pull/389)) ([f6079b0d](https://github.com/bennycode/coinbase-pro-node/commit/f6079b0def6b2dfc18f7b996674d47dca1118b31))
+
+##### New Features
+
+- Add active parameter to list profiles ([#398](https://github.com/bennycode/coinbase-pro-node/pull/398)) ([9fb49bab](https://github.com/bennycode/coinbase-pro-node/commit/9fb49bab32ee7fda895c3dfd2ff48457ad24e098))
+
 #### 2.17.1 (2021-01-24)
 
 ##### Chores
