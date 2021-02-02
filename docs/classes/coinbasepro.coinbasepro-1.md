@@ -35,15 +35,15 @@
 
 **Returns:** [_CoinbasePro_](coinbasepro.coinbasepro-1.md)
 
-Defined in: [CoinbasePro.ts:52](https://github.com/bennycode/coinbase-pro-node/blob/aa07e6d/src/CoinbasePro.ts#L52)
+Defined in: [CoinbasePro.ts:52](https://github.com/bennycode/coinbase-pro-node/blob/a4b1aac/src/CoinbasePro.ts#L52)
 
 ## Properties
 
 ### rest
 
-• `Readonly` **rest**: [_RESTClient_](client/restclient.restclient.md)
+• `Readonly` **rest**: [_RESTClient_](client_restclient.restclient.md)
 
-Defined in: [CoinbasePro.ts:34](https://github.com/bennycode/coinbase-pro-node/blob/aa07e6d/src/CoinbasePro.ts#L34)
+Defined in: [CoinbasePro.ts:34](https://github.com/bennycode/coinbase-pro-node/blob/a4b1aac/src/CoinbasePro.ts#L34)
 
 ---
 
@@ -51,15 +51,15 @@ Defined in: [CoinbasePro.ts:34](https://github.com/bennycode/coinbase-pro-node/b
 
 • `Readonly` **url**: [_ClientConnection_](../interfaces/coinbasepro.clientconnection.md)
 
-Defined in: [CoinbasePro.ts:35](https://github.com/bennycode/coinbase-pro-node/blob/aa07e6d/src/CoinbasePro.ts#L35)
+Defined in: [CoinbasePro.ts:35](https://github.com/bennycode/coinbase-pro-node/blob/a4b1aac/src/CoinbasePro.ts#L35)
 
 ---
 
 ### ws
 
-• `Readonly` **ws**: [_WebSocketClient_](client/websocketclient.websocketclient.md)
+• `Readonly` **ws**: [_WebSocketClient_](client_websocketclient.websocketclient.md)
 
-Defined in: [CoinbasePro.ts:36](https://github.com/bennycode/coinbase-pro-node/blob/aa07e6d/src/CoinbasePro.ts#L36)
+Defined in: [CoinbasePro.ts:36](https://github.com/bennycode/coinbase-pro-node/blob/a4b1aac/src/CoinbasePro.ts#L36)
 
 ---
 
@@ -74,4 +74,4 @@ Defined in: [CoinbasePro.ts:36](https://github.com/bennycode/coinbase-pro-node/b
 | `PRODUCTION` | [_ClientConnection_](../interfaces/coinbasepro.clientconnection.md) |
 | `SANDBOX`    | [_ClientConnection_](../interfaces/coinbasepro.clientconnection.md) |
 
-Defined in: [CoinbasePro.ts:38](https://github.com/bennycode/coinbase-pro-node/blob/aa07e6d/src/CoinbasePro.ts#L38)
+Defined in: [CoinbasePro.ts:38](https://github.com/bennycode/coinbase-pro-node/blob/a4b1aac/src/CoinbasePro.ts#L38)

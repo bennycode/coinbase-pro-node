@@ -6,9 +6,9 @@
 
 ### Classes
 
-- [UserAPI](../classes/user/userapi.userapi.md)
+- [UserAPI](../classes/user_userapi.userapi.md)
 
 ### Interfaces
 
-- [TrailingVolume](../interfaces/user/userapi.trailingvolume.md)
-- [VerifiedUser](../interfaces/user/userapi.verifieduser.md)
+- [TrailingVolume](../interfaces/user_userapi.trailingvolume.md)
+- [VerifiedUser](../interfaces/user_userapi.verifieduser.md)

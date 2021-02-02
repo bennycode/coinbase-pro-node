@@ -6,12 +6,12 @@
 
 ### Enumerations
 
-- [TransferType](../enums/transfer/transferapi.transfertype.md)
+- [TransferType](../enums/transfer_transferapi.transfertype.md)
 
 ### Classes
 
-- [TransferAPI](../classes/transfer/transferapi.transferapi.md)
+- [TransferAPI](../classes/transfer_transferapi.transferapi.md)
 
 ### Interfaces
 
-- [TransferInformation](../interfaces/transfer/transferapi.transferinformation.md)
+- [TransferInformation](../interfaces/transfer_transferapi.transferinformation.md)

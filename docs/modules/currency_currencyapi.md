@@ -6,13 +6,13 @@
 
 ### Enumerations
 
-- [CurrencyType](../enums/currency/currencyapi.currencytype.md)
+- [CurrencyType](../enums/currency_currencyapi.currencytype.md)
 
 ### Classes
 
-- [CurrencyAPI](../classes/currency/currencyapi.currencyapi.md)
+- [CurrencyAPI](../classes/currency_currencyapi.currencyapi.md)
 
 ### Interfaces
 
-- [Currency](../interfaces/currency/currencyapi.currency.md)
-- [CurrencyDetail](../interfaces/currency/currencyapi.currencydetail.md)
+- [Currency](../interfaces/currency_currencyapi.currency.md)
+- [CurrencyDetail](../interfaces/currency_currencyapi.currencydetail.md)

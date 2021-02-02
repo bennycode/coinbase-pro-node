@@ -6,12 +6,12 @@
 
 ### Enumerations
 
-- [Liquidity](../enums/fill/fillapi.liquidity.md)
+- [Liquidity](../enums/fill_fillapi.liquidity.md)
 
 ### Classes
 
-- [FillAPI](../classes/fill/fillapi.fillapi.md)
+- [FillAPI](../classes/fill_fillapi.fillapi.md)
 
 ### Interfaces
 
-- [Fill](../interfaces/fill/fillapi.fill.md)
+- [Fill](../interfaces/fill_fillapi.fill.md)

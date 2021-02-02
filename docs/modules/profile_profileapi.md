@@ -6,9 +6,9 @@
 
 ### Classes
 
-- [ProfileAPI](../classes/profile/profileapi.profileapi.md)
+- [ProfileAPI](../classes/profile_profileapi.profileapi.md)
 
 ### Interfaces
 
-- [FundTransfer](../interfaces/profile/profileapi.fundtransfer.md)
-- [Profile](../interfaces/profile/profileapi.profile.md)
+- [FundTransfer](../interfaces/profile_profileapi.fundtransfer.md)
+- [Profile](../interfaces/profile_profileapi.profile.md)

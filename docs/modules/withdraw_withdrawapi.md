@@ -6,9 +6,9 @@
 
 ### Classes
 
-- [WithdrawAPI](../classes/withdraw/withdrawapi.withdrawapi.md)
+- [WithdrawAPI](../classes/withdraw_withdrawapi.withdrawapi.md)
 
 ### Interfaces
 
-- [CryptoWithdrawal](../interfaces/withdraw/withdrawapi.cryptowithdrawal.md)
-- [WithdrawalFeeEstimate](../interfaces/withdraw/withdrawapi.withdrawalfeeestimate.md)
+- [CryptoWithdrawal](../interfaces/withdraw_withdrawapi.cryptowithdrawal.md)
+- [WithdrawalFeeEstimate](../interfaces/withdraw_withdrawapi.withdrawalfeeestimate.md)

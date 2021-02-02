@@ -6,18 +6,18 @@
 
 ### Enumerations
 
-- [AccountType](../enums/account/accountapi.accounttype.md)
+- [AccountType](../enums/account_accountapi.accounttype.md)
 
 ### Classes
 
-- [AccountAPI](../classes/account/accountapi.accountapi.md)
+- [AccountAPI](../classes/account_accountapi.accountapi.md)
 
 ### Interfaces
 
-- [Account](../interfaces/account/accountapi.account.md)
-- [AccountHistory](../interfaces/account/accountapi.accounthistory.md)
-- [AccountHistoryDetails](../interfaces/account/accountapi.accounthistorydetails.md)
-- [CoinbaseAccount](../interfaces/account/accountapi.coinbaseaccount.md)
-- [Hold](../interfaces/account/accountapi.hold.md)
-- [SEPADepositInformation](../interfaces/account/accountapi.sepadepositinformation.md)
-- [WireDepositInformation](../interfaces/account/accountapi.wiredepositinformation.md)
+- [Account](../interfaces/account_accountapi.account.md)
+- [AccountHistory](../interfaces/account_accountapi.accounthistory.md)
+- [AccountHistoryDetails](../interfaces/account_accountapi.accounthistorydetails.md)
+- [CoinbaseAccount](../interfaces/account_accountapi.coinbaseaccount.md)
+- [Hold](../interfaces/account_accountapi.hold.md)
+- [SEPADepositInformation](../interfaces/account_accountapi.sepadepositinformation.md)
+- [WireDepositInformation](../interfaces/account_accountapi.wiredepositinformation.md)

@@ -6,9 +6,9 @@
 
 ### Classes
 
-- [RequestSigner](../classes/auth/requestsigner.requestsigner.md)
+- [RequestSigner](../classes/auth_requestsigner.requestsigner.md)
 
 ### Interfaces
 
-- [RequestSetup](../interfaces/auth/requestsigner.requestsetup.md)
-- [SignedRequest](../interfaces/auth/requestsigner.signedrequest.md)
+- [RequestSetup](../interfaces/auth_requestsigner.requestsetup.md)
+- [SignedRequest](../interfaces/auth_requestsigner.signedrequest.md)

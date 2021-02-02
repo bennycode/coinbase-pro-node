@@ -6,8 +6,8 @@
 
 ### Classes
 
-- [TimeAPI](../classes/time/timeapi.timeapi.md)
+- [TimeAPI](../classes/time_timeapi.timeapi.md)
 
 ### Interfaces
 
-- [TimeSkew](../interfaces/time/timeapi.timeskew.md)
+- [TimeSkew](../interfaces/time_timeapi.timeskew.md)

@@ -6,4 +6,4 @@
 
 ### Classes
 
-- [RESTClient](../classes/client/restclient.restclient.md)
+- [RESTClient](../classes/client_restclient.restclient.md)

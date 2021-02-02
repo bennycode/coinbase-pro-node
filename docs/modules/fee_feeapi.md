@@ -6,8 +6,8 @@
 
 ### Classes
 
-- [FeeAPI](../classes/fee/feeapi.feeapi.md)
+- [FeeAPI](../classes/fee_feeapi.feeapi.md)
 
 ### Interfaces
 
-- [FeeTier](../interfaces/fee/feeapi.feetier.md)
+- [FeeTier](../interfaces/fee_feeapi.feetier.md)

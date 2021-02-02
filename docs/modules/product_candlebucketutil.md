@@ -6,8 +6,8 @@
 
 ### Classes
 
-- [CandleBucketUtil](../classes/product/candlebucketutil.candlebucketutil.md)
+- [CandleBucketUtil](../classes/product_candlebucketutil.candlebucketutil.md)
 
 ### Interfaces
 
-- [CandleBatchBucket](../interfaces/product/candlebucketutil.candlebatchbucket.md)
+- [CandleBatchBucket](../interfaces/product_candlebucketutil.candlebatchbucket.md)
