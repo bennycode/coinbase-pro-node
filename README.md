@@ -168,8 +168,9 @@ This project is [MIT](./LICENSE) licensed.
 
 If you like this project, you might also like these related projects:
 
-- [**trading-signals**](https://github.com/bennycode/trading-signals), Technical indicators written in TypeScript with arbitrary-precision arithmetic.
-- [**binance-api-node**](https://github.com/Ashlar/binance-api-node), Heavily tested and Promise-based Binance API.
+- [**trading-signals**](https://github.com/bennycode/trading-signals), Technical indicators, written in TypeScript, with arbitrary-precision arithmetic.
+- [**ig-trading-api**](https://github.com/bennycode/ig-trading-api), REST API, written in TypeScript, for CFD trading with IG.
+- [**binance-api-node**](https://github.com/Ashlar/binance-api-node), Heavily tested and Promise-based Binance API with TypeScript definitions.
 
 [1]: https://pro.coinbase.com/
 [2]: https://docs.pro.coinbase.com/
