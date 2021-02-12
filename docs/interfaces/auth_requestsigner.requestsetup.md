@@ -6,7 +6,7 @@
 
 ## Hierarchy
 
-- **RequestSetup**
+* **RequestSetup**
 
 ## Table of contents
 
@@ -20,22 +20,22 @@
 
 ### httpMethod
 
-• **httpMethod**: _string_
+• **httpMethod**: *string*
 
-Defined in: [auth/RequestSigner.ts:6](https://github.com/bennycode/coinbase-pro-node/blob/a4b1aac/src/auth/RequestSigner.ts#L6)
+Defined in: [auth/RequestSigner.ts:6](https://github.com/bennycode/coinbase-pro-node/blob/004782e/src/auth/RequestSigner.ts#L6)
 
----
+___
 
 ### payload
 
-• **payload**: _string_
+• **payload**: *string*
 
-Defined in: [auth/RequestSigner.ts:7](https://github.com/bennycode/coinbase-pro-node/blob/a4b1aac/src/auth/RequestSigner.ts#L7)
+Defined in: [auth/RequestSigner.ts:7](https://github.com/bennycode/coinbase-pro-node/blob/004782e/src/auth/RequestSigner.ts#L7)
 
----
+___
 
 ### requestPath
 
-• **requestPath**: _string_
+• **requestPath**: *string*
 
-Defined in: [auth/RequestSigner.ts:8](https://github.com/bennycode/coinbase-pro-node/blob/a4b1aac/src/auth/RequestSigner.ts#L8)
+Defined in: [auth/RequestSigner.ts:8](https://github.com/bennycode/coinbase-pro-node/blob/004782e/src/auth/RequestSigner.ts#L8)

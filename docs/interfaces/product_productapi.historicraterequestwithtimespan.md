@@ -6,7 +6,7 @@
 
 ## Hierarchy
 
-- [_BaseHistoricRateRequest_](product_productapi.basehistoricraterequest.md)
+* [*BaseHistoricRateRequest*](product_productapi.basehistoricraterequest.md)
 
   ↳ **HistoricRateRequestWithTimeSpan**
 
@@ -22,30 +22,30 @@
 
 ### end
 
-• **end**: _string_
+• **end**: *string*
 
 Opening time (ISO 8601) of last candle, i.e. "2020-04-28T23:00:00.000Z"
 
-Defined in: [product/ProductAPI.ts:77](https://github.com/bennycode/coinbase-pro-node/blob/a4b1aac/src/product/ProductAPI.ts#L77)
+Defined in: [product/ProductAPI.ts:77](https://github.com/bennycode/coinbase-pro-node/blob/004782e/src/product/ProductAPI.ts#L77)
 
----
+___
 
 ### granularity
 
-• **granularity**: [_CandleGranularity_](../enums/product_productapi.candlegranularity.md)
+• **granularity**: [*CandleGranularity*](../enums/product_productapi.candlegranularity.md)
 
 Desired time slice in seconds.
 
 Inherited from: [BaseHistoricRateRequest](product_productapi.basehistoricraterequest.md).[granularity](product_productapi.basehistoricraterequest.md#granularity)
 
-Defined in: [product/ProductAPI.ts:72](https://github.com/bennycode/coinbase-pro-node/blob/a4b1aac/src/product/ProductAPI.ts#L72)
+Defined in: [product/ProductAPI.ts:72](https://github.com/bennycode/coinbase-pro-node/blob/004782e/src/product/ProductAPI.ts#L72)
 
----
+___
 
 ### start
 
-• **start**: _string_
+• **start**: *string*
 
 Opening time (ISO 8601) of first candle, i.e. "2020-04-28T00:00:00.000Z"
 
-Defined in: [product/ProductAPI.ts:79](https://github.com/bennycode/coinbase-pro-node/blob/a4b1aac/src/product/ProductAPI.ts#L79)
+Defined in: [product/ProductAPI.ts:79](https://github.com/bennycode/coinbase-pro-node/blob/004782e/src/product/ProductAPI.ts#L79)

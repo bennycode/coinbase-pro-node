@@ -6,7 +6,7 @@
 
 ## Hierarchy
 
-- **Account**
+* **Account**
 
 ## Table of contents
 
@@ -17,52 +17,52 @@
 - [currency](account_accountapi.account.md#currency)
 - [hold](account_accountapi.account.md#hold)
 - [id](account_accountapi.account.md#id)
-- [profile_id](account_accountapi.account.md#profile_id)
+- [profile\_id](account_accountapi.account.md#profile_id)
 
 ## Properties
 
 ### available
 
-• **available**: _string_
+• **available**: *string*
 
-Defined in: [account/AccountAPI.ts:5](https://github.com/bennycode/coinbase-pro-node/blob/a4b1aac/src/account/AccountAPI.ts#L5)
+Defined in: [account/AccountAPI.ts:5](https://github.com/bennycode/coinbase-pro-node/blob/004782e/src/account/AccountAPI.ts#L5)
 
----
+___
 
 ### balance
 
-• **balance**: _string_
+• **balance**: *string*
 
-Defined in: [account/AccountAPI.ts:6](https://github.com/bennycode/coinbase-pro-node/blob/a4b1aac/src/account/AccountAPI.ts#L6)
+Defined in: [account/AccountAPI.ts:6](https://github.com/bennycode/coinbase-pro-node/blob/004782e/src/account/AccountAPI.ts#L6)
 
----
+___
 
 ### currency
 
-• **currency**: _string_
+• **currency**: *string*
 
-Defined in: [account/AccountAPI.ts:7](https://github.com/bennycode/coinbase-pro-node/blob/a4b1aac/src/account/AccountAPI.ts#L7)
+Defined in: [account/AccountAPI.ts:7](https://github.com/bennycode/coinbase-pro-node/blob/004782e/src/account/AccountAPI.ts#L7)
 
----
+___
 
 ### hold
 
-• **hold**: _string_
+• **hold**: *string*
 
-Defined in: [account/AccountAPI.ts:8](https://github.com/bennycode/coinbase-pro-node/blob/a4b1aac/src/account/AccountAPI.ts#L8)
+Defined in: [account/AccountAPI.ts:8](https://github.com/bennycode/coinbase-pro-node/blob/004782e/src/account/AccountAPI.ts#L8)
 
----
+___
 
 ### id
 
-• **id**: _string_
+• **id**: *string*
 
-Defined in: [account/AccountAPI.ts:9](https://github.com/bennycode/coinbase-pro-node/blob/a4b1aac/src/account/AccountAPI.ts#L9)
+Defined in: [account/AccountAPI.ts:9](https://github.com/bennycode/coinbase-pro-node/blob/004782e/src/account/AccountAPI.ts#L9)
 
----
+___
 
-### profile_id
+### profile\_id
 
-• **profile_id**: _string_
+• **profile\_id**: *string*
 
-Defined in: [account/AccountAPI.ts:10](https://github.com/bennycode/coinbase-pro-node/blob/a4b1aac/src/account/AccountAPI.ts#L10)
+Defined in: [account/AccountAPI.ts:10](https://github.com/bennycode/coinbase-pro-node/blob/004782e/src/account/AccountAPI.ts#L10)

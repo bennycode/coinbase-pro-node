@@ -6,27 +6,27 @@
 
 ## Hierarchy
 
-- **WebSocketChannel**
+* **WebSocketChannel**
 
 ## Table of contents
 
 ### Properties
 
 - [name](client_websocketclient.websocketchannel.md#name)
-- [product_ids](client_websocketclient.websocketchannel.md#product_ids)
+- [product\_ids](client_websocketclient.websocketchannel.md#product_ids)
 
 ## Properties
 
 ### name
 
-• **name**: [_WebSocketChannelName_](../enums/client_websocketclient.websocketchannelname.md)
+• **name**: [*WebSocketChannelName*](../enums/client_websocketclient.websocketchannelname.md)
 
-Defined in: [client/WebSocketClient.ts:8](https://github.com/bennycode/coinbase-pro-node/blob/a4b1aac/src/client/WebSocketClient.ts#L8)
+Defined in: [client/WebSocketClient.ts:8](https://github.com/bennycode/coinbase-pro-node/blob/004782e/src/client/WebSocketClient.ts#L8)
 
----
+___
 
-### product_ids
+### product\_ids
 
-• `Optional` **product_ids**: _undefined_ | _string_[]
+• `Optional` **product\_ids**: *undefined* \| *string*[]
 
-Defined in: [client/WebSocketClient.ts:9](https://github.com/bennycode/coinbase-pro-node/blob/a4b1aac/src/client/WebSocketClient.ts#L9)
+Defined in: [client/WebSocketClient.ts:9](https://github.com/bennycode/coinbase-pro-node/blob/004782e/src/client/WebSocketClient.ts#L9)

@@ -6,107 +6,107 @@
 
 ## Hierarchy
 
-- _BaseOrder_
+* *BaseOrder*
 
   ↳ **LimitOrder**
 
-  ↳↳ [_AutoCancelLimitOrder_](order_orderapi.autocancellimitorder.md)
+  ↳↳ [*AutoCancelLimitOrder*](order_orderapi.autocancellimitorder.md)
 
-  ↳↳ [_PostOnlyLimitOrder_](order_orderapi.postonlylimitorder.md)
+  ↳↳ [*PostOnlyLimitOrder*](order_orderapi.postonlylimitorder.md)
 
 ## Table of contents
 
 ### Properties
 
-- [client_oid](order_orderapi.limitorder.md#client_oid)
+- [client\_oid](order_orderapi.limitorder.md#client_oid)
 - [price](order_orderapi.limitorder.md#price)
-- [product_id](order_orderapi.limitorder.md#product_id)
+- [product\_id](order_orderapi.limitorder.md#product_id)
 - [side](order_orderapi.limitorder.md#side)
 - [size](order_orderapi.limitorder.md#size)
 - [stop](order_orderapi.limitorder.md#stop)
-- [stop_price](order_orderapi.limitorder.md#stop_price)
+- [stop\_price](order_orderapi.limitorder.md#stop_price)
 - [stp](order_orderapi.limitorder.md#stp)
-- [time_in_force](order_orderapi.limitorder.md#time_in_force)
+- [time\_in\_force](order_orderapi.limitorder.md#time_in_force)
 - [type](order_orderapi.limitorder.md#type)
 
 ## Properties
 
-### client_oid
+### client\_oid
 
-• `Optional` **client_oid**: _undefined_ | _string_
+• `Optional` **client\_oid**: *undefined* \| *string*
 
-Defined in: [order/OrderAPI.ts:31](https://github.com/bennycode/coinbase-pro-node/blob/a4b1aac/src/order/OrderAPI.ts#L31)
+Defined in: [order/OrderAPI.ts:31](https://github.com/bennycode/coinbase-pro-node/blob/004782e/src/order/OrderAPI.ts#L31)
 
----
+___
 
 ### price
 
-• **price**: _string_
+• **price**: *string*
 
-Defined in: [order/OrderAPI.ts:69](https://github.com/bennycode/coinbase-pro-node/blob/a4b1aac/src/order/OrderAPI.ts#L69)
+Defined in: [order/OrderAPI.ts:69](https://github.com/bennycode/coinbase-pro-node/blob/004782e/src/order/OrderAPI.ts#L69)
 
----
+___
 
-### product_id
+### product\_id
 
-• **product_id**: _string_
+• **product\_id**: *string*
 
-Defined in: [order/OrderAPI.ts:32](https://github.com/bennycode/coinbase-pro-node/blob/a4b1aac/src/order/OrderAPI.ts#L32)
+Defined in: [order/OrderAPI.ts:32](https://github.com/bennycode/coinbase-pro-node/blob/004782e/src/order/OrderAPI.ts#L32)
 
----
+___
 
 ### side
 
 • **side**: OrderSide
 
-Defined in: [order/OrderAPI.ts:33](https://github.com/bennycode/coinbase-pro-node/blob/a4b1aac/src/order/OrderAPI.ts#L33)
+Defined in: [order/OrderAPI.ts:33](https://github.com/bennycode/coinbase-pro-node/blob/004782e/src/order/OrderAPI.ts#L33)
 
----
+___
 
 ### size
 
-• **size**: _string_
+• **size**: *string*
 
-Defined in: [order/OrderAPI.ts:70](https://github.com/bennycode/coinbase-pro-node/blob/a4b1aac/src/order/OrderAPI.ts#L70)
+Defined in: [order/OrderAPI.ts:70](https://github.com/bennycode/coinbase-pro-node/blob/004782e/src/order/OrderAPI.ts#L70)
 
----
+___
 
 ### stop
 
-• `Optional` **stop**: _undefined_ | _loss_ | _entry_
+• `Optional` **stop**: *undefined* \| *loss* \| *entry*
 
-Defined in: [order/OrderAPI.ts:34](https://github.com/bennycode/coinbase-pro-node/blob/a4b1aac/src/order/OrderAPI.ts#L34)
+Defined in: [order/OrderAPI.ts:34](https://github.com/bennycode/coinbase-pro-node/blob/004782e/src/order/OrderAPI.ts#L34)
 
----
+___
 
-### stop_price
+### stop\_price
 
-• `Optional` **stop_price**: _undefined_ | _string_
+• `Optional` **stop\_price**: *undefined* \| *string*
 
-Defined in: [order/OrderAPI.ts:35](https://github.com/bennycode/coinbase-pro-node/blob/a4b1aac/src/order/OrderAPI.ts#L35)
+Defined in: [order/OrderAPI.ts:35](https://github.com/bennycode/coinbase-pro-node/blob/004782e/src/order/OrderAPI.ts#L35)
 
----
+___
 
 ### stp
 
-• `Optional` **stp**: _undefined_ | [_CANCEL_BOTH_](../enums/order_orderapi.selftradeprevention.md#cancel_both) | [_CANCEL_NEWEST_](../enums/order_orderapi.selftradeprevention.md#cancel_newest) | [_CANCEL_OLDEST_](../enums/order_orderapi.selftradeprevention.md#cancel_oldest) | [_DECREMENT_AND_CANCEL_](../enums/order_orderapi.selftradeprevention.md#decrement_and_cancel)
+• `Optional` **stp**: *undefined* \| [*CANCEL\_BOTH*](../enums/order_orderapi.selftradeprevention.md#cancel_both) \| [*CANCEL\_NEWEST*](../enums/order_orderapi.selftradeprevention.md#cancel_newest) \| [*CANCEL\_OLDEST*](../enums/order_orderapi.selftradeprevention.md#cancel_oldest) \| [*DECREMENT\_AND\_CANCEL*](../enums/order_orderapi.selftradeprevention.md#decrement_and_cancel)
 
-Defined in: [order/OrderAPI.ts:36](https://github.com/bennycode/coinbase-pro-node/blob/a4b1aac/src/order/OrderAPI.ts#L36)
+Defined in: [order/OrderAPI.ts:36](https://github.com/bennycode/coinbase-pro-node/blob/004782e/src/order/OrderAPI.ts#L36)
 
----
+___
 
-### time_in_force
+### time\_in\_force
 
-• `Optional` **time_in_force**: _undefined_ | [_FILL_OR_KILL_](../enums/order_orderapi.timeinforce.md#fill_or_kill) | [_GOOD_TILL_CANCELED_](../enums/order_orderapi.timeinforce.md#good_till_canceled) | [_GOOD_TILL_TIME_](../enums/order_orderapi.timeinforce.md#good_till_time) | [_IMMEDIATE_OR_CANCEL_](../enums/order_orderapi.timeinforce.md#immediate_or_cancel)
+• `Optional` **time\_in\_force**: *undefined* \| [*FILL\_OR\_KILL*](../enums/order_orderapi.timeinforce.md#fill_or_kill) \| [*GOOD\_TILL\_CANCELED*](../enums/order_orderapi.timeinforce.md#good_till_canceled) \| [*GOOD\_TILL\_TIME*](../enums/order_orderapi.timeinforce.md#good_till_time) \| [*IMMEDIATE\_OR\_CANCEL*](../enums/order_orderapi.timeinforce.md#immediate_or_cancel)
 
 Default is 'GTC'.
 
-Defined in: [order/OrderAPI.ts:72](https://github.com/bennycode/coinbase-pro-node/blob/a4b1aac/src/order/OrderAPI.ts#L72)
+Defined in: [order/OrderAPI.ts:72](https://github.com/bennycode/coinbase-pro-node/blob/004782e/src/order/OrderAPI.ts#L72)
 
----
+___
 
 ### type
 
-• **type**: [_LIMIT_](../enums/order_orderapi.ordertype.md#limit)
+• **type**: [*LIMIT*](../enums/order_orderapi.ordertype.md#limit)
 
-Defined in: [order/OrderAPI.ts:73](https://github.com/bennycode/coinbase-pro-node/blob/a4b1aac/src/order/OrderAPI.ts#L73)
+Defined in: [order/OrderAPI.ts:73](https://github.com/bennycode/coinbase-pro-node/blob/004782e/src/order/OrderAPI.ts#L73)

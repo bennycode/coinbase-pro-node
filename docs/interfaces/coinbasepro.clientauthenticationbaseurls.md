@@ -6,7 +6,7 @@
 
 ## Hierarchy
 
-- [_ClientAuthenticationBase_](coinbasepro.clientauthenticationbase.md)
+* [*ClientAuthenticationBase*](coinbasepro.clientauthenticationbase.md)
 
   ↳ **ClientAuthenticationBaseUrls**
 
@@ -23,36 +23,36 @@
 
 ### apiKey
 
-• **apiKey**: _string_
+• **apiKey**: *string*
 
 Overrides: [ClientAuthenticationBase](coinbasepro.clientauthenticationbase.md).[apiKey](coinbasepro.clientauthenticationbase.md#apikey)
 
-Defined in: [CoinbasePro.ts:12](https://github.com/bennycode/coinbase-pro-node/blob/a4b1aac/src/CoinbasePro.ts#L12)
+Defined in: [CoinbasePro.ts:12](https://github.com/bennycode/coinbase-pro-node/blob/004782e/src/CoinbasePro.ts#L12)
 
----
+___
 
 ### apiSecret
 
-• **apiSecret**: _string_
+• **apiSecret**: *string*
 
 Overrides: [ClientAuthenticationBase](coinbasepro.clientauthenticationbase.md).[apiSecret](coinbasepro.clientauthenticationbase.md#apisecret)
 
-Defined in: [CoinbasePro.ts:13](https://github.com/bennycode/coinbase-pro-node/blob/a4b1aac/src/CoinbasePro.ts#L13)
+Defined in: [CoinbasePro.ts:13](https://github.com/bennycode/coinbase-pro-node/blob/004782e/src/CoinbasePro.ts#L13)
 
----
+___
 
 ### passphrase
 
-• **passphrase**: _string_
+• **passphrase**: *string*
 
 Overrides: [ClientAuthenticationBase](coinbasepro.clientauthenticationbase.md).[passphrase](coinbasepro.clientauthenticationbase.md#passphrase)
 
-Defined in: [CoinbasePro.ts:14](https://github.com/bennycode/coinbase-pro-node/blob/a4b1aac/src/CoinbasePro.ts#L14)
+Defined in: [CoinbasePro.ts:14](https://github.com/bennycode/coinbase-pro-node/blob/004782e/src/CoinbasePro.ts#L14)
 
----
+___
 
 ### useSandbox
 
-• **useSandbox**: _boolean_
+• **useSandbox**: *boolean*
 
-Defined in: [CoinbasePro.ts:15](https://github.com/bennycode/coinbase-pro-node/blob/a4b1aac/src/CoinbasePro.ts#L15)
+Defined in: [CoinbasePro.ts:15](https://github.com/bennycode/coinbase-pro-node/blob/004782e/src/CoinbasePro.ts#L15)

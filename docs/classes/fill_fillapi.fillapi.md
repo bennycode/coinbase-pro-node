@@ -6,7 +6,7 @@
 
 ## Hierarchy
 
-- **FillAPI**
+* **FillAPI**
 
 ## Table of contents
 
@@ -27,37 +27,37 @@
 
 ### constructor
 
-\+ **new FillAPI**(`apiClient`: AxiosInstance): [_FillAPI_](fill_fillapi.fillapi.md)
+\+ **new FillAPI**(`apiClient`: AxiosInstance): [*FillAPI*](fill_fillapi.fillapi.md)
 
 #### Parameters:
 
-| Name        | Type          |
-| ----------- | ------------- |
-| `apiClient` | AxiosInstance |
+Name | Type |
+------ | ------ |
+`apiClient` | AxiosInstance |
 
-**Returns:** [_FillAPI_](fill_fillapi.fillapi.md)
+**Returns:** [*FillAPI*](fill_fillapi.fillapi.md)
 
-Defined in: [fill/FillAPI.ts:28](https://github.com/bennycode/coinbase-pro-node/blob/a4b1aac/src/fill/FillAPI.ts#L28)
+Defined in: [fill/FillAPI.ts:28](https://github.com/bennycode/coinbase-pro-node/blob/004782e/src/fill/FillAPI.ts#L28)
 
 ## Properties
 
 ### URL
 
-▪ `Readonly` `Static` **URL**: { `FILLS`: _string_ }
+▪ `Readonly` `Static` **URL**: { `FILLS`: *string*  }
 
 #### Type declaration:
 
-| Name    | Type     |
-| ------- | -------- |
-| `FILLS` | _string_ |
+Name | Type |
+------ | ------ |
+`FILLS` | *string* |
 
-Defined in: [fill/FillAPI.ts:26](https://github.com/bennycode/coinbase-pro-node/blob/a4b1aac/src/fill/FillAPI.ts#L26)
+Defined in: [fill/FillAPI.ts:26](https://github.com/bennycode/coinbase-pro-node/blob/004782e/src/fill/FillAPI.ts#L26)
 
 ## Methods
 
 ### getFillsByOrderId
 
-▸ **getFillsByOrderId**(`orderId`: _string_, `pagination?`: Pagination): _Promise_<_PaginatedData_<[_Fill_](../interfaces/fill_fillapi.fill.md)\>\>
+▸ **getFillsByOrderId**(`orderId`: *string*, `pagination?`: Pagination): *Promise*<*PaginatedData*<[*Fill*](../interfaces/fill_fillapi.fill.md)\>\>
 
 Get a list of recent fills for a given Order of the API key's profile.
 
@@ -67,20 +67,20 @@ Get a list of recent fills for a given Order of the API key's profile.
 
 #### Parameters:
 
-| Name          | Type       | Description                   |
-| ------------- | ---------- | ----------------------------- |
-| `orderId`     | _string_   | ID of previously placed order |
-| `pagination?` | Pagination | Pagination field              |
+Name | Type | Description |
+------ | ------ | ------ |
+`orderId` | *string* | ID of previously placed order   |
+`pagination?` | Pagination | Pagination field   |
 
-**Returns:** _Promise_<_PaginatedData_<[_Fill_](../interfaces/fill_fillapi.fill.md)\>\>
+**Returns:** *Promise*<*PaginatedData*<[*Fill*](../interfaces/fill_fillapi.fill.md)\>\>
 
-Defined in: [fill/FillAPI.ts:40](https://github.com/bennycode/coinbase-pro-node/blob/a4b1aac/src/fill/FillAPI.ts#L40)
+Defined in: [fill/FillAPI.ts:40](https://github.com/bennycode/coinbase-pro-node/blob/004782e/src/fill/FillAPI.ts#L40)
 
----
+___
 
 ### getFillsByProductId
 
-▸ **getFillsByProductId**(`productId`: _string_, `pagination?`: Pagination): _Promise_<_PaginatedData_<[_Fill_](../interfaces/fill_fillapi.fill.md)\>\>
+▸ **getFillsByProductId**(`productId`: *string*, `pagination?`: Pagination): *Promise*<*PaginatedData*<[*Fill*](../interfaces/fill_fillapi.fill.md)\>\>
 
 Get a list of recent fills for a given Product of the API key's profile.
 
@@ -90,11 +90,11 @@ Get a list of recent fills for a given Product of the API key's profile.
 
 #### Parameters:
 
-| Name          | Type       | Description                         |
-| ------------- | ---------- | ----------------------------------- |
-| `productId`   | _string_   | Representation for base and counter |
-| `pagination?` | Pagination | Pagination field                    |
+Name | Type | Description |
+------ | ------ | ------ |
+`productId` | *string* | Representation for base and counter   |
+`pagination?` | Pagination | Pagination field   |
 
-**Returns:** _Promise_<_PaginatedData_<[_Fill_](../interfaces/fill_fillapi.fill.md)\>\>
+**Returns:** *Promise*<*PaginatedData*<[*Fill*](../interfaces/fill_fillapi.fill.md)\>\>
 
-Defined in: [fill/FillAPI.ts:60](https://github.com/bennycode/coinbase-pro-node/blob/a4b1aac/src/fill/FillAPI.ts#L60)
+Defined in: [fill/FillAPI.ts:60](https://github.com/bennycode/coinbase-pro-node/blob/004782e/src/fill/FillAPI.ts#L60)

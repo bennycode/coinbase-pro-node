@@ -37,14 +37,14 @@
 
 ### HistoricRateRequest
 
-Ƭ **HistoricRateRequest**: [_BaseHistoricRateRequest_](../interfaces/product_productapi.basehistoricraterequest.md) | [_HistoricRateRequestWithTimeSpan_](../interfaces/product_productapi.historicraterequestwithtimespan.md)
+Ƭ **HistoricRateRequest**: [*BaseHistoricRateRequest*](../interfaces/product_productapi.basehistoricraterequest.md) \| [*HistoricRateRequestWithTimeSpan*](../interfaces/product_productapi.historicraterequestwithtimespan.md)
 
-Defined in: [product/ProductAPI.ts:82](https://github.com/bennycode/coinbase-pro-node/blob/a4b1aac/src/product/ProductAPI.ts#L82)
+Defined in: [product/ProductAPI.ts:82](https://github.com/bennycode/coinbase-pro-node/blob/004782e/src/product/ProductAPI.ts#L82)
 
----
+___
 
 ### OrderBook
 
-Ƭ **OrderBook**: [_OrderBookLevel1_](../interfaces/product_productapi.orderbooklevel1.md) | [_OrderBookLevel2_](../interfaces/product_productapi.orderbooklevel2.md) | [_OrderBookLevel3_](../interfaces/product_productapi.orderbooklevel3.md)
+Ƭ **OrderBook**: [*OrderBookLevel1*](../interfaces/product_productapi.orderbooklevel1.md) \| [*OrderBookLevel2*](../interfaces/product_productapi.orderbooklevel2.md) \| [*OrderBookLevel3*](../interfaces/product_productapi.orderbooklevel3.md)
 
-Defined in: [product/ProductAPI.ts:133](https://github.com/bennycode/coinbase-pro-node/blob/a4b1aac/src/product/ProductAPI.ts#L133)
+Defined in: [product/ProductAPI.ts:133](https://github.com/bennycode/coinbase-pro-node/blob/004782e/src/product/ProductAPI.ts#L133)

@@ -8,7 +8,7 @@ Represents only the best bid and ask.
 
 ## Hierarchy
 
-- **OrderBookLevel1**
+* **OrderBookLevel1**
 
 ## Table of contents
 
@@ -24,20 +24,20 @@ Represents only the best bid and ask.
 
 • **asks**: AggregatedOrder[]
 
-Defined in: [product/ProductAPI.ts:111](https://github.com/bennycode/coinbase-pro-node/blob/a4b1aac/src/product/ProductAPI.ts#L111)
+Defined in: [product/ProductAPI.ts:111](https://github.com/bennycode/coinbase-pro-node/blob/004782e/src/product/ProductAPI.ts#L111)
 
----
+___
 
 ### bids
 
 • **bids**: AggregatedOrder[]
 
-Defined in: [product/ProductAPI.ts:112](https://github.com/bennycode/coinbase-pro-node/blob/a4b1aac/src/product/ProductAPI.ts#L112)
+Defined in: [product/ProductAPI.ts:112](https://github.com/bennycode/coinbase-pro-node/blob/004782e/src/product/ProductAPI.ts#L112)
 
----
+___
 
 ### sequence
 
-• **sequence**: _number_
+• **sequence**: *number*
 
-Defined in: [product/ProductAPI.ts:113](https://github.com/bennycode/coinbase-pro-node/blob/a4b1aac/src/product/ProductAPI.ts#L113)
+Defined in: [product/ProductAPI.ts:113](https://github.com/bennycode/coinbase-pro-node/blob/004782e/src/product/ProductAPI.ts#L113)

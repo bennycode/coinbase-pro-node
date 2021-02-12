@@ -8,39 +8,39 @@
 
 ### Enumeration members
 
-- [CANCEL_BOTH](order_orderapi.selftradeprevention.md#cancel_both)
-- [CANCEL_NEWEST](order_orderapi.selftradeprevention.md#cancel_newest)
-- [CANCEL_OLDEST](order_orderapi.selftradeprevention.md#cancel_oldest)
-- [DECREMENT_AND_CANCEL](order_orderapi.selftradeprevention.md#decrement_and_cancel)
+- [CANCEL\_BOTH](order_orderapi.selftradeprevention.md#cancel_both)
+- [CANCEL\_NEWEST](order_orderapi.selftradeprevention.md#cancel_newest)
+- [CANCEL\_OLDEST](order_orderapi.selftradeprevention.md#cancel_oldest)
+- [DECREMENT\_AND\_CANCEL](order_orderapi.selftradeprevention.md#decrement_and_cancel)
 
 ## Enumeration members
 
-### CANCEL_BOTH
+### CANCEL\_BOTH
 
-• **CANCEL_BOTH**: = "cb"
+• **CANCEL\_BOTH**: = "cb"
 
-Defined in: [order/OrderAPI.ts:24](https://github.com/bennycode/coinbase-pro-node/blob/a4b1aac/src/order/OrderAPI.ts#L24)
+Defined in: [order/OrderAPI.ts:24](https://github.com/bennycode/coinbase-pro-node/blob/004782e/src/order/OrderAPI.ts#L24)
 
----
+___
 
-### CANCEL_NEWEST
+### CANCEL\_NEWEST
 
-• **CANCEL_NEWEST**: = "cn"
+• **CANCEL\_NEWEST**: = "cn"
 
-Defined in: [order/OrderAPI.ts:25](https://github.com/bennycode/coinbase-pro-node/blob/a4b1aac/src/order/OrderAPI.ts#L25)
+Defined in: [order/OrderAPI.ts:25](https://github.com/bennycode/coinbase-pro-node/blob/004782e/src/order/OrderAPI.ts#L25)
 
----
+___
 
-### CANCEL_OLDEST
+### CANCEL\_OLDEST
 
-• **CANCEL_OLDEST**: = "co"
+• **CANCEL\_OLDEST**: = "co"
 
-Defined in: [order/OrderAPI.ts:26](https://github.com/bennycode/coinbase-pro-node/blob/a4b1aac/src/order/OrderAPI.ts#L26)
+Defined in: [order/OrderAPI.ts:26](https://github.com/bennycode/coinbase-pro-node/blob/004782e/src/order/OrderAPI.ts#L26)
 
----
+___
 
-### DECREMENT_AND_CANCEL
+### DECREMENT\_AND\_CANCEL
 
-• **DECREMENT_AND_CANCEL**: = "dc"
+• **DECREMENT\_AND\_CANCEL**: = "dc"
 
-Defined in: [order/OrderAPI.ts:27](https://github.com/bennycode/coinbase-pro-node/blob/a4b1aac/src/order/OrderAPI.ts#L27)
+Defined in: [order/OrderAPI.ts:27](https://github.com/bennycode/coinbase-pro-node/blob/004782e/src/order/OrderAPI.ts#L27)

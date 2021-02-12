@@ -6,7 +6,7 @@
 
 ## Hierarchy
 
-- **FundTransfer**
+* **FundTransfer**
 
 ## Table of contents
 
@@ -21,30 +21,30 @@
 
 ### amount
 
-• **amount**: _string_
+• **amount**: *string*
 
-Defined in: [profile/ProfileAPI.ts:16](https://github.com/bennycode/coinbase-pro-node/blob/a4b1aac/src/profile/ProfileAPI.ts#L16)
+Defined in: [profile/ProfileAPI.ts:16](https://github.com/bennycode/coinbase-pro-node/blob/004782e/src/profile/ProfileAPI.ts#L16)
 
----
+___
 
 ### currency
 
-• **currency**: _string_
+• **currency**: *string*
 
-Defined in: [profile/ProfileAPI.ts:17](https://github.com/bennycode/coinbase-pro-node/blob/a4b1aac/src/profile/ProfileAPI.ts#L17)
+Defined in: [profile/ProfileAPI.ts:17](https://github.com/bennycode/coinbase-pro-node/blob/004782e/src/profile/ProfileAPI.ts#L17)
 
----
+___
 
 ### from
 
-• **from**: _string_
+• **from**: *string*
 
-Defined in: [profile/ProfileAPI.ts:18](https://github.com/bennycode/coinbase-pro-node/blob/a4b1aac/src/profile/ProfileAPI.ts#L18)
+Defined in: [profile/ProfileAPI.ts:18](https://github.com/bennycode/coinbase-pro-node/blob/004782e/src/profile/ProfileAPI.ts#L18)
 
----
+___
 
 ### to
 
-• **to**: _string_
+• **to**: *string*
 
-Defined in: [profile/ProfileAPI.ts:19](https://github.com/bennycode/coinbase-pro-node/blob/a4b1aac/src/profile/ProfileAPI.ts#L19)
+Defined in: [profile/ProfileAPI.ts:19](https://github.com/bennycode/coinbase-pro-node/blob/004782e/src/profile/ProfileAPI.ts#L19)

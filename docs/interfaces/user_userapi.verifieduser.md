@@ -6,7 +6,7 @@
 
 ## Hierarchy
 
-- **VerifiedUser**
+* **VerifiedUser**
 
 ## Table of contents
 
@@ -18,6 +18,6 @@
 
 ### id
 
-• **id**: _string_
+• **id**: *string*
 
-Defined in: [user/UserAPI.ts:4](https://github.com/bennycode/coinbase-pro-node/blob/a4b1aac/src/user/UserAPI.ts#L4)
+Defined in: [user/UserAPI.ts:4](https://github.com/bennycode/coinbase-pro-node/blob/004782e/src/user/UserAPI.ts#L4)

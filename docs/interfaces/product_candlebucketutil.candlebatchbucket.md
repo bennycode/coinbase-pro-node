@@ -6,7 +6,7 @@
 
 ## Hierarchy
 
-- **CandleBatchBucket**
+* **CandleBatchBucket**
 
 ## Table of contents
 
@@ -19,14 +19,14 @@
 
 ### start
 
-• **start**: _string_
+• **start**: *string*
 
-Defined in: [product/CandleBucketUtil.ts:8](https://github.com/bennycode/coinbase-pro-node/blob/a4b1aac/src/product/CandleBucketUtil.ts#L8)
+Defined in: [product/CandleBucketUtil.ts:8](https://github.com/bennycode/coinbase-pro-node/blob/004782e/src/product/CandleBucketUtil.ts#L8)
 
----
+___
 
 ### stop
 
-• **stop**: _string_
+• **stop**: *string*
 
-Defined in: [product/CandleBucketUtil.ts:9](https://github.com/bennycode/coinbase-pro-node/blob/a4b1aac/src/product/CandleBucketUtil.ts#L9)
+Defined in: [product/CandleBucketUtil.ts:9](https://github.com/bennycode/coinbase-pro-node/blob/004782e/src/product/CandleBucketUtil.ts#L9)

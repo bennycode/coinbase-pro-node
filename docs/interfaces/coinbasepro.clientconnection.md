@@ -6,7 +6,7 @@
 
 ## Hierarchy
 
-- **ClientConnection**
+* **ClientConnection**
 
 ## Table of contents
 
@@ -19,14 +19,14 @@
 
 ### REST
 
-• **REST**: _string_
+• **REST**: *string*
 
-Defined in: [CoinbasePro.ts:29](https://github.com/bennycode/coinbase-pro-node/blob/a4b1aac/src/CoinbasePro.ts#L29)
+Defined in: [CoinbasePro.ts:29](https://github.com/bennycode/coinbase-pro-node/blob/004782e/src/CoinbasePro.ts#L29)
 
----
+___
 
 ### WebSocket
 
-• **WebSocket**: _string_
+• **WebSocket**: *string*
 
-Defined in: [CoinbasePro.ts:30](https://github.com/bennycode/coinbase-pro-node/blob/a4b1aac/src/CoinbasePro.ts#L30)
+Defined in: [CoinbasePro.ts:30](https://github.com/bennycode/coinbase-pro-node/blob/004782e/src/CoinbasePro.ts#L30)

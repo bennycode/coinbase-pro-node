@@ -8,7 +8,7 @@ Top 50 bids and asks (aggregated) BUT if there are not 50 then less bids and ask
 
 ## Hierarchy
 
-- **OrderBookLevel2**
+* **OrderBookLevel2**
 
 ## Table of contents
 
@@ -24,20 +24,20 @@ Top 50 bids and asks (aggregated) BUT if there are not 50 then less bids and ask
 
 • **asks**: AggregatedOrder[]
 
-Defined in: [product/ProductAPI.ts:118](https://github.com/bennycode/coinbase-pro-node/blob/a4b1aac/src/product/ProductAPI.ts#L118)
+Defined in: [product/ProductAPI.ts:118](https://github.com/bennycode/coinbase-pro-node/blob/004782e/src/product/ProductAPI.ts#L118)
 
----
+___
 
 ### bids
 
 • **bids**: AggregatedOrder[]
 
-Defined in: [product/ProductAPI.ts:119](https://github.com/bennycode/coinbase-pro-node/blob/a4b1aac/src/product/ProductAPI.ts#L119)
+Defined in: [product/ProductAPI.ts:119](https://github.com/bennycode/coinbase-pro-node/blob/004782e/src/product/ProductAPI.ts#L119)
 
----
+___
 
 ### sequence
 
-• **sequence**: _number_
+• **sequence**: *number*
 
-Defined in: [product/ProductAPI.ts:120](https://github.com/bennycode/coinbase-pro-node/blob/a4b1aac/src/product/ProductAPI.ts#L120)
+Defined in: [product/ProductAPI.ts:120](https://github.com/bennycode/coinbase-pro-node/blob/004782e/src/product/ProductAPI.ts#L120)

@@ -6,7 +6,7 @@
 
 ## Hierarchy
 
-- **WithdrawalFeeEstimate**
+* **WithdrawalFeeEstimate**
 
 ## Table of contents
 
@@ -18,6 +18,6 @@
 
 ### fee
 
-• **fee**: _string_
+• **fee**: *string*
 
-Defined in: [withdraw/WithdrawAPI.ts:19](https://github.com/bennycode/coinbase-pro-node/blob/a4b1aac/src/withdraw/WithdrawAPI.ts#L19)
+Defined in: [withdraw/WithdrawAPI.ts:35](https://github.com/bennycode/coinbase-pro-node/blob/004782e/src/withdraw/WithdrawAPI.ts#L35)

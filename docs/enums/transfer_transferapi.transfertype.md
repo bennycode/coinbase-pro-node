@@ -17,12 +17,12 @@
 
 • **DEPOSIT**: = "deposit"
 
-Defined in: [transfer/TransferAPI.ts:30](https://github.com/bennycode/coinbase-pro-node/blob/a4b1aac/src/transfer/TransferAPI.ts#L30)
+Defined in: [transfer/TransferAPI.ts:30](https://github.com/bennycode/coinbase-pro-node/blob/004782e/src/transfer/TransferAPI.ts#L30)
 
----
+___
 
 ### WITHDRAW
 
 • **WITHDRAW**: = "withdraw"
 
-Defined in: [transfer/TransferAPI.ts:31](https://github.com/bennycode/coinbase-pro-node/blob/a4b1aac/src/transfer/TransferAPI.ts#L31)
+Defined in: [transfer/TransferAPI.ts:31](https://github.com/bennycode/coinbase-pro-node/blob/004782e/src/transfer/TransferAPI.ts#L31)

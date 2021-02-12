@@ -97,6 +97,48 @@ npx ts-node ./src/demo/dump-candles.ts
 
 **Tip:** There is a [.env.defaults](https://github.com/bennycode/coinbase-pro-node/blob/main/.env.defaults) file which serves as a template. Just remove its `.defaults` extension and enter your credentials to get started. Do not commit this file (or your credentials) to any repository!
 
+### Web Frontend Applications
+
+The "coinbase-pro-node" library was built to be used in Node.js environments BUT you can also make use of it in web frontend applications (using React, Vue.js, etc.). However, due to the [CORS restrictions](https://developer.mozilla.org/docs/Web/HTTP/CORS) of modern web browser, you will have to use a proxy server.
+
+A proxy server can be setup with webpack's [DevServer proxy configuration](https://webpack.js.org/configuration/dev-server/#devserverproxy) or [http-proxy-middleware](https://www.npmjs.com/package/http-proxy-middleware).
+
+Here is an example:
+
+**Backend**
+
+```typescript
+import {createProxyMiddleware} from 'http-proxy-middleware';
+import express from 'express';
+
+const app = express();
+
+app.use(
+  '/api-coinbase-pro',
+  createProxyMiddleware({
+    target: 'https://api.pro.coinbase.com',
+    changeOrigin: true,
+    pathRewrite: {
+      [`^/api-coinbase-pro`]: '',
+    },
+  })
+);
+```
+
+Later on, you can use the proxy URL (`/api-coinbase-pro` from above) in your web application to initialize "coinbase-pro-node" with it:
+
+**Frontend**
+
+```typescript
+const client = new CoinbasePro({
+  httpUrl: '/api-coinbase-pro',
+  apiKey: '',
+  apiSecret: '',
+  passphrase: '',
+  useSandbox: false,
+});
+```
+
 ### Real-world examples
 
 Checkout [GitHub's dependency graph][6] to see who uses "coinbase-pro-node" in production. There are also [npm packages][7] depending on "coinbase-pro-node".
@@ -128,8 +170,9 @@ This project is [MIT](./LICENSE) licensed.
 
 If you like this project, you might also like these related projects:
 
-- [**trading-signals**](https://github.com/bennycode/trading-signals), Technical indicators written in TypeScript with arbitrary-precision arithmetic.
-- [**binance-api-node**](https://github.com/Ashlar/binance-api-node), Heavily tested and Promise-based Binance API.
+- [**trading-signals**](https://github.com/bennycode/trading-signals), Technical indicators, written in TypeScript, with arbitrary-precision arithmetic.
+- [**ig-trading-api**](https://github.com/bennycode/ig-trading-api), REST API, written in TypeScript, for CFD trading with IG.
+- [**binance-api-node**](https://github.com/Ashlar/binance-api-node), Heavily tested and Promise-based Binance API with TypeScript definitions.
 
 [1]: https://pro.coinbase.com/
 [2]: https://docs.pro.coinbase.com/

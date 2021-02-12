@@ -6,7 +6,7 @@
 
 ## Hierarchy
 
-- **OrderBookRequestParameters**
+* **OrderBookRequestParameters**
 
 ## Table of contents
 
@@ -18,6 +18,6 @@
 
 ### level
 
-• **level**: [_OrderBookLevel_](../enums/product_productapi.orderbooklevel.md)
+• **level**: [*OrderBookLevel*](../enums/product_productapi.orderbooklevel.md)
 
-Defined in: [product/ProductAPI.ts:136](https://github.com/bennycode/coinbase-pro-node/blob/a4b1aac/src/product/ProductAPI.ts#L136)
+Defined in: [product/ProductAPI.ts:136](https://github.com/bennycode/coinbase-pro-node/blob/004782e/src/product/ProductAPI.ts#L136)

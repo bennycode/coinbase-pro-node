@@ -6,7 +6,7 @@
 
 ## Hierarchy
 
-- [_ClientAuthenticationBase_](coinbasepro.clientauthenticationbase.md)
+* [*ClientAuthenticationBase*](coinbasepro.clientauthenticationbase.md)
 
   ↳ **ClientAuthenticationCustomUrls**
 
@@ -24,44 +24,44 @@
 
 ### apiKey
 
-• **apiKey**: _string_
+• **apiKey**: *string*
 
 Overrides: [ClientAuthenticationBase](coinbasepro.clientauthenticationbase.md).[apiKey](coinbasepro.clientauthenticationbase.md#apikey)
 
-Defined in: [CoinbasePro.ts:19](https://github.com/bennycode/coinbase-pro-node/blob/a4b1aac/src/CoinbasePro.ts#L19)
+Defined in: [CoinbasePro.ts:19](https://github.com/bennycode/coinbase-pro-node/blob/004782e/src/CoinbasePro.ts#L19)
 
----
+___
 
 ### apiSecret
 
-• **apiSecret**: _string_
+• **apiSecret**: *string*
 
 Overrides: [ClientAuthenticationBase](coinbasepro.clientauthenticationbase.md).[apiSecret](coinbasepro.clientauthenticationbase.md#apisecret)
 
-Defined in: [CoinbasePro.ts:20](https://github.com/bennycode/coinbase-pro-node/blob/a4b1aac/src/CoinbasePro.ts#L20)
+Defined in: [CoinbasePro.ts:20](https://github.com/bennycode/coinbase-pro-node/blob/004782e/src/CoinbasePro.ts#L20)
 
----
+___
 
 ### httpUrl
 
-• **httpUrl**: _string_
+• **httpUrl**: *string*
 
-Defined in: [CoinbasePro.ts:21](https://github.com/bennycode/coinbase-pro-node/blob/a4b1aac/src/CoinbasePro.ts#L21)
+Defined in: [CoinbasePro.ts:21](https://github.com/bennycode/coinbase-pro-node/blob/004782e/src/CoinbasePro.ts#L21)
 
----
+___
 
 ### passphrase
 
-• **passphrase**: _string_
+• **passphrase**: *string*
 
 Overrides: [ClientAuthenticationBase](coinbasepro.clientauthenticationbase.md).[passphrase](coinbasepro.clientauthenticationbase.md#passphrase)
 
-Defined in: [CoinbasePro.ts:22](https://github.com/bennycode/coinbase-pro-node/blob/a4b1aac/src/CoinbasePro.ts#L22)
+Defined in: [CoinbasePro.ts:22](https://github.com/bennycode/coinbase-pro-node/blob/004782e/src/CoinbasePro.ts#L22)
 
----
+___
 
 ### wsUrl
 
-• **wsUrl**: _string_
+• **wsUrl**: *string*
 
-Defined in: [CoinbasePro.ts:23](https://github.com/bennycode/coinbase-pro-node/blob/a4b1aac/src/CoinbasePro.ts#L23)
+Defined in: [CoinbasePro.ts:23](https://github.com/bennycode/coinbase-pro-node/blob/004782e/src/CoinbasePro.ts#L23)

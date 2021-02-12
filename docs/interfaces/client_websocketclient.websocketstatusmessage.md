@@ -6,7 +6,7 @@
 
 ## Hierarchy
 
-- **WebSocketStatusMessage**
+* **WebSocketStatusMessage**
 
 ## Table of contents
 
@@ -20,22 +20,22 @@
 
 ### currencies
 
-• **currencies**: { `convertible_to`: _string_[] ; `details`: [_CurrencyDetail_](currency_currencyapi.currencydetail.md) ; `funding_account_id`: _string_ ; `id`: _string_ ; `max_precision`: _string_ ; `min_size`: _string_ ; `name`: _string_ ; `status`: _online_ ; `status_message?`: _undefined_ | _string_ }[]
+• **currencies**: { `convertible_to`: *string*[] ; `details`: [*CurrencyDetail*](currency_currencyapi.currencydetail.md) ; `funding_account_id`: *string* ; `id`: *string* ; `max_precision`: *string* ; `min_size`: *string* ; `name`: *string* ; `status`: *online* ; `status_message?`: *undefined* \| *string*  }[]
 
-Defined in: [client/WebSocketClient.ts:153](https://github.com/bennycode/coinbase-pro-node/blob/a4b1aac/src/client/WebSocketClient.ts#L153)
+Defined in: [client/WebSocketClient.ts:153](https://github.com/bennycode/coinbase-pro-node/blob/004782e/src/client/WebSocketClient.ts#L153)
 
----
+___
 
 ### products
 
-• **products**: [_Product_](product_productapi.product.md) & { `type`: _spot_ }[]
+• **products**: [*Product*](product_productapi.product.md) & { `type`: *spot*  }[]
 
-Defined in: [client/WebSocketClient.ts:164](https://github.com/bennycode/coinbase-pro-node/blob/a4b1aac/src/client/WebSocketClient.ts#L164)
+Defined in: [client/WebSocketClient.ts:164](https://github.com/bennycode/coinbase-pro-node/blob/004782e/src/client/WebSocketClient.ts#L164)
 
----
+___
 
 ### type
 
-• **type**: [_STATUS_](../enums/client_websocketclient.websocketresponsetype.md#status)
+• **type**: [*STATUS*](../enums/client_websocketclient.websocketresponsetype.md#status)
 
-Defined in: [client/WebSocketClient.ts:165](https://github.com/bennycode/coinbase-pro-node/blob/a4b1aac/src/client/WebSocketClient.ts#L165)
+Defined in: [client/WebSocketClient.ts:165](https://github.com/bennycode/coinbase-pro-node/blob/004782e/src/client/WebSocketClient.ts#L165)

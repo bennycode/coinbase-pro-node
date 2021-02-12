@@ -6,7 +6,7 @@
 
 ## Hierarchy
 
-- **CoinbasePro**
+* **CoinbasePro**
 
 ## Table of contents
 
@@ -25,53 +25,53 @@
 
 ### constructor
 
-\+ **new CoinbasePro**(`auth?`: [_ClientAuthentication_](../modules/coinbasepro.md#clientauthentication)): [_CoinbasePro_](coinbasepro.coinbasepro-1.md)
+\+ **new CoinbasePro**(`auth?`: [*ClientAuthentication*](../modules/coinbasepro.md#clientauthentication)): [*CoinbasePro*](coinbasepro.coinbasepro-1.md)
 
 #### Parameters:
 
-| Name   | Type                                                                     | Default value |
-| ------ | ------------------------------------------------------------------------ | ------------- |
-| `auth` | [_ClientAuthentication_](../modules/coinbasepro.md#clientauthentication) | ...           |
+Name | Type | Default value |
+------ | ------ | ------ |
+`auth` | [*ClientAuthentication*](../modules/coinbasepro.md#clientauthentication) | ... |
 
-**Returns:** [_CoinbasePro_](coinbasepro.coinbasepro-1.md)
+**Returns:** [*CoinbasePro*](coinbasepro.coinbasepro-1.md)
 
-Defined in: [CoinbasePro.ts:52](https://github.com/bennycode/coinbase-pro-node/blob/a4b1aac/src/CoinbasePro.ts#L52)
+Defined in: [CoinbasePro.ts:52](https://github.com/bennycode/coinbase-pro-node/blob/004782e/src/CoinbasePro.ts#L52)
 
 ## Properties
 
 ### rest
 
-• `Readonly` **rest**: [_RESTClient_](client_restclient.restclient.md)
+• `Readonly` **rest**: [*RESTClient*](client_restclient.restclient.md)
 
-Defined in: [CoinbasePro.ts:34](https://github.com/bennycode/coinbase-pro-node/blob/a4b1aac/src/CoinbasePro.ts#L34)
+Defined in: [CoinbasePro.ts:34](https://github.com/bennycode/coinbase-pro-node/blob/004782e/src/CoinbasePro.ts#L34)
 
----
+___
 
 ### url
 
-• `Readonly` **url**: [_ClientConnection_](../interfaces/coinbasepro.clientconnection.md)
+• `Readonly` **url**: [*ClientConnection*](../interfaces/coinbasepro.clientconnection.md)
 
-Defined in: [CoinbasePro.ts:35](https://github.com/bennycode/coinbase-pro-node/blob/a4b1aac/src/CoinbasePro.ts#L35)
+Defined in: [CoinbasePro.ts:35](https://github.com/bennycode/coinbase-pro-node/blob/004782e/src/CoinbasePro.ts#L35)
 
----
+___
 
 ### ws
 
-• `Readonly` **ws**: [_WebSocketClient_](client_websocketclient.websocketclient.md)
+• `Readonly` **ws**: [*WebSocketClient*](client_websocketclient.websocketclient.md)
 
-Defined in: [CoinbasePro.ts:36](https://github.com/bennycode/coinbase-pro-node/blob/a4b1aac/src/CoinbasePro.ts#L36)
+Defined in: [CoinbasePro.ts:36](https://github.com/bennycode/coinbase-pro-node/blob/004782e/src/CoinbasePro.ts#L36)
 
----
+___
 
 ### SETUP
 
-▪ `Readonly` `Static` **SETUP**: { `PRODUCTION`: [_ClientConnection_](../interfaces/coinbasepro.clientconnection.md) ; `SANDBOX`: [_ClientConnection_](../interfaces/coinbasepro.clientconnection.md) }
+▪ `Readonly` `Static` **SETUP**: { `PRODUCTION`: [*ClientConnection*](../interfaces/coinbasepro.clientconnection.md) ; `SANDBOX`: [*ClientConnection*](../interfaces/coinbasepro.clientconnection.md)  }
 
 #### Type declaration:
 
-| Name         | Type                                                                |
-| ------------ | ------------------------------------------------------------------- |
-| `PRODUCTION` | [_ClientConnection_](../interfaces/coinbasepro.clientconnection.md) |
-| `SANDBOX`    | [_ClientConnection_](../interfaces/coinbasepro.clientconnection.md) |
+Name | Type |
+------ | ------ |
+`PRODUCTION` | [*ClientConnection*](../interfaces/coinbasepro.clientconnection.md) |
+`SANDBOX` | [*ClientConnection*](../interfaces/coinbasepro.clientconnection.md) |
 
-Defined in: [CoinbasePro.ts:38](https://github.com/bennycode/coinbase-pro-node/blob/a4b1aac/src/CoinbasePro.ts#L38)
+Defined in: [CoinbasePro.ts:38](https://github.com/bennycode/coinbase-pro-node/blob/004782e/src/CoinbasePro.ts#L38)
