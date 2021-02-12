@@ -41,7 +41,7 @@ describe('WithdrawAPI', () => {
         amount,
         currency,
         cryptoAddress,
-        destinationTag,
+        destinationTag
       );
       expect(withdrawal).toEqual({amount, currency, id: withdrawalId});
     });
@@ -55,13 +55,20 @@ describe('WithdrawAPI', () => {
       nock(global.REST_URL)
         .persist()
         .post(WithdrawAPI.URL.WITHDRAWALS.COINBASE_ACCOUNT)
-        .reply(200, JSON.stringify({
-          'id': '593533d2-ff31-46e0-b22e-ca754147a96a',
-          'amount': amount,
-          'currency': currency,
-        }));
+        .reply(
+          200,
+          JSON.stringify({
+            id: '593533d2-ff31-46e0-b22e-ca754147a96a',
+            amount: amount,
+            currency: currency,
+          })
+        );
 
-      const withdrawal = await global.client.rest.withdraw.withdrawToCoinbaseAccount(amount, currency, 'c13cd0fc-72ca-55e9-843b-b84ef628c198');
+      const withdrawal = await global.client.rest.withdraw.withdrawToCoinbaseAccount(
+        amount,
+        currency,
+        'c13cd0fc-72ca-55e9-843b-b84ef628c198'
+      );
       expect(withdrawal.amount).toBe(amount);
       expect(withdrawal.currency).toBe(currency);
     });
@@ -75,14 +82,21 @@ describe('WithdrawAPI', () => {
       nock(global.REST_URL)
         .persist()
         .post(WithdrawAPI.URL.WITHDRAWALS.PAYMENT_METHOD)
-        .reply(200, JSON.stringify({
-          'id': '593533d2-ff31-46e0-b22e-ca754147a96a',
-          'amount': '10.00',
-          'currency': 'USD',
-          'payout_at': '2016-08-20T00:31:09Z',
-        }));
+        .reply(
+          200,
+          JSON.stringify({
+            id: '593533d2-ff31-46e0-b22e-ca754147a96a',
+            amount: '10.00',
+            currency: 'USD',
+            payout_at: '2016-08-20T00:31:09Z',
+          })
+        );
 
-      const withdrawal = await global.client.rest.withdraw.withdrawToPaymentMethod(amount, currency, 'bc677162-d934-5f1a-968c-a496b1c1270b');
+      const withdrawal = await global.client.rest.withdraw.withdrawToPaymentMethod(
+        amount,
+        currency,
+        'bc677162-d934-5f1a-968c-a496b1c1270b'
+      );
       expect(withdrawal.amount).toBe(amount);
       expect(withdrawal.currency).toBe(currency);
     });
@@ -106,72 +120,77 @@ describe('WithdrawAPI', () => {
       nock(global.REST_URL)
         .persist()
         .get(WithdrawAPI.URL.LIST_PAYMENT_METHODS)
-        .reply(200, JSON.stringify([{
-          'id': 'bc6d7162-d984-5ffa-963c-a493b1c1370b',
-          'type': 'ach_bank_account',
-          'name': 'Bank of America - eBan... ********7134',
-          'currency': 'USD',
-          'primary_buy': true,
-          'primary_sell': true,
-          'allow_buy': true,
-          'allow_sell': true,
-          'allow_deposit': true,
-          'allow_withdraw': true,
-          'limits': {
-            'buy': [
-              {
-                'period_in_days': 1,
-                'total': {
-                  'amount': '10000.00',
-                  'currency': 'USD',
-                },
-                'remaining': {
-                  'amount': '10000.00',
-                  'currency': 'USD',
-                },
+        .reply(
+          200,
+          JSON.stringify([
+            {
+              id: 'bc6d7162-d984-5ffa-963c-a493b1c1370b',
+              type: 'ach_bank_account',
+              name: 'Bank of America - eBan... ********7134',
+              currency: 'USD',
+              primary_buy: true,
+              primary_sell: true,
+              allow_buy: true,
+              allow_sell: true,
+              allow_deposit: true,
+              allow_withdraw: true,
+              limits: {
+                buy: [
+                  {
+                    period_in_days: 1,
+                    total: {
+                      amount: '10000.00',
+                      currency: 'USD',
+                    },
+                    remaining: {
+                      amount: '10000.00',
+                      currency: 'USD',
+                    },
+                  },
+                ],
+                instant_buy: [
+                  {
+                    period_in_days: 7,
+                    total: {
+                      amount: '0.00',
+                      currency: 'USD',
+                    },
+                    remaining: {
+                      amount: '0.00',
+                      currency: 'USD',
+                    },
+                  },
+                ],
+                sell: [
+                  {
+                    period_in_days: 1,
+                    total: {
+                      amount: '10000.00',
+                      currency: 'USD',
+                    },
+                    remaining: {
+                      amount: '10000.00',
+                      currency: 'USD',
+                    },
+                  },
+                ],
+                deposit: [
+                  {
+                    period_in_days: 1,
+                    total: {
+                      amount: '10000.00',
+                      currency: 'USD',
+                    },
+                    remaining: {
+                      amount: '10000.00',
+                      currency: 'USD',
+                    },
+                  },
+                ],
               },
-            ],
-            'instant_buy': [
-              {
-                'period_in_days': 7,
-                'total': {
-                  'amount': '0.00',
-                  'currency': 'USD',
-                },
-                'remaining': {
-                  'amount': '0.00',
-                  'currency': 'USD',
-                },
-              },
-            ],
-            'sell': [
-              {
-                'period_in_days': 1,
-                'total': {
-                  'amount': '10000.00',
-                  'currency': 'USD',
-                },
-                'remaining': {
-                  'amount': '10000.00',
-                  'currency': 'USD',
-                },
-              },
-            ],
-            'deposit': [
-              {
-                'period_in_days': 1,
-                'total': {
-                  'amount': '10000.00',
-                  'currency': 'USD',
-                },
-                'remaining': {
-                  'amount': '10000.00',
-                  'currency': 'USD',
-                },
-              },
-            ],
-          },
-        }]));
+            },
+          ])
+        );
 
       const paymentMethods = await global.client.rest.withdraw.getPaymentMethods();
       expect(paymentMethods[0].limits.instant_buy[0].period_in_days).toBe(7);

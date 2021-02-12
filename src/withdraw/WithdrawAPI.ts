@@ -7,7 +7,7 @@ export interface CryptoWithdrawal {
 }
 
 export interface PaymentMethodWithdrawal extends CryptoWithdrawal {
-  payout_at: string
+  payout_at: string;
 }
 
 export interface CryptoWithdrawalRequest {
@@ -21,8 +21,8 @@ export interface CryptoWithdrawalRequest {
 
 export interface CoinbaseAccountWithdrawalRequest {
   amount: string;
-  currency: string;
   coinbase_account_id: string;
+  currency: string;
 }
 
 export interface PaymentMethodWithdrawalRequest {
@@ -36,34 +36,34 @@ export interface WithdrawalFeeEstimate {
 }
 
 export interface PaymentMethodLimit {
-  'period_in_days': number,
-  'total': {
-    'amount': string,
-    'currency': string
-  },
-  'remaining': {
-    'amount': string,
-    'currency': string
-  }
+  period_in_days: number;
+  remaining: {
+    amount: string;
+    currency: string;
+  };
+  total: {
+    amount: string;
+    currency: string;
+  };
 }
 
 export interface PaymentMethod {
-  'id': string,
-  'type': string,
-  'name': string,
-  'currency': string,
-  'primary_buy': boolean,
-  'primary_sell': boolean,
-  'allow_buy': boolean,
-  'allow_sell': boolean,
-  'allow_deposit': boolean,
-  'allow_withdraw': boolean,
-  'limits': {
-    'buy': PaymentMethodLimit[],
-    'deposit': PaymentMethodLimit[]
-    'instant_buy': PaymentMethodLimit[],
-    'sell': PaymentMethodLimit[],
-  }
+  allow_buy: boolean;
+  allow_deposit: boolean;
+  allow_sell: boolean;
+  allow_withdraw: boolean;
+  currency: string;
+  id: string;
+  limits: {
+    buy: PaymentMethodLimit[];
+    deposit: PaymentMethodLimit[];
+    instant_buy: PaymentMethodLimit[];
+    sell: PaymentMethodLimit[];
+  };
+  name: string;
+  primary_buy: boolean;
+  primary_sell: boolean;
+  type: string;
 }
 
 export class WithdrawAPI {
@@ -77,8 +77,7 @@ export class WithdrawAPI {
     },
   };
 
-  constructor(private readonly apiClient: AxiosInstance) {
-  }
+  constructor(private readonly apiClient: AxiosInstance) {}
 
   /**
    * Withdraws funds to a crypto address.
@@ -96,7 +95,7 @@ export class WithdrawAPI {
     currency: string,
     cryptoAddress: string,
     destinationTag?: string,
-    addNetworkFeeToTotal?: boolean,
+    addNetworkFeeToTotal?: boolean
   ): Promise<CryptoWithdrawal> {
     const resource = WithdrawAPI.URL.WITHDRAWALS.CRYPTO;
     const withdrawal: CryptoWithdrawalRequest = {
@@ -123,7 +122,11 @@ export class WithdrawAPI {
    * @param coinbaseAccountId - ID of the Coinbase or Coinbase Pro account
    * @see https://docs.pro.coinbase.com/#coinbase56
    */
-  async withdrawToCoinbaseAccount(amount: string, currency: string, coinbaseAccountId: string): Promise<CryptoWithdrawal> {
+  async withdrawToCoinbaseAccount(
+    amount: string,
+    currency: string,
+    coinbaseAccountId: string
+  ): Promise<CryptoWithdrawal> {
     const resource = WithdrawAPI.URL.WITHDRAWALS.COINBASE_ACCOUNT;
     const withdrawal: CoinbaseAccountWithdrawalRequest = {
       amount,
@@ -142,7 +145,11 @@ export class WithdrawAPI {
    * @param paymentMethodId - ID of the payment method
    * @see https://docs.pro.coinbase.com/#payment-method55
    */
-  async withdrawToPaymentMethod(amount: string, currency: string, paymentMethodId: string): Promise<PaymentMethodWithdrawal> {
+  async withdrawToPaymentMethod(
+    amount: string,
+    currency: string,
+    paymentMethodId: string
+  ): Promise<PaymentMethodWithdrawal> {
     const resource = WithdrawAPI.URL.WITHDRAWALS.PAYMENT_METHOD;
     const withdrawal: PaymentMethodWithdrawalRequest = {
       amount,
