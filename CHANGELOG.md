@@ -1,3 +1,26 @@
+### 2.18.0 (2021-02-12)
+
+##### Chores
+
+*  yarn upgrade-interactive --latest ([b1894055](https://github.com/bennycode/coinbase-pro-node/commit/b18940555ce572c40e1f05ff963340a5763bcc4a))
+*  Add weekly code scanning alerts ([e6787a81](https://github.com/bennycode/coinbase-pro-node/commit/e6787a819d21890be400f2682825b2edbed60933))
+*  yarn upgrade --latest ([bec82452](https://github.com/bennycode/coinbase-pro-node/commit/bec824529974de48d55527e3107ef3d146900548))
+* **deps-dev:**
+  *  bump @typescript-eslint/parser from 4.14.1 to 4.14.2 ([#402](https://github.com/bennycode/coinbase-pro-node/pull/402)) ([52e522a4](https://github.com/bennycode/coinbase-pro-node/commit/52e522a485dbc3e1f91662bb23ab15aa09360a01))
+  *  bump @typescript-eslint/eslint-plugin ([#401](https://github.com/bennycode/coinbase-pro-node/pull/401)) ([a1442465](https://github.com/bennycode/coinbase-pro-node/commit/a1442465fe66b6c044c8c8cb825e42c108d4aaef))
+  *  bump lint-staged from 10.5.3 to 10.5.4 ([#400](https://github.com/bennycode/coinbase-pro-node/pull/400)) ([cfc4c0b9](https://github.com/bennycode/coinbase-pro-node/commit/cfc4c0b9e6d821cf68423f0ae37f611b9c617431))
+  *  bump typedoc from 0.20.19 to 0.20.23 ([#399](https://github.com/bennycode/coinbase-pro-node/pull/399)) ([644191bd](https://github.com/bennycode/coinbase-pro-node/commit/644191bd1ddc9d46be434501066d15adfc4b5f72))
+* **deps:**  bump ws from 7.4.2 to 7.4.3 ([#403](https://github.com/bennycode/coinbase-pro-node/pull/403)) ([1b224ef7](https://github.com/bennycode/coinbase-pro-node/commit/1b224ef70847fa106ffb7f146abd7e90dc8eb1db))
+
+##### Documentation Changes
+
+*  List IG Trading API ([0258d30a](https://github.com/bennycode/coinbase-pro-node/commit/0258d30ad4b3d731fbc2540adfea2869d19c8360))
+*  Describe proxy setup ([3d453697](https://github.com/bennycode/coinbase-pro-node/commit/3d4536971999dfdc49e2d5f993fde9134f3a8a86))
+
+##### New Features
+
+*  Support withdrawals to payment methods & Coinbase accounts ([#408](https://github.com/bennycode/coinbase-pro-node/pull/408)) ([ea42d4dc](https://github.com/bennycode/coinbase-pro-node/commit/ea42d4dca872c2bfbdbb6f322b64e2902c16d4d1))
+
 #### 2.17.2 (2021-02-02)
 
 ##### Chores
