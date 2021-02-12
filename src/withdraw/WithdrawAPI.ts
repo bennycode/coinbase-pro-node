@@ -138,7 +138,7 @@ export class WithdrawAPI {
   }
 
   /**
-   * Withdraw funds to a payment method. See the Payment Methods section for retrieving your payment methods.
+   * Withdraw funds to a payment method.
    *
    * @param amount - The amount to withdraw
    * @param currency - The type of currency
