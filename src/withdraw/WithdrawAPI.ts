@@ -130,8 +130,8 @@ export class WithdrawAPI {
     const resource = WithdrawAPI.URL.WITHDRAWALS.COINBASE_ACCOUNT;
     const withdrawal: CoinbaseAccountWithdrawalRequest = {
       amount,
-      currency,
       coinbase_account_id: coinbaseAccountId,
+      currency,
     };
     const response = await this.apiClient.post<CryptoWithdrawal>(resource, withdrawal);
     return response.data;

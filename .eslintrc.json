@@ -13,7 +13,7 @@
     "project": "./tsconfig.json",
     "sourceType": "module"
   },
-  "plugins": ["@typescript-eslint", "typescript-sort-keys", "prettier"],
+  "plugins": ["@typescript-eslint", "typescript-sort-keys", "prettier", "sort-keys-fix"],
   "rules": {
     "@typescript-eslint/array-type": "error",
     "@typescript-eslint/consistent-type-assertions": "error",
@@ -64,6 +64,7 @@
         "natural": true
       }
     ],
+    "sort-keys-fix/sort-keys-fix": "warn",
     "sort-vars": "error",
     "space-in-parens": "error",
     "strict": ["error", "global"],

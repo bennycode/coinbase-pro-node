@@ -58,9 +58,9 @@ describe('WithdrawAPI', () => {
         .reply(
           200,
           JSON.stringify({
-            id: '593533d2-ff31-46e0-b22e-ca754147a96a',
             amount: amount,
             currency: currency,
+            id: '593533d2-ff31-46e0-b22e-ca754147a96a',
           })
         );
 
@@ -85,9 +85,9 @@ describe('WithdrawAPI', () => {
         .reply(
           200,
           JSON.stringify({
-            id: '593533d2-ff31-46e0-b22e-ca754147a96a',
             amount: '10.00',
             currency: 'USD',
+            id: '593533d2-ff31-46e0-b22e-ca754147a96a',
             payout_at: '2016-08-20T00:31:09Z',
           })
         );
@@ -124,51 +124,21 @@ describe('WithdrawAPI', () => {
           200,
           JSON.stringify([
             {
-              id: 'bc6d7162-d984-5ffa-963c-a493b1c1370b',
-              type: 'ach_bank_account',
-              name: 'Bank of America - eBan... ********7134',
-              currency: 'USD',
-              primary_buy: true,
-              primary_sell: true,
               allow_buy: true,
-              allow_sell: true,
               allow_deposit: true,
+              allow_sell: true,
               allow_withdraw: true,
+              currency: 'USD',
+              id: 'bc6d7162-d984-5ffa-963c-a493b1c1370b',
               limits: {
                 buy: [
                   {
                     period_in_days: 1,
-                    total: {
-                      amount: '10000.00',
-                      currency: 'USD',
-                    },
                     remaining: {
                       amount: '10000.00',
                       currency: 'USD',
                     },
-                  },
-                ],
-                instant_buy: [
-                  {
-                    period_in_days: 7,
                     total: {
-                      amount: '0.00',
-                      currency: 'USD',
-                    },
-                    remaining: {
-                      amount: '0.00',
-                      currency: 'USD',
-                    },
-                  },
-                ],
-                sell: [
-                  {
-                    period_in_days: 1,
-                    total: {
-                      amount: '10000.00',
-                      currency: 'USD',
-                    },
-                    remaining: {
                       amount: '10000.00',
                       currency: 'USD',
                     },
@@ -177,17 +147,47 @@ describe('WithdrawAPI', () => {
                 deposit: [
                   {
                     period_in_days: 1,
+                    remaining: {
+                      amount: '10000.00',
+                      currency: 'USD',
+                    },
                     total: {
                       amount: '10000.00',
                       currency: 'USD',
                     },
+                  },
+                ],
+                instant_buy: [
+                  {
+                    period_in_days: 7,
                     remaining: {
+                      amount: '0.00',
+                      currency: 'USD',
+                    },
+                    total: {
+                      amount: '0.00',
+                      currency: 'USD',
+                    },
+                  },
+                ],
+                sell: [
+                  {
+                    period_in_days: 1,
+                    remaining: {
+                      amount: '10000.00',
+                      currency: 'USD',
+                    },
+                    total: {
                       amount: '10000.00',
                       currency: 'USD',
                     },
                   },
                 ],
               },
+              name: 'Bank of America - eBan... ********7134',
+              primary_buy: true,
+              primary_sell: true,
+              type: 'ach_bank_account',
             },
           ])
         );
