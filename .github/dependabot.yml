@@ -14,3 +14,7 @@ updates:
     labels:
       - "type: chore \U0001F9F9"
     open-pull-requests-limit: 10
+    ignore:
+      - dependency-name: 'husky'
+        versions:
+          - '>= 5'
