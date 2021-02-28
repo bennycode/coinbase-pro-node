@@ -4,10 +4,6 @@
 
 [client/WebSocketClient](../modules/client_websocketclient.md).WebSocketErrorMessage
 
-## Hierarchy
-
-* **WebSocketErrorMessage**
-
 ## Table of contents
 
 ### Properties
@@ -22,7 +18,7 @@
 
 • **message**: *string*
 
-Defined in: [client/WebSocketClient.ts:134](https://github.com/bennycode/coinbase-pro-node/blob/004782e/src/client/WebSocketClient.ts#L134)
+Defined in: [client/WebSocketClient.ts:134](https://github.com/bennycode/coinbase-pro-node/blob/760c258/src/client/WebSocketClient.ts#L134)
 
 ___
 
@@ -30,7 +26,7 @@ ___
 
 • **reason**: *string*
 
-Defined in: [client/WebSocketClient.ts:135](https://github.com/bennycode/coinbase-pro-node/blob/004782e/src/client/WebSocketClient.ts#L135)
+Defined in: [client/WebSocketClient.ts:135](https://github.com/bennycode/coinbase-pro-node/blob/760c258/src/client/WebSocketClient.ts#L135)
 
 ___
 
@@ -38,4 +34,4 @@ ___
 
 • **type**: [*ERROR*](../enums/client_websocketclient.websocketresponsetype.md#error)
 
-Defined in: [client/WebSocketClient.ts:136](https://github.com/bennycode/coinbase-pro-node/blob/004782e/src/client/WebSocketClient.ts#L136)
+Defined in: [client/WebSocketClient.ts:136](https://github.com/bennycode/coinbase-pro-node/blob/760c258/src/client/WebSocketClient.ts#L136)

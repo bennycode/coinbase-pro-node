@@ -4,10 +4,6 @@
 
 [auth/RequestSigner](../modules/auth_requestsigner.md).RequestSigner
 
-## Hierarchy
-
-* **RequestSigner**
-
 ## Table of contents
 
 ### Constructors
@@ -35,11 +31,11 @@
 #### Parameters:
 
 Name | Type |
------- | ------ |
+:------ | :------ |
 `auth` | [*ClientAuthentication*](../modules/coinbasepro.md#clientauthentication) |
 `setup` | [*RequestSetup*](../interfaces/auth_requestsigner.requestsetup.md) |
 `clockSkew` | *number* |
 
 **Returns:** [*SignedRequest*](../interfaces/auth_requestsigner.signedrequest.md)
 
-Defined in: [auth/RequestSigner.ts:20](https://github.com/bennycode/coinbase-pro-node/blob/004782e/src/auth/RequestSigner.ts#L20)
+Defined in: [auth/RequestSigner.ts:20](https://github.com/bennycode/coinbase-pro-node/blob/760c258/src/auth/RequestSigner.ts#L20)

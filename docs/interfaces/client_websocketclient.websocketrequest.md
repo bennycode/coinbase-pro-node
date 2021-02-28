@@ -4,10 +4,6 @@
 
 [client/WebSocketClient](../modules/client_websocketclient.md).WebSocketRequest
 
-## Hierarchy
-
-* **WebSocketRequest**
-
 ## Table of contents
 
 ### Properties
@@ -21,7 +17,7 @@
 
 • **channels**: *string*[] \| [*WebSocketChannel*](client_websocketclient.websocketchannel.md)[]
 
-Defined in: [client/WebSocketClient.ts:30](https://github.com/bennycode/coinbase-pro-node/blob/004782e/src/client/WebSocketClient.ts#L30)
+Defined in: [client/WebSocketClient.ts:30](https://github.com/bennycode/coinbase-pro-node/blob/760c258/src/client/WebSocketClient.ts#L30)
 
 ___
 
@@ -29,4 +25,4 @@ ___
 
 • **type**: [*WebSocketRequestType*](../enums/client_websocketclient.websocketrequesttype.md)
 
-Defined in: [client/WebSocketClient.ts:31](https://github.com/bennycode/coinbase-pro-node/blob/004782e/src/client/WebSocketClient.ts#L31)
+Defined in: [client/WebSocketClient.ts:31](https://github.com/bennycode/coinbase-pro-node/blob/760c258/src/client/WebSocketClient.ts#L31)

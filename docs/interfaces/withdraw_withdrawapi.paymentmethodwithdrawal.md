@@ -27,7 +27,7 @@
 
 Inherited from: [CryptoWithdrawal](withdraw_withdrawapi.cryptowithdrawal.md).[amount](withdraw_withdrawapi.cryptowithdrawal.md#amount)
 
-Defined in: [withdraw/WithdrawAPI.ts:4](https://github.com/bennycode/coinbase-pro-node/blob/004782e/src/withdraw/WithdrawAPI.ts#L4)
+Defined in: [withdraw/WithdrawAPI.ts:4](https://github.com/bennycode/coinbase-pro-node/blob/760c258/src/withdraw/WithdrawAPI.ts#L4)
 
 ___
 
@@ -37,7 +37,7 @@ ___
 
 Inherited from: [CryptoWithdrawal](withdraw_withdrawapi.cryptowithdrawal.md).[currency](withdraw_withdrawapi.cryptowithdrawal.md#currency)
 
-Defined in: [withdraw/WithdrawAPI.ts:5](https://github.com/bennycode/coinbase-pro-node/blob/004782e/src/withdraw/WithdrawAPI.ts#L5)
+Defined in: [withdraw/WithdrawAPI.ts:5](https://github.com/bennycode/coinbase-pro-node/blob/760c258/src/withdraw/WithdrawAPI.ts#L5)
 
 ___
 
@@ -47,7 +47,7 @@ ___
 
 Inherited from: [CryptoWithdrawal](withdraw_withdrawapi.cryptowithdrawal.md).[id](withdraw_withdrawapi.cryptowithdrawal.md#id)
 
-Defined in: [withdraw/WithdrawAPI.ts:6](https://github.com/bennycode/coinbase-pro-node/blob/004782e/src/withdraw/WithdrawAPI.ts#L6)
+Defined in: [withdraw/WithdrawAPI.ts:6](https://github.com/bennycode/coinbase-pro-node/blob/760c258/src/withdraw/WithdrawAPI.ts#L6)
 
 ___
 
@@ -55,4 +55,4 @@ ___
 
 • **payout\_at**: *string*
 
-Defined in: [withdraw/WithdrawAPI.ts:10](https://github.com/bennycode/coinbase-pro-node/blob/004782e/src/withdraw/WithdrawAPI.ts#L10)
+Defined in: [withdraw/WithdrawAPI.ts:10](https://github.com/bennycode/coinbase-pro-node/blob/760c258/src/withdraw/WithdrawAPI.ts#L10)

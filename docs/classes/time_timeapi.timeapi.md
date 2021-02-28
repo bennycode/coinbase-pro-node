@@ -4,10 +4,6 @@
 
 [time/TimeAPI](../modules/time_timeapi.md).TimeAPI
 
-## Hierarchy
-
-* **TimeAPI**
-
 ## Table of contents
 
 ### Constructors
@@ -32,44 +28,44 @@
 #### Parameters:
 
 Name | Type |
------- | ------ |
+:------ | :------ |
 `baseURL` | *string* |
 
 **Returns:** [*TimeAPI*](time_timeapi.timeapi.md)
 
-Defined in: [time/TimeAPI.ts:13](https://github.com/bennycode/coinbase-pro-node/blob/004782e/src/time/TimeAPI.ts#L13)
+Defined in: [time/TimeAPI.ts:13](https://github.com/bennycode/coinbase-pro-node/blob/760c258/src/time/TimeAPI.ts#L13)
 
 ## Properties
 
 ### URL
 
-▪ `Readonly` `Static` **URL**: { `TIME`: *string*  }
+▪ `Readonly` `Static` **URL**: *object*
 
 #### Type declaration:
 
 Name | Type |
------- | ------ |
+:------ | :------ |
 `TIME` | *string* |
 
-Defined in: [time/TimeAPI.ts:11](https://github.com/bennycode/coinbase-pro-node/blob/004782e/src/time/TimeAPI.ts#L11)
+Defined in: [time/TimeAPI.ts:11](https://github.com/bennycode/coinbase-pro-node/blob/760c258/src/time/TimeAPI.ts#L11)
 
 ## Methods
 
 ### getClockSkew
 
-▸ **getClockSkew**(`time`: *string* \| [*TimeSkew*](../interfaces/time_timeapi.timeskew.md)): *Promise*<*number*\>
+▸ **getClockSkew**(`time`: *string* \| [*TimeSkew*](../interfaces/time_timeapi.timeskew.md)): *Promise*<number\>
 
 Get the absolute difference between server time and local time.
 
 #### Parameters:
 
 Name | Type |
------- | ------ |
+:------ | :------ |
 `time` | *string* \| [*TimeSkew*](../interfaces/time_timeapi.timeskew.md) |
 
-**Returns:** *Promise*<*number*\>
+**Returns:** *Promise*<number\>
 
-Defined in: [time/TimeAPI.ts:34](https://github.com/bennycode/coinbase-pro-node/blob/004782e/src/time/TimeAPI.ts#L34)
+Defined in: [time/TimeAPI.ts:34](https://github.com/bennycode/coinbase-pro-node/blob/760c258/src/time/TimeAPI.ts#L34)
 
 ___
 
@@ -84,4 +80,4 @@ https://github.com/bennycode/coinbase-pro-node/issues/354
 
 **Returns:** *Promise*<[*TimeSkew*](../interfaces/time_timeapi.timeskew.md)\>
 
-Defined in: [time/TimeAPI.ts:23](https://github.com/bennycode/coinbase-pro-node/blob/004782e/src/time/TimeAPI.ts#L23)
+Defined in: [time/TimeAPI.ts:23](https://github.com/bennycode/coinbase-pro-node/blob/760c258/src/time/TimeAPI.ts#L23)

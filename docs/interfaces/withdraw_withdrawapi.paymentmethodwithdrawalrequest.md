@@ -4,10 +4,6 @@
 
 [withdraw/WithdrawAPI](../modules/withdraw_withdrawapi.md).PaymentMethodWithdrawalRequest
 
-## Hierarchy
-
-* **PaymentMethodWithdrawalRequest**
-
 ## Table of contents
 
 ### Properties
@@ -22,7 +18,7 @@
 
 • **amount**: *string*
 
-Defined in: [withdraw/WithdrawAPI.ts:29](https://github.com/bennycode/coinbase-pro-node/blob/004782e/src/withdraw/WithdrawAPI.ts#L29)
+Defined in: [withdraw/WithdrawAPI.ts:29](https://github.com/bennycode/coinbase-pro-node/blob/760c258/src/withdraw/WithdrawAPI.ts#L29)
 
 ___
 
@@ -30,7 +26,7 @@ ___
 
 • **currency**: *string*
 
-Defined in: [withdraw/WithdrawAPI.ts:30](https://github.com/bennycode/coinbase-pro-node/blob/004782e/src/withdraw/WithdrawAPI.ts#L30)
+Defined in: [withdraw/WithdrawAPI.ts:30](https://github.com/bennycode/coinbase-pro-node/blob/760c258/src/withdraw/WithdrawAPI.ts#L30)
 
 ___
 
@@ -38,4 +34,4 @@ ___
 
 • **payment\_method\_id**: *string*
 
-Defined in: [withdraw/WithdrawAPI.ts:31](https://github.com/bennycode/coinbase-pro-node/blob/004782e/src/withdraw/WithdrawAPI.ts#L31)
+Defined in: [withdraw/WithdrawAPI.ts:31](https://github.com/bennycode/coinbase-pro-node/blob/760c258/src/withdraw/WithdrawAPI.ts#L31)

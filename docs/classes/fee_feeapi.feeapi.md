@@ -4,10 +4,6 @@
 
 [fee/FeeAPI](../modules/fee_feeapi.md).FeeAPI
 
-## Hierarchy
-
-* **FeeAPI**
-
 ## Table of contents
 
 ### Constructors
@@ -31,26 +27,26 @@
 #### Parameters:
 
 Name | Type |
------- | ------ |
+:------ | :------ |
 `apiClient` | AxiosInstance |
 
 **Returns:** [*FeeAPI*](fee_feeapi.feeapi.md)
 
-Defined in: [fee/FeeAPI.ts:20](https://github.com/bennycode/coinbase-pro-node/blob/004782e/src/fee/FeeAPI.ts#L20)
+Defined in: [fee/FeeAPI.ts:20](https://github.com/bennycode/coinbase-pro-node/blob/760c258/src/fee/FeeAPI.ts#L20)
 
 ## Properties
 
 ### URL
 
-▪ `Readonly` `Static` **URL**: { `FEES`: *string*  }
+▪ `Readonly` `Static` **URL**: *object*
 
 #### Type declaration:
 
 Name | Type |
------- | ------ |
+:------ | :------ |
 `FEES` | *string* |
 
-Defined in: [fee/FeeAPI.ts:18](https://github.com/bennycode/coinbase-pro-node/blob/004782e/src/fee/FeeAPI.ts#L18)
+Defined in: [fee/FeeAPI.ts:18](https://github.com/bennycode/coinbase-pro-node/blob/760c258/src/fee/FeeAPI.ts#L18)
 
 ## Methods
 
@@ -67,4 +63,4 @@ change.
 
 **Returns:** *Promise*<[*FeeTier*](../interfaces/fee_feeapi.feetier.md)\>
 
-Defined in: [fee/FeeAPI.ts:31](https://github.com/bennycode/coinbase-pro-node/blob/004782e/src/fee/FeeAPI.ts#L31)
+Defined in: [fee/FeeAPI.ts:31](https://github.com/bennycode/coinbase-pro-node/blob/760c258/src/fee/FeeAPI.ts#L31)

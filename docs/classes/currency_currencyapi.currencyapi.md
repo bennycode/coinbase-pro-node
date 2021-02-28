@@ -4,10 +4,6 @@
 
 [currency/CurrencyAPI](../modules/currency_currencyapi.md).CurrencyAPI
 
-## Hierarchy
-
-* **CurrencyAPI**
-
 ## Table of contents
 
 ### Constructors
@@ -31,26 +27,26 @@
 #### Parameters:
 
 Name | Type |
------- | ------ |
+:------ | :------ |
 `apiClient` | AxiosInstance |
 
 **Returns:** [*CurrencyAPI*](currency_currencyapi.currencyapi.md)
 
-Defined in: [currency/CurrencyAPI.ts:32](https://github.com/bennycode/coinbase-pro-node/blob/004782e/src/currency/CurrencyAPI.ts#L32)
+Defined in: [currency/CurrencyAPI.ts:32](https://github.com/bennycode/coinbase-pro-node/blob/760c258/src/currency/CurrencyAPI.ts#L32)
 
 ## Properties
 
 ### URL
 
-▪ `Readonly` `Static` **URL**: { `CURRENCIES`: *string*  }
+▪ `Readonly` `Static` **URL**: *object*
 
 #### Type declaration:
 
 Name | Type |
------- | ------ |
+:------ | :------ |
 `CURRENCIES` | *string* |
 
-Defined in: [currency/CurrencyAPI.ts:30](https://github.com/bennycode/coinbase-pro-node/blob/004782e/src/currency/CurrencyAPI.ts#L30)
+Defined in: [currency/CurrencyAPI.ts:30](https://github.com/bennycode/coinbase-pro-node/blob/760c258/src/currency/CurrencyAPI.ts#L30)
 
 ## Methods
 
@@ -66,4 +62,4 @@ Currencies which have or had no representation in ISO 4217 may use a custom code
 
 **Returns:** *Promise*<[*Currency*](../interfaces/currency_currencyapi.currency.md)[]\>
 
-Defined in: [currency/CurrencyAPI.ts:43](https://github.com/bennycode/coinbase-pro-node/blob/004782e/src/currency/CurrencyAPI.ts#L43)
+Defined in: [currency/CurrencyAPI.ts:43](https://github.com/bennycode/coinbase-pro-node/blob/760c258/src/currency/CurrencyAPI.ts#L43)

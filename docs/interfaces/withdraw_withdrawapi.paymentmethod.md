@@ -4,10 +4,6 @@
 
 [withdraw/WithdrawAPI](../modules/withdraw_withdrawapi.md).PaymentMethod
 
-## Hierarchy
-
-* **PaymentMethod**
-
 ## Table of contents
 
 ### Properties
@@ -30,7 +26,7 @@
 
 • **allow\_buy**: *boolean*
 
-Defined in: [withdraw/WithdrawAPI.ts:51](https://github.com/bennycode/coinbase-pro-node/blob/004782e/src/withdraw/WithdrawAPI.ts#L51)
+Defined in: [withdraw/WithdrawAPI.ts:51](https://github.com/bennycode/coinbase-pro-node/blob/760c258/src/withdraw/WithdrawAPI.ts#L51)
 
 ___
 
@@ -38,7 +34,7 @@ ___
 
 • **allow\_deposit**: *boolean*
 
-Defined in: [withdraw/WithdrawAPI.ts:52](https://github.com/bennycode/coinbase-pro-node/blob/004782e/src/withdraw/WithdrawAPI.ts#L52)
+Defined in: [withdraw/WithdrawAPI.ts:52](https://github.com/bennycode/coinbase-pro-node/blob/760c258/src/withdraw/WithdrawAPI.ts#L52)
 
 ___
 
@@ -46,7 +42,7 @@ ___
 
 • **allow\_sell**: *boolean*
 
-Defined in: [withdraw/WithdrawAPI.ts:53](https://github.com/bennycode/coinbase-pro-node/blob/004782e/src/withdraw/WithdrawAPI.ts#L53)
+Defined in: [withdraw/WithdrawAPI.ts:53](https://github.com/bennycode/coinbase-pro-node/blob/760c258/src/withdraw/WithdrawAPI.ts#L53)
 
 ___
 
@@ -54,7 +50,7 @@ ___
 
 • **allow\_withdraw**: *boolean*
 
-Defined in: [withdraw/WithdrawAPI.ts:54](https://github.com/bennycode/coinbase-pro-node/blob/004782e/src/withdraw/WithdrawAPI.ts#L54)
+Defined in: [withdraw/WithdrawAPI.ts:54](https://github.com/bennycode/coinbase-pro-node/blob/760c258/src/withdraw/WithdrawAPI.ts#L54)
 
 ___
 
@@ -62,7 +58,7 @@ ___
 
 • **currency**: *string*
 
-Defined in: [withdraw/WithdrawAPI.ts:55](https://github.com/bennycode/coinbase-pro-node/blob/004782e/src/withdraw/WithdrawAPI.ts#L55)
+Defined in: [withdraw/WithdrawAPI.ts:55](https://github.com/bennycode/coinbase-pro-node/blob/760c258/src/withdraw/WithdrawAPI.ts#L55)
 
 ___
 
@@ -70,24 +66,24 @@ ___
 
 • **id**: *string*
 
-Defined in: [withdraw/WithdrawAPI.ts:56](https://github.com/bennycode/coinbase-pro-node/blob/004782e/src/withdraw/WithdrawAPI.ts#L56)
+Defined in: [withdraw/WithdrawAPI.ts:56](https://github.com/bennycode/coinbase-pro-node/blob/760c258/src/withdraw/WithdrawAPI.ts#L56)
 
 ___
 
 ### limits
 
-• **limits**: { `buy`: [*PaymentMethodLimit*](withdraw_withdrawapi.paymentmethodlimit.md)[] ; `deposit`: [*PaymentMethodLimit*](withdraw_withdrawapi.paymentmethodlimit.md)[] ; `instant_buy`: [*PaymentMethodLimit*](withdraw_withdrawapi.paymentmethodlimit.md)[] ; `sell`: [*PaymentMethodLimit*](withdraw_withdrawapi.paymentmethodlimit.md)[]  }
+• **limits**: *object*
 
 #### Type declaration:
 
 Name | Type |
------- | ------ |
+:------ | :------ |
 `buy` | [*PaymentMethodLimit*](withdraw_withdrawapi.paymentmethodlimit.md)[] |
 `deposit` | [*PaymentMethodLimit*](withdraw_withdrawapi.paymentmethodlimit.md)[] |
 `instant_buy` | [*PaymentMethodLimit*](withdraw_withdrawapi.paymentmethodlimit.md)[] |
 `sell` | [*PaymentMethodLimit*](withdraw_withdrawapi.paymentmethodlimit.md)[] |
 
-Defined in: [withdraw/WithdrawAPI.ts:57](https://github.com/bennycode/coinbase-pro-node/blob/004782e/src/withdraw/WithdrawAPI.ts#L57)
+Defined in: [withdraw/WithdrawAPI.ts:57](https://github.com/bennycode/coinbase-pro-node/blob/760c258/src/withdraw/WithdrawAPI.ts#L57)
 
 ___
 
@@ -95,7 +91,7 @@ ___
 
 • **name**: *string*
 
-Defined in: [withdraw/WithdrawAPI.ts:63](https://github.com/bennycode/coinbase-pro-node/blob/004782e/src/withdraw/WithdrawAPI.ts#L63)
+Defined in: [withdraw/WithdrawAPI.ts:63](https://github.com/bennycode/coinbase-pro-node/blob/760c258/src/withdraw/WithdrawAPI.ts#L63)
 
 ___
 
@@ -103,7 +99,7 @@ ___
 
 • **primary\_buy**: *boolean*
 
-Defined in: [withdraw/WithdrawAPI.ts:64](https://github.com/bennycode/coinbase-pro-node/blob/004782e/src/withdraw/WithdrawAPI.ts#L64)
+Defined in: [withdraw/WithdrawAPI.ts:64](https://github.com/bennycode/coinbase-pro-node/blob/760c258/src/withdraw/WithdrawAPI.ts#L64)
 
 ___
 
@@ -111,7 +107,7 @@ ___
 
 • **primary\_sell**: *boolean*
 
-Defined in: [withdraw/WithdrawAPI.ts:65](https://github.com/bennycode/coinbase-pro-node/blob/004782e/src/withdraw/WithdrawAPI.ts#L65)
+Defined in: [withdraw/WithdrawAPI.ts:65](https://github.com/bennycode/coinbase-pro-node/blob/760c258/src/withdraw/WithdrawAPI.ts#L65)
 
 ___
 
@@ -119,4 +115,4 @@ ___
 
 • **type**: *string*
 
-Defined in: [withdraw/WithdrawAPI.ts:66](https://github.com/bennycode/coinbase-pro-node/blob/004782e/src/withdraw/WithdrawAPI.ts#L66)
+Defined in: [withdraw/WithdrawAPI.ts:66](https://github.com/bennycode/coinbase-pro-node/blob/760c258/src/withdraw/WithdrawAPI.ts#L66)

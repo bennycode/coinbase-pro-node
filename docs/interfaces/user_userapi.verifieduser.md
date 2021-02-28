@@ -4,10 +4,6 @@
 
 [user/UserAPI](../modules/user_userapi.md).VerifiedUser
 
-## Hierarchy
-
-* **VerifiedUser**
-
 ## Table of contents
 
 ### Properties
@@ -20,4 +16,4 @@
 
 • **id**: *string*
 
-Defined in: [user/UserAPI.ts:4](https://github.com/bennycode/coinbase-pro-node/blob/004782e/src/user/UserAPI.ts#L4)
+Defined in: [user/UserAPI.ts:4](https://github.com/bennycode/coinbase-pro-node/blob/760c258/src/user/UserAPI.ts#L4)

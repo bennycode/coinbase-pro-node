@@ -4,10 +4,6 @@
 
 [withdraw/WithdrawAPI](../modules/withdraw_withdrawapi.md).WithdrawalFeeEstimate
 
-## Hierarchy
-
-* **WithdrawalFeeEstimate**
-
 ## Table of contents
 
 ### Properties
@@ -20,4 +16,4 @@
 
 • **fee**: *string*
 
-Defined in: [withdraw/WithdrawAPI.ts:35](https://github.com/bennycode/coinbase-pro-node/blob/004782e/src/withdraw/WithdrawAPI.ts#L35)
+Defined in: [withdraw/WithdrawAPI.ts:35](https://github.com/bennycode/coinbase-pro-node/blob/760c258/src/withdraw/WithdrawAPI.ts#L35)

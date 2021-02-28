@@ -4,10 +4,6 @@
 
 [CoinbasePro](../modules/coinbasepro.md).ClientConnection
 
-## Hierarchy
-
-* **ClientConnection**
-
 ## Table of contents
 
 ### Properties
@@ -21,7 +17,7 @@
 
 • **REST**: *string*
 
-Defined in: [CoinbasePro.ts:29](https://github.com/bennycode/coinbase-pro-node/blob/004782e/src/CoinbasePro.ts#L29)
+Defined in: [CoinbasePro.ts:29](https://github.com/bennycode/coinbase-pro-node/blob/760c258/src/CoinbasePro.ts#L29)
 
 ___
 
@@ -29,4 +25,4 @@ ___
 
 • **WebSocket**: *string*
 
-Defined in: [CoinbasePro.ts:30](https://github.com/bennycode/coinbase-pro-node/blob/004782e/src/CoinbasePro.ts#L30)
+Defined in: [CoinbasePro.ts:30](https://github.com/bennycode/coinbase-pro-node/blob/760c258/src/CoinbasePro.ts#L30)

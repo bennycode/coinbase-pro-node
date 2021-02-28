@@ -36,7 +36,7 @@
 
 Ƭ **MarketOrder**: BaseOrder & { `type`: [*MARKET*](../enums/order_orderapi.ordertype.md#market)  } & { `size`: *string*  } \| { `funds`: *string*  }
 
-Defined in: [order/OrderAPI.ts:76](https://github.com/bennycode/coinbase-pro-node/blob/004782e/src/order/OrderAPI.ts#L76)
+Defined in: [order/OrderAPI.ts:76](https://github.com/bennycode/coinbase-pro-node/blob/760c258/src/order/OrderAPI.ts#L76)
 
 ___
 
@@ -44,7 +44,7 @@ ___
 
 Ƭ **NewOrder**: [*LimitOrder*](../interfaces/order_orderapi.limitorder.md) \| [*AutoCancelLimitOrder*](../interfaces/order_orderapi.autocancellimitorder.md) \| [*PostOnlyLimitOrder*](../interfaces/order_orderapi.postonlylimitorder.md) \| [*MarketOrder*](order_orderapi.md#marketorder)
 
-Defined in: [order/OrderAPI.ts:56](https://github.com/bennycode/coinbase-pro-node/blob/004782e/src/order/OrderAPI.ts#L56)
+Defined in: [order/OrderAPI.ts:56](https://github.com/bennycode/coinbase-pro-node/blob/760c258/src/order/OrderAPI.ts#L56)
 
 ___
 
@@ -52,4 +52,4 @@ ___
 
 Ƭ **Order**: [*PendingOrder*](../interfaces/order_orderapi.pendingorder.md) \| [*FilledOrder*](../interfaces/order_orderapi.filledorder.md)
 
-Defined in: [order/OrderAPI.ts:97](https://github.com/bennycode/coinbase-pro-node/blob/004782e/src/order/OrderAPI.ts#L97)
+Defined in: [order/OrderAPI.ts:97](https://github.com/bennycode/coinbase-pro-node/blob/760c258/src/order/OrderAPI.ts#L97)

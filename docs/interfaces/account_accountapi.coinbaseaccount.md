@@ -4,10 +4,6 @@
 
 [account/AccountAPI](../modules/account_accountapi.md).CoinbaseAccount
 
-## Hierarchy
-
-* **CoinbaseAccount**
-
 ## Table of contents
 
 ### Properties
@@ -33,7 +29,7 @@
 
 • **active**: *boolean*
 
-Defined in: [account/AccountAPI.ts:44](https://github.com/bennycode/coinbase-pro-node/blob/004782e/src/account/AccountAPI.ts#L44)
+Defined in: [account/AccountAPI.ts:44](https://github.com/bennycode/coinbase-pro-node/blob/760c258/src/account/AccountAPI.ts#L44)
 
 ___
 
@@ -41,7 +37,7 @@ ___
 
 • `Optional` **available\_on\_consumer**: *undefined* \| *true*
 
-Defined in: [account/AccountAPI.ts:45](https://github.com/bennycode/coinbase-pro-node/blob/004782e/src/account/AccountAPI.ts#L45)
+Defined in: [account/AccountAPI.ts:45](https://github.com/bennycode/coinbase-pro-node/blob/760c258/src/account/AccountAPI.ts#L45)
 
 ___
 
@@ -49,7 +45,7 @@ ___
 
 • **balance**: *string*
 
-Defined in: [account/AccountAPI.ts:46](https://github.com/bennycode/coinbase-pro-node/blob/004782e/src/account/AccountAPI.ts#L46)
+Defined in: [account/AccountAPI.ts:46](https://github.com/bennycode/coinbase-pro-node/blob/760c258/src/account/AccountAPI.ts#L46)
 
 ___
 
@@ -57,7 +53,7 @@ ___
 
 • **currency**: *string*
 
-Defined in: [account/AccountAPI.ts:47](https://github.com/bennycode/coinbase-pro-node/blob/004782e/src/account/AccountAPI.ts#L47)
+Defined in: [account/AccountAPI.ts:47](https://github.com/bennycode/coinbase-pro-node/blob/760c258/src/account/AccountAPI.ts#L47)
 
 ___
 
@@ -65,7 +61,7 @@ ___
 
 • `Optional` **destination\_tag\_name**: *undefined* \| *string*
 
-Defined in: [account/AccountAPI.ts:48](https://github.com/bennycode/coinbase-pro-node/blob/004782e/src/account/AccountAPI.ts#L48)
+Defined in: [account/AccountAPI.ts:48](https://github.com/bennycode/coinbase-pro-node/blob/760c258/src/account/AccountAPI.ts#L48)
 
 ___
 
@@ -73,7 +69,7 @@ ___
 
 • `Optional` **destination\_tag\_regex**: *undefined* \| *string*
 
-Defined in: [account/AccountAPI.ts:49](https://github.com/bennycode/coinbase-pro-node/blob/004782e/src/account/AccountAPI.ts#L49)
+Defined in: [account/AccountAPI.ts:49](https://github.com/bennycode/coinbase-pro-node/blob/760c258/src/account/AccountAPI.ts#L49)
 
 ___
 
@@ -81,7 +77,7 @@ ___
 
 • `Optional` **hold\_balance**: *undefined* \| *string*
 
-Defined in: [account/AccountAPI.ts:50](https://github.com/bennycode/coinbase-pro-node/blob/004782e/src/account/AccountAPI.ts#L50)
+Defined in: [account/AccountAPI.ts:50](https://github.com/bennycode/coinbase-pro-node/blob/760c258/src/account/AccountAPI.ts#L50)
 
 ___
 
@@ -89,7 +85,7 @@ ___
 
 • `Optional` **hold\_currency**: *undefined* \| *string*
 
-Defined in: [account/AccountAPI.ts:51](https://github.com/bennycode/coinbase-pro-node/blob/004782e/src/account/AccountAPI.ts#L51)
+Defined in: [account/AccountAPI.ts:51](https://github.com/bennycode/coinbase-pro-node/blob/760c258/src/account/AccountAPI.ts#L51)
 
 ___
 
@@ -97,7 +93,7 @@ ___
 
 • **id**: *string*
 
-Defined in: [account/AccountAPI.ts:52](https://github.com/bennycode/coinbase-pro-node/blob/004782e/src/account/AccountAPI.ts#L52)
+Defined in: [account/AccountAPI.ts:52](https://github.com/bennycode/coinbase-pro-node/blob/760c258/src/account/AccountAPI.ts#L52)
 
 ___
 
@@ -105,7 +101,7 @@ ___
 
 • **name**: *string*
 
-Defined in: [account/AccountAPI.ts:53](https://github.com/bennycode/coinbase-pro-node/blob/004782e/src/account/AccountAPI.ts#L53)
+Defined in: [account/AccountAPI.ts:53](https://github.com/bennycode/coinbase-pro-node/blob/760c258/src/account/AccountAPI.ts#L53)
 
 ___
 
@@ -113,7 +109,7 @@ ___
 
 • **primary**: *boolean*
 
-Defined in: [account/AccountAPI.ts:54](https://github.com/bennycode/coinbase-pro-node/blob/004782e/src/account/AccountAPI.ts#L54)
+Defined in: [account/AccountAPI.ts:54](https://github.com/bennycode/coinbase-pro-node/blob/760c258/src/account/AccountAPI.ts#L54)
 
 ___
 
@@ -121,7 +117,7 @@ ___
 
 • `Optional` **sepa\_deposit\_information**: *undefined* \| [*SEPADepositInformation*](account_accountapi.sepadepositinformation.md)
 
-Defined in: [account/AccountAPI.ts:55](https://github.com/bennycode/coinbase-pro-node/blob/004782e/src/account/AccountAPI.ts#L55)
+Defined in: [account/AccountAPI.ts:55](https://github.com/bennycode/coinbase-pro-node/blob/760c258/src/account/AccountAPI.ts#L55)
 
 ___
 
@@ -129,7 +125,7 @@ ___
 
 • **type**: [*AccountType*](../enums/account_accountapi.accounttype.md)
 
-Defined in: [account/AccountAPI.ts:56](https://github.com/bennycode/coinbase-pro-node/blob/004782e/src/account/AccountAPI.ts#L56)
+Defined in: [account/AccountAPI.ts:56](https://github.com/bennycode/coinbase-pro-node/blob/760c258/src/account/AccountAPI.ts#L56)
 
 ___
 
@@ -137,4 +133,4 @@ ___
 
 • `Optional` **wire\_deposit\_information**: *undefined* \| [*WireDepositInformation*](account_accountapi.wiredepositinformation.md)
 
-Defined in: [account/AccountAPI.ts:57](https://github.com/bennycode/coinbase-pro-node/blob/004782e/src/account/AccountAPI.ts#L57)
+Defined in: [account/AccountAPI.ts:57](https://github.com/bennycode/coinbase-pro-node/blob/760c258/src/account/AccountAPI.ts#L57)

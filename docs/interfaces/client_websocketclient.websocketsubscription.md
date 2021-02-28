@@ -4,10 +4,6 @@
 
 [client/WebSocketClient](../modules/client_websocketclient.md).WebSocketSubscription
 
-## Hierarchy
-
-* **WebSocketSubscription**
-
 ## Table of contents
 
 ### Properties
@@ -21,7 +17,7 @@
 
 • **channels**: [*WebSocketChannel*](client_websocketclient.websocketchannel.md)[]
 
-Defined in: [client/WebSocketClient.ts:189](https://github.com/bennycode/coinbase-pro-node/blob/004782e/src/client/WebSocketClient.ts#L189)
+Defined in: [client/WebSocketClient.ts:189](https://github.com/bennycode/coinbase-pro-node/blob/760c258/src/client/WebSocketClient.ts#L189)
 
 ___
 
@@ -29,4 +25,4 @@ ___
 
 • **type**: [*SUBSCRIPTIONS*](../enums/client_websocketclient.websocketresponsetype.md#subscriptions)
 
-Defined in: [client/WebSocketClient.ts:190](https://github.com/bennycode/coinbase-pro-node/blob/004782e/src/client/WebSocketClient.ts#L190)
+Defined in: [client/WebSocketClient.ts:190](https://github.com/bennycode/coinbase-pro-node/blob/760c258/src/client/WebSocketClient.ts#L190)

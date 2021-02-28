@@ -4,10 +4,6 @@
 
 [auth/RequestSigner](../modules/auth_requestsigner.md).RequestSetup
 
-## Hierarchy
-
-* **RequestSetup**
-
 ## Table of contents
 
 ### Properties
@@ -22,7 +18,7 @@
 
 • **httpMethod**: *string*
 
-Defined in: [auth/RequestSigner.ts:6](https://github.com/bennycode/coinbase-pro-node/blob/004782e/src/auth/RequestSigner.ts#L6)
+Defined in: [auth/RequestSigner.ts:6](https://github.com/bennycode/coinbase-pro-node/blob/760c258/src/auth/RequestSigner.ts#L6)
 
 ___
 
@@ -30,7 +26,7 @@ ___
 
 • **payload**: *string*
 
-Defined in: [auth/RequestSigner.ts:7](https://github.com/bennycode/coinbase-pro-node/blob/004782e/src/auth/RequestSigner.ts#L7)
+Defined in: [auth/RequestSigner.ts:7](https://github.com/bennycode/coinbase-pro-node/blob/760c258/src/auth/RequestSigner.ts#L7)
 
 ___
 
@@ -38,4 +34,4 @@ ___
 
 • **requestPath**: *string*
 
-Defined in: [auth/RequestSigner.ts:8](https://github.com/bennycode/coinbase-pro-node/blob/004782e/src/auth/RequestSigner.ts#L8)
+Defined in: [auth/RequestSigner.ts:8](https://github.com/bennycode/coinbase-pro-node/blob/760c258/src/auth/RequestSigner.ts#L8)
