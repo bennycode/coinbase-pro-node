@@ -97,7 +97,7 @@ export interface FilledOrder extends BasePlacedOrder {
 /** @see https://docs.pro.coinbase.com/#list-orders */
 export interface OrderListQueryParams extends Pagination {
   product_id?: string;
-  status?: 'open' | 'pending' | 'active' | 'all'
+  status?: 'open' | 'pending' | 'active' | 'all';
 }
 
 export type Order = PendingOrder | FilledOrder;
