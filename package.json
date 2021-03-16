@@ -10,16 +10,16 @@
     "bufferutil": "4.0.3",
     "reconnecting-websocket": "4.4.0",
     "utf-8-validate": "5.0.4",
-    "ws": "7.4.3"
+    "ws": "7.4.4"
   },
   "description": "Coinbase Pro API for Node.js, written in TypeScript and covered by tests.",
   "devDependencies": {
-    "@types/jasmine": "3.6.4",
-    "@typescript-eslint/eslint-plugin": "4.15.2",
-    "@typescript-eslint/parser": "4.15.2",
+    "@types/jasmine": "3.6.6",
+    "@typescript-eslint/eslint-plugin": "4.17.0",
+    "@typescript-eslint/parser": "4.17.0",
     "cross-env": "7.0.3",
     "dotenv-defaults": "2.0.1",
-    "eslint": "7.21.0",
+    "eslint": "7.22.0",
     "eslint-config-prettier": "8.1.0",
     "eslint-plugin-prettier": "3.3.1",
     "eslint-plugin-sort-keys-fix": "1.1.1",
@@ -28,15 +28,15 @@
     "husky": "4.3.8",
     "jasmine": "3.6.4",
     "lint-staged": "10.5.4",
-    "nock": "13.0.9",
+    "nock": "13.0.11",
     "nyc": "15.1.0",
     "prettier": "2.2.1",
     "pretty-quick": "3.1.0",
     "rimraf": "3.0.2",
     "ts-node": "9.1.1",
-    "typedoc": "0.20.28",
+    "typedoc": "0.20.32",
     "typedoc-plugin-markdown": "3.6.0",
-    "typescript": "4.1.5"
+    "typescript": "4.2.3"
   },
   "engines": {
     "node": ">= 10.9",
@@ -100,7 +100,8 @@
     "release:minor": "generate-changelog -m && yarn changelog:commit && yarn docs:release && npm version minor",
     "release:patch": "generate-changelog -p && yarn changelog:commit && yarn docs:release && npm version patch",
     "test": "nyc --nycrc-path=nyc.config.coverage.json jasmine --config=jasmine.json",
-    "test:dev": "nyc --nycrc-path=nyc.config.json jasmine --config=jasmine.json"
+    "test:dev": "nyc --nycrc-path=nyc.config.json jasmine --config=jasmine.json",
+    "test:types": "yarn lint:types"
   },
   "version": "2.18.1"
 }
