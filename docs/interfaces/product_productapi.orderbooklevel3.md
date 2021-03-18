@@ -21,7 +21,7 @@ book using the websocket stream. Abuse of Level 3 via polling will cause your ac
 
 • **asks**: NonAggregatedOrder[]
 
-Defined in: [product/ProductAPI.ts:128](https://github.com/bennycode/coinbase-pro-node/blob/760c258/src/product/ProductAPI.ts#L128)
+Defined in: [product/ProductAPI.ts:128](https://github.com/bennycode/coinbase-pro-node/blob/e63aeae/src/product/ProductAPI.ts#L128)
 
 ___
 
@@ -29,7 +29,7 @@ ___
 
 • **bids**: NonAggregatedOrder[]
 
-Defined in: [product/ProductAPI.ts:129](https://github.com/bennycode/coinbase-pro-node/blob/760c258/src/product/ProductAPI.ts#L129)
+Defined in: [product/ProductAPI.ts:129](https://github.com/bennycode/coinbase-pro-node/blob/e63aeae/src/product/ProductAPI.ts#L129)
 
 ___
 
@@ -37,4 +37,4 @@ ___
 
 • **sequence**: *number*
 
-Defined in: [product/ProductAPI.ts:130](https://github.com/bennycode/coinbase-pro-node/blob/760c258/src/product/ProductAPI.ts#L130)
+Defined in: [product/ProductAPI.ts:130](https://github.com/bennycode/coinbase-pro-node/blob/e63aeae/src/product/ProductAPI.ts#L130)

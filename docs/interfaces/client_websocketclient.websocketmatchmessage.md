@@ -25,7 +25,7 @@
 
 • **maker\_order\_id**: *string*
 
-Defined in: [client/WebSocketClient.ts:140](https://github.com/bennycode/coinbase-pro-node/blob/760c258/src/client/WebSocketClient.ts#L140)
+Defined in: [client/WebSocketClient.ts:140](https://github.com/bennycode/coinbase-pro-node/blob/e63aeae/src/client/WebSocketClient.ts#L140)
 
 ___
 
@@ -33,7 +33,7 @@ ___
 
 • **price**: *string*
 
-Defined in: [client/WebSocketClient.ts:141](https://github.com/bennycode/coinbase-pro-node/blob/760c258/src/client/WebSocketClient.ts#L141)
+Defined in: [client/WebSocketClient.ts:141](https://github.com/bennycode/coinbase-pro-node/blob/e63aeae/src/client/WebSocketClient.ts#L141)
 
 ___
 
@@ -41,7 +41,7 @@ ___
 
 • **product\_id**: *string*
 
-Defined in: [client/WebSocketClient.ts:142](https://github.com/bennycode/coinbase-pro-node/blob/760c258/src/client/WebSocketClient.ts#L142)
+Defined in: [client/WebSocketClient.ts:142](https://github.com/bennycode/coinbase-pro-node/blob/e63aeae/src/client/WebSocketClient.ts#L142)
 
 ___
 
@@ -49,7 +49,7 @@ ___
 
 • **sequence**: *number*
 
-Defined in: [client/WebSocketClient.ts:143](https://github.com/bennycode/coinbase-pro-node/blob/760c258/src/client/WebSocketClient.ts#L143)
+Defined in: [client/WebSocketClient.ts:143](https://github.com/bennycode/coinbase-pro-node/blob/e63aeae/src/client/WebSocketClient.ts#L143)
 
 ___
 
@@ -57,7 +57,7 @@ ___
 
 • **side**: OrderSide
 
-Defined in: [client/WebSocketClient.ts:144](https://github.com/bennycode/coinbase-pro-node/blob/760c258/src/client/WebSocketClient.ts#L144)
+Defined in: [client/WebSocketClient.ts:144](https://github.com/bennycode/coinbase-pro-node/blob/e63aeae/src/client/WebSocketClient.ts#L144)
 
 ___
 
@@ -65,7 +65,7 @@ ___
 
 • **size**: *string*
 
-Defined in: [client/WebSocketClient.ts:145](https://github.com/bennycode/coinbase-pro-node/blob/760c258/src/client/WebSocketClient.ts#L145)
+Defined in: [client/WebSocketClient.ts:145](https://github.com/bennycode/coinbase-pro-node/blob/e63aeae/src/client/WebSocketClient.ts#L145)
 
 ___
 
@@ -73,7 +73,7 @@ ___
 
 • **taker\_order\_id**: *string*
 
-Defined in: [client/WebSocketClient.ts:146](https://github.com/bennycode/coinbase-pro-node/blob/760c258/src/client/WebSocketClient.ts#L146)
+Defined in: [client/WebSocketClient.ts:146](https://github.com/bennycode/coinbase-pro-node/blob/e63aeae/src/client/WebSocketClient.ts#L146)
 
 ___
 
@@ -81,7 +81,7 @@ ___
 
 • **time**: *string*
 
-Defined in: [client/WebSocketClient.ts:147](https://github.com/bennycode/coinbase-pro-node/blob/760c258/src/client/WebSocketClient.ts#L147)
+Defined in: [client/WebSocketClient.ts:147](https://github.com/bennycode/coinbase-pro-node/blob/e63aeae/src/client/WebSocketClient.ts#L147)
 
 ___
 
@@ -89,7 +89,7 @@ ___
 
 • **trade\_id**: *number*
 
-Defined in: [client/WebSocketClient.ts:148](https://github.com/bennycode/coinbase-pro-node/blob/760c258/src/client/WebSocketClient.ts#L148)
+Defined in: [client/WebSocketClient.ts:148](https://github.com/bennycode/coinbase-pro-node/blob/e63aeae/src/client/WebSocketClient.ts#L148)
 
 ___
 
@@ -97,4 +97,4 @@ ___
 
 • **type**: [*FULL\_MATCH*](../enums/client_websocketclient.websocketresponsetype.md#full_match)
 
-Defined in: [client/WebSocketClient.ts:149](https://github.com/bennycode/coinbase-pro-node/blob/760c258/src/client/WebSocketClient.ts#L149)
+Defined in: [client/WebSocketClient.ts:149](https://github.com/bennycode/coinbase-pro-node/blob/e63aeae/src/client/WebSocketClient.ts#L149)

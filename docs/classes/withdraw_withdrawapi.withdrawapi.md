@@ -36,7 +36,7 @@ Name | Type |
 
 **Returns:** [*WithdrawAPI*](withdraw_withdrawapi.withdrawapi.md)
 
-Defined in: [withdraw/WithdrawAPI.ts:78](https://github.com/bennycode/coinbase-pro-node/blob/760c258/src/withdraw/WithdrawAPI.ts#L78)
+Defined in: [withdraw/WithdrawAPI.ts:78](https://github.com/bennycode/coinbase-pro-node/blob/e63aeae/src/withdraw/WithdrawAPI.ts#L78)
 
 ## Properties
 
@@ -55,7 +55,7 @@ Name | Type |
 `WITHDRAWALS.FEE_ESTIMATE` | *string* |
 `WITHDRAWALS.PAYMENT_METHOD` | *string* |
 
-Defined in: [withdraw/WithdrawAPI.ts:70](https://github.com/bennycode/coinbase-pro-node/blob/760c258/src/withdraw/WithdrawAPI.ts#L70)
+Defined in: [withdraw/WithdrawAPI.ts:70](https://github.com/bennycode/coinbase-pro-node/blob/e63aeae/src/withdraw/WithdrawAPI.ts#L70)
 
 ## Methods
 
@@ -76,7 +76,7 @@ Name | Type | Description |
 
 **Returns:** *Promise*<[*WithdrawalFeeEstimate*](../interfaces/withdraw_withdrawapi.withdrawalfeeestimate.md)\>
 
-Defined in: [withdraw/WithdrawAPI.ts:170](https://github.com/bennycode/coinbase-pro-node/blob/760c258/src/withdraw/WithdrawAPI.ts#L170)
+Defined in: [withdraw/WithdrawAPI.ts:170](https://github.com/bennycode/coinbase-pro-node/blob/e63aeae/src/withdraw/WithdrawAPI.ts#L170)
 
 ___
 
@@ -90,7 +90,7 @@ Get a list of your payment methods.
 
 **Returns:** *Promise*<[*PaymentMethod*](../interfaces/withdraw_withdrawapi.paymentmethod.md)[]\>
 
-Defined in: [withdraw/WithdrawAPI.ts:183](https://github.com/bennycode/coinbase-pro-node/blob/760c258/src/withdraw/WithdrawAPI.ts#L183)
+Defined in: [withdraw/WithdrawAPI.ts:183](https://github.com/bennycode/coinbase-pro-node/blob/e63aeae/src/withdraw/WithdrawAPI.ts#L183)
 
 ___
 
@@ -113,7 +113,7 @@ Name | Type | Description |
 
 **Returns:** *Promise*<[*CryptoWithdrawal*](../interfaces/withdraw_withdrawapi.cryptowithdrawal.md)\>
 
-Defined in: [withdraw/WithdrawAPI.ts:125](https://github.com/bennycode/coinbase-pro-node/blob/760c258/src/withdraw/WithdrawAPI.ts#L125)
+Defined in: [withdraw/WithdrawAPI.ts:125](https://github.com/bennycode/coinbase-pro-node/blob/e63aeae/src/withdraw/WithdrawAPI.ts#L125)
 
 ___
 
@@ -137,7 +137,7 @@ Name | Type | Description |
 
 **Returns:** *Promise*<[*CryptoWithdrawal*](../interfaces/withdraw_withdrawapi.cryptowithdrawal.md)\>
 
-Defined in: [withdraw/WithdrawAPI.ts:93](https://github.com/bennycode/coinbase-pro-node/blob/760c258/src/withdraw/WithdrawAPI.ts#L93)
+Defined in: [withdraw/WithdrawAPI.ts:93](https://github.com/bennycode/coinbase-pro-node/blob/e63aeae/src/withdraw/WithdrawAPI.ts#L93)
 
 ___
 
@@ -159,4 +159,4 @@ Name | Type | Description |
 
 **Returns:** *Promise*<[*PaymentMethodWithdrawal*](../interfaces/withdraw_withdrawapi.paymentmethodwithdrawal.md)\>
 
-Defined in: [withdraw/WithdrawAPI.ts:148](https://github.com/bennycode/coinbase-pro-node/blob/760c258/src/withdraw/WithdrawAPI.ts#L148)
+Defined in: [withdraw/WithdrawAPI.ts:148](https://github.com/bennycode/coinbase-pro-node/blob/e63aeae/src/withdraw/WithdrawAPI.ts#L148)

@@ -23,7 +23,7 @@
 
 • **account\_address**: *string*
 
-Defined in: [account/AccountAPI.ts:75](https://github.com/bennycode/coinbase-pro-node/blob/760c258/src/account/AccountAPI.ts#L75)
+Defined in: [account/AccountAPI.ts:75](https://github.com/bennycode/coinbase-pro-node/blob/e63aeae/src/account/AccountAPI.ts#L75)
 
 ___
 
@@ -31,7 +31,7 @@ ___
 
 • **account\_name**: *string*
 
-Defined in: [account/AccountAPI.ts:76](https://github.com/bennycode/coinbase-pro-node/blob/760c258/src/account/AccountAPI.ts#L76)
+Defined in: [account/AccountAPI.ts:76](https://github.com/bennycode/coinbase-pro-node/blob/e63aeae/src/account/AccountAPI.ts#L76)
 
 ___
 
@@ -39,7 +39,7 @@ ___
 
 • **bank\_address**: *string*
 
-Defined in: [account/AccountAPI.ts:77](https://github.com/bennycode/coinbase-pro-node/blob/760c258/src/account/AccountAPI.ts#L77)
+Defined in: [account/AccountAPI.ts:77](https://github.com/bennycode/coinbase-pro-node/blob/e63aeae/src/account/AccountAPI.ts#L77)
 
 ___
 
@@ -54,7 +54,7 @@ Name | Type |
 `code` | *string* |
 `name` | *string* |
 
-Defined in: [account/AccountAPI.ts:78](https://github.com/bennycode/coinbase-pro-node/blob/760c258/src/account/AccountAPI.ts#L78)
+Defined in: [account/AccountAPI.ts:78](https://github.com/bennycode/coinbase-pro-node/blob/e63aeae/src/account/AccountAPI.ts#L78)
 
 ___
 
@@ -62,7 +62,7 @@ ___
 
 • **bank\_name**: *string*
 
-Defined in: [account/AccountAPI.ts:82](https://github.com/bennycode/coinbase-pro-node/blob/760c258/src/account/AccountAPI.ts#L82)
+Defined in: [account/AccountAPI.ts:82](https://github.com/bennycode/coinbase-pro-node/blob/e63aeae/src/account/AccountAPI.ts#L82)
 
 ___
 
@@ -70,7 +70,7 @@ ___
 
 • **iban**: *string*
 
-Defined in: [account/AccountAPI.ts:83](https://github.com/bennycode/coinbase-pro-node/blob/760c258/src/account/AccountAPI.ts#L83)
+Defined in: [account/AccountAPI.ts:83](https://github.com/bennycode/coinbase-pro-node/blob/e63aeae/src/account/AccountAPI.ts#L83)
 
 ___
 
@@ -78,7 +78,7 @@ ___
 
 • **reference**: *string*
 
-Defined in: [account/AccountAPI.ts:84](https://github.com/bennycode/coinbase-pro-node/blob/760c258/src/account/AccountAPI.ts#L84)
+Defined in: [account/AccountAPI.ts:84](https://github.com/bennycode/coinbase-pro-node/blob/e63aeae/src/account/AccountAPI.ts#L84)
 
 ___
 
@@ -86,4 +86,4 @@ ___
 
 • **swift**: *string*
 
-Defined in: [account/AccountAPI.ts:85](https://github.com/bennycode/coinbase-pro-node/blob/760c258/src/account/AccountAPI.ts#L85)
+Defined in: [account/AccountAPI.ts:85](https://github.com/bennycode/coinbase-pro-node/blob/e63aeae/src/account/AccountAPI.ts#L85)

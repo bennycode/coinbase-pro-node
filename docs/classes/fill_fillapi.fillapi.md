@@ -33,7 +33,7 @@ Name | Type |
 
 **Returns:** [*FillAPI*](fill_fillapi.fillapi.md)
 
-Defined in: [fill/FillAPI.ts:28](https://github.com/bennycode/coinbase-pro-node/blob/760c258/src/fill/FillAPI.ts#L28)
+Defined in: [fill/FillAPI.ts:28](https://github.com/bennycode/coinbase-pro-node/blob/e63aeae/src/fill/FillAPI.ts#L28)
 
 ## Properties
 
@@ -47,7 +47,7 @@ Name | Type |
 :------ | :------ |
 `FILLS` | *string* |
 
-Defined in: [fill/FillAPI.ts:26](https://github.com/bennycode/coinbase-pro-node/blob/760c258/src/fill/FillAPI.ts#L26)
+Defined in: [fill/FillAPI.ts:26](https://github.com/bennycode/coinbase-pro-node/blob/e63aeae/src/fill/FillAPI.ts#L26)
 
 ## Methods
 
@@ -70,7 +70,7 @@ Name | Type | Description |
 
 **Returns:** *Promise*<PaginatedData<[*Fill*](../interfaces/fill_fillapi.fill.md)\>\>
 
-Defined in: [fill/FillAPI.ts:40](https://github.com/bennycode/coinbase-pro-node/blob/760c258/src/fill/FillAPI.ts#L40)
+Defined in: [fill/FillAPI.ts:40](https://github.com/bennycode/coinbase-pro-node/blob/e63aeae/src/fill/FillAPI.ts#L40)
 
 ___
 
@@ -93,4 +93,4 @@ Name | Type | Description |
 
 **Returns:** *Promise*<PaginatedData<[*Fill*](../interfaces/fill_fillapi.fill.md)\>\>
 
-Defined in: [fill/FillAPI.ts:60](https://github.com/bennycode/coinbase-pro-node/blob/760c258/src/fill/FillAPI.ts#L60)
+Defined in: [fill/FillAPI.ts:60](https://github.com/bennycode/coinbase-pro-node/blob/e63aeae/src/fill/FillAPI.ts#L60)

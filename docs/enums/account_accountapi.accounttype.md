@@ -17,7 +17,7 @@
 
 • **FIAT**: = "fiat"
 
-Defined in: [account/AccountAPI.ts:39](https://github.com/bennycode/coinbase-pro-node/blob/760c258/src/account/AccountAPI.ts#L39)
+Defined in: [account/AccountAPI.ts:39](https://github.com/bennycode/coinbase-pro-node/blob/e63aeae/src/account/AccountAPI.ts#L39)
 
 ___
 
@@ -25,4 +25,4 @@ ___
 
 • **WALLET**: = "wallet"
 
-Defined in: [account/AccountAPI.ts:40](https://github.com/bennycode/coinbase-pro-node/blob/760c258/src/account/AccountAPI.ts#L40)
+Defined in: [account/AccountAPI.ts:40](https://github.com/bennycode/coinbase-pro-node/blob/e63aeae/src/account/AccountAPI.ts#L40)

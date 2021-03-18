@@ -16,4 +16,4 @@
 
 • **level**: [*OrderBookLevel*](../enums/product_productapi.orderbooklevel.md)
 
-Defined in: [product/ProductAPI.ts:136](https://github.com/bennycode/coinbase-pro-node/blob/760c258/src/product/ProductAPI.ts#L136)
+Defined in: [product/ProductAPI.ts:136](https://github.com/bennycode/coinbase-pro-node/blob/e63aeae/src/product/ProductAPI.ts#L136)

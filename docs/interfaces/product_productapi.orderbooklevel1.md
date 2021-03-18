@@ -20,7 +20,7 @@ Represents only the best bid and ask.
 
 • **asks**: AggregatedOrder[]
 
-Defined in: [product/ProductAPI.ts:111](https://github.com/bennycode/coinbase-pro-node/blob/760c258/src/product/ProductAPI.ts#L111)
+Defined in: [product/ProductAPI.ts:111](https://github.com/bennycode/coinbase-pro-node/blob/e63aeae/src/product/ProductAPI.ts#L111)
 
 ___
 
@@ -28,7 +28,7 @@ ___
 
 • **bids**: AggregatedOrder[]
 
-Defined in: [product/ProductAPI.ts:112](https://github.com/bennycode/coinbase-pro-node/blob/760c258/src/product/ProductAPI.ts#L112)
+Defined in: [product/ProductAPI.ts:112](https://github.com/bennycode/coinbase-pro-node/blob/e63aeae/src/product/ProductAPI.ts#L112)
 
 ___
 
@@ -36,4 +36,4 @@ ___
 
 • **sequence**: *number*
 
-Defined in: [product/ProductAPI.ts:113](https://github.com/bennycode/coinbase-pro-node/blob/760c258/src/product/ProductAPI.ts#L113)
+Defined in: [product/ProductAPI.ts:113](https://github.com/bennycode/coinbase-pro-node/blob/e63aeae/src/product/ProductAPI.ts#L113)

@@ -21,7 +21,7 @@
 
 • **high**: *string*
 
-Defined in: [product/ProductAPI.ts:44](https://github.com/bennycode/coinbase-pro-node/blob/760c258/src/product/ProductAPI.ts#L44)
+Defined in: [product/ProductAPI.ts:44](https://github.com/bennycode/coinbase-pro-node/blob/e63aeae/src/product/ProductAPI.ts#L44)
 
 ___
 
@@ -29,7 +29,7 @@ ___
 
 • **last**: *string*
 
-Defined in: [product/ProductAPI.ts:45](https://github.com/bennycode/coinbase-pro-node/blob/760c258/src/product/ProductAPI.ts#L45)
+Defined in: [product/ProductAPI.ts:45](https://github.com/bennycode/coinbase-pro-node/blob/e63aeae/src/product/ProductAPI.ts#L45)
 
 ___
 
@@ -37,7 +37,7 @@ ___
 
 • **low**: *string*
 
-Defined in: [product/ProductAPI.ts:46](https://github.com/bennycode/coinbase-pro-node/blob/760c258/src/product/ProductAPI.ts#L46)
+Defined in: [product/ProductAPI.ts:46](https://github.com/bennycode/coinbase-pro-node/blob/e63aeae/src/product/ProductAPI.ts#L46)
 
 ___
 
@@ -45,7 +45,7 @@ ___
 
 • **open**: *string*
 
-Defined in: [product/ProductAPI.ts:47](https://github.com/bennycode/coinbase-pro-node/blob/760c258/src/product/ProductAPI.ts#L47)
+Defined in: [product/ProductAPI.ts:47](https://github.com/bennycode/coinbase-pro-node/blob/e63aeae/src/product/ProductAPI.ts#L47)
 
 ___
 
@@ -53,7 +53,7 @@ ___
 
 • **volume**: *string*
 
-Defined in: [product/ProductAPI.ts:48](https://github.com/bennycode/coinbase-pro-node/blob/760c258/src/product/ProductAPI.ts#L48)
+Defined in: [product/ProductAPI.ts:48](https://github.com/bennycode/coinbase-pro-node/blob/e63aeae/src/product/ProductAPI.ts#L48)
 
 ___
 
@@ -61,4 +61,4 @@ ___
 
 • **volume\_30day**: *string*
 
-Defined in: [product/ProductAPI.ts:49](https://github.com/bennycode/coinbase-pro-node/blob/760c258/src/product/ProductAPI.ts#L49)
+Defined in: [product/ProductAPI.ts:49](https://github.com/bennycode/coinbase-pro-node/blob/e63aeae/src/product/ProductAPI.ts#L49)

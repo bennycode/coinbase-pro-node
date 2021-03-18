@@ -16,4 +16,4 @@
 
 • **id**: *string*
 
-Defined in: [user/UserAPI.ts:4](https://github.com/bennycode/coinbase-pro-node/blob/760c258/src/user/UserAPI.ts#L4)
+Defined in: [user/UserAPI.ts:4](https://github.com/bennycode/coinbase-pro-node/blob/e63aeae/src/user/UserAPI.ts#L4)

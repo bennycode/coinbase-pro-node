@@ -17,7 +17,7 @@
 
 • **start**: *string*
 
-Defined in: [product/CandleBucketUtil.ts:8](https://github.com/bennycode/coinbase-pro-node/blob/760c258/src/product/CandleBucketUtil.ts#L8)
+Defined in: [product/CandleBucketUtil.ts:8](https://github.com/bennycode/coinbase-pro-node/blob/e63aeae/src/product/CandleBucketUtil.ts#L8)
 
 ___
 
@@ -25,4 +25,4 @@ ___
 
 • **stop**: *string*
 
-Defined in: [product/CandleBucketUtil.ts:9](https://github.com/bennycode/coinbase-pro-node/blob/760c258/src/product/CandleBucketUtil.ts#L9)
+Defined in: [product/CandleBucketUtil.ts:9](https://github.com/bennycode/coinbase-pro-node/blob/e63aeae/src/product/CandleBucketUtil.ts#L9)

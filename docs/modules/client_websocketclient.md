@@ -36,7 +36,7 @@
 
 Ƭ **WebSocketLastMatchMessage**: *Omit*<[*WebSocketMatchMessage*](../interfaces/client_websocketclient.websocketmatchmessage.md), *type*\> & { `type`: [*LAST\_MATCH*](../enums/client_websocketclient.websocketresponsetype.md#last_match)  }
 
-Defined in: [client/WebSocketClient.ts:186](https://github.com/bennycode/coinbase-pro-node/blob/760c258/src/client/WebSocketClient.ts#L186)
+Defined in: [client/WebSocketClient.ts:186](https://github.com/bennycode/coinbase-pro-node/blob/e63aeae/src/client/WebSocketClient.ts#L186)
 
 ___
 
@@ -44,4 +44,4 @@ ___
 
 Ƭ **WebSocketResponse**: WebSocketMessage & { `type`: [*WebSocketResponseType*](../enums/client_websocketclient.websocketresponsetype.md)  }
 
-Defined in: [client/WebSocketClient.ts:123](https://github.com/bennycode/coinbase-pro-node/blob/760c258/src/client/WebSocketClient.ts#L123)
+Defined in: [client/WebSocketClient.ts:123](https://github.com/bennycode/coinbase-pro-node/blob/e63aeae/src/client/WebSocketClient.ts#L123)

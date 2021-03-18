@@ -32,7 +32,7 @@ Name | Type |
 
 **Returns:** [*FeeAPI*](fee_feeapi.feeapi.md)
 
-Defined in: [fee/FeeAPI.ts:20](https://github.com/bennycode/coinbase-pro-node/blob/760c258/src/fee/FeeAPI.ts#L20)
+Defined in: [fee/FeeAPI.ts:20](https://github.com/bennycode/coinbase-pro-node/blob/e63aeae/src/fee/FeeAPI.ts#L20)
 
 ## Properties
 
@@ -46,7 +46,7 @@ Name | Type |
 :------ | :------ |
 `FEES` | *string* |
 
-Defined in: [fee/FeeAPI.ts:18](https://github.com/bennycode/coinbase-pro-node/blob/760c258/src/fee/FeeAPI.ts#L18)
+Defined in: [fee/FeeAPI.ts:18](https://github.com/bennycode/coinbase-pro-node/blob/e63aeae/src/fee/FeeAPI.ts#L18)
 
 ## Methods
 
@@ -63,4 +63,4 @@ change.
 
 **Returns:** *Promise*<[*FeeTier*](../interfaces/fee_feeapi.feetier.md)\>
 
-Defined in: [fee/FeeAPI.ts:31](https://github.com/bennycode/coinbase-pro-node/blob/760c258/src/fee/FeeAPI.ts#L31)
+Defined in: [fee/FeeAPI.ts:31](https://github.com/bennycode/coinbase-pro-node/blob/e63aeae/src/fee/FeeAPI.ts#L31)

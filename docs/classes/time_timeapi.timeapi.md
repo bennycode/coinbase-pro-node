@@ -33,7 +33,7 @@ Name | Type |
 
 **Returns:** [*TimeAPI*](time_timeapi.timeapi.md)
 
-Defined in: [time/TimeAPI.ts:13](https://github.com/bennycode/coinbase-pro-node/blob/760c258/src/time/TimeAPI.ts#L13)
+Defined in: [time/TimeAPI.ts:13](https://github.com/bennycode/coinbase-pro-node/blob/e63aeae/src/time/TimeAPI.ts#L13)
 
 ## Properties
 
@@ -47,7 +47,7 @@ Name | Type |
 :------ | :------ |
 `TIME` | *string* |
 
-Defined in: [time/TimeAPI.ts:11](https://github.com/bennycode/coinbase-pro-node/blob/760c258/src/time/TimeAPI.ts#L11)
+Defined in: [time/TimeAPI.ts:11](https://github.com/bennycode/coinbase-pro-node/blob/e63aeae/src/time/TimeAPI.ts#L11)
 
 ## Methods
 
@@ -65,7 +65,7 @@ Name | Type |
 
 **Returns:** *Promise*<number\>
 
-Defined in: [time/TimeAPI.ts:34](https://github.com/bennycode/coinbase-pro-node/blob/760c258/src/time/TimeAPI.ts#L34)
+Defined in: [time/TimeAPI.ts:34](https://github.com/bennycode/coinbase-pro-node/blob/e63aeae/src/time/TimeAPI.ts#L34)
 
 ___
 
@@ -80,4 +80,4 @@ https://github.com/bennycode/coinbase-pro-node/issues/354
 
 **Returns:** *Promise*<[*TimeSkew*](../interfaces/time_timeapi.timeskew.md)\>
 
-Defined in: [time/TimeAPI.ts:23](https://github.com/bennycode/coinbase-pro-node/blob/760c258/src/time/TimeAPI.ts#L23)
+Defined in: [time/TimeAPI.ts:23](https://github.com/bennycode/coinbase-pro-node/blob/e63aeae/src/time/TimeAPI.ts#L23)

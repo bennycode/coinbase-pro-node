@@ -33,7 +33,7 @@ Name | Type |
 
 **Returns:** [*TransferAPI*](transfer_transferapi.transferapi.md)
 
-Defined in: [transfer/TransferAPI.ts:37](https://github.com/bennycode/coinbase-pro-node/blob/760c258/src/transfer/TransferAPI.ts#L37)
+Defined in: [transfer/TransferAPI.ts:37](https://github.com/bennycode/coinbase-pro-node/blob/e63aeae/src/transfer/TransferAPI.ts#L37)
 
 ## Properties
 
@@ -47,7 +47,7 @@ Name | Type |
 :------ | :------ |
 `TRANSFERS` | *string* |
 
-Defined in: [transfer/TransferAPI.ts:35](https://github.com/bennycode/coinbase-pro-node/blob/760c258/src/transfer/TransferAPI.ts#L35)
+Defined in: [transfer/TransferAPI.ts:35](https://github.com/bennycode/coinbase-pro-node/blob/e63aeae/src/transfer/TransferAPI.ts#L35)
 
 ## Methods
 
@@ -69,7 +69,7 @@ Name | Type | Description |
 
 **Returns:** *Promise*<[*TransferInformation*](../interfaces/transfer_transferapi.transferinformation.md)\>
 
-Defined in: [transfer/TransferAPI.ts:81](https://github.com/bennycode/coinbase-pro-node/blob/760c258/src/transfer/TransferAPI.ts#L81)
+Defined in: [transfer/TransferAPI.ts:81](https://github.com/bennycode/coinbase-pro-node/blob/e63aeae/src/transfer/TransferAPI.ts#L81)
 
 ___
 
@@ -93,4 +93,4 @@ Name | Type | Description |
 
 **Returns:** *Promise*<PaginatedData<[*TransferInformation*](../interfaces/transfer_transferapi.transferinformation.md)\>\>
 
-Defined in: [transfer/TransferAPI.ts:48](https://github.com/bennycode/coinbase-pro-node/blob/760c258/src/transfer/TransferAPI.ts#L48)
+Defined in: [transfer/TransferAPI.ts:48](https://github.com/bennycode/coinbase-pro-node/blob/e63aeae/src/transfer/TransferAPI.ts#L48)

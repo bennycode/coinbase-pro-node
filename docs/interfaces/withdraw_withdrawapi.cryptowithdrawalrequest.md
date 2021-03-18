@@ -19,9 +19,9 @@
 
 ### add\_network\_fee\_to\_total
 
-• `Optional` **add\_network\_fee\_to\_total**: *undefined* \| *boolean*
+• `Optional` **add\_network\_fee\_to\_total**: *boolean*
 
-Defined in: [withdraw/WithdrawAPI.ts:14](https://github.com/bennycode/coinbase-pro-node/blob/760c258/src/withdraw/WithdrawAPI.ts#L14)
+Defined in: [withdraw/WithdrawAPI.ts:14](https://github.com/bennycode/coinbase-pro-node/blob/e63aeae/src/withdraw/WithdrawAPI.ts#L14)
 
 ___
 
@@ -29,7 +29,7 @@ ___
 
 • **amount**: *string*
 
-Defined in: [withdraw/WithdrawAPI.ts:15](https://github.com/bennycode/coinbase-pro-node/blob/760c258/src/withdraw/WithdrawAPI.ts#L15)
+Defined in: [withdraw/WithdrawAPI.ts:15](https://github.com/bennycode/coinbase-pro-node/blob/e63aeae/src/withdraw/WithdrawAPI.ts#L15)
 
 ___
 
@@ -37,7 +37,7 @@ ___
 
 • **crypto\_address**: *string*
 
-Defined in: [withdraw/WithdrawAPI.ts:16](https://github.com/bennycode/coinbase-pro-node/blob/760c258/src/withdraw/WithdrawAPI.ts#L16)
+Defined in: [withdraw/WithdrawAPI.ts:16](https://github.com/bennycode/coinbase-pro-node/blob/e63aeae/src/withdraw/WithdrawAPI.ts#L16)
 
 ___
 
@@ -45,20 +45,20 @@ ___
 
 • **currency**: *string*
 
-Defined in: [withdraw/WithdrawAPI.ts:17](https://github.com/bennycode/coinbase-pro-node/blob/760c258/src/withdraw/WithdrawAPI.ts#L17)
+Defined in: [withdraw/WithdrawAPI.ts:17](https://github.com/bennycode/coinbase-pro-node/blob/e63aeae/src/withdraw/WithdrawAPI.ts#L17)
 
 ___
 
 ### destination\_tag
 
-• `Optional` **destination\_tag**: *undefined* \| *string*
+• `Optional` **destination\_tag**: *string*
 
-Defined in: [withdraw/WithdrawAPI.ts:18](https://github.com/bennycode/coinbase-pro-node/blob/760c258/src/withdraw/WithdrawAPI.ts#L18)
+Defined in: [withdraw/WithdrawAPI.ts:18](https://github.com/bennycode/coinbase-pro-node/blob/e63aeae/src/withdraw/WithdrawAPI.ts#L18)
 
 ___
 
 ### no\_destination\_tag
 
-• `Optional` **no\_destination\_tag**: *undefined* \| *boolean*
+• `Optional` **no\_destination\_tag**: *boolean*
 
-Defined in: [withdraw/WithdrawAPI.ts:19](https://github.com/bennycode/coinbase-pro-node/blob/760c258/src/withdraw/WithdrawAPI.ts#L19)
+Defined in: [withdraw/WithdrawAPI.ts:19](https://github.com/bennycode/coinbase-pro-node/blob/e63aeae/src/withdraw/WithdrawAPI.ts#L19)

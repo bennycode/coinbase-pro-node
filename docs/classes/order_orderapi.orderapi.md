@@ -36,7 +36,7 @@ Name | Type |
 
 **Returns:** [*OrderAPI*](order_orderapi.orderapi.md)
 
-Defined in: [order/OrderAPI.ts:102](https://github.com/bennycode/coinbase-pro-node/blob/760c258/src/order/OrderAPI.ts#L102)
+Defined in: [order/OrderAPI.ts:110](https://github.com/bennycode/coinbase-pro-node/blob/e63aeae/src/order/OrderAPI.ts#L110)
 
 ## Properties
 
@@ -50,7 +50,7 @@ Name | Type |
 :------ | :------ |
 `ORDERS` | *string* |
 
-Defined in: [order/OrderAPI.ts:100](https://github.com/bennycode/coinbase-pro-node/blob/760c258/src/order/OrderAPI.ts#L100)
+Defined in: [order/OrderAPI.ts:108](https://github.com/bennycode/coinbase-pro-node/blob/e63aeae/src/order/OrderAPI.ts#L108)
 
 ## Methods
 
@@ -72,7 +72,7 @@ Name | Type | Description |
 
 A list of ids of the canceled orders
 
-Defined in: [order/OrderAPI.ts:113](https://github.com/bennycode/coinbase-pro-node/blob/760c258/src/order/OrderAPI.ts#L113)
+Defined in: [order/OrderAPI.ts:121](https://github.com/bennycode/coinbase-pro-node/blob/e63aeae/src/order/OrderAPI.ts#L121)
 
 ___
 
@@ -95,13 +95,13 @@ Name | Type | Description |
 
 The ID of the canceled order
 
-Defined in: [order/OrderAPI.ts:129](https://github.com/bennycode/coinbase-pro-node/blob/760c258/src/order/OrderAPI.ts#L129)
+Defined in: [order/OrderAPI.ts:137](https://github.com/bennycode/coinbase-pro-node/blob/e63aeae/src/order/OrderAPI.ts#L137)
 
 ___
 
 ### getOpenOrders
 
-▸ **getOpenOrders**(`pagination?`: Pagination): *Promise*<PaginatedData<[*Order*](../modules/order_orderapi.md#order)\>\>
+▸ **getOpenOrders**(`query?`: [*OrderListQueryParam*](../interfaces/order_orderapi.orderlistqueryparam.md)): *Promise*<PaginatedData<[*Order*](../modules/order_orderapi.md#order)\>\>
 
 List your current open orders from the profile that the API key belongs to. Only open or un-settled
 orders are returned. As soon as an order is no longer open and settled, it will no longer appear
@@ -113,17 +113,17 @@ in the default request.
 
 Name | Type | Description |
 :------ | :------ | :------ |
-`pagination?` | Pagination | Pagination field   |
+`query?` | [*OrderListQueryParam*](../interfaces/order_orderapi.orderlistqueryparam.md) | Available query parameters (Pagination, Product ID and/or Order Status)   |
 
 **Returns:** *Promise*<PaginatedData<[*Order*](../modules/order_orderapi.md#order)\>\>
 
-Defined in: [order/OrderAPI.ts:145](https://github.com/bennycode/coinbase-pro-node/blob/760c258/src/order/OrderAPI.ts#L145)
+Defined in: [order/OrderAPI.ts:153](https://github.com/bennycode/coinbase-pro-node/blob/e63aeae/src/order/OrderAPI.ts#L153)
 
 ___
 
 ### getOrder
 
-▸ **getOrder**(`orderId`: *string*): *Promise*<*null* \| [*PendingOrder*](../interfaces/order_orderapi.pendingorder.md) \| [*FilledOrder*](../interfaces/order_orderapi.filledorder.md)\>
+▸ **getOrder**(`orderId`: *string*): *Promise*<*null* \| [*Order*](../modules/order_orderapi.md#order)\>
 
 Get a single order by order id from the profile that the API key belongs to.
 
@@ -135,15 +135,15 @@ Name | Type | Description |
 :------ | :------ | :------ |
 `orderId` | *string* | ID of previously placed order   |
 
-**Returns:** *Promise*<*null* \| [*PendingOrder*](../interfaces/order_orderapi.pendingorder.md) \| [*FilledOrder*](../interfaces/order_orderapi.filledorder.md)\>
+**Returns:** *Promise*<*null* \| [*Order*](../modules/order_orderapi.md#order)\>
 
-Defined in: [order/OrderAPI.ts:163](https://github.com/bennycode/coinbase-pro-node/blob/760c258/src/order/OrderAPI.ts#L163)
+Defined in: [order/OrderAPI.ts:177](https://github.com/bennycode/coinbase-pro-node/blob/e63aeae/src/order/OrderAPI.ts#L177)
 
 ___
 
 ### placeOrder
 
-▸ **placeOrder**(`newOrder`: [*NewOrder*](../modules/order_orderapi.md#neworder)): *Promise*<[*Order*](../modules/order_orderapi.md#order)\>
+▸ **placeOrder**(`newOrder`: [*LimitOrder*](../interfaces/order_orderapi.limitorder.md) \| [*AutoCancelLimitOrder*](../interfaces/order_orderapi.autocancellimitorder.md) \| [*PostOnlyLimitOrder*](../interfaces/order_orderapi.postonlylimitorder.md) \| BaseOrder & { `type`: [*MARKET*](../enums/order_orderapi.ordertype.md#market)  } & { `size`: *string*  } \| { `funds`: *string*  }): *Promise*<[*Order*](../modules/order_orderapi.md#order)\>
 
 You can place two types of orders: limit and market. Orders can only be placed if your account has sufficient
 funds. Once an order is placed, your account funds will be put on hold for the duration of the order.
@@ -154,8 +154,8 @@ funds. Once an order is placed, your account funds will be put on hold for the d
 
 Name | Type | Description |
 :------ | :------ | :------ |
-`newOrder` | [*NewOrder*](../modules/order_orderapi.md#neworder) | Order type and parameters   |
+`newOrder` | [*LimitOrder*](../interfaces/order_orderapi.limitorder.md) \| [*AutoCancelLimitOrder*](../interfaces/order_orderapi.autocancellimitorder.md) \| [*PostOnlyLimitOrder*](../interfaces/order_orderapi.postonlylimitorder.md) \| BaseOrder & { `type`: [*MARKET*](../enums/order_orderapi.ordertype.md#market)  } & { `size`: *string*  } \| { `funds`: *string*  } | Order type and parameters   |
 
 **Returns:** *Promise*<[*Order*](../modules/order_orderapi.md#order)\>
 
-Defined in: [order/OrderAPI.ts:188](https://github.com/bennycode/coinbase-pro-node/blob/760c258/src/order/OrderAPI.ts#L188)
+Defined in: [order/OrderAPI.ts:202](https://github.com/bennycode/coinbase-pro-node/blob/e63aeae/src/order/OrderAPI.ts#L202)

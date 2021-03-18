@@ -17,7 +17,7 @@
 
 • **CRYPTO**: = "crypto"
 
-Defined in: [currency/CurrencyAPI.ts:13](https://github.com/bennycode/coinbase-pro-node/blob/760c258/src/currency/CurrencyAPI.ts#L13)
+Defined in: [currency/CurrencyAPI.ts:13](https://github.com/bennycode/coinbase-pro-node/blob/e63aeae/src/currency/CurrencyAPI.ts#L13)
 
 ___
 
@@ -25,4 +25,4 @@ ___
 
 • **FIAT**: = "fiat"
 
-Defined in: [currency/CurrencyAPI.ts:14](https://github.com/bennycode/coinbase-pro-node/blob/760c258/src/currency/CurrencyAPI.ts#L14)
+Defined in: [currency/CurrencyAPI.ts:14](https://github.com/bennycode/coinbase-pro-node/blob/e63aeae/src/currency/CurrencyAPI.ts#L14)

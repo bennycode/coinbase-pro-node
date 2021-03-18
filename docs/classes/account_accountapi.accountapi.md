@@ -36,7 +36,7 @@ Name | Type |
 
 **Returns:** [*AccountAPI*](account_accountapi.accountapi.md)
 
-Defined in: [account/AccountAPI.ts:92](https://github.com/bennycode/coinbase-pro-node/blob/760c258/src/account/AccountAPI.ts#L92)
+Defined in: [account/AccountAPI.ts:92](https://github.com/bennycode/coinbase-pro-node/blob/e63aeae/src/account/AccountAPI.ts#L92)
 
 ## Properties
 
@@ -51,7 +51,7 @@ Name | Type |
 `ACCOUNTS` | *string* |
 `COINBASE_ACCOUNT` | *string* |
 
-Defined in: [account/AccountAPI.ts:89](https://github.com/bennycode/coinbase-pro-node/blob/760c258/src/account/AccountAPI.ts#L89)
+Defined in: [account/AccountAPI.ts:89](https://github.com/bennycode/coinbase-pro-node/blob/e63aeae/src/account/AccountAPI.ts#L89)
 
 ## Methods
 
@@ -71,7 +71,7 @@ Name | Type | Description |
 
 **Returns:** *Promise*<[*Account*](../interfaces/account_accountapi.account.md)\>
 
-Defined in: [account/AccountAPI.ts:102](https://github.com/bennycode/coinbase-pro-node/blob/760c258/src/account/AccountAPI.ts#L102)
+Defined in: [account/AccountAPI.ts:102](https://github.com/bennycode/coinbase-pro-node/blob/e63aeae/src/account/AccountAPI.ts#L102)
 
 ___
 
@@ -93,7 +93,7 @@ Name | Type | Description |
 
 **Returns:** *Promise*<PaginatedData<[*AccountHistory*](../interfaces/account_accountapi.accounthistory.md)\>\>
 
-Defined in: [account/AccountAPI.ts:116](https://github.com/bennycode/coinbase-pro-node/blob/760c258/src/account/AccountAPI.ts#L116)
+Defined in: [account/AccountAPI.ts:116](https://github.com/bennycode/coinbase-pro-node/blob/e63aeae/src/account/AccountAPI.ts#L116)
 
 ___
 
@@ -116,7 +116,7 @@ Name | Type | Description |
 
 **Returns:** *Promise*<PaginatedData<[*Hold*](../interfaces/account_accountapi.hold.md)\>\>
 
-Defined in: [account/AccountAPI.ts:137](https://github.com/bennycode/coinbase-pro-node/blob/760c258/src/account/AccountAPI.ts#L137)
+Defined in: [account/AccountAPI.ts:137](https://github.com/bennycode/coinbase-pro-node/blob/e63aeae/src/account/AccountAPI.ts#L137)
 
 ___
 
@@ -130,7 +130,7 @@ Get a list of trading accounts from the profile of the API key.
 
 **Returns:** *Promise*<[*Account*](../interfaces/account_accountapi.account.md)[]\>
 
-Defined in: [account/AccountAPI.ts:154](https://github.com/bennycode/coinbase-pro-node/blob/760c258/src/account/AccountAPI.ts#L154)
+Defined in: [account/AccountAPI.ts:154](https://github.com/bennycode/coinbase-pro-node/blob/e63aeae/src/account/AccountAPI.ts#L154)
 
 ___
 
@@ -144,4 +144,4 @@ Get a list of your coinbase accounts.
 
 **Returns:** *Promise*<[*CoinbaseAccount*](../interfaces/account_accountapi.coinbaseaccount.md)[]\>
 
-Defined in: [account/AccountAPI.ts:165](https://github.com/bennycode/coinbase-pro-node/blob/760c258/src/account/AccountAPI.ts#L165)
+Defined in: [account/AccountAPI.ts:165](https://github.com/bennycode/coinbase-pro-node/blob/e63aeae/src/account/AccountAPI.ts#L165)

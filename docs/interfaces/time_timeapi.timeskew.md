@@ -19,7 +19,7 @@
 
 The epoch field represents decimal seconds since Unix Epoch, i.e. "1420674445.201"
 
-Defined in: [time/TimeAPI.ts:5](https://github.com/bennycode/coinbase-pro-node/blob/760c258/src/time/TimeAPI.ts#L5)
+Defined in: [time/TimeAPI.ts:5](https://github.com/bennycode/coinbase-pro-node/blob/e63aeae/src/time/TimeAPI.ts#L5)
 
 ___
 
@@ -29,4 +29,4 @@ ___
 
 Time in ISO 8601 format, i.e. "2015-01-07T23:47:25.201Z"
 
-Defined in: [time/TimeAPI.ts:7](https://github.com/bennycode/coinbase-pro-node/blob/760c258/src/time/TimeAPI.ts#L7)
+Defined in: [time/TimeAPI.ts:7](https://github.com/bennycode/coinbase-pro-node/blob/e63aeae/src/time/TimeAPI.ts#L7)
