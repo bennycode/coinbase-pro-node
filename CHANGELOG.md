@@ -1,3 +1,20 @@
+### 2.19.0 (2021-03-18)
+
+##### Chores
+
+*  Upgrade test framework to Jasmine 3.7.0 ([e2449307](https://github.com/bennycode/coinbase-pro-node/commit/e2449307ebfd3eb5a64c3323672dedfd37d3b03e))
+*  yarn upgrade-interactive --latest ([ff100af2](https://github.com/bennycode/coinbase-pro-node/commit/ff100af283c9066ca209f35e6b525d7f69723ee4))
+* **deps-dev:**
+  *  bump @typescript-eslint/eslint-plugin ([#429](https://github.com/bennycode/coinbase-pro-node/pull/429)) ([a1ad8882](https://github.com/bennycode/coinbase-pro-node/commit/a1ad8882d57c7a57b200b9646f14b066f5602cb3))
+  *  bump typedoc from 0.20.28 to 0.20.30 ([#430](https://github.com/bennycode/coinbase-pro-node/pull/430)) ([364cea0b](https://github.com/bennycode/coinbase-pro-node/commit/364cea0b0b31a112092d139c7acd8b96212f301c))
+  *  bump nock from 13.0.9 to 13.0.10 ([#428](https://github.com/bennycode/coinbase-pro-node/pull/428)) ([a222b7d6](https://github.com/bennycode/coinbase-pro-node/commit/a222b7d6049e3695ec7d49b9f61709094fdd9ce8))
+  *  bump @typescript-eslint/parser from 4.15.2 to 4.16.1 ([#426](https://github.com/bennycode/coinbase-pro-node/pull/426)) ([de2b5f53](https://github.com/bennycode/coinbase-pro-node/commit/de2b5f53999b920505770f3544d3802504cd23cd))
+* **deps:**  bump ws from 7.4.3 to 7.4.4 ([#427](https://github.com/bennycode/coinbase-pro-node/pull/427)) ([c1558da7](https://github.com/bennycode/coinbase-pro-node/commit/c1558da7ded422f4126a6291a7dcf45717763077))
+
+##### New Features
+
+* **order:**  Support filtering parameters when listing orders ([#432](https://github.com/bennycode/coinbase-pro-node/pull/432)) ([289d0987](https://github.com/bennycode/coinbase-pro-node/commit/289d098758eac3ff7d2772d052b2bbde2cdfb69f))
+
 #### 2.18.1 (2021-02-28)
 
 ##### Chores
