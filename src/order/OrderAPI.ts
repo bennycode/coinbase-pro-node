@@ -95,9 +95,11 @@ export interface FilledOrder extends BasePlacedOrder {
 }
 
 /** @see https://docs.pro.coinbase.com/#list-orders */
-export interface OrderListQueryParams extends Pagination {
+export interface OrderListQueryParam extends Pagination {
+  /** Only list orders for a specific product. */
   product_id?: string;
-  status?: 'open' | 'pending' | 'active' | 'all';
+  /** Limit list of orders to these statuses. Passing "all" returns orders of all statuses. Default: [open, pending, active] */
+  status?: (OrderStatus.OPEN | OrderStatus.PENDING | OrderStatus.ACTIVE | 'all')[];
 }
 
 export type Order = PendingOrder | FilledOrder;
@@ -107,7 +109,8 @@ export class OrderAPI {
     ORDERS: `/orders`,
   };
 
-  constructor(private readonly apiClient: AxiosInstance) {}
+  constructor(private readonly apiClient: AxiosInstance) {
+  }
 
   /**
    * With best effort, cancel all open orders from the profile that the API key belongs to.
@@ -148,9 +151,13 @@ export class OrderAPI {
    * @param query - Available query parameters (Pagination, Product ID and/or Order Status)
    * @see https://docs.pro.coinbase.com/#list-orders
    */
-  async getOpenOrders(query?: OrderListQueryParams): Promise<PaginatedData<Order>> {
+  async getOpenOrders(query?: OrderListQueryParam): Promise<PaginatedData<Order>> {
     const resource = OrderAPI.URL.ORDERS;
-    const response = await this.apiClient.get<Order[]>(resource, {params: query});
+    const status = query?.status || [OrderStatus.OPEN, OrderStatus.PENDING, OrderStatus.ACTIVE];
+    const response = await this.apiClient.get<Order[]>(resource, {params: {
+      ...query,
+        status: status.join(',')
+      }});
     return {
       data: response.data,
       pagination: {

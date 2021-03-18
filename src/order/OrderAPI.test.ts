@@ -51,9 +51,10 @@ describe('OrderAPI', () => {
       nock(global.REST_URL)
         .get(OrderAPI.URL.ORDERS)
         .query(true)
-        .reply(
-          200,
-          JSON.stringify([
+        .reply(200, (uri: string) => {
+          expect(uri).toBe('/orders?status=open,pending,active');
+
+          return JSON.stringify([
             {
               created_at: '2019-04-22T20:21:20.897409Z',
               executed_value: '0.0000000000000000',
@@ -70,13 +71,47 @@ describe('OrderAPI', () => {
               stp: SelfTradePrevention.DECREMENT_AND_CANCEL,
               type: OrderType.MARKET,
             },
-          ])
-        );
+          ]);
+        });
 
       const openOrders = await global.client.rest.order.getOpenOrders();
 
       expect(openOrders.data.length).toBe(1);
       expect(openOrders.data[0].status).toBe(OrderStatus.OPEN);
+    });
+
+    it('accepts a list of different order statuses', async () => {
+      nock(global.REST_URL)
+        .get(OrderAPI.URL.ORDERS)
+        .query(true)
+        .reply(200, (uri: string) => {
+          expect(uri).toBe('/orders?status=open,pending');
+
+          return JSON.stringify([
+            {
+              created_at: '2019-04-22T20:21:20.897409Z',
+              executed_value: '0.0000000000000000',
+              fill_fees: '0.0000000000000000',
+              filled_size: '0.00000000',
+              funds: '207850.8486540300000000',
+              id: '8eba9e7b-08d6-4667-90ca-6db445d743c0',
+              post_only: false,
+              product_id: 'BTC-EUR',
+              settled: false,
+              side: OrderSide.BUY,
+              size: '0.10000000',
+              status: OrderStatus.OPEN,
+              stp: SelfTradePrevention.DECREMENT_AND_CANCEL,
+              type: OrderType.MARKET,
+            },
+          ]);
+        });
+
+      const openOrders = await global.client.rest.order.getOpenOrders({
+        status: [OrderStatus.OPEN, OrderStatus.PENDING],
+      });
+
+      expect(openOrders.data.length).toBe(1);
     });
   });
 
@@ -107,7 +142,7 @@ describe('OrderAPI', () => {
             status: 'done',
             stp: SelfTradePrevention.DECREMENT_AND_CANCEL,
             type: 'market',
-          })
+          }),
         );
 
       const order = await global.client.rest.order.getOrder('8eba9e7b-08d6-4667-90ca-6db445d743c1');
@@ -152,7 +187,7 @@ describe('OrderAPI', () => {
 
       const canceledOrderId = await global.client.rest.order.cancelOrder(
         '8eba9e7b-08d6-4667-90ca-6db445d743c1',
-        'BTC-USD'
+        'BTC-USD',
       );
       expect(canceledOrderId).toEqual('8eba9e7b-08d6-4667-90ca-6db445d743c1');
     });
