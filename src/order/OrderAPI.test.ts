@@ -142,7 +142,7 @@ describe('OrderAPI', () => {
             status: 'done',
             stp: SelfTradePrevention.DECREMENT_AND_CANCEL,
             type: 'market',
-          }),
+          })
         );
 
       const order = await global.client.rest.order.getOrder('8eba9e7b-08d6-4667-90ca-6db445d743c1');
@@ -187,7 +187,7 @@ describe('OrderAPI', () => {
 
       const canceledOrderId = await global.client.rest.order.cancelOrder(
         '8eba9e7b-08d6-4667-90ca-6db445d743c1',
-        'BTC-USD',
+        'BTC-USD'
       );
       expect(canceledOrderId).toEqual('8eba9e7b-08d6-4667-90ca-6db445d743c1');
     });
