@@ -99,7 +99,7 @@ export interface OrderListQueryParam extends Pagination {
   /** Only list orders for a specific product. */
   product_id?: string;
   /** Limit list of orders to these statuses. Passing "all" returns orders of all statuses. Default: [open, pending, active] */
-  status?: (OrderStatus.OPEN | OrderStatus.PENDING | OrderStatus.ACTIVE | 'all')[];
+  status?: (OrderStatus | 'all')[];
 }
 
 export type Order = PendingOrder | FilledOrder;
@@ -143,14 +143,12 @@ export class OrderAPI {
   }
 
   /**
-   * List your current open orders from the profile that the API key belongs to. Only open or un-settled
-   * orders are returned. As soon as an order is no longer open and settled, it will no longer appear
-   * in the default request.
+   * List your orders from the profile that the API key belongs to.
    *
    * @param query - Available query parameters (Pagination, Product ID and/or Order Status)
    * @see https://docs.pro.coinbase.com/#list-orders
    */
-  async getOpenOrders(query?: OrderListQueryParam): Promise<PaginatedData<Order>> {
+  async getOrders(query?: OrderListQueryParam): Promise<PaginatedData<Order>> {
     const resource = OrderAPI.URL.ORDERS;
     const status = query?.status || [OrderStatus.OPEN, OrderStatus.PENDING, OrderStatus.ACTIVE];
     const response = await this.apiClient.get<Order[]>(resource, {

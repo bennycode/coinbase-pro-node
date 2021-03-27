@@ -46,7 +46,7 @@ describe('OrderAPI', () => {
     });
   });
 
-  describe('getOpenOrders', () => {
+  describe('getOrders', () => {
     it('returns list of open orders', async () => {
       nock(global.REST_URL)
         .get(OrderAPI.URL.ORDERS)
@@ -74,7 +74,7 @@ describe('OrderAPI', () => {
           ]);
         });
 
-      const openOrders = await global.client.rest.order.getOpenOrders();
+      const openOrders = await global.client.rest.order.getOrders();
 
       expect(openOrders.data.length).toBe(1);
       expect(openOrders.data[0].status).toBe(OrderStatus.OPEN);
@@ -107,7 +107,7 @@ describe('OrderAPI', () => {
           ]);
         });
 
-      const openOrders = await global.client.rest.order.getOpenOrders({
+      const openOrders = await global.client.rest.order.getOrders({
         status: [OrderStatus.OPEN, OrderStatus.PENDING],
       });
 
