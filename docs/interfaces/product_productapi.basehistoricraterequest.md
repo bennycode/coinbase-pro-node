@@ -6,9 +6,9 @@
 
 ## Hierarchy
 
-* **BaseHistoricRateRequest**
+- **BaseHistoricRateRequest**
 
-  ↳ [*HistoricRateRequestWithTimeSpan*](product_productapi.historicraterequestwithtimespan.md)
+  ↳ [_HistoricRateRequestWithTimeSpan_](product_productapi.historicraterequestwithtimespan.md)
 
 ## Table of contents
 
@@ -20,8 +20,8 @@
 
 ### granularity
 
-• **granularity**: [*CandleGranularity*](../enums/product_productapi.candlegranularity.md)
+• **granularity**: [_CandleGranularity_](../enums/product_productapi.candlegranularity.md)
 
 Desired time slice in seconds.
 
-Defined in: [product/ProductAPI.ts:72](https://github.com/bennycode/coinbase-pro-node/blob/e63aeae/src/product/ProductAPI.ts#L72)
+Defined in: [product/ProductAPI.ts:72](https://github.com/bennycode/coinbase-pro-node/blob/845b71d/src/product/ProductAPI.ts#L72)

@@ -10,28 +10,28 @@
 
 - [amount](withdraw_withdrawapi.paymentmethodwithdrawalrequest.md#amount)
 - [currency](withdraw_withdrawapi.paymentmethodwithdrawalrequest.md#currency)
-- [payment\_method\_id](withdraw_withdrawapi.paymentmethodwithdrawalrequest.md#payment_method_id)
+- [payment_method_id](withdraw_withdrawapi.paymentmethodwithdrawalrequest.md#payment_method_id)
 
 ## Properties
 
 ### amount
 
-• **amount**: *string*
+• **amount**: _string_
 
-Defined in: [withdraw/WithdrawAPI.ts:29](https://github.com/bennycode/coinbase-pro-node/blob/e63aeae/src/withdraw/WithdrawAPI.ts#L29)
+Defined in: [withdraw/WithdrawAPI.ts:29](https://github.com/bennycode/coinbase-pro-node/blob/845b71d/src/withdraw/WithdrawAPI.ts#L29)
 
-___
+---
 
 ### currency
 
-• **currency**: *string*
+• **currency**: _string_
 
-Defined in: [withdraw/WithdrawAPI.ts:30](https://github.com/bennycode/coinbase-pro-node/blob/e63aeae/src/withdraw/WithdrawAPI.ts#L30)
+Defined in: [withdraw/WithdrawAPI.ts:30](https://github.com/bennycode/coinbase-pro-node/blob/845b71d/src/withdraw/WithdrawAPI.ts#L30)
 
-___
+---
 
-### payment\_method\_id
+### payment_method_id
 
-• **payment\_method\_id**: *string*
+• **payment_method_id**: _string_
 
-Defined in: [withdraw/WithdrawAPI.ts:31](https://github.com/bennycode/coinbase-pro-node/blob/e63aeae/src/withdraw/WithdrawAPI.ts#L31)
+Defined in: [withdraw/WithdrawAPI.ts:31](https://github.com/bennycode/coinbase-pro-node/blob/845b71d/src/withdraw/WithdrawAPI.ts#L31)

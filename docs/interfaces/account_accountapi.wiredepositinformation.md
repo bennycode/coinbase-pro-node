@@ -8,82 +8,82 @@
 
 ### Properties
 
-- [account\_address](account_accountapi.wiredepositinformation.md#account_address)
-- [account\_name](account_accountapi.wiredepositinformation.md#account_name)
-- [account\_number](account_accountapi.wiredepositinformation.md#account_number)
-- [bank\_address](account_accountapi.wiredepositinformation.md#bank_address)
-- [bank\_country](account_accountapi.wiredepositinformation.md#bank_country)
-- [bank\_name](account_accountapi.wiredepositinformation.md#bank_name)
+- [account_address](account_accountapi.wiredepositinformation.md#account_address)
+- [account_name](account_accountapi.wiredepositinformation.md#account_name)
+- [account_number](account_accountapi.wiredepositinformation.md#account_number)
+- [bank_address](account_accountapi.wiredepositinformation.md#bank_address)
+- [bank_country](account_accountapi.wiredepositinformation.md#bank_country)
+- [bank_name](account_accountapi.wiredepositinformation.md#bank_name)
 - [reference](account_accountapi.wiredepositinformation.md#reference)
-- [routing\_number](account_accountapi.wiredepositinformation.md#routing_number)
+- [routing_number](account_accountapi.wiredepositinformation.md#routing_number)
 
 ## Properties
 
-### account\_address
+### account_address
 
-• **account\_address**: *string*
+• **account_address**: _string_
 
-Defined in: [account/AccountAPI.ts:61](https://github.com/bennycode/coinbase-pro-node/blob/e63aeae/src/account/AccountAPI.ts#L61)
+Defined in: [account/AccountAPI.ts:61](https://github.com/bennycode/coinbase-pro-node/blob/845b71d/src/account/AccountAPI.ts#L61)
 
-___
+---
 
-### account\_name
+### account_name
 
-• **account\_name**: *string*
+• **account_name**: _string_
 
-Defined in: [account/AccountAPI.ts:62](https://github.com/bennycode/coinbase-pro-node/blob/e63aeae/src/account/AccountAPI.ts#L62)
+Defined in: [account/AccountAPI.ts:62](https://github.com/bennycode/coinbase-pro-node/blob/845b71d/src/account/AccountAPI.ts#L62)
 
-___
+---
 
-### account\_number
+### account_number
 
-• **account\_number**: *string*
+• **account_number**: _string_
 
-Defined in: [account/AccountAPI.ts:63](https://github.com/bennycode/coinbase-pro-node/blob/e63aeae/src/account/AccountAPI.ts#L63)
+Defined in: [account/AccountAPI.ts:63](https://github.com/bennycode/coinbase-pro-node/blob/845b71d/src/account/AccountAPI.ts#L63)
 
-___
+---
 
-### bank\_address
+### bank_address
 
-• **bank\_address**: *string*
+• **bank_address**: _string_
 
-Defined in: [account/AccountAPI.ts:64](https://github.com/bennycode/coinbase-pro-node/blob/e63aeae/src/account/AccountAPI.ts#L64)
+Defined in: [account/AccountAPI.ts:64](https://github.com/bennycode/coinbase-pro-node/blob/845b71d/src/account/AccountAPI.ts#L64)
 
-___
+---
 
-### bank\_country
+### bank_country
 
-• **bank\_country**: *object*
+• **bank_country**: _object_
 
 #### Type declaration:
 
-Name | Type |
-:------ | :------ |
-`code` | *string* |
-`name` | *string* |
+| Name   | Type     |
+| :----- | :------- |
+| `code` | _string_ |
+| `name` | _string_ |
 
-Defined in: [account/AccountAPI.ts:65](https://github.com/bennycode/coinbase-pro-node/blob/e63aeae/src/account/AccountAPI.ts#L65)
+Defined in: [account/AccountAPI.ts:65](https://github.com/bennycode/coinbase-pro-node/blob/845b71d/src/account/AccountAPI.ts#L65)
 
-___
+---
 
-### bank\_name
+### bank_name
 
-• **bank\_name**: *string*
+• **bank_name**: _string_
 
-Defined in: [account/AccountAPI.ts:69](https://github.com/bennycode/coinbase-pro-node/blob/e63aeae/src/account/AccountAPI.ts#L69)
+Defined in: [account/AccountAPI.ts:69](https://github.com/bennycode/coinbase-pro-node/blob/845b71d/src/account/AccountAPI.ts#L69)
 
-___
+---
 
 ### reference
 
-• **reference**: *string*
+• **reference**: _string_
 
-Defined in: [account/AccountAPI.ts:70](https://github.com/bennycode/coinbase-pro-node/blob/e63aeae/src/account/AccountAPI.ts#L70)
+Defined in: [account/AccountAPI.ts:70](https://github.com/bennycode/coinbase-pro-node/blob/845b71d/src/account/AccountAPI.ts#L70)
 
-___
+---
 
-### routing\_number
+### routing_number
 
-• **routing\_number**: *string*
+• **routing_number**: _string_
 
-Defined in: [account/AccountAPI.ts:71](https://github.com/bennycode/coinbase-pro-node/blob/e63aeae/src/account/AccountAPI.ts#L71)
+Defined in: [account/AccountAPI.ts:71](https://github.com/bennycode/coinbase-pro-node/blob/845b71d/src/account/AccountAPI.ts#L71)

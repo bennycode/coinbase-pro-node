@@ -8,30 +8,30 @@
 
 ### Enumeration members
 
-- [ONE\_DAY](order_orderapi.cancelorderperiod.md#one_day)
-- [ONE\_HOUR](order_orderapi.cancelorderperiod.md#one_hour)
-- [ONE\_MINUTE](order_orderapi.cancelorderperiod.md#one_minute)
+- [ONE_DAY](order_orderapi.cancelorderperiod.md#one_day)
+- [ONE_HOUR](order_orderapi.cancelorderperiod.md#one_hour)
+- [ONE_MINUTE](order_orderapi.cancelorderperiod.md#one_minute)
 
 ## Enumeration members
 
-### ONE\_DAY
+### ONE_DAY
 
-• **ONE\_DAY**: = "day"
+• **ONE_DAY**: = "day"
 
-Defined in: [order/OrderAPI.ts:17](https://github.com/bennycode/coinbase-pro-node/blob/e63aeae/src/order/OrderAPI.ts#L17)
+Defined in: [order/OrderAPI.ts:17](https://github.com/bennycode/coinbase-pro-node/blob/845b71d/src/order/OrderAPI.ts#L17)
 
-___
+---
 
-### ONE\_HOUR
+### ONE_HOUR
 
-• **ONE\_HOUR**: = "hour"
+• **ONE_HOUR**: = "hour"
 
-Defined in: [order/OrderAPI.ts:18](https://github.com/bennycode/coinbase-pro-node/blob/e63aeae/src/order/OrderAPI.ts#L18)
+Defined in: [order/OrderAPI.ts:18](https://github.com/bennycode/coinbase-pro-node/blob/845b71d/src/order/OrderAPI.ts#L18)
 
-___
+---
 
-### ONE\_MINUTE
+### ONE_MINUTE
 
-• **ONE\_MINUTE**: = "min"
+• **ONE_MINUTE**: = "min"
 
-Defined in: [order/OrderAPI.ts:19](https://github.com/bennycode/coinbase-pro-node/blob/e63aeae/src/order/OrderAPI.ts#L19)
+Defined in: [order/OrderAPI.ts:19](https://github.com/bennycode/coinbase-pro-node/blob/845b71d/src/order/OrderAPI.ts#L19)

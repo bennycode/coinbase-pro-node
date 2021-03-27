@@ -15,14 +15,14 @@
 
 ### start
 
-• **start**: *string*
+• **start**: _string_
 
-Defined in: [product/CandleBucketUtil.ts:8](https://github.com/bennycode/coinbase-pro-node/blob/e63aeae/src/product/CandleBucketUtil.ts#L8)
+Defined in: [product/CandleBucketUtil.ts:8](https://github.com/bennycode/coinbase-pro-node/blob/845b71d/src/product/CandleBucketUtil.ts#L8)
 
-___
+---
 
 ### stop
 
-• **stop**: *string*
+• **stop**: _string_
 
-Defined in: [product/CandleBucketUtil.ts:9](https://github.com/bennycode/coinbase-pro-node/blob/e63aeae/src/product/CandleBucketUtil.ts#L9)
+Defined in: [product/CandleBucketUtil.ts:9](https://github.com/bennycode/coinbase-pro-node/blob/845b71d/src/product/CandleBucketUtil.ts#L9)

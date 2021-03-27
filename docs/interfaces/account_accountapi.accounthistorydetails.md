@@ -8,30 +8,30 @@
 
 ### Properties
 
-- [order\_id](account_accountapi.accounthistorydetails.md#order_id)
-- [product\_id](account_accountapi.accounthistorydetails.md#product_id)
-- [trade\_id](account_accountapi.accounthistorydetails.md#trade_id)
+- [order_id](account_accountapi.accounthistorydetails.md#order_id)
+- [product_id](account_accountapi.accounthistorydetails.md#product_id)
+- [trade_id](account_accountapi.accounthistorydetails.md#trade_id)
 
 ## Properties
 
-### order\_id
+### order_id
 
-• **order\_id**: *string*
+• **order_id**: _string_
 
-Defined in: [account/AccountAPI.ts:23](https://github.com/bennycode/coinbase-pro-node/blob/e63aeae/src/account/AccountAPI.ts#L23)
+Defined in: [account/AccountAPI.ts:23](https://github.com/bennycode/coinbase-pro-node/blob/845b71d/src/account/AccountAPI.ts#L23)
 
-___
+---
 
-### product\_id
+### product_id
 
-• **product\_id**: *string*
+• **product_id**: _string_
 
-Defined in: [account/AccountAPI.ts:24](https://github.com/bennycode/coinbase-pro-node/blob/e63aeae/src/account/AccountAPI.ts#L24)
+Defined in: [account/AccountAPI.ts:24](https://github.com/bennycode/coinbase-pro-node/blob/845b71d/src/account/AccountAPI.ts#L24)
 
-___
+---
 
-### trade\_id
+### trade_id
 
-• **trade\_id**: *string*
+• **trade_id**: _string_
 
-Defined in: [account/AccountAPI.ts:25](https://github.com/bennycode/coinbase-pro-node/blob/e63aeae/src/account/AccountAPI.ts#L25)
+Defined in: [account/AccountAPI.ts:25](https://github.com/bennycode/coinbase-pro-node/blob/845b71d/src/account/AccountAPI.ts#L25)

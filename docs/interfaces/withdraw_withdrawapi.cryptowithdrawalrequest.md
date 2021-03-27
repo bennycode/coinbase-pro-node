@@ -8,57 +8,57 @@
 
 ### Properties
 
-- [add\_network\_fee\_to\_total](withdraw_withdrawapi.cryptowithdrawalrequest.md#add_network_fee_to_total)
+- [add_network_fee_to_total](withdraw_withdrawapi.cryptowithdrawalrequest.md#add_network_fee_to_total)
 - [amount](withdraw_withdrawapi.cryptowithdrawalrequest.md#amount)
-- [crypto\_address](withdraw_withdrawapi.cryptowithdrawalrequest.md#crypto_address)
+- [crypto_address](withdraw_withdrawapi.cryptowithdrawalrequest.md#crypto_address)
 - [currency](withdraw_withdrawapi.cryptowithdrawalrequest.md#currency)
-- [destination\_tag](withdraw_withdrawapi.cryptowithdrawalrequest.md#destination_tag)
-- [no\_destination\_tag](withdraw_withdrawapi.cryptowithdrawalrequest.md#no_destination_tag)
+- [destination_tag](withdraw_withdrawapi.cryptowithdrawalrequest.md#destination_tag)
+- [no_destination_tag](withdraw_withdrawapi.cryptowithdrawalrequest.md#no_destination_tag)
 
 ## Properties
 
-### add\_network\_fee\_to\_total
+### add_network_fee_to_total
 
-• `Optional` **add\_network\_fee\_to\_total**: *boolean*
+• `Optional` **add_network_fee_to_total**: _boolean_
 
-Defined in: [withdraw/WithdrawAPI.ts:14](https://github.com/bennycode/coinbase-pro-node/blob/e63aeae/src/withdraw/WithdrawAPI.ts#L14)
+Defined in: [withdraw/WithdrawAPI.ts:14](https://github.com/bennycode/coinbase-pro-node/blob/845b71d/src/withdraw/WithdrawAPI.ts#L14)
 
-___
+---
 
 ### amount
 
-• **amount**: *string*
+• **amount**: _string_
 
-Defined in: [withdraw/WithdrawAPI.ts:15](https://github.com/bennycode/coinbase-pro-node/blob/e63aeae/src/withdraw/WithdrawAPI.ts#L15)
+Defined in: [withdraw/WithdrawAPI.ts:15](https://github.com/bennycode/coinbase-pro-node/blob/845b71d/src/withdraw/WithdrawAPI.ts#L15)
 
-___
+---
 
-### crypto\_address
+### crypto_address
 
-• **crypto\_address**: *string*
+• **crypto_address**: _string_
 
-Defined in: [withdraw/WithdrawAPI.ts:16](https://github.com/bennycode/coinbase-pro-node/blob/e63aeae/src/withdraw/WithdrawAPI.ts#L16)
+Defined in: [withdraw/WithdrawAPI.ts:16](https://github.com/bennycode/coinbase-pro-node/blob/845b71d/src/withdraw/WithdrawAPI.ts#L16)
 
-___
+---
 
 ### currency
 
-• **currency**: *string*
+• **currency**: _string_
 
-Defined in: [withdraw/WithdrawAPI.ts:17](https://github.com/bennycode/coinbase-pro-node/blob/e63aeae/src/withdraw/WithdrawAPI.ts#L17)
+Defined in: [withdraw/WithdrawAPI.ts:17](https://github.com/bennycode/coinbase-pro-node/blob/845b71d/src/withdraw/WithdrawAPI.ts#L17)
 
-___
+---
 
-### destination\_tag
+### destination_tag
 
-• `Optional` **destination\_tag**: *string*
+• `Optional` **destination_tag**: _string_
 
-Defined in: [withdraw/WithdrawAPI.ts:18](https://github.com/bennycode/coinbase-pro-node/blob/e63aeae/src/withdraw/WithdrawAPI.ts#L18)
+Defined in: [withdraw/WithdrawAPI.ts:18](https://github.com/bennycode/coinbase-pro-node/blob/845b71d/src/withdraw/WithdrawAPI.ts#L18)
 
-___
+---
 
-### no\_destination\_tag
+### no_destination_tag
 
-• `Optional` **no\_destination\_tag**: *boolean*
+• `Optional` **no_destination_tag**: _boolean_
 
-Defined in: [withdraw/WithdrawAPI.ts:19](https://github.com/bennycode/coinbase-pro-node/blob/e63aeae/src/withdraw/WithdrawAPI.ts#L19)
+Defined in: [withdraw/WithdrawAPI.ts:19](https://github.com/bennycode/coinbase-pro-node/blob/845b71d/src/withdraw/WithdrawAPI.ts#L19)

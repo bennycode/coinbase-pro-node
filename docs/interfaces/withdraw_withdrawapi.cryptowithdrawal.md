@@ -6,9 +6,9 @@
 
 ## Hierarchy
 
-* **CryptoWithdrawal**
+- **CryptoWithdrawal**
 
-  ↳ [*PaymentMethodWithdrawal*](withdraw_withdrawapi.paymentmethodwithdrawal.md)
+  ↳ [_PaymentMethodWithdrawal_](withdraw_withdrawapi.paymentmethodwithdrawal.md)
 
 ## Table of contents
 
@@ -22,22 +22,22 @@
 
 ### amount
 
-• **amount**: *string*
+• **amount**: _string_
 
-Defined in: [withdraw/WithdrawAPI.ts:4](https://github.com/bennycode/coinbase-pro-node/blob/e63aeae/src/withdraw/WithdrawAPI.ts#L4)
+Defined in: [withdraw/WithdrawAPI.ts:4](https://github.com/bennycode/coinbase-pro-node/blob/845b71d/src/withdraw/WithdrawAPI.ts#L4)
 
-___
+---
 
 ### currency
 
-• **currency**: *string*
+• **currency**: _string_
 
-Defined in: [withdraw/WithdrawAPI.ts:5](https://github.com/bennycode/coinbase-pro-node/blob/e63aeae/src/withdraw/WithdrawAPI.ts#L5)
+Defined in: [withdraw/WithdrawAPI.ts:5](https://github.com/bennycode/coinbase-pro-node/blob/845b71d/src/withdraw/WithdrawAPI.ts#L5)
 
-___
+---
 
 ### id
 
-• **id**: *string*
+• **id**: _string_
 
-Defined in: [withdraw/WithdrawAPI.ts:6](https://github.com/bennycode/coinbase-pro-node/blob/e63aeae/src/withdraw/WithdrawAPI.ts#L6)
+Defined in: [withdraw/WithdrawAPI.ts:6](https://github.com/bennycode/coinbase-pro-node/blob/845b71d/src/withdraw/WithdrawAPI.ts#L6)

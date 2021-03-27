@@ -10,8 +10,8 @@
 
 - [details](currency_currencyapi.currency.md#details)
 - [id](currency_currencyapi.currency.md#id)
-- [max\_precision](currency_currencyapi.currency.md#max_precision)
-- [min\_size](currency_currencyapi.currency.md#min_size)
+- [max_precision](currency_currencyapi.currency.md#max_precision)
+- [min_size](currency_currencyapi.currency.md#min_size)
 - [name](currency_currencyapi.currency.md#name)
 - [status](currency_currencyapi.currency.md#status)
 
@@ -19,46 +19,46 @@
 
 ### details
 
-• **details**: [*CurrencyDetail*](currency_currencyapi.currencydetail.md)
+• **details**: [_CurrencyDetail_](currency_currencyapi.currencydetail.md)
 
-Defined in: [currency/CurrencyAPI.ts:4](https://github.com/bennycode/coinbase-pro-node/blob/e63aeae/src/currency/CurrencyAPI.ts#L4)
+Defined in: [currency/CurrencyAPI.ts:4](https://github.com/bennycode/coinbase-pro-node/blob/845b71d/src/currency/CurrencyAPI.ts#L4)
 
-___
+---
 
 ### id
 
-• **id**: *string*
+• **id**: _string_
 
-Defined in: [currency/CurrencyAPI.ts:5](https://github.com/bennycode/coinbase-pro-node/blob/e63aeae/src/currency/CurrencyAPI.ts#L5)
+Defined in: [currency/CurrencyAPI.ts:5](https://github.com/bennycode/coinbase-pro-node/blob/845b71d/src/currency/CurrencyAPI.ts#L5)
 
-___
+---
 
-### max\_precision
+### max_precision
 
-• **max\_precision**: *string*
+• **max_precision**: _string_
 
-Defined in: [currency/CurrencyAPI.ts:6](https://github.com/bennycode/coinbase-pro-node/blob/e63aeae/src/currency/CurrencyAPI.ts#L6)
+Defined in: [currency/CurrencyAPI.ts:6](https://github.com/bennycode/coinbase-pro-node/blob/845b71d/src/currency/CurrencyAPI.ts#L6)
 
-___
+---
 
-### min\_size
+### min_size
 
-• **min\_size**: *string*
+• **min_size**: _string_
 
-Defined in: [currency/CurrencyAPI.ts:7](https://github.com/bennycode/coinbase-pro-node/blob/e63aeae/src/currency/CurrencyAPI.ts#L7)
+Defined in: [currency/CurrencyAPI.ts:7](https://github.com/bennycode/coinbase-pro-node/blob/845b71d/src/currency/CurrencyAPI.ts#L7)
 
-___
+---
 
 ### name
 
-• **name**: *string*
+• **name**: _string_
 
-Defined in: [currency/CurrencyAPI.ts:8](https://github.com/bennycode/coinbase-pro-node/blob/e63aeae/src/currency/CurrencyAPI.ts#L8)
+Defined in: [currency/CurrencyAPI.ts:8](https://github.com/bennycode/coinbase-pro-node/blob/845b71d/src/currency/CurrencyAPI.ts#L8)
 
-___
+---
 
 ### status
 
-• **status**: *string*
+• **status**: _string_
 
-Defined in: [currency/CurrencyAPI.ts:9](https://github.com/bennycode/coinbase-pro-node/blob/e63aeae/src/currency/CurrencyAPI.ts#L9)
+Defined in: [currency/CurrencyAPI.ts:9](https://github.com/bennycode/coinbase-pro-node/blob/845b71d/src/currency/CurrencyAPI.ts#L9)

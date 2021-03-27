@@ -26,42 +26,42 @@
 
 ### constructor
 
-\+ **new WithdrawAPI**(`apiClient`: AxiosInstance): [*WithdrawAPI*](withdraw_withdrawapi.withdrawapi.md)
+\+ **new WithdrawAPI**(`apiClient`: AxiosInstance): [_WithdrawAPI_](withdraw_withdrawapi.withdrawapi.md)
 
 #### Parameters:
 
-Name | Type |
-:------ | :------ |
-`apiClient` | AxiosInstance |
+| Name        | Type          |
+| :---------- | :------------ |
+| `apiClient` | AxiosInstance |
 
-**Returns:** [*WithdrawAPI*](withdraw_withdrawapi.withdrawapi.md)
+**Returns:** [_WithdrawAPI_](withdraw_withdrawapi.withdrawapi.md)
 
-Defined in: [withdraw/WithdrawAPI.ts:78](https://github.com/bennycode/coinbase-pro-node/blob/e63aeae/src/withdraw/WithdrawAPI.ts#L78)
+Defined in: [withdraw/WithdrawAPI.ts:78](https://github.com/bennycode/coinbase-pro-node/blob/845b71d/src/withdraw/WithdrawAPI.ts#L78)
 
 ## Properties
 
 ### URL
 
-▪ `Readonly` `Static` **URL**: *object*
+▪ `Readonly` `Static` **URL**: _object_
 
 #### Type declaration:
 
-Name | Type |
-:------ | :------ |
-`LIST_PAYMENT_METHODS` | *string* |
-`WITHDRAWALS` | *object* |
-`WITHDRAWALS.COINBASE_ACCOUNT` | *string* |
-`WITHDRAWALS.CRYPTO` | *string* |
-`WITHDRAWALS.FEE_ESTIMATE` | *string* |
-`WITHDRAWALS.PAYMENT_METHOD` | *string* |
+| Name                           | Type     |
+| :----------------------------- | :------- |
+| `LIST_PAYMENT_METHODS`         | _string_ |
+| `WITHDRAWALS`                  | _object_ |
+| `WITHDRAWALS.COINBASE_ACCOUNT` | _string_ |
+| `WITHDRAWALS.CRYPTO`           | _string_ |
+| `WITHDRAWALS.FEE_ESTIMATE`     | _string_ |
+| `WITHDRAWALS.PAYMENT_METHOD`   | _string_ |
 
-Defined in: [withdraw/WithdrawAPI.ts:70](https://github.com/bennycode/coinbase-pro-node/blob/e63aeae/src/withdraw/WithdrawAPI.ts#L70)
+Defined in: [withdraw/WithdrawAPI.ts:70](https://github.com/bennycode/coinbase-pro-node/blob/845b71d/src/withdraw/WithdrawAPI.ts#L70)
 
 ## Methods
 
 ### getFeeEstimate
 
-▸ **getFeeEstimate**(`currency`: *string*, `cryptoAddress`: *string*): *Promise*<[*WithdrawalFeeEstimate*](../interfaces/withdraw_withdrawapi.withdrawalfeeestimate.md)\>
+▸ **getFeeEstimate**(`currency`: _string_, `cryptoAddress`: _string_): _Promise_<[_WithdrawalFeeEstimate_](../interfaces/withdraw_withdrawapi.withdrawalfeeestimate.md)\>
 
 Get the network fee estimate when sending to the given address.
 
@@ -69,57 +69,56 @@ Get the network fee estimate when sending to the given address.
 
 #### Parameters:
 
-Name | Type | Description |
-:------ | :------ | :------ |
-`currency` | *string* | The type of currency   |
-`cryptoAddress` | *string* | A crypto address of the recipient   |
+| Name            | Type     | Description                       |
+| :-------------- | :------- | :-------------------------------- |
+| `currency`      | _string_ | The type of currency              |
+| `cryptoAddress` | _string_ | A crypto address of the recipient |
 
-**Returns:** *Promise*<[*WithdrawalFeeEstimate*](../interfaces/withdraw_withdrawapi.withdrawalfeeestimate.md)\>
+**Returns:** _Promise_<[_WithdrawalFeeEstimate_](../interfaces/withdraw_withdrawapi.withdrawalfeeestimate.md)\>
 
-Defined in: [withdraw/WithdrawAPI.ts:170](https://github.com/bennycode/coinbase-pro-node/blob/e63aeae/src/withdraw/WithdrawAPI.ts#L170)
+Defined in: [withdraw/WithdrawAPI.ts:170](https://github.com/bennycode/coinbase-pro-node/blob/845b71d/src/withdraw/WithdrawAPI.ts#L170)
 
-___
+---
 
 ### getPaymentMethods
 
-▸ **getPaymentMethods**(): *Promise*<[*PaymentMethod*](../interfaces/withdraw_withdrawapi.paymentmethod.md)[]\>
+▸ **getPaymentMethods**(): _Promise_<[_PaymentMethod_](../interfaces/withdraw_withdrawapi.paymentmethod.md)[]\>
 
 Get a list of your payment methods.
 
 **`see`** https://docs.pro.coinbase.com/#list-payment-methods
 
-**Returns:** *Promise*<[*PaymentMethod*](../interfaces/withdraw_withdrawapi.paymentmethod.md)[]\>
+**Returns:** _Promise_<[_PaymentMethod_](../interfaces/withdraw_withdrawapi.paymentmethod.md)[]\>
 
-Defined in: [withdraw/WithdrawAPI.ts:183](https://github.com/bennycode/coinbase-pro-node/blob/e63aeae/src/withdraw/WithdrawAPI.ts#L183)
+Defined in: [withdraw/WithdrawAPI.ts:183](https://github.com/bennycode/coinbase-pro-node/blob/845b71d/src/withdraw/WithdrawAPI.ts#L183)
 
-___
+---
 
 ### withdrawToCoinbaseAccount
 
-▸ **withdrawToCoinbaseAccount**(`amount`: *string*, `currency`: *string*, `coinbaseAccountId`: *string*): *Promise*<[*CryptoWithdrawal*](../interfaces/withdraw_withdrawapi.cryptowithdrawal.md)\>
+▸ **withdrawToCoinbaseAccount**(`amount`: _string_, `currency`: _string_, `coinbaseAccountId`: _string_): _Promise_<[_CryptoWithdrawal_](../interfaces/withdraw_withdrawapi.cryptowithdrawal.md)\>
 
-Withdraw funds to a Coinbase account. You can move funds between your Coinbase accounts and your Coinbase Pro
-trading accounts within your daily limits.
+Withdraw funds to a Coinbase account. You can move funds between your Coinbase accounts and your Coinbase Pro trading accounts within your daily limits.
 
 **`see`** https://docs.pro.coinbase.com/#coinbase56
 
 #### Parameters:
 
-Name | Type | Description |
-:------ | :------ | :------ |
-`amount` | *string* | The amount to withdraw   |
-`currency` | *string* | The type of currency   |
-`coinbaseAccountId` | *string* | ID of the Coinbase or Coinbase Pro account   |
+| Name                | Type     | Description                                |
+| :------------------ | :------- | :----------------------------------------- |
+| `amount`            | _string_ | The amount to withdraw                     |
+| `currency`          | _string_ | The type of currency                       |
+| `coinbaseAccountId` | _string_ | ID of the Coinbase or Coinbase Pro account |
 
-**Returns:** *Promise*<[*CryptoWithdrawal*](../interfaces/withdraw_withdrawapi.cryptowithdrawal.md)\>
+**Returns:** _Promise_<[_CryptoWithdrawal_](../interfaces/withdraw_withdrawapi.cryptowithdrawal.md)\>
 
-Defined in: [withdraw/WithdrawAPI.ts:125](https://github.com/bennycode/coinbase-pro-node/blob/e63aeae/src/withdraw/WithdrawAPI.ts#L125)
+Defined in: [withdraw/WithdrawAPI.ts:125](https://github.com/bennycode/coinbase-pro-node/blob/845b71d/src/withdraw/WithdrawAPI.ts#L125)
 
-___
+---
 
 ### withdrawToCryptoAddress
 
-▸ **withdrawToCryptoAddress**(`amount`: *string*, `currency`: *string*, `cryptoAddress`: *string*, `destinationTag?`: *string*, `addNetworkFeeToTotal?`: *boolean*): *Promise*<[*CryptoWithdrawal*](../interfaces/withdraw_withdrawapi.cryptowithdrawal.md)\>
+▸ **withdrawToCryptoAddress**(`amount`: _string_, `currency`: _string_, `cryptoAddress`: _string_, `destinationTag?`: _string_, `addNetworkFeeToTotal?`: _boolean_): _Promise_<[_CryptoWithdrawal_](../interfaces/withdraw_withdrawapi.cryptowithdrawal.md)\>
 
 Withdraws funds to a crypto address.
 
@@ -127,23 +126,23 @@ Withdraws funds to a crypto address.
 
 #### Parameters:
 
-Name | Type | Description |
-:------ | :------ | :------ |
-`amount` | *string* | The amount to withdraw   |
-`currency` | *string* | The type of currency   |
-`cryptoAddress` | *string* | A crypto address of the recipient   |
-`destinationTag?` | *string* | A destination tag for currencies that support one   |
-`addNetworkFeeToTotal?` | *boolean* | A boolean flag to add the network fee on top of the amount. If this is blank, it will default to deducting the network fee from the amount.   |
+| Name | Type | Description |
+| :-- | :-- | :-- |
+| `amount` | _string_ | The amount to withdraw |
+| `currency` | _string_ | The type of currency |
+| `cryptoAddress` | _string_ | A crypto address of the recipient |
+| `destinationTag?` | _string_ | A destination tag for currencies that support one |
+| `addNetworkFeeToTotal?` | _boolean_ | A boolean flag to add the network fee on top of the amount. If this is blank, it will default to deducting the network fee from the amount. |
 
-**Returns:** *Promise*<[*CryptoWithdrawal*](../interfaces/withdraw_withdrawapi.cryptowithdrawal.md)\>
+**Returns:** _Promise_<[_CryptoWithdrawal_](../interfaces/withdraw_withdrawapi.cryptowithdrawal.md)\>
 
-Defined in: [withdraw/WithdrawAPI.ts:93](https://github.com/bennycode/coinbase-pro-node/blob/e63aeae/src/withdraw/WithdrawAPI.ts#L93)
+Defined in: [withdraw/WithdrawAPI.ts:93](https://github.com/bennycode/coinbase-pro-node/blob/845b71d/src/withdraw/WithdrawAPI.ts#L93)
 
-___
+---
 
 ### withdrawToPaymentMethod
 
-▸ **withdrawToPaymentMethod**(`amount`: *string*, `currency`: *string*, `paymentMethodId`: *string*): *Promise*<[*PaymentMethodWithdrawal*](../interfaces/withdraw_withdrawapi.paymentmethodwithdrawal.md)\>
+▸ **withdrawToPaymentMethod**(`amount`: _string_, `currency`: _string_, `paymentMethodId`: _string_): _Promise_<[_PaymentMethodWithdrawal_](../interfaces/withdraw_withdrawapi.paymentmethodwithdrawal.md)\>
 
 Withdraw funds to a payment method.
 
@@ -151,12 +150,12 @@ Withdraw funds to a payment method.
 
 #### Parameters:
 
-Name | Type | Description |
-:------ | :------ | :------ |
-`amount` | *string* | The amount to withdraw   |
-`currency` | *string* | The type of currency   |
-`paymentMethodId` | *string* | ID of the payment method   |
+| Name              | Type     | Description              |
+| :---------------- | :------- | :----------------------- |
+| `amount`          | _string_ | The amount to withdraw   |
+| `currency`        | _string_ | The type of currency     |
+| `paymentMethodId` | _string_ | ID of the payment method |
 
-**Returns:** *Promise*<[*PaymentMethodWithdrawal*](../interfaces/withdraw_withdrawapi.paymentmethodwithdrawal.md)\>
+**Returns:** _Promise_<[_PaymentMethodWithdrawal_](../interfaces/withdraw_withdrawapi.paymentmethodwithdrawal.md)\>
 
-Defined in: [withdraw/WithdrawAPI.ts:148](https://github.com/bennycode/coinbase-pro-node/blob/e63aeae/src/withdraw/WithdrawAPI.ts#L148)
+Defined in: [withdraw/WithdrawAPI.ts:148](https://github.com/bennycode/coinbase-pro-node/blob/845b71d/src/withdraw/WithdrawAPI.ts#L148)

@@ -23,37 +23,37 @@
 
 ### constructor
 
-\+ **new FillAPI**(`apiClient`: AxiosInstance): [*FillAPI*](fill_fillapi.fillapi.md)
+\+ **new FillAPI**(`apiClient`: AxiosInstance): [_FillAPI_](fill_fillapi.fillapi.md)
 
 #### Parameters:
 
-Name | Type |
-:------ | :------ |
-`apiClient` | AxiosInstance |
+| Name        | Type          |
+| :---------- | :------------ |
+| `apiClient` | AxiosInstance |
 
-**Returns:** [*FillAPI*](fill_fillapi.fillapi.md)
+**Returns:** [_FillAPI_](fill_fillapi.fillapi.md)
 
-Defined in: [fill/FillAPI.ts:28](https://github.com/bennycode/coinbase-pro-node/blob/e63aeae/src/fill/FillAPI.ts#L28)
+Defined in: [fill/FillAPI.ts:28](https://github.com/bennycode/coinbase-pro-node/blob/845b71d/src/fill/FillAPI.ts#L28)
 
 ## Properties
 
 ### URL
 
-▪ `Readonly` `Static` **URL**: *object*
+▪ `Readonly` `Static` **URL**: _object_
 
 #### Type declaration:
 
-Name | Type |
-:------ | :------ |
-`FILLS` | *string* |
+| Name    | Type     |
+| :------ | :------- |
+| `FILLS` | _string_ |
 
-Defined in: [fill/FillAPI.ts:26](https://github.com/bennycode/coinbase-pro-node/blob/e63aeae/src/fill/FillAPI.ts#L26)
+Defined in: [fill/FillAPI.ts:26](https://github.com/bennycode/coinbase-pro-node/blob/845b71d/src/fill/FillAPI.ts#L26)
 
 ## Methods
 
 ### getFillsByOrderId
 
-▸ **getFillsByOrderId**(`orderId`: *string*, `pagination?`: Pagination): *Promise*<PaginatedData<[*Fill*](../interfaces/fill_fillapi.fill.md)\>\>
+▸ **getFillsByOrderId**(`orderId`: _string_, `pagination?`: Pagination): _Promise_<PaginatedData<[_Fill_](../interfaces/fill_fillapi.fill.md)\>\>
 
 Get a list of recent fills for a given Order of the API key's profile.
 
@@ -63,20 +63,20 @@ Get a list of recent fills for a given Order of the API key's profile.
 
 #### Parameters:
 
-Name | Type | Description |
-:------ | :------ | :------ |
-`orderId` | *string* | ID of previously placed order   |
-`pagination?` | Pagination | Pagination field   |
+| Name          | Type       | Description                   |
+| :------------ | :--------- | :---------------------------- |
+| `orderId`     | _string_   | ID of previously placed order |
+| `pagination?` | Pagination | Pagination field              |
 
-**Returns:** *Promise*<PaginatedData<[*Fill*](../interfaces/fill_fillapi.fill.md)\>\>
+**Returns:** _Promise_<PaginatedData<[_Fill_](../interfaces/fill_fillapi.fill.md)\>\>
 
-Defined in: [fill/FillAPI.ts:40](https://github.com/bennycode/coinbase-pro-node/blob/e63aeae/src/fill/FillAPI.ts#L40)
+Defined in: [fill/FillAPI.ts:40](https://github.com/bennycode/coinbase-pro-node/blob/845b71d/src/fill/FillAPI.ts#L40)
 
-___
+---
 
 ### getFillsByProductId
 
-▸ **getFillsByProductId**(`productId`: *string*, `pagination?`: Pagination): *Promise*<PaginatedData<[*Fill*](../interfaces/fill_fillapi.fill.md)\>\>
+▸ **getFillsByProductId**(`productId`: _string_, `pagination?`: Pagination): _Promise_<PaginatedData<[_Fill_](../interfaces/fill_fillapi.fill.md)\>\>
 
 Get a list of recent fills for a given Product of the API key's profile.
 
@@ -86,11 +86,11 @@ Get a list of recent fills for a given Product of the API key's profile.
 
 #### Parameters:
 
-Name | Type | Description |
-:------ | :------ | :------ |
-`productId` | *string* | Representation for base and counter   |
-`pagination?` | Pagination | Pagination field   |
+| Name          | Type       | Description                         |
+| :------------ | :--------- | :---------------------------------- |
+| `productId`   | _string_   | Representation for base and counter |
+| `pagination?` | Pagination | Pagination field                    |
 
-**Returns:** *Promise*<PaginatedData<[*Fill*](../interfaces/fill_fillapi.fill.md)\>\>
+**Returns:** _Promise_<PaginatedData<[_Fill_](../interfaces/fill_fillapi.fill.md)\>\>
 
-Defined in: [fill/FillAPI.ts:60](https://github.com/bennycode/coinbase-pro-node/blob/e63aeae/src/fill/FillAPI.ts#L60)
+Defined in: [fill/FillAPI.ts:60](https://github.com/bennycode/coinbase-pro-node/blob/845b71d/src/fill/FillAPI.ts#L60)

@@ -24,108 +24,108 @@
 
 ### base
 
-• **base**: *string*
+• **base**: _string_
 
 ID of base asset
 
-Defined in: [product/ProductAPI.ts:148](https://github.com/bennycode/coinbase-pro-node/blob/e63aeae/src/product/ProductAPI.ts#L148)
+Defined in: [product/ProductAPI.ts:148](https://github.com/bennycode/coinbase-pro-node/blob/845b71d/src/product/ProductAPI.ts#L148)
 
-___
+---
 
 ### close
 
-• **close**: *number*
+• **close**: _number_
 
 Closing price (last trade) in the bucket interval
 
-Defined in: [product/ProductAPI.ts:150](https://github.com/bennycode/coinbase-pro-node/blob/e63aeae/src/product/ProductAPI.ts#L150)
+Defined in: [product/ProductAPI.ts:150](https://github.com/bennycode/coinbase-pro-node/blob/845b71d/src/product/ProductAPI.ts#L150)
 
-___
+---
 
 ### counter
 
-• **counter**: *string*
+• **counter**: _string_
 
 ID of quote asset
 
-Defined in: [product/ProductAPI.ts:152](https://github.com/bennycode/coinbase-pro-node/blob/e63aeae/src/product/ProductAPI.ts#L152)
+Defined in: [product/ProductAPI.ts:152](https://github.com/bennycode/coinbase-pro-node/blob/845b71d/src/product/ProductAPI.ts#L152)
 
-___
+---
 
 ### high
 
-• **high**: *number*
+• **high**: _number_
 
 Highest price during the bucket interval
 
-Defined in: [product/ProductAPI.ts:154](https://github.com/bennycode/coinbase-pro-node/blob/e63aeae/src/product/ProductAPI.ts#L154)
+Defined in: [product/ProductAPI.ts:154](https://github.com/bennycode/coinbase-pro-node/blob/845b71d/src/product/ProductAPI.ts#L154)
 
-___
+---
 
 ### low
 
-• **low**: *number*
+• **low**: _number_
 
 Lowest price during the bucket interval
 
-Defined in: [product/ProductAPI.ts:156](https://github.com/bennycode/coinbase-pro-node/blob/e63aeae/src/product/ProductAPI.ts#L156)
+Defined in: [product/ProductAPI.ts:156](https://github.com/bennycode/coinbase-pro-node/blob/845b71d/src/product/ProductAPI.ts#L156)
 
-___
+---
 
 ### open
 
-• **open**: *number*
+• **open**: _number_
 
 Opening price (first trade) in the bucket interval
 
-Defined in: [product/ProductAPI.ts:158](https://github.com/bennycode/coinbase-pro-node/blob/e63aeae/src/product/ProductAPI.ts#L158)
+Defined in: [product/ProductAPI.ts:158](https://github.com/bennycode/coinbase-pro-node/blob/845b71d/src/product/ProductAPI.ts#L158)
 
-___
+---
 
 ### openTimeInISO
 
-• **openTimeInISO**: *string*
+• **openTimeInISO**: _string_
 
 Bucket start time in simplified extended ISO 8601 format
 
-Defined in: [product/ProductAPI.ts:160](https://github.com/bennycode/coinbase-pro-node/blob/e63aeae/src/product/ProductAPI.ts#L160)
+Defined in: [product/ProductAPI.ts:160](https://github.com/bennycode/coinbase-pro-node/blob/845b71d/src/product/ProductAPI.ts#L160)
 
-___
+---
 
 ### openTimeInMillis
 
-• **openTimeInMillis**: *number*
+• **openTimeInMillis**: _number_
 
 Bucket start time converted to milliseconds (note: Coinbase Pro actually uses seconds)
 
-Defined in: [product/ProductAPI.ts:162](https://github.com/bennycode/coinbase-pro-node/blob/e63aeae/src/product/ProductAPI.ts#L162)
+Defined in: [product/ProductAPI.ts:162](https://github.com/bennycode/coinbase-pro-node/blob/845b71d/src/product/ProductAPI.ts#L162)
 
-___
+---
 
 ### productId
 
-• **productId**: *string*
+• **productId**: _string_
 
 Product ID / Symbol
 
-Defined in: [product/ProductAPI.ts:164](https://github.com/bennycode/coinbase-pro-node/blob/e63aeae/src/product/ProductAPI.ts#L164)
+Defined in: [product/ProductAPI.ts:164](https://github.com/bennycode/coinbase-pro-node/blob/845b71d/src/product/ProductAPI.ts#L164)
 
-___
+---
 
 ### sizeInMillis
 
-• **sizeInMillis**: *number*
+• **sizeInMillis**: _number_
 
 Candle size in milliseconds
 
-Defined in: [product/ProductAPI.ts:166](https://github.com/bennycode/coinbase-pro-node/blob/e63aeae/src/product/ProductAPI.ts#L166)
+Defined in: [product/ProductAPI.ts:166](https://github.com/bennycode/coinbase-pro-node/blob/845b71d/src/product/ProductAPI.ts#L166)
 
-___
+---
 
 ### volume
 
-• **volume**: *number*
+• **volume**: _number_
 
 Volume of trading activity during the bucket interval
 
-Defined in: [product/ProductAPI.ts:168](https://github.com/bennycode/coinbase-pro-node/blob/e63aeae/src/product/ProductAPI.ts#L168)
+Defined in: [product/ProductAPI.ts:168](https://github.com/bennycode/coinbase-pro-node/blob/845b71d/src/product/ProductAPI.ts#L168)

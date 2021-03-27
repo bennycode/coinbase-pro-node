@@ -6,11 +6,11 @@
 
 ## Hierarchy
 
-* **ClientAuthenticationBase**
+- **ClientAuthenticationBase**
 
-  ↳ [*ClientAuthenticationBaseUrls*](coinbasepro.clientauthenticationbaseurls.md)
+  ↳ [_ClientAuthenticationBaseUrls_](coinbasepro.clientauthenticationbaseurls.md)
 
-  ↳ [*ClientAuthenticationCustomUrls*](coinbasepro.clientauthenticationcustomurls.md)
+  ↳ [_ClientAuthenticationCustomUrls_](coinbasepro.clientauthenticationcustomurls.md)
 
 ## Table of contents
 
@@ -24,22 +24,22 @@
 
 ### apiKey
 
-• **apiKey**: *string*
+• **apiKey**: _string_
 
-Defined in: [CoinbasePro.ts:6](https://github.com/bennycode/coinbase-pro-node/blob/e63aeae/src/CoinbasePro.ts#L6)
+Defined in: [CoinbasePro.ts:6](https://github.com/bennycode/coinbase-pro-node/blob/845b71d/src/CoinbasePro.ts#L6)
 
-___
+---
 
 ### apiSecret
 
-• **apiSecret**: *string*
+• **apiSecret**: _string_
 
-Defined in: [CoinbasePro.ts:7](https://github.com/bennycode/coinbase-pro-node/blob/e63aeae/src/CoinbasePro.ts#L7)
+Defined in: [CoinbasePro.ts:7](https://github.com/bennycode/coinbase-pro-node/blob/845b71d/src/CoinbasePro.ts#L7)
 
-___
+---
 
 ### passphrase
 
-• **passphrase**: *string*
+• **passphrase**: _string_
 
-Defined in: [CoinbasePro.ts:8](https://github.com/bennycode/coinbase-pro-node/blob/e63aeae/src/CoinbasePro.ts#L8)
+Defined in: [CoinbasePro.ts:8](https://github.com/bennycode/coinbase-pro-node/blob/845b71d/src/CoinbasePro.ts#L8)

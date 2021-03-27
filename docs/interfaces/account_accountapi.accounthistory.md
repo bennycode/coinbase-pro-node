@@ -10,7 +10,7 @@
 
 - [amount](account_accountapi.accounthistory.md#amount)
 - [balance](account_accountapi.accounthistory.md#balance)
-- [created\_at](account_accountapi.accounthistory.md#created_at)
+- [created_at](account_accountapi.accounthistory.md#created_at)
 - [details](account_accountapi.accounthistory.md#details)
 - [id](account_accountapi.accounthistory.md#id)
 - [type](account_accountapi.accounthistory.md#type)
@@ -19,46 +19,46 @@
 
 ### amount
 
-• **amount**: *string*
+• **amount**: _string_
 
-Defined in: [account/AccountAPI.ts:14](https://github.com/bennycode/coinbase-pro-node/blob/e63aeae/src/account/AccountAPI.ts#L14)
+Defined in: [account/AccountAPI.ts:14](https://github.com/bennycode/coinbase-pro-node/blob/845b71d/src/account/AccountAPI.ts#L14)
 
-___
+---
 
 ### balance
 
-• **balance**: *string*
+• **balance**: _string_
 
-Defined in: [account/AccountAPI.ts:15](https://github.com/bennycode/coinbase-pro-node/blob/e63aeae/src/account/AccountAPI.ts#L15)
+Defined in: [account/AccountAPI.ts:15](https://github.com/bennycode/coinbase-pro-node/blob/845b71d/src/account/AccountAPI.ts#L15)
 
-___
+---
 
-### created\_at
+### created_at
 
-• **created\_at**: *string*
+• **created_at**: _string_
 
-Defined in: [account/AccountAPI.ts:16](https://github.com/bennycode/coinbase-pro-node/blob/e63aeae/src/account/AccountAPI.ts#L16)
+Defined in: [account/AccountAPI.ts:16](https://github.com/bennycode/coinbase-pro-node/blob/845b71d/src/account/AccountAPI.ts#L16)
 
-___
+---
 
 ### details
 
-• **details**: [*AccountHistoryDetails*](account_accountapi.accounthistorydetails.md)
+• **details**: [_AccountHistoryDetails_](account_accountapi.accounthistorydetails.md)
 
-Defined in: [account/AccountAPI.ts:17](https://github.com/bennycode/coinbase-pro-node/blob/e63aeae/src/account/AccountAPI.ts#L17)
+Defined in: [account/AccountAPI.ts:17](https://github.com/bennycode/coinbase-pro-node/blob/845b71d/src/account/AccountAPI.ts#L17)
 
-___
+---
 
 ### id
 
-• **id**: *string*
+• **id**: _string_
 
-Defined in: [account/AccountAPI.ts:18](https://github.com/bennycode/coinbase-pro-node/blob/e63aeae/src/account/AccountAPI.ts#L18)
+Defined in: [account/AccountAPI.ts:18](https://github.com/bennycode/coinbase-pro-node/blob/845b71d/src/account/AccountAPI.ts#L18)
 
-___
+---
 
 ### type
 
-• **type**: *string*
+• **type**: _string_
 
-Defined in: [account/AccountAPI.ts:19](https://github.com/bennycode/coinbase-pro-node/blob/e63aeae/src/account/AccountAPI.ts#L19)
+Defined in: [account/AccountAPI.ts:19](https://github.com/bennycode/coinbase-pro-node/blob/845b71d/src/account/AccountAPI.ts#L19)

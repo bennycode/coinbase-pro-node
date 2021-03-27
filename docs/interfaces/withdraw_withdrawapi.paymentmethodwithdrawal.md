@@ -6,7 +6,7 @@
 
 ## Hierarchy
 
-* [*CryptoWithdrawal*](withdraw_withdrawapi.cryptowithdrawal.md)
+- [_CryptoWithdrawal_](withdraw_withdrawapi.cryptowithdrawal.md)
 
   ↳ **PaymentMethodWithdrawal**
 
@@ -17,42 +17,42 @@
 - [amount](withdraw_withdrawapi.paymentmethodwithdrawal.md#amount)
 - [currency](withdraw_withdrawapi.paymentmethodwithdrawal.md#currency)
 - [id](withdraw_withdrawapi.paymentmethodwithdrawal.md#id)
-- [payout\_at](withdraw_withdrawapi.paymentmethodwithdrawal.md#payout_at)
+- [payout_at](withdraw_withdrawapi.paymentmethodwithdrawal.md#payout_at)
 
 ## Properties
 
 ### amount
 
-• **amount**: *string*
+• **amount**: _string_
 
 Inherited from: [CryptoWithdrawal](withdraw_withdrawapi.cryptowithdrawal.md).[amount](withdraw_withdrawapi.cryptowithdrawal.md#amount)
 
-Defined in: [withdraw/WithdrawAPI.ts:4](https://github.com/bennycode/coinbase-pro-node/blob/e63aeae/src/withdraw/WithdrawAPI.ts#L4)
+Defined in: [withdraw/WithdrawAPI.ts:4](https://github.com/bennycode/coinbase-pro-node/blob/845b71d/src/withdraw/WithdrawAPI.ts#L4)
 
-___
+---
 
 ### currency
 
-• **currency**: *string*
+• **currency**: _string_
 
 Inherited from: [CryptoWithdrawal](withdraw_withdrawapi.cryptowithdrawal.md).[currency](withdraw_withdrawapi.cryptowithdrawal.md#currency)
 
-Defined in: [withdraw/WithdrawAPI.ts:5](https://github.com/bennycode/coinbase-pro-node/blob/e63aeae/src/withdraw/WithdrawAPI.ts#L5)
+Defined in: [withdraw/WithdrawAPI.ts:5](https://github.com/bennycode/coinbase-pro-node/blob/845b71d/src/withdraw/WithdrawAPI.ts#L5)
 
-___
+---
 
 ### id
 
-• **id**: *string*
+• **id**: _string_
 
 Inherited from: [CryptoWithdrawal](withdraw_withdrawapi.cryptowithdrawal.md).[id](withdraw_withdrawapi.cryptowithdrawal.md#id)
 
-Defined in: [withdraw/WithdrawAPI.ts:6](https://github.com/bennycode/coinbase-pro-node/blob/e63aeae/src/withdraw/WithdrawAPI.ts#L6)
+Defined in: [withdraw/WithdrawAPI.ts:6](https://github.com/bennycode/coinbase-pro-node/blob/845b71d/src/withdraw/WithdrawAPI.ts#L6)
 
-___
+---
 
-### payout\_at
+### payout_at
 
-• **payout\_at**: *string*
+• **payout_at**: _string_
 
-Defined in: [withdraw/WithdrawAPI.ts:10](https://github.com/bennycode/coinbase-pro-node/blob/e63aeae/src/withdraw/WithdrawAPI.ts#L10)
+Defined in: [withdraw/WithdrawAPI.ts:10](https://github.com/bennycode/coinbase-pro-node/blob/845b71d/src/withdraw/WithdrawAPI.ts#L10)

@@ -13,52 +13,52 @@
 - [low](product_productapi.productstats.md#low)
 - [open](product_productapi.productstats.md#open)
 - [volume](product_productapi.productstats.md#volume)
-- [volume\_30day](product_productapi.productstats.md#volume_30day)
+- [volume_30day](product_productapi.productstats.md#volume_30day)
 
 ## Properties
 
 ### high
 
-• **high**: *string*
+• **high**: _string_
 
-Defined in: [product/ProductAPI.ts:44](https://github.com/bennycode/coinbase-pro-node/blob/e63aeae/src/product/ProductAPI.ts#L44)
+Defined in: [product/ProductAPI.ts:44](https://github.com/bennycode/coinbase-pro-node/blob/845b71d/src/product/ProductAPI.ts#L44)
 
-___
+---
 
 ### last
 
-• **last**: *string*
+• **last**: _string_
 
-Defined in: [product/ProductAPI.ts:45](https://github.com/bennycode/coinbase-pro-node/blob/e63aeae/src/product/ProductAPI.ts#L45)
+Defined in: [product/ProductAPI.ts:45](https://github.com/bennycode/coinbase-pro-node/blob/845b71d/src/product/ProductAPI.ts#L45)
 
-___
+---
 
 ### low
 
-• **low**: *string*
+• **low**: _string_
 
-Defined in: [product/ProductAPI.ts:46](https://github.com/bennycode/coinbase-pro-node/blob/e63aeae/src/product/ProductAPI.ts#L46)
+Defined in: [product/ProductAPI.ts:46](https://github.com/bennycode/coinbase-pro-node/blob/845b71d/src/product/ProductAPI.ts#L46)
 
-___
+---
 
 ### open
 
-• **open**: *string*
+• **open**: _string_
 
-Defined in: [product/ProductAPI.ts:47](https://github.com/bennycode/coinbase-pro-node/blob/e63aeae/src/product/ProductAPI.ts#L47)
+Defined in: [product/ProductAPI.ts:47](https://github.com/bennycode/coinbase-pro-node/blob/845b71d/src/product/ProductAPI.ts#L47)
 
-___
+---
 
 ### volume
 
-• **volume**: *string*
+• **volume**: _string_
 
-Defined in: [product/ProductAPI.ts:48](https://github.com/bennycode/coinbase-pro-node/blob/e63aeae/src/product/ProductAPI.ts#L48)
+Defined in: [product/ProductAPI.ts:48](https://github.com/bennycode/coinbase-pro-node/blob/845b71d/src/product/ProductAPI.ts#L48)
 
-___
+---
 
-### volume\_30day
+### volume_30day
 
-• **volume\_30day**: *string*
+• **volume_30day**: _string_
 
-Defined in: [product/ProductAPI.ts:49](https://github.com/bennycode/coinbase-pro-node/blob/e63aeae/src/product/ProductAPI.ts#L49)
+Defined in: [product/ProductAPI.ts:49](https://github.com/bennycode/coinbase-pro-node/blob/845b71d/src/product/ProductAPI.ts#L49)

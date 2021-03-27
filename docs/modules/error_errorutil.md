@@ -14,46 +14,46 @@
 
 ### getErrorMessage
 
-▸ **getErrorMessage**(`error`: AxiosError): *string*
+▸ **getErrorMessage**(`error`: AxiosError): _string_
 
 #### Parameters:
 
-Name | Type |
-:------ | :------ |
-`error` | AxiosError |
+| Name    | Type       |
+| :------ | :--------- |
+| `error` | AxiosError |
 
-**Returns:** *string*
+**Returns:** _string_
 
-Defined in: [error/ErrorUtil.ts:11](https://github.com/bennycode/coinbase-pro-node/blob/e63aeae/src/error/ErrorUtil.ts#L11)
+Defined in: [error/ErrorUtil.ts:11](https://github.com/bennycode/coinbase-pro-node/blob/845b71d/src/error/ErrorUtil.ts#L11)
 
-___
+---
 
 ### gotRateLimited
 
-▸ **gotRateLimited**(`error`: AxiosError): *boolean*
+▸ **gotRateLimited**(`error`: AxiosError): _boolean_
 
 #### Parameters:
 
-Name | Type |
-:------ | :------ |
-`error` | AxiosError |
+| Name    | Type       |
+| :------ | :--------- |
+| `error` | AxiosError |
 
-**Returns:** *boolean*
+**Returns:** _boolean_
 
-Defined in: [error/ErrorUtil.ts:7](https://github.com/bennycode/coinbase-pro-node/blob/e63aeae/src/error/ErrorUtil.ts#L7)
+Defined in: [error/ErrorUtil.ts:7](https://github.com/bennycode/coinbase-pro-node/blob/845b71d/src/error/ErrorUtil.ts#L7)
 
-___
+---
 
 ### inAirPlaneMode
 
-▸ **inAirPlaneMode**(`error`: AxiosError): *boolean*
+▸ **inAirPlaneMode**(`error`: AxiosError): _boolean_
 
 #### Parameters:
 
-Name | Type |
-:------ | :------ |
-`error` | AxiosError |
+| Name    | Type       |
+| :------ | :--------- |
+| `error` | AxiosError |
 
-**Returns:** *boolean*
+**Returns:** _boolean_
 
-Defined in: [error/ErrorUtil.ts:3](https://github.com/bennycode/coinbase-pro-node/blob/e63aeae/src/error/ErrorUtil.ts#L3)
+Defined in: [error/ErrorUtil.ts:3](https://github.com/bennycode/coinbase-pro-node/blob/845b71d/src/error/ErrorUtil.ts#L3)

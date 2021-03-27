@@ -8,111 +8,111 @@
 
 ### Properties
 
-- [allow\_buy](withdraw_withdrawapi.paymentmethod.md#allow_buy)
-- [allow\_deposit](withdraw_withdrawapi.paymentmethod.md#allow_deposit)
-- [allow\_sell](withdraw_withdrawapi.paymentmethod.md#allow_sell)
-- [allow\_withdraw](withdraw_withdrawapi.paymentmethod.md#allow_withdraw)
+- [allow_buy](withdraw_withdrawapi.paymentmethod.md#allow_buy)
+- [allow_deposit](withdraw_withdrawapi.paymentmethod.md#allow_deposit)
+- [allow_sell](withdraw_withdrawapi.paymentmethod.md#allow_sell)
+- [allow_withdraw](withdraw_withdrawapi.paymentmethod.md#allow_withdraw)
 - [currency](withdraw_withdrawapi.paymentmethod.md#currency)
 - [id](withdraw_withdrawapi.paymentmethod.md#id)
 - [limits](withdraw_withdrawapi.paymentmethod.md#limits)
 - [name](withdraw_withdrawapi.paymentmethod.md#name)
-- [primary\_buy](withdraw_withdrawapi.paymentmethod.md#primary_buy)
-- [primary\_sell](withdraw_withdrawapi.paymentmethod.md#primary_sell)
+- [primary_buy](withdraw_withdrawapi.paymentmethod.md#primary_buy)
+- [primary_sell](withdraw_withdrawapi.paymentmethod.md#primary_sell)
 - [type](withdraw_withdrawapi.paymentmethod.md#type)
 
 ## Properties
 
-### allow\_buy
+### allow_buy
 
-• **allow\_buy**: *boolean*
+• **allow_buy**: _boolean_
 
-Defined in: [withdraw/WithdrawAPI.ts:51](https://github.com/bennycode/coinbase-pro-node/blob/e63aeae/src/withdraw/WithdrawAPI.ts#L51)
+Defined in: [withdraw/WithdrawAPI.ts:51](https://github.com/bennycode/coinbase-pro-node/blob/845b71d/src/withdraw/WithdrawAPI.ts#L51)
 
-___
+---
 
-### allow\_deposit
+### allow_deposit
 
-• **allow\_deposit**: *boolean*
+• **allow_deposit**: _boolean_
 
-Defined in: [withdraw/WithdrawAPI.ts:52](https://github.com/bennycode/coinbase-pro-node/blob/e63aeae/src/withdraw/WithdrawAPI.ts#L52)
+Defined in: [withdraw/WithdrawAPI.ts:52](https://github.com/bennycode/coinbase-pro-node/blob/845b71d/src/withdraw/WithdrawAPI.ts#L52)
 
-___
+---
 
-### allow\_sell
+### allow_sell
 
-• **allow\_sell**: *boolean*
+• **allow_sell**: _boolean_
 
-Defined in: [withdraw/WithdrawAPI.ts:53](https://github.com/bennycode/coinbase-pro-node/blob/e63aeae/src/withdraw/WithdrawAPI.ts#L53)
+Defined in: [withdraw/WithdrawAPI.ts:53](https://github.com/bennycode/coinbase-pro-node/blob/845b71d/src/withdraw/WithdrawAPI.ts#L53)
 
-___
+---
 
-### allow\_withdraw
+### allow_withdraw
 
-• **allow\_withdraw**: *boolean*
+• **allow_withdraw**: _boolean_
 
-Defined in: [withdraw/WithdrawAPI.ts:54](https://github.com/bennycode/coinbase-pro-node/blob/e63aeae/src/withdraw/WithdrawAPI.ts#L54)
+Defined in: [withdraw/WithdrawAPI.ts:54](https://github.com/bennycode/coinbase-pro-node/blob/845b71d/src/withdraw/WithdrawAPI.ts#L54)
 
-___
+---
 
 ### currency
 
-• **currency**: *string*
+• **currency**: _string_
 
-Defined in: [withdraw/WithdrawAPI.ts:55](https://github.com/bennycode/coinbase-pro-node/blob/e63aeae/src/withdraw/WithdrawAPI.ts#L55)
+Defined in: [withdraw/WithdrawAPI.ts:55](https://github.com/bennycode/coinbase-pro-node/blob/845b71d/src/withdraw/WithdrawAPI.ts#L55)
 
-___
+---
 
 ### id
 
-• **id**: *string*
+• **id**: _string_
 
-Defined in: [withdraw/WithdrawAPI.ts:56](https://github.com/bennycode/coinbase-pro-node/blob/e63aeae/src/withdraw/WithdrawAPI.ts#L56)
+Defined in: [withdraw/WithdrawAPI.ts:56](https://github.com/bennycode/coinbase-pro-node/blob/845b71d/src/withdraw/WithdrawAPI.ts#L56)
 
-___
+---
 
 ### limits
 
-• **limits**: *object*
+• **limits**: _object_
 
 #### Type declaration:
 
-Name | Type |
-:------ | :------ |
-`buy` | [*PaymentMethodLimit*](withdraw_withdrawapi.paymentmethodlimit.md)[] |
-`deposit` | [*PaymentMethodLimit*](withdraw_withdrawapi.paymentmethodlimit.md)[] |
-`instant_buy` | [*PaymentMethodLimit*](withdraw_withdrawapi.paymentmethodlimit.md)[] |
-`sell` | [*PaymentMethodLimit*](withdraw_withdrawapi.paymentmethodlimit.md)[] |
+| Name          | Type                                                                 |
+| :------------ | :------------------------------------------------------------------- |
+| `buy`         | [_PaymentMethodLimit_](withdraw_withdrawapi.paymentmethodlimit.md)[] |
+| `deposit`     | [_PaymentMethodLimit_](withdraw_withdrawapi.paymentmethodlimit.md)[] |
+| `instant_buy` | [_PaymentMethodLimit_](withdraw_withdrawapi.paymentmethodlimit.md)[] |
+| `sell`        | [_PaymentMethodLimit_](withdraw_withdrawapi.paymentmethodlimit.md)[] |
 
-Defined in: [withdraw/WithdrawAPI.ts:57](https://github.com/bennycode/coinbase-pro-node/blob/e63aeae/src/withdraw/WithdrawAPI.ts#L57)
+Defined in: [withdraw/WithdrawAPI.ts:57](https://github.com/bennycode/coinbase-pro-node/blob/845b71d/src/withdraw/WithdrawAPI.ts#L57)
 
-___
+---
 
 ### name
 
-• **name**: *string*
+• **name**: _string_
 
-Defined in: [withdraw/WithdrawAPI.ts:63](https://github.com/bennycode/coinbase-pro-node/blob/e63aeae/src/withdraw/WithdrawAPI.ts#L63)
+Defined in: [withdraw/WithdrawAPI.ts:63](https://github.com/bennycode/coinbase-pro-node/blob/845b71d/src/withdraw/WithdrawAPI.ts#L63)
 
-___
+---
 
-### primary\_buy
+### primary_buy
 
-• **primary\_buy**: *boolean*
+• **primary_buy**: _boolean_
 
-Defined in: [withdraw/WithdrawAPI.ts:64](https://github.com/bennycode/coinbase-pro-node/blob/e63aeae/src/withdraw/WithdrawAPI.ts#L64)
+Defined in: [withdraw/WithdrawAPI.ts:64](https://github.com/bennycode/coinbase-pro-node/blob/845b71d/src/withdraw/WithdrawAPI.ts#L64)
 
-___
+---
 
-### primary\_sell
+### primary_sell
 
-• **primary\_sell**: *boolean*
+• **primary_sell**: _boolean_
 
-Defined in: [withdraw/WithdrawAPI.ts:65](https://github.com/bennycode/coinbase-pro-node/blob/e63aeae/src/withdraw/WithdrawAPI.ts#L65)
+Defined in: [withdraw/WithdrawAPI.ts:65](https://github.com/bennycode/coinbase-pro-node/blob/845b71d/src/withdraw/WithdrawAPI.ts#L65)
 
-___
+---
 
 ### type
 
-• **type**: *string*
+• **type**: _string_
 
-Defined in: [withdraw/WithdrawAPI.ts:66](https://github.com/bennycode/coinbase-pro-node/blob/e63aeae/src/withdraw/WithdrawAPI.ts#L66)
+Defined in: [withdraw/WithdrawAPI.ts:66](https://github.com/bennycode/coinbase-pro-node/blob/845b71d/src/withdraw/WithdrawAPI.ts#L66)

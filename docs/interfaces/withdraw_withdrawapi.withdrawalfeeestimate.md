@@ -14,6 +14,6 @@
 
 ### fee
 
-• **fee**: *string*
+• **fee**: _string_
 
-Defined in: [withdraw/WithdrawAPI.ts:35](https://github.com/bennycode/coinbase-pro-node/blob/e63aeae/src/withdraw/WithdrawAPI.ts#L35)
+Defined in: [withdraw/WithdrawAPI.ts:35](https://github.com/bennycode/coinbase-pro-node/blob/845b71d/src/withdraw/WithdrawAPI.ts#L35)
