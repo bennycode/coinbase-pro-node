@@ -337,7 +337,7 @@ describe('ProductAPI', () => {
       expect(spy).toHaveBeenCalledWith(productId, granularity);
     });
 
-    it('throws an error when trying to watch a candle setup multiple times', async done => {
+    it('throws an error when trying to watch a candle setup multiple times', () => {
       const productId = 'BTC-USD';
       const granularity = CandleGranularity.ONE_HOUR;
 
@@ -349,13 +349,11 @@ describe('ProductAPI', () => {
       global.client.rest.product.watchCandles(productId, granularity, '2020-03-08T23:00:00.000Z');
       try {
         global.client.rest.product.watchCandles(productId, granularity, '2020-03-08T23:00:00.000Z');
-        done.fail('No error has been thrown');
-      } catch (error) {
-        done();
-      }
+        fail('No error has been thrown');
+      } catch (error) {}
     });
 
-    it('emits new candles', async done => {
+    it('emits new candles', done => {
       const productId = 'BTC-USD';
       const granularity = CandleGranularity.ONE_HOUR;
       const updateInterval = 60000;

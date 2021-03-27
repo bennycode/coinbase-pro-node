@@ -52,14 +52,14 @@ describe('WebSocketClient', () => {
   });
 
   describe('connect', () => {
-    it('attaches an error listener', async done => {
+    it('attaches an error listener', done => {
       const invalidUrl = 'ws://localhost:50001';
       const ws = createWebSocketClient(invalidUrl);
       ws.on(WebSocketEvent.ON_ERROR, done);
       ws.connect();
     });
 
-    it('throws an error when trying to overwrite an existing connection', async done => {
+    it('throws an error when trying to overwrite an existing connection', done => {
       const ws = createWebSocketClient();
       ws.connect();
       try {
@@ -78,7 +78,7 @@ describe('WebSocketClient', () => {
   });
 
   describe('constructor', () => {
-    it('it signals an event when the WebSocket connection is established', async done => {
+    it('it signals an event when the WebSocket connection is established', done => {
       const ws = createWebSocketClient();
       ws.on(WebSocketEvent.ON_OPEN, () => done());
       ws.connect();
@@ -98,7 +98,7 @@ describe('WebSocketClient', () => {
       expect(onClose).not.toHaveBeenCalled();
     });
 
-    it('emits an event when an existing connection gets closed', async done => {
+    it('emits an event when an existing connection gets closed', done => {
       const ws = createWebSocketClient();
 
       ws.on(WebSocketEvent.ON_CLOSE, () => {
@@ -114,17 +114,16 @@ describe('WebSocketClient', () => {
   });
 
   describe('sendMessage', () => {
-    it('does not send a message when there is no active connection', async done => {
+    it('does not send a message when there is no active connection', async () => {
       const ws = createWebSocketClient();
       try {
         await ws.sendMessage({
           channels: [WebSocketChannelName.HEARTBEAT],
           type: WebSocketRequestType.UNSUBSCRIBE,
         });
-        done.fail('No error has been thrown');
+        fail('No error has been thrown');
       } catch (error) {
         expect(error).toBeDefined();
-        done();
       }
     });
   });
@@ -174,7 +173,7 @@ describe('WebSocketClient', () => {
       return ws;
     }
 
-    it('receives typed messages from "status" channel', async (done: DoneFn) => {
+    it('receives typed messages from "status" channel', (done: DoneFn) => {
       const channel = {
         name: WebSocketChannelName.STATUS,
       };
@@ -190,7 +189,7 @@ describe('WebSocketClient', () => {
       ws.connect();
     });
 
-    it('receives typed messages from "ticker" channel', async done => {
+    it('receives typed messages from "ticker" channel', done => {
       const channel = {
         name: WebSocketChannelName.TICKER,
         product_ids: ['BTC-USD'],
@@ -206,7 +205,7 @@ describe('WebSocketClient', () => {
       ws.connect();
     });
 
-    it('receives typed messages from multiple "matches" channels', async done => {
+    it('receives typed messages from multiple "matches" channels', done => {
       const channels = [
         {
           name: WebSocketChannelName.MATCHES,
@@ -224,7 +223,7 @@ describe('WebSocketClient', () => {
       ws.connect();
     });
 
-    it('receives typed error messages', async done => {
+    it('receives typed error messages', done => {
       server.on('connection', ws => {
         ws.on('message', (message: string) => {
           const request = JSON.parse(message);
@@ -291,7 +290,7 @@ describe('WebSocketClient', () => {
   });
 
   describe('setupHeartbeat', () => {
-    it('sends ping messages within a defined interval', async done => {
+    it('sends ping messages within a defined interval', done => {
       server.on('connection', socket => {
         socket.on('ping', () => {
           done();

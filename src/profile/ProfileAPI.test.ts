@@ -117,7 +117,7 @@ describe('ProfileAPI', () => {
   });
 
   describe('transferFunds', () => {
-    it('transfers funds from one profile to another', async done => {
+    it('transfers funds from one profile to another', async () => {
       nock(global.REST_URL).post(`${ProfileAPI.URL.PROFILES}/transfer`).query(true).reply(200);
 
       const transfer = {
@@ -128,7 +128,6 @@ describe('ProfileAPI', () => {
       };
 
       await global.client.rest.profile.transferFunds(transfer);
-      done();
     });
   });
 });
