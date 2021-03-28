@@ -18,7 +18,7 @@
 
 • **period_in_days**: _number_
 
-Defined in: [withdraw/WithdrawAPI.ts:39](https://github.com/bennycode/coinbase-pro-node/blob/845b71d/src/withdraw/WithdrawAPI.ts#L39)
+Defined in: [withdraw/WithdrawAPI.ts:39](https://github.com/bennycode/coinbase-pro-node/blob/3a89239/src/withdraw/WithdrawAPI.ts#L39)
 
 ---
 
@@ -33,7 +33,7 @@ Defined in: [withdraw/WithdrawAPI.ts:39](https://github.com/bennycode/coinbase-p
 | `amount`   | _string_ |
 | `currency` | _string_ |
 
-Defined in: [withdraw/WithdrawAPI.ts:40](https://github.com/bennycode/coinbase-pro-node/blob/845b71d/src/withdraw/WithdrawAPI.ts#L40)
+Defined in: [withdraw/WithdrawAPI.ts:40](https://github.com/bennycode/coinbase-pro-node/blob/3a89239/src/withdraw/WithdrawAPI.ts#L40)
 
 ---
 
@@ -48,4 +48,4 @@ Defined in: [withdraw/WithdrawAPI.ts:40](https://github.com/bennycode/coinbase-p
 | `amount`   | _string_ |
 | `currency` | _string_ |
 
-Defined in: [withdraw/WithdrawAPI.ts:44](https://github.com/bennycode/coinbase-pro-node/blob/845b71d/src/withdraw/WithdrawAPI.ts#L44)
+Defined in: [withdraw/WithdrawAPI.ts:44](https://github.com/bennycode/coinbase-pro-node/blob/3a89239/src/withdraw/WithdrawAPI.ts#L44)

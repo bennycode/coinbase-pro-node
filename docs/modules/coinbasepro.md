@@ -25,4 +25,4 @@
 
 Ƭ **ClientAuthentication**: [_ClientAuthenticationBaseUrls_](../interfaces/coinbasepro.clientauthenticationbaseurls.md) \| [_ClientAuthenticationCustomUrls_](../interfaces/coinbasepro.clientauthenticationcustomurls.md)
 
-Defined in: [CoinbasePro.ts:26](https://github.com/bennycode/coinbase-pro-node/blob/845b71d/src/CoinbasePro.ts#L26)
+Defined in: [CoinbasePro.ts:26](https://github.com/bennycode/coinbase-pro-node/blob/3a89239/src/CoinbasePro.ts#L26)

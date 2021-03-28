@@ -32,7 +32,7 @@ Request page after (older) this pagination id.
 
 Inherited from: void
 
-Defined in: [payload/common.ts:15](https://github.com/bennycode/coinbase-pro-node/blob/845b71d/src/payload/common.ts#L15)
+Defined in: [payload/common.ts:15](https://github.com/bennycode/coinbase-pro-node/blob/3a89239/src/payload/common.ts#L15)
 
 ---
 
@@ -44,7 +44,7 @@ Request page before (newer) this pagination id.
 
 Inherited from: void
 
-Defined in: [payload/common.ts:17](https://github.com/bennycode/coinbase-pro-node/blob/845b71d/src/payload/common.ts#L17)
+Defined in: [payload/common.ts:17](https://github.com/bennycode/coinbase-pro-node/blob/3a89239/src/payload/common.ts#L17)
 
 ---
 
@@ -56,7 +56,7 @@ Number of results per request. Maximum 100. Default 100.
 
 Inherited from: void
 
-Defined in: [payload/common.ts:19](https://github.com/bennycode/coinbase-pro-node/blob/845b71d/src/payload/common.ts#L19)
+Defined in: [payload/common.ts:19](https://github.com/bennycode/coinbase-pro-node/blob/3a89239/src/payload/common.ts#L19)
 
 ---
 
@@ -66,7 +66,7 @@ Defined in: [payload/common.ts:19](https://github.com/bennycode/coinbase-pro-nod
 
 Only list orders for a specific product.
 
-Defined in: [order/OrderAPI.ts:100](https://github.com/bennycode/coinbase-pro-node/blob/845b71d/src/order/OrderAPI.ts#L100)
+Defined in: [order/OrderAPI.ts:100](https://github.com/bennycode/coinbase-pro-node/blob/3a89239/src/order/OrderAPI.ts#L100)
 
 ---
 
@@ -76,4 +76,4 @@ Defined in: [order/OrderAPI.ts:100](https://github.com/bennycode/coinbase-pro-no
 
 Limit list of orders to these statuses. Passing "all" returns orders of all statuses. Default: [open, pending, active]
 
-Defined in: [order/OrderAPI.ts:102](https://github.com/bennycode/coinbase-pro-node/blob/845b71d/src/order/OrderAPI.ts#L102)
+Defined in: [order/OrderAPI.ts:102](https://github.com/bennycode/coinbase-pro-node/blob/3a89239/src/order/OrderAPI.ts#L102)

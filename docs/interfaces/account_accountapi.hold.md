@@ -22,7 +22,7 @@
 
 • **account_id**: _string_
 
-Defined in: [account/AccountAPI.ts:29](https://github.com/bennycode/coinbase-pro-node/blob/845b71d/src/account/AccountAPI.ts#L29)
+Defined in: [account/AccountAPI.ts:29](https://github.com/bennycode/coinbase-pro-node/blob/3a89239/src/account/AccountAPI.ts#L29)
 
 ---
 
@@ -30,7 +30,7 @@ Defined in: [account/AccountAPI.ts:29](https://github.com/bennycode/coinbase-pro
 
 • **amount**: _string_
 
-Defined in: [account/AccountAPI.ts:30](https://github.com/bennycode/coinbase-pro-node/blob/845b71d/src/account/AccountAPI.ts#L30)
+Defined in: [account/AccountAPI.ts:30](https://github.com/bennycode/coinbase-pro-node/blob/3a89239/src/account/AccountAPI.ts#L30)
 
 ---
 
@@ -38,7 +38,7 @@ Defined in: [account/AccountAPI.ts:30](https://github.com/bennycode/coinbase-pro
 
 • **created_at**: _string_
 
-Defined in: [account/AccountAPI.ts:31](https://github.com/bennycode/coinbase-pro-node/blob/845b71d/src/account/AccountAPI.ts#L31)
+Defined in: [account/AccountAPI.ts:31](https://github.com/bennycode/coinbase-pro-node/blob/3a89239/src/account/AccountAPI.ts#L31)
 
 ---
 
@@ -46,7 +46,7 @@ Defined in: [account/AccountAPI.ts:31](https://github.com/bennycode/coinbase-pro
 
 • **id**: _string_
 
-Defined in: [account/AccountAPI.ts:32](https://github.com/bennycode/coinbase-pro-node/blob/845b71d/src/account/AccountAPI.ts#L32)
+Defined in: [account/AccountAPI.ts:32](https://github.com/bennycode/coinbase-pro-node/blob/3a89239/src/account/AccountAPI.ts#L32)
 
 ---
 
@@ -54,7 +54,7 @@ Defined in: [account/AccountAPI.ts:32](https://github.com/bennycode/coinbase-pro
 
 • **ref**: _string_
 
-Defined in: [account/AccountAPI.ts:33](https://github.com/bennycode/coinbase-pro-node/blob/845b71d/src/account/AccountAPI.ts#L33)
+Defined in: [account/AccountAPI.ts:33](https://github.com/bennycode/coinbase-pro-node/blob/3a89239/src/account/AccountAPI.ts#L33)
 
 ---
 
@@ -62,7 +62,7 @@ Defined in: [account/AccountAPI.ts:33](https://github.com/bennycode/coinbase-pro
 
 • **type**: _string_
 
-Defined in: [account/AccountAPI.ts:34](https://github.com/bennycode/coinbase-pro-node/blob/845b71d/src/account/AccountAPI.ts#L34)
+Defined in: [account/AccountAPI.ts:34](https://github.com/bennycode/coinbase-pro-node/blob/3a89239/src/account/AccountAPI.ts#L34)
 
 ---
 
@@ -70,4 +70,4 @@ Defined in: [account/AccountAPI.ts:34](https://github.com/bennycode/coinbase-pro
 
 • **updated_at**: _string_
 
-Defined in: [account/AccountAPI.ts:35](https://github.com/bennycode/coinbase-pro-node/blob/845b71d/src/account/AccountAPI.ts#L35)
+Defined in: [account/AccountAPI.ts:35](https://github.com/bennycode/coinbase-pro-node/blob/3a89239/src/account/AccountAPI.ts#L35)

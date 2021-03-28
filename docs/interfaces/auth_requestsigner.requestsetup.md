@@ -18,7 +18,7 @@
 
 • **httpMethod**: _string_
 
-Defined in: [auth/RequestSigner.ts:6](https://github.com/bennycode/coinbase-pro-node/blob/845b71d/src/auth/RequestSigner.ts#L6)
+Defined in: [auth/RequestSigner.ts:6](https://github.com/bennycode/coinbase-pro-node/blob/3a89239/src/auth/RequestSigner.ts#L6)
 
 ---
 
@@ -26,7 +26,7 @@ Defined in: [auth/RequestSigner.ts:6](https://github.com/bennycode/coinbase-pro-
 
 • **payload**: _string_
 
-Defined in: [auth/RequestSigner.ts:7](https://github.com/bennycode/coinbase-pro-node/blob/845b71d/src/auth/RequestSigner.ts#L7)
+Defined in: [auth/RequestSigner.ts:7](https://github.com/bennycode/coinbase-pro-node/blob/3a89239/src/auth/RequestSigner.ts#L7)
 
 ---
 
@@ -34,4 +34,4 @@ Defined in: [auth/RequestSigner.ts:7](https://github.com/bennycode/coinbase-pro-
 
 • **requestPath**: _string_
 
-Defined in: [auth/RequestSigner.ts:8](https://github.com/bennycode/coinbase-pro-node/blob/845b71d/src/auth/RequestSigner.ts#L8)
+Defined in: [auth/RequestSigner.ts:8](https://github.com/bennycode/coinbase-pro-node/blob/3a89239/src/auth/RequestSigner.ts#L8)

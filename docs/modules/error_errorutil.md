@@ -24,7 +24,7 @@
 
 **Returns:** _string_
 
-Defined in: [error/ErrorUtil.ts:11](https://github.com/bennycode/coinbase-pro-node/blob/845b71d/src/error/ErrorUtil.ts#L11)
+Defined in: [error/ErrorUtil.ts:11](https://github.com/bennycode/coinbase-pro-node/blob/3a89239/src/error/ErrorUtil.ts#L11)
 
 ---
 
@@ -40,7 +40,7 @@ Defined in: [error/ErrorUtil.ts:11](https://github.com/bennycode/coinbase-pro-no
 
 **Returns:** _boolean_
 
-Defined in: [error/ErrorUtil.ts:7](https://github.com/bennycode/coinbase-pro-node/blob/845b71d/src/error/ErrorUtil.ts#L7)
+Defined in: [error/ErrorUtil.ts:7](https://github.com/bennycode/coinbase-pro-node/blob/3a89239/src/error/ErrorUtil.ts#L7)
 
 ---
 
@@ -56,4 +56,4 @@ Defined in: [error/ErrorUtil.ts:7](https://github.com/bennycode/coinbase-pro-nod
 
 **Returns:** _boolean_
 
-Defined in: [error/ErrorUtil.ts:3](https://github.com/bennycode/coinbase-pro-node/blob/845b71d/src/error/ErrorUtil.ts#L3)
+Defined in: [error/ErrorUtil.ts:3](https://github.com/bennycode/coinbase-pro-node/blob/3a89239/src/error/ErrorUtil.ts#L3)

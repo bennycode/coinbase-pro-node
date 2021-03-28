@@ -33,13 +33,13 @@
 
 **Returns:** [_TimeAPI_](time_timeapi.timeapi.md)
 
-Defined in: [time/TimeAPI.ts:13](https://github.com/bennycode/coinbase-pro-node/blob/845b71d/src/time/TimeAPI.ts#L13)
+Defined in: [time/TimeAPI.ts:13](https://github.com/bennycode/coinbase-pro-node/blob/3a89239/src/time/TimeAPI.ts#L13)
 
 ## Properties
 
 ### URL
 
-▪ `Readonly` `Static` **URL**: _object_
+▪ `Static` `Readonly` **URL**: _object_
 
 #### Type declaration:
 
@@ -47,7 +47,7 @@ Defined in: [time/TimeAPI.ts:13](https://github.com/bennycode/coinbase-pro-node/
 | :----- | :------- |
 | `TIME` | _string_ |
 
-Defined in: [time/TimeAPI.ts:11](https://github.com/bennycode/coinbase-pro-node/blob/845b71d/src/time/TimeAPI.ts#L11)
+Defined in: [time/TimeAPI.ts:11](https://github.com/bennycode/coinbase-pro-node/blob/3a89239/src/time/TimeAPI.ts#L11)
 
 ## Methods
 
@@ -65,7 +65,7 @@ Get the absolute difference between server time and local time.
 
 **Returns:** _Promise_<number\>
 
-Defined in: [time/TimeAPI.ts:34](https://github.com/bennycode/coinbase-pro-node/blob/845b71d/src/time/TimeAPI.ts#L34)
+Defined in: [time/TimeAPI.ts:34](https://github.com/bennycode/coinbase-pro-node/blob/3a89239/src/time/TimeAPI.ts#L34)
 
 ---
 
@@ -79,4 +79,4 @@ Get the server time from Coinbase Pro API. It has been reported that sometimes t
 
 **Returns:** _Promise_<[_TimeSkew_](../interfaces/time_timeapi.timeskew.md)\>
 
-Defined in: [time/TimeAPI.ts:23](https://github.com/bennycode/coinbase-pro-node/blob/845b71d/src/time/TimeAPI.ts#L23)
+Defined in: [time/TimeAPI.ts:23](https://github.com/bennycode/coinbase-pro-node/blob/3a89239/src/time/TimeAPI.ts#L23)

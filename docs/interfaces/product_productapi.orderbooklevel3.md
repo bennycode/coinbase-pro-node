@@ -20,7 +20,7 @@ Full order book (non aggregated): Level 3 is only recommended for users wishing 
 
 • **asks**: NonAggregatedOrder[]
 
-Defined in: [product/ProductAPI.ts:128](https://github.com/bennycode/coinbase-pro-node/blob/845b71d/src/product/ProductAPI.ts#L128)
+Defined in: [product/ProductAPI.ts:128](https://github.com/bennycode/coinbase-pro-node/blob/3a89239/src/product/ProductAPI.ts#L128)
 
 ---
 
@@ -28,7 +28,7 @@ Defined in: [product/ProductAPI.ts:128](https://github.com/bennycode/coinbase-pr
 
 • **bids**: NonAggregatedOrder[]
 
-Defined in: [product/ProductAPI.ts:129](https://github.com/bennycode/coinbase-pro-node/blob/845b71d/src/product/ProductAPI.ts#L129)
+Defined in: [product/ProductAPI.ts:129](https://github.com/bennycode/coinbase-pro-node/blob/3a89239/src/product/ProductAPI.ts#L129)
 
 ---
 
@@ -36,4 +36,4 @@ Defined in: [product/ProductAPI.ts:129](https://github.com/bennycode/coinbase-pr
 
 • **sequence**: _number_
 
-Defined in: [product/ProductAPI.ts:130](https://github.com/bennycode/coinbase-pro-node/blob/845b71d/src/product/ProductAPI.ts#L130)
+Defined in: [product/ProductAPI.ts:130](https://github.com/bennycode/coinbase-pro-node/blob/3a89239/src/product/ProductAPI.ts#L130)

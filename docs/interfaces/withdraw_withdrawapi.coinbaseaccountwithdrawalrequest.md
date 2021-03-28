@@ -18,7 +18,7 @@
 
 • **amount**: _string_
 
-Defined in: [withdraw/WithdrawAPI.ts:23](https://github.com/bennycode/coinbase-pro-node/blob/845b71d/src/withdraw/WithdrawAPI.ts#L23)
+Defined in: [withdraw/WithdrawAPI.ts:23](https://github.com/bennycode/coinbase-pro-node/blob/3a89239/src/withdraw/WithdrawAPI.ts#L23)
 
 ---
 
@@ -26,7 +26,7 @@ Defined in: [withdraw/WithdrawAPI.ts:23](https://github.com/bennycode/coinbase-p
 
 • **coinbase_account_id**: _string_
 
-Defined in: [withdraw/WithdrawAPI.ts:24](https://github.com/bennycode/coinbase-pro-node/blob/845b71d/src/withdraw/WithdrawAPI.ts#L24)
+Defined in: [withdraw/WithdrawAPI.ts:24](https://github.com/bennycode/coinbase-pro-node/blob/3a89239/src/withdraw/WithdrawAPI.ts#L24)
 
 ---
 
@@ -34,4 +34,4 @@ Defined in: [withdraw/WithdrawAPI.ts:24](https://github.com/bennycode/coinbase-p
 
 • **currency**: _string_
 
-Defined in: [withdraw/WithdrawAPI.ts:25](https://github.com/bennycode/coinbase-pro-node/blob/845b71d/src/withdraw/WithdrawAPI.ts#L25)
+Defined in: [withdraw/WithdrawAPI.ts:25](https://github.com/bennycode/coinbase-pro-node/blob/3a89239/src/withdraw/WithdrawAPI.ts#L25)

@@ -32,13 +32,13 @@
 
 **Returns:** [_FeeAPI_](fee_feeapi.feeapi.md)
 
-Defined in: [fee/FeeAPI.ts:20](https://github.com/bennycode/coinbase-pro-node/blob/845b71d/src/fee/FeeAPI.ts#L20)
+Defined in: [fee/FeeAPI.ts:20](https://github.com/bennycode/coinbase-pro-node/blob/3a89239/src/fee/FeeAPI.ts#L20)
 
 ## Properties
 
 ### URL
 
-▪ `Readonly` `Static` **URL**: _object_
+▪ `Static` `Readonly` **URL**: _object_
 
 #### Type declaration:
 
@@ -46,7 +46,7 @@ Defined in: [fee/FeeAPI.ts:20](https://github.com/bennycode/coinbase-pro-node/bl
 | :----- | :------- |
 | `FEES` | _string_ |
 
-Defined in: [fee/FeeAPI.ts:18](https://github.com/bennycode/coinbase-pro-node/blob/845b71d/src/fee/FeeAPI.ts#L18)
+Defined in: [fee/FeeAPI.ts:18](https://github.com/bennycode/coinbase-pro-node/blob/3a89239/src/fee/FeeAPI.ts#L18)
 
 ## Methods
 
@@ -62,4 +62,4 @@ Get your current maker & taker fee rates, as well as your 30-day trailing volume
 
 **Returns:** _Promise_<[_FeeTier_](../interfaces/fee_feeapi.feetier.md)\>
 
-Defined in: [fee/FeeAPI.ts:31](https://github.com/bennycode/coinbase-pro-node/blob/845b71d/src/fee/FeeAPI.ts#L31)
+Defined in: [fee/FeeAPI.ts:31](https://github.com/bennycode/coinbase-pro-node/blob/3a89239/src/fee/FeeAPI.ts#L31)

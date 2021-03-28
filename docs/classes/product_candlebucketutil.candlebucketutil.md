@@ -49,7 +49,7 @@
 
 **Returns:** _string_
 
-Defined in: [product/CandleBucketUtil.ts:29](https://github.com/bennycode/coinbase-pro-node/blob/845b71d/src/product/CandleBucketUtil.ts#L29)
+Defined in: [product/CandleBucketUtil.ts:29](https://github.com/bennycode/coinbase-pro-node/blob/3a89239/src/product/CandleBucketUtil.ts#L29)
 
 ---
 
@@ -67,7 +67,7 @@ Defined in: [product/CandleBucketUtil.ts:29](https://github.com/bennycode/coinba
 
 **Returns:** _number_
 
-Defined in: [product/CandleBucketUtil.ts:23](https://github.com/bennycode/coinbase-pro-node/blob/845b71d/src/product/CandleBucketUtil.ts#L23)
+Defined in: [product/CandleBucketUtil.ts:23](https://github.com/bennycode/coinbase-pro-node/blob/3a89239/src/product/CandleBucketUtil.ts#L23)
 
 ---
 
@@ -85,7 +85,7 @@ Defined in: [product/CandleBucketUtil.ts:23](https://github.com/bennycode/coinba
 
 **Returns:** _number_
 
-Defined in: [product/CandleBucketUtil.ts:67](https://github.com/bennycode/coinbase-pro-node/blob/845b71d/src/product/CandleBucketUtil.ts#L67)
+Defined in: [product/CandleBucketUtil.ts:67](https://github.com/bennycode/coinbase-pro-node/blob/3a89239/src/product/CandleBucketUtil.ts#L67)
 
 ---
 
@@ -101,7 +101,7 @@ Defined in: [product/CandleBucketUtil.ts:67](https://github.com/bennycode/coinba
 
 **Returns:** [_CandleBatchBucket_](../interfaces/product_candlebucketutil.candlebatchbucket.md)[]
 
-Defined in: [product/CandleBucketUtil.ts:90](https://github.com/bennycode/coinbase-pro-node/blob/845b71d/src/product/CandleBucketUtil.ts#L90)
+Defined in: [product/CandleBucketUtil.ts:90](https://github.com/bennycode/coinbase-pro-node/blob/3a89239/src/product/CandleBucketUtil.ts#L90)
 
 ---
 
@@ -119,7 +119,7 @@ Defined in: [product/CandleBucketUtil.ts:90](https://github.com/bennycode/coinba
 
 **Returns:** _number_[]
 
-Defined in: [product/CandleBucketUtil.ts:72](https://github.com/bennycode/coinbase-pro-node/blob/845b71d/src/product/CandleBucketUtil.ts#L72)
+Defined in: [product/CandleBucketUtil.ts:72](https://github.com/bennycode/coinbase-pro-node/blob/3a89239/src/product/CandleBucketUtil.ts#L72)
 
 ---
 
@@ -129,7 +129,7 @@ Defined in: [product/CandleBucketUtil.ts:72](https://github.com/bennycode/coinba
 
 **Returns:** _number_[]
 
-Defined in: [product/CandleBucketUtil.ts:53](https://github.com/bennycode/coinbase-pro-node/blob/845b71d/src/product/CandleBucketUtil.ts#L53)
+Defined in: [product/CandleBucketUtil.ts:53](https://github.com/bennycode/coinbase-pro-node/blob/3a89239/src/product/CandleBucketUtil.ts#L53)
 
 ---
 
@@ -146,7 +146,7 @@ Defined in: [product/CandleBucketUtil.ts:53](https://github.com/bennycode/coinba
 
 **Returns:** _number_
 
-Defined in: [product/CandleBucketUtil.ts:18](https://github.com/bennycode/coinbase-pro-node/blob/845b71d/src/product/CandleBucketUtil.ts#L18)
+Defined in: [product/CandleBucketUtil.ts:18](https://github.com/bennycode/coinbase-pro-node/blob/3a89239/src/product/CandleBucketUtil.ts#L18)
 
 ---
 
@@ -163,7 +163,7 @@ Defined in: [product/CandleBucketUtil.ts:18](https://github.com/bennycode/coinba
 
 **Returns:** _number_
 
-Defined in: [product/CandleBucketUtil.ts:13](https://github.com/bennycode/coinbase-pro-node/blob/845b71d/src/product/CandleBucketUtil.ts#L13)
+Defined in: [product/CandleBucketUtil.ts:13](https://github.com/bennycode/coinbase-pro-node/blob/3a89239/src/product/CandleBucketUtil.ts#L13)
 
 ---
 
@@ -179,7 +179,7 @@ Defined in: [product/CandleBucketUtil.ts:13](https://github.com/bennycode/coinba
 
 **Returns:** [_CandleGranularity_](../enums/product_productapi.candlegranularity.md)
 
-Defined in: [product/CandleBucketUtil.ts:63](https://github.com/bennycode/coinbase-pro-node/blob/845b71d/src/product/CandleBucketUtil.ts#L63)
+Defined in: [product/CandleBucketUtil.ts:63](https://github.com/bennycode/coinbase-pro-node/blob/3a89239/src/product/CandleBucketUtil.ts#L63)
 
 ---
 
@@ -196,7 +196,7 @@ Defined in: [product/CandleBucketUtil.ts:63](https://github.com/bennycode/coinba
 
 **Returns:** _number_
 
-Defined in: [product/CandleBucketUtil.ts:57](https://github.com/bennycode/coinbase-pro-node/blob/845b71d/src/product/CandleBucketUtil.ts#L57)
+Defined in: [product/CandleBucketUtil.ts:57](https://github.com/bennycode/coinbase-pro-node/blob/3a89239/src/product/CandleBucketUtil.ts#L57)
 
 ---
 
@@ -214,7 +214,7 @@ Defined in: [product/CandleBucketUtil.ts:57](https://github.com/bennycode/coinba
 
 **Returns:** _string_
 
-Defined in: [product/CandleBucketUtil.ts:44](https://github.com/bennycode/coinbase-pro-node/blob/845b71d/src/product/CandleBucketUtil.ts#L44)
+Defined in: [product/CandleBucketUtil.ts:44](https://github.com/bennycode/coinbase-pro-node/blob/3a89239/src/product/CandleBucketUtil.ts#L44)
 
 ---
 
@@ -232,4 +232,4 @@ Defined in: [product/CandleBucketUtil.ts:44](https://github.com/bennycode/coinba
 
 **Returns:** _number_
 
-Defined in: [product/CandleBucketUtil.ts:38](https://github.com/bennycode/coinbase-pro-node/blob/845b71d/src/product/CandleBucketUtil.ts#L38)
+Defined in: [product/CandleBucketUtil.ts:38](https://github.com/bennycode/coinbase-pro-node/blob/3a89239/src/product/CandleBucketUtil.ts#L38)

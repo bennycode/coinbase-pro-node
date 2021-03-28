@@ -39,7 +39,7 @@
 
 Ƭ **HistoricRateRequest**: [_BaseHistoricRateRequest_](../interfaces/product_productapi.basehistoricraterequest.md) \| [_HistoricRateRequestWithTimeSpan_](../interfaces/product_productapi.historicraterequestwithtimespan.md)
 
-Defined in: [product/ProductAPI.ts:82](https://github.com/bennycode/coinbase-pro-node/blob/845b71d/src/product/ProductAPI.ts#L82)
+Defined in: [product/ProductAPI.ts:82](https://github.com/bennycode/coinbase-pro-node/blob/3a89239/src/product/ProductAPI.ts#L82)
 
 ---
 
@@ -47,4 +47,4 @@ Defined in: [product/ProductAPI.ts:82](https://github.com/bennycode/coinbase-pro
 
 Ƭ **OrderBook**: [_OrderBookLevel1_](../interfaces/product_productapi.orderbooklevel1.md) \| [_OrderBookLevel2_](../interfaces/product_productapi.orderbooklevel2.md) \| [_OrderBookLevel3_](../interfaces/product_productapi.orderbooklevel3.md)
 
-Defined in: [product/ProductAPI.ts:133](https://github.com/bennycode/coinbase-pro-node/blob/845b71d/src/product/ProductAPI.ts#L133)
+Defined in: [product/ProductAPI.ts:133](https://github.com/bennycode/coinbase-pro-node/blob/3a89239/src/product/ProductAPI.ts#L133)
