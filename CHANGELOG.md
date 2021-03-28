@@ -1,3 +1,16 @@
+## 3.0.0 (2021-03-28)
+
+##### Chores
+
+- yarn upgrade --latest ([3e03cbe6](https://github.com/bennycode/coinbase-pro-node/commit/3e03cbe6c2c0186ea2adf3c25b689ad86f825c7a))
+- Update GitHub Actions ([#448](https://github.com/bennycode/coinbase-pro-node/pull/448)) ([cd9d72ee](https://github.com/bennycode/coinbase-pro-node/commit/cd9d72eecf5c058823cb183fdc4100f0156c3bc6))
+- **deps-dev:**
+  - bump @typescript-eslint/eslint-plugin ([#445](https://github.com/bennycode/coinbase-pro-node/pull/445)) ([177d7ef4](https://github.com/bennycode/coinbase-pro-node/commit/177d7ef4172966a9c121d35195531873bb8982ce))
+  - bump eslint from 7.22.0 to 7.23.0 ([#444](https://github.com/bennycode/coinbase-pro-node/pull/444)) ([d4b1f29b](https://github.com/bennycode/coinbase-pro-node/commit/d4b1f29b96ecf6ae304fe698e4e90e6694a5486b))
+  - bump typedoc from 0.20.32 to 0.20.34 ([#442](https://github.com/bennycode/coinbase-pro-node/pull/442)) ([6b8be34e](https://github.com/bennycode/coinbase-pro-node/commit/6b8be34e2811783ad49817fac4dc6dffcb2eff45))
+  - bump @typescript-eslint/parser from 4.18.0 to 4.19.0 ([#443](https://github.com/bennycode/coinbase-pro-node/pull/443)) ([a5235c97](https://github.com/bennycode/coinbase-pro-node/commit/a5235c97648b5b135a59bef84931fdfc9d3387eb))
+  - bump @types/jasmine from 3.6.7 to 3.6.9 ([#446](https://github.com/bennycode/coinbase-pro-node/pull/446)) ([b9eaec1a](https://github.com/bennycode/coinbase-pro-node/commit/b9eaec1a11e10ee41ab3c67a542a8d3457bdbcdc))
+
 ### 2.20.0 (2021-03-27)
 
 ##### Refactors
