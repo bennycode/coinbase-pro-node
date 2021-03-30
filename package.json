@@ -82,7 +82,7 @@
     "demo:websocket:user": "cross-env NODE_DEBUG=coinbase-pro-node* ts-node src/demo/websocket-user.ts",
     "demo:websocket:user:js": "yarn dist && cross-env NODE_DEBUG=coinbase-pro-node* node dist/demo/websocket-user.js",
     "docs": "yarn docs:build && yarn docs:start",
-    "docs:build": "yarn typedoc",
+    "docs:build": "typedoc src/index.ts",
     "docs:release": "yarn docs:build && git add docs/* && git commit -m \"docs: Updated API\"",
     "docs:start": "docsify serve docs",
     "dist": "yarn clean && yarn build",

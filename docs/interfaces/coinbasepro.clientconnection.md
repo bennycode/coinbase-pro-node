@@ -15,14 +15,14 @@
 
 ### REST
 
-• **REST**: _string_
+• **REST**: *string*
 
-Defined in: [CoinbasePro.ts:29](https://github.com/bennycode/coinbase-pro-node/blob/3a89239/src/CoinbasePro.ts#L29)
+Defined in: [CoinbasePro.ts:29](https://github.com/bennycode/coinbase-pro-node/blob/c3d8f7c/src/CoinbasePro.ts#L29)
 
----
+___
 
 ### WebSocket
 
-• **WebSocket**: _string_
+• **WebSocket**: *string*
 
-Defined in: [CoinbasePro.ts:30](https://github.com/bennycode/coinbase-pro-node/blob/3a89239/src/CoinbasePro.ts#L30)
+Defined in: [CoinbasePro.ts:30](https://github.com/bennycode/coinbase-pro-node/blob/c3d8f7c/src/CoinbasePro.ts#L30)

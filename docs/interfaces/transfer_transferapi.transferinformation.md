@@ -8,117 +8,117 @@
 
 ### Properties
 
-- [account_id](transfer_transferapi.transferinformation.md#account_id)
+- [account\_id](transfer_transferapi.transferinformation.md#account_id)
 - [amount](transfer_transferapi.transferinformation.md#amount)
-- [canceled_at](transfer_transferapi.transferinformation.md#canceled_at)
-- [completed_at](transfer_transferapi.transferinformation.md#completed_at)
-- [created_at](transfer_transferapi.transferinformation.md#created_at)
+- [canceled\_at](transfer_transferapi.transferinformation.md#canceled_at)
+- [completed\_at](transfer_transferapi.transferinformation.md#completed_at)
+- [created\_at](transfer_transferapi.transferinformation.md#created_at)
 - [details](transfer_transferapi.transferinformation.md#details)
 - [id](transfer_transferapi.transferinformation.md#id)
-- [processed_at](transfer_transferapi.transferinformation.md#processed_at)
+- [processed\_at](transfer_transferapi.transferinformation.md#processed_at)
 - [type](transfer_transferapi.transferinformation.md#type)
-- [user_id](transfer_transferapi.transferinformation.md#user_id)
-- [user_nonce](transfer_transferapi.transferinformation.md#user_nonce)
+- [user\_id](transfer_transferapi.transferinformation.md#user_id)
+- [user\_nonce](transfer_transferapi.transferinformation.md#user_nonce)
 
 ## Properties
 
-### account_id
+### account\_id
 
-• **account_id**: _string_
+• **account\_id**: *string*
 
-Defined in: [transfer/TransferAPI.ts:5](https://github.com/bennycode/coinbase-pro-node/blob/3a89239/src/transfer/TransferAPI.ts#L5)
+Defined in: [transfer/TransferAPI.ts:5](https://github.com/bennycode/coinbase-pro-node/blob/c3d8f7c/src/transfer/TransferAPI.ts#L5)
 
----
+___
 
 ### amount
 
-• **amount**: _string_
+• **amount**: *string*
 
-Defined in: [transfer/TransferAPI.ts:6](https://github.com/bennycode/coinbase-pro-node/blob/3a89239/src/transfer/TransferAPI.ts#L6)
+Defined in: [transfer/TransferAPI.ts:6](https://github.com/bennycode/coinbase-pro-node/blob/c3d8f7c/src/transfer/TransferAPI.ts#L6)
 
----
+___
 
-### canceled_at
+### canceled\_at
 
-• `Optional` **canceled_at**: _string_
+• `Optional` **canceled\_at**: *string*
 
-Defined in: [transfer/TransferAPI.ts:7](https://github.com/bennycode/coinbase-pro-node/blob/3a89239/src/transfer/TransferAPI.ts#L7)
+Defined in: [transfer/TransferAPI.ts:7](https://github.com/bennycode/coinbase-pro-node/blob/c3d8f7c/src/transfer/TransferAPI.ts#L7)
 
----
+___
 
-### completed_at
+### completed\_at
 
-• `Optional` **completed_at**: _string_
+• `Optional` **completed\_at**: *string*
 
-Defined in: [transfer/TransferAPI.ts:8](https://github.com/bennycode/coinbase-pro-node/blob/3a89239/src/transfer/TransferAPI.ts#L8)
+Defined in: [transfer/TransferAPI.ts:8](https://github.com/bennycode/coinbase-pro-node/blob/c3d8f7c/src/transfer/TransferAPI.ts#L8)
 
----
+___
 
-### created_at
+### created\_at
 
-• **created_at**: _string_
+• **created\_at**: *string*
 
-Defined in: [transfer/TransferAPI.ts:9](https://github.com/bennycode/coinbase-pro-node/blob/3a89239/src/transfer/TransferAPI.ts#L9)
+Defined in: [transfer/TransferAPI.ts:9](https://github.com/bennycode/coinbase-pro-node/blob/c3d8f7c/src/transfer/TransferAPI.ts#L9)
 
----
+___
 
 ### details
 
-• **details**: _object_
+• **details**: *object*
 
 #### Type declaration:
 
-| Name                          | Type     |
-| :---------------------------- | :------- |
-| `coinbase_account_id`?        | _string_ |
-| `coinbase_payment_method_id`? | _string_ |
-| `coinbase_transaction_id`?    | _string_ |
-| `coinbase_withdrawal_id`?     | _string_ |
-| `crypto_address`?             | _string_ |
-| `crypto_transaction_hash`?    | _string_ |
-| `crypto_transaction_id`?      | _string_ |
-| `destination_tag`             | _string_ |
-| `destination_tag_name`?       | _string_ |
-| `sent_to_address`?            | _string_ |
+Name | Type |
+:------ | :------ |
+`coinbase_account_id`? | *string* |
+`coinbase_payment_method_id`? | *string* |
+`coinbase_transaction_id`? | *string* |
+`coinbase_withdrawal_id`? | *string* |
+`crypto_address`? | *string* |
+`crypto_transaction_hash`? | *string* |
+`crypto_transaction_id`? | *string* |
+`destination_tag` | *string* |
+`destination_tag_name`? | *string* |
+`sent_to_address`? | *string* |
 
-Defined in: [transfer/TransferAPI.ts:10](https://github.com/bennycode/coinbase-pro-node/blob/3a89239/src/transfer/TransferAPI.ts#L10)
+Defined in: [transfer/TransferAPI.ts:10](https://github.com/bennycode/coinbase-pro-node/blob/c3d8f7c/src/transfer/TransferAPI.ts#L10)
 
----
+___
 
 ### id
 
-• **id**: _string_
+• **id**: *string*
 
-Defined in: [transfer/TransferAPI.ts:22](https://github.com/bennycode/coinbase-pro-node/blob/3a89239/src/transfer/TransferAPI.ts#L22)
+Defined in: [transfer/TransferAPI.ts:22](https://github.com/bennycode/coinbase-pro-node/blob/c3d8f7c/src/transfer/TransferAPI.ts#L22)
 
----
+___
 
-### processed_at
+### processed\_at
 
-• `Optional` **processed_at**: _string_
+• `Optional` **processed\_at**: *string*
 
-Defined in: [transfer/TransferAPI.ts:23](https://github.com/bennycode/coinbase-pro-node/blob/3a89239/src/transfer/TransferAPI.ts#L23)
+Defined in: [transfer/TransferAPI.ts:23](https://github.com/bennycode/coinbase-pro-node/blob/c3d8f7c/src/transfer/TransferAPI.ts#L23)
 
----
+___
 
 ### type
 
-• **type**: _string_
+• **type**: *string*
 
-Defined in: [transfer/TransferAPI.ts:24](https://github.com/bennycode/coinbase-pro-node/blob/3a89239/src/transfer/TransferAPI.ts#L24)
+Defined in: [transfer/TransferAPI.ts:24](https://github.com/bennycode/coinbase-pro-node/blob/c3d8f7c/src/transfer/TransferAPI.ts#L24)
 
----
+___
 
-### user_id
+### user\_id
 
-• **user_id**: _string_
+• **user\_id**: *string*
 
-Defined in: [transfer/TransferAPI.ts:25](https://github.com/bennycode/coinbase-pro-node/blob/3a89239/src/transfer/TransferAPI.ts#L25)
+Defined in: [transfer/TransferAPI.ts:25](https://github.com/bennycode/coinbase-pro-node/blob/c3d8f7c/src/transfer/TransferAPI.ts#L25)
 
----
+___
 
-### user_nonce
+### user\_nonce
 
-• `Optional` **user_nonce**: _string_
+• `Optional` **user\_nonce**: *string*
 
-Defined in: [transfer/TransferAPI.ts:26](https://github.com/bennycode/coinbase-pro-node/blob/3a89239/src/transfer/TransferAPI.ts#L26)
+Defined in: [transfer/TransferAPI.ts:26](https://github.com/bennycode/coinbase-pro-node/blob/c3d8f7c/src/transfer/TransferAPI.ts#L26)

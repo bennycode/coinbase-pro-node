@@ -8,44 +8,44 @@
 
 ### Properties
 
-- [period_in_days](withdraw_withdrawapi.paymentmethodlimit.md#period_in_days)
+- [period\_in\_days](withdraw_withdrawapi.paymentmethodlimit.md#period_in_days)
 - [remaining](withdraw_withdrawapi.paymentmethodlimit.md#remaining)
 - [total](withdraw_withdrawapi.paymentmethodlimit.md#total)
 
 ## Properties
 
-### period_in_days
+### period\_in\_days
 
-• **period_in_days**: _number_
+• **period\_in\_days**: *number*
 
-Defined in: [withdraw/WithdrawAPI.ts:39](https://github.com/bennycode/coinbase-pro-node/blob/3a89239/src/withdraw/WithdrawAPI.ts#L39)
+Defined in: [withdraw/WithdrawAPI.ts:39](https://github.com/bennycode/coinbase-pro-node/blob/c3d8f7c/src/withdraw/WithdrawAPI.ts#L39)
 
----
+___
 
 ### remaining
 
-• **remaining**: _object_
+• **remaining**: *object*
 
 #### Type declaration:
 
-| Name       | Type     |
-| :--------- | :------- |
-| `amount`   | _string_ |
-| `currency` | _string_ |
+Name | Type |
+:------ | :------ |
+`amount` | *string* |
+`currency` | *string* |
 
-Defined in: [withdraw/WithdrawAPI.ts:40](https://github.com/bennycode/coinbase-pro-node/blob/3a89239/src/withdraw/WithdrawAPI.ts#L40)
+Defined in: [withdraw/WithdrawAPI.ts:40](https://github.com/bennycode/coinbase-pro-node/blob/c3d8f7c/src/withdraw/WithdrawAPI.ts#L40)
 
----
+___
 
 ### total
 
-• **total**: _object_
+• **total**: *object*
 
 #### Type declaration:
 
-| Name       | Type     |
-| :--------- | :------- |
-| `amount`   | _string_ |
-| `currency` | _string_ |
+Name | Type |
+:------ | :------ |
+`amount` | *string* |
+`currency` | *string* |
 
-Defined in: [withdraw/WithdrawAPI.ts:44](https://github.com/bennycode/coinbase-pro-node/blob/3a89239/src/withdraw/WithdrawAPI.ts#L44)
+Defined in: [withdraw/WithdrawAPI.ts:44](https://github.com/bennycode/coinbase-pro-node/blob/c3d8f7c/src/withdraw/WithdrawAPI.ts#L44)

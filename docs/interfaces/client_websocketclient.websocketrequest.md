@@ -15,14 +15,14 @@
 
 ### channels
 
-• **channels**: _string_[] \| [_WebSocketChannel_](client_websocketclient.websocketchannel.md)[]
+• **channels**: *string*[] \| [*WebSocketChannel*](client_websocketclient.websocketchannel.md)[]
 
-Defined in: [client/WebSocketClient.ts:30](https://github.com/bennycode/coinbase-pro-node/blob/3a89239/src/client/WebSocketClient.ts#L30)
+Defined in: [client/WebSocketClient.ts:30](https://github.com/bennycode/coinbase-pro-node/blob/c3d8f7c/src/client/WebSocketClient.ts#L30)
 
----
+___
 
 ### type
 
-• **type**: [_WebSocketRequestType_](../enums/client_websocketclient.websocketrequesttype.md)
+• **type**: [*WebSocketRequestType*](../enums/client_websocketclient.websocketrequesttype.md)
 
-Defined in: [client/WebSocketClient.ts:31](https://github.com/bennycode/coinbase-pro-node/blob/3a89239/src/client/WebSocketClient.ts#L31)
+Defined in: [client/WebSocketClient.ts:31](https://github.com/bennycode/coinbase-pro-node/blob/c3d8f7c/src/client/WebSocketClient.ts#L31)

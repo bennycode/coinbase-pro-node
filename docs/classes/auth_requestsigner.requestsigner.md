@@ -18,24 +18,24 @@
 
 ### constructor
 
-\+ **new RequestSigner**(): [_RequestSigner_](auth_requestsigner.requestsigner.md)
+\+ **new RequestSigner**(): [*RequestSigner*](auth_requestsigner.requestsigner.md)
 
-**Returns:** [_RequestSigner_](auth_requestsigner.requestsigner.md)
+**Returns:** [*RequestSigner*](auth_requestsigner.requestsigner.md)
 
 ## Methods
 
 ### signRequest
 
-▸ `Static`**signRequest**(`auth`: [_ClientAuthentication_](../modules/coinbasepro.md#clientauthentication), `setup`: [_RequestSetup_](../interfaces/auth_requestsigner.requestsetup.md), `clockSkew`: _number_): [_SignedRequest_](../interfaces/auth_requestsigner.signedrequest.md)
+▸ `Static`**signRequest**(`auth`: [*ClientAuthentication*](../modules/coinbasepro.md#clientauthentication), `setup`: [*RequestSetup*](../interfaces/auth_requestsigner.requestsetup.md), `clockSkew`: *number*): [*SignedRequest*](../interfaces/auth_requestsigner.signedrequest.md)
 
 #### Parameters:
 
-| Name        | Type                                                                     |
-| :---------- | :----------------------------------------------------------------------- |
-| `auth`      | [_ClientAuthentication_](../modules/coinbasepro.md#clientauthentication) |
-| `setup`     | [_RequestSetup_](../interfaces/auth_requestsigner.requestsetup.md)       |
-| `clockSkew` | _number_                                                                 |
+Name | Type |
+:------ | :------ |
+`auth` | [*ClientAuthentication*](../modules/coinbasepro.md#clientauthentication) |
+`setup` | [*RequestSetup*](../interfaces/auth_requestsigner.requestsetup.md) |
+`clockSkew` | *number* |
 
-**Returns:** [_SignedRequest_](../interfaces/auth_requestsigner.signedrequest.md)
+**Returns:** [*SignedRequest*](../interfaces/auth_requestsigner.signedrequest.md)
 
-Defined in: [auth/RequestSigner.ts:20](https://github.com/bennycode/coinbase-pro-node/blob/3a89239/src/auth/RequestSigner.ts#L20)
+Defined in: [auth/RequestSigner.ts:20](https://github.com/bennycode/coinbase-pro-node/blob/c3d8f7c/src/auth/RequestSigner.ts#L20)

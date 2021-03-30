@@ -20,6 +20,7 @@ The purpose of [coinbase-pro-node][5] is to continue an active **Coinbase Pro AP
 - **Documented.** Get started with [demo scripts][3] and [generated documentation][4].
 - **Modern.** HTTP client with Promise API. Don't lose yourself in callback hell.
 - **Robust.** WebSocket reconnection is built-in. No problems if your Wi-Fi is gone.
+- **Reliable.** Following [semantic versioning][8]. Get notified about breaking changes.
 
 ## Installation
 
@@ -181,5 +182,6 @@ If you like this project, you might also like these related projects:
 [5]: https://www.npmjs.com/package/coinbase-pro-node
 [6]: https://github.com/bennycode/coinbase-pro-node/network/dependents
 [7]: https://www.npmjs.com/browse/depended/coinbase-pro-node
+[8]: https://docs.npmjs.com/about-semantic-versioning
 [stack_exchange_bennyn_badge]: https://stackexchange.com/users/flair/203782.png?theme=default
 [stack_exchange_bennyn_url]: https://stackexchange.com/users/203782/benny-neugebauer?tab=accounts

@@ -8,39 +8,39 @@
 
 ### Enumeration members
 
-- [FILL_OR_KILL](order_orderapi.timeinforce.md#fill_or_kill)
-- [GOOD_TILL_CANCELED](order_orderapi.timeinforce.md#good_till_canceled)
-- [GOOD_TILL_TIME](order_orderapi.timeinforce.md#good_till_time)
-- [IMMEDIATE_OR_CANCEL](order_orderapi.timeinforce.md#immediate_or_cancel)
+- [FILL\_OR\_KILL](order_orderapi.timeinforce.md#fill_or_kill)
+- [GOOD\_TILL\_CANCELED](order_orderapi.timeinforce.md#good_till_canceled)
+- [GOOD\_TILL\_TIME](order_orderapi.timeinforce.md#good_till_time)
+- [IMMEDIATE\_OR\_CANCEL](order_orderapi.timeinforce.md#immediate_or_cancel)
 
 ## Enumeration members
 
-### FILL_OR_KILL
+### FILL\_OR\_KILL
 
-• **FILL_OR_KILL**: = "FOK"
+• **FILL\_OR\_KILL**: = "FOK"
 
-Defined in: [order/OrderAPI.ts:10](https://github.com/bennycode/coinbase-pro-node/blob/3a89239/src/order/OrderAPI.ts#L10)
+Defined in: [order/OrderAPI.ts:10](https://github.com/bennycode/coinbase-pro-node/blob/c3d8f7c/src/order/OrderAPI.ts#L10)
 
----
+___
 
-### GOOD_TILL_CANCELED
+### GOOD\_TILL\_CANCELED
 
-• **GOOD_TILL_CANCELED**: = "GTC"
+• **GOOD\_TILL\_CANCELED**: = "GTC"
 
-Defined in: [order/OrderAPI.ts:11](https://github.com/bennycode/coinbase-pro-node/blob/3a89239/src/order/OrderAPI.ts#L11)
+Defined in: [order/OrderAPI.ts:11](https://github.com/bennycode/coinbase-pro-node/blob/c3d8f7c/src/order/OrderAPI.ts#L11)
 
----
+___
 
-### GOOD_TILL_TIME
+### GOOD\_TILL\_TIME
 
-• **GOOD_TILL_TIME**: = "GTT"
+• **GOOD\_TILL\_TIME**: = "GTT"
 
-Defined in: [order/OrderAPI.ts:12](https://github.com/bennycode/coinbase-pro-node/blob/3a89239/src/order/OrderAPI.ts#L12)
+Defined in: [order/OrderAPI.ts:12](https://github.com/bennycode/coinbase-pro-node/blob/c3d8f7c/src/order/OrderAPI.ts#L12)
 
----
+___
 
-### IMMEDIATE_OR_CANCEL
+### IMMEDIATE\_OR\_CANCEL
 
-• **IMMEDIATE_OR_CANCEL**: = "IOC"
+• **IMMEDIATE\_OR\_CANCEL**: = "IOC"
 
-Defined in: [order/OrderAPI.ts:13](https://github.com/bennycode/coinbase-pro-node/blob/3a89239/src/order/OrderAPI.ts#L13)
+Defined in: [order/OrderAPI.ts:13](https://github.com/bennycode/coinbase-pro-node/blob/c3d8f7c/src/order/OrderAPI.ts#L13)

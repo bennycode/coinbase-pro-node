@@ -8,82 +8,82 @@
 
 ### Properties
 
-- [account_address](account_accountapi.sepadepositinformation.md#account_address)
-- [account_name](account_accountapi.sepadepositinformation.md#account_name)
-- [bank_address](account_accountapi.sepadepositinformation.md#bank_address)
-- [bank_country](account_accountapi.sepadepositinformation.md#bank_country)
-- [bank_name](account_accountapi.sepadepositinformation.md#bank_name)
+- [account\_address](account_accountapi.sepadepositinformation.md#account_address)
+- [account\_name](account_accountapi.sepadepositinformation.md#account_name)
+- [bank\_address](account_accountapi.sepadepositinformation.md#bank_address)
+- [bank\_country](account_accountapi.sepadepositinformation.md#bank_country)
+- [bank\_name](account_accountapi.sepadepositinformation.md#bank_name)
 - [iban](account_accountapi.sepadepositinformation.md#iban)
 - [reference](account_accountapi.sepadepositinformation.md#reference)
 - [swift](account_accountapi.sepadepositinformation.md#swift)
 
 ## Properties
 
-### account_address
+### account\_address
 
-• **account_address**: _string_
+• **account\_address**: *string*
 
-Defined in: [account/AccountAPI.ts:75](https://github.com/bennycode/coinbase-pro-node/blob/3a89239/src/account/AccountAPI.ts#L75)
+Defined in: [account/AccountAPI.ts:75](https://github.com/bennycode/coinbase-pro-node/blob/c3d8f7c/src/account/AccountAPI.ts#L75)
 
----
+___
 
-### account_name
+### account\_name
 
-• **account_name**: _string_
+• **account\_name**: *string*
 
-Defined in: [account/AccountAPI.ts:76](https://github.com/bennycode/coinbase-pro-node/blob/3a89239/src/account/AccountAPI.ts#L76)
+Defined in: [account/AccountAPI.ts:76](https://github.com/bennycode/coinbase-pro-node/blob/c3d8f7c/src/account/AccountAPI.ts#L76)
 
----
+___
 
-### bank_address
+### bank\_address
 
-• **bank_address**: _string_
+• **bank\_address**: *string*
 
-Defined in: [account/AccountAPI.ts:77](https://github.com/bennycode/coinbase-pro-node/blob/3a89239/src/account/AccountAPI.ts#L77)
+Defined in: [account/AccountAPI.ts:77](https://github.com/bennycode/coinbase-pro-node/blob/c3d8f7c/src/account/AccountAPI.ts#L77)
 
----
+___
 
-### bank_country
+### bank\_country
 
-• **bank_country**: _object_
+• **bank\_country**: *object*
 
 #### Type declaration:
 
-| Name   | Type     |
-| :----- | :------- |
-| `code` | _string_ |
-| `name` | _string_ |
+Name | Type |
+:------ | :------ |
+`code` | *string* |
+`name` | *string* |
 
-Defined in: [account/AccountAPI.ts:78](https://github.com/bennycode/coinbase-pro-node/blob/3a89239/src/account/AccountAPI.ts#L78)
+Defined in: [account/AccountAPI.ts:78](https://github.com/bennycode/coinbase-pro-node/blob/c3d8f7c/src/account/AccountAPI.ts#L78)
 
----
+___
 
-### bank_name
+### bank\_name
 
-• **bank_name**: _string_
+• **bank\_name**: *string*
 
-Defined in: [account/AccountAPI.ts:82](https://github.com/bennycode/coinbase-pro-node/blob/3a89239/src/account/AccountAPI.ts#L82)
+Defined in: [account/AccountAPI.ts:82](https://github.com/bennycode/coinbase-pro-node/blob/c3d8f7c/src/account/AccountAPI.ts#L82)
 
----
+___
 
 ### iban
 
-• **iban**: _string_
+• **iban**: *string*
 
-Defined in: [account/AccountAPI.ts:83](https://github.com/bennycode/coinbase-pro-node/blob/3a89239/src/account/AccountAPI.ts#L83)
+Defined in: [account/AccountAPI.ts:83](https://github.com/bennycode/coinbase-pro-node/blob/c3d8f7c/src/account/AccountAPI.ts#L83)
 
----
+___
 
 ### reference
 
-• **reference**: _string_
+• **reference**: *string*
 
-Defined in: [account/AccountAPI.ts:84](https://github.com/bennycode/coinbase-pro-node/blob/3a89239/src/account/AccountAPI.ts#L84)
+Defined in: [account/AccountAPI.ts:84](https://github.com/bennycode/coinbase-pro-node/blob/c3d8f7c/src/account/AccountAPI.ts#L84)
 
----
+___
 
 ### swift
 
-• **swift**: _string_
+• **swift**: *string*
 
-Defined in: [account/AccountAPI.ts:85](https://github.com/bennycode/coinbase-pro-node/blob/3a89239/src/account/AccountAPI.ts#L85)
+Defined in: [account/AccountAPI.ts:85](https://github.com/bennycode/coinbase-pro-node/blob/c3d8f7c/src/account/AccountAPI.ts#L85)
