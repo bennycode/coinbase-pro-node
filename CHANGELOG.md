@@ -1,3 +1,14 @@
+#### 3.0.1 (2021-03-31)
+
+##### Documentation Changes
+
+*  Generate documentation ([8b2d8004](https://github.com/bennycode/coinbase-pro-node/commit/8b2d8004c8eb970b87b0d4d3dbb4b1803db62066))
+*  Add note about semantic versioning ([5d4ffe5e](https://github.com/bennycode/coinbase-pro-node/commit/5d4ffe5e8d6ef564d70e4284256a15069b771639))
+
+##### Bug Fixes
+
+* **order:**  Send multiple statuses ([#451](https://github.com/bennycode/coinbase-pro-node/pull/451)) ([fac1e88b](https://github.com/bennycode/coinbase-pro-node/commit/fac1e88b5dd79a766b7e412382df1e2893b2dd0c))
+
 ## 3.0.0 (2021-03-28)
 
 ##### Chores
