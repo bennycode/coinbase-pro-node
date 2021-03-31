@@ -109,8 +109,7 @@ export class OrderAPI {
     ORDERS: `/orders`,
   };
 
-  constructor(private readonly apiClient: AxiosInstance) {
-  }
+  constructor(private readonly apiClient: AxiosInstance) {}
 
   /**
    * With best effort, cancel all open orders from the profile that the API key belongs to.
@@ -153,7 +152,7 @@ export class OrderAPI {
     const resource = OrderAPI.URL.ORDERS;
     let status = '';
     if (query?.status) {
-      status = '?' + query.status.map(s => (`status=${s}`)).join('&');
+      status = '?' + query.status.map(s => `status=${s}`).join('&');
       delete query.status;
     }
     const response = await this.apiClient.get<Order[]>(`${resource}${status}`, {
