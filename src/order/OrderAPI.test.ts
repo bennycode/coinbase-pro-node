@@ -52,7 +52,7 @@ describe('OrderAPI', () => {
         .get(OrderAPI.URL.ORDERS)
         .query(true)
         .reply(200, (uri: string) => {
-          expect(uri).toBe('/orders?status=open,pending,active');
+          expect(uri).toBe('/orders');
 
           return JSON.stringify([
             {
@@ -85,7 +85,7 @@ describe('OrderAPI', () => {
         .get(OrderAPI.URL.ORDERS)
         .query(true)
         .reply(200, (uri: string) => {
-          expect(uri).toBe('/orders?status=open,pending');
+          expect(uri).toBe('/orders?status=open&status=pending');
 
           return JSON.stringify([
             {
