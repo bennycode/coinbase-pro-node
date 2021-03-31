@@ -109,7 +109,8 @@ export class OrderAPI {
     ORDERS: `/orders`,
   };
 
-  constructor(private readonly apiClient: AxiosInstance) {}
+  constructor(private readonly apiClient: AxiosInstance) {
+  }
 
   /**
    * With best effort, cancel all open orders from the profile that the API key belongs to.
@@ -150,12 +151,13 @@ export class OrderAPI {
    */
   async getOrders(query?: OrderListQueryParam): Promise<PaginatedData<Order>> {
     const resource = OrderAPI.URL.ORDERS;
-    const status = query?.status || [OrderStatus.OPEN, OrderStatus.PENDING, OrderStatus.ACTIVE];
-    const response = await this.apiClient.get<Order[]>(resource, {
-      params: {
-        ...query,
-        status: status.join(','),
-      },
+    let status = '';
+    if (query?.status) {
+      status = '?' + query.status.map(s => (`status=${s}`)).join('&');
+      delete query.status;
+    }
+    const response = await this.apiClient.get<Order[]>(`${resource}${status}`, {
+      params: query,
     });
     return {
       data: response.data,
