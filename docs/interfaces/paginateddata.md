@@ -21,7 +21,7 @@ Name |
 
 • **data**: PayloadType[]
 
-Defined in: [payload/common.ts:23](https://github.com/bennycode/coinbase-pro-node/blob/c3d8f7c/src/payload/common.ts#L23)
+Defined in: [payload/common.ts:23](https://github.com/bennycode/coinbase-pro-node/blob/a54e177/src/payload/common.ts#L23)
 
 ___
 
@@ -36,4 +36,4 @@ Name | Type |
 `after`? | *string* |
 `before`? | *string* |
 
-Defined in: [payload/common.ts:24](https://github.com/bennycode/coinbase-pro-node/blob/c3d8f7c/src/payload/common.ts#L24)
+Defined in: [payload/common.ts:24](https://github.com/bennycode/coinbase-pro-node/blob/a54e177/src/payload/common.ts#L24)

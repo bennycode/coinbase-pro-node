@@ -15,7 +15,7 @@
 
 • **name**: [*WebSocketChannelName*](../enums/websocketchannelname.md)
 
-Defined in: [client/WebSocketClient.ts:8](https://github.com/bennycode/coinbase-pro-node/blob/c3d8f7c/src/client/WebSocketClient.ts#L8)
+Defined in: [client/WebSocketClient.ts:8](https://github.com/bennycode/coinbase-pro-node/blob/a54e177/src/client/WebSocketClient.ts#L8)
 
 ___
 
@@ -23,4 +23,4 @@ ___
 
 • `Optional` **product\_ids**: *string*[]
 
-Defined in: [client/WebSocketClient.ts:9](https://github.com/bennycode/coinbase-pro-node/blob/c3d8f7c/src/client/WebSocketClient.ts#L9)
+Defined in: [client/WebSocketClient.ts:9](https://github.com/bennycode/coinbase-pro-node/blob/a54e177/src/client/WebSocketClient.ts#L9)

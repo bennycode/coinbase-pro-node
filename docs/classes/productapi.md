@@ -39,7 +39,7 @@ Name | Type |
 
 **Returns:** [*ProductAPI*](productapi.md)
 
-Defined in: [product/ProductAPI.ts:189](https://github.com/bennycode/coinbase-pro-node/blob/c3d8f7c/src/product/ProductAPI.ts#L189)
+Defined in: [product/ProductAPI.ts:189](https://github.com/bennycode/coinbase-pro-node/blob/a54e177/src/product/ProductAPI.ts#L189)
 
 ## Properties
 
@@ -53,7 +53,7 @@ Name | Type |
 :------ | :------ |
 `PRODUCTS` | *string* |
 
-Defined in: [product/ProductAPI.ts:178](https://github.com/bennycode/coinbase-pro-node/blob/c3d8f7c/src/product/ProductAPI.ts#L178)
+Defined in: [product/ProductAPI.ts:178](https://github.com/bennycode/coinbase-pro-node/blob/a54e177/src/product/ProductAPI.ts#L178)
 
 ## Methods
 
@@ -79,7 +79,7 @@ Name | Type | Description |
 
 **Returns:** *Promise*<[*Candle*](../interfaces/candle.md)[]\>
 
-Defined in: [product/ProductAPI.ts:205](https://github.com/bennycode/coinbase-pro-node/blob/c3d8f7c/src/product/ProductAPI.ts#L205)
+Defined in: [product/ProductAPI.ts:205](https://github.com/bennycode/coinbase-pro-node/blob/a54e177/src/product/ProductAPI.ts#L205)
 
 ___
 
@@ -99,7 +99,7 @@ Name | Type |
 
 **Returns:** *Promise*<undefined \| [*Product*](../interfaces/product.md)\>
 
-Defined in: [product/ProductAPI.ts:286](https://github.com/bennycode/coinbase-pro-node/blob/c3d8f7c/src/product/ProductAPI.ts#L286)
+Defined in: [product/ProductAPI.ts:286](https://github.com/bennycode/coinbase-pro-node/blob/a54e177/src/product/ProductAPI.ts#L286)
 
 ___
 
@@ -122,7 +122,7 @@ Name | Type | Description |
 
 **Returns:** *Promise*<[*OrderBookLevel1*](../interfaces/orderbooklevel1.md)\>
 
-Defined in: [product/ProductAPI.ts:329](https://github.com/bennycode/coinbase-pro-node/blob/c3d8f7c/src/product/ProductAPI.ts#L329)
+Defined in: [product/ProductAPI.ts:329](https://github.com/bennycode/coinbase-pro-node/blob/a54e177/src/product/ProductAPI.ts#L329)
 
 ▸ **getProductOrderBook**(`productId`: *string*, `params?`: { `level`: [*TOP\_50\_BIDS\_AND\_ASKS*](../enums/orderbooklevel.md#top_50_bids_and_asks)  }): *Promise*<[*OrderBookLevel2*](../interfaces/orderbooklevel2.md)\>
 
@@ -136,7 +136,7 @@ Name | Type |
 
 **Returns:** *Promise*<[*OrderBookLevel2*](../interfaces/orderbooklevel2.md)\>
 
-Defined in: [product/ProductAPI.ts:333](https://github.com/bennycode/coinbase-pro-node/blob/c3d8f7c/src/product/ProductAPI.ts#L333)
+Defined in: [product/ProductAPI.ts:333](https://github.com/bennycode/coinbase-pro-node/blob/a54e177/src/product/ProductAPI.ts#L333)
 
 ▸ **getProductOrderBook**(`productId`: *string*, `params?`: { `level`: [*FULL\_ORDER\_BOOK*](../enums/orderbooklevel.md#full_order_book)  }): *Promise*<[*OrderBookLevel3*](../interfaces/orderbooklevel3.md)\>
 
@@ -150,7 +150,7 @@ Name | Type |
 
 **Returns:** *Promise*<[*OrderBookLevel3*](../interfaces/orderbooklevel3.md)\>
 
-Defined in: [product/ProductAPI.ts:337](https://github.com/bennycode/coinbase-pro-node/blob/c3d8f7c/src/product/ProductAPI.ts#L337)
+Defined in: [product/ProductAPI.ts:337](https://github.com/bennycode/coinbase-pro-node/blob/a54e177/src/product/ProductAPI.ts#L337)
 
 ___
 
@@ -170,7 +170,7 @@ Name | Type | Description |
 
 **Returns:** *Promise*<[*ProductStats*](../interfaces/productstats.md)\>
 
-Defined in: [product/ProductAPI.ts:368](https://github.com/bennycode/coinbase-pro-node/blob/c3d8f7c/src/product/ProductAPI.ts#L368)
+Defined in: [product/ProductAPI.ts:368](https://github.com/bennycode/coinbase-pro-node/blob/a54e177/src/product/ProductAPI.ts#L368)
 
 ___
 
@@ -190,7 +190,7 @@ Name | Type | Description |
 
 **Returns:** *Promise*<[*ProductTicker*](../interfaces/productticker.md)\>
 
-Defined in: [product/ProductAPI.ts:380](https://github.com/bennycode/coinbase-pro-node/blob/c3d8f7c/src/product/ProductAPI.ts#L380)
+Defined in: [product/ProductAPI.ts:380](https://github.com/bennycode/coinbase-pro-node/blob/a54e177/src/product/ProductAPI.ts#L380)
 
 ___
 
@@ -204,7 +204,7 @@ Get trading details of all available products.
 
 **Returns:** *Promise*<[*Product*](../interfaces/product.md)[]\>
 
-Defined in: [product/ProductAPI.ts:296](https://github.com/bennycode/coinbase-pro-node/blob/c3d8f7c/src/product/ProductAPI.ts#L296)
+Defined in: [product/ProductAPI.ts:296](https://github.com/bennycode/coinbase-pro-node/blob/a54e177/src/product/ProductAPI.ts#L296)
 
 ___
 
@@ -225,7 +225,7 @@ Name | Type | Description |
 
 **Returns:** *Promise*<[*PaginatedData*](../interfaces/paginateddata.md)<[*Trade*](../interfaces/trade.md)\>\>
 
-Defined in: [product/ProductAPI.ts:309](https://github.com/bennycode/coinbase-pro-node/blob/c3d8f7c/src/product/ProductAPI.ts#L309)
+Defined in: [product/ProductAPI.ts:309](https://github.com/bennycode/coinbase-pro-node/blob/a54e177/src/product/ProductAPI.ts#L309)
 
 ___
 
@@ -244,7 +244,7 @@ Name | Type | Description |
 
 **Returns:** *void*
 
-Defined in: [product/ProductAPI.ts:272](https://github.com/bennycode/coinbase-pro-node/blob/c3d8f7c/src/product/ProductAPI.ts#L272)
+Defined in: [product/ProductAPI.ts:272](https://github.com/bennycode/coinbase-pro-node/blob/a54e177/src/product/ProductAPI.ts#L272)
 
 ___
 
@@ -266,4 +266,4 @@ Name | Type | Description |
 
 Handle to stop the watch interval
 
-Defined in: [product/ProductAPI.ts:249](https://github.com/bennycode/coinbase-pro-node/blob/c3d8f7c/src/product/ProductAPI.ts#L249)
+Defined in: [product/ProductAPI.ts:249](https://github.com/bennycode/coinbase-pro-node/blob/a54e177/src/product/ProductAPI.ts#L249)

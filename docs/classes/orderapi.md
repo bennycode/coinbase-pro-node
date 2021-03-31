@@ -34,7 +34,7 @@ Name | Type |
 
 **Returns:** [*OrderAPI*](orderapi.md)
 
-Defined in: [order/OrderAPI.ts:110](https://github.com/bennycode/coinbase-pro-node/blob/c3d8f7c/src/order/OrderAPI.ts#L110)
+Defined in: [order/OrderAPI.ts:110](https://github.com/bennycode/coinbase-pro-node/blob/a54e177/src/order/OrderAPI.ts#L110)
 
 ## Properties
 
@@ -48,7 +48,7 @@ Name | Type |
 :------ | :------ |
 `ORDERS` | *string* |
 
-Defined in: [order/OrderAPI.ts:108](https://github.com/bennycode/coinbase-pro-node/blob/c3d8f7c/src/order/OrderAPI.ts#L108)
+Defined in: [order/OrderAPI.ts:108](https://github.com/bennycode/coinbase-pro-node/blob/a54e177/src/order/OrderAPI.ts#L108)
 
 ## Methods
 
@@ -70,7 +70,7 @@ Name | Type | Description |
 
 A list of ids of the canceled orders
 
-Defined in: [order/OrderAPI.ts:121](https://github.com/bennycode/coinbase-pro-node/blob/c3d8f7c/src/order/OrderAPI.ts#L121)
+Defined in: [order/OrderAPI.ts:121](https://github.com/bennycode/coinbase-pro-node/blob/a54e177/src/order/OrderAPI.ts#L121)
 
 ___
 
@@ -93,7 +93,7 @@ Name | Type | Description |
 
 The ID of the canceled order
 
-Defined in: [order/OrderAPI.ts:137](https://github.com/bennycode/coinbase-pro-node/blob/c3d8f7c/src/order/OrderAPI.ts#L137)
+Defined in: [order/OrderAPI.ts:137](https://github.com/bennycode/coinbase-pro-node/blob/a54e177/src/order/OrderAPI.ts#L137)
 
 ___
 
@@ -113,7 +113,7 @@ Name | Type | Description |
 
 **Returns:** *Promise*<*null* \| [*Order*](../modules.md#order)\>
 
-Defined in: [order/OrderAPI.ts:175](https://github.com/bennycode/coinbase-pro-node/blob/c3d8f7c/src/order/OrderAPI.ts#L175)
+Defined in: [order/OrderAPI.ts:176](https://github.com/bennycode/coinbase-pro-node/blob/a54e177/src/order/OrderAPI.ts#L176)
 
 ___
 
@@ -133,7 +133,7 @@ Name | Type | Description |
 
 **Returns:** *Promise*<[*PaginatedData*](../interfaces/paginateddata.md)<[*Order*](../modules.md#order)\>\>
 
-Defined in: [order/OrderAPI.ts:151](https://github.com/bennycode/coinbase-pro-node/blob/c3d8f7c/src/order/OrderAPI.ts#L151)
+Defined in: [order/OrderAPI.ts:151](https://github.com/bennycode/coinbase-pro-node/blob/a54e177/src/order/OrderAPI.ts#L151)
 
 ___
 
@@ -154,4 +154,4 @@ Name | Type | Description |
 
 **Returns:** *Promise*<[*Order*](../modules.md#order)\>
 
-Defined in: [order/OrderAPI.ts:200](https://github.com/bennycode/coinbase-pro-node/blob/c3d8f7c/src/order/OrderAPI.ts#L200)
+Defined in: [order/OrderAPI.ts:201](https://github.com/bennycode/coinbase-pro-node/blob/a54e177/src/order/OrderAPI.ts#L201)

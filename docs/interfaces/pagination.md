@@ -26,7 +26,7 @@
 
 Request page after (older) this pagination id.
 
-Defined in: [payload/common.ts:15](https://github.com/bennycode/coinbase-pro-node/blob/c3d8f7c/src/payload/common.ts#L15)
+Defined in: [payload/common.ts:15](https://github.com/bennycode/coinbase-pro-node/blob/a54e177/src/payload/common.ts#L15)
 
 ___
 
@@ -36,7 +36,7 @@ ___
 
 Request page before (newer) this pagination id.
 
-Defined in: [payload/common.ts:17](https://github.com/bennycode/coinbase-pro-node/blob/c3d8f7c/src/payload/common.ts#L17)
+Defined in: [payload/common.ts:17](https://github.com/bennycode/coinbase-pro-node/blob/a54e177/src/payload/common.ts#L17)
 
 ___
 
@@ -46,4 +46,4 @@ ___
 
 Number of results per request. Maximum 100. Default 100.
 
-Defined in: [payload/common.ts:19](https://github.com/bennycode/coinbase-pro-node/blob/c3d8f7c/src/payload/common.ts#L19)
+Defined in: [payload/common.ts:19](https://github.com/bennycode/coinbase-pro-node/blob/a54e177/src/payload/common.ts#L19)

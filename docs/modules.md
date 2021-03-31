@@ -109,7 +109,7 @@
 
 Ƭ **ClientAuthentication**: [*ClientAuthenticationBaseUrls*](interfaces/clientauthenticationbaseurls.md) \| [*ClientAuthenticationCustomUrls*](interfaces/clientauthenticationcustomurls.md)
 
-Defined in: [CoinbasePro.ts:26](https://github.com/bennycode/coinbase-pro-node/blob/c3d8f7c/src/CoinbasePro.ts#L26)
+Defined in: [CoinbasePro.ts:26](https://github.com/bennycode/coinbase-pro-node/blob/a54e177/src/CoinbasePro.ts#L26)
 
 ___
 
@@ -117,7 +117,7 @@ ___
 
 Ƭ **HistoricRateRequest**: [*BaseHistoricRateRequest*](interfaces/basehistoricraterequest.md) \| [*HistoricRateRequestWithTimeSpan*](interfaces/historicraterequestwithtimespan.md)
 
-Defined in: [product/ProductAPI.ts:82](https://github.com/bennycode/coinbase-pro-node/blob/c3d8f7c/src/product/ProductAPI.ts#L82)
+Defined in: [product/ProductAPI.ts:82](https://github.com/bennycode/coinbase-pro-node/blob/a54e177/src/product/ProductAPI.ts#L82)
 
 ___
 
@@ -127,7 +127,7 @@ ___
 
 ISO 8601 timestamp with microseconds in Coordinated Universal Time (UTC), i.e. "2014-11-06T10:34:47.123456Z"
 
-Defined in: [payload/common.ts:2](https://github.com/bennycode/coinbase-pro-node/blob/c3d8f7c/src/payload/common.ts#L2)
+Defined in: [payload/common.ts:2](https://github.com/bennycode/coinbase-pro-node/blob/a54e177/src/payload/common.ts#L2)
 
 ___
 
@@ -135,7 +135,7 @@ ___
 
 Ƭ **MarketOrder**: BaseOrder & { `type`: [*MARKET*](enums/ordertype.md#market)  } & { `size`: *string*  } \| { `funds`: *string*  }
 
-Defined in: [order/OrderAPI.ts:76](https://github.com/bennycode/coinbase-pro-node/blob/c3d8f7c/src/order/OrderAPI.ts#L76)
+Defined in: [order/OrderAPI.ts:76](https://github.com/bennycode/coinbase-pro-node/blob/a54e177/src/order/OrderAPI.ts#L76)
 
 ___
 
@@ -143,7 +143,7 @@ ___
 
 Ƭ **NewOrder**: [*LimitOrder*](interfaces/limitorder.md) \| [*AutoCancelLimitOrder*](interfaces/autocancellimitorder.md) \| [*PostOnlyLimitOrder*](interfaces/postonlylimitorder.md) \| [*MarketOrder*](modules.md#marketorder)
 
-Defined in: [order/OrderAPI.ts:56](https://github.com/bennycode/coinbase-pro-node/blob/c3d8f7c/src/order/OrderAPI.ts#L56)
+Defined in: [order/OrderAPI.ts:56](https://github.com/bennycode/coinbase-pro-node/blob/a54e177/src/order/OrderAPI.ts#L56)
 
 ___
 
@@ -151,7 +151,7 @@ ___
 
 Ƭ **Order**: [*PendingOrder*](interfaces/pendingorder.md) \| [*FilledOrder*](interfaces/filledorder.md)
 
-Defined in: [order/OrderAPI.ts:105](https://github.com/bennycode/coinbase-pro-node/blob/c3d8f7c/src/order/OrderAPI.ts#L105)
+Defined in: [order/OrderAPI.ts:105](https://github.com/bennycode/coinbase-pro-node/blob/a54e177/src/order/OrderAPI.ts#L105)
 
 ___
 
@@ -159,7 +159,7 @@ ___
 
 Ƭ **OrderBook**: [*OrderBookLevel1*](interfaces/orderbooklevel1.md) \| [*OrderBookLevel2*](interfaces/orderbooklevel2.md) \| [*OrderBookLevel3*](interfaces/orderbooklevel3.md)
 
-Defined in: [product/ProductAPI.ts:133](https://github.com/bennycode/coinbase-pro-node/blob/c3d8f7c/src/product/ProductAPI.ts#L133)
+Defined in: [product/ProductAPI.ts:133](https://github.com/bennycode/coinbase-pro-node/blob/a54e177/src/product/ProductAPI.ts#L133)
 
 ___
 
@@ -169,7 +169,7 @@ ___
 
 UUID, both forms (with and without dashes) are accepted, i.e. "132fb6ae-456b-4654-b4e0-d681ac05cea1" or "132fb6ae456b4654b4e0d681ac05cea1"
 
-Defined in: [payload/common.ts:5](https://github.com/bennycode/coinbase-pro-node/blob/c3d8f7c/src/payload/common.ts#L5)
+Defined in: [payload/common.ts:5](https://github.com/bennycode/coinbase-pro-node/blob/a54e177/src/payload/common.ts#L5)
 
 ___
 
@@ -177,7 +177,7 @@ ___
 
 Ƭ **WebSocketLastMatchMessage**: *Omit*<[*WebSocketMatchMessage*](interfaces/websocketmatchmessage.md), *type*\> & { `type`: [*LAST\_MATCH*](enums/websocketresponsetype.md#last_match)  }
 
-Defined in: [client/WebSocketClient.ts:186](https://github.com/bennycode/coinbase-pro-node/blob/c3d8f7c/src/client/WebSocketClient.ts#L186)
+Defined in: [client/WebSocketClient.ts:186](https://github.com/bennycode/coinbase-pro-node/blob/a54e177/src/client/WebSocketClient.ts#L186)
 
 ___
 
@@ -185,4 +185,4 @@ ___
 
 Ƭ **WebSocketResponse**: WebSocketMessage & { `type`: [*WebSocketResponseType*](enums/websocketresponsetype.md)  }
 
-Defined in: [client/WebSocketClient.ts:123](https://github.com/bennycode/coinbase-pro-node/blob/c3d8f7c/src/client/WebSocketClient.ts#L123)
+Defined in: [client/WebSocketClient.ts:123](https://github.com/bennycode/coinbase-pro-node/blob/a54e177/src/client/WebSocketClient.ts#L123)

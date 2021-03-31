@@ -32,7 +32,7 @@ Name | Type |
 
 **Returns:** [*ProfileAPI*](profileapi.md)
 
-Defined in: [profile/ProfileAPI.ts:25](https://github.com/bennycode/coinbase-pro-node/blob/c3d8f7c/src/profile/ProfileAPI.ts#L25)
+Defined in: [profile/ProfileAPI.ts:25](https://github.com/bennycode/coinbase-pro-node/blob/a54e177/src/profile/ProfileAPI.ts#L25)
 
 ## Properties
 
@@ -46,7 +46,7 @@ Name | Type |
 :------ | :------ |
 `PROFILES` | *string* |
 
-Defined in: [profile/ProfileAPI.ts:23](https://github.com/bennycode/coinbase-pro-node/blob/c3d8f7c/src/profile/ProfileAPI.ts#L23)
+Defined in: [profile/ProfileAPI.ts:23](https://github.com/bennycode/coinbase-pro-node/blob/a54e177/src/profile/ProfileAPI.ts#L23)
 
 ## Methods
 
@@ -67,7 +67,7 @@ Name | Type | Description |
 
 A single profile
 
-Defined in: [profile/ProfileAPI.ts:57](https://github.com/bennycode/coinbase-pro-node/blob/c3d8f7c/src/profile/ProfileAPI.ts#L57)
+Defined in: [profile/ProfileAPI.ts:57](https://github.com/bennycode/coinbase-pro-node/blob/a54e177/src/profile/ProfileAPI.ts#L57)
 
 ___
 
@@ -88,7 +88,7 @@ Name | Type | Description |
 
 **Returns:** *Promise*<[*Profile*](../interfaces/profile.md)[]\>
 
-Defined in: [profile/ProfileAPI.ts:36](https://github.com/bennycode/coinbase-pro-node/blob/c3d8f7c/src/profile/ProfileAPI.ts#L36)
+Defined in: [profile/ProfileAPI.ts:36](https://github.com/bennycode/coinbase-pro-node/blob/a54e177/src/profile/ProfileAPI.ts#L36)
 
 ___
 
@@ -109,4 +109,4 @@ Name | Type |
 
 **Returns:** *Promise*<void\>
 
-Defined in: [profile/ProfileAPI.ts:77](https://github.com/bennycode/coinbase-pro-node/blob/c3d8f7c/src/profile/ProfileAPI.ts#L77)
+Defined in: [profile/ProfileAPI.ts:77](https://github.com/bennycode/coinbase-pro-node/blob/a54e177/src/profile/ProfileAPI.ts#L77)

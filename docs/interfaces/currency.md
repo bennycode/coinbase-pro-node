@@ -19,7 +19,7 @@
 
 • **details**: [*CurrencyDetail*](currencydetail.md)
 
-Defined in: [currency/CurrencyAPI.ts:4](https://github.com/bennycode/coinbase-pro-node/blob/c3d8f7c/src/currency/CurrencyAPI.ts#L4)
+Defined in: [currency/CurrencyAPI.ts:4](https://github.com/bennycode/coinbase-pro-node/blob/a54e177/src/currency/CurrencyAPI.ts#L4)
 
 ___
 
@@ -27,7 +27,7 @@ ___
 
 • **id**: *string*
 
-Defined in: [currency/CurrencyAPI.ts:5](https://github.com/bennycode/coinbase-pro-node/blob/c3d8f7c/src/currency/CurrencyAPI.ts#L5)
+Defined in: [currency/CurrencyAPI.ts:5](https://github.com/bennycode/coinbase-pro-node/blob/a54e177/src/currency/CurrencyAPI.ts#L5)
 
 ___
 
@@ -35,7 +35,7 @@ ___
 
 • **max\_precision**: *string*
 
-Defined in: [currency/CurrencyAPI.ts:6](https://github.com/bennycode/coinbase-pro-node/blob/c3d8f7c/src/currency/CurrencyAPI.ts#L6)
+Defined in: [currency/CurrencyAPI.ts:6](https://github.com/bennycode/coinbase-pro-node/blob/a54e177/src/currency/CurrencyAPI.ts#L6)
 
 ___
 
@@ -43,7 +43,7 @@ ___
 
 • **min\_size**: *string*
 
-Defined in: [currency/CurrencyAPI.ts:7](https://github.com/bennycode/coinbase-pro-node/blob/c3d8f7c/src/currency/CurrencyAPI.ts#L7)
+Defined in: [currency/CurrencyAPI.ts:7](https://github.com/bennycode/coinbase-pro-node/blob/a54e177/src/currency/CurrencyAPI.ts#L7)
 
 ___
 
@@ -51,7 +51,7 @@ ___
 
 • **name**: *string*
 
-Defined in: [currency/CurrencyAPI.ts:8](https://github.com/bennycode/coinbase-pro-node/blob/c3d8f7c/src/currency/CurrencyAPI.ts#L8)
+Defined in: [currency/CurrencyAPI.ts:8](https://github.com/bennycode/coinbase-pro-node/blob/a54e177/src/currency/CurrencyAPI.ts#L8)
 
 ___
 
@@ -59,4 +59,4 @@ ___
 
 • **status**: *string*
 
-Defined in: [currency/CurrencyAPI.ts:9](https://github.com/bennycode/coinbase-pro-node/blob/c3d8f7c/src/currency/CurrencyAPI.ts#L9)
+Defined in: [currency/CurrencyAPI.ts:9](https://github.com/bennycode/coinbase-pro-node/blob/a54e177/src/currency/CurrencyAPI.ts#L9)

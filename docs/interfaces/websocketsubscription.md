@@ -15,7 +15,7 @@
 
 • **channels**: [*WebSocketChannel*](websocketchannel.md)[]
 
-Defined in: [client/WebSocketClient.ts:189](https://github.com/bennycode/coinbase-pro-node/blob/c3d8f7c/src/client/WebSocketClient.ts#L189)
+Defined in: [client/WebSocketClient.ts:189](https://github.com/bennycode/coinbase-pro-node/blob/a54e177/src/client/WebSocketClient.ts#L189)
 
 ___
 
@@ -23,4 +23,4 @@ ___
 
 • **type**: [*SUBSCRIPTIONS*](../enums/websocketresponsetype.md#subscriptions)
 
-Defined in: [client/WebSocketClient.ts:190](https://github.com/bennycode/coinbase-pro-node/blob/c3d8f7c/src/client/WebSocketClient.ts#L190)
+Defined in: [client/WebSocketClient.ts:190](https://github.com/bennycode/coinbase-pro-node/blob/a54e177/src/client/WebSocketClient.ts#L190)

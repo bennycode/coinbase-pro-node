@@ -19,7 +19,7 @@
 
 • **amount**: *string*
 
-Defined in: [account/AccountAPI.ts:14](https://github.com/bennycode/coinbase-pro-node/blob/c3d8f7c/src/account/AccountAPI.ts#L14)
+Defined in: [account/AccountAPI.ts:14](https://github.com/bennycode/coinbase-pro-node/blob/a54e177/src/account/AccountAPI.ts#L14)
 
 ___
 
@@ -27,7 +27,7 @@ ___
 
 • **balance**: *string*
 
-Defined in: [account/AccountAPI.ts:15](https://github.com/bennycode/coinbase-pro-node/blob/c3d8f7c/src/account/AccountAPI.ts#L15)
+Defined in: [account/AccountAPI.ts:15](https://github.com/bennycode/coinbase-pro-node/blob/a54e177/src/account/AccountAPI.ts#L15)
 
 ___
 
@@ -35,7 +35,7 @@ ___
 
 • **created\_at**: *string*
 
-Defined in: [account/AccountAPI.ts:16](https://github.com/bennycode/coinbase-pro-node/blob/c3d8f7c/src/account/AccountAPI.ts#L16)
+Defined in: [account/AccountAPI.ts:16](https://github.com/bennycode/coinbase-pro-node/blob/a54e177/src/account/AccountAPI.ts#L16)
 
 ___
 
@@ -43,7 +43,7 @@ ___
 
 • **details**: [*AccountHistoryDetails*](accounthistorydetails.md)
 
-Defined in: [account/AccountAPI.ts:17](https://github.com/bennycode/coinbase-pro-node/blob/c3d8f7c/src/account/AccountAPI.ts#L17)
+Defined in: [account/AccountAPI.ts:17](https://github.com/bennycode/coinbase-pro-node/blob/a54e177/src/account/AccountAPI.ts#L17)
 
 ___
 
@@ -51,7 +51,7 @@ ___
 
 • **id**: *string*
 
-Defined in: [account/AccountAPI.ts:18](https://github.com/bennycode/coinbase-pro-node/blob/c3d8f7c/src/account/AccountAPI.ts#L18)
+Defined in: [account/AccountAPI.ts:18](https://github.com/bennycode/coinbase-pro-node/blob/a54e177/src/account/AccountAPI.ts#L18)
 
 ___
 
@@ -59,4 +59,4 @@ ___
 
 • **type**: *string*
 
-Defined in: [account/AccountAPI.ts:19](https://github.com/bennycode/coinbase-pro-node/blob/c3d8f7c/src/account/AccountAPI.ts#L19)
+Defined in: [account/AccountAPI.ts:19](https://github.com/bennycode/coinbase-pro-node/blob/a54e177/src/account/AccountAPI.ts#L19)

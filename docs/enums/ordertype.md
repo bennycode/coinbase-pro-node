@@ -15,7 +15,7 @@
 
 • **LIMIT**: = "limit"
 
-Defined in: [order/OrderAPI.ts:5](https://github.com/bennycode/coinbase-pro-node/blob/c3d8f7c/src/order/OrderAPI.ts#L5)
+Defined in: [order/OrderAPI.ts:5](https://github.com/bennycode/coinbase-pro-node/blob/a54e177/src/order/OrderAPI.ts#L5)
 
 ___
 
@@ -23,4 +23,4 @@ ___
 
 • **MARKET**: = "market"
 
-Defined in: [order/OrderAPI.ts:6](https://github.com/bennycode/coinbase-pro-node/blob/c3d8f7c/src/order/OrderAPI.ts#L6)
+Defined in: [order/OrderAPI.ts:6](https://github.com/bennycode/coinbase-pro-node/blob/a54e177/src/order/OrderAPI.ts#L6)

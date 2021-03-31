@@ -35,7 +35,7 @@
 
 Inherited from: void
 
-Defined in: [order/OrderAPI.ts:31](https://github.com/bennycode/coinbase-pro-node/blob/c3d8f7c/src/order/OrderAPI.ts#L31)
+Defined in: [order/OrderAPI.ts:31](https://github.com/bennycode/coinbase-pro-node/blob/a54e177/src/order/OrderAPI.ts#L31)
 
 ___
 
@@ -43,7 +43,7 @@ ___
 
 • **price**: *string*
 
-Defined in: [order/OrderAPI.ts:69](https://github.com/bennycode/coinbase-pro-node/blob/c3d8f7c/src/order/OrderAPI.ts#L69)
+Defined in: [order/OrderAPI.ts:69](https://github.com/bennycode/coinbase-pro-node/blob/a54e177/src/order/OrderAPI.ts#L69)
 
 ___
 
@@ -53,7 +53,7 @@ ___
 
 Inherited from: void
 
-Defined in: [order/OrderAPI.ts:32](https://github.com/bennycode/coinbase-pro-node/blob/c3d8f7c/src/order/OrderAPI.ts#L32)
+Defined in: [order/OrderAPI.ts:32](https://github.com/bennycode/coinbase-pro-node/blob/a54e177/src/order/OrderAPI.ts#L32)
 
 ___
 
@@ -63,7 +63,7 @@ ___
 
 Inherited from: void
 
-Defined in: [order/OrderAPI.ts:33](https://github.com/bennycode/coinbase-pro-node/blob/c3d8f7c/src/order/OrderAPI.ts#L33)
+Defined in: [order/OrderAPI.ts:33](https://github.com/bennycode/coinbase-pro-node/blob/a54e177/src/order/OrderAPI.ts#L33)
 
 ___
 
@@ -71,7 +71,7 @@ ___
 
 • **size**: *string*
 
-Defined in: [order/OrderAPI.ts:70](https://github.com/bennycode/coinbase-pro-node/blob/c3d8f7c/src/order/OrderAPI.ts#L70)
+Defined in: [order/OrderAPI.ts:70](https://github.com/bennycode/coinbase-pro-node/blob/a54e177/src/order/OrderAPI.ts#L70)
 
 ___
 
@@ -81,7 +81,7 @@ ___
 
 Inherited from: void
 
-Defined in: [order/OrderAPI.ts:34](https://github.com/bennycode/coinbase-pro-node/blob/c3d8f7c/src/order/OrderAPI.ts#L34)
+Defined in: [order/OrderAPI.ts:34](https://github.com/bennycode/coinbase-pro-node/blob/a54e177/src/order/OrderAPI.ts#L34)
 
 ___
 
@@ -91,7 +91,7 @@ ___
 
 Inherited from: void
 
-Defined in: [order/OrderAPI.ts:35](https://github.com/bennycode/coinbase-pro-node/blob/c3d8f7c/src/order/OrderAPI.ts#L35)
+Defined in: [order/OrderAPI.ts:35](https://github.com/bennycode/coinbase-pro-node/blob/a54e177/src/order/OrderAPI.ts#L35)
 
 ___
 
@@ -101,7 +101,7 @@ ___
 
 Inherited from: void
 
-Defined in: [order/OrderAPI.ts:36](https://github.com/bennycode/coinbase-pro-node/blob/c3d8f7c/src/order/OrderAPI.ts#L36)
+Defined in: [order/OrderAPI.ts:36](https://github.com/bennycode/coinbase-pro-node/blob/a54e177/src/order/OrderAPI.ts#L36)
 
 ___
 
@@ -111,7 +111,7 @@ ___
 
 Default is 'GTC'.
 
-Defined in: [order/OrderAPI.ts:72](https://github.com/bennycode/coinbase-pro-node/blob/c3d8f7c/src/order/OrderAPI.ts#L72)
+Defined in: [order/OrderAPI.ts:72](https://github.com/bennycode/coinbase-pro-node/blob/a54e177/src/order/OrderAPI.ts#L72)
 
 ___
 
@@ -119,4 +119,4 @@ ___
 
 • **type**: [*LIMIT*](../enums/ordertype.md#limit)
 
-Defined in: [order/OrderAPI.ts:73](https://github.com/bennycode/coinbase-pro-node/blob/c3d8f7c/src/order/OrderAPI.ts#L73)
+Defined in: [order/OrderAPI.ts:73](https://github.com/bennycode/coinbase-pro-node/blob/a54e177/src/order/OrderAPI.ts#L73)
