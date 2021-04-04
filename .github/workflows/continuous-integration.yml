@@ -32,7 +32,7 @@ jobs:
           flags: unittests
           token: ${{ secrets.CODECOV_TOKEN }}
       - name: 'Automerge dependency updates from Dependabot'
-        uses: ahmadnassri/action-dependabot-auto-merge@v2
+        uses: ahmadnassri/action-dependabot-auto-merge@v2.4.0
         # Guarantee that commit comes from Dependabot (don't blindly trust external GitHub action checks)
         if: github.event_name == 'pull_request' && github.actor == 'dependabot[bot]'
         with:
