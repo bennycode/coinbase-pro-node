@@ -25,12 +25,11 @@ jobs:
           contains(github.event.commits[0].message, '[skip ci]') == false &&
           contains(github.event.commits[0].message, '[ci skip]') == false
       - name: 'Upload coverage reports to Codecov'
-        uses: codecov/codecov-action@v1.3.1
+        uses: codecov/codecov-action@v1.3.2
         with:
           fail_ci_if_error: false
-          file: ./coverage/lcov.info
+          files: ./coverage/lcov.info
           flags: unittests
-          token: ${{ secrets.CODECOV_TOKEN }}
       - name: 'Automerge dependency updates from Dependabot'
         uses: ahmadnassri/action-dependabot-auto-merge@v2.4.0
         # Guarantee that commit comes from Dependabot (don't blindly trust external GitHub action checks)
