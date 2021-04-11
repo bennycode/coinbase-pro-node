@@ -30,9 +30,3 @@ jobs:
           fail_ci_if_error: false
           files: ./coverage/lcov.info
           flags: unittests
-      - name: 'Automerge dependency updates from Dependabot'
-        uses: ahmadnassri/action-dependabot-auto-merge@v2.4.0
-        # Guarantee that commit comes from Dependabot (don't blindly trust external GitHub action checks)
-        if: github.event_name == 'pull_request' && github.actor == 'dependabot[bot]'
-        with:
-          github-token: ${{ secrets.GH_TOKEN }}
