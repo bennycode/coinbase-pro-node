@@ -16,7 +16,7 @@
   "devDependencies": {
     "@types/jasmine": "3.6.9",
     "@typescript-eslint/eslint-plugin": "4.21.0",
-    "@typescript-eslint/parser": "4.21.0",
+    "@typescript-eslint/parser": "4.22.0",
     "cross-env": "7.0.3",
     "dotenv-defaults": "2.0.1",
     "eslint": "7.24.0",
