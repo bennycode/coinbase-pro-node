@@ -67,7 +67,9 @@
   "license": "MIT",
   "main": "dist/index.js",
   "name": "@nodefactory/coinbase-pro-node",
-  "private": false,
+  "publishConfig": {
+    "access": "public"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/NodeFactoryIo/coinbase-pro-node.git"
