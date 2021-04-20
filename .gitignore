@@ -2,7 +2,6 @@
 *hot-update.js*
 .cache
 .DS_Store
-.husky/_
 .idea/
 .nyc_output/
 .vscode/
