@@ -2390,10 +2390,10 @@ typedoc-default-themes@^0.12.9:
   resolved "https://registry.npmjs.org/typedoc-default-themes/-/typedoc-default-themes-0.12.10.tgz#614c4222fe642657f37693ea62cad4dafeddf843"
   integrity sha512-fIS001cAYHkyQPidWXmHuhs8usjP5XVJjWB8oZGqkTowZaz3v7g3KDZeeqE82FBrmkAnIBOY3jgy7lnPnqATbA==
 
-typedoc-plugin-markdown@3.7.0:
-  version "3.7.0"
-  resolved "https://registry.npmjs.org/typedoc-plugin-markdown/-/typedoc-plugin-markdown-3.7.0.tgz#a0205fad507eb6f8fd5d2d0ba46c400e60632b77"
-  integrity sha512-MuNb2MdH+x5OFQUaWKrEDLhy5vmAhsBlqPcOXzqx+iFQ8C9YvdWYVcOAeZIuKddFbwJV3tUbES1TtkBmUEmihA==
+typedoc-plugin-markdown@3.7.1:
+  version "3.7.1"
+  resolved "https://registry.npmjs.org/typedoc-plugin-markdown/-/typedoc-plugin-markdown-3.7.1.tgz#2635361674c8a35c69d957923145078f2ebff407"
+  integrity sha512-+r04TLdnvCSrQ8RX5APuBur0e22uqJbb/8R65GvIhvaYKiwVa6/+34mEnM4iQv6VERenUMFnuAFw+icj8r4H8Q==
   dependencies:
     handlebars "^4.7.7"
 
@@ -2513,10 +2513,10 @@ write-file-atomic@^3.0.0:
     signal-exit "^3.0.2"
     typedarray-to-buffer "^3.1.5"
 
-ws@7.4.4:
-  version "7.4.4"
-  resolved "https://registry.npmjs.org/ws/-/ws-7.4.4.tgz#383bc9742cb202292c9077ceab6f6047b17f2d59"
-  integrity sha512-Qm8k8ojNQIMx7S+Zp8u/uHOx7Qazv3Yv4q68MiWWWOJhiwG5W3x7iqmRtJo8xxrciZUY4vRxUTJCKuRnF28ZZw==
+ws@7.4.5:
+  version "7.4.5"
+  resolved "https://registry.npmjs.org/ws/-/ws-7.4.5.tgz#a484dd851e9beb6fdb420027e3885e8ce48986c1"
+  integrity sha512-xzyu3hFvomRfXKH8vOFMU3OguG6oOvhXMo3xsGy3xWExqaM2dxBbVxuD99O7m3ZUFMvvscsZDqxfgMaRr/Nr1g==
 
 y18n@^4.0.0:
   version "4.0.1"
