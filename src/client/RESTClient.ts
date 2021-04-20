@@ -79,6 +79,7 @@ export class RESTClient extends EventEmitter {
          */
         return 1000;
       },
+      shouldResetTimeout: true,
     });
 
     this.httpClient.interceptors.request.use(async config => {
