@@ -6,82 +6,82 @@
 
 ### Properties
 
-- [account\_address](sepadepositinformation.md#account_address)
-- [account\_name](sepadepositinformation.md#account_name)
-- [bank\_address](sepadepositinformation.md#bank_address)
-- [bank\_country](sepadepositinformation.md#bank_country)
-- [bank\_name](sepadepositinformation.md#bank_name)
+- [account_address](sepadepositinformation.md#account_address)
+- [account_name](sepadepositinformation.md#account_name)
+- [bank_address](sepadepositinformation.md#bank_address)
+- [bank_country](sepadepositinformation.md#bank_country)
+- [bank_name](sepadepositinformation.md#bank_name)
 - [iban](sepadepositinformation.md#iban)
 - [reference](sepadepositinformation.md#reference)
 - [swift](sepadepositinformation.md#swift)
 
 ## Properties
 
-### account\_address
+### account_address
 
-• **account\_address**: *string*
+• **account_address**: _string_
 
-Defined in: [account/AccountAPI.ts:75](https://github.com/bennycode/coinbase-pro-node/blob/a54e177/src/account/AccountAPI.ts#L75)
+Defined in: [account/AccountAPI.ts:75](https://github.com/bennycode/coinbase-pro-node/blob/1018fbd/src/account/AccountAPI.ts#L75)
 
-___
+---
 
-### account\_name
+### account_name
 
-• **account\_name**: *string*
+• **account_name**: _string_
 
-Defined in: [account/AccountAPI.ts:76](https://github.com/bennycode/coinbase-pro-node/blob/a54e177/src/account/AccountAPI.ts#L76)
+Defined in: [account/AccountAPI.ts:76](https://github.com/bennycode/coinbase-pro-node/blob/1018fbd/src/account/AccountAPI.ts#L76)
 
-___
+---
 
-### bank\_address
+### bank_address
 
-• **bank\_address**: *string*
+• **bank_address**: _string_
 
-Defined in: [account/AccountAPI.ts:77](https://github.com/bennycode/coinbase-pro-node/blob/a54e177/src/account/AccountAPI.ts#L77)
+Defined in: [account/AccountAPI.ts:77](https://github.com/bennycode/coinbase-pro-node/blob/1018fbd/src/account/AccountAPI.ts#L77)
 
-___
+---
 
-### bank\_country
+### bank_country
 
-• **bank\_country**: *object*
+• **bank_country**: _object_
 
 #### Type declaration:
 
-Name | Type |
-:------ | :------ |
-`code` | *string* |
-`name` | *string* |
+| Name   | Type     |
+| :----- | :------- |
+| `code` | _string_ |
+| `name` | _string_ |
 
-Defined in: [account/AccountAPI.ts:78](https://github.com/bennycode/coinbase-pro-node/blob/a54e177/src/account/AccountAPI.ts#L78)
+Defined in: [account/AccountAPI.ts:78](https://github.com/bennycode/coinbase-pro-node/blob/1018fbd/src/account/AccountAPI.ts#L78)
 
-___
+---
 
-### bank\_name
+### bank_name
 
-• **bank\_name**: *string*
+• **bank_name**: _string_
 
-Defined in: [account/AccountAPI.ts:82](https://github.com/bennycode/coinbase-pro-node/blob/a54e177/src/account/AccountAPI.ts#L82)
+Defined in: [account/AccountAPI.ts:82](https://github.com/bennycode/coinbase-pro-node/blob/1018fbd/src/account/AccountAPI.ts#L82)
 
-___
+---
 
 ### iban
 
-• **iban**: *string*
+• **iban**: _string_
 
-Defined in: [account/AccountAPI.ts:83](https://github.com/bennycode/coinbase-pro-node/blob/a54e177/src/account/AccountAPI.ts#L83)
+Defined in: [account/AccountAPI.ts:83](https://github.com/bennycode/coinbase-pro-node/blob/1018fbd/src/account/AccountAPI.ts#L83)
 
-___
+---
 
 ### reference
 
-• **reference**: *string*
+• **reference**: _string_
 
-Defined in: [account/AccountAPI.ts:84](https://github.com/bennycode/coinbase-pro-node/blob/a54e177/src/account/AccountAPI.ts#L84)
+Defined in: [account/AccountAPI.ts:84](https://github.com/bennycode/coinbase-pro-node/blob/1018fbd/src/account/AccountAPI.ts#L84)
 
-___
+---
 
 ### swift
 
-• **swift**: *string*
+• **swift**: _string_
 
-Defined in: [account/AccountAPI.ts:85](https://github.com/bennycode/coinbase-pro-node/blob/a54e177/src/account/AccountAPI.ts#L85)
+Defined in: [account/AccountAPI.ts:85](https://github.com/bennycode/coinbase-pro-node/blob/1018fbd/src/account/AccountAPI.ts#L85)

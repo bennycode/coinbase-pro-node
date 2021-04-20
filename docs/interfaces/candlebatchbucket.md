@@ -13,14 +13,14 @@
 
 ### start
 
-• **start**: *string*
+• **start**: _string_
 
-Defined in: [product/CandleBucketUtil.ts:8](https://github.com/bennycode/coinbase-pro-node/blob/a54e177/src/product/CandleBucketUtil.ts#L8)
+Defined in: [product/CandleBucketUtil.ts:8](https://github.com/bennycode/coinbase-pro-node/blob/1018fbd/src/product/CandleBucketUtil.ts#L8)
 
-___
+---
 
 ### stop
 
-• **stop**: *string*
+• **stop**: _string_
 
-Defined in: [product/CandleBucketUtil.ts:9](https://github.com/bennycode/coinbase-pro-node/blob/a54e177/src/product/CandleBucketUtil.ts#L9)
+Defined in: [product/CandleBucketUtil.ts:9](https://github.com/bennycode/coinbase-pro-node/blob/1018fbd/src/product/CandleBucketUtil.ts#L9)

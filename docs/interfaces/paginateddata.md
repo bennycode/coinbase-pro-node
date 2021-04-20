@@ -4,9 +4,9 @@
 
 ## Type parameters
 
-Name |
-:------ |
-`PayloadType` |
+| Name          |
+| :------------ |
+| `PayloadType` |
 
 ## Table of contents
 
@@ -21,19 +21,19 @@ Name |
 
 • **data**: PayloadType[]
 
-Defined in: [payload/common.ts:23](https://github.com/bennycode/coinbase-pro-node/blob/a54e177/src/payload/common.ts#L23)
+Defined in: [payload/common.ts:23](https://github.com/bennycode/coinbase-pro-node/blob/1018fbd/src/payload/common.ts#L23)
 
-___
+---
 
 ### pagination
 
-• **pagination**: *object*
+• **pagination**: _object_
 
 #### Type declaration:
 
-Name | Type |
-:------ | :------ |
-`after`? | *string* |
-`before`? | *string* |
+| Name      | Type     |
+| :-------- | :------- |
+| `after?`  | _string_ |
+| `before?` | _string_ |
 
-Defined in: [payload/common.ts:24](https://github.com/bennycode/coinbase-pro-node/blob/a54e177/src/payload/common.ts#L24)
+Defined in: [payload/common.ts:24](https://github.com/bennycode/coinbase-pro-node/blob/1018fbd/src/payload/common.ts#L24)

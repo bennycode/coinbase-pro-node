@@ -6,7 +6,7 @@
 
 ## Hierarchy
 
-* [*Pagination*](pagination.md)
+- [_Pagination_](pagination.md)
 
   ↳ **OrderListQueryParam**
 
@@ -17,61 +17,61 @@
 - [after](orderlistqueryparam.md#after)
 - [before](orderlistqueryparam.md#before)
 - [limit](orderlistqueryparam.md#limit)
-- [product\_id](orderlistqueryparam.md#product_id)
+- [product_id](orderlistqueryparam.md#product_id)
 - [status](orderlistqueryparam.md#status)
 
 ## Properties
 
 ### after
 
-• `Optional` **after**: *string*
+• `Optional` **after**: _string_
 
 Request page after (older) this pagination id.
 
 Inherited from: [Pagination](pagination.md).[after](pagination.md#after)
 
-Defined in: [payload/common.ts:15](https://github.com/bennycode/coinbase-pro-node/blob/a54e177/src/payload/common.ts#L15)
+Defined in: [payload/common.ts:15](https://github.com/bennycode/coinbase-pro-node/blob/1018fbd/src/payload/common.ts#L15)
 
-___
+---
 
 ### before
 
-• `Optional` **before**: *string*
+• `Optional` **before**: _string_
 
 Request page before (newer) this pagination id.
 
 Inherited from: [Pagination](pagination.md).[before](pagination.md#before)
 
-Defined in: [payload/common.ts:17](https://github.com/bennycode/coinbase-pro-node/blob/a54e177/src/payload/common.ts#L17)
+Defined in: [payload/common.ts:17](https://github.com/bennycode/coinbase-pro-node/blob/1018fbd/src/payload/common.ts#L17)
 
-___
+---
 
 ### limit
 
-• `Optional` **limit**: *number*
+• `Optional` **limit**: _number_
 
 Number of results per request. Maximum 100. Default 100.
 
 Inherited from: [Pagination](pagination.md).[limit](pagination.md#limit)
 
-Defined in: [payload/common.ts:19](https://github.com/bennycode/coinbase-pro-node/blob/a54e177/src/payload/common.ts#L19)
+Defined in: [payload/common.ts:19](https://github.com/bennycode/coinbase-pro-node/blob/1018fbd/src/payload/common.ts#L19)
 
-___
+---
 
-### product\_id
+### product_id
 
-• `Optional` **product\_id**: *string*
+• `Optional` **product_id**: _string_
 
 Only list orders for a specific product.
 
-Defined in: [order/OrderAPI.ts:100](https://github.com/bennycode/coinbase-pro-node/blob/a54e177/src/order/OrderAPI.ts#L100)
+Defined in: [order/OrderAPI.ts:100](https://github.com/bennycode/coinbase-pro-node/blob/1018fbd/src/order/OrderAPI.ts#L100)
 
-___
+---
 
 ### status
 
-• `Optional` **status**: ([*OrderStatus*](../enums/orderstatus.md) \| *all*)[]
+• `Optional` **status**: ([_OrderStatus_](../enums/orderstatus.md) \| `"all"`)[]
 
 Limit list of orders to these statuses. Passing "all" returns orders of all statuses. Default: [open, pending, active]
 
-Defined in: [order/OrderAPI.ts:102](https://github.com/bennycode/coinbase-pro-node/blob/a54e177/src/order/OrderAPI.ts#L102)
+Defined in: [order/OrderAPI.ts:102](https://github.com/bennycode/coinbase-pro-node/blob/1018fbd/src/order/OrderAPI.ts#L102)

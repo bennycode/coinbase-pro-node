@@ -4,7 +4,7 @@
 
 ## Hierarchy
 
-* [*LimitOrder*](limitorder.md)
+- [_LimitOrder_](limitorder.md)
 
   ↳ **AutoCancelLimitOrder**
 
@@ -12,124 +12,124 @@
 
 ### Properties
 
-- [cancel\_after](autocancellimitorder.md#cancel_after)
-- [client\_oid](autocancellimitorder.md#client_oid)
+- [cancel_after](autocancellimitorder.md#cancel_after)
+- [client_oid](autocancellimitorder.md#client_oid)
 - [price](autocancellimitorder.md#price)
-- [product\_id](autocancellimitorder.md#product_id)
+- [product_id](autocancellimitorder.md#product_id)
 - [side](autocancellimitorder.md#side)
 - [size](autocancellimitorder.md#size)
 - [stop](autocancellimitorder.md#stop)
-- [stop\_price](autocancellimitorder.md#stop_price)
+- [stop_price](autocancellimitorder.md#stop_price)
 - [stp](autocancellimitorder.md#stp)
-- [time\_in\_force](autocancellimitorder.md#time_in_force)
+- [time_in_force](autocancellimitorder.md#time_in_force)
 - [type](autocancellimitorder.md#type)
 
 ## Properties
 
-### cancel\_after
+### cancel_after
 
-• **cancel\_after**: [*CancelOrderPeriod*](../enums/cancelorderperiod.md)
+• **cancel_after**: [_CancelOrderPeriod_](../enums/cancelorderperiod.md)
 
-Defined in: [order/OrderAPI.ts:59](https://github.com/bennycode/coinbase-pro-node/blob/a54e177/src/order/OrderAPI.ts#L59)
+Defined in: [order/OrderAPI.ts:59](https://github.com/bennycode/coinbase-pro-node/blob/1018fbd/src/order/OrderAPI.ts#L59)
 
-___
+---
 
-### client\_oid
+### client_oid
 
-• `Optional` **client\_oid**: *string*
+• `Optional` **client_oid**: _string_
 
 Inherited from: [LimitOrder](limitorder.md).[client_oid](limitorder.md#client_oid)
 
-Defined in: [order/OrderAPI.ts:31](https://github.com/bennycode/coinbase-pro-node/blob/a54e177/src/order/OrderAPI.ts#L31)
+Defined in: [order/OrderAPI.ts:31](https://github.com/bennycode/coinbase-pro-node/blob/1018fbd/src/order/OrderAPI.ts#L31)
 
-___
+---
 
 ### price
 
-• **price**: *string*
+• **price**: _string_
 
 Inherited from: [LimitOrder](limitorder.md).[price](limitorder.md#price)
 
-Defined in: [order/OrderAPI.ts:69](https://github.com/bennycode/coinbase-pro-node/blob/a54e177/src/order/OrderAPI.ts#L69)
+Defined in: [order/OrderAPI.ts:69](https://github.com/bennycode/coinbase-pro-node/blob/1018fbd/src/order/OrderAPI.ts#L69)
 
-___
+---
 
-### product\_id
+### product_id
 
-• **product\_id**: *string*
+• **product_id**: _string_
 
 Inherited from: [LimitOrder](limitorder.md).[product_id](limitorder.md#product_id)
 
-Defined in: [order/OrderAPI.ts:32](https://github.com/bennycode/coinbase-pro-node/blob/a54e177/src/order/OrderAPI.ts#L32)
+Defined in: [order/OrderAPI.ts:32](https://github.com/bennycode/coinbase-pro-node/blob/1018fbd/src/order/OrderAPI.ts#L32)
 
-___
+---
 
 ### side
 
-• **side**: [*OrderSide*](../enums/orderside.md)
+• **side**: [_OrderSide_](../enums/orderside.md)
 
 Inherited from: [LimitOrder](limitorder.md).[side](limitorder.md#side)
 
-Defined in: [order/OrderAPI.ts:33](https://github.com/bennycode/coinbase-pro-node/blob/a54e177/src/order/OrderAPI.ts#L33)
+Defined in: [order/OrderAPI.ts:33](https://github.com/bennycode/coinbase-pro-node/blob/1018fbd/src/order/OrderAPI.ts#L33)
 
-___
+---
 
 ### size
 
-• **size**: *string*
+• **size**: _string_
 
 Inherited from: [LimitOrder](limitorder.md).[size](limitorder.md#size)
 
-Defined in: [order/OrderAPI.ts:70](https://github.com/bennycode/coinbase-pro-node/blob/a54e177/src/order/OrderAPI.ts#L70)
+Defined in: [order/OrderAPI.ts:70](https://github.com/bennycode/coinbase-pro-node/blob/1018fbd/src/order/OrderAPI.ts#L70)
 
-___
+---
 
 ### stop
 
-• `Optional` **stop**: *loss* \| *entry*
+• `Optional` **stop**: `"loss"` \| `"entry"`
 
 Inherited from: [LimitOrder](limitorder.md).[stop](limitorder.md#stop)
 
-Defined in: [order/OrderAPI.ts:34](https://github.com/bennycode/coinbase-pro-node/blob/a54e177/src/order/OrderAPI.ts#L34)
+Defined in: [order/OrderAPI.ts:34](https://github.com/bennycode/coinbase-pro-node/blob/1018fbd/src/order/OrderAPI.ts#L34)
 
-___
+---
 
-### stop\_price
+### stop_price
 
-• `Optional` **stop\_price**: *string*
+• `Optional` **stop_price**: _string_
 
 Inherited from: [LimitOrder](limitorder.md).[stop_price](limitorder.md#stop_price)
 
-Defined in: [order/OrderAPI.ts:35](https://github.com/bennycode/coinbase-pro-node/blob/a54e177/src/order/OrderAPI.ts#L35)
+Defined in: [order/OrderAPI.ts:35](https://github.com/bennycode/coinbase-pro-node/blob/1018fbd/src/order/OrderAPI.ts#L35)
 
-___
+---
 
 ### stp
 
-• `Optional` **stp**: [*SelfTradePrevention*](../enums/selftradeprevention.md)
+• `Optional` **stp**: [_SelfTradePrevention_](../enums/selftradeprevention.md)
 
 Inherited from: [LimitOrder](limitorder.md).[stp](limitorder.md#stp)
 
-Defined in: [order/OrderAPI.ts:36](https://github.com/bennycode/coinbase-pro-node/blob/a54e177/src/order/OrderAPI.ts#L36)
+Defined in: [order/OrderAPI.ts:36](https://github.com/bennycode/coinbase-pro-node/blob/1018fbd/src/order/OrderAPI.ts#L36)
 
-___
+---
 
-### time\_in\_force
+### time_in_force
 
-• **time\_in\_force**: [*GOOD\_TILL\_TIME*](../enums/timeinforce.md#good_till_time)
+• **time_in_force**: [_GOOD_TILL_TIME_](../enums/timeinforce.md#good_till_time)
 
 Default is 'GTC'.
 
 Overrides: [LimitOrder](limitorder.md).[time_in_force](limitorder.md#time_in_force)
 
-Defined in: [order/OrderAPI.ts:60](https://github.com/bennycode/coinbase-pro-node/blob/a54e177/src/order/OrderAPI.ts#L60)
+Defined in: [order/OrderAPI.ts:60](https://github.com/bennycode/coinbase-pro-node/blob/1018fbd/src/order/OrderAPI.ts#L60)
 
-___
+---
 
 ### type
 
-• **type**: [*LIMIT*](../enums/ordertype.md#limit)
+• **type**: [_LIMIT_](../enums/ordertype.md#limit)
 
 Inherited from: [LimitOrder](limitorder.md).[type](limitorder.md#type)
 
-Defined in: [order/OrderAPI.ts:73](https://github.com/bennycode/coinbase-pro-node/blob/a54e177/src/order/OrderAPI.ts#L73)
+Defined in: [order/OrderAPI.ts:73](https://github.com/bennycode/coinbase-pro-node/blob/1018fbd/src/order/OrderAPI.ts#L73)

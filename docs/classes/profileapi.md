@@ -22,91 +22,88 @@
 
 ### constructor
 
-\+ **new ProfileAPI**(`apiClient`: AxiosInstance): [*ProfileAPI*](profileapi.md)
+\+ **new ProfileAPI**(`apiClient`: AxiosInstance): [_ProfileAPI_](profileapi.md)
 
 #### Parameters:
 
-Name | Type |
-:------ | :------ |
-`apiClient` | AxiosInstance |
+| Name        | Type          |
+| :---------- | :------------ |
+| `apiClient` | AxiosInstance |
 
-**Returns:** [*ProfileAPI*](profileapi.md)
+**Returns:** [_ProfileAPI_](profileapi.md)
 
-Defined in: [profile/ProfileAPI.ts:25](https://github.com/bennycode/coinbase-pro-node/blob/a54e177/src/profile/ProfileAPI.ts#L25)
+Defined in: [profile/ProfileAPI.ts:25](https://github.com/bennycode/coinbase-pro-node/blob/1018fbd/src/profile/ProfileAPI.ts#L25)
 
 ## Properties
 
 ### URL
 
-▪ `Static` `Readonly` **URL**: *object*
+▪ `Static` `Readonly` **URL**: _object_
 
 #### Type declaration:
 
-Name | Type |
-:------ | :------ |
-`PROFILES` | *string* |
+| Name       | Type     |
+| :--------- | :------- |
+| `PROFILES` | _string_ |
 
-Defined in: [profile/ProfileAPI.ts:23](https://github.com/bennycode/coinbase-pro-node/blob/a54e177/src/profile/ProfileAPI.ts#L23)
+Defined in: [profile/ProfileAPI.ts:23](https://github.com/bennycode/coinbase-pro-node/blob/1018fbd/src/profile/ProfileAPI.ts#L23)
 
 ## Methods
 
 ### getProfile
 
-▸ **getProfile**(`profileId`: *string*): *Promise*<*null* \| [*Profile*](../interfaces/profile.md)\>
+▸ **getProfile**(`profileId`: _string_): _Promise_<`null` \| [_Profile_](../interfaces/profile.md)\>
 
-Get a single profile by profile ID.
-This endpoint requires the “view” permission and is accessible by any profile’s API key.
+Get a single profile by profile ID. This endpoint requires the “view” permission and is accessible by any profile’s API key.
 
 #### Parameters:
 
-Name | Type | Description |
-:------ | :------ | :------ |
-`profileId` | *string* | Profile ID   |
+| Name        | Type     | Description |
+| :---------- | :------- | :---------- |
+| `profileId` | _string_ | Profile ID  |
 
-**Returns:** *Promise*<*null* \| [*Profile*](../interfaces/profile.md)\>
+**Returns:** _Promise_<`null` \| [_Profile_](../interfaces/profile.md)\>
 
 A single profile
 
-Defined in: [profile/ProfileAPI.ts:57](https://github.com/bennycode/coinbase-pro-node/blob/a54e177/src/profile/ProfileAPI.ts#L57)
+Defined in: [profile/ProfileAPI.ts:57](https://github.com/bennycode/coinbase-pro-node/blob/1018fbd/src/profile/ProfileAPI.ts#L57)
 
-___
+---
 
 ### listProfiles
 
-▸ **listProfiles**(`active?`: *true*): *Promise*<[*Profile*](../interfaces/profile.md)[]\>
+▸ **listProfiles**(`active?`: `true`): _Promise_<[_Profile_](../interfaces/profile.md)[]\>
 
-List your profiles. Profiles are equivalent to portfolios.
-This endpoint requires the “view” permission and is accessible by any profile’s API key.
+List your profiles. Profiles are equivalent to portfolios. This endpoint requires the “view” permission and is accessible by any profile’s API key.
 
 **`see`** https://docs.pro.coinbase.com/#list-profiles
 
 #### Parameters:
 
-Name | Type | Description |
-:------ | :------ | :------ |
-`active?` | *true* | Only return active profiles if set true   |
+| Name      | Type   | Description                             |
+| :-------- | :----- | :-------------------------------------- |
+| `active?` | `true` | Only return active profiles if set true |
 
-**Returns:** *Promise*<[*Profile*](../interfaces/profile.md)[]\>
+**Returns:** _Promise_<[_Profile_](../interfaces/profile.md)[]\>
 
-Defined in: [profile/ProfileAPI.ts:36](https://github.com/bennycode/coinbase-pro-node/blob/a54e177/src/profile/ProfileAPI.ts#L36)
+Defined in: [profile/ProfileAPI.ts:36](https://github.com/bennycode/coinbase-pro-node/blob/1018fbd/src/profile/ProfileAPI.ts#L36)
 
-___
+---
 
 ### transferFunds
 
-▸ **transferFunds**(`transfer`: [*FundTransfer*](../interfaces/fundtransfer.md)): *Promise*<void\>
+▸ **transferFunds**(`transfer`: [_FundTransfer_](../interfaces/fundtransfer.md)): _Promise_<void\>
 
-Transfer funds from API key’s profile to another user owned profile.
-This endpoint requires the “transfer” permission.
+Transfer funds from API key’s profile to another user owned profile. This endpoint requires the “transfer” permission.
 
 **`see`** https://docs.pro.coinbase.com/#create-profile-transfer
 
 #### Parameters:
 
-Name | Type |
-:------ | :------ |
-`transfer` | [*FundTransfer*](../interfaces/fundtransfer.md) |
+| Name       | Type                                            |
+| :--------- | :---------------------------------------------- |
+| `transfer` | [_FundTransfer_](../interfaces/fundtransfer.md) |
 
-**Returns:** *Promise*<void\>
+**Returns:** _Promise_<void\>
 
-Defined in: [profile/ProfileAPI.ts:77](https://github.com/bennycode/coinbase-pro-node/blob/a54e177/src/profile/ProfileAPI.ts#L77)
+Defined in: [profile/ProfileAPI.ts:77](https://github.com/bennycode/coinbase-pro-node/blob/1018fbd/src/profile/ProfileAPI.ts#L77)

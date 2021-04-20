@@ -11,52 +11,52 @@
 - [currency](account.md#currency)
 - [hold](account.md#hold)
 - [id](account.md#id)
-- [profile\_id](account.md#profile_id)
+- [profile_id](account.md#profile_id)
 
 ## Properties
 
 ### available
 
-• **available**: *string*
+• **available**: _string_
 
-Defined in: [account/AccountAPI.ts:5](https://github.com/bennycode/coinbase-pro-node/blob/a54e177/src/account/AccountAPI.ts#L5)
+Defined in: [account/AccountAPI.ts:5](https://github.com/bennycode/coinbase-pro-node/blob/1018fbd/src/account/AccountAPI.ts#L5)
 
-___
+---
 
 ### balance
 
-• **balance**: *string*
+• **balance**: _string_
 
-Defined in: [account/AccountAPI.ts:6](https://github.com/bennycode/coinbase-pro-node/blob/a54e177/src/account/AccountAPI.ts#L6)
+Defined in: [account/AccountAPI.ts:6](https://github.com/bennycode/coinbase-pro-node/blob/1018fbd/src/account/AccountAPI.ts#L6)
 
-___
+---
 
 ### currency
 
-• **currency**: *string*
+• **currency**: _string_
 
-Defined in: [account/AccountAPI.ts:7](https://github.com/bennycode/coinbase-pro-node/blob/a54e177/src/account/AccountAPI.ts#L7)
+Defined in: [account/AccountAPI.ts:7](https://github.com/bennycode/coinbase-pro-node/blob/1018fbd/src/account/AccountAPI.ts#L7)
 
-___
+---
 
 ### hold
 
-• **hold**: *string*
+• **hold**: _string_
 
-Defined in: [account/AccountAPI.ts:8](https://github.com/bennycode/coinbase-pro-node/blob/a54e177/src/account/AccountAPI.ts#L8)
+Defined in: [account/AccountAPI.ts:8](https://github.com/bennycode/coinbase-pro-node/blob/1018fbd/src/account/AccountAPI.ts#L8)
 
-___
+---
 
 ### id
 
-• **id**: *string*
+• **id**: _string_
 
-Defined in: [account/AccountAPI.ts:9](https://github.com/bennycode/coinbase-pro-node/blob/a54e177/src/account/AccountAPI.ts#L9)
+Defined in: [account/AccountAPI.ts:9](https://github.com/bennycode/coinbase-pro-node/blob/1018fbd/src/account/AccountAPI.ts#L9)
 
-___
+---
 
-### profile\_id
+### profile_id
 
-• **profile\_id**: *string*
+• **profile_id**: _string_
 
-Defined in: [account/AccountAPI.ts:10](https://github.com/bennycode/coinbase-pro-node/blob/a54e177/src/account/AccountAPI.ts#L10)
+Defined in: [account/AccountAPI.ts:10](https://github.com/bennycode/coinbase-pro-node/blob/1018fbd/src/account/AccountAPI.ts#L10)

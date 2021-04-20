@@ -6,39 +6,39 @@
 
 ### Enumeration members
 
-- [FILL\_OR\_KILL](timeinforce.md#fill_or_kill)
-- [GOOD\_TILL\_CANCELED](timeinforce.md#good_till_canceled)
-- [GOOD\_TILL\_TIME](timeinforce.md#good_till_time)
-- [IMMEDIATE\_OR\_CANCEL](timeinforce.md#immediate_or_cancel)
+- [FILL_OR_KILL](timeinforce.md#fill_or_kill)
+- [GOOD_TILL_CANCELED](timeinforce.md#good_till_canceled)
+- [GOOD_TILL_TIME](timeinforce.md#good_till_time)
+- [IMMEDIATE_OR_CANCEL](timeinforce.md#immediate_or_cancel)
 
 ## Enumeration members
 
-### FILL\_OR\_KILL
+### FILL_OR_KILL
 
-• **FILL\_OR\_KILL**: = "FOK"
+• **FILL_OR_KILL**: = "FOK"
 
-Defined in: [order/OrderAPI.ts:10](https://github.com/bennycode/coinbase-pro-node/blob/a54e177/src/order/OrderAPI.ts#L10)
+Defined in: [order/OrderAPI.ts:10](https://github.com/bennycode/coinbase-pro-node/blob/1018fbd/src/order/OrderAPI.ts#L10)
 
-___
+---
 
-### GOOD\_TILL\_CANCELED
+### GOOD_TILL_CANCELED
 
-• **GOOD\_TILL\_CANCELED**: = "GTC"
+• **GOOD_TILL_CANCELED**: = "GTC"
 
-Defined in: [order/OrderAPI.ts:11](https://github.com/bennycode/coinbase-pro-node/blob/a54e177/src/order/OrderAPI.ts#L11)
+Defined in: [order/OrderAPI.ts:11](https://github.com/bennycode/coinbase-pro-node/blob/1018fbd/src/order/OrderAPI.ts#L11)
 
-___
+---
 
-### GOOD\_TILL\_TIME
+### GOOD_TILL_TIME
 
-• **GOOD\_TILL\_TIME**: = "GTT"
+• **GOOD_TILL_TIME**: = "GTT"
 
-Defined in: [order/OrderAPI.ts:12](https://github.com/bennycode/coinbase-pro-node/blob/a54e177/src/order/OrderAPI.ts#L12)
+Defined in: [order/OrderAPI.ts:12](https://github.com/bennycode/coinbase-pro-node/blob/1018fbd/src/order/OrderAPI.ts#L12)
 
-___
+---
 
-### IMMEDIATE\_OR\_CANCEL
+### IMMEDIATE_OR_CANCEL
 
-• **IMMEDIATE\_OR\_CANCEL**: = "IOC"
+• **IMMEDIATE_OR_CANCEL**: = "IOC"
 
-Defined in: [order/OrderAPI.ts:13](https://github.com/bennycode/coinbase-pro-node/blob/a54e177/src/order/OrderAPI.ts#L13)
+Defined in: [order/OrderAPI.ts:13](https://github.com/bennycode/coinbase-pro-node/blob/1018fbd/src/order/OrderAPI.ts#L13)

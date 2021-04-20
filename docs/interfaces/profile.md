@@ -7,56 +7,56 @@
 ### Properties
 
 - [active](profile.md#active)
-- [created\_at](profile.md#created_at)
+- [created_at](profile.md#created_at)
 - [id](profile.md#id)
-- [is\_default](profile.md#is_default)
+- [is_default](profile.md#is_default)
 - [name](profile.md#name)
-- [user\_id](profile.md#user_id)
+- [user_id](profile.md#user_id)
 
 ## Properties
 
 ### active
 
-• **active**: *boolean*
+• **active**: _boolean_
 
-Defined in: [profile/ProfileAPI.ts:7](https://github.com/bennycode/coinbase-pro-node/blob/a54e177/src/profile/ProfileAPI.ts#L7)
+Defined in: [profile/ProfileAPI.ts:7](https://github.com/bennycode/coinbase-pro-node/blob/1018fbd/src/profile/ProfileAPI.ts#L7)
 
-___
+---
 
-### created\_at
+### created_at
 
-• **created\_at**: *string*
+• **created_at**: _string_
 
-Defined in: [profile/ProfileAPI.ts:8](https://github.com/bennycode/coinbase-pro-node/blob/a54e177/src/profile/ProfileAPI.ts#L8)
+Defined in: [profile/ProfileAPI.ts:8](https://github.com/bennycode/coinbase-pro-node/blob/1018fbd/src/profile/ProfileAPI.ts#L8)
 
-___
+---
 
 ### id
 
-• **id**: *string*
+• **id**: _string_
 
-Defined in: [profile/ProfileAPI.ts:9](https://github.com/bennycode/coinbase-pro-node/blob/a54e177/src/profile/ProfileAPI.ts#L9)
+Defined in: [profile/ProfileAPI.ts:9](https://github.com/bennycode/coinbase-pro-node/blob/1018fbd/src/profile/ProfileAPI.ts#L9)
 
-___
+---
 
-### is\_default
+### is_default
 
-• **is\_default**: *boolean*
+• **is_default**: _boolean_
 
-Defined in: [profile/ProfileAPI.ts:10](https://github.com/bennycode/coinbase-pro-node/blob/a54e177/src/profile/ProfileAPI.ts#L10)
+Defined in: [profile/ProfileAPI.ts:10](https://github.com/bennycode/coinbase-pro-node/blob/1018fbd/src/profile/ProfileAPI.ts#L10)
 
-___
+---
 
 ### name
 
-• **name**: *string*
+• **name**: _string_
 
-Defined in: [profile/ProfileAPI.ts:11](https://github.com/bennycode/coinbase-pro-node/blob/a54e177/src/profile/ProfileAPI.ts#L11)
+Defined in: [profile/ProfileAPI.ts:11](https://github.com/bennycode/coinbase-pro-node/blob/1018fbd/src/profile/ProfileAPI.ts#L11)
 
-___
+---
 
-### user\_id
+### user_id
 
-• **user\_id**: *string*
+• **user_id**: _string_
 
-Defined in: [profile/ProfileAPI.ts:12](https://github.com/bennycode/coinbase-pro-node/blob/a54e177/src/profile/ProfileAPI.ts#L12)
+Defined in: [profile/ProfileAPI.ts:12](https://github.com/bennycode/coinbase-pro-node/blob/1018fbd/src/profile/ProfileAPI.ts#L12)

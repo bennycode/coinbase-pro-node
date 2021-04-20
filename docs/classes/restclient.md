@@ -4,7 +4,7 @@
 
 ## Hierarchy
 
-* *EventEmitter*
+- _EventEmitter_
 
   ↳ **RESTClient**
 
@@ -42,106 +42,106 @@
 
 ### constructor
 
-\+ **new RESTClient**(`baseURL`: *string*, `signRequest`: (`setup`: RequestSetup) => *Promise*<SignedRequest\>): [*RESTClient*](restclient.md)
+\+ **new RESTClient**(`baseURL`: _string_, `signRequest`: (`setup`: RequestSetup) => _Promise_<SignedRequest\>): [_RESTClient_](restclient.md)
 
 #### Parameters:
 
-Name | Type |
-:------ | :------ |
-`baseURL` | *string* |
-`signRequest` | (`setup`: RequestSetup) => *Promise*<SignedRequest\> |
+| Name          | Type                                                 |
+| :------------ | :--------------------------------------------------- |
+| `baseURL`     | _string_                                             |
+| `signRequest` | (`setup`: RequestSetup) => _Promise_<SignedRequest\> |
 
-**Returns:** [*RESTClient*](restclient.md)
+**Returns:** [_RESTClient_](restclient.md)
 
-Defined in: [client/RESTClient.ts:53](https://github.com/bennycode/coinbase-pro-node/blob/a54e177/src/client/RESTClient.ts#L53)
+Defined in: [client/RESTClient.ts:53](https://github.com/bennycode/coinbase-pro-node/blob/1018fbd/src/client/RESTClient.ts#L53)
 
 ## Properties
 
 ### account
 
-• `Readonly` **account**: [*AccountAPI*](accountapi.md)
+• `Readonly` **account**: [_AccountAPI_](accountapi.md)
 
-Defined in: [client/RESTClient.ts:40](https://github.com/bennycode/coinbase-pro-node/blob/a54e177/src/client/RESTClient.ts#L40)
+Defined in: [client/RESTClient.ts:40](https://github.com/bennycode/coinbase-pro-node/blob/1018fbd/src/client/RESTClient.ts#L40)
 
-___
+---
 
 ### currency
 
-• `Readonly` **currency**: [*CurrencyAPI*](currencyapi.md)
+• `Readonly` **currency**: [_CurrencyAPI_](currencyapi.md)
 
-Defined in: [client/RESTClient.ts:41](https://github.com/bennycode/coinbase-pro-node/blob/a54e177/src/client/RESTClient.ts#L41)
+Defined in: [client/RESTClient.ts:41](https://github.com/bennycode/coinbase-pro-node/blob/1018fbd/src/client/RESTClient.ts#L41)
 
-___
+---
 
 ### fee
 
-• `Readonly` **fee**: [*FeeAPI*](feeapi.md)
+• `Readonly` **fee**: [_FeeAPI_](feeapi.md)
 
-Defined in: [client/RESTClient.ts:42](https://github.com/bennycode/coinbase-pro-node/blob/a54e177/src/client/RESTClient.ts#L42)
+Defined in: [client/RESTClient.ts:42](https://github.com/bennycode/coinbase-pro-node/blob/1018fbd/src/client/RESTClient.ts#L42)
 
-___
+---
 
 ### fill
 
-• `Readonly` **fill**: [*FillAPI*](fillapi.md)
+• `Readonly` **fill**: [_FillAPI_](fillapi.md)
 
-Defined in: [client/RESTClient.ts:43](https://github.com/bennycode/coinbase-pro-node/blob/a54e177/src/client/RESTClient.ts#L43)
+Defined in: [client/RESTClient.ts:43](https://github.com/bennycode/coinbase-pro-node/blob/1018fbd/src/client/RESTClient.ts#L43)
 
-___
+---
 
 ### order
 
-• `Readonly` **order**: [*OrderAPI*](orderapi.md)
+• `Readonly` **order**: [_OrderAPI_](orderapi.md)
 
-Defined in: [client/RESTClient.ts:44](https://github.com/bennycode/coinbase-pro-node/blob/a54e177/src/client/RESTClient.ts#L44)
+Defined in: [client/RESTClient.ts:44](https://github.com/bennycode/coinbase-pro-node/blob/1018fbd/src/client/RESTClient.ts#L44)
 
-___
+---
 
 ### product
 
-• `Readonly` **product**: [*ProductAPI*](productapi.md)
+• `Readonly` **product**: [_ProductAPI_](productapi.md)
 
-Defined in: [client/RESTClient.ts:45](https://github.com/bennycode/coinbase-pro-node/blob/a54e177/src/client/RESTClient.ts#L45)
+Defined in: [client/RESTClient.ts:45](https://github.com/bennycode/coinbase-pro-node/blob/1018fbd/src/client/RESTClient.ts#L45)
 
-___
+---
 
 ### profile
 
-• `Readonly` **profile**: [*ProfileAPI*](profileapi.md)
+• `Readonly` **profile**: [_ProfileAPI_](profileapi.md)
 
-Defined in: [client/RESTClient.ts:46](https://github.com/bennycode/coinbase-pro-node/blob/a54e177/src/client/RESTClient.ts#L46)
+Defined in: [client/RESTClient.ts:46](https://github.com/bennycode/coinbase-pro-node/blob/1018fbd/src/client/RESTClient.ts#L46)
 
-___
+---
 
 ### time
 
-• `Readonly` **time**: [*TimeAPI*](timeapi.md)
+• `Readonly` **time**: [_TimeAPI_](timeapi.md)
 
-Defined in: [client/RESTClient.ts:47](https://github.com/bennycode/coinbase-pro-node/blob/a54e177/src/client/RESTClient.ts#L47)
+Defined in: [client/RESTClient.ts:47](https://github.com/bennycode/coinbase-pro-node/blob/1018fbd/src/client/RESTClient.ts#L47)
 
-___
+---
 
 ### transfer
 
-• `Readonly` **transfer**: *TransferAPI*
+• `Readonly` **transfer**: _TransferAPI_
 
-Defined in: [client/RESTClient.ts:48](https://github.com/bennycode/coinbase-pro-node/blob/a54e177/src/client/RESTClient.ts#L48)
+Defined in: [client/RESTClient.ts:48](https://github.com/bennycode/coinbase-pro-node/blob/1018fbd/src/client/RESTClient.ts#L48)
 
-___
+---
 
 ### user
 
-• `Readonly` **user**: [*UserAPI*](userapi.md)
+• `Readonly` **user**: [_UserAPI_](userapi.md)
 
-Defined in: [client/RESTClient.ts:49](https://github.com/bennycode/coinbase-pro-node/blob/a54e177/src/client/RESTClient.ts#L49)
+Defined in: [client/RESTClient.ts:49](https://github.com/bennycode/coinbase-pro-node/blob/1018fbd/src/client/RESTClient.ts#L49)
 
-___
+---
 
 ### withdraw
 
-• `Readonly` **withdraw**: *WithdrawAPI*
+• `Readonly` **withdraw**: _WithdrawAPI_
 
-Defined in: [client/RESTClient.ts:50](https://github.com/bennycode/coinbase-pro-node/blob/a54e177/src/client/RESTClient.ts#L50)
+Defined in: [client/RESTClient.ts:50](https://github.com/bennycode/coinbase-pro-node/blob/1018fbd/src/client/RESTClient.ts#L50)
 
 ## Accessors
 
@@ -151,52 +151,52 @@ Defined in: [client/RESTClient.ts:50](https://github.com/bennycode/coinbase-pro-
 
 **Returns:** AxiosRequestConfig
 
-Defined in: [client/RESTClient.ts:29](https://github.com/bennycode/coinbase-pro-node/blob/a54e177/src/client/RESTClient.ts#L29)
+Defined in: [client/RESTClient.ts:29](https://github.com/bennycode/coinbase-pro-node/blob/1018fbd/src/client/RESTClient.ts#L29)
 
-___
+---
 
 ### interceptors
 
-• get **interceptors**(): *object*
+• get **interceptors**(): _object_
 
-**Returns:** *object*
+**Returns:** _object_
 
-Name | Type |
-:------ | :------ |
-`request` | *AxiosInterceptorManager*<AxiosRequestConfig\> |
-`response` | *AxiosInterceptorManager*<AxiosResponse<any\>\> |
+| Name       | Type                                            |
+| :--------- | :---------------------------------------------- |
+| `request`  | _AxiosInterceptorManager_<AxiosRequestConfig\>  |
+| `response` | _AxiosInterceptorManager_<AxiosResponse<any\>\> |
 
-Defined in: [client/RESTClient.ts:33](https://github.com/bennycode/coinbase-pro-node/blob/a54e177/src/client/RESTClient.ts#L33)
+Defined in: [client/RESTClient.ts:33](https://github.com/bennycode/coinbase-pro-node/blob/1018fbd/src/client/RESTClient.ts#L33)
 
 ## Methods
 
 ### on
 
-▸ **on**(`event`: [*NEW\_CANDLE*](../enums/productevent.md#new_candle), `listener`: (`productId`: *string*, `granularity`: [*CandleGranularity*](../enums/candlegranularity.md), `candle`: [*Candle*](../interfaces/candle.md)) => *void*): [*RESTClient*](restclient.md)
+▸ **on**(`event`: [_NEW_CANDLE_](../enums/productevent.md#new_candle), `listener`: (`productId`: _string_, `granularity`: [_CandleGranularity_](../enums/candlegranularity.md), `candle`: [_Candle_](../interfaces/candle.md)) => _void_): [_RESTClient_](restclient.md)
 
 #### Parameters:
 
-Name | Type |
-:------ | :------ |
-`event` | [*NEW\_CANDLE*](../enums/productevent.md#new_candle) |
-`listener` | (`productId`: *string*, `granularity`: [*CandleGranularity*](../enums/candlegranularity.md), `candle`: [*Candle*](../interfaces/candle.md)) => *void* |
+| Name | Type |
+| :-- | :-- |
+| `event` | [_NEW_CANDLE_](../enums/productevent.md#new_candle) |
+| `listener` | (`productId`: _string_, `granularity`: [_CandleGranularity_](../enums/candlegranularity.md), `candle`: [_Candle_](../interfaces/candle.md)) => _void_ |
 
-**Returns:** [*RESTClient*](restclient.md)
+**Returns:** [_RESTClient_](restclient.md)
 
-Defined in: [client/RESTClient.ts:21](https://github.com/bennycode/coinbase-pro-node/blob/a54e177/src/client/RESTClient.ts#L21)
+Defined in: [client/RESTClient.ts:21](https://github.com/bennycode/coinbase-pro-node/blob/1018fbd/src/client/RESTClient.ts#L21)
 
-___
+---
 
 ### stringifyPayload
 
-▸ `Static`**stringifyPayload**(`config`: AxiosRequestConfig): *string*
+▸ `Static`**stringifyPayload**(`config`: AxiosRequestConfig): _string_
 
 #### Parameters:
 
-Name | Type |
-:------ | :------ |
-`config` | AxiosRequestConfig |
+| Name     | Type               |
+| :------- | :----------------- |
+| `config` | AxiosRequestConfig |
 
-**Returns:** *string*
+**Returns:** _string_
 
-Defined in: [client/RESTClient.ts:119](https://github.com/bennycode/coinbase-pro-node/blob/a54e177/src/client/RESTClient.ts#L119)
+Defined in: [client/RESTClient.ts:120](https://github.com/bennycode/coinbase-pro-node/blob/1018fbd/src/client/RESTClient.ts#L120)

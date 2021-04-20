@@ -2,8 +2,7 @@
 
 # Interface: OrderBookLevel3
 
-Full order book (non aggregated): Level 3 is only recommended for users wishing to maintain a full real-time order
-book using the websocket stream. Abuse of Level 3 via polling will cause your access to be limited or blocked.
+Full order book (non aggregated): Level 3 is only recommended for users wishing to maintain a full real-time order book using the websocket stream. Abuse of Level 3 via polling will cause your access to be limited or blocked.
 
 ## Table of contents
 
@@ -19,20 +18,20 @@ book using the websocket stream. Abuse of Level 3 via polling will cause your ac
 
 • **asks**: NonAggregatedOrder[]
 
-Defined in: [product/ProductAPI.ts:128](https://github.com/bennycode/coinbase-pro-node/blob/a54e177/src/product/ProductAPI.ts#L128)
+Defined in: [product/ProductAPI.ts:128](https://github.com/bennycode/coinbase-pro-node/blob/1018fbd/src/product/ProductAPI.ts#L128)
 
-___
+---
 
 ### bids
 
 • **bids**: NonAggregatedOrder[]
 
-Defined in: [product/ProductAPI.ts:129](https://github.com/bennycode/coinbase-pro-node/blob/a54e177/src/product/ProductAPI.ts#L129)
+Defined in: [product/ProductAPI.ts:129](https://github.com/bennycode/coinbase-pro-node/blob/1018fbd/src/product/ProductAPI.ts#L129)
 
-___
+---
 
 ### sequence
 
-• **sequence**: *number*
+• **sequence**: _number_
 
-Defined in: [product/ProductAPI.ts:130](https://github.com/bennycode/coinbase-pro-node/blob/a54e177/src/product/ProductAPI.ts#L130)
+Defined in: [product/ProductAPI.ts:130](https://github.com/bennycode/coinbase-pro-node/blob/1018fbd/src/product/ProductAPI.ts#L130)
