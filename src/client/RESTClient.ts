@@ -58,7 +58,7 @@ export class RESTClient extends EventEmitter {
 
     this.httpClient = axios.create({
       baseURL: baseURL,
-      timeout: 5000,
+      timeout: 50_000,
     });
 
     axiosRetry(this.httpClient, {
@@ -69,7 +69,7 @@ export class RESTClient extends EventEmitter {
       retryDelay: (retryCount: number, error: AxiosError) => {
         const errorMessage = getErrorMessage(error);
         this.logger(
-          `#${retryCount} There was an error querying "${error.config.baseURL}${error.request.path}": ${errorMessage}`
+          `#${retryCount} There was an error querying "${error.config.baseURL}${error.config.url}": ${errorMessage}`
         );
         /**
          * Rate limits:

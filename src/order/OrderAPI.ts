@@ -94,13 +94,18 @@ export interface FilledOrder extends BasePlacedOrder {
   status: OrderStatus.DONE;
 }
 
-/** @see https://docs.pro.coinbase.com/#list-orders */
-export interface OrderListQueryParam extends Pagination {
+export interface QueryListByProductId extends Pagination {
   /** Only list orders for a specific product. */
-  product_id?: string;
+  product_id: string;
+}
+
+export interface OrderListByStatus extends Pagination {
   /** Limit list of orders to these statuses. Passing "all" returns orders of all statuses. Default: [open, pending, active] */
   status?: (OrderStatus | 'all')[];
 }
+
+/** @see https://docs.pro.coinbase.com/#list-orders */
+export type OrderListQueryParam = OrderListByStatus | QueryListByProductId;
 
 export type Order = PendingOrder | FilledOrder;
 
@@ -143,16 +148,24 @@ export class OrderAPI {
   }
 
   /**
-   * List your orders from the profile that the API key belongs to.
+   * List your orders from the profile that the API key belongs to. Only open or un-settled orders are returned. As
+   * soon as an order is no longer open and settled, it will no longer appear in the default request.
    *
+   * @note Depending on your activity, fetching all data from this endpoint can take very long (measured already 25
+   *   seconds!)
    * @param query - Available query parameters (Pagination, Product ID and/or Order Status)
    * @see https://docs.pro.coinbase.com/#list-orders
    */
   async getOrders(query?: OrderListQueryParam): Promise<PaginatedData<Order>> {
     const resource = OrderAPI.URL.ORDERS;
     let status = '';
-    if (query?.status) {
-      status = '?' + query.status.map(s => `status=${s}`).join('&');
+
+    function listByStatus(query: any): query is OrderListByStatus {
+      return !!query.status;
+    }
+
+    if (listByStatus(query)) {
+      status = '?' + query.status!.map(s => `status=${s}`).join('&');
       delete query.status;
     }
     const response = await this.apiClient.get<Order[]>(`${resource}${status}`, {
