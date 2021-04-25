@@ -16,7 +16,7 @@
 
 • **currencies**: { `convertible_to`: _string_[] ; `details`: [_CurrencyDetail_](currencydetail.md) ; `funding_account_id`: _string_ ; `id`: _string_ ; `max_precision`: _string_ ; `min_size`: _string_ ; `name`: _string_ ; `status`: `"online"` ; `status_message?`: _string_ }[]
 
-Defined in: [client/WebSocketClient.ts:153](https://github.com/bennycode/coinbase-pro-node/blob/1018fbd/src/client/WebSocketClient.ts#L153)
+Defined in: [client/WebSocketClient.ts:153](https://github.com/bennycode/coinbase-pro-node/blob/baa73d4/src/client/WebSocketClient.ts#L153)
 
 ---
 
@@ -24,7 +24,7 @@ Defined in: [client/WebSocketClient.ts:153](https://github.com/bennycode/coinbas
 
 • **products**: [_Product_](product.md) & { `type`: `"spot"` }[]
 
-Defined in: [client/WebSocketClient.ts:164](https://github.com/bennycode/coinbase-pro-node/blob/1018fbd/src/client/WebSocketClient.ts#L164)
+Defined in: [client/WebSocketClient.ts:164](https://github.com/bennycode/coinbase-pro-node/blob/baa73d4/src/client/WebSocketClient.ts#L164)
 
 ---
 
@@ -32,4 +32,4 @@ Defined in: [client/WebSocketClient.ts:164](https://github.com/bennycode/coinbas
 
 • **type**: [_STATUS_](../enums/websocketresponsetype.md#status)
 
-Defined in: [client/WebSocketClient.ts:165](https://github.com/bennycode/coinbase-pro-node/blob/1018fbd/src/client/WebSocketClient.ts#L165)
+Defined in: [client/WebSocketClient.ts:165](https://github.com/bennycode/coinbase-pro-node/blob/baa73d4/src/client/WebSocketClient.ts#L165)

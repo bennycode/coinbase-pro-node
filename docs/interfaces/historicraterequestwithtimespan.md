@@ -24,7 +24,7 @@
 
 Opening time (ISO 8601) of last candle, i.e. "2020-04-28T23:00:00.000Z"
 
-Defined in: [product/ProductAPI.ts:77](https://github.com/bennycode/coinbase-pro-node/blob/1018fbd/src/product/ProductAPI.ts#L77)
+Defined in: [product/ProductAPI.ts:77](https://github.com/bennycode/coinbase-pro-node/blob/baa73d4/src/product/ProductAPI.ts#L77)
 
 ---
 
@@ -36,7 +36,7 @@ Desired time slice in seconds.
 
 Inherited from: [BaseHistoricRateRequest](basehistoricraterequest.md).[granularity](basehistoricraterequest.md#granularity)
 
-Defined in: [product/ProductAPI.ts:72](https://github.com/bennycode/coinbase-pro-node/blob/1018fbd/src/product/ProductAPI.ts#L72)
+Defined in: [product/ProductAPI.ts:72](https://github.com/bennycode/coinbase-pro-node/blob/baa73d4/src/product/ProductAPI.ts#L72)
 
 ---
 
@@ -46,4 +46,4 @@ Defined in: [product/ProductAPI.ts:72](https://github.com/bennycode/coinbase-pro
 
 Opening time (ISO 8601) of first candle, i.e. "2020-04-28T00:00:00.000Z"
 
-Defined in: [product/ProductAPI.ts:79](https://github.com/bennycode/coinbase-pro-node/blob/1018fbd/src/product/ProductAPI.ts#L79)
+Defined in: [product/ProductAPI.ts:79](https://github.com/bennycode/coinbase-pro-node/blob/baa73d4/src/product/ProductAPI.ts#L79)

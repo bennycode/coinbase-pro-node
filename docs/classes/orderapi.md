@@ -34,7 +34,7 @@
 
 **Returns:** [_OrderAPI_](orderapi.md)
 
-Defined in: [order/OrderAPI.ts:110](https://github.com/bennycode/coinbase-pro-node/blob/1018fbd/src/order/OrderAPI.ts#L110)
+Defined in: [order/OrderAPI.ts:115](https://github.com/bennycode/coinbase-pro-node/blob/baa73d4/src/order/OrderAPI.ts#L115)
 
 ## Properties
 
@@ -48,7 +48,7 @@ Defined in: [order/OrderAPI.ts:110](https://github.com/bennycode/coinbase-pro-no
 | :------- | :------- |
 | `ORDERS` | _string_ |
 
-Defined in: [order/OrderAPI.ts:108](https://github.com/bennycode/coinbase-pro-node/blob/1018fbd/src/order/OrderAPI.ts#L108)
+Defined in: [order/OrderAPI.ts:113](https://github.com/bennycode/coinbase-pro-node/blob/baa73d4/src/order/OrderAPI.ts#L113)
 
 ## Methods
 
@@ -70,7 +70,7 @@ With best effort, cancel all open orders from the profile that the API key belon
 
 A list of ids of the canceled orders
 
-Defined in: [order/OrderAPI.ts:121](https://github.com/bennycode/coinbase-pro-node/blob/1018fbd/src/order/OrderAPI.ts#L121)
+Defined in: [order/OrderAPI.ts:126](https://github.com/bennycode/coinbase-pro-node/blob/baa73d4/src/order/OrderAPI.ts#L126)
 
 ---
 
@@ -93,7 +93,7 @@ Cancel a previously placed order. Order must belong to the profile that the API 
 
 The ID of the canceled order
 
-Defined in: [order/OrderAPI.ts:137](https://github.com/bennycode/coinbase-pro-node/blob/1018fbd/src/order/OrderAPI.ts#L137)
+Defined in: [order/OrderAPI.ts:142](https://github.com/bennycode/coinbase-pro-node/blob/baa73d4/src/order/OrderAPI.ts#L142)
 
 ---
 
@@ -113,15 +113,17 @@ Get a single order by order id from the profile that the API key belongs to.
 
 **Returns:** _Promise_<`null` \| [_Order_](../modules.md#order)\>
 
-Defined in: [order/OrderAPI.ts:176](https://github.com/bennycode/coinbase-pro-node/blob/1018fbd/src/order/OrderAPI.ts#L176)
+Defined in: [order/OrderAPI.ts:185](https://github.com/bennycode/coinbase-pro-node/blob/baa73d4/src/order/OrderAPI.ts#L185)
 
 ---
 
 ### getOrders
 
-▸ **getOrders**(`query?`: [_OrderListQueryParam_](../interfaces/orderlistqueryparam.md)): _Promise_<[_PaginatedData_](../interfaces/paginateddata.md)<[_Order_](../modules.md#order)\>\>
+▸ **getOrders**(`query?`: [_OrderListQueryParam_](../modules.md#orderlistqueryparam)): _Promise_<[_PaginatedData_](../interfaces/paginateddata.md)<[_Order_](../modules.md#order)\>\>
 
-List your orders from the profile that the API key belongs to.
+List your orders from the profile that the API key belongs to. Only open or un-settled orders are returned. As soon as an order is no longer open and settled, it will no longer appear in the default request.
+
+**`note`** Depending on your activity, fetching all data from this endpoint can take very long (measured already 25 seconds!)
 
 **`see`** https://docs.pro.coinbase.com/#list-orders
 
@@ -129,11 +131,11 @@ List your orders from the profile that the API key belongs to.
 
 | Name | Type | Description |
 | :-- | :-- | :-- |
-| `query?` | [_OrderListQueryParam_](../interfaces/orderlistqueryparam.md) | Available query parameters (Pagination, Product ID and/or Order Status) |
+| `query?` | [_OrderListQueryParam_](../modules.md#orderlistqueryparam) | Available query parameters (Pagination, Product ID and/or Order Status) |
 
 **Returns:** _Promise_<[_PaginatedData_](../interfaces/paginateddata.md)<[_Order_](../modules.md#order)\>\>
 
-Defined in: [order/OrderAPI.ts:151](https://github.com/bennycode/coinbase-pro-node/blob/1018fbd/src/order/OrderAPI.ts#L151)
+Defined in: [order/OrderAPI.ts:159](https://github.com/bennycode/coinbase-pro-node/blob/baa73d4/src/order/OrderAPI.ts#L159)
 
 ---
 
@@ -153,4 +155,4 @@ You can place two types of orders: limit and market. Orders can only be placed i
 
 **Returns:** _Promise_<[_Order_](../modules.md#order)\>
 
-Defined in: [order/OrderAPI.ts:201](https://github.com/bennycode/coinbase-pro-node/blob/1018fbd/src/order/OrderAPI.ts#L201)
+Defined in: [order/OrderAPI.ts:210](https://github.com/bennycode/coinbase-pro-node/blob/baa73d4/src/order/OrderAPI.ts#L210)

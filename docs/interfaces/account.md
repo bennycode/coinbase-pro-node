@@ -19,7 +19,7 @@
 
 • **available**: _string_
 
-Defined in: [account/AccountAPI.ts:5](https://github.com/bennycode/coinbase-pro-node/blob/1018fbd/src/account/AccountAPI.ts#L5)
+Defined in: [account/AccountAPI.ts:5](https://github.com/bennycode/coinbase-pro-node/blob/baa73d4/src/account/AccountAPI.ts#L5)
 
 ---
 
@@ -27,7 +27,7 @@ Defined in: [account/AccountAPI.ts:5](https://github.com/bennycode/coinbase-pro-
 
 • **balance**: _string_
 
-Defined in: [account/AccountAPI.ts:6](https://github.com/bennycode/coinbase-pro-node/blob/1018fbd/src/account/AccountAPI.ts#L6)
+Defined in: [account/AccountAPI.ts:6](https://github.com/bennycode/coinbase-pro-node/blob/baa73d4/src/account/AccountAPI.ts#L6)
 
 ---
 
@@ -35,7 +35,7 @@ Defined in: [account/AccountAPI.ts:6](https://github.com/bennycode/coinbase-pro-
 
 • **currency**: _string_
 
-Defined in: [account/AccountAPI.ts:7](https://github.com/bennycode/coinbase-pro-node/blob/1018fbd/src/account/AccountAPI.ts#L7)
+Defined in: [account/AccountAPI.ts:7](https://github.com/bennycode/coinbase-pro-node/blob/baa73d4/src/account/AccountAPI.ts#L7)
 
 ---
 
@@ -43,7 +43,7 @@ Defined in: [account/AccountAPI.ts:7](https://github.com/bennycode/coinbase-pro-
 
 • **hold**: _string_
 
-Defined in: [account/AccountAPI.ts:8](https://github.com/bennycode/coinbase-pro-node/blob/1018fbd/src/account/AccountAPI.ts#L8)
+Defined in: [account/AccountAPI.ts:8](https://github.com/bennycode/coinbase-pro-node/blob/baa73d4/src/account/AccountAPI.ts#L8)
 
 ---
 
@@ -51,7 +51,7 @@ Defined in: [account/AccountAPI.ts:8](https://github.com/bennycode/coinbase-pro-
 
 • **id**: _string_
 
-Defined in: [account/AccountAPI.ts:9](https://github.com/bennycode/coinbase-pro-node/blob/1018fbd/src/account/AccountAPI.ts#L9)
+Defined in: [account/AccountAPI.ts:9](https://github.com/bennycode/coinbase-pro-node/blob/baa73d4/src/account/AccountAPI.ts#L9)
 
 ---
 
@@ -59,4 +59,4 @@ Defined in: [account/AccountAPI.ts:9](https://github.com/bennycode/coinbase-pro-
 
 • **profile_id**: _string_
 
-Defined in: [account/AccountAPI.ts:10](https://github.com/bennycode/coinbase-pro-node/blob/1018fbd/src/account/AccountAPI.ts#L10)
+Defined in: [account/AccountAPI.ts:10](https://github.com/bennycode/coinbase-pro-node/blob/baa73d4/src/account/AccountAPI.ts#L10)

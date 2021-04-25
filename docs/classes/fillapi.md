@@ -31,7 +31,7 @@
 
 **Returns:** [_FillAPI_](fillapi.md)
 
-Defined in: [fill/FillAPI.ts:28](https://github.com/bennycode/coinbase-pro-node/blob/1018fbd/src/fill/FillAPI.ts#L28)
+Defined in: [fill/FillAPI.ts:28](https://github.com/bennycode/coinbase-pro-node/blob/baa73d4/src/fill/FillAPI.ts#L28)
 
 ## Properties
 
@@ -45,7 +45,7 @@ Defined in: [fill/FillAPI.ts:28](https://github.com/bennycode/coinbase-pro-node/
 | :------ | :------- |
 | `FILLS` | _string_ |
 
-Defined in: [fill/FillAPI.ts:26](https://github.com/bennycode/coinbase-pro-node/blob/1018fbd/src/fill/FillAPI.ts#L26)
+Defined in: [fill/FillAPI.ts:26](https://github.com/bennycode/coinbase-pro-node/blob/baa73d4/src/fill/FillAPI.ts#L26)
 
 ## Methods
 
@@ -68,7 +68,7 @@ Get a list of recent fills for a given Order of the API key's profile.
 
 **Returns:** _Promise_<[_PaginatedData_](../interfaces/paginateddata.md)<[_Fill_](../interfaces/fill.md)\>\>
 
-Defined in: [fill/FillAPI.ts:40](https://github.com/bennycode/coinbase-pro-node/blob/1018fbd/src/fill/FillAPI.ts#L40)
+Defined in: [fill/FillAPI.ts:40](https://github.com/bennycode/coinbase-pro-node/blob/baa73d4/src/fill/FillAPI.ts#L40)
 
 ---
 
@@ -91,4 +91,4 @@ Get a list of recent fills for a given Product of the API key's profile.
 
 **Returns:** _Promise_<[_PaginatedData_](../interfaces/paginateddata.md)<[_Fill_](../interfaces/fill.md)\>\>
 
-Defined in: [fill/FillAPI.ts:60](https://github.com/bennycode/coinbase-pro-node/blob/1018fbd/src/fill/FillAPI.ts#L60)
+Defined in: [fill/FillAPI.ts:60](https://github.com/bennycode/coinbase-pro-node/blob/baa73d4/src/fill/FillAPI.ts#L60)

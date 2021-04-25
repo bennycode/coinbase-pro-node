@@ -29,7 +29,7 @@
 
 **Returns:** [_default_](default.md)
 
-Defined in: [CoinbasePro.ts:52](https://github.com/bennycode/coinbase-pro-node/blob/1018fbd/src/CoinbasePro.ts#L52)
+Defined in: [CoinbasePro.ts:52](https://github.com/bennycode/coinbase-pro-node/blob/baa73d4/src/CoinbasePro.ts#L52)
 
 ## Properties
 
@@ -37,7 +37,7 @@ Defined in: [CoinbasePro.ts:52](https://github.com/bennycode/coinbase-pro-node/b
 
 • `Readonly` **rest**: [_RESTClient_](restclient.md)
 
-Defined in: [CoinbasePro.ts:34](https://github.com/bennycode/coinbase-pro-node/blob/1018fbd/src/CoinbasePro.ts#L34)
+Defined in: [CoinbasePro.ts:34](https://github.com/bennycode/coinbase-pro-node/blob/baa73d4/src/CoinbasePro.ts#L34)
 
 ---
 
@@ -45,7 +45,7 @@ Defined in: [CoinbasePro.ts:34](https://github.com/bennycode/coinbase-pro-node/b
 
 • `Readonly` **url**: [_ClientConnection_](../interfaces/clientconnection.md)
 
-Defined in: [CoinbasePro.ts:35](https://github.com/bennycode/coinbase-pro-node/blob/1018fbd/src/CoinbasePro.ts#L35)
+Defined in: [CoinbasePro.ts:35](https://github.com/bennycode/coinbase-pro-node/blob/baa73d4/src/CoinbasePro.ts#L35)
 
 ---
 
@@ -53,7 +53,7 @@ Defined in: [CoinbasePro.ts:35](https://github.com/bennycode/coinbase-pro-node/b
 
 • `Readonly` **ws**: [_WebSocketClient_](websocketclient.md)
 
-Defined in: [CoinbasePro.ts:36](https://github.com/bennycode/coinbase-pro-node/blob/1018fbd/src/CoinbasePro.ts#L36)
+Defined in: [CoinbasePro.ts:36](https://github.com/bennycode/coinbase-pro-node/blob/baa73d4/src/CoinbasePro.ts#L36)
 
 ---
 
@@ -68,4 +68,4 @@ Defined in: [CoinbasePro.ts:36](https://github.com/bennycode/coinbase-pro-node/b
 | `PRODUCTION` | [_ClientConnection_](../interfaces/clientconnection.md) |
 | `SANDBOX`    | [_ClientConnection_](../interfaces/clientconnection.md) |
 
-Defined in: [CoinbasePro.ts:38](https://github.com/bennycode/coinbase-pro-node/blob/1018fbd/src/CoinbasePro.ts#L38)
+Defined in: [CoinbasePro.ts:38](https://github.com/bennycode/coinbase-pro-node/blob/baa73d4/src/CoinbasePro.ts#L38)

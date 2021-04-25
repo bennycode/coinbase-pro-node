@@ -35,7 +35,7 @@
 
 Inherited from: BaseOrder.client_oid
 
-Defined in: [order/OrderAPI.ts:31](https://github.com/bennycode/coinbase-pro-node/blob/1018fbd/src/order/OrderAPI.ts#L31)
+Defined in: [order/OrderAPI.ts:31](https://github.com/bennycode/coinbase-pro-node/blob/baa73d4/src/order/OrderAPI.ts#L31)
 
 ---
 
@@ -43,7 +43,7 @@ Defined in: [order/OrderAPI.ts:31](https://github.com/bennycode/coinbase-pro-nod
 
 • **price**: _string_
 
-Defined in: [order/OrderAPI.ts:69](https://github.com/bennycode/coinbase-pro-node/blob/1018fbd/src/order/OrderAPI.ts#L69)
+Defined in: [order/OrderAPI.ts:69](https://github.com/bennycode/coinbase-pro-node/blob/baa73d4/src/order/OrderAPI.ts#L69)
 
 ---
 
@@ -53,7 +53,7 @@ Defined in: [order/OrderAPI.ts:69](https://github.com/bennycode/coinbase-pro-nod
 
 Inherited from: BaseOrder.product_id
 
-Defined in: [order/OrderAPI.ts:32](https://github.com/bennycode/coinbase-pro-node/blob/1018fbd/src/order/OrderAPI.ts#L32)
+Defined in: [order/OrderAPI.ts:32](https://github.com/bennycode/coinbase-pro-node/blob/baa73d4/src/order/OrderAPI.ts#L32)
 
 ---
 
@@ -63,7 +63,7 @@ Defined in: [order/OrderAPI.ts:32](https://github.com/bennycode/coinbase-pro-nod
 
 Inherited from: BaseOrder.side
 
-Defined in: [order/OrderAPI.ts:33](https://github.com/bennycode/coinbase-pro-node/blob/1018fbd/src/order/OrderAPI.ts#L33)
+Defined in: [order/OrderAPI.ts:33](https://github.com/bennycode/coinbase-pro-node/blob/baa73d4/src/order/OrderAPI.ts#L33)
 
 ---
 
@@ -71,7 +71,7 @@ Defined in: [order/OrderAPI.ts:33](https://github.com/bennycode/coinbase-pro-nod
 
 • **size**: _string_
 
-Defined in: [order/OrderAPI.ts:70](https://github.com/bennycode/coinbase-pro-node/blob/1018fbd/src/order/OrderAPI.ts#L70)
+Defined in: [order/OrderAPI.ts:70](https://github.com/bennycode/coinbase-pro-node/blob/baa73d4/src/order/OrderAPI.ts#L70)
 
 ---
 
@@ -81,7 +81,7 @@ Defined in: [order/OrderAPI.ts:70](https://github.com/bennycode/coinbase-pro-nod
 
 Inherited from: BaseOrder.stop
 
-Defined in: [order/OrderAPI.ts:34](https://github.com/bennycode/coinbase-pro-node/blob/1018fbd/src/order/OrderAPI.ts#L34)
+Defined in: [order/OrderAPI.ts:34](https://github.com/bennycode/coinbase-pro-node/blob/baa73d4/src/order/OrderAPI.ts#L34)
 
 ---
 
@@ -91,7 +91,7 @@ Defined in: [order/OrderAPI.ts:34](https://github.com/bennycode/coinbase-pro-nod
 
 Inherited from: BaseOrder.stop_price
 
-Defined in: [order/OrderAPI.ts:35](https://github.com/bennycode/coinbase-pro-node/blob/1018fbd/src/order/OrderAPI.ts#L35)
+Defined in: [order/OrderAPI.ts:35](https://github.com/bennycode/coinbase-pro-node/blob/baa73d4/src/order/OrderAPI.ts#L35)
 
 ---
 
@@ -101,7 +101,7 @@ Defined in: [order/OrderAPI.ts:35](https://github.com/bennycode/coinbase-pro-nod
 
 Inherited from: BaseOrder.stp
 
-Defined in: [order/OrderAPI.ts:36](https://github.com/bennycode/coinbase-pro-node/blob/1018fbd/src/order/OrderAPI.ts#L36)
+Defined in: [order/OrderAPI.ts:36](https://github.com/bennycode/coinbase-pro-node/blob/baa73d4/src/order/OrderAPI.ts#L36)
 
 ---
 
@@ -111,7 +111,7 @@ Defined in: [order/OrderAPI.ts:36](https://github.com/bennycode/coinbase-pro-nod
 
 Default is 'GTC'.
 
-Defined in: [order/OrderAPI.ts:72](https://github.com/bennycode/coinbase-pro-node/blob/1018fbd/src/order/OrderAPI.ts#L72)
+Defined in: [order/OrderAPI.ts:72](https://github.com/bennycode/coinbase-pro-node/blob/baa73d4/src/order/OrderAPI.ts#L72)
 
 ---
 
@@ -119,4 +119,4 @@ Defined in: [order/OrderAPI.ts:72](https://github.com/bennycode/coinbase-pro-nod
 
 • **type**: [_LIMIT_](../enums/ordertype.md#limit)
 
-Defined in: [order/OrderAPI.ts:73](https://github.com/bennycode/coinbase-pro-node/blob/1018fbd/src/order/OrderAPI.ts#L73)
+Defined in: [order/OrderAPI.ts:73](https://github.com/bennycode/coinbase-pro-node/blob/baa73d4/src/order/OrderAPI.ts#L73)

@@ -8,7 +8,9 @@
 
 - **Pagination**
 
-  ↳ [_OrderListQueryParam_](orderlistqueryparam.md)
+  ↳ [_QueryListByProductId_](querylistbyproductid.md)
+
+  ↳ [_OrderListByStatus_](orderlistbystatus.md)
 
 ## Table of contents
 
@@ -26,7 +28,7 @@
 
 Request page after (older) this pagination id.
 
-Defined in: [payload/common.ts:15](https://github.com/bennycode/coinbase-pro-node/blob/1018fbd/src/payload/common.ts#L15)
+Defined in: [payload/common.ts:15](https://github.com/bennycode/coinbase-pro-node/blob/baa73d4/src/payload/common.ts#L15)
 
 ---
 
@@ -36,7 +38,7 @@ Defined in: [payload/common.ts:15](https://github.com/bennycode/coinbase-pro-nod
 
 Request page before (newer) this pagination id.
 
-Defined in: [payload/common.ts:17](https://github.com/bennycode/coinbase-pro-node/blob/1018fbd/src/payload/common.ts#L17)
+Defined in: [payload/common.ts:17](https://github.com/bennycode/coinbase-pro-node/blob/baa73d4/src/payload/common.ts#L17)
 
 ---
 
@@ -46,4 +48,4 @@ Defined in: [payload/common.ts:17](https://github.com/bennycode/coinbase-pro-nod
 
 Number of results per request. Maximum 100. Default 100.
 
-Defined in: [payload/common.ts:19](https://github.com/bennycode/coinbase-pro-node/blob/1018fbd/src/payload/common.ts#L19)
+Defined in: [payload/common.ts:19](https://github.com/bennycode/coinbase-pro-node/blob/baa73d4/src/payload/common.ts#L19)
