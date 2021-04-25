@@ -1,3 +1,20 @@
+#### 3.0.3 (2021-04-25)
+
+##### Chores
+
+- **deps-dev:**
+  - bump eslint-config-prettier from 8.2.0 to 8.3.0 ([#472](https://github.com/bennycode/coinbase-pro-node/pull/472)) ([46448441](https://github.com/bennycode/coinbase-pro-node/commit/46448441bc5a50d76b80749866f657af4598b5bd))
+  - bump eslint from 7.24.0 to 7.25.0 ([#474](https://github.com/bennycode/coinbase-pro-node/pull/474)) ([09e6b946](https://github.com/bennycode/coinbase-pro-node/commit/09e6b94636ade63ba51a1f4785970374e2b3f3ae))
+  - bump typedoc from 0.20.35 to 0.20.36 ([#473](https://github.com/bennycode/coinbase-pro-node/pull/473)) ([5b3ee5d2](https://github.com/bennycode/coinbase-pro-node/commit/5b3ee5d2b9403e82174c090a3dae86b9a766f622))
+
+##### Documentation Changes
+
+- Add demo script to watch candles ([b3a53977](https://github.com/bennycode/coinbase-pro-node/commit/b3a53977b17c523700be04ae99306de1336aaf48))
+
+##### Bug Fixes
+
+- **order:** Make order list by status and product id mutually exclusive ([#475](https://github.com/bennycode/coinbase-pro-node/pull/475)) ([68c7f029](https://github.com/bennycode/coinbase-pro-node/commit/68c7f029c49cd76b3be6c2f244ad23dadd3d8ab7))
+
 #### 3.0.2 (2021-04-20)
 
 ##### Chores
