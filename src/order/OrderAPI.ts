@@ -160,13 +160,9 @@ export class OrderAPI {
     const resource = OrderAPI.URL.ORDERS;
     let status = '';
 
-    function listByStatus(query: any): query is OrderListByStatus {
-      return !!query.status;
-    }
-
-    if (listByStatus(query)) {
-      status = '?' + query.status!.map(s => `status=${s}`).join('&');
-      delete query.status;
+    if ((query as OrderListByStatus)?.status) {
+      status = '?' + (query as OrderListByStatus).status!.map(s => `status=${s}`).join('&');
+      delete (query as OrderListByStatus).status;
     }
     const response = await this.apiClient.get<Order[]>(`${resource}${status}`, {
       params: query,
