@@ -14,4 +14,4 @@
 
 • **NEW_CANDLE**: = "ProductEvent.NEW_CANDLE"
 
-Defined in: [product/ProductAPI.ts:174](https://github.com/bennycode/coinbase-pro-node/blob/baa73d4/src/product/ProductAPI.ts#L174)
+Defined in: [product/ProductAPI.ts:174](https://github.com/bennycode/coinbase-pro-node/blob/a2d34d0/src/product/ProductAPI.ts#L174)

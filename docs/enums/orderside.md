@@ -15,7 +15,7 @@
 
 • **BUY**: = "buy"
 
-Defined in: [payload/common.ts:8](https://github.com/bennycode/coinbase-pro-node/blob/baa73d4/src/payload/common.ts#L8)
+Defined in: [payload/common.ts:8](https://github.com/bennycode/coinbase-pro-node/blob/a2d34d0/src/payload/common.ts#L8)
 
 ---
 
@@ -23,4 +23,4 @@ Defined in: [payload/common.ts:8](https://github.com/bennycode/coinbase-pro-node
 
 • **SELL**: = "sell"
 
-Defined in: [payload/common.ts:9](https://github.com/bennycode/coinbase-pro-node/blob/baa73d4/src/payload/common.ts#L9)
+Defined in: [payload/common.ts:9](https://github.com/bennycode/coinbase-pro-node/blob/a2d34d0/src/payload/common.ts#L9)

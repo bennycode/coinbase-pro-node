@@ -36,7 +36,7 @@
 
 Inherited from: BasePlacedOrder.created_at
 
-Defined in: [order/OrderAPI.ts:40](https://github.com/bennycode/coinbase-pro-node/blob/baa73d4/src/order/OrderAPI.ts#L40)
+Defined in: [order/OrderAPI.ts:41](https://github.com/bennycode/coinbase-pro-node/blob/a2d34d0/src/order/OrderAPI.ts#L41)
 
 ---
 
@@ -46,7 +46,7 @@ Defined in: [order/OrderAPI.ts:40](https://github.com/bennycode/coinbase-pro-nod
 
 Inherited from: BasePlacedOrder.executed_value
 
-Defined in: [order/OrderAPI.ts:41](https://github.com/bennycode/coinbase-pro-node/blob/baa73d4/src/order/OrderAPI.ts#L41)
+Defined in: [order/OrderAPI.ts:42](https://github.com/bennycode/coinbase-pro-node/blob/a2d34d0/src/order/OrderAPI.ts#L42)
 
 ---
 
@@ -56,7 +56,7 @@ Defined in: [order/OrderAPI.ts:41](https://github.com/bennycode/coinbase-pro-nod
 
 Inherited from: BasePlacedOrder.fill_fees
 
-Defined in: [order/OrderAPI.ts:42](https://github.com/bennycode/coinbase-pro-node/blob/baa73d4/src/order/OrderAPI.ts#L42)
+Defined in: [order/OrderAPI.ts:43](https://github.com/bennycode/coinbase-pro-node/blob/a2d34d0/src/order/OrderAPI.ts#L43)
 
 ---
 
@@ -66,7 +66,7 @@ Defined in: [order/OrderAPI.ts:42](https://github.com/bennycode/coinbase-pro-nod
 
 Inherited from: BasePlacedOrder.filled_size
 
-Defined in: [order/OrderAPI.ts:43](https://github.com/bennycode/coinbase-pro-node/blob/baa73d4/src/order/OrderAPI.ts#L43)
+Defined in: [order/OrderAPI.ts:44](https://github.com/bennycode/coinbase-pro-node/blob/a2d34d0/src/order/OrderAPI.ts#L44)
 
 ---
 
@@ -76,7 +76,7 @@ Defined in: [order/OrderAPI.ts:43](https://github.com/bennycode/coinbase-pro-nod
 
 Inherited from: BasePlacedOrder.id
 
-Defined in: [order/OrderAPI.ts:44](https://github.com/bennycode/coinbase-pro-node/blob/baa73d4/src/order/OrderAPI.ts#L44)
+Defined in: [order/OrderAPI.ts:45](https://github.com/bennycode/coinbase-pro-node/blob/a2d34d0/src/order/OrderAPI.ts#L45)
 
 ---
 
@@ -86,7 +86,7 @@ Defined in: [order/OrderAPI.ts:44](https://github.com/bennycode/coinbase-pro-nod
 
 Inherited from: BasePlacedOrder.post_only
 
-Defined in: [order/OrderAPI.ts:45](https://github.com/bennycode/coinbase-pro-node/blob/baa73d4/src/order/OrderAPI.ts#L45)
+Defined in: [order/OrderAPI.ts:46](https://github.com/bennycode/coinbase-pro-node/blob/a2d34d0/src/order/OrderAPI.ts#L46)
 
 ---
 
@@ -96,7 +96,7 @@ Defined in: [order/OrderAPI.ts:45](https://github.com/bennycode/coinbase-pro-nod
 
 Inherited from: BasePlacedOrder.price
 
-Defined in: [order/OrderAPI.ts:46](https://github.com/bennycode/coinbase-pro-node/blob/baa73d4/src/order/OrderAPI.ts#L46)
+Defined in: [order/OrderAPI.ts:47](https://github.com/bennycode/coinbase-pro-node/blob/a2d34d0/src/order/OrderAPI.ts#L47)
 
 ---
 
@@ -106,7 +106,7 @@ Defined in: [order/OrderAPI.ts:46](https://github.com/bennycode/coinbase-pro-nod
 
 Inherited from: BasePlacedOrder.product_id
 
-Defined in: [order/OrderAPI.ts:47](https://github.com/bennycode/coinbase-pro-node/blob/baa73d4/src/order/OrderAPI.ts#L47)
+Defined in: [order/OrderAPI.ts:48](https://github.com/bennycode/coinbase-pro-node/blob/a2d34d0/src/order/OrderAPI.ts#L48)
 
 ---
 
@@ -116,7 +116,7 @@ Defined in: [order/OrderAPI.ts:47](https://github.com/bennycode/coinbase-pro-nod
 
 Inherited from: BasePlacedOrder.settled
 
-Defined in: [order/OrderAPI.ts:48](https://github.com/bennycode/coinbase-pro-node/blob/baa73d4/src/order/OrderAPI.ts#L48)
+Defined in: [order/OrderAPI.ts:49](https://github.com/bennycode/coinbase-pro-node/blob/a2d34d0/src/order/OrderAPI.ts#L49)
 
 ---
 
@@ -126,7 +126,7 @@ Defined in: [order/OrderAPI.ts:48](https://github.com/bennycode/coinbase-pro-nod
 
 Inherited from: BasePlacedOrder.side
 
-Defined in: [order/OrderAPI.ts:49](https://github.com/bennycode/coinbase-pro-node/blob/baa73d4/src/order/OrderAPI.ts#L49)
+Defined in: [order/OrderAPI.ts:50](https://github.com/bennycode/coinbase-pro-node/blob/a2d34d0/src/order/OrderAPI.ts#L50)
 
 ---
 
@@ -136,7 +136,7 @@ Defined in: [order/OrderAPI.ts:49](https://github.com/bennycode/coinbase-pro-nod
 
 Inherited from: BasePlacedOrder.size
 
-Defined in: [order/OrderAPI.ts:50](https://github.com/bennycode/coinbase-pro-node/blob/baa73d4/src/order/OrderAPI.ts#L50)
+Defined in: [order/OrderAPI.ts:51](https://github.com/bennycode/coinbase-pro-node/blob/a2d34d0/src/order/OrderAPI.ts#L51)
 
 ---
 
@@ -146,7 +146,7 @@ Defined in: [order/OrderAPI.ts:50](https://github.com/bennycode/coinbase-pro-nod
 
 Overrides: BasePlacedOrder.status
 
-Defined in: [order/OrderAPI.ts:86](https://github.com/bennycode/coinbase-pro-node/blob/baa73d4/src/order/OrderAPI.ts#L86)
+Defined in: [order/OrderAPI.ts:87](https://github.com/bennycode/coinbase-pro-node/blob/a2d34d0/src/order/OrderAPI.ts#L87)
 
 ---
 
@@ -154,7 +154,7 @@ Defined in: [order/OrderAPI.ts:86](https://github.com/bennycode/coinbase-pro-nod
 
 • **stp**: [_SelfTradePrevention_](../enums/selftradeprevention.md)
 
-Defined in: [order/OrderAPI.ts:87](https://github.com/bennycode/coinbase-pro-node/blob/baa73d4/src/order/OrderAPI.ts#L87)
+Defined in: [order/OrderAPI.ts:88](https://github.com/bennycode/coinbase-pro-node/blob/a2d34d0/src/order/OrderAPI.ts#L88)
 
 ---
 
@@ -164,7 +164,7 @@ Defined in: [order/OrderAPI.ts:87](https://github.com/bennycode/coinbase-pro-nod
 
 Inherited from: BasePlacedOrder.time_in_force
 
-Defined in: [order/OrderAPI.ts:52](https://github.com/bennycode/coinbase-pro-node/blob/baa73d4/src/order/OrderAPI.ts#L52)
+Defined in: [order/OrderAPI.ts:53](https://github.com/bennycode/coinbase-pro-node/blob/a2d34d0/src/order/OrderAPI.ts#L53)
 
 ---
 
@@ -174,4 +174,4 @@ Defined in: [order/OrderAPI.ts:52](https://github.com/bennycode/coinbase-pro-nod
 
 Inherited from: BasePlacedOrder.type
 
-Defined in: [order/OrderAPI.ts:53](https://github.com/bennycode/coinbase-pro-node/blob/baa73d4/src/order/OrderAPI.ts#L53)
+Defined in: [order/OrderAPI.ts:54](https://github.com/bennycode/coinbase-pro-node/blob/a2d34d0/src/order/OrderAPI.ts#L54)

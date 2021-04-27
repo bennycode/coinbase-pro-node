@@ -17,7 +17,7 @@
 
 • **FILL_OR_KILL**: = "FOK"
 
-Defined in: [order/OrderAPI.ts:10](https://github.com/bennycode/coinbase-pro-node/blob/baa73d4/src/order/OrderAPI.ts#L10)
+Defined in: [order/OrderAPI.ts:11](https://github.com/bennycode/coinbase-pro-node/blob/a2d34d0/src/order/OrderAPI.ts#L11)
 
 ---
 
@@ -25,7 +25,7 @@ Defined in: [order/OrderAPI.ts:10](https://github.com/bennycode/coinbase-pro-nod
 
 • **GOOD_TILL_CANCELED**: = "GTC"
 
-Defined in: [order/OrderAPI.ts:11](https://github.com/bennycode/coinbase-pro-node/blob/baa73d4/src/order/OrderAPI.ts#L11)
+Defined in: [order/OrderAPI.ts:12](https://github.com/bennycode/coinbase-pro-node/blob/a2d34d0/src/order/OrderAPI.ts#L12)
 
 ---
 
@@ -33,7 +33,7 @@ Defined in: [order/OrderAPI.ts:11](https://github.com/bennycode/coinbase-pro-nod
 
 • **GOOD_TILL_TIME**: = "GTT"
 
-Defined in: [order/OrderAPI.ts:12](https://github.com/bennycode/coinbase-pro-node/blob/baa73d4/src/order/OrderAPI.ts#L12)
+Defined in: [order/OrderAPI.ts:13](https://github.com/bennycode/coinbase-pro-node/blob/a2d34d0/src/order/OrderAPI.ts#L13)
 
 ---
 
@@ -41,4 +41,4 @@ Defined in: [order/OrderAPI.ts:12](https://github.com/bennycode/coinbase-pro-nod
 
 • **IMMEDIATE_OR_CANCEL**: = "IOC"
 
-Defined in: [order/OrderAPI.ts:13](https://github.com/bennycode/coinbase-pro-node/blob/baa73d4/src/order/OrderAPI.ts#L13)
+Defined in: [order/OrderAPI.ts:14](https://github.com/bennycode/coinbase-pro-node/blob/a2d34d0/src/order/OrderAPI.ts#L14)
