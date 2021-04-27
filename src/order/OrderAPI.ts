@@ -95,18 +95,13 @@ export interface FilledOrder extends BasePlacedOrder {
   status: OrderStatus.DONE;
 }
 
-export interface QueryListByProductId extends Pagination {
+/** @see https://docs.pro.coinbase.com/#list-orders */
+export interface OrderListQueryParam extends Pagination {
   /** Only list orders for a specific product. */
-  product_id: string;
-}
-
-export interface OrderListByStatus extends Pagination {
+  product_id?: string;
   /** Limit list of orders to these statuses. Passing "all" returns orders of all statuses. Default: [open, pending, active] */
   status?: (OrderStatus | 'all')[];
 }
-
-/** @see https://docs.pro.coinbase.com/#list-orders */
-export type OrderListQueryParam = OrderListByStatus | QueryListByProductId;
 
 export type Order = PendingOrder | FilledOrder;
 
