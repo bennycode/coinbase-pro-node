@@ -1,5 +1,6 @@
 import {AxiosInstance} from 'axios';
 import {ISO_8601_MS_UTC, OrderSide, PaginatedData, Pagination} from '../payload';
+import querystring from 'querystring';
 
 export enum OrderType {
   LIMIT = 'limit',
@@ -158,14 +159,9 @@ export class OrderAPI {
    */
   async getOrders(query?: OrderListQueryParam): Promise<PaginatedData<Order>> {
     const resource = OrderAPI.URL.ORDERS;
-    let status = '';
-
-    if ((query as OrderListByStatus)?.status) {
-      status = '?' + (query as OrderListByStatus).status!.map(s => `status=${s}`).join('&');
-      delete (query as OrderListByStatus).status;
-    }
-    const response = await this.apiClient.get<Order[]>(`${resource}${status}`, {
+    const response = await this.apiClient.get<Order[]>(`${resource}`, {
       params: query,
+      paramsSerializer: querystring.stringify,
     });
     return {
       data: response.data,
