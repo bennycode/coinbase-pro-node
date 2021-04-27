@@ -1,3 +1,11 @@
+#### 3.0.4 (2021-04-27)
+
+##### Bug Fixes
+
+- **order:**
+  - Allow fetching orders by `status` and `product_id` ([a13c48cf](https://github.com/bennycode/coinbase-pro-node/commit/a13c48cf6afc9e52c16f077f98a0c21efa11d717))
+  - Use a parameter serializer for `getOrders` requests ([#478](https://github.com/bennycode/coinbase-pro-node/pull/478)) ([e523dc88](https://github.com/bennycode/coinbase-pro-node/commit/e523dc88f1bb15d99ddcd4a19b02b4c4baceec6e))
+
 #### 3.0.3 (2021-04-25)
 
 ##### Chores
