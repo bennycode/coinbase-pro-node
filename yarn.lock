@@ -254,10 +254,10 @@
     "@nodelib/fs.scandir" "2.1.4"
     fastq "^1.6.0"
 
-"@types/jasmine@3.6.10":
-  version "3.6.10"
-  resolved "https://registry.npmjs.org/@types/jasmine/-/jasmine-3.6.10.tgz#c49d5660bda6e935782e5c83deb1d3b6efb3fac6"
-  integrity sha512-yfCl7JGtIc5LjScFpeIGBBNhJFkJdAAcsAnAd9ZRHwzh+sR2zkt257BKkTCF5VpJ8wMPnzzZ8QatRdXM8tqpKA==
+"@types/jasmine@3.7.1":
+  version "3.7.1"
+  resolved "https://registry.npmjs.org/@types/jasmine/-/jasmine-3.7.1.tgz#35b86511a389673ac1a706c6010b35788a0d998d"
+  integrity sha512-MP1bcwS0MXQSKPBd20wv0rqF+GOfHTchz4mKFkS4ajAmz2oYwhOpSE9FPe611TOOarA061itZwUQUYRI5mPJsA==
 
 "@types/json-schema@^7.0.3":
   version "7.0.7"
