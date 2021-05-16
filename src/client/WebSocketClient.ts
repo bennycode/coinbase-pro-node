@@ -400,9 +400,9 @@ export class WebSocketClient extends EventEmitter {
       webSocket.on('pong', this.heartbeat.bind(this));
 
       // Send pings
-      this.pingInterval = (setInterval(() => {
+      this.pingInterval = setInterval(() => {
         webSocket.ping(() => {});
-      }, this.pingTime) as unknown) as NodeJS.Timeout;
+      }, this.pingTime) as unknown as NodeJS.Timeout;
     }
   }
 
