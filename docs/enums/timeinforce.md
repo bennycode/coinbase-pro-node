@@ -15,30 +15,38 @@
 
 ### FILL_OR_KILL
 
-• **FILL_OR_KILL**: = "FOK"
+• **FILL_OR_KILL** = "FOK"
 
-Defined in: [order/OrderAPI.ts:11](https://github.com/bennycode/coinbase-pro-node/blob/a2d34d0/src/order/OrderAPI.ts#L11)
+#### Defined in
+
+[order/OrderAPI.ts:11](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/order/OrderAPI.ts#L11)
 
 ---
 
 ### GOOD_TILL_CANCELED
 
-• **GOOD_TILL_CANCELED**: = "GTC"
+• **GOOD_TILL_CANCELED** = "GTC"
 
-Defined in: [order/OrderAPI.ts:12](https://github.com/bennycode/coinbase-pro-node/blob/a2d34d0/src/order/OrderAPI.ts#L12)
+#### Defined in
+
+[order/OrderAPI.ts:12](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/order/OrderAPI.ts#L12)
 
 ---
 
 ### GOOD_TILL_TIME
 
-• **GOOD_TILL_TIME**: = "GTT"
+• **GOOD_TILL_TIME** = "GTT"
 
-Defined in: [order/OrderAPI.ts:13](https://github.com/bennycode/coinbase-pro-node/blob/a2d34d0/src/order/OrderAPI.ts#L13)
+#### Defined in
+
+[order/OrderAPI.ts:13](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/order/OrderAPI.ts#L13)
 
 ---
 
 ### IMMEDIATE_OR_CANCEL
 
-• **IMMEDIATE_OR_CANCEL**: = "IOC"
+• **IMMEDIATE_OR_CANCEL** = "IOC"
 
-Defined in: [order/OrderAPI.ts:14](https://github.com/bennycode/coinbase-pro-node/blob/a2d34d0/src/order/OrderAPI.ts#L14)
+#### Defined in
+
+[order/OrderAPI.ts:14](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/order/OrderAPI.ts#L14)

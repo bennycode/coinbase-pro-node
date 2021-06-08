@@ -17,46 +17,58 @@
 
 ### available
 
-• **available**: _string_
+• **available**: `string`
 
-Defined in: [account/AccountAPI.ts:5](https://github.com/bennycode/coinbase-pro-node/blob/a2d34d0/src/account/AccountAPI.ts#L5)
+#### Defined in
+
+[account/AccountAPI.ts:5](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/account/AccountAPI.ts#L5)
 
 ---
 
 ### balance
 
-• **balance**: _string_
+• **balance**: `string`
 
-Defined in: [account/AccountAPI.ts:6](https://github.com/bennycode/coinbase-pro-node/blob/a2d34d0/src/account/AccountAPI.ts#L6)
+#### Defined in
+
+[account/AccountAPI.ts:6](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/account/AccountAPI.ts#L6)
 
 ---
 
 ### currency
 
-• **currency**: _string_
+• **currency**: `string`
 
-Defined in: [account/AccountAPI.ts:7](https://github.com/bennycode/coinbase-pro-node/blob/a2d34d0/src/account/AccountAPI.ts#L7)
+#### Defined in
+
+[account/AccountAPI.ts:7](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/account/AccountAPI.ts#L7)
 
 ---
 
 ### hold
 
-• **hold**: _string_
+• **hold**: `string`
 
-Defined in: [account/AccountAPI.ts:8](https://github.com/bennycode/coinbase-pro-node/blob/a2d34d0/src/account/AccountAPI.ts#L8)
+#### Defined in
+
+[account/AccountAPI.ts:8](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/account/AccountAPI.ts#L8)
 
 ---
 
 ### id
 
-• **id**: _string_
+• **id**: `string`
 
-Defined in: [account/AccountAPI.ts:9](https://github.com/bennycode/coinbase-pro-node/blob/a2d34d0/src/account/AccountAPI.ts#L9)
+#### Defined in
+
+[account/AccountAPI.ts:9](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/account/AccountAPI.ts#L9)
 
 ---
 
 ### profile_id
 
-• **profile_id**: _string_
+• **profile_id**: `string`
 
-Defined in: [account/AccountAPI.ts:10](https://github.com/bennycode/coinbase-pro-node/blob/a2d34d0/src/account/AccountAPI.ts#L10)
+#### Defined in
+
+[account/AccountAPI.ts:10](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/account/AccountAPI.ts#L10)

@@ -17,46 +17,58 @@
 
 ### active
 
-• **active**: _boolean_
+• **active**: `boolean`
 
-Defined in: [profile/ProfileAPI.ts:7](https://github.com/bennycode/coinbase-pro-node/blob/a2d34d0/src/profile/ProfileAPI.ts#L7)
+#### Defined in
+
+[profile/ProfileAPI.ts:7](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/profile/ProfileAPI.ts#L7)
 
 ---
 
 ### created_at
 
-• **created_at**: _string_
+• **created_at**: `string`
 
-Defined in: [profile/ProfileAPI.ts:8](https://github.com/bennycode/coinbase-pro-node/blob/a2d34d0/src/profile/ProfileAPI.ts#L8)
+#### Defined in
+
+[profile/ProfileAPI.ts:8](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/profile/ProfileAPI.ts#L8)
 
 ---
 
 ### id
 
-• **id**: _string_
+• **id**: `string`
 
-Defined in: [profile/ProfileAPI.ts:9](https://github.com/bennycode/coinbase-pro-node/blob/a2d34d0/src/profile/ProfileAPI.ts#L9)
+#### Defined in
+
+[profile/ProfileAPI.ts:9](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/profile/ProfileAPI.ts#L9)
 
 ---
 
 ### is_default
 
-• **is_default**: _boolean_
+• **is_default**: `boolean`
 
-Defined in: [profile/ProfileAPI.ts:10](https://github.com/bennycode/coinbase-pro-node/blob/a2d34d0/src/profile/ProfileAPI.ts#L10)
+#### Defined in
+
+[profile/ProfileAPI.ts:10](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/profile/ProfileAPI.ts#L10)
 
 ---
 
 ### name
 
-• **name**: _string_
+• **name**: `string`
 
-Defined in: [profile/ProfileAPI.ts:11](https://github.com/bennycode/coinbase-pro-node/blob/a2d34d0/src/profile/ProfileAPI.ts#L11)
+#### Defined in
+
+[profile/ProfileAPI.ts:11](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/profile/ProfileAPI.ts#L11)
 
 ---
 
 ### user_id
 
-• **user_id**: _string_
+• **user_id**: `string`
 
-Defined in: [profile/ProfileAPI.ts:12](https://github.com/bennycode/coinbase-pro-node/blob/a2d34d0/src/profile/ProfileAPI.ts#L12)
+#### Defined in
+
+[profile/ProfileAPI.ts:12](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/profile/ProfileAPI.ts#L12)

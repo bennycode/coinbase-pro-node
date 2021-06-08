@@ -15,30 +15,38 @@
 
 ### ACTIVE
 
-• **ACTIVE**: = "active"
+• **ACTIVE** = "active"
 
-Defined in: [order/OrderAPI.ts:80](https://github.com/bennycode/coinbase-pro-node/blob/a2d34d0/src/order/OrderAPI.ts#L80)
+#### Defined in
+
+[order/OrderAPI.ts:80](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/order/OrderAPI.ts#L80)
 
 ---
 
 ### DONE
 
-• **DONE**: = "done"
+• **DONE** = "done"
 
-Defined in: [order/OrderAPI.ts:81](https://github.com/bennycode/coinbase-pro-node/blob/a2d34d0/src/order/OrderAPI.ts#L81)
+#### Defined in
+
+[order/OrderAPI.ts:81](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/order/OrderAPI.ts#L81)
 
 ---
 
 ### OPEN
 
-• **OPEN**: = "open"
+• **OPEN** = "open"
 
-Defined in: [order/OrderAPI.ts:82](https://github.com/bennycode/coinbase-pro-node/blob/a2d34d0/src/order/OrderAPI.ts#L82)
+#### Defined in
+
+[order/OrderAPI.ts:82](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/order/OrderAPI.ts#L82)
 
 ---
 
 ### PENDING
 
-• **PENDING**: = "pending"
+• **PENDING** = "pending"
 
-Defined in: [order/OrderAPI.ts:83](https://github.com/bennycode/coinbase-pro-node/blob/a2d34d0/src/order/OrderAPI.ts#L83)
+#### Defined in
+
+[order/OrderAPI.ts:83](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/order/OrderAPI.ts#L83)

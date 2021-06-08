@@ -15,30 +15,38 @@
 
 ### amount
 
-• **amount**: _string_
+• **amount**: `string`
 
-Defined in: [profile/ProfileAPI.ts:16](https://github.com/bennycode/coinbase-pro-node/blob/a2d34d0/src/profile/ProfileAPI.ts#L16)
+#### Defined in
+
+[profile/ProfileAPI.ts:16](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/profile/ProfileAPI.ts#L16)
 
 ---
 
 ### currency
 
-• **currency**: _string_
+• **currency**: `string`
 
-Defined in: [profile/ProfileAPI.ts:17](https://github.com/bennycode/coinbase-pro-node/blob/a2d34d0/src/profile/ProfileAPI.ts#L17)
+#### Defined in
+
+[profile/ProfileAPI.ts:17](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/profile/ProfileAPI.ts#L17)
 
 ---
 
 ### from
 
-• **from**: _string_
+• **from**: `string`
 
-Defined in: [profile/ProfileAPI.ts:18](https://github.com/bennycode/coinbase-pro-node/blob/a2d34d0/src/profile/ProfileAPI.ts#L18)
+#### Defined in
+
+[profile/ProfileAPI.ts:18](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/profile/ProfileAPI.ts#L18)
 
 ---
 
 ### to
 
-• **to**: _string_
+• **to**: `string`
 
-Defined in: [profile/ProfileAPI.ts:19](https://github.com/bennycode/coinbase-pro-node/blob/a2d34d0/src/profile/ProfileAPI.ts#L19)
+#### Defined in
+
+[profile/ProfileAPI.ts:19](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/profile/ProfileAPI.ts#L19)

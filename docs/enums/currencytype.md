@@ -13,14 +13,18 @@
 
 ### CRYPTO
 
-• **CRYPTO**: = "crypto"
+• **CRYPTO** = "crypto"
 
-Defined in: [currency/CurrencyAPI.ts:13](https://github.com/bennycode/coinbase-pro-node/blob/a2d34d0/src/currency/CurrencyAPI.ts#L13)
+#### Defined in
+
+[currency/CurrencyAPI.ts:13](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/currency/CurrencyAPI.ts#L13)
 
 ---
 
 ### FIAT
 
-• **FIAT**: = "fiat"
+• **FIAT** = "fiat"
 
-Defined in: [currency/CurrencyAPI.ts:14](https://github.com/bennycode/coinbase-pro-node/blob/a2d34d0/src/currency/CurrencyAPI.ts#L14)
+#### Defined in
+
+[currency/CurrencyAPI.ts:14](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/currency/CurrencyAPI.ts#L14)

@@ -15,30 +15,38 @@
 
 ### exchange_volume
 
-• **exchange_volume**: _string_
+• **exchange_volume**: `string`
 
-Defined in: [user/UserAPI.ts:8](https://github.com/bennycode/coinbase-pro-node/blob/a2d34d0/src/user/UserAPI.ts#L8)
+#### Defined in
+
+[user/UserAPI.ts:8](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/user/UserAPI.ts#L8)
 
 ---
 
 ### product_id
 
-• **product_id**: _string_
+• **product_id**: `string`
 
-Defined in: [user/UserAPI.ts:9](https://github.com/bennycode/coinbase-pro-node/blob/a2d34d0/src/user/UserAPI.ts#L9)
+#### Defined in
+
+[user/UserAPI.ts:9](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/user/UserAPI.ts#L9)
 
 ---
 
 ### recorded_at
 
-• **recorded_at**: _string_
+• **recorded_at**: `string`
 
-Defined in: [user/UserAPI.ts:10](https://github.com/bennycode/coinbase-pro-node/blob/a2d34d0/src/user/UserAPI.ts#L10)
+#### Defined in
+
+[user/UserAPI.ts:10](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/user/UserAPI.ts#L10)
 
 ---
 
 ### volume
 
-• **volume**: _string_
+• **volume**: `string`
 
-Defined in: [user/UserAPI.ts:11](https://github.com/bennycode/coinbase-pro-node/blob/a2d34d0/src/user/UserAPI.ts#L11)
+#### Defined in
+
+[user/UserAPI.ts:11](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/user/UserAPI.ts#L11)

@@ -16,38 +16,48 @@
 
 ### price
 
-• **price**: _string_
+• **price**: `string`
 
-Defined in: [product/ProductAPI.ts:53](https://github.com/bennycode/coinbase-pro-node/blob/a2d34d0/src/product/ProductAPI.ts#L53)
+#### Defined in
+
+[product/ProductAPI.ts:53](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/product/ProductAPI.ts#L53)
 
 ---
 
 ### side
 
-• **side**: [_OrderSide_](../enums/orderside.md)
+• **side**: `OrderSide`
 
-Defined in: [product/ProductAPI.ts:54](https://github.com/bennycode/coinbase-pro-node/blob/a2d34d0/src/product/ProductAPI.ts#L54)
+#### Defined in
+
+[product/ProductAPI.ts:54](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/product/ProductAPI.ts#L54)
 
 ---
 
 ### size
 
-• **size**: _string_
+• **size**: `string`
 
-Defined in: [product/ProductAPI.ts:55](https://github.com/bennycode/coinbase-pro-node/blob/a2d34d0/src/product/ProductAPI.ts#L55)
+#### Defined in
+
+[product/ProductAPI.ts:55](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/product/ProductAPI.ts#L55)
 
 ---
 
 ### time
 
-• **time**: _string_
+• **time**: `string`
 
-Defined in: [product/ProductAPI.ts:56](https://github.com/bennycode/coinbase-pro-node/blob/a2d34d0/src/product/ProductAPI.ts#L56)
+#### Defined in
+
+[product/ProductAPI.ts:56](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/product/ProductAPI.ts#L56)
 
 ---
 
 ### trade_id
 
-• **trade_id**: _number_
+• **trade_id**: `number`
 
-Defined in: [product/ProductAPI.ts:57](https://github.com/bennycode/coinbase-pro-node/blob/a2d34d0/src/product/ProductAPI.ts#L57)
+#### Defined in
+
+[product/ProductAPI.ts:57](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/product/ProductAPI.ts#L57)

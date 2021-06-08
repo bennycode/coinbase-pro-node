@@ -19,46 +19,58 @@ Accepted granularity in seconds to group historic rates.
 
 ### FIFTEEN_MINUTES
 
-• **FIFTEEN_MINUTES**: = 900
+• **FIFTEEN_MINUTES** = 900
 
-Defined in: [product/ProductAPI.ts:64](https://github.com/bennycode/coinbase-pro-node/blob/a2d34d0/src/product/ProductAPI.ts#L64)
+#### Defined in
+
+[product/ProductAPI.ts:64](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/product/ProductAPI.ts#L64)
 
 ---
 
 ### FIVE_MINUTES
 
-• **FIVE_MINUTES**: = 300
+• **FIVE_MINUTES** = 300
 
-Defined in: [product/ProductAPI.ts:63](https://github.com/bennycode/coinbase-pro-node/blob/a2d34d0/src/product/ProductAPI.ts#L63)
+#### Defined in
+
+[product/ProductAPI.ts:63](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/product/ProductAPI.ts#L63)
 
 ---
 
 ### ONE_DAY
 
-• **ONE_DAY**: = 86400
+• **ONE_DAY** = 86400
 
-Defined in: [product/ProductAPI.ts:67](https://github.com/bennycode/coinbase-pro-node/blob/a2d34d0/src/product/ProductAPI.ts#L67)
+#### Defined in
+
+[product/ProductAPI.ts:67](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/product/ProductAPI.ts#L67)
 
 ---
 
 ### ONE_HOUR
 
-• **ONE_HOUR**: = 3600
+• **ONE_HOUR** = 3600
 
-Defined in: [product/ProductAPI.ts:65](https://github.com/bennycode/coinbase-pro-node/blob/a2d34d0/src/product/ProductAPI.ts#L65)
+#### Defined in
+
+[product/ProductAPI.ts:65](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/product/ProductAPI.ts#L65)
 
 ---
 
 ### ONE_MINUTE
 
-• **ONE_MINUTE**: = 60
+• **ONE_MINUTE** = 60
 
-Defined in: [product/ProductAPI.ts:62](https://github.com/bennycode/coinbase-pro-node/blob/a2d34d0/src/product/ProductAPI.ts#L62)
+#### Defined in
+
+[product/ProductAPI.ts:62](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/product/ProductAPI.ts#L62)
 
 ---
 
 ### SIX_HOURS
 
-• **SIX_HOURS**: = 21600
+• **SIX_HOURS** = 21600
 
-Defined in: [product/ProductAPI.ts:66](https://github.com/bennycode/coinbase-pro-node/blob/a2d34d0/src/product/ProductAPI.ts#L66)
+#### Defined in
+
+[product/ProductAPI.ts:66](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/product/ProductAPI.ts#L66)

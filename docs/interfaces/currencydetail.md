@@ -20,70 +20,88 @@
 
 ### crypto_address_link
 
-• **crypto_address_link**: _string_
+• **crypto_address_link**: `string`
 
-Defined in: [currency/CurrencyAPI.ts:18](https://github.com/bennycode/coinbase-pro-node/blob/a2d34d0/src/currency/CurrencyAPI.ts#L18)
+#### Defined in
+
+[currency/CurrencyAPI.ts:18](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/currency/CurrencyAPI.ts#L18)
 
 ---
 
 ### crypto_transaction_link
 
-• **crypto_transaction_link**: _string_
+• **crypto_transaction_link**: `string`
 
-Defined in: [currency/CurrencyAPI.ts:19](https://github.com/bennycode/coinbase-pro-node/blob/a2d34d0/src/currency/CurrencyAPI.ts#L19)
+#### Defined in
+
+[currency/CurrencyAPI.ts:19](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/currency/CurrencyAPI.ts#L19)
 
 ---
 
 ### min_withdrawal_amount
 
-• **min_withdrawal_amount**: _number_
+• **min_withdrawal_amount**: `number`
 
-Defined in: [currency/CurrencyAPI.ts:20](https://github.com/bennycode/coinbase-pro-node/blob/a2d34d0/src/currency/CurrencyAPI.ts#L20)
+#### Defined in
+
+[currency/CurrencyAPI.ts:20](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/currency/CurrencyAPI.ts#L20)
 
 ---
 
 ### network_confirmations
 
-• **network_confirmations**: _number_
+• **network_confirmations**: `number`
 
-Defined in: [currency/CurrencyAPI.ts:21](https://github.com/bennycode/coinbase-pro-node/blob/a2d34d0/src/currency/CurrencyAPI.ts#L21)
+#### Defined in
+
+[currency/CurrencyAPI.ts:21](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/currency/CurrencyAPI.ts#L21)
 
 ---
 
 ### processing_time_seconds
 
-• `Optional` **processing_time_seconds**: _number_
+• `Optional` **processing_time_seconds**: `number`
 
-Defined in: [currency/CurrencyAPI.ts:22](https://github.com/bennycode/coinbase-pro-node/blob/a2d34d0/src/currency/CurrencyAPI.ts#L22)
+#### Defined in
+
+[currency/CurrencyAPI.ts:22](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/currency/CurrencyAPI.ts#L22)
 
 ---
 
 ### push_payment_methods
 
-• **push_payment_methods**: [_CurrencyType_](../enums/currencytype.md)[]
+• **push_payment_methods**: [CurrencyType](../enums/currencytype.md)[]
 
-Defined in: [currency/CurrencyAPI.ts:23](https://github.com/bennycode/coinbase-pro-node/blob/a2d34d0/src/currency/CurrencyAPI.ts#L23)
+#### Defined in
+
+[currency/CurrencyAPI.ts:23](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/currency/CurrencyAPI.ts#L23)
 
 ---
 
 ### sort_order
 
-• **sort_order**: _number_
+• **sort_order**: `number`
 
-Defined in: [currency/CurrencyAPI.ts:24](https://github.com/bennycode/coinbase-pro-node/blob/a2d34d0/src/currency/CurrencyAPI.ts#L24)
+#### Defined in
+
+[currency/CurrencyAPI.ts:24](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/currency/CurrencyAPI.ts#L24)
 
 ---
 
 ### symbol
 
-• **symbol**: _string_
+• **symbol**: `string`
 
-Defined in: [currency/CurrencyAPI.ts:25](https://github.com/bennycode/coinbase-pro-node/blob/a2d34d0/src/currency/CurrencyAPI.ts#L25)
+#### Defined in
+
+[currency/CurrencyAPI.ts:25](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/currency/CurrencyAPI.ts#L25)
 
 ---
 
 ### type
 
-• **type**: [_CurrencyType_](../enums/currencytype.md)
+• **type**: [CurrencyType](../enums/currencytype.md)
 
-Defined in: [currency/CurrencyAPI.ts:26](https://github.com/bennycode/coinbase-pro-node/blob/a2d34d0/src/currency/CurrencyAPI.ts#L26)
+#### Defined in
+
+[currency/CurrencyAPI.ts:26](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/currency/CurrencyAPI.ts#L26)

@@ -19,69 +19,85 @@
 
 ### account_address
 
-• **account_address**: _string_
+• **account_address**: `string`
 
-Defined in: [account/AccountAPI.ts:75](https://github.com/bennycode/coinbase-pro-node/blob/a2d34d0/src/account/AccountAPI.ts#L75)
+#### Defined in
+
+[account/AccountAPI.ts:75](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/account/AccountAPI.ts#L75)
 
 ---
 
 ### account_name
 
-• **account_name**: _string_
+• **account_name**: `string`
 
-Defined in: [account/AccountAPI.ts:76](https://github.com/bennycode/coinbase-pro-node/blob/a2d34d0/src/account/AccountAPI.ts#L76)
+#### Defined in
+
+[account/AccountAPI.ts:76](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/account/AccountAPI.ts#L76)
 
 ---
 
 ### bank_address
 
-• **bank_address**: _string_
+• **bank_address**: `string`
 
-Defined in: [account/AccountAPI.ts:77](https://github.com/bennycode/coinbase-pro-node/blob/a2d34d0/src/account/AccountAPI.ts#L77)
+#### Defined in
+
+[account/AccountAPI.ts:77](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/account/AccountAPI.ts#L77)
 
 ---
 
 ### bank_country
 
-• **bank_country**: _object_
+• **bank_country**: `Object`
 
-#### Type declaration:
+#### Type declaration
 
 | Name   | Type     |
 | :----- | :------- |
-| `code` | _string_ |
-| `name` | _string_ |
+| `code` | `string` |
+| `name` | `string` |
 
-Defined in: [account/AccountAPI.ts:78](https://github.com/bennycode/coinbase-pro-node/blob/a2d34d0/src/account/AccountAPI.ts#L78)
+#### Defined in
+
+[account/AccountAPI.ts:78](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/account/AccountAPI.ts#L78)
 
 ---
 
 ### bank_name
 
-• **bank_name**: _string_
+• **bank_name**: `string`
 
-Defined in: [account/AccountAPI.ts:82](https://github.com/bennycode/coinbase-pro-node/blob/a2d34d0/src/account/AccountAPI.ts#L82)
+#### Defined in
+
+[account/AccountAPI.ts:82](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/account/AccountAPI.ts#L82)
 
 ---
 
 ### iban
 
-• **iban**: _string_
+• **iban**: `string`
 
-Defined in: [account/AccountAPI.ts:83](https://github.com/bennycode/coinbase-pro-node/blob/a2d34d0/src/account/AccountAPI.ts#L83)
+#### Defined in
+
+[account/AccountAPI.ts:83](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/account/AccountAPI.ts#L83)
 
 ---
 
 ### reference
 
-• **reference**: _string_
+• **reference**: `string`
 
-Defined in: [account/AccountAPI.ts:84](https://github.com/bennycode/coinbase-pro-node/blob/a2d34d0/src/account/AccountAPI.ts#L84)
+#### Defined in
+
+[account/AccountAPI.ts:84](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/account/AccountAPI.ts#L84)
 
 ---
 
 ### swift
 
-• **swift**: _string_
+• **swift**: `string`
 
-Defined in: [account/AccountAPI.ts:85](https://github.com/bennycode/coinbase-pro-node/blob/a2d34d0/src/account/AccountAPI.ts#L85)
+#### Defined in
+
+[account/AccountAPI.ts:85](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/account/AccountAPI.ts#L85)

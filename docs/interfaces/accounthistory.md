@@ -17,46 +17,58 @@
 
 ### amount
 
-• **amount**: _string_
+• **amount**: `string`
 
-Defined in: [account/AccountAPI.ts:14](https://github.com/bennycode/coinbase-pro-node/blob/a2d34d0/src/account/AccountAPI.ts#L14)
+#### Defined in
+
+[account/AccountAPI.ts:14](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/account/AccountAPI.ts#L14)
 
 ---
 
 ### balance
 
-• **balance**: _string_
+• **balance**: `string`
 
-Defined in: [account/AccountAPI.ts:15](https://github.com/bennycode/coinbase-pro-node/blob/a2d34d0/src/account/AccountAPI.ts#L15)
+#### Defined in
+
+[account/AccountAPI.ts:15](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/account/AccountAPI.ts#L15)
 
 ---
 
 ### created_at
 
-• **created_at**: _string_
+• **created_at**: `string`
 
-Defined in: [account/AccountAPI.ts:16](https://github.com/bennycode/coinbase-pro-node/blob/a2d34d0/src/account/AccountAPI.ts#L16)
+#### Defined in
+
+[account/AccountAPI.ts:16](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/account/AccountAPI.ts#L16)
 
 ---
 
 ### details
 
-• **details**: [_AccountHistoryDetails_](accounthistorydetails.md)
+• **details**: [AccountHistoryDetails](accounthistorydetails.md)
 
-Defined in: [account/AccountAPI.ts:17](https://github.com/bennycode/coinbase-pro-node/blob/a2d34d0/src/account/AccountAPI.ts#L17)
+#### Defined in
+
+[account/AccountAPI.ts:17](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/account/AccountAPI.ts#L17)
 
 ---
 
 ### id
 
-• **id**: _string_
+• **id**: `string`
 
-Defined in: [account/AccountAPI.ts:18](https://github.com/bennycode/coinbase-pro-node/blob/a2d34d0/src/account/AccountAPI.ts#L18)
+#### Defined in
+
+[account/AccountAPI.ts:18](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/account/AccountAPI.ts#L18)
 
 ---
 
 ### type
 
-• **type**: _string_
+• **type**: `string`
 
-Defined in: [account/AccountAPI.ts:19](https://github.com/bennycode/coinbase-pro-node/blob/a2d34d0/src/account/AccountAPI.ts#L19)
+#### Defined in
+
+[account/AccountAPI.ts:19](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/account/AccountAPI.ts#L19)

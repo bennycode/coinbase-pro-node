@@ -20,37 +20,39 @@
 
 ### constructor
 
-\+ **new FeeAPI**(`apiClient`: AxiosInstance): [_FeeAPI_](feeapi.md)
+• **new FeeAPI**(`apiClient`)
 
-#### Parameters:
+#### Parameters
 
-| Name        | Type          |
-| :---------- | :------------ |
-| `apiClient` | AxiosInstance |
+| Name        | Type            |
+| :---------- | :-------------- |
+| `apiClient` | `AxiosInstance` |
 
-**Returns:** [_FeeAPI_](feeapi.md)
+#### Defined in
 
-Defined in: [fee/FeeAPI.ts:20](https://github.com/bennycode/coinbase-pro-node/blob/a2d34d0/src/fee/FeeAPI.ts#L20)
+[fee/FeeAPI.ts:20](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/fee/FeeAPI.ts#L20)
 
 ## Properties
 
 ### URL
 
-▪ `Static` `Readonly` **URL**: _object_
+▪ `Static` `Readonly` **URL**: `Object`
 
-#### Type declaration:
+#### Type declaration
 
 | Name   | Type     |
 | :----- | :------- |
-| `FEES` | _string_ |
+| `FEES` | `string` |
 
-Defined in: [fee/FeeAPI.ts:18](https://github.com/bennycode/coinbase-pro-node/blob/a2d34d0/src/fee/FeeAPI.ts#L18)
+#### Defined in
+
+[fee/FeeAPI.ts:18](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/fee/FeeAPI.ts#L18)
 
 ## Methods
 
 ### getCurrentFees
 
-▸ **getCurrentFees**(): _Promise_<[_FeeTier_](../interfaces/feetier.md)\>
+▸ **getCurrentFees**(): `Promise`<[FeeTier](../interfaces/feetier.md)\>
 
 Get your current maker & taker fee rates, as well as your 30-day trailing volume. Quoted rates are subject to change.
 
@@ -58,6 +60,10 @@ Get your current maker & taker fee rates, as well as your 30-day trailing volume
 
 **`see`** https://help.coinbase.com/en/pro/trading-and-funding/trading-rules-and-fees/fees.html
 
-**Returns:** _Promise_<[_FeeTier_](../interfaces/feetier.md)\>
+#### Returns
 
-Defined in: [fee/FeeAPI.ts:31](https://github.com/bennycode/coinbase-pro-node/blob/a2d34d0/src/fee/FeeAPI.ts#L31)
+`Promise`<[FeeTier](../interfaces/feetier.md)\>
+
+#### Defined in
+
+[fee/FeeAPI.ts:31](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/fee/FeeAPI.ts#L31)

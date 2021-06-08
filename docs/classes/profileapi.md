@@ -22,88 +22,102 @@
 
 ### constructor
 
-\+ **new ProfileAPI**(`apiClient`: AxiosInstance): [_ProfileAPI_](profileapi.md)
+• **new ProfileAPI**(`apiClient`)
 
-#### Parameters:
+#### Parameters
 
-| Name        | Type          |
-| :---------- | :------------ |
-| `apiClient` | AxiosInstance |
+| Name        | Type            |
+| :---------- | :-------------- |
+| `apiClient` | `AxiosInstance` |
 
-**Returns:** [_ProfileAPI_](profileapi.md)
+#### Defined in
 
-Defined in: [profile/ProfileAPI.ts:25](https://github.com/bennycode/coinbase-pro-node/blob/a2d34d0/src/profile/ProfileAPI.ts#L25)
+[profile/ProfileAPI.ts:25](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/profile/ProfileAPI.ts#L25)
 
 ## Properties
 
 ### URL
 
-▪ `Static` `Readonly` **URL**: _object_
+▪ `Static` `Readonly` **URL**: `Object`
 
-#### Type declaration:
+#### Type declaration
 
 | Name       | Type     |
 | :--------- | :------- |
-| `PROFILES` | _string_ |
+| `PROFILES` | `string` |
 
-Defined in: [profile/ProfileAPI.ts:23](https://github.com/bennycode/coinbase-pro-node/blob/a2d34d0/src/profile/ProfileAPI.ts#L23)
+#### Defined in
+
+[profile/ProfileAPI.ts:23](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/profile/ProfileAPI.ts#L23)
 
 ## Methods
 
 ### getProfile
 
-▸ **getProfile**(`profileId`: _string_): _Promise_<`null` \| [_Profile_](../interfaces/profile.md)\>
+▸ **getProfile**(`profileId`): `Promise`<`null` \| [Profile](../interfaces/profile.md)\>
 
 Get a single profile by profile ID. This endpoint requires the “view” permission and is accessible by any profile’s API key.
 
-#### Parameters:
+#### Parameters
 
 | Name        | Type     | Description |
 | :---------- | :------- | :---------- |
-| `profileId` | _string_ | Profile ID  |
+| `profileId` | `string` | Profile ID  |
 
-**Returns:** _Promise_<`null` \| [_Profile_](../interfaces/profile.md)\>
+#### Returns
+
+`Promise`<`null` \| [Profile](../interfaces/profile.md)\>
 
 A single profile
 
-Defined in: [profile/ProfileAPI.ts:57](https://github.com/bennycode/coinbase-pro-node/blob/a2d34d0/src/profile/ProfileAPI.ts#L57)
+#### Defined in
+
+[profile/ProfileAPI.ts:57](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/profile/ProfileAPI.ts#L57)
 
 ---
 
 ### listProfiles
 
-▸ **listProfiles**(`active?`: `true`): _Promise_<[_Profile_](../interfaces/profile.md)[]\>
+▸ **listProfiles**(`active?`): `Promise`<[Profile](../interfaces/profile.md)[]\>
 
 List your profiles. Profiles are equivalent to portfolios. This endpoint requires the “view” permission and is accessible by any profile’s API key.
 
 **`see`** https://docs.pro.coinbase.com/#list-profiles
 
-#### Parameters:
+#### Parameters
 
 | Name      | Type   | Description                             |
 | :-------- | :----- | :-------------------------------------- |
 | `active?` | `true` | Only return active profiles if set true |
 
-**Returns:** _Promise_<[_Profile_](../interfaces/profile.md)[]\>
+#### Returns
 
-Defined in: [profile/ProfileAPI.ts:36](https://github.com/bennycode/coinbase-pro-node/blob/a2d34d0/src/profile/ProfileAPI.ts#L36)
+`Promise`<[Profile](../interfaces/profile.md)[]\>
+
+#### Defined in
+
+[profile/ProfileAPI.ts:36](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/profile/ProfileAPI.ts#L36)
 
 ---
 
 ### transferFunds
 
-▸ **transferFunds**(`transfer`: [_FundTransfer_](../interfaces/fundtransfer.md)): _Promise_<void\>
+▸ **transferFunds**(`transfer`): `Promise`<void\>
 
 Transfer funds from API key’s profile to another user owned profile. This endpoint requires the “transfer” permission.
 
 **`see`** https://docs.pro.coinbase.com/#create-profile-transfer
 
-#### Parameters:
+#### Parameters
 
-| Name       | Type                                            |
-| :--------- | :---------------------------------------------- |
-| `transfer` | [_FundTransfer_](../interfaces/fundtransfer.md) |
+| Name       | Type                                          |
+| :--------- | :-------------------------------------------- |
+| `transfer` | [FundTransfer](../interfaces/fundtransfer.md) |
 
-**Returns:** _Promise_<void\>
+#### Returns
 
-Defined in: [profile/ProfileAPI.ts:77](https://github.com/bennycode/coinbase-pro-node/blob/a2d34d0/src/profile/ProfileAPI.ts#L77)
+`Promise`<void\>
+
+#### Defined in
+
+[profile/ProfileAPI.ts:77](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/profile/ProfileAPI.ts#L77)

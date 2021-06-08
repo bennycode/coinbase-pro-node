@@ -21,37 +21,39 @@
 
 ### constructor
 
-\+ **new UserAPI**(`apiClient`: AxiosInstance): [_UserAPI_](userapi.md)
+• **new UserAPI**(`apiClient`)
 
-#### Parameters:
+#### Parameters
 
-| Name        | Type          |
-| :---------- | :------------ |
-| `apiClient` | AxiosInstance |
+| Name        | Type            |
+| :---------- | :-------------- |
+| `apiClient` | `AxiosInstance` |
 
-**Returns:** [_UserAPI_](userapi.md)
+#### Defined in
 
-Defined in: [user/UserAPI.ts:17](https://github.com/bennycode/coinbase-pro-node/blob/a2d34d0/src/user/UserAPI.ts#L17)
+[user/UserAPI.ts:17](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/user/UserAPI.ts#L17)
 
 ## Properties
 
 ### URL
 
-▪ `Static` `Readonly` **URL**: _object_
+▪ `Static` `Readonly` **URL**: `Object`
 
-#### Type declaration:
+#### Type declaration
 
 | Name    | Type     |
 | :------ | :------- |
-| `USERS` | _string_ |
+| `USERS` | `string` |
 
-Defined in: [user/UserAPI.ts:15](https://github.com/bennycode/coinbase-pro-node/blob/a2d34d0/src/user/UserAPI.ts#L15)
+#### Defined in
+
+[user/UserAPI.ts:15](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/user/UserAPI.ts#L15)
 
 ## Methods
 
 ### getTrailingVolume
 
-▸ **getTrailingVolume**(): _Promise_<[_TrailingVolume_](../interfaces/trailingvolume.md)[]\>
+▸ **getTrailingVolume**(): `Promise`<[TrailingVolume](../interfaces/trailingvolume.md)[]\>
 
 This request will return your 30-day trailing volume for all products of the API key’s profile. This is a cached value that’s calculated every day at midnight UTC.
 
@@ -59,24 +61,32 @@ This request will return your 30-day trailing volume for all products of the API
 
 **`see`** https://docs.pro.coinbase.com/#trailing-volume
 
-**Returns:** _Promise_<[_TrailingVolume_](../interfaces/trailingvolume.md)[]\>
+#### Returns
+
+`Promise`<[TrailingVolume](../interfaces/trailingvolume.md)[]\>
 
 Your 30-day trailing volume for all products of the API key’s profile
 
-Defined in: [user/UserAPI.ts:41](https://github.com/bennycode/coinbase-pro-node/blob/a2d34d0/src/user/UserAPI.ts#L41)
+#### Defined in
+
+[user/UserAPI.ts:41](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/user/UserAPI.ts#L41)
 
 ---
 
 ### verifyAuthentication
 
-▸ **verifyAuthentication**(): _Promise_<[_VerifiedUser_](../interfaces/verifieduser.md)\>
+▸ **verifyAuthentication**(): `Promise`<[VerifiedUser](../interfaces/verifieduser.md)\>
 
 Verify your authentication with Coinbase Pro.
 
 **`see`** https://docs.pro.coinbase.com/#subscribe
 
-**Returns:** _Promise_<[_VerifiedUser_](../interfaces/verifieduser.md)\>
+#### Returns
+
+`Promise`<[VerifiedUser](../interfaces/verifieduser.md)\>
 
 Your account
 
-Defined in: [user/UserAPI.ts:27](https://github.com/bennycode/coinbase-pro-node/blob/a2d34d0/src/user/UserAPI.ts#L27)
+#### Defined in
+
+[user/UserAPI.ts:27](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/user/UserAPI.ts#L27)

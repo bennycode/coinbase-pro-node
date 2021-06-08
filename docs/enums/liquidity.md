@@ -13,14 +13,18 @@
 
 ### MAKER
 
-• **MAKER**: = "M"
+• **MAKER** = "M"
 
-Defined in: [fill/FillAPI.ts:5](https://github.com/bennycode/coinbase-pro-node/blob/a2d34d0/src/fill/FillAPI.ts#L5)
+#### Defined in
+
+[fill/FillAPI.ts:5](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/fill/FillAPI.ts#L5)
 
 ---
 
 ### TAKER
 
-• **TAKER**: = "T"
+• **TAKER** = "T"
 
-Defined in: [fill/FillAPI.ts:6](https://github.com/bennycode/coinbase-pro-node/blob/a2d34d0/src/fill/FillAPI.ts#L6)
+#### Defined in
+
+[fill/FillAPI.ts:6](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/fill/FillAPI.ts#L6)

@@ -4,7 +4,7 @@
 
 ## Hierarchy
 
-- [_ClientAuthenticationBase_](clientauthenticationbase.md)
+- [ClientAuthenticationBase](clientauthenticationbase.md)
 
   ↳ **ClientAuthenticationCustomUrls**
 
@@ -22,44 +22,60 @@
 
 ### apiKey
 
-• **apiKey**: _string_
+• **apiKey**: `string`
 
-Overrides: [ClientAuthenticationBase](clientauthenticationbase.md).[apiKey](clientauthenticationbase.md#apikey)
+#### Overrides
 
-Defined in: [CoinbasePro.ts:19](https://github.com/bennycode/coinbase-pro-node/blob/a2d34d0/src/CoinbasePro.ts#L19)
+[ClientAuthenticationBase](clientauthenticationbase.md).[apiKey](clientauthenticationbase.md#apikey)
+
+#### Defined in
+
+[CoinbasePro.ts:19](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/CoinbasePro.ts#L19)
 
 ---
 
 ### apiSecret
 
-• **apiSecret**: _string_
+• **apiSecret**: `string`
 
-Overrides: [ClientAuthenticationBase](clientauthenticationbase.md).[apiSecret](clientauthenticationbase.md#apisecret)
+#### Overrides
 
-Defined in: [CoinbasePro.ts:20](https://github.com/bennycode/coinbase-pro-node/blob/a2d34d0/src/CoinbasePro.ts#L20)
+[ClientAuthenticationBase](clientauthenticationbase.md).[apiSecret](clientauthenticationbase.md#apisecret)
+
+#### Defined in
+
+[CoinbasePro.ts:20](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/CoinbasePro.ts#L20)
 
 ---
 
 ### httpUrl
 
-• **httpUrl**: _string_
+• **httpUrl**: `string`
 
-Defined in: [CoinbasePro.ts:21](https://github.com/bennycode/coinbase-pro-node/blob/a2d34d0/src/CoinbasePro.ts#L21)
+#### Defined in
+
+[CoinbasePro.ts:21](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/CoinbasePro.ts#L21)
 
 ---
 
 ### passphrase
 
-• **passphrase**: _string_
+• **passphrase**: `string`
 
-Overrides: [ClientAuthenticationBase](clientauthenticationbase.md).[passphrase](clientauthenticationbase.md#passphrase)
+#### Overrides
 
-Defined in: [CoinbasePro.ts:22](https://github.com/bennycode/coinbase-pro-node/blob/a2d34d0/src/CoinbasePro.ts#L22)
+[ClientAuthenticationBase](clientauthenticationbase.md).[passphrase](clientauthenticationbase.md#passphrase)
+
+#### Defined in
+
+[CoinbasePro.ts:22](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/CoinbasePro.ts#L22)
 
 ---
 
 ### wsUrl
 
-• **wsUrl**: _string_
+• **wsUrl**: `string`
 
-Defined in: [CoinbasePro.ts:23](https://github.com/bennycode/coinbase-pro-node/blob/a2d34d0/src/CoinbasePro.ts#L23)
+#### Defined in
+
+[CoinbasePro.ts:23](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/CoinbasePro.ts#L23)

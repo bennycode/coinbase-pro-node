@@ -24,102 +24,128 @@
 
 ### created_at
 
-• **created_at**: _string_
+• **created_at**: `string`
 
-Defined in: [fill/FillAPI.ts:10](https://github.com/bennycode/coinbase-pro-node/blob/a2d34d0/src/fill/FillAPI.ts#L10)
+#### Defined in
+
+[fill/FillAPI.ts:10](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/fill/FillAPI.ts#L10)
 
 ---
 
 ### fee
 
-• **fee**: _string_
+• **fee**: `string`
 
-Defined in: [fill/FillAPI.ts:11](https://github.com/bennycode/coinbase-pro-node/blob/a2d34d0/src/fill/FillAPI.ts#L11)
+#### Defined in
+
+[fill/FillAPI.ts:11](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/fill/FillAPI.ts#L11)
 
 ---
 
 ### liquidity
 
-• **liquidity**: [_Liquidity_](../enums/liquidity.md)
+• **liquidity**: [Liquidity](../enums/liquidity.md)
 
-Defined in: [fill/FillAPI.ts:12](https://github.com/bennycode/coinbase-pro-node/blob/a2d34d0/src/fill/FillAPI.ts#L12)
+#### Defined in
+
+[fill/FillAPI.ts:12](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/fill/FillAPI.ts#L12)
 
 ---
 
 ### order_id
 
-• **order_id**: _string_
+• **order_id**: `string`
 
-Defined in: [fill/FillAPI.ts:13](https://github.com/bennycode/coinbase-pro-node/blob/a2d34d0/src/fill/FillAPI.ts#L13)
+#### Defined in
+
+[fill/FillAPI.ts:13](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/fill/FillAPI.ts#L13)
 
 ---
 
 ### price
 
-• **price**: _string_
+• **price**: `string`
 
-Defined in: [fill/FillAPI.ts:14](https://github.com/bennycode/coinbase-pro-node/blob/a2d34d0/src/fill/FillAPI.ts#L14)
+#### Defined in
+
+[fill/FillAPI.ts:14](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/fill/FillAPI.ts#L14)
 
 ---
 
 ### product_id
 
-• **product_id**: _string_
+• **product_id**: `string`
 
-Defined in: [fill/FillAPI.ts:15](https://github.com/bennycode/coinbase-pro-node/blob/a2d34d0/src/fill/FillAPI.ts#L15)
+#### Defined in
+
+[fill/FillAPI.ts:15](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/fill/FillAPI.ts#L15)
 
 ---
 
 ### profile_id
 
-• **profile_id**: _string_
+• **profile_id**: `string`
 
-Defined in: [fill/FillAPI.ts:16](https://github.com/bennycode/coinbase-pro-node/blob/a2d34d0/src/fill/FillAPI.ts#L16)
+#### Defined in
+
+[fill/FillAPI.ts:16](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/fill/FillAPI.ts#L16)
 
 ---
 
 ### settled
 
-• **settled**: _boolean_
+• **settled**: `boolean`
 
-Defined in: [fill/FillAPI.ts:17](https://github.com/bennycode/coinbase-pro-node/blob/a2d34d0/src/fill/FillAPI.ts#L17)
+#### Defined in
+
+[fill/FillAPI.ts:17](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/fill/FillAPI.ts#L17)
 
 ---
 
 ### side
 
-• **side**: [_OrderSide_](../enums/orderside.md)
+• **side**: `OrderSide`
 
-Defined in: [fill/FillAPI.ts:18](https://github.com/bennycode/coinbase-pro-node/blob/a2d34d0/src/fill/FillAPI.ts#L18)
+#### Defined in
+
+[fill/FillAPI.ts:18](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/fill/FillAPI.ts#L18)
 
 ---
 
 ### size
 
-• **size**: _string_
+• **size**: `string`
 
-Defined in: [fill/FillAPI.ts:19](https://github.com/bennycode/coinbase-pro-node/blob/a2d34d0/src/fill/FillAPI.ts#L19)
+#### Defined in
+
+[fill/FillAPI.ts:19](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/fill/FillAPI.ts#L19)
 
 ---
 
 ### trade_id
 
-• **trade_id**: _number_
+• **trade_id**: `number`
 
-Defined in: [fill/FillAPI.ts:20](https://github.com/bennycode/coinbase-pro-node/blob/a2d34d0/src/fill/FillAPI.ts#L20)
+#### Defined in
+
+[fill/FillAPI.ts:20](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/fill/FillAPI.ts#L20)
 
 ---
 
 ### usd_volume
 
-• **usd_volume**: _string_
+• **usd_volume**: `string`
 
-Defined in: [fill/FillAPI.ts:21](https://github.com/bennycode/coinbase-pro-node/blob/a2d34d0/src/fill/FillAPI.ts#L21)
+#### Defined in
+
+[fill/FillAPI.ts:21](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/fill/FillAPI.ts#L21)
 
 ---
 
 ### user_id
 
-• **user_id**: _string_
+• **user_id**: `string`
 
-Defined in: [fill/FillAPI.ts:22](https://github.com/bennycode/coinbase-pro-node/blob/a2d34d0/src/fill/FillAPI.ts#L22)
+#### Defined in
+
+[fill/FillAPI.ts:22](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/fill/FillAPI.ts#L22)

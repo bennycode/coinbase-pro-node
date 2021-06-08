@@ -12,6 +12,8 @@
 
 ### id
 
-• **id**: _string_
+• **id**: `string`
 
-Defined in: [user/UserAPI.ts:4](https://github.com/bennycode/coinbase-pro-node/blob/a2d34d0/src/user/UserAPI.ts#L4)
+#### Defined in
+
+[user/UserAPI.ts:4](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/user/UserAPI.ts#L4)
