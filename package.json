@@ -34,7 +34,7 @@
     "pretty-quick": "3.1.1",
     "rimraf": "3.0.2",
     "ts-node": "10.1.0",
-    "typedoc": "0.21.3",
+    "typedoc": "0.21.4",
     "typedoc-plugin-markdown": "3.10.3",
     "typescript": "4.3.5"
   },
