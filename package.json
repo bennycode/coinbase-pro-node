@@ -21,7 +21,7 @@
     "dotenv-defaults": "2.0.2",
     "eslint": "7.32.0",
     "eslint-config-prettier": "8.3.0",
-    "eslint-plugin-prettier": "3.4.0",
+    "eslint-plugin-prettier": "3.4.1",
     "eslint-plugin-sort-keys-fix": "1.1.2",
     "eslint-plugin-typescript-sort-keys": "1.7.0",
     "generate-changelog": "1.8.0",
