@@ -1551,7 +1551,7 @@ json-stringify-safe@^5.0.1:
   resolved "https://registry.npmjs.org/json-stringify-safe/-/json-stringify-safe-5.0.1.tgz#1296a2d58fd45f19a0f6ce01d65701e2c735b6eb"
   integrity sha1-Epai1Y/UXxmg9s4B1lcB4sc1tus=
 
-json5@^2.1.2:
+json5@^2.1.2, json5@^2.2.0:
   version "2.2.0"
   resolved "https://registry.npmjs.org/json5/-/json5-2.2.0.tgz#2dfefe720c6ba525d9ebd909950f0515316c89a3"
   integrity sha512-f+8cldu7X/y7RAJurMEJmdoKXGB/X550w2Nr3tTbezL6RwEE/iMcm+tZnXeoZtKuOq6ft8+CqzEkrIgx1fPoQA==
@@ -1685,10 +1685,10 @@ make-error@^1.1.1:
   resolved "https://registry.npmjs.org/make-error/-/make-error-1.3.6.tgz#2eb2e37ea9b67c4891f684a1394799af484cf7a2"
   integrity sha512-s8UhlNe7vPKomQhC1qFelMokr/Sc3AgNbso3n74mVPA5LTZwkB9NlXf4XPamLxJE8h0gh73rM94xvwRT2CVInw==
 
-marked@^2.1.1:
-  version "2.1.1"
-  resolved "https://registry.npmjs.org/marked/-/marked-2.1.1.tgz#b7c27f520fc4de0ddd049d9b4be3b04e06314923"
-  integrity sha512-5XFS69o9CzDpQDSpUYC+AN2xvq8yl1EGa5SG/GI1hP78/uTeo3PDfiDNmsUyiahpyhToDDJhQk7fNtJsga+KVw==
+marked@^3.0.2:
+  version "3.0.2"
+  resolved "https://registry.npmjs.org/marked/-/marked-3.0.2.tgz#60ce97d6aec34dd882ab4bb4df82494666854e17"
+  integrity sha512-TMJQQ79Z0e3rJYazY0tIoMsFzteUGw9fB3FD+gzuIT3zLuG9L9ckIvUfF51apdJkcqc208jJN2KbtPbOvXtbjA==
 
 merge-stream@^2.0.0:
   version "2.0.0"
@@ -2149,13 +2149,14 @@ shebang-regex@^3.0.0:
   resolved "https://registry.npmjs.org/shebang-regex/-/shebang-regex-3.0.0.tgz#ae16f1644d873ecad843b0307b143362d4c42172"
   integrity sha512-7++dFhtcx3353uBaq8DDR4NuxBetBzC7ZQOhmTQInHEd6bSrXdiEyzCvG07Z44UYdLShWUyXt5M/yhz8ekcb1A==
 
-shiki@^0.9.3:
-  version "0.9.3"
-  resolved "https://registry.npmjs.org/shiki/-/shiki-0.9.3.tgz#7bf7bcf3ed50ca525ec89cc09254abce4264d5ca"
-  integrity sha512-NEjg1mVbAUrzRv2eIcUt3TG7X9svX7l3n3F5/3OdFq+/BxUdmBOeKGiH4icZJBLHy354Shnj6sfBTemea2e7XA==
+shiki@^0.9.8:
+  version "0.9.8"
+  resolved "https://registry.npmjs.org/shiki/-/shiki-0.9.8.tgz#7dcd1af28c9a7804afb9ee3c3a5ee3987c21e86e"
+  integrity sha512-499zQUTjcNTVwwiaPrWldUTXIV3T9HZWxDwE82bY+9GE7P2uD6hpHUTXNbTof3iOG6WT+/062+OMbl0lDoG8WQ==
   dependencies:
+    json5 "^2.2.0"
     onigasm "^2.2.5"
-    vscode-textmate "^5.2.0"
+    vscode-textmate "5.2.0"
 
 signal-exit@^3.0.2, signal-exit@^3.0.3:
   version "3.0.3"
@@ -2385,18 +2386,18 @@ typedoc-plugin-markdown@3.10.4:
   dependencies:
     handlebars "^4.7.7"
 
-typedoc@0.21.6:
-  version "0.21.6"
-  resolved "https://registry.npmjs.org/typedoc/-/typedoc-0.21.6.tgz#854bfa2d6b3ac818ac70aa4734a4d1ba93695595"
-  integrity sha512-+4u3PEBjQdaL5/yfus5WJbjIdQHv7E/FpZq3cNki9BBdGmZhqnTF6JLIXDQ2EfVggojOJG9/soB5QVFgXRYnIw==
+typedoc@0.21.8:
+  version "0.21.8"
+  resolved "https://registry.npmjs.org/typedoc/-/typedoc-0.21.8.tgz#2fa0515b8662e9134439fce4d8a91a48a36dfd06"
+  integrity sha512-uO2UR71+UjskIR1dNsNS/t54Ffi4F+MTwKI4REILCKGztpj7GyBaq3wVr5hqKrKlcs9e4qeBHlVnDJ2WiCNq1A==
   dependencies:
     glob "^7.1.7"
     handlebars "^4.7.7"
     lunr "^2.3.9"
-    marked "^2.1.1"
+    marked "^3.0.2"
     minimatch "^3.0.0"
     progress "^2.0.3"
-    shiki "^0.9.3"
+    shiki "^0.9.8"
     typedoc-default-themes "^0.12.10"
 
 typescript@4.3.5:
@@ -2433,10 +2434,10 @@ v8-compile-cache@^2.0.3:
   resolved "https://registry.npmjs.org/v8-compile-cache/-/v8-compile-cache-2.3.0.tgz#2de19618c66dc247dcfb6f99338035d8245a2cee"
   integrity sha512-l8lCEmLcLYZh4nbunNZvQCJc5pv7+RCwa8q/LdUx8u7lsWvPDKmpodJAJNwkAhJC//dFY48KuIEmjtd4RViDrA==
 
-vscode-textmate@^5.2.0:
-  version "5.4.0"
-  resolved "https://registry.npmjs.org/vscode-textmate/-/vscode-textmate-5.4.0.tgz#4b25ffc1f14ac3a90faf9a388c67a01d24257cd7"
-  integrity sha512-c0Q4zYZkcLizeYJ3hNyaVUM2AA8KDhNCA3JvXY8CeZSJuBdAy3bAvSbv46RClC4P3dSO9BdwhnKEx2zOo6vP/w==
+vscode-textmate@5.2.0:
+  version "5.2.0"
+  resolved "https://registry.npmjs.org/vscode-textmate/-/vscode-textmate-5.2.0.tgz#01f01760a391e8222fe4f33fbccbd1ad71aed74e"
+  integrity sha512-Uw5ooOQxRASHgu6C7GVvUxisKXfSgW4oFlO+aa+PAkgmH89O3CXxEEzNRNtHSqtXFTl0nAC1uYj0GMSH27uwtQ==
 
 which-module@^2.0.0:
   version "2.0.0"
