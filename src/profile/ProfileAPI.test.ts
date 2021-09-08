@@ -1,6 +1,7 @@
 import nock from 'nock';
 import {ProfileAPI} from './ProfileAPI';
 import url from 'url';
+import {AxiosError} from 'axios';
 
 describe('ProfileAPI', () => {
   afterEach(() => nock.cleanAll());
@@ -111,7 +112,7 @@ describe('ProfileAPI', () => {
       try {
         await global.client.rest.profile.getProfile(profileId);
       } catch (error) {
-        expect(error.response.status).toBe(403);
+        expect((error as AxiosError).response!.status).toBe(403);
       }
     });
   });

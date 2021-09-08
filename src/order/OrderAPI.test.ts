@@ -1,6 +1,7 @@
 import nock from 'nock';
 import {NewOrder, OrderAPI, OrderStatus, OrderType, SelfTradePrevention} from './OrderAPI';
 import {OrderSide} from '../payload';
+import {AxiosError} from 'axios';
 
 describe('OrderAPI', () => {
   afterEach(() => nock.cleanAll());
@@ -163,7 +164,7 @@ describe('OrderAPI', () => {
       try {
         await global.client.rest.order.getOrder('123');
       } catch (error) {
-        expect(error.response.status).toBe(403);
+        expect((error as AxiosError).response!.status).toBe(403);
       }
     });
   });

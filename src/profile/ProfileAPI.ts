@@ -1,4 +1,4 @@
-import {AxiosInstance} from 'axios';
+import {AxiosError, AxiosInstance} from 'axios';
 import {ISO_8601_MS_UTC, UUID_V4} from '../payload/common';
 
 type Nickname = 'default' | string;
@@ -60,7 +60,7 @@ export class ProfileAPI {
       const response = await this.apiClient.get<Profile>(resource);
       return response.data;
     } catch (error) {
-      if (error.response.status === 404) {
+      if ((error as AxiosError).response!.status === 404) {
         return null;
       }
 

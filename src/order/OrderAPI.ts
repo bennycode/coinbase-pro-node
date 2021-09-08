@@ -1,4 +1,4 @@
-import {AxiosInstance} from 'axios';
+import {AxiosError, AxiosInstance} from 'axios';
 import {ISO_8601_MS_UTC, OrderSide, PaginatedData, Pagination} from '../payload';
 import querystring from 'querystring';
 
@@ -183,7 +183,7 @@ export class OrderAPI {
        * If the order is canceled the response may
        * have status code 404 if the order had no matches.
        */
-      if (error.response.status === 404) {
+      if ((error as AxiosError).response!.status === 404) {
         return null;
       }
 
