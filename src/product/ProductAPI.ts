@@ -230,7 +230,7 @@ export class ProductAPI {
       }
     } else {
       const response = await this.apiClient.get<RawCandle[]>(resource, {params});
-      rawCandles = response.data;
+      rawCandles = [...response.data];
     }
 
     return rawCandles
