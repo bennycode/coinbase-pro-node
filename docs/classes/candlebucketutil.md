@@ -6,22 +6,22 @@
 
 ### Constructors
 
-- [constructor](candlebucketutil.md#constructor)
+- [constructor](CandleBucketUtil.md#constructor)
 
 ### Methods
 
-- [addUnitISO](candlebucketutil.md#addunitiso)
-- [addUnitMillis](candlebucketutil.md#addunitmillis)
-- [expectedBuckets](candlebucketutil.md#expectedbuckets)
-- [getBucketsInISO](candlebucketutil.md#getbucketsiniso)
-- [getBucketsInMillis](candlebucketutil.md#getbucketsinmillis)
-- [getIntervals](candlebucketutil.md#getintervals)
-- [getMaxPrice](candlebucketutil.md#getmaxprice)
-- [getMinPrice](candlebucketutil.md#getminprice)
-- [mapGranularity](candlebucketutil.md#mapgranularity)
-- [mapInterval](candlebucketutil.md#mapinterval)
-- [removeUnitISO](candlebucketutil.md#removeunitiso)
-- [removeUnitMillis](candlebucketutil.md#removeunitmillis)
+- [addUnitISO](CandleBucketUtil.md#addunitiso)
+- [addUnitMillis](CandleBucketUtil.md#addunitmillis)
+- [expectedBuckets](CandleBucketUtil.md#expectedbuckets)
+- [getBucketsInISO](CandleBucketUtil.md#getbucketsiniso)
+- [getBucketsInMillis](CandleBucketUtil.md#getbucketsinmillis)
+- [getIntervals](CandleBucketUtil.md#getintervals)
+- [getMaxPrice](CandleBucketUtil.md#getmaxprice)
+- [getMinPrice](CandleBucketUtil.md#getminprice)
+- [mapGranularity](CandleBucketUtil.md#mapgranularity)
+- [mapInterval](CandleBucketUtil.md#mapinterval)
+- [removeUnitISO](CandleBucketUtil.md#removeunitiso)
+- [removeUnitMillis](CandleBucketUtil.md#removeunitmillis)
 
 ## Constructors
 
@@ -37,11 +37,11 @@
 
 #### Parameters
 
-| Name                   | Type                                               |
-| :--------------------- | :------------------------------------------------- |
-| `openTime`             | `string` \| `number`                               |
-| `granularityInSeconds` | [CandleGranularity](../enums/candlegranularity.md) |
-| `amount`               | `number`                                           |
+| Name                   | Type                                                 |
+| :--------------------- | :--------------------------------------------------- |
+| `openTime`             | `string` \| `number`                                 |
+| `granularityInSeconds` | [`CandleGranularity`](../enums/CandleGranularity.md) |
+| `amount`               | `number`                                             |
 
 #### Returns
 
@@ -49,7 +49,7 @@
 
 #### Defined in
 
-[product/CandleBucketUtil.ts:29](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/product/CandleBucketUtil.ts#L29)
+[product/CandleBucketUtil.ts:29](https://github.com/bennycode/coinbase-pro-node/blob/6b575f0/src/product/CandleBucketUtil.ts#L29)
 
 ---
 
@@ -59,11 +59,11 @@
 
 #### Parameters
 
-| Name                   | Type                                               |
-| :--------------------- | :------------------------------------------------- |
-| `openTime`             | `string` \| `number`                               |
-| `granularityInSeconds` | [CandleGranularity](../enums/candlegranularity.md) |
-| `amount`               | `number`                                           |
+| Name                   | Type                                                 |
+| :--------------------- | :--------------------------------------------------- |
+| `openTime`             | `string` \| `number`                                 |
+| `granularityInSeconds` | [`CandleGranularity`](../enums/CandleGranularity.md) |
+| `amount`               | `number`                                             |
 
 #### Returns
 
@@ -71,7 +71,7 @@
 
 #### Defined in
 
-[product/CandleBucketUtil.ts:23](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/product/CandleBucketUtil.ts#L23)
+[product/CandleBucketUtil.ts:23](https://github.com/bennycode/coinbase-pro-node/blob/6b575f0/src/product/CandleBucketUtil.ts#L23)
 
 ---
 
@@ -81,11 +81,11 @@
 
 #### Parameters
 
-| Name                 | Type                                               |
-| :------------------- | :------------------------------------------------- |
-| `fromInMillis`       | `number`                                           |
-| `toInMillis`         | `number`                                           |
-| `candleSizeInMillis` | [CandleGranularity](../enums/candlegranularity.md) |
+| Name                 | Type                                                 |
+| :------------------- | :--------------------------------------------------- |
+| `fromInMillis`       | `number`                                             |
+| `toInMillis`         | `number`                                             |
+| `candleSizeInMillis` | [`CandleGranularity`](../enums/CandleGranularity.md) |
 
 #### Returns
 
@@ -93,13 +93,13 @@
 
 #### Defined in
 
-[product/CandleBucketUtil.ts:67](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/product/CandleBucketUtil.ts#L67)
+[product/CandleBucketUtil.ts:67](https://github.com/bennycode/coinbase-pro-node/blob/6b575f0/src/product/CandleBucketUtil.ts#L67)
 
 ---
 
 ### getBucketsInISO
 
-▸ `Static` **getBucketsInISO**(`bucketsInMillis`): [CandleBatchBucket](../interfaces/candlebatchbucket.md)[]
+▸ `Static` **getBucketsInISO**(`bucketsInMillis`): [`CandleBatchBucket`](../interfaces/CandleBatchBucket.md)[]
 
 #### Parameters
 
@@ -109,11 +109,11 @@
 
 #### Returns
 
-[CandleBatchBucket](../interfaces/candlebatchbucket.md)[]
+[`CandleBatchBucket`](../interfaces/CandleBatchBucket.md)[]
 
 #### Defined in
 
-[product/CandleBucketUtil.ts:90](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/product/CandleBucketUtil.ts#L90)
+[product/CandleBucketUtil.ts:90](https://github.com/bennycode/coinbase-pro-node/blob/6b575f0/src/product/CandleBucketUtil.ts#L90)
 
 ---
 
@@ -135,7 +135,7 @@
 
 #### Defined in
 
-[product/CandleBucketUtil.ts:72](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/product/CandleBucketUtil.ts#L72)
+[product/CandleBucketUtil.ts:72](https://github.com/bennycode/coinbase-pro-node/blob/6b575f0/src/product/CandleBucketUtil.ts#L72)
 
 ---
 
@@ -149,7 +149,7 @@
 
 #### Defined in
 
-[product/CandleBucketUtil.ts:53](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/product/CandleBucketUtil.ts#L53)
+[product/CandleBucketUtil.ts:53](https://github.com/bennycode/coinbase-pro-node/blob/6b575f0/src/product/CandleBucketUtil.ts#L53)
 
 ---
 
@@ -161,8 +161,8 @@
 
 | Name       | Type                                         | Default value |
 | :--------- | :------------------------------------------- | :------------ |
-| `candles`  | [Candle](../interfaces/candle.md)[]          | `undefined`   |
-| `property` | `"close"` \| `"high"` \| `"low"` \| `"open"` | 'close'       |
+| `candles`  | [`Candle`](../interfaces/Candle.md)[]        | `undefined`   |
+| `property` | `"close"` \| `"high"` \| `"low"` \| `"open"` | `'close'`     |
 
 #### Returns
 
@@ -170,7 +170,7 @@
 
 #### Defined in
 
-[product/CandleBucketUtil.ts:18](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/product/CandleBucketUtil.ts#L18)
+[product/CandleBucketUtil.ts:18](https://github.com/bennycode/coinbase-pro-node/blob/6b575f0/src/product/CandleBucketUtil.ts#L18)
 
 ---
 
@@ -182,8 +182,8 @@
 
 | Name       | Type                                         | Default value |
 | :--------- | :------------------------------------------- | :------------ |
-| `candles`  | [Candle](../interfaces/candle.md)[]          | `undefined`   |
-| `property` | `"close"` \| `"high"` \| `"low"` \| `"open"` | 'close'       |
+| `candles`  | [`Candle`](../interfaces/Candle.md)[]        | `undefined`   |
+| `property` | `"close"` \| `"high"` \| `"low"` \| `"open"` | `'close'`     |
 
 #### Returns
 
@@ -191,13 +191,13 @@
 
 #### Defined in
 
-[product/CandleBucketUtil.ts:13](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/product/CandleBucketUtil.ts#L13)
+[product/CandleBucketUtil.ts:13](https://github.com/bennycode/coinbase-pro-node/blob/6b575f0/src/product/CandleBucketUtil.ts#L13)
 
 ---
 
 ### mapGranularity
 
-▸ `Static` **mapGranularity**(`candleSizeInMillis`): [CandleGranularity](../enums/candlegranularity.md)
+▸ `Static` **mapGranularity**(`candleSizeInMillis`): [`CandleGranularity`](../enums/CandleGranularity.md)
 
 #### Parameters
 
@@ -207,11 +207,11 @@
 
 #### Returns
 
-[CandleGranularity](../enums/candlegranularity.md)
+[`CandleGranularity`](../enums/CandleGranularity.md)
 
 #### Defined in
 
-[product/CandleBucketUtil.ts:63](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/product/CandleBucketUtil.ts#L63)
+[product/CandleBucketUtil.ts:63](https://github.com/bennycode/coinbase-pro-node/blob/6b575f0/src/product/CandleBucketUtil.ts#L63)
 
 ---
 
@@ -232,7 +232,7 @@
 
 #### Defined in
 
-[product/CandleBucketUtil.ts:57](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/product/CandleBucketUtil.ts#L57)
+[product/CandleBucketUtil.ts:57](https://github.com/bennycode/coinbase-pro-node/blob/6b575f0/src/product/CandleBucketUtil.ts#L57)
 
 ---
 
@@ -242,11 +242,11 @@
 
 #### Parameters
 
-| Name                   | Type                                               |
-| :--------------------- | :------------------------------------------------- |
-| `openTime`             | `string` \| `number`                               |
-| `granularityInSeconds` | [CandleGranularity](../enums/candlegranularity.md) |
-| `amount`               | `number`                                           |
+| Name                   | Type                                                 |
+| :--------------------- | :--------------------------------------------------- |
+| `openTime`             | `string` \| `number`                                 |
+| `granularityInSeconds` | [`CandleGranularity`](../enums/CandleGranularity.md) |
+| `amount`               | `number`                                             |
 
 #### Returns
 
@@ -254,7 +254,7 @@
 
 #### Defined in
 
-[product/CandleBucketUtil.ts:44](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/product/CandleBucketUtil.ts#L44)
+[product/CandleBucketUtil.ts:44](https://github.com/bennycode/coinbase-pro-node/blob/6b575f0/src/product/CandleBucketUtil.ts#L44)
 
 ---
 
@@ -264,11 +264,11 @@
 
 #### Parameters
 
-| Name                   | Type                                               |
-| :--------------------- | :------------------------------------------------- |
-| `openTime`             | `string` \| `number`                               |
-| `granularityInSeconds` | [CandleGranularity](../enums/candlegranularity.md) |
-| `amount`               | `number`                                           |
+| Name                   | Type                                                 |
+| :--------------------- | :--------------------------------------------------- |
+| `openTime`             | `string` \| `number`                                 |
+| `granularityInSeconds` | [`CandleGranularity`](../enums/CandleGranularity.md) |
+| `amount`               | `number`                                             |
 
 #### Returns
 
@@ -276,4 +276,4 @@
 
 #### Defined in
 
-[product/CandleBucketUtil.ts:38](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/product/CandleBucketUtil.ts#L38)
+[product/CandleBucketUtil.ts:38](https://github.com/bennycode/coinbase-pro-node/blob/6b575f0/src/product/CandleBucketUtil.ts#L38)

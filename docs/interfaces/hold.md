@@ -6,13 +6,13 @@
 
 ### Properties
 
-- [account_id](hold.md#account_id)
-- [amount](hold.md#amount)
-- [created_at](hold.md#created_at)
-- [id](hold.md#id)
-- [ref](hold.md#ref)
-- [type](hold.md#type)
-- [updated_at](hold.md#updated_at)
+- [account_id](Hold.md#account_id)
+- [amount](Hold.md#amount)
+- [created_at](Hold.md#created_at)
+- [id](Hold.md#id)
+- [ref](Hold.md#ref)
+- [type](Hold.md#type)
+- [updated_at](Hold.md#updated_at)
 
 ## Properties
 
@@ -22,7 +22,7 @@
 
 #### Defined in
 
-[account/AccountAPI.ts:29](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/account/AccountAPI.ts#L29)
+[account/AccountAPI.ts:29](https://github.com/bennycode/coinbase-pro-node/blob/6b575f0/src/account/AccountAPI.ts#L29)
 
 ---
 
@@ -32,7 +32,7 @@
 
 #### Defined in
 
-[account/AccountAPI.ts:30](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/account/AccountAPI.ts#L30)
+[account/AccountAPI.ts:30](https://github.com/bennycode/coinbase-pro-node/blob/6b575f0/src/account/AccountAPI.ts#L30)
 
 ---
 
@@ -42,7 +42,7 @@
 
 #### Defined in
 
-[account/AccountAPI.ts:31](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/account/AccountAPI.ts#L31)
+[account/AccountAPI.ts:31](https://github.com/bennycode/coinbase-pro-node/blob/6b575f0/src/account/AccountAPI.ts#L31)
 
 ---
 
@@ -52,7 +52,7 @@
 
 #### Defined in
 
-[account/AccountAPI.ts:32](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/account/AccountAPI.ts#L32)
+[account/AccountAPI.ts:32](https://github.com/bennycode/coinbase-pro-node/blob/6b575f0/src/account/AccountAPI.ts#L32)
 
 ---
 
@@ -62,7 +62,7 @@
 
 #### Defined in
 
-[account/AccountAPI.ts:33](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/account/AccountAPI.ts#L33)
+[account/AccountAPI.ts:33](https://github.com/bennycode/coinbase-pro-node/blob/6b575f0/src/account/AccountAPI.ts#L33)
 
 ---
 
@@ -72,7 +72,7 @@
 
 #### Defined in
 
-[account/AccountAPI.ts:34](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/account/AccountAPI.ts#L34)
+[account/AccountAPI.ts:34](https://github.com/bennycode/coinbase-pro-node/blob/6b575f0/src/account/AccountAPI.ts#L34)
 
 ---
 
@@ -82,4 +82,4 @@
 
 #### Defined in
 
-[account/AccountAPI.ts:35](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/account/AccountAPI.ts#L35)
+[account/AccountAPI.ts:35](https://github.com/bennycode/coinbase-pro-node/blob/6b575f0/src/account/AccountAPI.ts#L35)

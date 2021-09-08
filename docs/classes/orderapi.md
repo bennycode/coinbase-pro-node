@@ -6,19 +6,19 @@
 
 ### Constructors
 
-- [constructor](orderapi.md#constructor)
+- [constructor](OrderAPI.md#constructor)
 
 ### Properties
 
-- [URL](orderapi.md#url)
+- [URL](OrderAPI.md#url)
 
 ### Methods
 
-- [cancelOpenOrders](orderapi.md#cancelopenorders)
-- [cancelOrder](orderapi.md#cancelorder)
-- [getOrder](orderapi.md#getorder)
-- [getOrders](orderapi.md#getorders)
-- [placeOrder](orderapi.md#placeorder)
+- [cancelOpenOrders](OrderAPI.md#cancelopenorders)
+- [cancelOrder](OrderAPI.md#cancelorder)
+- [getOrder](OrderAPI.md#getorder)
+- [getOrders](OrderAPI.md#getorders)
+- [placeOrder](OrderAPI.md#placeorder)
 
 ## Constructors
 
@@ -34,7 +34,7 @@
 
 #### Defined in
 
-[order/OrderAPI.ts:111](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/order/OrderAPI.ts#L111)
+[order/OrderAPI.ts:113](https://github.com/bennycode/coinbase-pro-node/blob/6b575f0/src/order/OrderAPI.ts#L113)
 
 ## Properties
 
@@ -50,13 +50,13 @@
 
 #### Defined in
 
-[order/OrderAPI.ts:109](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/order/OrderAPI.ts#L109)
+[order/OrderAPI.ts:109](https://github.com/bennycode/coinbase-pro-node/blob/6b575f0/src/order/OrderAPI.ts#L109)
 
 ## Methods
 
 ### cancelOpenOrders
 
-▸ **cancelOpenOrders**(`productId?`): `Promise`<string[]\>
+▸ **cancelOpenOrders**(`productId?`): `Promise`<`string`[]\>
 
 With best effort, cancel all open orders from the profile that the API key belongs to.
 
@@ -70,19 +70,19 @@ With best effort, cancel all open orders from the profile that the API key belon
 
 #### Returns
 
-`Promise`<string[]\>
+`Promise`<`string`[]\>
 
 A list of ids of the canceled orders
 
 #### Defined in
 
-[order/OrderAPI.ts:122](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/order/OrderAPI.ts#L122)
+[order/OrderAPI.ts:122](https://github.com/bennycode/coinbase-pro-node/blob/6b575f0/src/order/OrderAPI.ts#L122)
 
 ---
 
 ### cancelOrder
 
-▸ **cancelOrder**(`orderId`, `productId?`): `Promise`<string\>
+▸ **cancelOrder**(`orderId`, `productId?`): `Promise`<`string`\>
 
 Cancel a previously placed order. Order must belong to the profile that the API key belongs to.
 
@@ -97,19 +97,19 @@ Cancel a previously placed order. Order must belong to the profile that the API 
 
 #### Returns
 
-`Promise`<string\>
+`Promise`<`string`\>
 
 The ID of the canceled order
 
 #### Defined in
 
-[order/OrderAPI.ts:138](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/order/OrderAPI.ts#L138)
+[order/OrderAPI.ts:138](https://github.com/bennycode/coinbase-pro-node/blob/6b575f0/src/order/OrderAPI.ts#L138)
 
 ---
 
 ### getOrder
 
-▸ **getOrder**(`orderId`): `Promise`<`null` \| [Order](../modules.md#order)\>
+▸ **getOrder**(`orderId`): `Promise`<`null` \| [`Order`](../modules.md#order)\>
 
 Get a single order by order id from the profile that the API key belongs to.
 
@@ -123,17 +123,17 @@ Get a single order by order id from the profile that the API key belongs to.
 
 #### Returns
 
-`Promise`<`null` \| [Order](../modules.md#order)\>
+`Promise`<`null` \| [`Order`](../modules.md#order)\>
 
 #### Defined in
 
-[order/OrderAPI.ts:176](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/order/OrderAPI.ts#L176)
+[order/OrderAPI.ts:176](https://github.com/bennycode/coinbase-pro-node/blob/6b575f0/src/order/OrderAPI.ts#L176)
 
 ---
 
 ### getOrders
 
-▸ **getOrders**(`query?`): `Promise`<PaginatedData<[Order](../modules.md#order)\>\>
+▸ **getOrders**(`query?`): `Promise`<`PaginatedData`<[`Order`](../modules.md#order)\>\>
 
 List your orders from the profile that the API key belongs to. Only open or un-settled orders are returned. As soon as an order is no longer open and settled, it will no longer appear in the default request.
 
@@ -145,21 +145,21 @@ List your orders from the profile that the API key belongs to. Only open or un-s
 
 | Name | Type | Description |
 | :-- | :-- | :-- |
-| `query?` | [OrderListQueryParam](../interfaces/orderlistqueryparam.md) | Available query parameters (Pagination, Product ID and/or Order Status) |
+| `query?` | [`OrderListQueryParam`](../interfaces/OrderListQueryParam.md) | Available query parameters (Pagination, Product ID and/or Order Status) |
 
 #### Returns
 
-`Promise`<PaginatedData<[Order](../modules.md#order)\>\>
+`Promise`<`PaginatedData`<[`Order`](../modules.md#order)\>\>
 
 #### Defined in
 
-[order/OrderAPI.ts:155](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/order/OrderAPI.ts#L155)
+[order/OrderAPI.ts:155](https://github.com/bennycode/coinbase-pro-node/blob/6b575f0/src/order/OrderAPI.ts#L155)
 
 ---
 
 ### placeOrder
 
-▸ **placeOrder**(`newOrder`): `Promise`<[Order](../modules.md#order)\>
+▸ **placeOrder**(`newOrder`): `Promise`<[`Order`](../modules.md#order)\>
 
 You can place two types of orders: limit and market. Orders can only be placed if your account has sufficient funds. Once an order is placed, your account funds will be put on hold for the duration of the order.
 
@@ -167,14 +167,14 @@ You can place two types of orders: limit and market. Orders can only be placed i
 
 #### Parameters
 
-| Name       | Type                               | Description               |
-| :--------- | :--------------------------------- | :------------------------ |
-| `newOrder` | [NewOrder](../modules.md#neworder) | Order type and parameters |
+| Name       | Type                                 | Description               |
+| :--------- | :----------------------------------- | :------------------------ |
+| `newOrder` | [`NewOrder`](../modules.md#neworder) | Order type and parameters |
 
 #### Returns
 
-`Promise`<[Order](../modules.md#order)\>
+`Promise`<[`Order`](../modules.md#order)\>
 
 #### Defined in
 
-[order/OrderAPI.ts:201](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/order/OrderAPI.ts#L201)
+[order/OrderAPI.ts:201](https://github.com/bennycode/coinbase-pro-node/blob/6b575f0/src/order/OrderAPI.ts#L201)

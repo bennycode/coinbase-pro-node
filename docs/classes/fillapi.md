@@ -6,16 +6,16 @@
 
 ### Constructors
 
-- [constructor](fillapi.md#constructor)
+- [constructor](FillAPI.md#constructor)
 
 ### Properties
 
-- [URL](fillapi.md#url)
+- [URL](FillAPI.md#url)
 
 ### Methods
 
-- [getFillsByOrderId](fillapi.md#getfillsbyorderid)
-- [getFillsByProductId](fillapi.md#getfillsbyproductid)
+- [getFillsByOrderId](FillAPI.md#getfillsbyorderid)
+- [getFillsByProductId](FillAPI.md#getfillsbyproductid)
 
 ## Constructors
 
@@ -31,7 +31,7 @@
 
 #### Defined in
 
-[fill/FillAPI.ts:28](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/fill/FillAPI.ts#L28)
+[fill/FillAPI.ts:30](https://github.com/bennycode/coinbase-pro-node/blob/6b575f0/src/fill/FillAPI.ts#L30)
 
 ## Properties
 
@@ -47,13 +47,13 @@
 
 #### Defined in
 
-[fill/FillAPI.ts:26](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/fill/FillAPI.ts#L26)
+[fill/FillAPI.ts:26](https://github.com/bennycode/coinbase-pro-node/blob/6b575f0/src/fill/FillAPI.ts#L26)
 
 ## Methods
 
 ### getFillsByOrderId
 
-▸ **getFillsByOrderId**(`orderId`, `pagination?`): `Promise`<PaginatedData<[Fill](../interfaces/fill.md)\>\>
+▸ **getFillsByOrderId**(`orderId`, `pagination?`): `Promise`<`PaginatedData`<[`Fill`](../interfaces/Fill.md)\>\>
 
 Get a list of recent fills for a given Order of the API key's profile.
 
@@ -70,17 +70,17 @@ Get a list of recent fills for a given Order of the API key's profile.
 
 #### Returns
 
-`Promise`<PaginatedData<[Fill](../interfaces/fill.md)\>\>
+`Promise`<`PaginatedData`<[`Fill`](../interfaces/Fill.md)\>\>
 
 #### Defined in
 
-[fill/FillAPI.ts:40](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/fill/FillAPI.ts#L40)
+[fill/FillAPI.ts:40](https://github.com/bennycode/coinbase-pro-node/blob/6b575f0/src/fill/FillAPI.ts#L40)
 
 ---
 
 ### getFillsByProductId
 
-▸ **getFillsByProductId**(`productId`, `pagination?`): `Promise`<PaginatedData<[Fill](../interfaces/fill.md)\>\>
+▸ **getFillsByProductId**(`productId`, `pagination?`): `Promise`<`PaginatedData`<[`Fill`](../interfaces/Fill.md)\>\>
 
 Get a list of recent fills for a given Product of the API key's profile.
 
@@ -97,8 +97,8 @@ Get a list of recent fills for a given Product of the API key's profile.
 
 #### Returns
 
-`Promise`<PaginatedData<[Fill](../interfaces/fill.md)\>\>
+`Promise`<`PaginatedData`<[`Fill`](../interfaces/Fill.md)\>\>
 
 #### Defined in
 
-[fill/FillAPI.ts:60](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/fill/FillAPI.ts#L60)
+[fill/FillAPI.ts:60](https://github.com/bennycode/coinbase-pro-node/blob/6b575f0/src/fill/FillAPI.ts#L60)

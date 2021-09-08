@@ -8,9 +8,9 @@ Full order book (non aggregated): Level 3 is only recommended for users wishing 
 
 ### Properties
 
-- [asks](orderbooklevel3.md#asks)
-- [bids](orderbooklevel3.md#bids)
-- [sequence](orderbooklevel3.md#sequence)
+- [asks](OrderBookLevel3.md#asks)
+- [bids](OrderBookLevel3.md#bids)
+- [sequence](OrderBookLevel3.md#sequence)
 
 ## Properties
 
@@ -20,7 +20,7 @@ Full order book (non aggregated): Level 3 is only recommended for users wishing 
 
 #### Defined in
 
-[product/ProductAPI.ts:128](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/product/ProductAPI.ts#L128)
+[product/ProductAPI.ts:128](https://github.com/bennycode/coinbase-pro-node/blob/6b575f0/src/product/ProductAPI.ts#L128)
 
 ---
 
@@ -30,7 +30,7 @@ Full order book (non aggregated): Level 3 is only recommended for users wishing 
 
 #### Defined in
 
-[product/ProductAPI.ts:129](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/product/ProductAPI.ts#L129)
+[product/ProductAPI.ts:129](https://github.com/bennycode/coinbase-pro-node/blob/6b575f0/src/product/ProductAPI.ts#L129)
 
 ---
 
@@ -40,4 +40,4 @@ Full order book (non aggregated): Level 3 is only recommended for users wishing 
 
 #### Defined in
 
-[product/ProductAPI.ts:130](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/product/ProductAPI.ts#L130)
+[product/ProductAPI.ts:130](https://github.com/bennycode/coinbase-pro-node/blob/6b575f0/src/product/ProductAPI.ts#L130)

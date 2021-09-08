@@ -6,12 +6,12 @@
 
 ### Properties
 
-- [high](productstats.md#high)
-- [last](productstats.md#last)
-- [low](productstats.md#low)
-- [open](productstats.md#open)
-- [volume](productstats.md#volume)
-- [volume_30day](productstats.md#volume_30day)
+- [high](ProductStats.md#high)
+- [last](ProductStats.md#last)
+- [low](ProductStats.md#low)
+- [open](ProductStats.md#open)
+- [volume](ProductStats.md#volume)
+- [volume_30day](ProductStats.md#volume_30day)
 
 ## Properties
 
@@ -21,7 +21,7 @@
 
 #### Defined in
 
-[product/ProductAPI.ts:44](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/product/ProductAPI.ts#L44)
+[product/ProductAPI.ts:44](https://github.com/bennycode/coinbase-pro-node/blob/6b575f0/src/product/ProductAPI.ts#L44)
 
 ---
 
@@ -31,7 +31,7 @@
 
 #### Defined in
 
-[product/ProductAPI.ts:45](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/product/ProductAPI.ts#L45)
+[product/ProductAPI.ts:45](https://github.com/bennycode/coinbase-pro-node/blob/6b575f0/src/product/ProductAPI.ts#L45)
 
 ---
 
@@ -41,7 +41,7 @@
 
 #### Defined in
 
-[product/ProductAPI.ts:46](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/product/ProductAPI.ts#L46)
+[product/ProductAPI.ts:46](https://github.com/bennycode/coinbase-pro-node/blob/6b575f0/src/product/ProductAPI.ts#L46)
 
 ---
 
@@ -51,7 +51,7 @@
 
 #### Defined in
 
-[product/ProductAPI.ts:47](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/product/ProductAPI.ts#L47)
+[product/ProductAPI.ts:47](https://github.com/bennycode/coinbase-pro-node/blob/6b575f0/src/product/ProductAPI.ts#L47)
 
 ---
 
@@ -61,7 +61,7 @@
 
 #### Defined in
 
-[product/ProductAPI.ts:48](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/product/ProductAPI.ts#L48)
+[product/ProductAPI.ts:48](https://github.com/bennycode/coinbase-pro-node/blob/6b575f0/src/product/ProductAPI.ts#L48)
 
 ---
 
@@ -71,4 +71,4 @@
 
 #### Defined in
 
-[product/ProductAPI.ts:49](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/product/ProductAPI.ts#L49)
+[product/ProductAPI.ts:49](https://github.com/bennycode/coinbase-pro-node/blob/6b575f0/src/product/ProductAPI.ts#L49)

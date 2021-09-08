@@ -6,25 +6,25 @@
 
 ### Properties
 
-- [channels](websocketsubscription.md#channels)
-- [type](websocketsubscription.md#type)
+- [channels](WebSocketSubscription.md#channels)
+- [type](WebSocketSubscription.md#type)
 
 ## Properties
 
 ### channels
 
-• **channels**: [WebSocketChannel](websocketchannel.md)[]
+• **channels**: [`WebSocketChannel`](WebSocketChannel.md)[]
 
 #### Defined in
 
-[client/WebSocketClient.ts:189](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/client/WebSocketClient.ts#L189)
+[client/WebSocketClient.ts:189](https://github.com/bennycode/coinbase-pro-node/blob/6b575f0/src/client/WebSocketClient.ts#L189)
 
 ---
 
 ### type
 
-• **type**: [SUBSCRIPTIONS](../enums/websocketresponsetype.md#subscriptions)
+• **type**: [`SUBSCRIPTIONS`](../enums/WebSocketResponseType.md#subscriptions)
 
 #### Defined in
 
-[client/WebSocketClient.ts:190](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/client/WebSocketClient.ts#L190)
+[client/WebSocketClient.ts:190](https://github.com/bennycode/coinbase-pro-node/blob/6b575f0/src/client/WebSocketClient.ts#L190)

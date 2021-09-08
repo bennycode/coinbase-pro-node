@@ -6,14 +6,14 @@
 
 ### Properties
 
-- [level](orderbookrequestparameters.md#level)
+- [level](OrderBookRequestParameters.md#level)
 
 ## Properties
 
 ### level
 
-• **level**: [OrderBookLevel](../enums/orderbooklevel.md)
+• **level**: [`OrderBookLevel`](../enums/OrderBookLevel.md)
 
 #### Defined in
 
-[product/ProductAPI.ts:136](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/product/ProductAPI.ts#L136)
+[product/ProductAPI.ts:136](https://github.com/bennycode/coinbase-pro-node/blob/6b575f0/src/product/ProductAPI.ts#L136)

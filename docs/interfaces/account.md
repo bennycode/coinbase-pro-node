@@ -6,12 +6,12 @@
 
 ### Properties
 
-- [available](account.md#available)
-- [balance](account.md#balance)
-- [currency](account.md#currency)
-- [hold](account.md#hold)
-- [id](account.md#id)
-- [profile_id](account.md#profile_id)
+- [available](Account.md#available)
+- [balance](Account.md#balance)
+- [currency](Account.md#currency)
+- [hold](Account.md#hold)
+- [id](Account.md#id)
+- [profile_id](Account.md#profile_id)
 
 ## Properties
 
@@ -21,7 +21,7 @@
 
 #### Defined in
 
-[account/AccountAPI.ts:5](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/account/AccountAPI.ts#L5)
+[account/AccountAPI.ts:5](https://github.com/bennycode/coinbase-pro-node/blob/6b575f0/src/account/AccountAPI.ts#L5)
 
 ---
 
@@ -31,7 +31,7 @@
 
 #### Defined in
 
-[account/AccountAPI.ts:6](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/account/AccountAPI.ts#L6)
+[account/AccountAPI.ts:6](https://github.com/bennycode/coinbase-pro-node/blob/6b575f0/src/account/AccountAPI.ts#L6)
 
 ---
 
@@ -41,7 +41,7 @@
 
 #### Defined in
 
-[account/AccountAPI.ts:7](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/account/AccountAPI.ts#L7)
+[account/AccountAPI.ts:7](https://github.com/bennycode/coinbase-pro-node/blob/6b575f0/src/account/AccountAPI.ts#L7)
 
 ---
 
@@ -51,7 +51,7 @@
 
 #### Defined in
 
-[account/AccountAPI.ts:8](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/account/AccountAPI.ts#L8)
+[account/AccountAPI.ts:8](https://github.com/bennycode/coinbase-pro-node/blob/6b575f0/src/account/AccountAPI.ts#L8)
 
 ---
 
@@ -61,7 +61,7 @@
 
 #### Defined in
 
-[account/AccountAPI.ts:9](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/account/AccountAPI.ts#L9)
+[account/AccountAPI.ts:9](https://github.com/bennycode/coinbase-pro-node/blob/6b575f0/src/account/AccountAPI.ts#L9)
 
 ---
 
@@ -71,4 +71,4 @@
 
 #### Defined in
 
-[account/AccountAPI.ts:10](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/account/AccountAPI.ts#L10)
+[account/AccountAPI.ts:10](https://github.com/bennycode/coinbase-pro-node/blob/6b575f0/src/account/AccountAPI.ts#L10)

@@ -6,16 +6,16 @@
 
 ### Constructors
 
-- [constructor](timeapi.md#constructor)
+- [constructor](TimeAPI.md#constructor)
 
 ### Properties
 
-- [URL](timeapi.md#url)
+- [URL](TimeAPI.md#url)
 
 ### Methods
 
-- [getClockSkew](timeapi.md#getclockskew)
-- [getTime](timeapi.md#gettime)
+- [getClockSkew](TimeAPI.md#getclockskew)
+- [getTime](TimeAPI.md#gettime)
 
 ## Constructors
 
@@ -31,7 +31,7 @@
 
 #### Defined in
 
-[time/TimeAPI.ts:13](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/time/TimeAPI.ts#L13)
+[time/TimeAPI.ts:15](https://github.com/bennycode/coinbase-pro-node/blob/6b575f0/src/time/TimeAPI.ts#L15)
 
 ## Properties
 
@@ -47,35 +47,35 @@
 
 #### Defined in
 
-[time/TimeAPI.ts:11](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/time/TimeAPI.ts#L11)
+[time/TimeAPI.ts:11](https://github.com/bennycode/coinbase-pro-node/blob/6b575f0/src/time/TimeAPI.ts#L11)
 
 ## Methods
 
 ### getClockSkew
 
-▸ **getClockSkew**(`time`): `Promise`<number\>
+▸ **getClockSkew**(`time`): `Promise`<`number`\>
 
 Get the absolute difference between server time and local time.
 
 #### Parameters
 
-| Name   | Type                                              |
-| :----- | :------------------------------------------------ |
-| `time` | `string` \| [TimeSkew](../interfaces/timeskew.md) |
+| Name   | Type                                                |
+| :----- | :-------------------------------------------------- |
+| `time` | `string` \| [`TimeSkew`](../interfaces/TimeSkew.md) |
 
 #### Returns
 
-`Promise`<number\>
+`Promise`<`number`\>
 
 #### Defined in
 
-[time/TimeAPI.ts:34](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/time/TimeAPI.ts#L34)
+[time/TimeAPI.ts:34](https://github.com/bennycode/coinbase-pro-node/blob/6b575f0/src/time/TimeAPI.ts#L34)
 
 ---
 
 ### getTime
 
-▸ **getTime**(): `Promise`<[TimeSkew](../interfaces/timeskew.md)\>
+▸ **getTime**(): `Promise`<[`TimeSkew`](../interfaces/TimeSkew.md)\>
 
 Get the server time from Coinbase Pro API. It has been reported that sometimes the return value is a string: https://github.com/bennycode/coinbase-pro-node/issues/354
 
@@ -83,8 +83,8 @@ Get the server time from Coinbase Pro API. It has been reported that sometimes t
 
 #### Returns
 
-`Promise`<[TimeSkew](../interfaces/timeskew.md)\>
+`Promise`<[`TimeSkew`](../interfaces/TimeSkew.md)\>
 
 #### Defined in
 
-[time/TimeAPI.ts:23](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/time/TimeAPI.ts#L23)
+[time/TimeAPI.ts:23](https://github.com/bennycode/coinbase-pro-node/blob/6b575f0/src/time/TimeAPI.ts#L23)

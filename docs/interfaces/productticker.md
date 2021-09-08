@@ -6,13 +6,13 @@
 
 ### Properties
 
-- [ask](productticker.md#ask)
-- [bid](productticker.md#bid)
-- [price](productticker.md#price)
-- [size](productticker.md#size)
-- [time](productticker.md#time)
-- [trade_id](productticker.md#trade_id)
-- [volume](productticker.md#volume)
+- [ask](ProductTicker.md#ask)
+- [bid](ProductTicker.md#bid)
+- [price](ProductTicker.md#price)
+- [size](ProductTicker.md#size)
+- [time](ProductTicker.md#time)
+- [trade_id](ProductTicker.md#trade_id)
+- [volume](ProductTicker.md#volume)
 
 ## Properties
 
@@ -22,7 +22,7 @@
 
 #### Defined in
 
-[product/ProductAPI.ts:34](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/product/ProductAPI.ts#L34)
+[product/ProductAPI.ts:34](https://github.com/bennycode/coinbase-pro-node/blob/6b575f0/src/product/ProductAPI.ts#L34)
 
 ---
 
@@ -32,7 +32,7 @@
 
 #### Defined in
 
-[product/ProductAPI.ts:35](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/product/ProductAPI.ts#L35)
+[product/ProductAPI.ts:35](https://github.com/bennycode/coinbase-pro-node/blob/6b575f0/src/product/ProductAPI.ts#L35)
 
 ---
 
@@ -42,7 +42,7 @@
 
 #### Defined in
 
-[product/ProductAPI.ts:36](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/product/ProductAPI.ts#L36)
+[product/ProductAPI.ts:36](https://github.com/bennycode/coinbase-pro-node/blob/6b575f0/src/product/ProductAPI.ts#L36)
 
 ---
 
@@ -52,7 +52,7 @@
 
 #### Defined in
 
-[product/ProductAPI.ts:37](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/product/ProductAPI.ts#L37)
+[product/ProductAPI.ts:37](https://github.com/bennycode/coinbase-pro-node/blob/6b575f0/src/product/ProductAPI.ts#L37)
 
 ---
 
@@ -62,7 +62,7 @@
 
 #### Defined in
 
-[product/ProductAPI.ts:38](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/product/ProductAPI.ts#L38)
+[product/ProductAPI.ts:38](https://github.com/bennycode/coinbase-pro-node/blob/6b575f0/src/product/ProductAPI.ts#L38)
 
 ---
 
@@ -72,7 +72,7 @@
 
 #### Defined in
 
-[product/ProductAPI.ts:39](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/product/ProductAPI.ts#L39)
+[product/ProductAPI.ts:39](https://github.com/bennycode/coinbase-pro-node/blob/6b575f0/src/product/ProductAPI.ts#L39)
 
 ---
 
@@ -82,4 +82,4 @@
 
 #### Defined in
 
-[product/ProductAPI.ts:40](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/product/ProductAPI.ts#L40)
+[product/ProductAPI.ts:40](https://github.com/bennycode/coinbase-pro-node/blob/6b575f0/src/product/ProductAPI.ts#L40)

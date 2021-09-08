@@ -6,25 +6,25 @@
 
 ### Enumeration members
 
-- [MAKER](liquidity.md#maker)
-- [TAKER](liquidity.md#taker)
+- [MAKER](Liquidity.md#maker)
+- [TAKER](Liquidity.md#taker)
 
 ## Enumeration members
 
 ### MAKER
 
-• **MAKER** = "M"
+• **MAKER** = `"M"`
 
 #### Defined in
 
-[fill/FillAPI.ts:5](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/fill/FillAPI.ts#L5)
+[fill/FillAPI.ts:5](https://github.com/bennycode/coinbase-pro-node/blob/6b575f0/src/fill/FillAPI.ts#L5)
 
 ---
 
 ### TAKER
 
-• **TAKER** = "T"
+• **TAKER** = `"T"`
 
 #### Defined in
 
-[fill/FillAPI.ts:6](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/fill/FillAPI.ts#L6)
+[fill/FillAPI.ts:6](https://github.com/bennycode/coinbase-pro-node/blob/6b575f0/src/fill/FillAPI.ts#L6)

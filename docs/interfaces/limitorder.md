@@ -6,26 +6,26 @@
 
 - `BaseOrder`
 
-  ↳ **LimitOrder**
+  ↳ **`LimitOrder`**
 
-  ↳↳ [AutoCancelLimitOrder](autocancellimitorder.md)
+  ↳↳ [`AutoCancelLimitOrder`](AutoCancelLimitOrder.md)
 
-  ↳↳ [PostOnlyLimitOrder](postonlylimitorder.md)
+  ↳↳ [`PostOnlyLimitOrder`](PostOnlyLimitOrder.md)
 
 ## Table of contents
 
 ### Properties
 
-- [client_oid](limitorder.md#client_oid)
-- [price](limitorder.md#price)
-- [product_id](limitorder.md#product_id)
-- [side](limitorder.md#side)
-- [size](limitorder.md#size)
-- [stop](limitorder.md#stop)
-- [stop_price](limitorder.md#stop_price)
-- [stp](limitorder.md#stp)
-- [time_in_force](limitorder.md#time_in_force)
-- [type](limitorder.md#type)
+- [client_oid](LimitOrder.md#client_oid)
+- [price](LimitOrder.md#price)
+- [product_id](LimitOrder.md#product_id)
+- [side](LimitOrder.md#side)
+- [size](LimitOrder.md#size)
+- [stop](LimitOrder.md#stop)
+- [stop_price](LimitOrder.md#stop_price)
+- [stp](LimitOrder.md#stp)
+- [time_in_force](LimitOrder.md#time_in_force)
+- [type](LimitOrder.md#type)
 
 ## Properties
 
@@ -39,7 +39,7 @@ BaseOrder.client_oid
 
 #### Defined in
 
-[order/OrderAPI.ts:32](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/order/OrderAPI.ts#L32)
+[order/OrderAPI.ts:32](https://github.com/bennycode/coinbase-pro-node/blob/6b575f0/src/order/OrderAPI.ts#L32)
 
 ---
 
@@ -49,7 +49,7 @@ BaseOrder.client_oid
 
 #### Defined in
 
-[order/OrderAPI.ts:70](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/order/OrderAPI.ts#L70)
+[order/OrderAPI.ts:70](https://github.com/bennycode/coinbase-pro-node/blob/6b575f0/src/order/OrderAPI.ts#L70)
 
 ---
 
@@ -63,7 +63,7 @@ BaseOrder.product_id
 
 #### Defined in
 
-[order/OrderAPI.ts:33](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/order/OrderAPI.ts#L33)
+[order/OrderAPI.ts:33](https://github.com/bennycode/coinbase-pro-node/blob/6b575f0/src/order/OrderAPI.ts#L33)
 
 ---
 
@@ -77,7 +77,7 @@ BaseOrder.side
 
 #### Defined in
 
-[order/OrderAPI.ts:34](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/order/OrderAPI.ts#L34)
+[order/OrderAPI.ts:34](https://github.com/bennycode/coinbase-pro-node/blob/6b575f0/src/order/OrderAPI.ts#L34)
 
 ---
 
@@ -87,7 +87,7 @@ BaseOrder.side
 
 #### Defined in
 
-[order/OrderAPI.ts:71](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/order/OrderAPI.ts#L71)
+[order/OrderAPI.ts:71](https://github.com/bennycode/coinbase-pro-node/blob/6b575f0/src/order/OrderAPI.ts#L71)
 
 ---
 
@@ -101,7 +101,7 @@ BaseOrder.stop
 
 #### Defined in
 
-[order/OrderAPI.ts:35](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/order/OrderAPI.ts#L35)
+[order/OrderAPI.ts:35](https://github.com/bennycode/coinbase-pro-node/blob/6b575f0/src/order/OrderAPI.ts#L35)
 
 ---
 
@@ -115,13 +115,13 @@ BaseOrder.stop_price
 
 #### Defined in
 
-[order/OrderAPI.ts:36](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/order/OrderAPI.ts#L36)
+[order/OrderAPI.ts:36](https://github.com/bennycode/coinbase-pro-node/blob/6b575f0/src/order/OrderAPI.ts#L36)
 
 ---
 
 ### stp
 
-• `Optional` **stp**: [SelfTradePrevention](../enums/selftradeprevention.md)
+• `Optional` **stp**: [`SelfTradePrevention`](../enums/SelfTradePrevention.md)
 
 #### Inherited from
 
@@ -129,26 +129,26 @@ BaseOrder.stp
 
 #### Defined in
 
-[order/OrderAPI.ts:37](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/order/OrderAPI.ts#L37)
+[order/OrderAPI.ts:37](https://github.com/bennycode/coinbase-pro-node/blob/6b575f0/src/order/OrderAPI.ts#L37)
 
 ---
 
 ### time_in_force
 
-• `Optional` **time_in_force**: [TimeInForce](../enums/timeinforce.md)
+• `Optional` **time_in_force**: [`TimeInForce`](../enums/TimeInForce.md)
 
 Default is 'GTC'.
 
 #### Defined in
 
-[order/OrderAPI.ts:73](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/order/OrderAPI.ts#L73)
+[order/OrderAPI.ts:73](https://github.com/bennycode/coinbase-pro-node/blob/6b575f0/src/order/OrderAPI.ts#L73)
 
 ---
 
 ### type
 
-• **type**: [LIMIT](../enums/ordertype.md#limit)
+• **type**: [`LIMIT`](../enums/OrderType.md#limit)
 
 #### Defined in
 
-[order/OrderAPI.ts:74](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/order/OrderAPI.ts#L74)
+[order/OrderAPI.ts:74](https://github.com/bennycode/coinbase-pro-node/blob/6b575f0/src/order/OrderAPI.ts#L74)

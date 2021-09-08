@@ -6,27 +6,27 @@
 
 - `BasePlacedOrder`
 
-  ↳ **PendingOrder**
+  ↳ **`PendingOrder`**
 
 ## Table of contents
 
 ### Properties
 
-- [created_at](pendingorder.md#created_at)
-- [executed_value](pendingorder.md#executed_value)
-- [fill_fees](pendingorder.md#fill_fees)
-- [filled_size](pendingorder.md#filled_size)
-- [id](pendingorder.md#id)
-- [post_only](pendingorder.md#post_only)
-- [price](pendingorder.md#price)
-- [product_id](pendingorder.md#product_id)
-- [settled](pendingorder.md#settled)
-- [side](pendingorder.md#side)
-- [size](pendingorder.md#size)
-- [status](pendingorder.md#status)
-- [stp](pendingorder.md#stp)
-- [time_in_force](pendingorder.md#time_in_force)
-- [type](pendingorder.md#type)
+- [created_at](PendingOrder.md#created_at)
+- [executed_value](PendingOrder.md#executed_value)
+- [fill_fees](PendingOrder.md#fill_fees)
+- [filled_size](PendingOrder.md#filled_size)
+- [id](PendingOrder.md#id)
+- [post_only](PendingOrder.md#post_only)
+- [price](PendingOrder.md#price)
+- [product_id](PendingOrder.md#product_id)
+- [settled](PendingOrder.md#settled)
+- [side](PendingOrder.md#side)
+- [size](PendingOrder.md#size)
+- [status](PendingOrder.md#status)
+- [stp](PendingOrder.md#stp)
+- [time_in_force](PendingOrder.md#time_in_force)
+- [type](PendingOrder.md#type)
 
 ## Properties
 
@@ -40,7 +40,7 @@ BasePlacedOrder.created_at
 
 #### Defined in
 
-[order/OrderAPI.ts:41](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/order/OrderAPI.ts#L41)
+[order/OrderAPI.ts:41](https://github.com/bennycode/coinbase-pro-node/blob/6b575f0/src/order/OrderAPI.ts#L41)
 
 ---
 
@@ -54,7 +54,7 @@ BasePlacedOrder.executed_value
 
 #### Defined in
 
-[order/OrderAPI.ts:42](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/order/OrderAPI.ts#L42)
+[order/OrderAPI.ts:42](https://github.com/bennycode/coinbase-pro-node/blob/6b575f0/src/order/OrderAPI.ts#L42)
 
 ---
 
@@ -68,7 +68,7 @@ BasePlacedOrder.fill_fees
 
 #### Defined in
 
-[order/OrderAPI.ts:43](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/order/OrderAPI.ts#L43)
+[order/OrderAPI.ts:43](https://github.com/bennycode/coinbase-pro-node/blob/6b575f0/src/order/OrderAPI.ts#L43)
 
 ---
 
@@ -82,7 +82,7 @@ BasePlacedOrder.filled_size
 
 #### Defined in
 
-[order/OrderAPI.ts:44](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/order/OrderAPI.ts#L44)
+[order/OrderAPI.ts:44](https://github.com/bennycode/coinbase-pro-node/blob/6b575f0/src/order/OrderAPI.ts#L44)
 
 ---
 
@@ -96,7 +96,7 @@ BasePlacedOrder.id
 
 #### Defined in
 
-[order/OrderAPI.ts:45](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/order/OrderAPI.ts#L45)
+[order/OrderAPI.ts:45](https://github.com/bennycode/coinbase-pro-node/blob/6b575f0/src/order/OrderAPI.ts#L45)
 
 ---
 
@@ -110,7 +110,7 @@ BasePlacedOrder.post_only
 
 #### Defined in
 
-[order/OrderAPI.ts:46](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/order/OrderAPI.ts#L46)
+[order/OrderAPI.ts:46](https://github.com/bennycode/coinbase-pro-node/blob/6b575f0/src/order/OrderAPI.ts#L46)
 
 ---
 
@@ -124,7 +124,7 @@ BasePlacedOrder.price
 
 #### Defined in
 
-[order/OrderAPI.ts:47](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/order/OrderAPI.ts#L47)
+[order/OrderAPI.ts:47](https://github.com/bennycode/coinbase-pro-node/blob/6b575f0/src/order/OrderAPI.ts#L47)
 
 ---
 
@@ -138,7 +138,7 @@ BasePlacedOrder.product_id
 
 #### Defined in
 
-[order/OrderAPI.ts:48](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/order/OrderAPI.ts#L48)
+[order/OrderAPI.ts:48](https://github.com/bennycode/coinbase-pro-node/blob/6b575f0/src/order/OrderAPI.ts#L48)
 
 ---
 
@@ -152,7 +152,7 @@ BasePlacedOrder.settled
 
 #### Defined in
 
-[order/OrderAPI.ts:49](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/order/OrderAPI.ts#L49)
+[order/OrderAPI.ts:49](https://github.com/bennycode/coinbase-pro-node/blob/6b575f0/src/order/OrderAPI.ts#L49)
 
 ---
 
@@ -166,7 +166,7 @@ BasePlacedOrder.side
 
 #### Defined in
 
-[order/OrderAPI.ts:50](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/order/OrderAPI.ts#L50)
+[order/OrderAPI.ts:50](https://github.com/bennycode/coinbase-pro-node/blob/6b575f0/src/order/OrderAPI.ts#L50)
 
 ---
 
@@ -180,13 +180,13 @@ BasePlacedOrder.size
 
 #### Defined in
 
-[order/OrderAPI.ts:51](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/order/OrderAPI.ts#L51)
+[order/OrderAPI.ts:51](https://github.com/bennycode/coinbase-pro-node/blob/6b575f0/src/order/OrderAPI.ts#L51)
 
 ---
 
 ### status
 
-• **status**: [PENDING](../enums/orderstatus.md#pending)
+• **status**: [`PENDING`](../enums/OrderStatus.md#pending)
 
 #### Overrides
 
@@ -194,23 +194,23 @@ BasePlacedOrder.status
 
 #### Defined in
 
-[order/OrderAPI.ts:87](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/order/OrderAPI.ts#L87)
+[order/OrderAPI.ts:87](https://github.com/bennycode/coinbase-pro-node/blob/6b575f0/src/order/OrderAPI.ts#L87)
 
 ---
 
 ### stp
 
-• **stp**: [SelfTradePrevention](../enums/selftradeprevention.md)
+• **stp**: [`SelfTradePrevention`](../enums/SelfTradePrevention.md)
 
 #### Defined in
 
-[order/OrderAPI.ts:88](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/order/OrderAPI.ts#L88)
+[order/OrderAPI.ts:88](https://github.com/bennycode/coinbase-pro-node/blob/6b575f0/src/order/OrderAPI.ts#L88)
 
 ---
 
 ### time_in_force
 
-• **time_in_force**: [TimeInForce](../enums/timeinforce.md)
+• **time_in_force**: [`TimeInForce`](../enums/TimeInForce.md)
 
 #### Inherited from
 
@@ -218,13 +218,13 @@ BasePlacedOrder.time_in_force
 
 #### Defined in
 
-[order/OrderAPI.ts:53](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/order/OrderAPI.ts#L53)
+[order/OrderAPI.ts:53](https://github.com/bennycode/coinbase-pro-node/blob/6b575f0/src/order/OrderAPI.ts#L53)
 
 ---
 
 ### type
 
-• **type**: [OrderType](../enums/ordertype.md)
+• **type**: [`OrderType`](../enums/OrderType.md)
 
 #### Inherited from
 
@@ -232,4 +232,4 @@ BasePlacedOrder.type
 
 #### Defined in
 
-[order/OrderAPI.ts:54](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/order/OrderAPI.ts#L54)
+[order/OrderAPI.ts:54](https://github.com/bennycode/coinbase-pro-node/blob/6b575f0/src/order/OrderAPI.ts#L54)

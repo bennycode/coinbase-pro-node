@@ -6,25 +6,25 @@
 
 ### Enumeration members
 
-- [LIMIT](ordertype.md#limit)
-- [MARKET](ordertype.md#market)
+- [LIMIT](OrderType.md#limit)
+- [MARKET](OrderType.md#market)
 
 ## Enumeration members
 
 ### LIMIT
 
-• **LIMIT** = "limit"
+• **LIMIT** = `"limit"`
 
 #### Defined in
 
-[order/OrderAPI.ts:6](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/order/OrderAPI.ts#L6)
+[order/OrderAPI.ts:6](https://github.com/bennycode/coinbase-pro-node/blob/6b575f0/src/order/OrderAPI.ts#L6)
 
 ---
 
 ### MARKET
 
-• **MARKET** = "market"
+• **MARKET** = `"market"`
 
 #### Defined in
 
-[order/OrderAPI.ts:7](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/order/OrderAPI.ts#L7)
+[order/OrderAPI.ts:7](https://github.com/bennycode/coinbase-pro-node/blob/6b575f0/src/order/OrderAPI.ts#L7)

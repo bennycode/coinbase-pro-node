@@ -6,12 +6,12 @@
 
 ### Properties
 
-- [active](profile.md#active)
-- [created_at](profile.md#created_at)
-- [id](profile.md#id)
-- [is_default](profile.md#is_default)
-- [name](profile.md#name)
-- [user_id](profile.md#user_id)
+- [active](Profile.md#active)
+- [created_at](Profile.md#created_at)
+- [id](Profile.md#id)
+- [is_default](Profile.md#is_default)
+- [name](Profile.md#name)
+- [user_id](Profile.md#user_id)
 
 ## Properties
 
@@ -21,7 +21,7 @@
 
 #### Defined in
 
-[profile/ProfileAPI.ts:7](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/profile/ProfileAPI.ts#L7)
+[profile/ProfileAPI.ts:7](https://github.com/bennycode/coinbase-pro-node/blob/6b575f0/src/profile/ProfileAPI.ts#L7)
 
 ---
 
@@ -31,7 +31,7 @@
 
 #### Defined in
 
-[profile/ProfileAPI.ts:8](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/profile/ProfileAPI.ts#L8)
+[profile/ProfileAPI.ts:8](https://github.com/bennycode/coinbase-pro-node/blob/6b575f0/src/profile/ProfileAPI.ts#L8)
 
 ---
 
@@ -41,7 +41,7 @@
 
 #### Defined in
 
-[profile/ProfileAPI.ts:9](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/profile/ProfileAPI.ts#L9)
+[profile/ProfileAPI.ts:9](https://github.com/bennycode/coinbase-pro-node/blob/6b575f0/src/profile/ProfileAPI.ts#L9)
 
 ---
 
@@ -51,7 +51,7 @@
 
 #### Defined in
 
-[profile/ProfileAPI.ts:10](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/profile/ProfileAPI.ts#L10)
+[profile/ProfileAPI.ts:10](https://github.com/bennycode/coinbase-pro-node/blob/6b575f0/src/profile/ProfileAPI.ts#L10)
 
 ---
 
@@ -61,7 +61,7 @@
 
 #### Defined in
 
-[profile/ProfileAPI.ts:11](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/profile/ProfileAPI.ts#L11)
+[profile/ProfileAPI.ts:11](https://github.com/bennycode/coinbase-pro-node/blob/6b575f0/src/profile/ProfileAPI.ts#L11)
 
 ---
 
@@ -71,4 +71,4 @@
 
 #### Defined in
 
-[profile/ProfileAPI.ts:12](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/profile/ProfileAPI.ts#L12)
+[profile/ProfileAPI.ts:12](https://github.com/bennycode/coinbase-pro-node/blob/6b575f0/src/profile/ProfileAPI.ts#L12)

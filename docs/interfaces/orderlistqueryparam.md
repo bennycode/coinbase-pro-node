@@ -8,14 +8,14 @@
 
 - `Pagination`
 
-  ↳ **OrderListQueryParam**
+  ↳ **`OrderListQueryParam`**
 
 ## Table of contents
 
 ### Properties
 
-- [product_id](orderlistqueryparam.md#product_id)
-- [status](orderlistqueryparam.md#status)
+- [product_id](OrderListQueryParam.md#product_id)
+- [status](OrderListQueryParam.md#status)
 
 ## Properties
 
@@ -27,16 +27,16 @@ Only list orders for a specific product.
 
 #### Defined in
 
-[order/OrderAPI.ts:101](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/order/OrderAPI.ts#L101)
+[order/OrderAPI.ts:101](https://github.com/bennycode/coinbase-pro-node/blob/6b575f0/src/order/OrderAPI.ts#L101)
 
 ---
 
 ### status
 
-• `Optional` **status**: ([OrderStatus](../enums/orderstatus.md) \| `"all"`)[]
+• `Optional` **status**: ([`OrderStatus`](../enums/OrderStatus.md) \| `"all"`)[]
 
 Limit list of orders to these statuses. Passing "all" returns orders of all statuses. Default: [open, pending, active]
 
 #### Defined in
 
-[order/OrderAPI.ts:103](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/order/OrderAPI.ts#L103)
+[order/OrderAPI.ts:103](https://github.com/bennycode/coinbase-pro-node/blob/6b575f0/src/order/OrderAPI.ts#L103)

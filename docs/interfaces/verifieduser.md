@@ -6,7 +6,7 @@
 
 ### Properties
 
-- [id](verifieduser.md#id)
+- [id](VerifiedUser.md#id)
 
 ## Properties
 
@@ -16,4 +16,4 @@
 
 #### Defined in
 
-[user/UserAPI.ts:4](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/user/UserAPI.ts#L4)
+[user/UserAPI.ts:4](https://github.com/bennycode/coinbase-pro-node/blob/6b575f0/src/user/UserAPI.ts#L4)

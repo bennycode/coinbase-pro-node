@@ -6,36 +6,36 @@
 
 ### Properties
 
-- [currencies](websocketstatusmessage.md#currencies)
-- [products](websocketstatusmessage.md#products)
-- [type](websocketstatusmessage.md#type)
+- [currencies](WebSocketStatusMessage.md#currencies)
+- [products](WebSocketStatusMessage.md#products)
+- [type](WebSocketStatusMessage.md#type)
 
 ## Properties
 
 ### currencies
 
-• **currencies**: { `convertible_to`: `string`[] ; `details`: [CurrencyDetail](currencydetail.md) ; `funding_account_id`: `string` ; `id`: `string` ; `max_precision`: `string` ; `min_size`: `string` ; `name`: `string` ; `status`: `"online"` ; `status_message?`: `string` }[]
+• **currencies**: { `convertible_to`: `string`[] ; `details`: [`CurrencyDetail`](CurrencyDetail.md) ; `funding_account_id`: `string` ; `id`: `string` ; `max_precision`: `string` ; `min_size`: `string` ; `name`: `string` ; `status`: `"online"` ; `status_message?`: `string` }[]
 
 #### Defined in
 
-[client/WebSocketClient.ts:153](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/client/WebSocketClient.ts#L153)
+[client/WebSocketClient.ts:153](https://github.com/bennycode/coinbase-pro-node/blob/6b575f0/src/client/WebSocketClient.ts#L153)
 
 ---
 
 ### products
 
-• **products**: [Product](product.md) & { `type`: `"spot"` }[]
+• **products**: [`Product`](Product.md) & { `type`: `"spot"` }[]
 
 #### Defined in
 
-[client/WebSocketClient.ts:164](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/client/WebSocketClient.ts#L164)
+[client/WebSocketClient.ts:164](https://github.com/bennycode/coinbase-pro-node/blob/6b575f0/src/client/WebSocketClient.ts#L164)
 
 ---
 
 ### type
 
-• **type**: [STATUS](../enums/websocketresponsetype.md#status)
+• **type**: [`STATUS`](../enums/WebSocketResponseType.md#status)
 
 #### Defined in
 
-[client/WebSocketClient.ts:165](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/client/WebSocketClient.ts#L165)
+[client/WebSocketClient.ts:165](https://github.com/bennycode/coinbase-pro-node/blob/6b575f0/src/client/WebSocketClient.ts#L165)

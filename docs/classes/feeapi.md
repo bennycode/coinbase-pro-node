@@ -6,15 +6,15 @@
 
 ### Constructors
 
-- [constructor](feeapi.md#constructor)
+- [constructor](FeeAPI.md#constructor)
 
 ### Properties
 
-- [URL](feeapi.md#url)
+- [URL](FeeAPI.md#url)
 
 ### Methods
 
-- [getCurrentFees](feeapi.md#getcurrentfees)
+- [getCurrentFees](FeeAPI.md#getcurrentfees)
 
 ## Constructors
 
@@ -30,7 +30,7 @@
 
 #### Defined in
 
-[fee/FeeAPI.ts:20](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/fee/FeeAPI.ts#L20)
+[fee/FeeAPI.ts:22](https://github.com/bennycode/coinbase-pro-node/blob/6b575f0/src/fee/FeeAPI.ts#L22)
 
 ## Properties
 
@@ -46,13 +46,13 @@
 
 #### Defined in
 
-[fee/FeeAPI.ts:18](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/fee/FeeAPI.ts#L18)
+[fee/FeeAPI.ts:18](https://github.com/bennycode/coinbase-pro-node/blob/6b575f0/src/fee/FeeAPI.ts#L18)
 
 ## Methods
 
 ### getCurrentFees
 
-▸ **getCurrentFees**(): `Promise`<[FeeTier](../interfaces/feetier.md)\>
+▸ **getCurrentFees**(): `Promise`<[`FeeTier`](../interfaces/FeeTier.md)\>
 
 Get your current maker & taker fee rates, as well as your 30-day trailing volume. Quoted rates are subject to change.
 
@@ -62,8 +62,8 @@ Get your current maker & taker fee rates, as well as your 30-day trailing volume
 
 #### Returns
 
-`Promise`<[FeeTier](../interfaces/feetier.md)\>
+`Promise`<[`FeeTier`](../interfaces/FeeTier.md)\>
 
 #### Defined in
 
-[fee/FeeAPI.ts:31](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/fee/FeeAPI.ts#L31)
+[fee/FeeAPI.ts:31](https://github.com/bennycode/coinbase-pro-node/blob/6b575f0/src/fee/FeeAPI.ts#L31)

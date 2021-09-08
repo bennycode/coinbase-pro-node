@@ -6,15 +6,15 @@
 
 ### Constructors
 
-- [constructor](currencyapi.md#constructor)
+- [constructor](CurrencyAPI.md#constructor)
 
 ### Properties
 
-- [URL](currencyapi.md#url)
+- [URL](CurrencyAPI.md#url)
 
 ### Methods
 
-- [listCurrencies](currencyapi.md#listcurrencies)
+- [listCurrencies](CurrencyAPI.md#listcurrencies)
 
 ## Constructors
 
@@ -30,7 +30,7 @@
 
 #### Defined in
 
-[currency/CurrencyAPI.ts:32](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/currency/CurrencyAPI.ts#L32)
+[currency/CurrencyAPI.ts:34](https://github.com/bennycode/coinbase-pro-node/blob/6b575f0/src/currency/CurrencyAPI.ts#L34)
 
 ## Properties
 
@@ -46,13 +46,13 @@
 
 #### Defined in
 
-[currency/CurrencyAPI.ts:30](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/currency/CurrencyAPI.ts#L30)
+[currency/CurrencyAPI.ts:30](https://github.com/bennycode/coinbase-pro-node/blob/6b575f0/src/currency/CurrencyAPI.ts#L30)
 
 ## Methods
 
 ### listCurrencies
 
-▸ **listCurrencies**(): `Promise`<[Currency](../interfaces/currency.md)[]\>
+▸ **listCurrencies**(): `Promise`<[`Currency`](../interfaces/Currency.md)[]\>
 
 List known currencies. Currency codes will conform to the ISO 4217 standard where possible. Currencies which have or had no representation in ISO 4217 may use a custom code.
 
@@ -60,8 +60,8 @@ List known currencies. Currency codes will conform to the ISO 4217 standard wher
 
 #### Returns
 
-`Promise`<[Currency](../interfaces/currency.md)[]\>
+`Promise`<[`Currency`](../interfaces/Currency.md)[]\>
 
 #### Defined in
 
-[currency/CurrencyAPI.ts:43](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/currency/CurrencyAPI.ts#L43)
+[currency/CurrencyAPI.ts:43](https://github.com/bennycode/coinbase-pro-node/blob/6b575f0/src/currency/CurrencyAPI.ts#L43)

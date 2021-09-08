@@ -6,25 +6,25 @@
 
 ### Enumeration members
 
-- [FIAT](accounttype.md#fiat)
-- [WALLET](accounttype.md#wallet)
+- [FIAT](AccountType.md#fiat)
+- [WALLET](AccountType.md#wallet)
 
 ## Enumeration members
 
 ### FIAT
 
-• **FIAT** = "fiat"
+• **FIAT** = `"fiat"`
 
 #### Defined in
 
-[account/AccountAPI.ts:39](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/account/AccountAPI.ts#L39)
+[account/AccountAPI.ts:39](https://github.com/bennycode/coinbase-pro-node/blob/6b575f0/src/account/AccountAPI.ts#L39)
 
 ---
 
 ### WALLET
 
-• **WALLET** = "wallet"
+• **WALLET** = `"wallet"`
 
 #### Defined in
 
-[account/AccountAPI.ts:40](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/account/AccountAPI.ts#L40)
+[account/AccountAPI.ts:40](https://github.com/bennycode/coinbase-pro-node/blob/6b575f0/src/account/AccountAPI.ts#L40)

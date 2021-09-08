@@ -4,18 +4,18 @@
 
 ## Hierarchy
 
-- [ClientAuthenticationBase](clientauthenticationbase.md)
+- [`ClientAuthenticationBase`](ClientAuthenticationBase.md)
 
-  ↳ **ClientAuthenticationBaseUrls**
+  ↳ **`ClientAuthenticationBaseUrls`**
 
 ## Table of contents
 
 ### Properties
 
-- [apiKey](clientauthenticationbaseurls.md#apikey)
-- [apiSecret](clientauthenticationbaseurls.md#apisecret)
-- [passphrase](clientauthenticationbaseurls.md#passphrase)
-- [useSandbox](clientauthenticationbaseurls.md#usesandbox)
+- [apiKey](ClientAuthenticationBaseUrls.md#apikey)
+- [apiSecret](ClientAuthenticationBaseUrls.md#apisecret)
+- [passphrase](ClientAuthenticationBaseUrls.md#passphrase)
+- [useSandbox](ClientAuthenticationBaseUrls.md#usesandbox)
 
 ## Properties
 
@@ -25,11 +25,11 @@
 
 #### Overrides
 
-[ClientAuthenticationBase](clientauthenticationbase.md).[apiKey](clientauthenticationbase.md#apikey)
+[ClientAuthenticationBase](ClientAuthenticationBase.md).[apiKey](ClientAuthenticationBase.md#apikey)
 
 #### Defined in
 
-[CoinbasePro.ts:12](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/CoinbasePro.ts#L12)
+[CoinbasePro.ts:12](https://github.com/bennycode/coinbase-pro-node/blob/6b575f0/src/CoinbasePro.ts#L12)
 
 ---
 
@@ -39,11 +39,11 @@
 
 #### Overrides
 
-[ClientAuthenticationBase](clientauthenticationbase.md).[apiSecret](clientauthenticationbase.md#apisecret)
+[ClientAuthenticationBase](ClientAuthenticationBase.md).[apiSecret](ClientAuthenticationBase.md#apisecret)
 
 #### Defined in
 
-[CoinbasePro.ts:13](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/CoinbasePro.ts#L13)
+[CoinbasePro.ts:13](https://github.com/bennycode/coinbase-pro-node/blob/6b575f0/src/CoinbasePro.ts#L13)
 
 ---
 
@@ -53,11 +53,11 @@
 
 #### Overrides
 
-[ClientAuthenticationBase](clientauthenticationbase.md).[passphrase](clientauthenticationbase.md#passphrase)
+[ClientAuthenticationBase](ClientAuthenticationBase.md).[passphrase](ClientAuthenticationBase.md#passphrase)
 
 #### Defined in
 
-[CoinbasePro.ts:14](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/CoinbasePro.ts#L14)
+[CoinbasePro.ts:14](https://github.com/bennycode/coinbase-pro-node/blob/6b575f0/src/CoinbasePro.ts#L14)
 
 ---
 
@@ -67,4 +67,4 @@
 
 #### Defined in
 
-[CoinbasePro.ts:15](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/CoinbasePro.ts#L15)
+[CoinbasePro.ts:15](https://github.com/bennycode/coinbase-pro-node/blob/6b575f0/src/CoinbasePro.ts#L15)

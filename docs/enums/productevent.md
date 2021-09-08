@@ -6,14 +6,14 @@
 
 ### Enumeration members
 
-- [NEW_CANDLE](productevent.md#new_candle)
+- [NEW_CANDLE](ProductEvent.md#new_candle)
 
 ## Enumeration members
 
 ### NEW_CANDLE
 
-• **NEW_CANDLE** = "ProductEvent.NEW_CANDLE"
+• **NEW_CANDLE** = `"ProductEvent.NEW_CANDLE"`
 
 #### Defined in
 
-[product/ProductAPI.ts:174](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/product/ProductAPI.ts#L174)
+[product/ProductAPI.ts:174](https://github.com/bennycode/coinbase-pro-node/blob/6b575f0/src/product/ProductAPI.ts#L174)

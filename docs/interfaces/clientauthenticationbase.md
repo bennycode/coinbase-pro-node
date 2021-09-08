@@ -4,19 +4,19 @@
 
 ## Hierarchy
 
-- **ClientAuthenticationBase**
+- **`ClientAuthenticationBase`**
 
-  ↳ [ClientAuthenticationBaseUrls](clientauthenticationbaseurls.md)
+  ↳ [`ClientAuthenticationBaseUrls`](ClientAuthenticationBaseUrls.md)
 
-  ↳ [ClientAuthenticationCustomUrls](clientauthenticationcustomurls.md)
+  ↳ [`ClientAuthenticationCustomUrls`](ClientAuthenticationCustomUrls.md)
 
 ## Table of contents
 
 ### Properties
 
-- [apiKey](clientauthenticationbase.md#apikey)
-- [apiSecret](clientauthenticationbase.md#apisecret)
-- [passphrase](clientauthenticationbase.md#passphrase)
+- [apiKey](ClientAuthenticationBase.md#apikey)
+- [apiSecret](ClientAuthenticationBase.md#apisecret)
+- [passphrase](ClientAuthenticationBase.md#passphrase)
 
 ## Properties
 
@@ -26,7 +26,7 @@
 
 #### Defined in
 
-[CoinbasePro.ts:6](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/CoinbasePro.ts#L6)
+[CoinbasePro.ts:6](https://github.com/bennycode/coinbase-pro-node/blob/6b575f0/src/CoinbasePro.ts#L6)
 
 ---
 
@@ -36,7 +36,7 @@
 
 #### Defined in
 
-[CoinbasePro.ts:7](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/CoinbasePro.ts#L7)
+[CoinbasePro.ts:7](https://github.com/bennycode/coinbase-pro-node/blob/6b575f0/src/CoinbasePro.ts#L7)
 
 ---
 
@@ -46,4 +46,4 @@
 
 #### Defined in
 
-[CoinbasePro.ts:8](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/CoinbasePro.ts#L8)
+[CoinbasePro.ts:8](https://github.com/bennycode/coinbase-pro-node/blob/6b575f0/src/CoinbasePro.ts#L8)

@@ -6,25 +6,25 @@
 
 ### Enumeration members
 
-- [CRYPTO](currencytype.md#crypto)
-- [FIAT](currencytype.md#fiat)
+- [CRYPTO](CurrencyType.md#crypto)
+- [FIAT](CurrencyType.md#fiat)
 
 ## Enumeration members
 
 ### CRYPTO
 
-• **CRYPTO** = "crypto"
+• **CRYPTO** = `"crypto"`
 
 #### Defined in
 
-[currency/CurrencyAPI.ts:13](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/currency/CurrencyAPI.ts#L13)
+[currency/CurrencyAPI.ts:13](https://github.com/bennycode/coinbase-pro-node/blob/6b575f0/src/currency/CurrencyAPI.ts#L13)
 
 ---
 
 ### FIAT
 
-• **FIAT** = "fiat"
+• **FIAT** = `"fiat"`
 
 #### Defined in
 
-[currency/CurrencyAPI.ts:14](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/currency/CurrencyAPI.ts#L14)
+[currency/CurrencyAPI.ts:14](https://github.com/bennycode/coinbase-pro-node/blob/6b575f0/src/currency/CurrencyAPI.ts#L14)

@@ -6,17 +6,17 @@
 
 ### Constructors
 
-- [constructor](profileapi.md#constructor)
+- [constructor](ProfileAPI.md#constructor)
 
 ### Properties
 
-- [URL](profileapi.md#url)
+- [URL](ProfileAPI.md#url)
 
 ### Methods
 
-- [getProfile](profileapi.md#getprofile)
-- [listProfiles](profileapi.md#listprofiles)
-- [transferFunds](profileapi.md#transferfunds)
+- [getProfile](ProfileAPI.md#getprofile)
+- [listProfiles](ProfileAPI.md#listprofiles)
+- [transferFunds](ProfileAPI.md#transferfunds)
 
 ## Constructors
 
@@ -32,7 +32,7 @@
 
 #### Defined in
 
-[profile/ProfileAPI.ts:25](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/profile/ProfileAPI.ts#L25)
+[profile/ProfileAPI.ts:27](https://github.com/bennycode/coinbase-pro-node/blob/6b575f0/src/profile/ProfileAPI.ts#L27)
 
 ## Properties
 
@@ -48,13 +48,13 @@
 
 #### Defined in
 
-[profile/ProfileAPI.ts:23](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/profile/ProfileAPI.ts#L23)
+[profile/ProfileAPI.ts:23](https://github.com/bennycode/coinbase-pro-node/blob/6b575f0/src/profile/ProfileAPI.ts#L23)
 
 ## Methods
 
 ### getProfile
 
-▸ **getProfile**(`profileId`): `Promise`<`null` \| [Profile](../interfaces/profile.md)\>
+▸ **getProfile**(`profileId`): `Promise`<`null` \| [`Profile`](../interfaces/Profile.md)\>
 
 Get a single profile by profile ID. This endpoint requires the “view” permission and is accessible by any profile’s API key.
 
@@ -66,19 +66,19 @@ Get a single profile by profile ID. This endpoint requires the “view” permis
 
 #### Returns
 
-`Promise`<`null` \| [Profile](../interfaces/profile.md)\>
+`Promise`<`null` \| [`Profile`](../interfaces/Profile.md)\>
 
 A single profile
 
 #### Defined in
 
-[profile/ProfileAPI.ts:57](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/profile/ProfileAPI.ts#L57)
+[profile/ProfileAPI.ts:57](https://github.com/bennycode/coinbase-pro-node/blob/6b575f0/src/profile/ProfileAPI.ts#L57)
 
 ---
 
 ### listProfiles
 
-▸ **listProfiles**(`active?`): `Promise`<[Profile](../interfaces/profile.md)[]\>
+▸ **listProfiles**(`active?`): `Promise`<[`Profile`](../interfaces/Profile.md)[]\>
 
 List your profiles. Profiles are equivalent to portfolios. This endpoint requires the “view” permission and is accessible by any profile’s API key.
 
@@ -92,17 +92,17 @@ List your profiles. Profiles are equivalent to portfolios. This endpoint require
 
 #### Returns
 
-`Promise`<[Profile](../interfaces/profile.md)[]\>
+`Promise`<[`Profile`](../interfaces/Profile.md)[]\>
 
 #### Defined in
 
-[profile/ProfileAPI.ts:36](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/profile/ProfileAPI.ts#L36)
+[profile/ProfileAPI.ts:36](https://github.com/bennycode/coinbase-pro-node/blob/6b575f0/src/profile/ProfileAPI.ts#L36)
 
 ---
 
 ### transferFunds
 
-▸ **transferFunds**(`transfer`): `Promise`<void\>
+▸ **transferFunds**(`transfer`): `Promise`<`void`\>
 
 Transfer funds from API key’s profile to another user owned profile. This endpoint requires the “transfer” permission.
 
@@ -110,14 +110,14 @@ Transfer funds from API key’s profile to another user owned profile. This endp
 
 #### Parameters
 
-| Name       | Type                                          |
-| :--------- | :-------------------------------------------- |
-| `transfer` | [FundTransfer](../interfaces/fundtransfer.md) |
+| Name       | Type                                            |
+| :--------- | :---------------------------------------------- |
+| `transfer` | [`FundTransfer`](../interfaces/FundTransfer.md) |
 
 #### Returns
 
-`Promise`<void\>
+`Promise`<`void`\>
 
 #### Defined in
 
-[profile/ProfileAPI.ts:77](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/profile/ProfileAPI.ts#L77)
+[profile/ProfileAPI.ts:77](https://github.com/bennycode/coinbase-pro-node/blob/6b575f0/src/profile/ProfileAPI.ts#L77)

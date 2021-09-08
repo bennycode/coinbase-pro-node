@@ -6,9 +6,9 @@
 
 ### Properties
 
-- [message](websocketerrormessage.md#message)
-- [reason](websocketerrormessage.md#reason)
-- [type](websocketerrormessage.md#type)
+- [message](WebSocketErrorMessage.md#message)
+- [reason](WebSocketErrorMessage.md#reason)
+- [type](WebSocketErrorMessage.md#type)
 
 ## Properties
 
@@ -18,7 +18,7 @@
 
 #### Defined in
 
-[client/WebSocketClient.ts:134](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/client/WebSocketClient.ts#L134)
+[client/WebSocketClient.ts:134](https://github.com/bennycode/coinbase-pro-node/blob/6b575f0/src/client/WebSocketClient.ts#L134)
 
 ---
 
@@ -28,14 +28,14 @@
 
 #### Defined in
 
-[client/WebSocketClient.ts:135](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/client/WebSocketClient.ts#L135)
+[client/WebSocketClient.ts:135](https://github.com/bennycode/coinbase-pro-node/blob/6b575f0/src/client/WebSocketClient.ts#L135)
 
 ---
 
 ### type
 
-• **type**: [ERROR](../enums/websocketresponsetype.md#error)
+• **type**: [`ERROR`](../enums/WebSocketResponseType.md#error)
 
 #### Defined in
 
-[client/WebSocketClient.ts:136](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/client/WebSocketClient.ts#L136)
+[client/WebSocketClient.ts:136](https://github.com/bennycode/coinbase-pro-node/blob/6b575f0/src/client/WebSocketClient.ts#L136)

@@ -6,19 +6,19 @@
 
 ### Properties
 
-- [created_at](fill.md#created_at)
-- [fee](fill.md#fee)
-- [liquidity](fill.md#liquidity)
-- [order_id](fill.md#order_id)
-- [price](fill.md#price)
-- [product_id](fill.md#product_id)
-- [profile_id](fill.md#profile_id)
-- [settled](fill.md#settled)
-- [side](fill.md#side)
-- [size](fill.md#size)
-- [trade_id](fill.md#trade_id)
-- [usd_volume](fill.md#usd_volume)
-- [user_id](fill.md#user_id)
+- [created_at](Fill.md#created_at)
+- [fee](Fill.md#fee)
+- [liquidity](Fill.md#liquidity)
+- [order_id](Fill.md#order_id)
+- [price](Fill.md#price)
+- [product_id](Fill.md#product_id)
+- [profile_id](Fill.md#profile_id)
+- [settled](Fill.md#settled)
+- [side](Fill.md#side)
+- [size](Fill.md#size)
+- [trade_id](Fill.md#trade_id)
+- [usd_volume](Fill.md#usd_volume)
+- [user_id](Fill.md#user_id)
 
 ## Properties
 
@@ -28,7 +28,7 @@
 
 #### Defined in
 
-[fill/FillAPI.ts:10](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/fill/FillAPI.ts#L10)
+[fill/FillAPI.ts:10](https://github.com/bennycode/coinbase-pro-node/blob/6b575f0/src/fill/FillAPI.ts#L10)
 
 ---
 
@@ -38,17 +38,17 @@
 
 #### Defined in
 
-[fill/FillAPI.ts:11](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/fill/FillAPI.ts#L11)
+[fill/FillAPI.ts:11](https://github.com/bennycode/coinbase-pro-node/blob/6b575f0/src/fill/FillAPI.ts#L11)
 
 ---
 
 ### liquidity
 
-• **liquidity**: [Liquidity](../enums/liquidity.md)
+• **liquidity**: [`Liquidity`](../enums/Liquidity.md)
 
 #### Defined in
 
-[fill/FillAPI.ts:12](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/fill/FillAPI.ts#L12)
+[fill/FillAPI.ts:12](https://github.com/bennycode/coinbase-pro-node/blob/6b575f0/src/fill/FillAPI.ts#L12)
 
 ---
 
@@ -58,7 +58,7 @@
 
 #### Defined in
 
-[fill/FillAPI.ts:13](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/fill/FillAPI.ts#L13)
+[fill/FillAPI.ts:13](https://github.com/bennycode/coinbase-pro-node/blob/6b575f0/src/fill/FillAPI.ts#L13)
 
 ---
 
@@ -68,7 +68,7 @@
 
 #### Defined in
 
-[fill/FillAPI.ts:14](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/fill/FillAPI.ts#L14)
+[fill/FillAPI.ts:14](https://github.com/bennycode/coinbase-pro-node/blob/6b575f0/src/fill/FillAPI.ts#L14)
 
 ---
 
@@ -78,7 +78,7 @@
 
 #### Defined in
 
-[fill/FillAPI.ts:15](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/fill/FillAPI.ts#L15)
+[fill/FillAPI.ts:15](https://github.com/bennycode/coinbase-pro-node/blob/6b575f0/src/fill/FillAPI.ts#L15)
 
 ---
 
@@ -88,7 +88,7 @@
 
 #### Defined in
 
-[fill/FillAPI.ts:16](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/fill/FillAPI.ts#L16)
+[fill/FillAPI.ts:16](https://github.com/bennycode/coinbase-pro-node/blob/6b575f0/src/fill/FillAPI.ts#L16)
 
 ---
 
@@ -98,7 +98,7 @@
 
 #### Defined in
 
-[fill/FillAPI.ts:17](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/fill/FillAPI.ts#L17)
+[fill/FillAPI.ts:17](https://github.com/bennycode/coinbase-pro-node/blob/6b575f0/src/fill/FillAPI.ts#L17)
 
 ---
 
@@ -108,7 +108,7 @@
 
 #### Defined in
 
-[fill/FillAPI.ts:18](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/fill/FillAPI.ts#L18)
+[fill/FillAPI.ts:18](https://github.com/bennycode/coinbase-pro-node/blob/6b575f0/src/fill/FillAPI.ts#L18)
 
 ---
 
@@ -118,7 +118,7 @@
 
 #### Defined in
 
-[fill/FillAPI.ts:19](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/fill/FillAPI.ts#L19)
+[fill/FillAPI.ts:19](https://github.com/bennycode/coinbase-pro-node/blob/6b575f0/src/fill/FillAPI.ts#L19)
 
 ---
 
@@ -128,7 +128,7 @@
 
 #### Defined in
 
-[fill/FillAPI.ts:20](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/fill/FillAPI.ts#L20)
+[fill/FillAPI.ts:20](https://github.com/bennycode/coinbase-pro-node/blob/6b575f0/src/fill/FillAPI.ts#L20)
 
 ---
 
@@ -138,7 +138,7 @@
 
 #### Defined in
 
-[fill/FillAPI.ts:21](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/fill/FillAPI.ts#L21)
+[fill/FillAPI.ts:21](https://github.com/bennycode/coinbase-pro-node/blob/6b575f0/src/fill/FillAPI.ts#L21)
 
 ---
 
@@ -148,4 +148,4 @@
 
 #### Defined in
 
-[fill/FillAPI.ts:22](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/fill/FillAPI.ts#L22)
+[fill/FillAPI.ts:22](https://github.com/bennycode/coinbase-pro-node/blob/6b575f0/src/fill/FillAPI.ts#L22)

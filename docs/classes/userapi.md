@@ -6,16 +6,16 @@
 
 ### Constructors
 
-- [constructor](userapi.md#constructor)
+- [constructor](UserAPI.md#constructor)
 
 ### Properties
 
-- [URL](userapi.md#url)
+- [URL](UserAPI.md#url)
 
 ### Methods
 
-- [getTrailingVolume](userapi.md#gettrailingvolume)
-- [verifyAuthentication](userapi.md#verifyauthentication)
+- [getTrailingVolume](UserAPI.md#gettrailingvolume)
+- [verifyAuthentication](UserAPI.md#verifyauthentication)
 
 ## Constructors
 
@@ -31,7 +31,7 @@
 
 #### Defined in
 
-[user/UserAPI.ts:17](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/user/UserAPI.ts#L17)
+[user/UserAPI.ts:19](https://github.com/bennycode/coinbase-pro-node/blob/6b575f0/src/user/UserAPI.ts#L19)
 
 ## Properties
 
@@ -47,13 +47,13 @@
 
 #### Defined in
 
-[user/UserAPI.ts:15](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/user/UserAPI.ts#L15)
+[user/UserAPI.ts:15](https://github.com/bennycode/coinbase-pro-node/blob/6b575f0/src/user/UserAPI.ts#L15)
 
 ## Methods
 
 ### getTrailingVolume
 
-▸ **getTrailingVolume**(): `Promise`<[TrailingVolume](../interfaces/trailingvolume.md)[]\>
+▸ **getTrailingVolume**(): `Promise`<[`TrailingVolume`](../interfaces/TrailingVolume.md)[]\>
 
 This request will return your 30-day trailing volume for all products of the API key’s profile. This is a cached value that’s calculated every day at midnight UTC.
 
@@ -63,19 +63,19 @@ This request will return your 30-day trailing volume for all products of the API
 
 #### Returns
 
-`Promise`<[TrailingVolume](../interfaces/trailingvolume.md)[]\>
+`Promise`<[`TrailingVolume`](../interfaces/TrailingVolume.md)[]\>
 
 Your 30-day trailing volume for all products of the API key’s profile
 
 #### Defined in
 
-[user/UserAPI.ts:41](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/user/UserAPI.ts#L41)
+[user/UserAPI.ts:41](https://github.com/bennycode/coinbase-pro-node/blob/6b575f0/src/user/UserAPI.ts#L41)
 
 ---
 
 ### verifyAuthentication
 
-▸ **verifyAuthentication**(): `Promise`<[VerifiedUser](../interfaces/verifieduser.md)\>
+▸ **verifyAuthentication**(): `Promise`<[`VerifiedUser`](../interfaces/VerifiedUser.md)\>
 
 Verify your authentication with Coinbase Pro.
 
@@ -83,10 +83,10 @@ Verify your authentication with Coinbase Pro.
 
 #### Returns
 
-`Promise`<[VerifiedUser](../interfaces/verifieduser.md)\>
+`Promise`<[`VerifiedUser`](../interfaces/VerifiedUser.md)\>
 
 Your account
 
 #### Defined in
 
-[user/UserAPI.ts:27](https://github.com/bennycode/coinbase-pro-node/blob/4fcd15c/src/user/UserAPI.ts#L27)
+[user/UserAPI.ts:27](https://github.com/bennycode/coinbase-pro-node/blob/6b575f0/src/user/UserAPI.ts#L27)
