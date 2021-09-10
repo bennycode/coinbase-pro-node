@@ -1,3 +1,20 @@
+#### 3.0.7 (2021-09-10)
+
+##### Chores
+
+- **deps:**
+  - bump axios from 0.21.3 to 0.21.4 ([#600](https://github.com/bennycode/coinbase-pro-node/pull/600)) ([a01c0e0f](https://github.com/bennycode/coinbase-pro-node/commit/a01c0e0fe8a785a2be2d5465a511575036d7656e))
+  - bump ws from 7.5.4 to 7.5.5 ([#603](https://github.com/bennycode/coinbase-pro-node/pull/603)) ([58f4dd25](https://github.com/bennycode/coinbase-pro-node/commit/58f4dd25bf956a2a0f47c15cd9626ad5b78c5ca8))
+- **deps-dev:**
+  - bump prettier from 2.3.2 to 2.4.0 ([#601](https://github.com/bennycode/coinbase-pro-node/pull/601)) ([c411f0c2](https://github.com/bennycode/coinbase-pro-node/commit/c411f0c25c654b9a5a69a4c3b3293654cbc052fa))
+  - bump typedoc from 0.21.9 to 0.22.0 ([#602](https://github.com/bennycode/coinbase-pro-node/pull/602)) ([d1ccec09](https://github.com/bennycode/coinbase-pro-node/commit/d1ccec0957e7dced2518cdc1c9749a99743bf44e))
+  - bump @typescript-eslint/parser from 4.30.0 to 4.31.0 ([#599](https://github.com/bennycode/coinbase-pro-node/pull/599)) ([45dc36dd](https://github.com/bennycode/coinbase-pro-node/commit/45dc36dd582f9f4a7c3409d5a385435b9399f9b0))
+- Run dependency updates once each month ([befc92bd](https://github.com/bennycode/coinbase-pro-node/commit/befc92bd27947cea1d37c27f78e315fed21f0559))
+
+##### New Features
+
+- Support transfers between portfolios by type ([#604](https://github.com/bennycode/coinbase-pro-node/pull/604)) ([76de3739](https://github.com/bennycode/coinbase-pro-node/commit/76de3739088432338f1e24cdd7b6cdc8df53ce5d))
+
 #### 3.0.6 (2021-09-08)
 
 ##### Chores
