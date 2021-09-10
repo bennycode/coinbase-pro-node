@@ -16,4 +16,4 @@
 
 #### Defined in
 
-[user/UserAPI.ts:4](https://github.com/bennycode/coinbase-pro-node/blob/6b575f0/src/user/UserAPI.ts#L4)
+[user/UserAPI.ts:4](https://github.com/bennycode/coinbase-pro-node/blob/48475f6/src/user/UserAPI.ts#L4)

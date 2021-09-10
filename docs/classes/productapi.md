@@ -39,7 +39,7 @@
 
 #### Defined in
 
-[product/ProductAPI.ts:191](https://github.com/bennycode/coinbase-pro-node/blob/6b575f0/src/product/ProductAPI.ts#L191)
+[product/ProductAPI.ts:191](https://github.com/bennycode/coinbase-pro-node/blob/48475f6/src/product/ProductAPI.ts#L191)
 
 ## Properties
 
@@ -55,7 +55,7 @@
 
 #### Defined in
 
-[product/ProductAPI.ts:178](https://github.com/bennycode/coinbase-pro-node/blob/6b575f0/src/product/ProductAPI.ts#L178)
+[product/ProductAPI.ts:178](https://github.com/bennycode/coinbase-pro-node/blob/48475f6/src/product/ProductAPI.ts#L178)
 
 ## Methods
 
@@ -82,7 +82,7 @@ Note: The maximum number of data points for a single request is 300 candles. If 
 
 #### Defined in
 
-[product/ProductAPI.ts:205](https://github.com/bennycode/coinbase-pro-node/blob/6b575f0/src/product/ProductAPI.ts#L205)
+[product/ProductAPI.ts:205](https://github.com/bennycode/coinbase-pro-node/blob/48475f6/src/product/ProductAPI.ts#L205)
 
 ---
 
@@ -106,7 +106,7 @@ Get trading details for a specified product.
 
 #### Defined in
 
-[product/ProductAPI.ts:286](https://github.com/bennycode/coinbase-pro-node/blob/6b575f0/src/product/ProductAPI.ts#L286)
+[product/ProductAPI.ts:286](https://github.com/bennycode/coinbase-pro-node/blob/48475f6/src/product/ProductAPI.ts#L286)
 
 ---
 
@@ -132,7 +132,7 @@ Get a list of open orders for a product. The amount of detail shown can be custo
 
 #### Defined in
 
-[product/ProductAPI.ts:329](https://github.com/bennycode/coinbase-pro-node/blob/6b575f0/src/product/ProductAPI.ts#L329)
+[product/ProductAPI.ts:329](https://github.com/bennycode/coinbase-pro-node/blob/48475f6/src/product/ProductAPI.ts#L329)
 
 ▸ **getProductOrderBook**(`productId`, `params?`): `Promise`<[`OrderBookLevel2`](../interfaces/OrderBookLevel2.md)\>
 
@@ -150,7 +150,7 @@ Get a list of open orders for a product. The amount of detail shown can be custo
 
 #### Defined in
 
-[product/ProductAPI.ts:333](https://github.com/bennycode/coinbase-pro-node/blob/6b575f0/src/product/ProductAPI.ts#L333)
+[product/ProductAPI.ts:333](https://github.com/bennycode/coinbase-pro-node/blob/48475f6/src/product/ProductAPI.ts#L333)
 
 ▸ **getProductOrderBook**(`productId`, `params?`): `Promise`<[`OrderBookLevel3`](../interfaces/OrderBookLevel3.md)\>
 
@@ -168,7 +168,7 @@ Get a list of open orders for a product. The amount of detail shown can be custo
 
 #### Defined in
 
-[product/ProductAPI.ts:337](https://github.com/bennycode/coinbase-pro-node/blob/6b575f0/src/product/ProductAPI.ts#L337)
+[product/ProductAPI.ts:337](https://github.com/bennycode/coinbase-pro-node/blob/48475f6/src/product/ProductAPI.ts#L337)
 
 ---
 
@@ -192,7 +192,7 @@ Get latest 24 hours of movement data for a product.
 
 #### Defined in
 
-[product/ProductAPI.ts:368](https://github.com/bennycode/coinbase-pro-node/blob/6b575f0/src/product/ProductAPI.ts#L368)
+[product/ProductAPI.ts:368](https://github.com/bennycode/coinbase-pro-node/blob/48475f6/src/product/ProductAPI.ts#L368)
 
 ---
 
@@ -216,7 +216,7 @@ Get snapshot information about the last trade (tick), best bid/ask and 24h volum
 
 #### Defined in
 
-[product/ProductAPI.ts:380](https://github.com/bennycode/coinbase-pro-node/blob/6b575f0/src/product/ProductAPI.ts#L380)
+[product/ProductAPI.ts:380](https://github.com/bennycode/coinbase-pro-node/blob/48475f6/src/product/ProductAPI.ts#L380)
 
 ---
 
@@ -234,7 +234,7 @@ Get trading details of all available products.
 
 #### Defined in
 
-[product/ProductAPI.ts:296](https://github.com/bennycode/coinbase-pro-node/blob/6b575f0/src/product/ProductAPI.ts#L296)
+[product/ProductAPI.ts:296](https://github.com/bennycode/coinbase-pro-node/blob/48475f6/src/product/ProductAPI.ts#L296)
 
 ---
 
@@ -259,7 +259,7 @@ Get latest trades for a product.
 
 #### Defined in
 
-[product/ProductAPI.ts:309](https://github.com/bennycode/coinbase-pro-node/blob/6b575f0/src/product/ProductAPI.ts#L309)
+[product/ProductAPI.ts:309](https://github.com/bennycode/coinbase-pro-node/blob/48475f6/src/product/ProductAPI.ts#L309)
 
 ---
 
@@ -282,7 +282,7 @@ Stop watching a specific candle interval.
 
 #### Defined in
 
-[product/ProductAPI.ts:272](https://github.com/bennycode/coinbase-pro-node/blob/6b575f0/src/product/ProductAPI.ts#L272)
+[product/ProductAPI.ts:272](https://github.com/bennycode/coinbase-pro-node/blob/48475f6/src/product/ProductAPI.ts#L272)
 
 ---
 
@@ -308,4 +308,4 @@ Handle to stop the watch interval
 
 #### Defined in
 
-[product/ProductAPI.ts:249](https://github.com/bennycode/coinbase-pro-node/blob/6b575f0/src/product/ProductAPI.ts#L249)
+[product/ProductAPI.ts:249](https://github.com/bennycode/coinbase-pro-node/blob/48475f6/src/product/ProductAPI.ts#L249)

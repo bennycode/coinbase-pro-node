@@ -42,7 +42,7 @@
 
 #### Defined in
 
-[client/WebSocketClient.ts:246](https://github.com/bennycode/coinbase-pro-node/blob/6b575f0/src/client/WebSocketClient.ts#L246)
+[client/WebSocketClient.ts:246](https://github.com/bennycode/coinbase-pro-node/blob/48475f6/src/client/WebSocketClient.ts#L246)
 
 ## Properties
 
@@ -61,7 +61,7 @@
 
 #### Defined in
 
-[client/WebSocketClient.ts:230](https://github.com/bennycode/coinbase-pro-node/blob/6b575f0/src/client/WebSocketClient.ts#L230)
+[client/WebSocketClient.ts:230](https://github.com/bennycode/coinbase-pro-node/blob/48475f6/src/client/WebSocketClient.ts#L230)
 
 ## Methods
 
@@ -85,7 +85,7 @@ The websocket feed is publicly available, but connections to it are rate-limited
 
 #### Defined in
 
-[client/WebSocketClient.ts:260](https://github.com/bennycode/coinbase-pro-node/blob/6b575f0/src/client/WebSocketClient.ts#L260)
+[client/WebSocketClient.ts:260](https://github.com/bennycode/coinbase-pro-node/blob/48475f6/src/client/WebSocketClient.ts#L260)
 
 ---
 
@@ -105,7 +105,7 @@ The websocket feed is publicly available, but connections to it are rate-limited
 
 #### Defined in
 
-[client/WebSocketClient.ts:325](https://github.com/bennycode/coinbase-pro-node/blob/6b575f0/src/client/WebSocketClient.ts#L325)
+[client/WebSocketClient.ts:325](https://github.com/bennycode/coinbase-pro-node/blob/48475f6/src/client/WebSocketClient.ts#L325)
 
 ---
 
@@ -126,7 +126,7 @@ The websocket feed is publicly available, but connections to it are rate-limited
 
 #### Defined in
 
-[client/WebSocketClient.ts:206](https://github.com/bennycode/coinbase-pro-node/blob/6b575f0/src/client/WebSocketClient.ts#L206)
+[client/WebSocketClient.ts:206](https://github.com/bennycode/coinbase-pro-node/blob/48475f6/src/client/WebSocketClient.ts#L206)
 
 ▸ **on**(`event`, `listener`): [`WebSocketClient`](WebSocketClient.md)
 
@@ -143,7 +143,7 @@ The websocket feed is publicly available, but connections to it are rate-limited
 
 #### Defined in
 
-[client/WebSocketClient.ts:208](https://github.com/bennycode/coinbase-pro-node/blob/6b575f0/src/client/WebSocketClient.ts#L208)
+[client/WebSocketClient.ts:208](https://github.com/bennycode/coinbase-pro-node/blob/48475f6/src/client/WebSocketClient.ts#L208)
 
 ▸ **on**(`event`, `listener`): [`WebSocketClient`](WebSocketClient.md)
 
@@ -160,7 +160,7 @@ The websocket feed is publicly available, but connections to it are rate-limited
 
 #### Defined in
 
-[client/WebSocketClient.ts:210](https://github.com/bennycode/coinbase-pro-node/blob/6b575f0/src/client/WebSocketClient.ts#L210)
+[client/WebSocketClient.ts:210](https://github.com/bennycode/coinbase-pro-node/blob/48475f6/src/client/WebSocketClient.ts#L210)
 
 ▸ **on**(`event`, `listener`): [`WebSocketClient`](WebSocketClient.md)
 
@@ -177,7 +177,7 @@ The websocket feed is publicly available, but connections to it are rate-limited
 
 #### Defined in
 
-[client/WebSocketClient.ts:212](https://github.com/bennycode/coinbase-pro-node/blob/6b575f0/src/client/WebSocketClient.ts#L212)
+[client/WebSocketClient.ts:212](https://github.com/bennycode/coinbase-pro-node/blob/48475f6/src/client/WebSocketClient.ts#L212)
 
 ▸ **on**(`event`, `listener`): [`WebSocketClient`](WebSocketClient.md)
 
@@ -194,7 +194,7 @@ The websocket feed is publicly available, but connections to it are rate-limited
 
 #### Defined in
 
-[client/WebSocketClient.ts:214](https://github.com/bennycode/coinbase-pro-node/blob/6b575f0/src/client/WebSocketClient.ts#L214)
+[client/WebSocketClient.ts:214](https://github.com/bennycode/coinbase-pro-node/blob/48475f6/src/client/WebSocketClient.ts#L214)
 
 ▸ **on**(`event`, `listener`): [`WebSocketClient`](WebSocketClient.md)
 
@@ -211,7 +211,7 @@ The websocket feed is publicly available, but connections to it are rate-limited
 
 #### Defined in
 
-[client/WebSocketClient.ts:219](https://github.com/bennycode/coinbase-pro-node/blob/6b575f0/src/client/WebSocketClient.ts#L219)
+[client/WebSocketClient.ts:219](https://github.com/bennycode/coinbase-pro-node/blob/48475f6/src/client/WebSocketClient.ts#L219)
 
 ▸ **on**(`event`, `listener`): [`WebSocketClient`](WebSocketClient.md)
 
@@ -228,7 +228,7 @@ The websocket feed is publicly available, but connections to it are rate-limited
 
 #### Defined in
 
-[client/WebSocketClient.ts:221](https://github.com/bennycode/coinbase-pro-node/blob/6b575f0/src/client/WebSocketClient.ts#L221)
+[client/WebSocketClient.ts:221](https://github.com/bennycode/coinbase-pro-node/blob/48475f6/src/client/WebSocketClient.ts#L221)
 
 ▸ **on**(`event`, `listener`): [`WebSocketClient`](WebSocketClient.md)
 
@@ -245,7 +245,7 @@ The websocket feed is publicly available, but connections to it are rate-limited
 
 #### Defined in
 
-[client/WebSocketClient.ts:223](https://github.com/bennycode/coinbase-pro-node/blob/6b575f0/src/client/WebSocketClient.ts#L223)
+[client/WebSocketClient.ts:223](https://github.com/bennycode/coinbase-pro-node/blob/48475f6/src/client/WebSocketClient.ts#L223)
 
 ▸ **on**(`event`, `listener`): [`WebSocketClient`](WebSocketClient.md)
 
@@ -262,7 +262,7 @@ The websocket feed is publicly available, but connections to it are rate-limited
 
 #### Defined in
 
-[client/WebSocketClient.ts:225](https://github.com/bennycode/coinbase-pro-node/blob/6b575f0/src/client/WebSocketClient.ts#L225)
+[client/WebSocketClient.ts:225](https://github.com/bennycode/coinbase-pro-node/blob/48475f6/src/client/WebSocketClient.ts#L225)
 
 ---
 
@@ -282,7 +282,7 @@ The websocket feed is publicly available, but connections to it are rate-limited
 
 #### Defined in
 
-[client/WebSocketClient.ts:332](https://github.com/bennycode/coinbase-pro-node/blob/6b575f0/src/client/WebSocketClient.ts#L332)
+[client/WebSocketClient.ts:332](https://github.com/bennycode/coinbase-pro-node/blob/48475f6/src/client/WebSocketClient.ts#L332)
 
 ---
 
@@ -302,7 +302,7 @@ The websocket feed is publicly available, but connections to it are rate-limited
 
 #### Defined in
 
-[client/WebSocketClient.ts:353](https://github.com/bennycode/coinbase-pro-node/blob/6b575f0/src/client/WebSocketClient.ts#L353)
+[client/WebSocketClient.ts:353](https://github.com/bennycode/coinbase-pro-node/blob/48475f6/src/client/WebSocketClient.ts#L353)
 
 ---
 
@@ -322,4 +322,4 @@ The websocket feed is publicly available, but connections to it are rate-limited
 
 #### Defined in
 
-[client/WebSocketClient.ts:360](https://github.com/bennycode/coinbase-pro-node/blob/6b575f0/src/client/WebSocketClient.ts#L360)
+[client/WebSocketClient.ts:360](https://github.com/bennycode/coinbase-pro-node/blob/48475f6/src/client/WebSocketClient.ts#L360)
