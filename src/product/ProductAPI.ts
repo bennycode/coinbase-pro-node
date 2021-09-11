@@ -285,7 +285,7 @@ export class ProductAPI {
    */
   async getProduct(productId: string): Promise<Product | undefined> {
     const resource = `${ProductAPI.URL.PRODUCTS}/${productId}`;
-    const response = await this.apiClient.get<Product[]>(resource);
+    const response = await this.apiClient.get<Product>(resource);
     return response.data;
   }
 
