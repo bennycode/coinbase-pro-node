@@ -41,7 +41,7 @@ describe('ProductAPI', () => {
         );
 
       const product = await global.client.rest.product.getProduct(productId);
-      expect(product!.display_name).toBe('BTC/USD');
+      expect(product!.display_name).toBe('BTC/EUR');
     });
   });
 
