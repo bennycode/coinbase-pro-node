@@ -28,9 +28,9 @@ export interface TransferInformation {
 
 export enum TransferType {
   DEPOSIT = 'deposit',
-  WITHDRAW = 'withdraw',
   INTERNAL_DEPOSIT = 'internal_deposit',
   INTERNAL_WITHDRAW = 'internal_withdraw',
+  WITHDRAW = 'withdraw',
 }
 
 export class TransferAPI {
