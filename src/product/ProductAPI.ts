@@ -284,8 +284,9 @@ export class ProductAPI {
    * @see https://docs.pro.coinbase.com/#get-products
    */
   async getProduct(productId: string): Promise<Product | undefined> {
-    const products = await this.getProducts();
-    return products.find(product => product.id === productId);
+    const resource = `${ProductAPI.URL.PRODUCTS}/${productId}`;
+    const response = await this.apiClient.get<Product[]>(resource);
+    return response.data;
   }
 
   /**
