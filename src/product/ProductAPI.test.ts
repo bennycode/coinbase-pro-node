@@ -14,53 +14,34 @@ describe('ProductAPI', () => {
 
   describe('getProduct', () => {
     it('returns trading details for a specified product', async () => {
+      const productId = 'BTC-EUR';
       nock(global.REST_URL)
-        .get(ProductAPI.URL.PRODUCTS)
+        .get(`${ProductAPI.URL.PRODUCTS}/${productId}`)
         .query(true)
         .reply(
           200,
-          JSON.stringify([
-            {
-              base_currency: 'BTC',
-              base_increment: '0.00000001',
-              base_max_size: '200',
-              base_min_size: '0.001',
-              cancel_only: false,
-              display_name: 'BTC/EUR',
-              id: 'BTC-EUR',
-              limit_only: false,
-              margin_enabled: false,
-              max_market_funds: '600000',
-              min_market_funds: '10',
-              post_only: false,
-              quote_currency: 'EUR',
-              quote_increment: '0.01',
-              status: 'online',
-              status_message: '',
-            },
-            {
-              base_currency: 'XRP',
-              base_increment: '1',
-              base_max_size: '500000',
-              base_min_size: '1',
-              cancel_only: false,
-              display_name: 'XRP/USD',
-              id: 'XRP-USD',
-              limit_only: false,
-              margin_enabled: false,
-              max_market_funds: '100000',
-              min_market_funds: '10',
-              post_only: false,
-              quote_currency: 'USD',
-              quote_increment: '0.0001',
-              status: 'online',
-              status_message: '',
-            },
-          ])
+          JSON.stringify({
+            base_currency: 'BTC',
+            base_increment: '0.00000001',
+            base_max_size: '200',
+            base_min_size: '0.001',
+            cancel_only: false,
+            display_name: 'BTC/EUR',
+            id: 'BTC-EUR',
+            limit_only: false,
+            margin_enabled: false,
+            max_market_funds: '600000',
+            min_market_funds: '10',
+            post_only: false,
+            quote_currency: 'EUR',
+            quote_increment: '0.01',
+            status: 'online',
+            status_message: '',
+          })
         );
 
-      const product = await global.client.rest.product.getProduct('XRP-USD');
-      expect(product!.display_name).toBe('XRP/USD');
+      const product = await global.client.rest.product.getProduct(productId);
+      expect(product!.display_name).toBe('BTC/EUR');
     });
   });
 
