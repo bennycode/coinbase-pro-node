@@ -128,7 +128,15 @@ type WebSocketMessage =
   | WebSocketStatusMessage
   | WebSocketTickerMessage
   | WebSocketMatchMessage
-  | WebSocketErrorMessage;
+  | WebSocketErrorMessage
+  | WebSocketLastMatchMessage
+  | WebSocketL2SnapshotMessage
+  | WebSocketL2UpdateMessage
+  | WebSocketFullReceivedMessage
+  | WebSocketFullOpenMessage
+  | WebSocketFullDoneMessage
+  | WebSocketFullChangeMessage
+  | WebSocketFullActivateMessage;
 
 export interface WebSocketErrorMessage {
   message: string;
@@ -183,6 +191,87 @@ export interface WebSocketTickerMessage {
   volume_30d: string;
 }
 
+export interface WebSocketL2SnapshotMessage {
+  asks: [[string, string]];
+  bids: [[string, string]];
+  product_id: string;
+  type: WebSocketResponseType.LEVEL2_SNAPSHOT;
+}
+
+export interface WebSocketL2UpdateMessage {
+  changes: [[string, string, string]];
+  product_id: string;
+  type: WebSocketResponseType.LEVEL2_UPDATE;
+}
+
+export interface WebSocketFullReceivedMessage extends WebSocketUserMessage {
+  client_oid: string;
+  order_id: string;
+  order_type: string;
+  price: string;
+  product_id: string;
+  sequence: number;
+  side: OrderSide;
+  size: string;
+  time: ISO_8601_MS_UTC;
+  type: WebSocketResponseType.FULL_RECEIVED;
+}
+
+export interface WebSocketFullOpenMessage extends WebSocketUserMessage {
+  order_id: string;
+  price: string;
+  product_id: string;
+  remaining_size: string;
+  sequence: number;
+  side: OrderSide;
+  time: ISO_8601_MS_UTC;
+  type: WebSocketResponseType.FULL_OPEN;
+}
+
+export interface WebSocketFullDoneMessage extends WebSocketUserMessage {
+  order_id: string;
+  price: string;
+  product_id: string;
+  reason: 'filled' | 'canceled';
+  remaining_size: string;
+  sequence: number;
+  side: OrderSide;
+  time: ISO_8601_MS_UTC;
+  type: WebSocketResponseType.FULL_DONE;
+}
+
+export interface WebSocketFullChangeMessage extends WebSocketUserMessage {
+  new_funds?: string;
+  new_size?: string;
+  old_funds?: string;
+  old_size?: string;
+  order_id: string;
+  price: string;
+  product_id: string;
+  sequence: number;
+  side: OrderSide;
+  time: ISO_8601_MS_UTC;
+  type: WebSocketResponseType.FULL_CHANGE;
+}
+
+export interface WebSocketFullActivateMessage extends WebSocketUserMessage {
+  funds: string;
+  order_id: string;
+  private: boolean;
+  product_id: string;
+  side: OrderSide;
+  size: string;
+  stop_price: string;
+  stop_type: string;
+  timestamp: string;
+  type: WebSocketResponseType.FULL_ACTIVATE;
+}
+
+interface WebSocketUserMessage {
+  profile_id?: string;
+  user_id?: string;
+}
+
 export type WebSocketLastMatchMessage = Omit<WebSocketMatchMessage, 'type'> & {type: WebSocketResponseType.LAST_MATCH};
 
 export interface WebSocketSubscription {
@@ -195,6 +284,13 @@ export enum WebSocketEvent {
   ON_ERROR = 'WebSocketEvent.ON_ERROR',
   ON_MESSAGE = 'WebSocketEvent.ON_MESSAGE',
   ON_MESSAGE_ERROR = 'WebSocketEvent.ON_MESSAGE_ERROR',
+  ON_MESSAGE_FULL_ACTIVATE = 'WebSocketEvent.ON_MESSAGE_FULL_ACTIVATE',
+  ON_MESSAGE_FULL_CHANGE = 'WebSocketEvent.ON_MESSAGE_FULL_CHANGE',
+  ON_MESSAGE_FULL_DONE = 'WebSocketEvent.ON_MESSAGE_FULL_DONE',
+  ON_MESSAGE_FULL_OPEN = 'WebSocketEvent.ON_MESSAGE_FULL_OPEN',
+  ON_MESSAGE_FULL_RECEIVED = 'WebSocketEvent.ON_MESSAGE_FULL_RECEIVED',
+  ON_MESSAGE_L2SNAPSHOT = 'WebSocketEvent.ON_MESSAGE_L2SNAPSHOT',
+  ON_MESSAGE_L2UPDATE = 'WebSocketEvent.ON_MESSAGE_L2UPDATE',
   ON_MESSAGE_MATCHES = 'WebSocketEvent.ON_MESSAGE_MATCHES',
   ON_MESSAGE_STATUS = 'WebSocketEvent.ON_MESSAGE_STATUS',
   ON_MESSAGE_TICKER = 'WebSocketEvent.ON_MESSAGE_TICKER',
@@ -221,6 +317,26 @@ export interface WebSocketClient {
   on(event: WebSocketEvent.ON_MESSAGE_TICKER, listener: (tickerMessage: WebSocketTickerMessage) => void): this;
 
   on(event: WebSocketEvent.ON_SUBSCRIPTION_UPDATE, listener: (subscriptions: WebSocketSubscription) => void): this;
+
+  on(event: WebSocketEvent.ON_MESSAGE_L2SNAPSHOT, listener: (subscriptions: WebSocketL2SnapshotMessage) => void): this;
+
+  on(event: WebSocketEvent.ON_MESSAGE_L2UPDATE, listener: (subscriptions: WebSocketL2UpdateMessage) => void): this;
+
+  on(
+    event: WebSocketEvent.ON_MESSAGE_FULL_RECEIVED,
+    listener: (subscriptions: WebSocketFullReceivedMessage) => void
+  ): this;
+
+  on(event: WebSocketEvent.ON_MESSAGE_FULL_OPEN, listener: (subscriptions: WebSocketFullOpenMessage) => void): this;
+
+  on(event: WebSocketEvent.ON_MESSAGE_FULL_DONE, listener: (subscriptions: WebSocketFullDoneMessage) => void): this;
+
+  on(event: WebSocketEvent.ON_MESSAGE_FULL_CHANGE, listener: (subscriptions: WebSocketFullChangeMessage) => void): this;
+
+  on(
+    event: WebSocketEvent.ON_MESSAGE_FULL_ACTIVATE,
+    listener: (subscriptions: WebSocketFullActivateMessage) => void
+  ): this;
 
   on(event: WebSocketEvent.ON_OPEN, listener: (event: Event) => void): this;
 }
@@ -300,6 +416,27 @@ export class WebSocketClient extends EventEmitter {
         case WebSocketResponseType.FULL_MATCH:
         case WebSocketResponseType.LAST_MATCH:
           this.emit(WebSocketEvent.ON_MESSAGE_MATCHES, response);
+          break;
+        case WebSocketResponseType.LEVEL2_SNAPSHOT:
+          this.emit(WebSocketEvent.ON_MESSAGE_L2SNAPSHOT, response);
+          break;
+        case WebSocketResponseType.LEVEL2_UPDATE:
+          this.emit(WebSocketEvent.ON_MESSAGE_L2UPDATE, response);
+          break;
+        case WebSocketResponseType.FULL_RECEIVED:
+          this.emit(WebSocketEvent.ON_MESSAGE_FULL_RECEIVED, response);
+          break;
+        case WebSocketResponseType.FULL_OPEN:
+          this.emit(WebSocketEvent.ON_MESSAGE_FULL_OPEN, response);
+          break;
+        case WebSocketResponseType.FULL_DONE:
+          this.emit(WebSocketEvent.ON_MESSAGE_FULL_DONE, response);
+          break;
+        case WebSocketResponseType.FULL_CHANGE:
+          this.emit(WebSocketEvent.ON_MESSAGE_FULL_CHANGE, response);
+          break;
+        case WebSocketResponseType.FULL_ACTIVATE:
+          this.emit(WebSocketEvent.ON_MESSAGE_FULL_ACTIVATE, response);
           break;
       }
     };
