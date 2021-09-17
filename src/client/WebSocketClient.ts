@@ -144,13 +144,15 @@ export interface WebSocketErrorMessage {
   type: WebSocketResponseType.ERROR;
 }
 
-export interface WebSocketMatchMessage {
+export interface WebSocketMatchMessage extends WebSocketUserMessage {
+  maker_fee_rate?: string;
   maker_order_id: UUID_V4;
   price: string;
   product_id: string;
   sequence: number;
   side: OrderSide;
   size: string;
+  taker_fee_rate?: string;
   taker_order_id: UUID_V4;
   time: ISO_8601_MS_UTC;
   trade_id: number;
