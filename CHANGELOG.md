@@ -1,3 +1,19 @@
+#### 3.0.8 (2021-09-18)
+
+##### Chores
+
+*  Downgrade typedoc ([6952b73b](https://github.com/bennycode/coinbase-pro-node/commit/6952b73bf93f9837f998506bb1b50a282d980e71))
+*  Update typedoc-plugin-markdown ([3dfeb776](https://github.com/bennycode/coinbase-pro-node/commit/3dfeb77684ede4fac969567711450b5cbbef3817))
+*  Sort transfer types ([abd2d7c4](https://github.com/bennycode/coinbase-pro-node/commit/abd2d7c442d5bf00f5a6efdf25b813e68a2bf19d))
+
+##### New Features
+
+*  Make the ReconnectingWebSocket object publicly accessible ([#608](https://github.com/bennycode/coinbase-pro-node/pull/608)) ([91eca2fd](https://github.com/bennycode/coinbase-pro-node/commit/91eca2fdede7db0b3822f62f1f7bc0e54ae613b8))
+
+##### Bug Fixes
+
+*  Make `ProductAPI.getProduct` always return a product ([#605](https://github.com/bennycode/coinbase-pro-node/pull/605)) ([b870c85f](https://github.com/bennycode/coinbase-pro-node/commit/b870c85f944e445f07c04ad9efdbd1bab3c9d02a))
+
 #### 3.0.7 (2021-09-10)
 
 ##### Chores
