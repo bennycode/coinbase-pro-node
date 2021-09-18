@@ -25,13 +25,13 @@
 
 #### Parameters
 
-| Name        | Type            |
-| :---------- | :-------------- |
+| Name | Type |
+| :------ | :------ |
 | `apiClient` | `AxiosInstance` |
 
 #### Defined in
 
-[user/UserAPI.ts:19](https://github.com/bennycode/coinbase-pro-node/blob/48475f6/src/user/UserAPI.ts#L19)
+[user/UserAPI.ts:19](https://github.com/bennycode/coinbase-pro-node/blob/9734468/src/user/UserAPI.ts#L19)
 
 ## Properties
 
@@ -41,13 +41,13 @@
 
 #### Type declaration
 
-| Name    | Type     |
-| :------ | :------- |
+| Name | Type |
+| :------ | :------ |
 | `USERS` | `string` |
 
 #### Defined in
 
-[user/UserAPI.ts:15](https://github.com/bennycode/coinbase-pro-node/blob/48475f6/src/user/UserAPI.ts#L15)
+[user/UserAPI.ts:15](https://github.com/bennycode/coinbase-pro-node/blob/9734468/src/user/UserAPI.ts#L15)
 
 ## Methods
 
@@ -55,7 +55,8 @@
 
 ▸ **getTrailingVolume**(): `Promise`<[`TrailingVolume`](../interfaces/TrailingVolume.md)[]\>
 
-This request will return your 30-day trailing volume for all products of the API key’s profile. This is a cached value that’s calculated every day at midnight UTC.
+This request will return your 30-day trailing volume for all products of the API key’s profile. This is a cached
+value that’s calculated every day at midnight UTC.
 
 **`note`** This endpoint requires either the “view” or “trade” permission
 
@@ -69,9 +70,9 @@ Your 30-day trailing volume for all products of the API key’s profile
 
 #### Defined in
 
-[user/UserAPI.ts:41](https://github.com/bennycode/coinbase-pro-node/blob/48475f6/src/user/UserAPI.ts#L41)
+[user/UserAPI.ts:41](https://github.com/bennycode/coinbase-pro-node/blob/9734468/src/user/UserAPI.ts#L41)
 
----
+___
 
 ### verifyAuthentication
 
@@ -89,4 +90,4 @@ Your account
 
 #### Defined in
 
-[user/UserAPI.ts:27](https://github.com/bennycode/coinbase-pro-node/blob/48475f6/src/user/UserAPI.ts#L27)
+[user/UserAPI.ts:27](https://github.com/bennycode/coinbase-pro-node/blob/9734468/src/user/UserAPI.ts#L27)

@@ -11,7 +11,7 @@
 - [price](ProductTicker.md#price)
 - [size](ProductTicker.md#size)
 - [time](ProductTicker.md#time)
-- [trade_id](ProductTicker.md#trade_id)
+- [trade\_id](ProductTicker.md#trade_id)
 - [volume](ProductTicker.md#volume)
 
 ## Properties
@@ -22,9 +22,9 @@
 
 #### Defined in
 
-[product/ProductAPI.ts:34](https://github.com/bennycode/coinbase-pro-node/blob/48475f6/src/product/ProductAPI.ts#L34)
+[product/ProductAPI.ts:34](https://github.com/bennycode/coinbase-pro-node/blob/9734468/src/product/ProductAPI.ts#L34)
 
----
+___
 
 ### bid
 
@@ -32,9 +32,9 @@
 
 #### Defined in
 
-[product/ProductAPI.ts:35](https://github.com/bennycode/coinbase-pro-node/blob/48475f6/src/product/ProductAPI.ts#L35)
+[product/ProductAPI.ts:35](https://github.com/bennycode/coinbase-pro-node/blob/9734468/src/product/ProductAPI.ts#L35)
 
----
+___
 
 ### price
 
@@ -42,9 +42,9 @@
 
 #### Defined in
 
-[product/ProductAPI.ts:36](https://github.com/bennycode/coinbase-pro-node/blob/48475f6/src/product/ProductAPI.ts#L36)
+[product/ProductAPI.ts:36](https://github.com/bennycode/coinbase-pro-node/blob/9734468/src/product/ProductAPI.ts#L36)
 
----
+___
 
 ### size
 
@@ -52,9 +52,9 @@
 
 #### Defined in
 
-[product/ProductAPI.ts:37](https://github.com/bennycode/coinbase-pro-node/blob/48475f6/src/product/ProductAPI.ts#L37)
+[product/ProductAPI.ts:37](https://github.com/bennycode/coinbase-pro-node/blob/9734468/src/product/ProductAPI.ts#L37)
 
----
+___
 
 ### time
 
@@ -62,19 +62,19 @@
 
 #### Defined in
 
-[product/ProductAPI.ts:38](https://github.com/bennycode/coinbase-pro-node/blob/48475f6/src/product/ProductAPI.ts#L38)
+[product/ProductAPI.ts:38](https://github.com/bennycode/coinbase-pro-node/blob/9734468/src/product/ProductAPI.ts#L38)
 
----
+___
 
-### trade_id
+### trade\_id
 
-• **trade_id**: `number`
+• **trade\_id**: `number`
 
 #### Defined in
 
-[product/ProductAPI.ts:39](https://github.com/bennycode/coinbase-pro-node/blob/48475f6/src/product/ProductAPI.ts#L39)
+[product/ProductAPI.ts:39](https://github.com/bennycode/coinbase-pro-node/blob/9734468/src/product/ProductAPI.ts#L39)
 
----
+___
 
 ### volume
 
@@ -82,4 +82,4 @@
 
 #### Defined in
 
-[product/ProductAPI.ts:40](https://github.com/bennycode/coinbase-pro-node/blob/48475f6/src/product/ProductAPI.ts#L40)
+[product/ProductAPI.ts:40](https://github.com/bennycode/coinbase-pro-node/blob/9734468/src/product/ProductAPI.ts#L40)

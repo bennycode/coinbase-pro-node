@@ -17,9 +17,9 @@
 
 #### Defined in
 
-[fill/FillAPI.ts:5](https://github.com/bennycode/coinbase-pro-node/blob/48475f6/src/fill/FillAPI.ts#L5)
+[fill/FillAPI.ts:5](https://github.com/bennycode/coinbase-pro-node/blob/9734468/src/fill/FillAPI.ts#L5)
 
----
+___
 
 ### TAKER
 
@@ -27,4 +27,4 @@
 
 #### Defined in
 
-[fill/FillAPI.ts:6](https://github.com/bennycode/coinbase-pro-node/blob/48475f6/src/fill/FillAPI.ts#L6)
+[fill/FillAPI.ts:6](https://github.com/bennycode/coinbase-pro-node/blob/9734468/src/fill/FillAPI.ts#L6)

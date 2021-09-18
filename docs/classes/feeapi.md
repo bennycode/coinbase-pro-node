@@ -24,13 +24,13 @@
 
 #### Parameters
 
-| Name        | Type            |
-| :---------- | :-------------- |
+| Name | Type |
+| :------ | :------ |
 | `apiClient` | `AxiosInstance` |
 
 #### Defined in
 
-[fee/FeeAPI.ts:22](https://github.com/bennycode/coinbase-pro-node/blob/48475f6/src/fee/FeeAPI.ts#L22)
+[fee/FeeAPI.ts:22](https://github.com/bennycode/coinbase-pro-node/blob/9734468/src/fee/FeeAPI.ts#L22)
 
 ## Properties
 
@@ -40,13 +40,13 @@
 
 #### Type declaration
 
-| Name   | Type     |
-| :----- | :------- |
+| Name | Type |
+| :------ | :------ |
 | `FEES` | `string` |
 
 #### Defined in
 
-[fee/FeeAPI.ts:18](https://github.com/bennycode/coinbase-pro-node/blob/48475f6/src/fee/FeeAPI.ts#L18)
+[fee/FeeAPI.ts:18](https://github.com/bennycode/coinbase-pro-node/blob/9734468/src/fee/FeeAPI.ts#L18)
 
 ## Methods
 
@@ -54,7 +54,8 @@
 
 ▸ **getCurrentFees**(): `Promise`<[`FeeTier`](../interfaces/FeeTier.md)\>
 
-Get your current maker & taker fee rates, as well as your 30-day trailing volume. Quoted rates are subject to change.
+Get your current maker & taker fee rates, as well as your 30-day trailing volume. Quoted rates are subject to
+change.
 
 **`see`** https://docs.pro.coinbase.com/#fees
 
@@ -66,4 +67,4 @@ Get your current maker & taker fee rates, as well as your 30-day trailing volume
 
 #### Defined in
 
-[fee/FeeAPI.ts:31](https://github.com/bennycode/coinbase-pro-node/blob/48475f6/src/fee/FeeAPI.ts#L31)
+[fee/FeeAPI.ts:31](https://github.com/bennycode/coinbase-pro-node/blob/9734468/src/fee/FeeAPI.ts#L31)

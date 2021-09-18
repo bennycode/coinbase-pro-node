@@ -6,36 +6,36 @@
 
 ### Properties
 
-- [order_id](AccountHistoryDetails.md#order_id)
-- [product_id](AccountHistoryDetails.md#product_id)
-- [trade_id](AccountHistoryDetails.md#trade_id)
+- [order\_id](AccountHistoryDetails.md#order_id)
+- [product\_id](AccountHistoryDetails.md#product_id)
+- [trade\_id](AccountHistoryDetails.md#trade_id)
 
 ## Properties
 
-### order_id
+### order\_id
 
-• **order_id**: `string`
-
-#### Defined in
-
-[account/AccountAPI.ts:23](https://github.com/bennycode/coinbase-pro-node/blob/48475f6/src/account/AccountAPI.ts#L23)
-
----
-
-### product_id
-
-• **product_id**: `string`
+• **order\_id**: `string`
 
 #### Defined in
 
-[account/AccountAPI.ts:24](https://github.com/bennycode/coinbase-pro-node/blob/48475f6/src/account/AccountAPI.ts#L24)
+[account/AccountAPI.ts:23](https://github.com/bennycode/coinbase-pro-node/blob/9734468/src/account/AccountAPI.ts#L23)
 
----
+___
 
-### trade_id
+### product\_id
 
-• **trade_id**: `string`
+• **product\_id**: `string`
 
 #### Defined in
 
-[account/AccountAPI.ts:25](https://github.com/bennycode/coinbase-pro-node/blob/48475f6/src/account/AccountAPI.ts#L25)
+[account/AccountAPI.ts:24](https://github.com/bennycode/coinbase-pro-node/blob/9734468/src/account/AccountAPI.ts#L24)
+
+___
+
+### trade\_id
+
+• **trade\_id**: `string`
+
+#### Defined in
+
+[account/AccountAPI.ts:25](https://github.com/bennycode/coinbase-pro-node/blob/9734468/src/account/AccountAPI.ts#L25)

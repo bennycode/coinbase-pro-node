@@ -105,9 +105,9 @@
 
 #### Defined in
 
-[CoinbasePro.ts:26](https://github.com/bennycode/coinbase-pro-node/blob/48475f6/src/CoinbasePro.ts#L26)
+[CoinbasePro.ts:26](https://github.com/bennycode/coinbase-pro-node/blob/9734468/src/CoinbasePro.ts#L26)
 
----
+___
 
 ### HistoricRateRequest
 
@@ -115,19 +115,19 @@
 
 #### Defined in
 
-[product/ProductAPI.ts:82](https://github.com/bennycode/coinbase-pro-node/blob/48475f6/src/product/ProductAPI.ts#L82)
+[product/ProductAPI.ts:82](https://github.com/bennycode/coinbase-pro-node/blob/9734468/src/product/ProductAPI.ts#L82)
 
----
+___
 
 ### MarketOrder
 
-Ƭ **MarketOrder**: `BaseOrder` & { `type`: [`MARKET`](enums/OrderType.md#market) } & { `size`: `string` } \| { `funds`: `string` }
+Ƭ **MarketOrder**: `BaseOrder` & { `type`: [`MARKET`](enums/OrderType.md#market)  } & { `size`: `string`  } \| { `funds`: `string`  }
 
 #### Defined in
 
-[order/OrderAPI.ts:77](https://github.com/bennycode/coinbase-pro-node/blob/48475f6/src/order/OrderAPI.ts#L77)
+[order/OrderAPI.ts:77](https://github.com/bennycode/coinbase-pro-node/blob/9734468/src/order/OrderAPI.ts#L77)
 
----
+___
 
 ### NewOrder
 
@@ -135,9 +135,9 @@
 
 #### Defined in
 
-[order/OrderAPI.ts:57](https://github.com/bennycode/coinbase-pro-node/blob/48475f6/src/order/OrderAPI.ts#L57)
+[order/OrderAPI.ts:57](https://github.com/bennycode/coinbase-pro-node/blob/9734468/src/order/OrderAPI.ts#L57)
 
----
+___
 
 ### Order
 
@@ -145,9 +145,9 @@
 
 #### Defined in
 
-[order/OrderAPI.ts:106](https://github.com/bennycode/coinbase-pro-node/blob/48475f6/src/order/OrderAPI.ts#L106)
+[order/OrderAPI.ts:106](https://github.com/bennycode/coinbase-pro-node/blob/9734468/src/order/OrderAPI.ts#L106)
 
----
+___
 
 ### OrderBook
 
@@ -155,24 +155,24 @@
 
 #### Defined in
 
-[product/ProductAPI.ts:133](https://github.com/bennycode/coinbase-pro-node/blob/48475f6/src/product/ProductAPI.ts#L133)
+[product/ProductAPI.ts:133](https://github.com/bennycode/coinbase-pro-node/blob/9734468/src/product/ProductAPI.ts#L133)
 
----
+___
 
 ### WebSocketLastMatchMessage
 
-Ƭ **WebSocketLastMatchMessage**: `Omit`<[`WebSocketMatchMessage`](interfaces/WebSocketMatchMessage.md), `"type"`\> & { `type`: [`LAST_MATCH`](enums/WebSocketResponseType.md#last_match) }
+Ƭ **WebSocketLastMatchMessage**: `Omit`<[`WebSocketMatchMessage`](interfaces/WebSocketMatchMessage.md), ``"type"``\> & { `type`: [`LAST_MATCH`](enums/WebSocketResponseType.md#last_match)  }
 
 #### Defined in
 
-[client/WebSocketClient.ts:186](https://github.com/bennycode/coinbase-pro-node/blob/48475f6/src/client/WebSocketClient.ts#L186)
+[client/WebSocketClient.ts:186](https://github.com/bennycode/coinbase-pro-node/blob/9734468/src/client/WebSocketClient.ts#L186)
 
----
+___
 
 ### WebSocketResponse
 
-Ƭ **WebSocketResponse**: `WebSocketMessage` & { `type`: [`WebSocketResponseType`](enums/WebSocketResponseType.md) }
+Ƭ **WebSocketResponse**: `WebSocketMessage` & { `type`: [`WebSocketResponseType`](enums/WebSocketResponseType.md)  }
 
 #### Defined in
 
-[client/WebSocketClient.ts:123](https://github.com/bennycode/coinbase-pro-node/blob/48475f6/src/client/WebSocketClient.ts#L123)
+[client/WebSocketClient.ts:123](https://github.com/bennycode/coinbase-pro-node/blob/9734468/src/client/WebSocketClient.ts#L123)

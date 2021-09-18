@@ -19,9 +19,9 @@
 
 #### Defined in
 
-[profile/ProfileAPI.ts:16](https://github.com/bennycode/coinbase-pro-node/blob/48475f6/src/profile/ProfileAPI.ts#L16)
+[profile/ProfileAPI.ts:16](https://github.com/bennycode/coinbase-pro-node/blob/9734468/src/profile/ProfileAPI.ts#L16)
 
----
+___
 
 ### currency
 
@@ -29,9 +29,9 @@
 
 #### Defined in
 
-[profile/ProfileAPI.ts:17](https://github.com/bennycode/coinbase-pro-node/blob/48475f6/src/profile/ProfileAPI.ts#L17)
+[profile/ProfileAPI.ts:17](https://github.com/bennycode/coinbase-pro-node/blob/9734468/src/profile/ProfileAPI.ts#L17)
 
----
+___
 
 ### from
 
@@ -39,9 +39,9 @@
 
 #### Defined in
 
-[profile/ProfileAPI.ts:18](https://github.com/bennycode/coinbase-pro-node/blob/48475f6/src/profile/ProfileAPI.ts#L18)
+[profile/ProfileAPI.ts:18](https://github.com/bennycode/coinbase-pro-node/blob/9734468/src/profile/ProfileAPI.ts#L18)
 
----
+___
 
 ### to
 
@@ -49,4 +49,4 @@
 
 #### Defined in
 
-[profile/ProfileAPI.ts:19](https://github.com/bennycode/coinbase-pro-node/blob/48475f6/src/profile/ProfileAPI.ts#L19)
+[profile/ProfileAPI.ts:19](https://github.com/bennycode/coinbase-pro-node/blob/9734468/src/profile/ProfileAPI.ts#L19)

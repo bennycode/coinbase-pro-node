@@ -6,83 +6,83 @@
 
 ### Properties
 
-- [account_address](WireDepositInformation.md#account_address)
-- [account_name](WireDepositInformation.md#account_name)
-- [account_number](WireDepositInformation.md#account_number)
-- [bank_address](WireDepositInformation.md#bank_address)
-- [bank_country](WireDepositInformation.md#bank_country)
-- [bank_name](WireDepositInformation.md#bank_name)
+- [account\_address](WireDepositInformation.md#account_address)
+- [account\_name](WireDepositInformation.md#account_name)
+- [account\_number](WireDepositInformation.md#account_number)
+- [bank\_address](WireDepositInformation.md#bank_address)
+- [bank\_country](WireDepositInformation.md#bank_country)
+- [bank\_name](WireDepositInformation.md#bank_name)
 - [reference](WireDepositInformation.md#reference)
-- [routing_number](WireDepositInformation.md#routing_number)
+- [routing\_number](WireDepositInformation.md#routing_number)
 
 ## Properties
 
-### account_address
+### account\_address
 
-• **account_address**: `string`
-
-#### Defined in
-
-[account/AccountAPI.ts:61](https://github.com/bennycode/coinbase-pro-node/blob/48475f6/src/account/AccountAPI.ts#L61)
-
----
-
-### account_name
-
-• **account_name**: `string`
+• **account\_address**: `string`
 
 #### Defined in
 
-[account/AccountAPI.ts:62](https://github.com/bennycode/coinbase-pro-node/blob/48475f6/src/account/AccountAPI.ts#L62)
+[account/AccountAPI.ts:61](https://github.com/bennycode/coinbase-pro-node/blob/9734468/src/account/AccountAPI.ts#L61)
 
----
+___
 
-### account_number
+### account\_name
 
-• **account_number**: `string`
-
-#### Defined in
-
-[account/AccountAPI.ts:63](https://github.com/bennycode/coinbase-pro-node/blob/48475f6/src/account/AccountAPI.ts#L63)
-
----
-
-### bank_address
-
-• **bank_address**: `string`
+• **account\_name**: `string`
 
 #### Defined in
 
-[account/AccountAPI.ts:64](https://github.com/bennycode/coinbase-pro-node/blob/48475f6/src/account/AccountAPI.ts#L64)
+[account/AccountAPI.ts:62](https://github.com/bennycode/coinbase-pro-node/blob/9734468/src/account/AccountAPI.ts#L62)
 
----
+___
 
-### bank_country
+### account\_number
 
-• **bank_country**: `Object`
+• **account\_number**: `string`
+
+#### Defined in
+
+[account/AccountAPI.ts:63](https://github.com/bennycode/coinbase-pro-node/blob/9734468/src/account/AccountAPI.ts#L63)
+
+___
+
+### bank\_address
+
+• **bank\_address**: `string`
+
+#### Defined in
+
+[account/AccountAPI.ts:64](https://github.com/bennycode/coinbase-pro-node/blob/9734468/src/account/AccountAPI.ts#L64)
+
+___
+
+### bank\_country
+
+• **bank\_country**: `Object`
 
 #### Type declaration
 
-| Name   | Type     |
-| :----- | :------- |
+| Name | Type |
+| :------ | :------ |
 | `code` | `string` |
 | `name` | `string` |
 
 #### Defined in
 
-[account/AccountAPI.ts:65](https://github.com/bennycode/coinbase-pro-node/blob/48475f6/src/account/AccountAPI.ts#L65)
+[account/AccountAPI.ts:65](https://github.com/bennycode/coinbase-pro-node/blob/9734468/src/account/AccountAPI.ts#L65)
 
----
+___
 
-### bank_name
+### bank\_name
 
-• **bank_name**: `string`
+• **bank\_name**: `string`
 
 #### Defined in
 
-[account/AccountAPI.ts:69](https://github.com/bennycode/coinbase-pro-node/blob/48475f6/src/account/AccountAPI.ts#L69)
+[account/AccountAPI.ts:69](https://github.com/bennycode/coinbase-pro-node/blob/9734468/src/account/AccountAPI.ts#L69)
 
----
+___
 
 ### reference
 
@@ -90,14 +90,14 @@
 
 #### Defined in
 
-[account/AccountAPI.ts:70](https://github.com/bennycode/coinbase-pro-node/blob/48475f6/src/account/AccountAPI.ts#L70)
+[account/AccountAPI.ts:70](https://github.com/bennycode/coinbase-pro-node/blob/9734468/src/account/AccountAPI.ts#L70)
 
----
+___
 
-### routing_number
+### routing\_number
 
-• **routing_number**: `string`
+• **routing\_number**: `string`
 
 #### Defined in
 
-[account/AccountAPI.ts:71](https://github.com/bennycode/coinbase-pro-node/blob/48475f6/src/account/AccountAPI.ts#L71)
+[account/AccountAPI.ts:71](https://github.com/bennycode/coinbase-pro-node/blob/9734468/src/account/AccountAPI.ts#L71)

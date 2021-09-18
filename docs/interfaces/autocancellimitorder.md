@@ -12,33 +12,33 @@
 
 ### Properties
 
-- [cancel_after](AutoCancelLimitOrder.md#cancel_after)
-- [client_oid](AutoCancelLimitOrder.md#client_oid)
+- [cancel\_after](AutoCancelLimitOrder.md#cancel_after)
+- [client\_oid](AutoCancelLimitOrder.md#client_oid)
 - [price](AutoCancelLimitOrder.md#price)
-- [product_id](AutoCancelLimitOrder.md#product_id)
+- [product\_id](AutoCancelLimitOrder.md#product_id)
 - [side](AutoCancelLimitOrder.md#side)
 - [size](AutoCancelLimitOrder.md#size)
 - [stop](AutoCancelLimitOrder.md#stop)
-- [stop_price](AutoCancelLimitOrder.md#stop_price)
+- [stop\_price](AutoCancelLimitOrder.md#stop_price)
 - [stp](AutoCancelLimitOrder.md#stp)
-- [time_in_force](AutoCancelLimitOrder.md#time_in_force)
+- [time\_in\_force](AutoCancelLimitOrder.md#time_in_force)
 - [type](AutoCancelLimitOrder.md#type)
 
 ## Properties
 
-### cancel_after
+### cancel\_after
 
-• **cancel_after**: [`CancelOrderPeriod`](../enums/CancelOrderPeriod.md)
+• **cancel\_after**: [`CancelOrderPeriod`](../enums/CancelOrderPeriod.md)
 
 #### Defined in
 
-[order/OrderAPI.ts:60](https://github.com/bennycode/coinbase-pro-node/blob/48475f6/src/order/OrderAPI.ts#L60)
+[order/OrderAPI.ts:60](https://github.com/bennycode/coinbase-pro-node/blob/9734468/src/order/OrderAPI.ts#L60)
 
----
+___
 
-### client_oid
+### client\_oid
 
-• `Optional` **client_oid**: `string`
+• `Optional` **client\_oid**: `string`
 
 #### Inherited from
 
@@ -46,9 +46,9 @@
 
 #### Defined in
 
-[order/OrderAPI.ts:32](https://github.com/bennycode/coinbase-pro-node/blob/48475f6/src/order/OrderAPI.ts#L32)
+[order/OrderAPI.ts:32](https://github.com/bennycode/coinbase-pro-node/blob/9734468/src/order/OrderAPI.ts#L32)
 
----
+___
 
 ### price
 
@@ -60,13 +60,13 @@
 
 #### Defined in
 
-[order/OrderAPI.ts:70](https://github.com/bennycode/coinbase-pro-node/blob/48475f6/src/order/OrderAPI.ts#L70)
+[order/OrderAPI.ts:70](https://github.com/bennycode/coinbase-pro-node/blob/9734468/src/order/OrderAPI.ts#L70)
 
----
+___
 
-### product_id
+### product\_id
 
-• **product_id**: `string`
+• **product\_id**: `string`
 
 #### Inherited from
 
@@ -74,9 +74,9 @@
 
 #### Defined in
 
-[order/OrderAPI.ts:33](https://github.com/bennycode/coinbase-pro-node/blob/48475f6/src/order/OrderAPI.ts#L33)
+[order/OrderAPI.ts:33](https://github.com/bennycode/coinbase-pro-node/blob/9734468/src/order/OrderAPI.ts#L33)
 
----
+___
 
 ### side
 
@@ -88,9 +88,9 @@
 
 #### Defined in
 
-[order/OrderAPI.ts:34](https://github.com/bennycode/coinbase-pro-node/blob/48475f6/src/order/OrderAPI.ts#L34)
+[order/OrderAPI.ts:34](https://github.com/bennycode/coinbase-pro-node/blob/9734468/src/order/OrderAPI.ts#L34)
 
----
+___
 
 ### size
 
@@ -102,13 +102,13 @@
 
 #### Defined in
 
-[order/OrderAPI.ts:71](https://github.com/bennycode/coinbase-pro-node/blob/48475f6/src/order/OrderAPI.ts#L71)
+[order/OrderAPI.ts:71](https://github.com/bennycode/coinbase-pro-node/blob/9734468/src/order/OrderAPI.ts#L71)
 
----
+___
 
 ### stop
 
-• `Optional` **stop**: `"loss"` \| `"entry"`
+• `Optional` **stop**: ``"loss"`` \| ``"entry"``
 
 #### Inherited from
 
@@ -116,13 +116,13 @@
 
 #### Defined in
 
-[order/OrderAPI.ts:35](https://github.com/bennycode/coinbase-pro-node/blob/48475f6/src/order/OrderAPI.ts#L35)
+[order/OrderAPI.ts:35](https://github.com/bennycode/coinbase-pro-node/blob/9734468/src/order/OrderAPI.ts#L35)
 
----
+___
 
-### stop_price
+### stop\_price
 
-• `Optional` **stop_price**: `string`
+• `Optional` **stop\_price**: `string`
 
 #### Inherited from
 
@@ -130,9 +130,9 @@
 
 #### Defined in
 
-[order/OrderAPI.ts:36](https://github.com/bennycode/coinbase-pro-node/blob/48475f6/src/order/OrderAPI.ts#L36)
+[order/OrderAPI.ts:36](https://github.com/bennycode/coinbase-pro-node/blob/9734468/src/order/OrderAPI.ts#L36)
 
----
+___
 
 ### stp
 
@@ -144,13 +144,13 @@
 
 #### Defined in
 
-[order/OrderAPI.ts:37](https://github.com/bennycode/coinbase-pro-node/blob/48475f6/src/order/OrderAPI.ts#L37)
+[order/OrderAPI.ts:37](https://github.com/bennycode/coinbase-pro-node/blob/9734468/src/order/OrderAPI.ts#L37)
 
----
+___
 
-### time_in_force
+### time\_in\_force
 
-• **time_in_force**: [`GOOD_TILL_TIME`](../enums/TimeInForce.md#good_till_time)
+• **time\_in\_force**: [`GOOD_TILL_TIME`](../enums/TimeInForce.md#good_till_time)
 
 Default is 'GTC'.
 
@@ -160,9 +160,9 @@ Default is 'GTC'.
 
 #### Defined in
 
-[order/OrderAPI.ts:61](https://github.com/bennycode/coinbase-pro-node/blob/48475f6/src/order/OrderAPI.ts#L61)
+[order/OrderAPI.ts:61](https://github.com/bennycode/coinbase-pro-node/blob/9734468/src/order/OrderAPI.ts#L61)
 
----
+___
 
 ### type
 
@@ -174,4 +174,4 @@ Default is 'GTC'.
 
 #### Defined in
 
-[order/OrderAPI.ts:74](https://github.com/bennycode/coinbase-pro-node/blob/48475f6/src/order/OrderAPI.ts#L74)
+[order/OrderAPI.ts:74](https://github.com/bennycode/coinbase-pro-node/blob/9734468/src/order/OrderAPI.ts#L74)

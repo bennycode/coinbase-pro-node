@@ -25,13 +25,13 @@
 
 #### Parameters
 
-| Name      | Type     |
-| :-------- | :------- |
+| Name | Type |
+| :------ | :------ |
 | `baseURL` | `string` |
 
 #### Defined in
 
-[time/TimeAPI.ts:15](https://github.com/bennycode/coinbase-pro-node/blob/48475f6/src/time/TimeAPI.ts#L15)
+[time/TimeAPI.ts:15](https://github.com/bennycode/coinbase-pro-node/blob/9734468/src/time/TimeAPI.ts#L15)
 
 ## Properties
 
@@ -41,13 +41,13 @@
 
 #### Type declaration
 
-| Name   | Type     |
-| :----- | :------- |
+| Name | Type |
+| :------ | :------ |
 | `TIME` | `string` |
 
 #### Defined in
 
-[time/TimeAPI.ts:11](https://github.com/bennycode/coinbase-pro-node/blob/48475f6/src/time/TimeAPI.ts#L11)
+[time/TimeAPI.ts:11](https://github.com/bennycode/coinbase-pro-node/blob/9734468/src/time/TimeAPI.ts#L11)
 
 ## Methods
 
@@ -59,8 +59,8 @@ Get the absolute difference between server time and local time.
 
 #### Parameters
 
-| Name   | Type                                                |
-| :----- | :-------------------------------------------------- |
+| Name | Type |
+| :------ | :------ |
 | `time` | `string` \| [`TimeSkew`](../interfaces/TimeSkew.md) |
 
 #### Returns
@@ -69,15 +69,16 @@ Get the absolute difference between server time and local time.
 
 #### Defined in
 
-[time/TimeAPI.ts:34](https://github.com/bennycode/coinbase-pro-node/blob/48475f6/src/time/TimeAPI.ts#L34)
+[time/TimeAPI.ts:34](https://github.com/bennycode/coinbase-pro-node/blob/9734468/src/time/TimeAPI.ts#L34)
 
----
+___
 
 ### getTime
 
 ▸ **getTime**(): `Promise`<[`TimeSkew`](../interfaces/TimeSkew.md)\>
 
-Get the server time from Coinbase Pro API. It has been reported that sometimes the return value is a string: https://github.com/bennycode/coinbase-pro-node/issues/354
+Get the server time from Coinbase Pro API. It has been reported that sometimes the return value is a string:
+https://github.com/bennycode/coinbase-pro-node/issues/354
 
 **`see`** https://docs.pro.coinbase.com/#time
 
@@ -87,4 +88,4 @@ Get the server time from Coinbase Pro API. It has been reported that sometimes t
 
 #### Defined in
 
-[time/TimeAPI.ts:23](https://github.com/bennycode/coinbase-pro-node/blob/48475f6/src/time/TimeAPI.ts#L23)
+[time/TimeAPI.ts:23](https://github.com/bennycode/coinbase-pro-node/blob/9734468/src/time/TimeAPI.ts#L23)

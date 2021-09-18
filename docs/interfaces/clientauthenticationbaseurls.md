@@ -29,9 +29,9 @@
 
 #### Defined in
 
-[CoinbasePro.ts:12](https://github.com/bennycode/coinbase-pro-node/blob/48475f6/src/CoinbasePro.ts#L12)
+[CoinbasePro.ts:12](https://github.com/bennycode/coinbase-pro-node/blob/9734468/src/CoinbasePro.ts#L12)
 
----
+___
 
 ### apiSecret
 
@@ -43,9 +43,9 @@
 
 #### Defined in
 
-[CoinbasePro.ts:13](https://github.com/bennycode/coinbase-pro-node/blob/48475f6/src/CoinbasePro.ts#L13)
+[CoinbasePro.ts:13](https://github.com/bennycode/coinbase-pro-node/blob/9734468/src/CoinbasePro.ts#L13)
 
----
+___
 
 ### passphrase
 
@@ -57,9 +57,9 @@
 
 #### Defined in
 
-[CoinbasePro.ts:14](https://github.com/bennycode/coinbase-pro-node/blob/48475f6/src/CoinbasePro.ts#L14)
+[CoinbasePro.ts:14](https://github.com/bennycode/coinbase-pro-node/blob/9734468/src/CoinbasePro.ts#L14)
 
----
+___
 
 ### useSandbox
 
@@ -67,4 +67,4 @@
 
 #### Defined in
 
-[CoinbasePro.ts:15](https://github.com/bennycode/coinbase-pro-node/blob/48475f6/src/CoinbasePro.ts#L15)
+[CoinbasePro.ts:15](https://github.com/bennycode/coinbase-pro-node/blob/9734468/src/CoinbasePro.ts#L15)

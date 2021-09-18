@@ -6,25 +6,25 @@
 
 ### Properties
 
-- [account_id](Hold.md#account_id)
+- [account\_id](Hold.md#account_id)
 - [amount](Hold.md#amount)
-- [created_at](Hold.md#created_at)
+- [created\_at](Hold.md#created_at)
 - [id](Hold.md#id)
 - [ref](Hold.md#ref)
 - [type](Hold.md#type)
-- [updated_at](Hold.md#updated_at)
+- [updated\_at](Hold.md#updated_at)
 
 ## Properties
 
-### account_id
+### account\_id
 
-• **account_id**: `string`
+• **account\_id**: `string`
 
 #### Defined in
 
-[account/AccountAPI.ts:29](https://github.com/bennycode/coinbase-pro-node/blob/48475f6/src/account/AccountAPI.ts#L29)
+[account/AccountAPI.ts:29](https://github.com/bennycode/coinbase-pro-node/blob/9734468/src/account/AccountAPI.ts#L29)
 
----
+___
 
 ### amount
 
@@ -32,19 +32,19 @@
 
 #### Defined in
 
-[account/AccountAPI.ts:30](https://github.com/bennycode/coinbase-pro-node/blob/48475f6/src/account/AccountAPI.ts#L30)
+[account/AccountAPI.ts:30](https://github.com/bennycode/coinbase-pro-node/blob/9734468/src/account/AccountAPI.ts#L30)
 
----
+___
 
-### created_at
+### created\_at
 
-• **created_at**: `string`
+• **created\_at**: `string`
 
 #### Defined in
 
-[account/AccountAPI.ts:31](https://github.com/bennycode/coinbase-pro-node/blob/48475f6/src/account/AccountAPI.ts#L31)
+[account/AccountAPI.ts:31](https://github.com/bennycode/coinbase-pro-node/blob/9734468/src/account/AccountAPI.ts#L31)
 
----
+___
 
 ### id
 
@@ -52,9 +52,9 @@
 
 #### Defined in
 
-[account/AccountAPI.ts:32](https://github.com/bennycode/coinbase-pro-node/blob/48475f6/src/account/AccountAPI.ts#L32)
+[account/AccountAPI.ts:32](https://github.com/bennycode/coinbase-pro-node/blob/9734468/src/account/AccountAPI.ts#L32)
 
----
+___
 
 ### ref
 
@@ -62,9 +62,9 @@
 
 #### Defined in
 
-[account/AccountAPI.ts:33](https://github.com/bennycode/coinbase-pro-node/blob/48475f6/src/account/AccountAPI.ts#L33)
+[account/AccountAPI.ts:33](https://github.com/bennycode/coinbase-pro-node/blob/9734468/src/account/AccountAPI.ts#L33)
 
----
+___
 
 ### type
 
@@ -72,14 +72,14 @@
 
 #### Defined in
 
-[account/AccountAPI.ts:34](https://github.com/bennycode/coinbase-pro-node/blob/48475f6/src/account/AccountAPI.ts#L34)
+[account/AccountAPI.ts:34](https://github.com/bennycode/coinbase-pro-node/blob/9734468/src/account/AccountAPI.ts#L34)
 
----
+___
 
-### updated_at
+### updated\_at
 
-• **updated_at**: `string`
+• **updated\_at**: `string`
 
 #### Defined in
 
-[account/AccountAPI.ts:35](https://github.com/bennycode/coinbase-pro-node/blob/48475f6/src/account/AccountAPI.ts#L35)
+[account/AccountAPI.ts:35](https://github.com/bennycode/coinbase-pro-node/blob/9734468/src/account/AccountAPI.ts#L35)

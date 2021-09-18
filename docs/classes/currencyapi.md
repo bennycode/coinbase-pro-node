@@ -24,13 +24,13 @@
 
 #### Parameters
 
-| Name        | Type            |
-| :---------- | :-------------- |
+| Name | Type |
+| :------ | :------ |
 | `apiClient` | `AxiosInstance` |
 
 #### Defined in
 
-[currency/CurrencyAPI.ts:34](https://github.com/bennycode/coinbase-pro-node/blob/48475f6/src/currency/CurrencyAPI.ts#L34)
+[currency/CurrencyAPI.ts:34](https://github.com/bennycode/coinbase-pro-node/blob/9734468/src/currency/CurrencyAPI.ts#L34)
 
 ## Properties
 
@@ -40,13 +40,13 @@
 
 #### Type declaration
 
-| Name         | Type     |
-| :----------- | :------- |
+| Name | Type |
+| :------ | :------ |
 | `CURRENCIES` | `string` |
 
 #### Defined in
 
-[currency/CurrencyAPI.ts:30](https://github.com/bennycode/coinbase-pro-node/blob/48475f6/src/currency/CurrencyAPI.ts#L30)
+[currency/CurrencyAPI.ts:30](https://github.com/bennycode/coinbase-pro-node/blob/9734468/src/currency/CurrencyAPI.ts#L30)
 
 ## Methods
 
@@ -54,7 +54,9 @@
 
 ▸ **listCurrencies**(): `Promise`<[`Currency`](../interfaces/Currency.md)[]\>
 
-List known currencies. Currency codes will conform to the ISO 4217 standard where possible. Currencies which have or had no representation in ISO 4217 may use a custom code.
+List known currencies.
+Currency codes will conform to the ISO 4217 standard where possible.
+Currencies which have or had no representation in ISO 4217 may use a custom code.
 
 **`see`** https://docs.pro.coinbase.com/#get-currencies
 
@@ -64,4 +66,4 @@ List known currencies. Currency codes will conform to the ISO 4217 standard wher
 
 #### Defined in
 
-[currency/CurrencyAPI.ts:43](https://github.com/bennycode/coinbase-pro-node/blob/48475f6/src/currency/CurrencyAPI.ts#L43)
+[currency/CurrencyAPI.ts:43](https://github.com/bennycode/coinbase-pro-node/blob/9734468/src/currency/CurrencyAPI.ts#L43)

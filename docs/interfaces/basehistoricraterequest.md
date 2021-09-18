@@ -24,4 +24,4 @@ Desired time slice in seconds.
 
 #### Defined in
 
-[product/ProductAPI.ts:72](https://github.com/bennycode/coinbase-pro-node/blob/48475f6/src/product/ProductAPI.ts#L72)
+[product/ProductAPI.ts:72](https://github.com/bennycode/coinbase-pro-node/blob/9734468/src/product/ProductAPI.ts#L72)
