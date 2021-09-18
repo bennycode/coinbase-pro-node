@@ -235,7 +235,7 @@ export class WebSocketClient extends EventEmitter {
   };
 
   private readonly baseURL: string;
-  public readonly socket: ReconnectingWebSocket | undefined;
+  public socket: ReconnectingWebSocket | undefined;
 
   private pingInterval?: NodeJS.Timeout;
   private pongTimeout?: NodeJS.Timeout;
