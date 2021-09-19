@@ -208,13 +208,14 @@ export interface WebSocketL2UpdateMessage {
 
 export interface WebSocketFullReceivedMessage extends WebSocketUserMessage {
   client_oid: string;
+  funds?: string;
   order_id: string;
-  order_type: string;
-  price: string;
+  order_type: 'limit' | 'market';
+  price?: string;
   product_id: string;
   sequence: number;
   side: OrderSide;
-  size: string;
+  size?: string;
   time: ISO_8601_MS_UTC;
   type: WebSocketResponseType.FULL_RECEIVED;
 }
