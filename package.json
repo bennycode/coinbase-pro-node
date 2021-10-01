@@ -7,7 +7,7 @@
     "axios": "0.21.4",
     "axios-retry": "3.2.0",
     "buffer": "6.0.3",
-    "bufferutil": "4.0.3",
+    "bufferutil": "4.0.4",
     "reconnecting-websocket": "4.4.0",
     "utf-8-validate": "5.0.6",
     "ws": "7.5.5"
