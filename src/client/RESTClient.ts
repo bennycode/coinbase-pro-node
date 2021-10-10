@@ -98,7 +98,7 @@ export class RESTClient extends EventEmitter {
         'CB-ACCESS-KEY': signedRequest.key,
         'CB-ACCESS-PASSPHRASE': signedRequest.passphrase,
         'CB-ACCESS-SIGN': signedRequest.signature,
-        'CB-ACCESS-TIMESTAMP': signedRequest.timestamp,
+        'CB-ACCESS-TIMESTAMP': `${signedRequest.timestamp}`,
       };
 
       return config;
