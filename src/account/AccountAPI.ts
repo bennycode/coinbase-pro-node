@@ -164,7 +164,7 @@ export class AccountAPI {
    */
   async listCoinbaseAccounts(): Promise<CoinbaseAccount[]> {
     const resource = AccountAPI.URL.COINBASE_ACCOUNT;
-    const response = await this.apiClient.get(resource);
+    const response = await this.apiClient.get<CoinbaseAccount[]>(resource);
     return response.data;
   }
 }

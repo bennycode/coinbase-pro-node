@@ -121,7 +121,7 @@ export class OrderAPI {
    */
   async cancelOpenOrders(productId?: string): Promise<string[]> {
     const resource = OrderAPI.URL.ORDERS;
-    const response = await this.apiClient.delete(resource, {
+    const response = await this.apiClient.delete<string[]>(resource, {
       params: productId ? {product_id: productId} : {},
     });
     return response.data;
@@ -137,7 +137,7 @@ export class OrderAPI {
    */
   async cancelOrder(orderId: string, productId?: string): Promise<string> {
     const resource = `${OrderAPI.URL.ORDERS}/${orderId}`;
-    const response = await this.apiClient.delete(resource, {
+    const response = await this.apiClient.delete<string>(resource, {
       params: productId ? {product_id: productId} : {},
     });
     return response.data;

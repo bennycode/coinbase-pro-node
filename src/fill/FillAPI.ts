@@ -59,7 +59,7 @@ export class FillAPI {
    */
   async getFillsByProductId(productId: string, pagination?: Pagination): Promise<PaginatedData<Fill>> {
     const resource = FillAPI.URL.FILLS;
-    const response = await this.apiClient.get(resource, {params: {product_id: productId, ...pagination}});
+    const response = await this.apiClient.get<Fill[]>(resource, {params: {product_id: productId, ...pagination}});
     return {
       data: response.data,
       pagination: {

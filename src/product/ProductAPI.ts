@@ -344,7 +344,7 @@ export class ProductAPI {
     params: OrderBookRequestParameters = {level: OrderBookLevel.ONLY_BEST_BID_AND_ASK}
   ): Promise<OrderBook> {
     const resource = `${ProductAPI.URL.PRODUCTS}/${productId}/book`;
-    let response: AxiosResponse;
+    let response: AxiosResponse<OrderBookLevel1 | OrderBookLevel2 | OrderBookLevel3>;
 
     switch (params.level) {
       case OrderBookLevel.TOP_50_BIDS_AND_ASKS:

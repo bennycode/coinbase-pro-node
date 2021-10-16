@@ -30,7 +30,7 @@ export class FeeAPI {
    */
   async getCurrentFees(): Promise<FeeTier> {
     const resource = FeeAPI.URL.FEES;
-    const response = await this.apiClient.get(resource);
+    const response = await this.apiClient.get<FeeTier>(resource);
     return response.data;
   }
 }
