@@ -8,6 +8,7 @@ export function gotRateLimited(error: AxiosError): boolean {
   return error.response?.status === 429;
 }
 
-export function getErrorMessage(error: AxiosError<{message: string}>): string {
-  return error.response?.data.message || error.message;
+export function getErrorMessage(error: AxiosError): string {
+  const responseWithErrorMessage = error as AxiosError<{message: string}>;
+  return responseWithErrorMessage.response?.data.message || error.message;
 }

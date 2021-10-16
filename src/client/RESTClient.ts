@@ -1,4 +1,11 @@
-import axios, {AxiosError, AxiosInstance, AxiosInterceptorManager, AxiosRequestConfig, AxiosResponse} from 'axios';
+import axios, {
+  AxiosDefaults,
+  AxiosError,
+  AxiosInstance,
+  AxiosInterceptorManager,
+  AxiosRequestConfig,
+  AxiosResponse,
+} from 'axios';
 import {AccountAPI} from '../account';
 import {RequestSetup, SignedRequest} from '../auth/RequestSigner';
 import {OrderAPI} from '../order';
@@ -26,7 +33,7 @@ export interface RESTClient {
 
 // eslint-disable-next-line no-redeclare
 export class RESTClient extends EventEmitter {
-  get defaults(): AxiosRequestConfig {
+  get defaults(): AxiosDefaults {
     return this.httpClient.defaults;
   }
 
