@@ -169,6 +169,13 @@
   resolved "https://registry.npmjs.org/@babel/parser/-/parser-7.14.4.tgz#a5c560d6db6cd8e6ed342368dea8039232cbab18"
   integrity sha512-ArliyUsWDUqEGfWcmzpGUzNfLxTdTp6WU4IuP6QFSp9gGfWS6boxFCkJSJ/L4+RG8z/FnIU3WxCk6hPL9SSWeA==
 
+"@babel/runtime@^7.15.4":
+  version "7.16.0"
+  resolved "https://registry.npmjs.org/@babel/runtime/-/runtime-7.16.0.tgz#e27b977f2e2088ba24748bf99b5e1dece64e4f0b"
+  integrity sha512-Nht8L0O8YCktmsDV6FqFue7vQLRx3Hb0B37lS5y0jDRqRxlBG4wIJHnf9/bgSE2UyipKFA01YtS+npRdTWBUyw==
+  dependencies:
+    regenerator-runtime "^0.13.4"
+
 "@babel/template@^7.12.13":
   version "7.12.13"
   resolved "https://registry.npmjs.org/@babel/template/-/template-7.12.13.tgz#530265be8a2589dbb37523844c5bcb55947fb327"
@@ -579,12 +586,13 @@ astral-regex@^2.0.0:
   resolved "https://registry.npmjs.org/astral-regex/-/astral-regex-2.0.0.tgz#483143c567aeed4785759c0865786dc77d7d2e31"
   integrity sha512-Z7tMw1ytTXt5jqMcOP+OQteU1VuNK9Y02uuJtKQ1Sv69jXQKKg5cibLwGJow8yzZP+eAc18EmLGPal0bp36rvQ==
 
-axios-retry@3.2.0:
-  version "3.2.0"
-  resolved "https://registry.npmjs.org/axios-retry/-/axios-retry-3.2.0.tgz#eb48e72f90b177fde62329b2896aa8476cfb90ba"
-  integrity sha512-RK2cLMgIsAQBDhlIsJR5dOhODPigvel18XUv1dDXW+4k1FzebyfRk+C+orot6WPZOYFKSfhLwHPwVmTVOODQ5w==
+axios-retry@3.2.4:
+  version "3.2.4"
+  resolved "https://registry.npmjs.org/axios-retry/-/axios-retry-3.2.4.tgz#f447a53c3456f5bfeca18f20c3a3272207d082ae"
+  integrity sha512-Co3UXiv4npi6lM963mfnuH90/YFLKWWDmoBYfxkHT5xtkSSWNqK9zdG3fw5/CP/dsoKB5aMMJCsgab+tp1OxLQ==
   dependencies:
-    is-retry-allowed "^1.1.0"
+    "@babel/runtime" "^7.15.4"
+    is-retry-allowed "^2.2.0"
 
 axios@0.24.0:
   version "0.24.0"
@@ -1475,10 +1483,10 @@ is-regexp@^1.0.0:
   resolved "https://registry.npmjs.org/is-regexp/-/is-regexp-1.0.0.tgz#fd2d883545c46bac5a633e7b9a09e87fa2cb5069"
   integrity sha1-/S2INUXEa6xaYz57mgnof6LLUGk=
 
-is-retry-allowed@^1.1.0:
-  version "1.2.0"
-  resolved "https://registry.npmjs.org/is-retry-allowed/-/is-retry-allowed-1.2.0.tgz#d778488bd0a4666a3be8a1482b9f2baafedea8b4"
-  integrity sha512-RUbUeKwvm3XG2VYamhJL1xFktgjvPzL0Hq8C+6yrWIswDy3BIXGqCxhxkc30N9jqK311gVU137K8Ei55/zVJRg==
+is-retry-allowed@^2.2.0:
+  version "2.2.0"
+  resolved "https://registry.npmjs.org/is-retry-allowed/-/is-retry-allowed-2.2.0.tgz#88f34cbd236e043e71b6932d09b0c65fb7b4d71d"
+  integrity sha512-XVm7LOeLpTW4jV19QSH38vkswxoLud8sQ57YwJVTPWdiaI9I8keEhGFpBlslyVsgdQy4Opg8QOLb8YRgsyZiQg==
 
 is-stream@^2.0.0:
   version "2.0.0"
@@ -2101,6 +2109,11 @@ reconnecting-websocket@4.4.0:
   version "4.4.0"
   resolved "https://registry.npmjs.org/reconnecting-websocket/-/reconnecting-websocket-4.4.0.tgz#3b0e5b96ef119e78a03135865b8bb0af1b948783"
   integrity sha512-D2E33ceRPga0NvTDhJmphEgJ7FUYF0v4lr1ki0csq06OdlxKfugGzN0dSkxM/NfqCxYELK4KcaTOUOjTV6Dcng==
+
+regenerator-runtime@^0.13.4:
+  version "0.13.9"
+  resolved "https://registry.npmjs.org/regenerator-runtime/-/regenerator-runtime-0.13.9.tgz#8925742a98ffd90814988d7566ad30ca3b263b52"
+  integrity sha512-p3VT+cOEgxFsRRA9X4lkI1E+k2/CtnKtU4gcxyaCUreilL/vqI6CdZ3wxVUx3UOUg+gnUOQQcRI7BmSI656MYA==
 
 regexpp@^3.1.0:
   version "3.1.0"
