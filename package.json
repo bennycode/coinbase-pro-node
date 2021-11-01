@@ -25,7 +25,7 @@
     "eslint-plugin-sort-keys-fix": "1.1.2",
     "eslint-plugin-typescript-sort-keys": "2.0.0",
     "generate-changelog": "1.8.0",
-    "husky": "7.0.2",
+    "husky": "7.0.4",
     "jasmine": "3.10.0",
     "lint-staged": "11.2.2",
     "nock": "13.1.4",
