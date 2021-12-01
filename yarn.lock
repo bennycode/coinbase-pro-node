@@ -305,10 +305,10 @@
   resolved "https://registry.npmjs.org/@tsconfig/node16/-/node16-1.0.2.tgz#423c77877d0569db20e1fc80885ac4118314010e"
   integrity sha512-eZxlbI8GZscaGS7kkc/trHTT5xgrjH3/1n2JDwusC9iahPKWMRvRjJSAN5mCXviuTGQ/lHnhvv8Q1YTpnfz9gA==
 
-"@types/jasmine@3.10.1":
-  version "3.10.1"
-  resolved "https://registry.npmjs.org/@types/jasmine/-/jasmine-3.10.1.tgz#9a7ceab2e539503f70a7e6a7028c70171aca2754"
-  integrity sha512-So26woGjM6F9b2julbJlXdcPdyhwteZzEX2EbFmreuJBamPVVdp6w4djywUG9TmcwjiC+ECAe+RSSBgYEOgEqQ==
+"@types/jasmine@3.10.2":
+  version "3.10.2"
+  resolved "https://registry.npmjs.org/@types/jasmine/-/jasmine-3.10.2.tgz#1b9f9ba9ad7bfd7d322f7ed9d8753220b1c84b52"
+  integrity sha512-qs4xjVm4V/XjM6owGm/x6TNmhGl5iKX8dkTdsgdgl9oFnqgzxLepnS7rN9Tdo7kDmnFD/VEqKrW57cGD2odbEg==
 
 "@types/json-schema@^7.0.7":
   version "7.0.7"
