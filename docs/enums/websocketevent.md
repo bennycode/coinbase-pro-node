@@ -6,102 +6,102 @@
 
 ### Enumeration members
 
-- [ON\_CLOSE](WebSocketEvent.md#on_close)
-- [ON\_ERROR](WebSocketEvent.md#on_error)
-- [ON\_MESSAGE](WebSocketEvent.md#on_message)
-- [ON\_MESSAGE\_ERROR](WebSocketEvent.md#on_message_error)
-- [ON\_MESSAGE\_MATCHES](WebSocketEvent.md#on_message_matches)
-- [ON\_MESSAGE\_STATUS](WebSocketEvent.md#on_message_status)
-- [ON\_MESSAGE\_TICKER](WebSocketEvent.md#on_message_ticker)
-- [ON\_OPEN](WebSocketEvent.md#on_open)
-- [ON\_SUBSCRIPTION\_UPDATE](WebSocketEvent.md#on_subscription_update)
+- [ON_CLOSE](WebSocketEvent.md#on_close)
+- [ON_ERROR](WebSocketEvent.md#on_error)
+- [ON_MESSAGE](WebSocketEvent.md#on_message)
+- [ON_MESSAGE_ERROR](WebSocketEvent.md#on_message_error)
+- [ON_MESSAGE_MATCHES](WebSocketEvent.md#on_message_matches)
+- [ON_MESSAGE_STATUS](WebSocketEvent.md#on_message_status)
+- [ON_MESSAGE_TICKER](WebSocketEvent.md#on_message_ticker)
+- [ON_OPEN](WebSocketEvent.md#on_open)
+- [ON_SUBSCRIPTION_UPDATE](WebSocketEvent.md#on_subscription_update)
 
 ## Enumeration members
 
-### ON\_CLOSE
+### ON_CLOSE
 
-• **ON\_CLOSE** = `"WebSocketEvent.ON_CLOSE"`
-
-#### Defined in
-
-[client/WebSocketClient.ts:194](https://github.com/bennycode/coinbase-pro-node/blob/9734468/src/client/WebSocketClient.ts#L194)
-
-___
-
-### ON\_ERROR
-
-• **ON\_ERROR** = `"WebSocketEvent.ON_ERROR"`
+• **ON_CLOSE** = `"WebSocketEvent.ON_CLOSE"`
 
 #### Defined in
 
-[client/WebSocketClient.ts:195](https://github.com/bennycode/coinbase-pro-node/blob/9734468/src/client/WebSocketClient.ts#L195)
+[client/WebSocketClient.ts:194](https://github.com/bennycode/coinbase-pro-node/blob/15253ed/src/client/WebSocketClient.ts#L194)
 
-___
+---
 
-### ON\_MESSAGE
+### ON_ERROR
 
-• **ON\_MESSAGE** = `"WebSocketEvent.ON_MESSAGE"`
-
-#### Defined in
-
-[client/WebSocketClient.ts:196](https://github.com/bennycode/coinbase-pro-node/blob/9734468/src/client/WebSocketClient.ts#L196)
-
-___
-
-### ON\_MESSAGE\_ERROR
-
-• **ON\_MESSAGE\_ERROR** = `"WebSocketEvent.ON_MESSAGE_ERROR"`
+• **ON_ERROR** = `"WebSocketEvent.ON_ERROR"`
 
 #### Defined in
 
-[client/WebSocketClient.ts:197](https://github.com/bennycode/coinbase-pro-node/blob/9734468/src/client/WebSocketClient.ts#L197)
+[client/WebSocketClient.ts:195](https://github.com/bennycode/coinbase-pro-node/blob/15253ed/src/client/WebSocketClient.ts#L195)
 
-___
+---
 
-### ON\_MESSAGE\_MATCHES
+### ON_MESSAGE
 
-• **ON\_MESSAGE\_MATCHES** = `"WebSocketEvent.ON_MESSAGE_MATCHES"`
-
-#### Defined in
-
-[client/WebSocketClient.ts:198](https://github.com/bennycode/coinbase-pro-node/blob/9734468/src/client/WebSocketClient.ts#L198)
-
-___
-
-### ON\_MESSAGE\_STATUS
-
-• **ON\_MESSAGE\_STATUS** = `"WebSocketEvent.ON_MESSAGE_STATUS"`
+• **ON_MESSAGE** = `"WebSocketEvent.ON_MESSAGE"`
 
 #### Defined in
 
-[client/WebSocketClient.ts:199](https://github.com/bennycode/coinbase-pro-node/blob/9734468/src/client/WebSocketClient.ts#L199)
+[client/WebSocketClient.ts:196](https://github.com/bennycode/coinbase-pro-node/blob/15253ed/src/client/WebSocketClient.ts#L196)
 
-___
+---
 
-### ON\_MESSAGE\_TICKER
+### ON_MESSAGE_ERROR
 
-• **ON\_MESSAGE\_TICKER** = `"WebSocketEvent.ON_MESSAGE_TICKER"`
-
-#### Defined in
-
-[client/WebSocketClient.ts:200](https://github.com/bennycode/coinbase-pro-node/blob/9734468/src/client/WebSocketClient.ts#L200)
-
-___
-
-### ON\_OPEN
-
-• **ON\_OPEN** = `"WebSocketEvent.ON_OPEN"`
+• **ON_MESSAGE_ERROR** = `"WebSocketEvent.ON_MESSAGE_ERROR"`
 
 #### Defined in
 
-[client/WebSocketClient.ts:201](https://github.com/bennycode/coinbase-pro-node/blob/9734468/src/client/WebSocketClient.ts#L201)
+[client/WebSocketClient.ts:197](https://github.com/bennycode/coinbase-pro-node/blob/15253ed/src/client/WebSocketClient.ts#L197)
 
-___
+---
 
-### ON\_SUBSCRIPTION\_UPDATE
+### ON_MESSAGE_MATCHES
 
-• **ON\_SUBSCRIPTION\_UPDATE** = `"WebSocketEvent.ON_SUBSCRIPTION_UPDATE"`
+• **ON_MESSAGE_MATCHES** = `"WebSocketEvent.ON_MESSAGE_MATCHES"`
 
 #### Defined in
 
-[client/WebSocketClient.ts:202](https://github.com/bennycode/coinbase-pro-node/blob/9734468/src/client/WebSocketClient.ts#L202)
+[client/WebSocketClient.ts:198](https://github.com/bennycode/coinbase-pro-node/blob/15253ed/src/client/WebSocketClient.ts#L198)
+
+---
+
+### ON_MESSAGE_STATUS
+
+• **ON_MESSAGE_STATUS** = `"WebSocketEvent.ON_MESSAGE_STATUS"`
+
+#### Defined in
+
+[client/WebSocketClient.ts:199](https://github.com/bennycode/coinbase-pro-node/blob/15253ed/src/client/WebSocketClient.ts#L199)
+
+---
+
+### ON_MESSAGE_TICKER
+
+• **ON_MESSAGE_TICKER** = `"WebSocketEvent.ON_MESSAGE_TICKER"`
+
+#### Defined in
+
+[client/WebSocketClient.ts:200](https://github.com/bennycode/coinbase-pro-node/blob/15253ed/src/client/WebSocketClient.ts#L200)
+
+---
+
+### ON_OPEN
+
+• **ON_OPEN** = `"WebSocketEvent.ON_OPEN"`
+
+#### Defined in
+
+[client/WebSocketClient.ts:201](https://github.com/bennycode/coinbase-pro-node/blob/15253ed/src/client/WebSocketClient.ts#L201)
+
+---
+
+### ON_SUBSCRIPTION_UPDATE
+
+• **ON_SUBSCRIPTION_UPDATE** = `"WebSocketEvent.ON_SUBSCRIPTION_UPDATE"`
+
+#### Defined in
+
+[client/WebSocketClient.ts:202](https://github.com/bennycode/coinbase-pro-node/blob/15253ed/src/client/WebSocketClient.ts#L202)

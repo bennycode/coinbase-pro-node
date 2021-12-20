@@ -28,13 +28,13 @@
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name        | Type            |
+| :---------- | :-------------- |
 | `apiClient` | `AxiosInstance` |
 
 #### Defined in
 
-[order/OrderAPI.ts:113](https://github.com/bennycode/coinbase-pro-node/blob/9734468/src/order/OrderAPI.ts#L113)
+[order/OrderAPI.ts:113](https://github.com/bennycode/coinbase-pro-node/blob/15253ed/src/order/OrderAPI.ts#L113)
 
 ## Properties
 
@@ -44,13 +44,13 @@
 
 #### Type declaration
 
-| Name | Type |
-| :------ | :------ |
+| Name     | Type     |
+| :------- | :------- |
 | `ORDERS` | `string` |
 
 #### Defined in
 
-[order/OrderAPI.ts:109](https://github.com/bennycode/coinbase-pro-node/blob/9734468/src/order/OrderAPI.ts#L109)
+[order/OrderAPI.ts:109](https://github.com/bennycode/coinbase-pro-node/blob/15253ed/src/order/OrderAPI.ts#L109)
 
 ## Methods
 
@@ -64,8 +64,8 @@ With best effort, cancel all open orders from the profile that the API key belon
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
+| Name         | Type     | Description                         |
+| :----------- | :------- | :---------------------------------- |
 | `productId?` | `string` | Representation for base and counter |
 
 #### Returns
@@ -76,9 +76,9 @@ A list of ids of the canceled orders
 
 #### Defined in
 
-[order/OrderAPI.ts:122](https://github.com/bennycode/coinbase-pro-node/blob/9734468/src/order/OrderAPI.ts#L122)
+[order/OrderAPI.ts:122](https://github.com/bennycode/coinbase-pro-node/blob/15253ed/src/order/OrderAPI.ts#L122)
 
-___
+---
 
 ### cancelOrder
 
@@ -90,9 +90,9 @@ Cancel a previously placed order. Order must belong to the profile that the API 
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `orderId` | `string` | ID of the order to cancel |
+| Name         | Type     | Description                                                                           |
+| :----------- | :------- | :------------------------------------------------------------------------------------ |
+| `orderId`    | `string` | ID of the order to cancel                                                             |
 | `productId?` | `string` | While not required, the request will be more performant if you include the product ID |
 
 #### Returns
@@ -103,13 +103,13 @@ The ID of the canceled order
 
 #### Defined in
 
-[order/OrderAPI.ts:138](https://github.com/bennycode/coinbase-pro-node/blob/9734468/src/order/OrderAPI.ts#L138)
+[order/OrderAPI.ts:138](https://github.com/bennycode/coinbase-pro-node/blob/15253ed/src/order/OrderAPI.ts#L138)
 
-___
+---
 
 ### getOrder
 
-▸ **getOrder**(`orderId`): `Promise`<``null`` \| [`Order`](../modules.md#order)\>
+▸ **getOrder**(`orderId`): `Promise`<`null` \| [`Order`](../modules.md#order)\>
 
 Get a single order by order id from the profile that the API key belongs to.
 
@@ -117,36 +117,34 @@ Get a single order by order id from the profile that the API key belongs to.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
+| Name      | Type     | Description                   |
+| :-------- | :------- | :---------------------------- |
 | `orderId` | `string` | ID of previously placed order |
 
 #### Returns
 
-`Promise`<``null`` \| [`Order`](../modules.md#order)\>
+`Promise`<`null` \| [`Order`](../modules.md#order)\>
 
 #### Defined in
 
-[order/OrderAPI.ts:176](https://github.com/bennycode/coinbase-pro-node/blob/9734468/src/order/OrderAPI.ts#L176)
+[order/OrderAPI.ts:176](https://github.com/bennycode/coinbase-pro-node/blob/15253ed/src/order/OrderAPI.ts#L176)
 
-___
+---
 
 ### getOrders
 
 ▸ **getOrders**(`query?`): `Promise`<`PaginatedData`<[`Order`](../modules.md#order)\>\>
 
-List your orders from the profile that the API key belongs to. Only open or un-settled orders are returned. As
-soon as an order is no longer open and settled, it will no longer appear in the default request.
+List your orders from the profile that the API key belongs to. Only open or un-settled orders are returned. As soon as an order is no longer open and settled, it will no longer appear in the default request.
 
-**`note`** Depending on your activity, fetching all data from this endpoint can take very long (measured already 25
-  seconds!)
+**`note`** Depending on your activity, fetching all data from this endpoint can take very long (measured already 25 seconds!)
 
 **`see`** https://docs.pro.coinbase.com/#list-orders
 
 #### Parameters
 
 | Name | Type | Description |
-| :------ | :------ | :------ |
+| :-- | :-- | :-- |
 | `query?` | [`OrderListQueryParam`](../interfaces/OrderListQueryParam.md) | Available query parameters (Pagination, Product ID and/or Order Status) |
 
 #### Returns
@@ -155,23 +153,22 @@ soon as an order is no longer open and settled, it will no longer appear in the 
 
 #### Defined in
 
-[order/OrderAPI.ts:155](https://github.com/bennycode/coinbase-pro-node/blob/9734468/src/order/OrderAPI.ts#L155)
+[order/OrderAPI.ts:155](https://github.com/bennycode/coinbase-pro-node/blob/15253ed/src/order/OrderAPI.ts#L155)
 
-___
+---
 
 ### placeOrder
 
 ▸ **placeOrder**(`newOrder`): `Promise`<[`Order`](../modules.md#order)\>
 
-You can place two types of orders: limit and market. Orders can only be placed if your account has sufficient
-funds. Once an order is placed, your account funds will be put on hold for the duration of the order.
+You can place two types of orders: limit and market. Orders can only be placed if your account has sufficient funds. Once an order is placed, your account funds will be put on hold for the duration of the order.
 
 **`see`** https://docs.pro.coinbase.com/#place-a-new-order
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
+| Name       | Type                                 | Description               |
+| :--------- | :----------------------------------- | :------------------------ |
 | `newOrder` | [`NewOrder`](../modules.md#neworder) | Order type and parameters |
 
 #### Returns
@@ -180,4 +177,4 @@ funds. Once an order is placed, your account funds will be put on hold for the d
 
 #### Defined in
 
-[order/OrderAPI.ts:201](https://github.com/bennycode/coinbase-pro-node/blob/9734468/src/order/OrderAPI.ts#L201)
+[order/OrderAPI.ts:201](https://github.com/bennycode/coinbase-pro-node/blob/15253ed/src/order/OrderAPI.ts#L201)

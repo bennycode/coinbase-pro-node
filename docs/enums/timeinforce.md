@@ -6,47 +6,47 @@
 
 ### Enumeration members
 
-- [FILL\_OR\_KILL](TimeInForce.md#fill_or_kill)
-- [GOOD\_TILL\_CANCELED](TimeInForce.md#good_till_canceled)
-- [GOOD\_TILL\_TIME](TimeInForce.md#good_till_time)
-- [IMMEDIATE\_OR\_CANCEL](TimeInForce.md#immediate_or_cancel)
+- [FILL_OR_KILL](TimeInForce.md#fill_or_kill)
+- [GOOD_TILL_CANCELED](TimeInForce.md#good_till_canceled)
+- [GOOD_TILL_TIME](TimeInForce.md#good_till_time)
+- [IMMEDIATE_OR_CANCEL](TimeInForce.md#immediate_or_cancel)
 
 ## Enumeration members
 
-### FILL\_OR\_KILL
+### FILL_OR_KILL
 
-• **FILL\_OR\_KILL** = `"FOK"`
-
-#### Defined in
-
-[order/OrderAPI.ts:11](https://github.com/bennycode/coinbase-pro-node/blob/9734468/src/order/OrderAPI.ts#L11)
-
-___
-
-### GOOD\_TILL\_CANCELED
-
-• **GOOD\_TILL\_CANCELED** = `"GTC"`
+• **FILL_OR_KILL** = `"FOK"`
 
 #### Defined in
 
-[order/OrderAPI.ts:12](https://github.com/bennycode/coinbase-pro-node/blob/9734468/src/order/OrderAPI.ts#L12)
+[order/OrderAPI.ts:11](https://github.com/bennycode/coinbase-pro-node/blob/15253ed/src/order/OrderAPI.ts#L11)
 
-___
+---
 
-### GOOD\_TILL\_TIME
+### GOOD_TILL_CANCELED
 
-• **GOOD\_TILL\_TIME** = `"GTT"`
-
-#### Defined in
-
-[order/OrderAPI.ts:13](https://github.com/bennycode/coinbase-pro-node/blob/9734468/src/order/OrderAPI.ts#L13)
-
-___
-
-### IMMEDIATE\_OR\_CANCEL
-
-• **IMMEDIATE\_OR\_CANCEL** = `"IOC"`
+• **GOOD_TILL_CANCELED** = `"GTC"`
 
 #### Defined in
 
-[order/OrderAPI.ts:14](https://github.com/bennycode/coinbase-pro-node/blob/9734468/src/order/OrderAPI.ts#L14)
+[order/OrderAPI.ts:12](https://github.com/bennycode/coinbase-pro-node/blob/15253ed/src/order/OrderAPI.ts#L12)
+
+---
+
+### GOOD_TILL_TIME
+
+• **GOOD_TILL_TIME** = `"GTT"`
+
+#### Defined in
+
+[order/OrderAPI.ts:13](https://github.com/bennycode/coinbase-pro-node/blob/15253ed/src/order/OrderAPI.ts#L13)
+
+---
+
+### IMMEDIATE_OR_CANCEL
+
+• **IMMEDIATE_OR_CANCEL** = `"IOC"`
+
+#### Defined in
+
+[order/OrderAPI.ts:14](https://github.com/bennycode/coinbase-pro-node/blob/15253ed/src/order/OrderAPI.ts#L14)

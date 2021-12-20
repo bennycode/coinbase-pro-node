@@ -6,28 +6,28 @@
 
 ### Properties
 
-- [maker\_order\_id](WebSocketMatchMessage.md#maker_order_id)
+- [maker_order_id](WebSocketMatchMessage.md#maker_order_id)
 - [price](WebSocketMatchMessage.md#price)
-- [product\_id](WebSocketMatchMessage.md#product_id)
+- [product_id](WebSocketMatchMessage.md#product_id)
 - [sequence](WebSocketMatchMessage.md#sequence)
 - [side](WebSocketMatchMessage.md#side)
 - [size](WebSocketMatchMessage.md#size)
-- [taker\_order\_id](WebSocketMatchMessage.md#taker_order_id)
+- [taker_order_id](WebSocketMatchMessage.md#taker_order_id)
 - [time](WebSocketMatchMessage.md#time)
-- [trade\_id](WebSocketMatchMessage.md#trade_id)
+- [trade_id](WebSocketMatchMessage.md#trade_id)
 - [type](WebSocketMatchMessage.md#type)
 
 ## Properties
 
-### maker\_order\_id
+### maker_order_id
 
-• **maker\_order\_id**: `string`
+• **maker_order_id**: `string`
 
 #### Defined in
 
-[client/WebSocketClient.ts:140](https://github.com/bennycode/coinbase-pro-node/blob/9734468/src/client/WebSocketClient.ts#L140)
+[client/WebSocketClient.ts:140](https://github.com/bennycode/coinbase-pro-node/blob/15253ed/src/client/WebSocketClient.ts#L140)
 
-___
+---
 
 ### price
 
@@ -35,19 +35,19 @@ ___
 
 #### Defined in
 
-[client/WebSocketClient.ts:141](https://github.com/bennycode/coinbase-pro-node/blob/9734468/src/client/WebSocketClient.ts#L141)
+[client/WebSocketClient.ts:141](https://github.com/bennycode/coinbase-pro-node/blob/15253ed/src/client/WebSocketClient.ts#L141)
 
-___
+---
 
-### product\_id
+### product_id
 
-• **product\_id**: `string`
+• **product_id**: `string`
 
 #### Defined in
 
-[client/WebSocketClient.ts:142](https://github.com/bennycode/coinbase-pro-node/blob/9734468/src/client/WebSocketClient.ts#L142)
+[client/WebSocketClient.ts:142](https://github.com/bennycode/coinbase-pro-node/blob/15253ed/src/client/WebSocketClient.ts#L142)
 
-___
+---
 
 ### sequence
 
@@ -55,9 +55,9 @@ ___
 
 #### Defined in
 
-[client/WebSocketClient.ts:143](https://github.com/bennycode/coinbase-pro-node/blob/9734468/src/client/WebSocketClient.ts#L143)
+[client/WebSocketClient.ts:143](https://github.com/bennycode/coinbase-pro-node/blob/15253ed/src/client/WebSocketClient.ts#L143)
 
-___
+---
 
 ### side
 
@@ -65,9 +65,9 @@ ___
 
 #### Defined in
 
-[client/WebSocketClient.ts:144](https://github.com/bennycode/coinbase-pro-node/blob/9734468/src/client/WebSocketClient.ts#L144)
+[client/WebSocketClient.ts:144](https://github.com/bennycode/coinbase-pro-node/blob/15253ed/src/client/WebSocketClient.ts#L144)
 
-___
+---
 
 ### size
 
@@ -75,19 +75,19 @@ ___
 
 #### Defined in
 
-[client/WebSocketClient.ts:145](https://github.com/bennycode/coinbase-pro-node/blob/9734468/src/client/WebSocketClient.ts#L145)
+[client/WebSocketClient.ts:145](https://github.com/bennycode/coinbase-pro-node/blob/15253ed/src/client/WebSocketClient.ts#L145)
 
-___
+---
 
-### taker\_order\_id
+### taker_order_id
 
-• **taker\_order\_id**: `string`
+• **taker_order_id**: `string`
 
 #### Defined in
 
-[client/WebSocketClient.ts:146](https://github.com/bennycode/coinbase-pro-node/blob/9734468/src/client/WebSocketClient.ts#L146)
+[client/WebSocketClient.ts:146](https://github.com/bennycode/coinbase-pro-node/blob/15253ed/src/client/WebSocketClient.ts#L146)
 
-___
+---
 
 ### time
 
@@ -95,19 +95,19 @@ ___
 
 #### Defined in
 
-[client/WebSocketClient.ts:147](https://github.com/bennycode/coinbase-pro-node/blob/9734468/src/client/WebSocketClient.ts#L147)
+[client/WebSocketClient.ts:147](https://github.com/bennycode/coinbase-pro-node/blob/15253ed/src/client/WebSocketClient.ts#L147)
 
-___
+---
 
-### trade\_id
+### trade_id
 
-• **trade\_id**: `number`
+• **trade_id**: `number`
 
 #### Defined in
 
-[client/WebSocketClient.ts:148](https://github.com/bennycode/coinbase-pro-node/blob/9734468/src/client/WebSocketClient.ts#L148)
+[client/WebSocketClient.ts:148](https://github.com/bennycode/coinbase-pro-node/blob/15253ed/src/client/WebSocketClient.ts#L148)
 
-___
+---
 
 ### type
 
@@ -115,4 +115,4 @@ ___
 
 #### Defined in
 
-[client/WebSocketClient.ts:149](https://github.com/bennycode/coinbase-pro-node/blob/9734468/src/client/WebSocketClient.ts#L149)
+[client/WebSocketClient.ts:149](https://github.com/bennycode/coinbase-pro-node/blob/15253ed/src/client/WebSocketClient.ts#L149)

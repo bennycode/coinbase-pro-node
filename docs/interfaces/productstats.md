@@ -11,7 +11,7 @@
 - [low](ProductStats.md#low)
 - [open](ProductStats.md#open)
 - [volume](ProductStats.md#volume)
-- [volume\_30day](ProductStats.md#volume_30day)
+- [volume_30day](ProductStats.md#volume_30day)
 
 ## Properties
 
@@ -21,9 +21,9 @@
 
 #### Defined in
 
-[product/ProductAPI.ts:44](https://github.com/bennycode/coinbase-pro-node/blob/9734468/src/product/ProductAPI.ts#L44)
+[product/ProductAPI.ts:44](https://github.com/bennycode/coinbase-pro-node/blob/15253ed/src/product/ProductAPI.ts#L44)
 
-___
+---
 
 ### last
 
@@ -31,9 +31,9 @@ ___
 
 #### Defined in
 
-[product/ProductAPI.ts:45](https://github.com/bennycode/coinbase-pro-node/blob/9734468/src/product/ProductAPI.ts#L45)
+[product/ProductAPI.ts:45](https://github.com/bennycode/coinbase-pro-node/blob/15253ed/src/product/ProductAPI.ts#L45)
 
-___
+---
 
 ### low
 
@@ -41,9 +41,9 @@ ___
 
 #### Defined in
 
-[product/ProductAPI.ts:46](https://github.com/bennycode/coinbase-pro-node/blob/9734468/src/product/ProductAPI.ts#L46)
+[product/ProductAPI.ts:46](https://github.com/bennycode/coinbase-pro-node/blob/15253ed/src/product/ProductAPI.ts#L46)
 
-___
+---
 
 ### open
 
@@ -51,9 +51,9 @@ ___
 
 #### Defined in
 
-[product/ProductAPI.ts:47](https://github.com/bennycode/coinbase-pro-node/blob/9734468/src/product/ProductAPI.ts#L47)
+[product/ProductAPI.ts:47](https://github.com/bennycode/coinbase-pro-node/blob/15253ed/src/product/ProductAPI.ts#L47)
 
-___
+---
 
 ### volume
 
@@ -61,14 +61,14 @@ ___
 
 #### Defined in
 
-[product/ProductAPI.ts:48](https://github.com/bennycode/coinbase-pro-node/blob/9734468/src/product/ProductAPI.ts#L48)
+[product/ProductAPI.ts:48](https://github.com/bennycode/coinbase-pro-node/blob/15253ed/src/product/ProductAPI.ts#L48)
 
-___
+---
 
-### volume\_30day
+### volume_30day
 
-• **volume\_30day**: `string`
+• **volume_30day**: `string`
 
 #### Defined in
 
-[product/ProductAPI.ts:49](https://github.com/bennycode/coinbase-pro-node/blob/9734468/src/product/ProductAPI.ts#L49)
+[product/ProductAPI.ts:49](https://github.com/bennycode/coinbase-pro-node/blob/15253ed/src/product/ProductAPI.ts#L49)

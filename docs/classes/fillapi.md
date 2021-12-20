@@ -25,13 +25,13 @@
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name        | Type            |
+| :---------- | :-------------- |
 | `apiClient` | `AxiosInstance` |
 
 #### Defined in
 
-[fill/FillAPI.ts:30](https://github.com/bennycode/coinbase-pro-node/blob/9734468/src/fill/FillAPI.ts#L30)
+[fill/FillAPI.ts:30](https://github.com/bennycode/coinbase-pro-node/blob/15253ed/src/fill/FillAPI.ts#L30)
 
 ## Properties
 
@@ -41,13 +41,13 @@
 
 #### Type declaration
 
-| Name | Type |
-| :------ | :------ |
+| Name    | Type     |
+| :------ | :------- |
 | `FILLS` | `string` |
 
 #### Defined in
 
-[fill/FillAPI.ts:26](https://github.com/bennycode/coinbase-pro-node/blob/9734468/src/fill/FillAPI.ts#L26)
+[fill/FillAPI.ts:26](https://github.com/bennycode/coinbase-pro-node/blob/15253ed/src/fill/FillAPI.ts#L26)
 
 ## Methods
 
@@ -63,10 +63,10 @@ Get a list of recent fills for a given Order of the API key's profile.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `orderId` | `string` | ID of previously placed order |
-| `pagination?` | `Pagination` | Pagination field |
+| Name          | Type         | Description                   |
+| :------------ | :----------- | :---------------------------- |
+| `orderId`     | `string`     | ID of previously placed order |
+| `pagination?` | `Pagination` | Pagination field              |
 
 #### Returns
 
@@ -74,9 +74,9 @@ Get a list of recent fills for a given Order of the API key's profile.
 
 #### Defined in
 
-[fill/FillAPI.ts:40](https://github.com/bennycode/coinbase-pro-node/blob/9734468/src/fill/FillAPI.ts#L40)
+[fill/FillAPI.ts:40](https://github.com/bennycode/coinbase-pro-node/blob/15253ed/src/fill/FillAPI.ts#L40)
 
-___
+---
 
 ### getFillsByProductId
 
@@ -90,10 +90,10 @@ Get a list of recent fills for a given Product of the API key's profile.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `productId` | `string` | Representation for base and counter |
-| `pagination?` | `Pagination` | Pagination field |
+| Name          | Type         | Description                         |
+| :------------ | :----------- | :---------------------------------- |
+| `productId`   | `string`     | Representation for base and counter |
+| `pagination?` | `Pagination` | Pagination field                    |
 
 #### Returns
 
@@ -101,4 +101,4 @@ Get a list of recent fills for a given Product of the API key's profile.
 
 #### Defined in
 
-[fill/FillAPI.ts:60](https://github.com/bennycode/coinbase-pro-node/blob/9734468/src/fill/FillAPI.ts#L60)
+[fill/FillAPI.ts:60](https://github.com/bennycode/coinbase-pro-node/blob/15253ed/src/fill/FillAPI.ts#L60)
