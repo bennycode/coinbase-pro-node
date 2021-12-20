@@ -1,5 +1,6 @@
 import {AxiosInstance} from 'axios';
 import {ISO_8601_MS_UTC, PaginatedData, Pagination} from '../payload/common';
+import querystring from 'querystring';
 
 export interface TransferInformation {
   account_id: string;
@@ -63,7 +64,10 @@ export class TransferAPI {
     if (profileId) {
       params.profile_id = profileId;
     }
-    const response = await this.apiClient.get<TransferInformation[]>(resource, {params});
+    const response = await this.apiClient.get<TransferInformation[]>(resource, {
+      params,
+      paramsSerializer: querystring.stringify,
+    });
     return {
       data: response.data,
       pagination: {
