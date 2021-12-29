@@ -19,10 +19,17 @@ export interface AccountHistory {
   type: string;
 }
 
-export interface AccountHistoryDetails {
+type AccountHistoryDetails = AccountHistoryTradeDetail & AccountHistoryTransferDetail;
+
+export interface AccountHistoryTradeDetail {
   order_id: string;
   product_id: string;
   trade_id: string;
+}
+
+export interface AccountHistoryTransferDetail {
+  transfer_id: string;
+  transfer_type: string;
 }
 
 export interface Hold {
