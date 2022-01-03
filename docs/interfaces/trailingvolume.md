@@ -6,42 +6,42 @@
 
 ### Properties
 
-- [exchange\_volume](TrailingVolume.md#exchange_volume)
-- [product\_id](TrailingVolume.md#product_id)
-- [recorded\_at](TrailingVolume.md#recorded_at)
+- [exchange_volume](TrailingVolume.md#exchange_volume)
+- [product_id](TrailingVolume.md#product_id)
+- [recorded_at](TrailingVolume.md#recorded_at)
 - [volume](TrailingVolume.md#volume)
 
 ## Properties
 
-### exchange\_volume
+### exchange_volume
 
-• **exchange\_volume**: `string`
-
-#### Defined in
-
-[user/UserAPI.ts:8](https://github.com/bennycode/coinbase-pro-node/blob/9734468/src/user/UserAPI.ts#L8)
-
-___
-
-### product\_id
-
-• **product\_id**: `string`
+• **exchange_volume**: `string`
 
 #### Defined in
 
-[user/UserAPI.ts:9](https://github.com/bennycode/coinbase-pro-node/blob/9734468/src/user/UserAPI.ts#L9)
+[user/UserAPI.ts:8](https://github.com/bennycode/coinbase-pro-node/blob/15253ed/src/user/UserAPI.ts#L8)
 
-___
+---
 
-### recorded\_at
+### product_id
 
-• **recorded\_at**: `string`
+• **product_id**: `string`
 
 #### Defined in
 
-[user/UserAPI.ts:10](https://github.com/bennycode/coinbase-pro-node/blob/9734468/src/user/UserAPI.ts#L10)
+[user/UserAPI.ts:9](https://github.com/bennycode/coinbase-pro-node/blob/15253ed/src/user/UserAPI.ts#L9)
 
-___
+---
+
+### recorded_at
+
+• **recorded_at**: `string`
+
+#### Defined in
+
+[user/UserAPI.ts:10](https://github.com/bennycode/coinbase-pro-node/blob/15253ed/src/user/UserAPI.ts#L10)
+
+---
 
 ### volume
 
@@ -49,4 +49,4 @@ ___
 
 #### Defined in
 
-[user/UserAPI.ts:11](https://github.com/bennycode/coinbase-pro-node/blob/9734468/src/user/UserAPI.ts#L11)
+[user/UserAPI.ts:11](https://github.com/bennycode/coinbase-pro-node/blob/15253ed/src/user/UserAPI.ts#L11)

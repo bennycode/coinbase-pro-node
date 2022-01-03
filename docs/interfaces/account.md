@@ -11,7 +11,7 @@
 - [currency](Account.md#currency)
 - [hold](Account.md#hold)
 - [id](Account.md#id)
-- [profile\_id](Account.md#profile_id)
+- [profile_id](Account.md#profile_id)
 
 ## Properties
 
@@ -21,9 +21,9 @@
 
 #### Defined in
 
-[account/AccountAPI.ts:5](https://github.com/bennycode/coinbase-pro-node/blob/9734468/src/account/AccountAPI.ts#L5)
+[account/AccountAPI.ts:5](https://github.com/bennycode/coinbase-pro-node/blob/15253ed/src/account/AccountAPI.ts#L5)
 
-___
+---
 
 ### balance
 
@@ -31,9 +31,9 @@ ___
 
 #### Defined in
 
-[account/AccountAPI.ts:6](https://github.com/bennycode/coinbase-pro-node/blob/9734468/src/account/AccountAPI.ts#L6)
+[account/AccountAPI.ts:6](https://github.com/bennycode/coinbase-pro-node/blob/15253ed/src/account/AccountAPI.ts#L6)
 
-___
+---
 
 ### currency
 
@@ -41,9 +41,9 @@ ___
 
 #### Defined in
 
-[account/AccountAPI.ts:7](https://github.com/bennycode/coinbase-pro-node/blob/9734468/src/account/AccountAPI.ts#L7)
+[account/AccountAPI.ts:7](https://github.com/bennycode/coinbase-pro-node/blob/15253ed/src/account/AccountAPI.ts#L7)
 
-___
+---
 
 ### hold
 
@@ -51,9 +51,9 @@ ___
 
 #### Defined in
 
-[account/AccountAPI.ts:8](https://github.com/bennycode/coinbase-pro-node/blob/9734468/src/account/AccountAPI.ts#L8)
+[account/AccountAPI.ts:8](https://github.com/bennycode/coinbase-pro-node/blob/15253ed/src/account/AccountAPI.ts#L8)
 
-___
+---
 
 ### id
 
@@ -61,14 +61,14 @@ ___
 
 #### Defined in
 
-[account/AccountAPI.ts:9](https://github.com/bennycode/coinbase-pro-node/blob/9734468/src/account/AccountAPI.ts#L9)
+[account/AccountAPI.ts:9](https://github.com/bennycode/coinbase-pro-node/blob/15253ed/src/account/AccountAPI.ts#L9)
 
-___
+---
 
-### profile\_id
+### profile_id
 
-• **profile\_id**: `string`
+• **profile_id**: `string`
 
 #### Defined in
 
-[account/AccountAPI.ts:10](https://github.com/bennycode/coinbase-pro-node/blob/9734468/src/account/AccountAPI.ts#L10)
+[account/AccountAPI.ts:10](https://github.com/bennycode/coinbase-pro-node/blob/15253ed/src/account/AccountAPI.ts#L10)

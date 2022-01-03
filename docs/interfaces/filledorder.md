@@ -12,101 +12,101 @@
 
 ### Properties
 
-- [created\_at](FilledOrder.md#created_at)
-- [done\_at](FilledOrder.md#done_at)
-- [done\_reason](FilledOrder.md#done_reason)
-- [executed\_value](FilledOrder.md#executed_value)
-- [fill\_fees](FilledOrder.md#fill_fees)
-- [filled\_size](FilledOrder.md#filled_size)
+- [created_at](FilledOrder.md#created_at)
+- [done_at](FilledOrder.md#done_at)
+- [done_reason](FilledOrder.md#done_reason)
+- [executed_value](FilledOrder.md#executed_value)
+- [fill_fees](FilledOrder.md#fill_fees)
+- [filled_size](FilledOrder.md#filled_size)
 - [id](FilledOrder.md#id)
-- [post\_only](FilledOrder.md#post_only)
+- [post_only](FilledOrder.md#post_only)
 - [price](FilledOrder.md#price)
-- [product\_id](FilledOrder.md#product_id)
-- [profile\_id](FilledOrder.md#profile_id)
+- [product_id](FilledOrder.md#product_id)
+- [profile_id](FilledOrder.md#profile_id)
 - [settled](FilledOrder.md#settled)
 - [side](FilledOrder.md#side)
 - [size](FilledOrder.md#size)
 - [status](FilledOrder.md#status)
-- [time\_in\_force](FilledOrder.md#time_in_force)
+- [time_in_force](FilledOrder.md#time_in_force)
 - [type](FilledOrder.md#type)
 
 ## Properties
 
-### created\_at
+### created_at
 
-• **created\_at**: `string`
-
-#### Inherited from
-
-BasePlacedOrder.created\_at
-
-#### Defined in
-
-[order/OrderAPI.ts:41](https://github.com/bennycode/coinbase-pro-node/blob/9734468/src/order/OrderAPI.ts#L41)
-
-___
-
-### done\_at
-
-• **done\_at**: `string`
-
-#### Defined in
-
-[order/OrderAPI.ts:92](https://github.com/bennycode/coinbase-pro-node/blob/9734468/src/order/OrderAPI.ts#L92)
-
-___
-
-### done\_reason
-
-• **done\_reason**: ``"filled"``
-
-#### Defined in
-
-[order/OrderAPI.ts:93](https://github.com/bennycode/coinbase-pro-node/blob/9734468/src/order/OrderAPI.ts#L93)
-
-___
-
-### executed\_value
-
-• **executed\_value**: `string`
+• **created_at**: `string`
 
 #### Inherited from
 
-BasePlacedOrder.executed\_value
+BasePlacedOrder.created_at
 
 #### Defined in
 
-[order/OrderAPI.ts:42](https://github.com/bennycode/coinbase-pro-node/blob/9734468/src/order/OrderAPI.ts#L42)
+[order/OrderAPI.ts:41](https://github.com/bennycode/coinbase-pro-node/blob/15253ed/src/order/OrderAPI.ts#L41)
 
-___
+---
 
-### fill\_fees
+### done_at
 
-• **fill\_fees**: `string`
+• **done_at**: `string`
+
+#### Defined in
+
+[order/OrderAPI.ts:92](https://github.com/bennycode/coinbase-pro-node/blob/15253ed/src/order/OrderAPI.ts#L92)
+
+---
+
+### done_reason
+
+• **done_reason**: `"filled"`
+
+#### Defined in
+
+[order/OrderAPI.ts:93](https://github.com/bennycode/coinbase-pro-node/blob/15253ed/src/order/OrderAPI.ts#L93)
+
+---
+
+### executed_value
+
+• **executed_value**: `string`
 
 #### Inherited from
 
-BasePlacedOrder.fill\_fees
+BasePlacedOrder.executed_value
 
 #### Defined in
 
-[order/OrderAPI.ts:43](https://github.com/bennycode/coinbase-pro-node/blob/9734468/src/order/OrderAPI.ts#L43)
+[order/OrderAPI.ts:42](https://github.com/bennycode/coinbase-pro-node/blob/15253ed/src/order/OrderAPI.ts#L42)
 
-___
+---
 
-### filled\_size
+### fill_fees
 
-• **filled\_size**: `string`
+• **fill_fees**: `string`
 
 #### Inherited from
 
-BasePlacedOrder.filled\_size
+BasePlacedOrder.fill_fees
 
 #### Defined in
 
-[order/OrderAPI.ts:44](https://github.com/bennycode/coinbase-pro-node/blob/9734468/src/order/OrderAPI.ts#L44)
+[order/OrderAPI.ts:43](https://github.com/bennycode/coinbase-pro-node/blob/15253ed/src/order/OrderAPI.ts#L43)
 
-___
+---
+
+### filled_size
+
+• **filled_size**: `string`
+
+#### Inherited from
+
+BasePlacedOrder.filled_size
+
+#### Defined in
+
+[order/OrderAPI.ts:44](https://github.com/bennycode/coinbase-pro-node/blob/15253ed/src/order/OrderAPI.ts#L44)
+
+---
 
 ### id
 
@@ -118,23 +118,23 @@ BasePlacedOrder.id
 
 #### Defined in
 
-[order/OrderAPI.ts:45](https://github.com/bennycode/coinbase-pro-node/blob/9734468/src/order/OrderAPI.ts#L45)
+[order/OrderAPI.ts:45](https://github.com/bennycode/coinbase-pro-node/blob/15253ed/src/order/OrderAPI.ts#L45)
 
-___
+---
 
-### post\_only
+### post_only
 
-• **post\_only**: ``false``
+• **post_only**: `false`
 
 #### Inherited from
 
-BasePlacedOrder.post\_only
+BasePlacedOrder.post_only
 
 #### Defined in
 
-[order/OrderAPI.ts:46](https://github.com/bennycode/coinbase-pro-node/blob/9734468/src/order/OrderAPI.ts#L46)
+[order/OrderAPI.ts:46](https://github.com/bennycode/coinbase-pro-node/blob/15253ed/src/order/OrderAPI.ts#L46)
 
-___
+---
 
 ### price
 
@@ -146,33 +146,33 @@ BasePlacedOrder.price
 
 #### Defined in
 
-[order/OrderAPI.ts:47](https://github.com/bennycode/coinbase-pro-node/blob/9734468/src/order/OrderAPI.ts#L47)
+[order/OrderAPI.ts:47](https://github.com/bennycode/coinbase-pro-node/blob/15253ed/src/order/OrderAPI.ts#L47)
 
-___
+---
 
-### product\_id
+### product_id
 
-• **product\_id**: `string`
+• **product_id**: `string`
 
 #### Inherited from
 
-BasePlacedOrder.product\_id
+BasePlacedOrder.product_id
 
 #### Defined in
 
-[order/OrderAPI.ts:48](https://github.com/bennycode/coinbase-pro-node/blob/9734468/src/order/OrderAPI.ts#L48)
+[order/OrderAPI.ts:48](https://github.com/bennycode/coinbase-pro-node/blob/15253ed/src/order/OrderAPI.ts#L48)
 
-___
+---
 
-### profile\_id
+### profile_id
 
-• **profile\_id**: `string`
+• **profile_id**: `string`
 
 #### Defined in
 
-[order/OrderAPI.ts:94](https://github.com/bennycode/coinbase-pro-node/blob/9734468/src/order/OrderAPI.ts#L94)
+[order/OrderAPI.ts:94](https://github.com/bennycode/coinbase-pro-node/blob/15253ed/src/order/OrderAPI.ts#L94)
 
-___
+---
 
 ### settled
 
@@ -184,9 +184,9 @@ BasePlacedOrder.settled
 
 #### Defined in
 
-[order/OrderAPI.ts:49](https://github.com/bennycode/coinbase-pro-node/blob/9734468/src/order/OrderAPI.ts#L49)
+[order/OrderAPI.ts:49](https://github.com/bennycode/coinbase-pro-node/blob/15253ed/src/order/OrderAPI.ts#L49)
 
-___
+---
 
 ### side
 
@@ -198,9 +198,9 @@ BasePlacedOrder.side
 
 #### Defined in
 
-[order/OrderAPI.ts:50](https://github.com/bennycode/coinbase-pro-node/blob/9734468/src/order/OrderAPI.ts#L50)
+[order/OrderAPI.ts:50](https://github.com/bennycode/coinbase-pro-node/blob/15253ed/src/order/OrderAPI.ts#L50)
 
-___
+---
 
 ### size
 
@@ -212,9 +212,9 @@ BasePlacedOrder.size
 
 #### Defined in
 
-[order/OrderAPI.ts:51](https://github.com/bennycode/coinbase-pro-node/blob/9734468/src/order/OrderAPI.ts#L51)
+[order/OrderAPI.ts:51](https://github.com/bennycode/coinbase-pro-node/blob/15253ed/src/order/OrderAPI.ts#L51)
 
-___
+---
 
 ### status
 
@@ -226,23 +226,23 @@ BasePlacedOrder.status
 
 #### Defined in
 
-[order/OrderAPI.ts:95](https://github.com/bennycode/coinbase-pro-node/blob/9734468/src/order/OrderAPI.ts#L95)
+[order/OrderAPI.ts:95](https://github.com/bennycode/coinbase-pro-node/blob/15253ed/src/order/OrderAPI.ts#L95)
 
-___
+---
 
-### time\_in\_force
+### time_in_force
 
-• **time\_in\_force**: [`TimeInForce`](../enums/TimeInForce.md)
+• **time_in_force**: [`TimeInForce`](../enums/TimeInForce.md)
 
 #### Inherited from
 
-BasePlacedOrder.time\_in\_force
+BasePlacedOrder.time_in_force
 
 #### Defined in
 
-[order/OrderAPI.ts:53](https://github.com/bennycode/coinbase-pro-node/blob/9734468/src/order/OrderAPI.ts#L53)
+[order/OrderAPI.ts:53](https://github.com/bennycode/coinbase-pro-node/blob/15253ed/src/order/OrderAPI.ts#L53)
 
-___
+---
 
 ### type
 
@@ -254,4 +254,4 @@ BasePlacedOrder.type
 
 #### Defined in
 
-[order/OrderAPI.ts:54](https://github.com/bennycode/coinbase-pro-node/blob/9734468/src/order/OrderAPI.ts#L54)
+[order/OrderAPI.ts:54](https://github.com/bennycode/coinbase-pro-node/blob/15253ed/src/order/OrderAPI.ts#L54)

@@ -6,89 +6,89 @@
 
 ### Properties
 
-- [base\_currency](Product.md#base_currency)
-- [base\_increment](Product.md#base_increment)
-- [base\_max\_size](Product.md#base_max_size)
-- [base\_min\_size](Product.md#base_min_size)
-- [cancel\_only](Product.md#cancel_only)
-- [display\_name](Product.md#display_name)
+- [base_currency](Product.md#base_currency)
+- [base_increment](Product.md#base_increment)
+- [base_max_size](Product.md#base_max_size)
+- [base_min_size](Product.md#base_min_size)
+- [cancel_only](Product.md#cancel_only)
+- [display_name](Product.md#display_name)
 - [id](Product.md#id)
-- [limit\_only](Product.md#limit_only)
-- [margin\_enabled](Product.md#margin_enabled)
-- [max\_market\_funds](Product.md#max_market_funds)
-- [min\_market\_funds](Product.md#min_market_funds)
-- [post\_only](Product.md#post_only)
-- [quote\_currency](Product.md#quote_currency)
-- [quote\_increment](Product.md#quote_increment)
+- [limit_only](Product.md#limit_only)
+- [margin_enabled](Product.md#margin_enabled)
+- [max_market_funds](Product.md#max_market_funds)
+- [min_market_funds](Product.md#min_market_funds)
+- [post_only](Product.md#post_only)
+- [quote_currency](Product.md#quote_currency)
+- [quote_increment](Product.md#quote_increment)
 - [status](Product.md#status)
-- [status\_message](Product.md#status_message)
-- [trading\_disabled](Product.md#trading_disabled)
+- [status_message](Product.md#status_message)
+- [trading_disabled](Product.md#trading_disabled)
 
 ## Properties
 
-### base\_currency
+### base_currency
 
-• **base\_currency**: `string`
-
-#### Defined in
-
-[product/ProductAPI.ts:7](https://github.com/bennycode/coinbase-pro-node/blob/9734468/src/product/ProductAPI.ts#L7)
-
-___
-
-### base\_increment
-
-• **base\_increment**: `string`
+• **base_currency**: `string`
 
 #### Defined in
 
-[product/ProductAPI.ts:8](https://github.com/bennycode/coinbase-pro-node/blob/9734468/src/product/ProductAPI.ts#L8)
+[product/ProductAPI.ts:7](https://github.com/bennycode/coinbase-pro-node/blob/15253ed/src/product/ProductAPI.ts#L7)
 
-___
+---
 
-### base\_max\_size
+### base_increment
 
-• **base\_max\_size**: `string`
+• **base_increment**: `string`
+
+#### Defined in
+
+[product/ProductAPI.ts:8](https://github.com/bennycode/coinbase-pro-node/blob/15253ed/src/product/ProductAPI.ts#L8)
+
+---
+
+### base_max_size
+
+• **base_max_size**: `string`
 
 Maximum order size
 
 #### Defined in
 
-[product/ProductAPI.ts:10](https://github.com/bennycode/coinbase-pro-node/blob/9734468/src/product/ProductAPI.ts#L10)
+[product/ProductAPI.ts:10](https://github.com/bennycode/coinbase-pro-node/blob/15253ed/src/product/ProductAPI.ts#L10)
 
-___
+---
 
-### base\_min\_size
+### base_min_size
 
-• **base\_min\_size**: `string`
+• **base_min_size**: `string`
 
 Minimum order size
 
 #### Defined in
 
-[product/ProductAPI.ts:12](https://github.com/bennycode/coinbase-pro-node/blob/9734468/src/product/ProductAPI.ts#L12)
+[product/ProductAPI.ts:12](https://github.com/bennycode/coinbase-pro-node/blob/15253ed/src/product/ProductAPI.ts#L12)
 
-___
+---
 
-### cancel\_only
+### cancel_only
 
-• **cancel\_only**: `boolean`
-
-#### Defined in
-
-[product/ProductAPI.ts:13](https://github.com/bennycode/coinbase-pro-node/blob/9734468/src/product/ProductAPI.ts#L13)
-
-___
-
-### display\_name
-
-• **display\_name**: `string`
+• **cancel_only**: `boolean`
 
 #### Defined in
 
-[product/ProductAPI.ts:14](https://github.com/bennycode/coinbase-pro-node/blob/9734468/src/product/ProductAPI.ts#L14)
+[product/ProductAPI.ts:13](https://github.com/bennycode/coinbase-pro-node/blob/15253ed/src/product/ProductAPI.ts#L13)
 
-___
+---
+
+### display_name
+
+• **display_name**: `string`
+
+#### Defined in
+
+[product/ProductAPI.ts:14](https://github.com/bennycode/coinbase-pro-node/blob/15253ed/src/product/ProductAPI.ts#L14)
+
+---
 
 ### id
 
@@ -96,107 +96,106 @@ ___
 
 #### Defined in
 
-[product/ProductAPI.ts:15](https://github.com/bennycode/coinbase-pro-node/blob/9734468/src/product/ProductAPI.ts#L15)
+[product/ProductAPI.ts:15](https://github.com/bennycode/coinbase-pro-node/blob/15253ed/src/product/ProductAPI.ts#L15)
 
-___
+---
 
-### limit\_only
+### limit_only
 
-• **limit\_only**: `boolean`
-
-#### Defined in
-
-[product/ProductAPI.ts:16](https://github.com/bennycode/coinbase-pro-node/blob/9734468/src/product/ProductAPI.ts#L16)
-
-___
-
-### margin\_enabled
-
-• **margin\_enabled**: `boolean`
+• **limit_only**: `boolean`
 
 #### Defined in
 
-[product/ProductAPI.ts:17](https://github.com/bennycode/coinbase-pro-node/blob/9734468/src/product/ProductAPI.ts#L17)
+[product/ProductAPI.ts:16](https://github.com/bennycode/coinbase-pro-node/blob/15253ed/src/product/ProductAPI.ts#L16)
 
-___
+---
 
-### max\_market\_funds
+### margin_enabled
 
-• **max\_market\_funds**: `string`
-
-#### Defined in
-
-[product/ProductAPI.ts:18](https://github.com/bennycode/coinbase-pro-node/blob/9734468/src/product/ProductAPI.ts#L18)
-
-___
-
-### min\_market\_funds
-
-• **min\_market\_funds**: `string`
+• **margin_enabled**: `boolean`
 
 #### Defined in
 
-[product/ProductAPI.ts:19](https://github.com/bennycode/coinbase-pro-node/blob/9734468/src/product/ProductAPI.ts#L19)
+[product/ProductAPI.ts:17](https://github.com/bennycode/coinbase-pro-node/blob/15253ed/src/product/ProductAPI.ts#L17)
 
-___
+---
 
-### post\_only
+### max_market_funds
 
-• **post\_only**: `boolean`
-
-#### Defined in
-
-[product/ProductAPI.ts:20](https://github.com/bennycode/coinbase-pro-node/blob/9734468/src/product/ProductAPI.ts#L20)
-
-___
-
-### quote\_currency
-
-• **quote\_currency**: `string`
+• **max_market_funds**: `string`
 
 #### Defined in
 
-[product/ProductAPI.ts:21](https://github.com/bennycode/coinbase-pro-node/blob/9734468/src/product/ProductAPI.ts#L21)
+[product/ProductAPI.ts:18](https://github.com/bennycode/coinbase-pro-node/blob/15253ed/src/product/ProductAPI.ts#L18)
 
-___
+---
 
-### quote\_increment
+### min_market_funds
 
-• **quote\_increment**: `string`
-
-Increment steps for min/max order size. The order price must be a multiple of this increment (i.e. if the
-increment is 0.01, order prices of 0.001 or 0.021 would be rejected).
+• **min_market_funds**: `string`
 
 #### Defined in
 
-[product/ProductAPI.ts:26](https://github.com/bennycode/coinbase-pro-node/blob/9734468/src/product/ProductAPI.ts#L26)
+[product/ProductAPI.ts:19](https://github.com/bennycode/coinbase-pro-node/blob/15253ed/src/product/ProductAPI.ts#L19)
 
-___
+---
+
+### post_only
+
+• **post_only**: `boolean`
+
+#### Defined in
+
+[product/ProductAPI.ts:20](https://github.com/bennycode/coinbase-pro-node/blob/15253ed/src/product/ProductAPI.ts#L20)
+
+---
+
+### quote_currency
+
+• **quote_currency**: `string`
+
+#### Defined in
+
+[product/ProductAPI.ts:21](https://github.com/bennycode/coinbase-pro-node/blob/15253ed/src/product/ProductAPI.ts#L21)
+
+---
+
+### quote_increment
+
+• **quote_increment**: `string`
+
+Increment steps for min/max order size. The order price must be a multiple of this increment (i.e. if the increment is 0.01, order prices of 0.001 or 0.021 would be rejected).
+
+#### Defined in
+
+[product/ProductAPI.ts:26](https://github.com/bennycode/coinbase-pro-node/blob/15253ed/src/product/ProductAPI.ts#L26)
+
+---
 
 ### status
 
-• **status**: ``"online"``
+• **status**: `"online"`
 
 #### Defined in
 
-[product/ProductAPI.ts:27](https://github.com/bennycode/coinbase-pro-node/blob/9734468/src/product/ProductAPI.ts#L27)
+[product/ProductAPI.ts:27](https://github.com/bennycode/coinbase-pro-node/blob/15253ed/src/product/ProductAPI.ts#L27)
 
-___
+---
 
-### status\_message
+### status_message
 
-• **status\_message**: `string`
-
-#### Defined in
-
-[product/ProductAPI.ts:28](https://github.com/bennycode/coinbase-pro-node/blob/9734468/src/product/ProductAPI.ts#L28)
-
-___
-
-### trading\_disabled
-
-• **trading\_disabled**: `boolean`
+• **status_message**: `string`
 
 #### Defined in
 
-[product/ProductAPI.ts:29](https://github.com/bennycode/coinbase-pro-node/blob/9734468/src/product/ProductAPI.ts#L29)
+[product/ProductAPI.ts:28](https://github.com/bennycode/coinbase-pro-node/blob/15253ed/src/product/ProductAPI.ts#L28)
+
+---
+
+### trading_disabled
+
+• **trading_disabled**: `boolean`
+
+#### Defined in
+
+[product/ProductAPI.ts:29](https://github.com/bennycode/coinbase-pro-node/blob/15253ed/src/product/ProductAPI.ts#L29)

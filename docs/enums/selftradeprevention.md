@@ -6,47 +6,47 @@
 
 ### Enumeration members
 
-- [CANCEL\_BOTH](SelfTradePrevention.md#cancel_both)
-- [CANCEL\_NEWEST](SelfTradePrevention.md#cancel_newest)
-- [CANCEL\_OLDEST](SelfTradePrevention.md#cancel_oldest)
-- [DECREMENT\_AND\_CANCEL](SelfTradePrevention.md#decrement_and_cancel)
+- [CANCEL_BOTH](SelfTradePrevention.md#cancel_both)
+- [CANCEL_NEWEST](SelfTradePrevention.md#cancel_newest)
+- [CANCEL_OLDEST](SelfTradePrevention.md#cancel_oldest)
+- [DECREMENT_AND_CANCEL](SelfTradePrevention.md#decrement_and_cancel)
 
 ## Enumeration members
 
-### CANCEL\_BOTH
+### CANCEL_BOTH
 
-• **CANCEL\_BOTH** = `"cb"`
-
-#### Defined in
-
-[order/OrderAPI.ts:25](https://github.com/bennycode/coinbase-pro-node/blob/9734468/src/order/OrderAPI.ts#L25)
-
-___
-
-### CANCEL\_NEWEST
-
-• **CANCEL\_NEWEST** = `"cn"`
+• **CANCEL_BOTH** = `"cb"`
 
 #### Defined in
 
-[order/OrderAPI.ts:26](https://github.com/bennycode/coinbase-pro-node/blob/9734468/src/order/OrderAPI.ts#L26)
+[order/OrderAPI.ts:25](https://github.com/bennycode/coinbase-pro-node/blob/15253ed/src/order/OrderAPI.ts#L25)
 
-___
+---
 
-### CANCEL\_OLDEST
+### CANCEL_NEWEST
 
-• **CANCEL\_OLDEST** = `"co"`
-
-#### Defined in
-
-[order/OrderAPI.ts:27](https://github.com/bennycode/coinbase-pro-node/blob/9734468/src/order/OrderAPI.ts#L27)
-
-___
-
-### DECREMENT\_AND\_CANCEL
-
-• **DECREMENT\_AND\_CANCEL** = `"dc"`
+• **CANCEL_NEWEST** = `"cn"`
 
 #### Defined in
 
-[order/OrderAPI.ts:28](https://github.com/bennycode/coinbase-pro-node/blob/9734468/src/order/OrderAPI.ts#L28)
+[order/OrderAPI.ts:26](https://github.com/bennycode/coinbase-pro-node/blob/15253ed/src/order/OrderAPI.ts#L26)
+
+---
+
+### CANCEL_OLDEST
+
+• **CANCEL_OLDEST** = `"co"`
+
+#### Defined in
+
+[order/OrderAPI.ts:27](https://github.com/bennycode/coinbase-pro-node/blob/15253ed/src/order/OrderAPI.ts#L27)
+
+---
+
+### DECREMENT_AND_CANCEL
+
+• **DECREMENT_AND_CANCEL** = `"dc"`
+
+#### Defined in
+
+[order/OrderAPI.ts:28](https://github.com/bennycode/coinbase-pro-node/blob/15253ed/src/order/OrderAPI.ts#L28)

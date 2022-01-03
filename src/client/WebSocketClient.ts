@@ -22,6 +22,8 @@ export enum WebSocketChannelName {
   STATUS = 'status',
   /** The ticker channel provides real-time price updates every time a match happens. It batches updates in case of cascading matches, greatly reducing bandwidth requirements. */
   TICKER = 'ticker',
+  /** A special version of the ticker channel that only provides a ticker update about every 5 seconds. */
+  TICKER_1000 = 'ticker_1000',
   /** This channel is a version of the full channel that only contains messages that include the authenticated user. Consequently, you need to be authenticated to receive any messages. */
   USER = 'user',
 }

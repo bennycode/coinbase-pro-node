@@ -10,7 +10,7 @@
 - [side](Trade.md#side)
 - [size](Trade.md#size)
 - [time](Trade.md#time)
-- [trade\_id](Trade.md#trade_id)
+- [trade_id](Trade.md#trade_id)
 
 ## Properties
 
@@ -20,9 +20,9 @@
 
 #### Defined in
 
-[product/ProductAPI.ts:53](https://github.com/bennycode/coinbase-pro-node/blob/9734468/src/product/ProductAPI.ts#L53)
+[product/ProductAPI.ts:53](https://github.com/bennycode/coinbase-pro-node/blob/15253ed/src/product/ProductAPI.ts#L53)
 
-___
+---
 
 ### side
 
@@ -30,9 +30,9 @@ ___
 
 #### Defined in
 
-[product/ProductAPI.ts:54](https://github.com/bennycode/coinbase-pro-node/blob/9734468/src/product/ProductAPI.ts#L54)
+[product/ProductAPI.ts:54](https://github.com/bennycode/coinbase-pro-node/blob/15253ed/src/product/ProductAPI.ts#L54)
 
-___
+---
 
 ### size
 
@@ -40,9 +40,9 @@ ___
 
 #### Defined in
 
-[product/ProductAPI.ts:55](https://github.com/bennycode/coinbase-pro-node/blob/9734468/src/product/ProductAPI.ts#L55)
+[product/ProductAPI.ts:55](https://github.com/bennycode/coinbase-pro-node/blob/15253ed/src/product/ProductAPI.ts#L55)
 
-___
+---
 
 ### time
 
@@ -50,14 +50,14 @@ ___
 
 #### Defined in
 
-[product/ProductAPI.ts:56](https://github.com/bennycode/coinbase-pro-node/blob/9734468/src/product/ProductAPI.ts#L56)
+[product/ProductAPI.ts:56](https://github.com/bennycode/coinbase-pro-node/blob/15253ed/src/product/ProductAPI.ts#L56)
 
-___
+---
 
-### trade\_id
+### trade_id
 
-• **trade\_id**: `number`
+• **trade_id**: `number`
 
 #### Defined in
 
-[product/ProductAPI.ts:57](https://github.com/bennycode/coinbase-pro-node/blob/9734468/src/product/ProductAPI.ts#L57)
+[product/ProductAPI.ts:57](https://github.com/bennycode/coinbase-pro-node/blob/15253ed/src/product/ProductAPI.ts#L57)

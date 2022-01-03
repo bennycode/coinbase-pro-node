@@ -8,69 +8,69 @@ Accepted granularity in seconds to group historic rates.
 
 ### Enumeration members
 
-- [FIFTEEN\_MINUTES](CandleGranularity.md#fifteen_minutes)
-- [FIVE\_MINUTES](CandleGranularity.md#five_minutes)
-- [ONE\_DAY](CandleGranularity.md#one_day)
-- [ONE\_HOUR](CandleGranularity.md#one_hour)
-- [ONE\_MINUTE](CandleGranularity.md#one_minute)
-- [SIX\_HOURS](CandleGranularity.md#six_hours)
+- [FIFTEEN_MINUTES](CandleGranularity.md#fifteen_minutes)
+- [FIVE_MINUTES](CandleGranularity.md#five_minutes)
+- [ONE_DAY](CandleGranularity.md#one_day)
+- [ONE_HOUR](CandleGranularity.md#one_hour)
+- [ONE_MINUTE](CandleGranularity.md#one_minute)
+- [SIX_HOURS](CandleGranularity.md#six_hours)
 
 ## Enumeration members
 
-### FIFTEEN\_MINUTES
+### FIFTEEN_MINUTES
 
-• **FIFTEEN\_MINUTES** = `900`
-
-#### Defined in
-
-[product/ProductAPI.ts:64](https://github.com/bennycode/coinbase-pro-node/blob/9734468/src/product/ProductAPI.ts#L64)
-
-___
-
-### FIVE\_MINUTES
-
-• **FIVE\_MINUTES** = `300`
+• **FIFTEEN_MINUTES** = `900`
 
 #### Defined in
 
-[product/ProductAPI.ts:63](https://github.com/bennycode/coinbase-pro-node/blob/9734468/src/product/ProductAPI.ts#L63)
+[product/ProductAPI.ts:64](https://github.com/bennycode/coinbase-pro-node/blob/15253ed/src/product/ProductAPI.ts#L64)
 
-___
+---
 
-### ONE\_DAY
+### FIVE_MINUTES
 
-• **ONE\_DAY** = `86400`
-
-#### Defined in
-
-[product/ProductAPI.ts:67](https://github.com/bennycode/coinbase-pro-node/blob/9734468/src/product/ProductAPI.ts#L67)
-
-___
-
-### ONE\_HOUR
-
-• **ONE\_HOUR** = `3600`
+• **FIVE_MINUTES** = `300`
 
 #### Defined in
 
-[product/ProductAPI.ts:65](https://github.com/bennycode/coinbase-pro-node/blob/9734468/src/product/ProductAPI.ts#L65)
+[product/ProductAPI.ts:63](https://github.com/bennycode/coinbase-pro-node/blob/15253ed/src/product/ProductAPI.ts#L63)
 
-___
+---
 
-### ONE\_MINUTE
+### ONE_DAY
 
-• **ONE\_MINUTE** = `60`
-
-#### Defined in
-
-[product/ProductAPI.ts:62](https://github.com/bennycode/coinbase-pro-node/blob/9734468/src/product/ProductAPI.ts#L62)
-
-___
-
-### SIX\_HOURS
-
-• **SIX\_HOURS** = `21600`
+• **ONE_DAY** = `86400`
 
 #### Defined in
 
-[product/ProductAPI.ts:66](https://github.com/bennycode/coinbase-pro-node/blob/9734468/src/product/ProductAPI.ts#L66)
+[product/ProductAPI.ts:67](https://github.com/bennycode/coinbase-pro-node/blob/15253ed/src/product/ProductAPI.ts#L67)
+
+---
+
+### ONE_HOUR
+
+• **ONE_HOUR** = `3600`
+
+#### Defined in
+
+[product/ProductAPI.ts:65](https://github.com/bennycode/coinbase-pro-node/blob/15253ed/src/product/ProductAPI.ts#L65)
+
+---
+
+### ONE_MINUTE
+
+• **ONE_MINUTE** = `60`
+
+#### Defined in
+
+[product/ProductAPI.ts:62](https://github.com/bennycode/coinbase-pro-node/blob/15253ed/src/product/ProductAPI.ts#L62)
+
+---
+
+### SIX_HOURS
+
+• **SIX_HOURS** = `21600`
+
+#### Defined in
+
+[product/ProductAPI.ts:66](https://github.com/bennycode/coinbase-pro-node/blob/15253ed/src/product/ProductAPI.ts#L66)

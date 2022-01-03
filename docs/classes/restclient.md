@@ -46,14 +46,14 @@
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `baseURL` | `string` |
+| Name          | Type                                                     |
+| :------------ | :------------------------------------------------------- |
+| `baseURL`     | `string`                                                 |
 | `signRequest` | (`setup`: `RequestSetup`) => `Promise`<`SignedRequest`\> |
 
 #### Defined in
 
-[client/RESTClient.ts:55](https://github.com/bennycode/coinbase-pro-node/blob/9734468/src/client/RESTClient.ts#L55)
+[client/RESTClient.ts:62](https://github.com/bennycode/coinbase-pro-node/blob/15253ed/src/client/RESTClient.ts#L62)
 
 ## Properties
 
@@ -63,9 +63,9 @@
 
 #### Defined in
 
-[client/RESTClient.ts:40](https://github.com/bennycode/coinbase-pro-node/blob/9734468/src/client/RESTClient.ts#L40)
+[client/RESTClient.ts:47](https://github.com/bennycode/coinbase-pro-node/blob/15253ed/src/client/RESTClient.ts#L47)
 
-___
+---
 
 ### currency
 
@@ -73,9 +73,9 @@ ___
 
 #### Defined in
 
-[client/RESTClient.ts:41](https://github.com/bennycode/coinbase-pro-node/blob/9734468/src/client/RESTClient.ts#L41)
+[client/RESTClient.ts:48](https://github.com/bennycode/coinbase-pro-node/blob/15253ed/src/client/RESTClient.ts#L48)
 
-___
+---
 
 ### fee
 
@@ -83,9 +83,9 @@ ___
 
 #### Defined in
 
-[client/RESTClient.ts:42](https://github.com/bennycode/coinbase-pro-node/blob/9734468/src/client/RESTClient.ts#L42)
+[client/RESTClient.ts:49](https://github.com/bennycode/coinbase-pro-node/blob/15253ed/src/client/RESTClient.ts#L49)
 
-___
+---
 
 ### fill
 
@@ -93,9 +93,9 @@ ___
 
 #### Defined in
 
-[client/RESTClient.ts:43](https://github.com/bennycode/coinbase-pro-node/blob/9734468/src/client/RESTClient.ts#L43)
+[client/RESTClient.ts:50](https://github.com/bennycode/coinbase-pro-node/blob/15253ed/src/client/RESTClient.ts#L50)
 
-___
+---
 
 ### order
 
@@ -103,9 +103,9 @@ ___
 
 #### Defined in
 
-[client/RESTClient.ts:44](https://github.com/bennycode/coinbase-pro-node/blob/9734468/src/client/RESTClient.ts#L44)
+[client/RESTClient.ts:51](https://github.com/bennycode/coinbase-pro-node/blob/15253ed/src/client/RESTClient.ts#L51)
 
-___
+---
 
 ### product
 
@@ -113,9 +113,9 @@ ___
 
 #### Defined in
 
-[client/RESTClient.ts:45](https://github.com/bennycode/coinbase-pro-node/blob/9734468/src/client/RESTClient.ts#L45)
+[client/RESTClient.ts:52](https://github.com/bennycode/coinbase-pro-node/blob/15253ed/src/client/RESTClient.ts#L52)
 
-___
+---
 
 ### profile
 
@@ -123,9 +123,9 @@ ___
 
 #### Defined in
 
-[client/RESTClient.ts:46](https://github.com/bennycode/coinbase-pro-node/blob/9734468/src/client/RESTClient.ts#L46)
+[client/RESTClient.ts:53](https://github.com/bennycode/coinbase-pro-node/blob/15253ed/src/client/RESTClient.ts#L53)
 
-___
+---
 
 ### time
 
@@ -133,9 +133,9 @@ ___
 
 #### Defined in
 
-[client/RESTClient.ts:47](https://github.com/bennycode/coinbase-pro-node/blob/9734468/src/client/RESTClient.ts#L47)
+[client/RESTClient.ts:54](https://github.com/bennycode/coinbase-pro-node/blob/15253ed/src/client/RESTClient.ts#L54)
 
-___
+---
 
 ### transfer
 
@@ -143,9 +143,9 @@ ___
 
 #### Defined in
 
-[client/RESTClient.ts:48](https://github.com/bennycode/coinbase-pro-node/blob/9734468/src/client/RESTClient.ts#L48)
+[client/RESTClient.ts:55](https://github.com/bennycode/coinbase-pro-node/blob/15253ed/src/client/RESTClient.ts#L55)
 
-___
+---
 
 ### user
 
@@ -153,9 +153,9 @@ ___
 
 #### Defined in
 
-[client/RESTClient.ts:49](https://github.com/bennycode/coinbase-pro-node/blob/9734468/src/client/RESTClient.ts#L49)
+[client/RESTClient.ts:56](https://github.com/bennycode/coinbase-pro-node/blob/15253ed/src/client/RESTClient.ts#L56)
 
-___
+---
 
 ### withdraw
 
@@ -163,23 +163,23 @@ ___
 
 #### Defined in
 
-[client/RESTClient.ts:50](https://github.com/bennycode/coinbase-pro-node/blob/9734468/src/client/RESTClient.ts#L50)
+[client/RESTClient.ts:57](https://github.com/bennycode/coinbase-pro-node/blob/15253ed/src/client/RESTClient.ts#L57)
 
 ## Accessors
 
 ### defaults
 
-• `get` **defaults**(): `AxiosRequestConfig`
+• `get` **defaults**(): `AxiosDefaults`<`any`\>
 
 #### Returns
 
-`AxiosRequestConfig`
+`AxiosDefaults`<`any`\>
 
 #### Defined in
 
-[client/RESTClient.ts:29](https://github.com/bennycode/coinbase-pro-node/blob/9734468/src/client/RESTClient.ts#L29)
+[client/RESTClient.ts:36](https://github.com/bennycode/coinbase-pro-node/blob/15253ed/src/client/RESTClient.ts#L36)
 
-___
+---
 
 ### interceptors
 
@@ -189,14 +189,14 @@ ___
 
 `Object`
 
-| Name | Type |
-| :------ | :------ |
-| `request` | `AxiosInterceptorManager`<`AxiosRequestConfig`\> |
-| `response` | `AxiosInterceptorManager`<`AxiosResponse`<`any`\>\> |
+| Name       | Type                                                       |
+| :--------- | :--------------------------------------------------------- |
+| `request`  | `AxiosInterceptorManager`<`AxiosRequestConfig`<`any`\>\>   |
+| `response` | `AxiosInterceptorManager`<`AxiosResponse`<`any`, `any`\>\> |
 
 #### Defined in
 
-[client/RESTClient.ts:33](https://github.com/bennycode/coinbase-pro-node/blob/9734468/src/client/RESTClient.ts#L33)
+[client/RESTClient.ts:40](https://github.com/bennycode/coinbase-pro-node/blob/15253ed/src/client/RESTClient.ts#L40)
 
 ## Methods
 
@@ -207,7 +207,7 @@ ___
 #### Parameters
 
 | Name | Type |
-| :------ | :------ |
+| :-- | :-- |
 | `event` | [`NEW_CANDLE`](../enums/ProductEvent.md#new_candle) |
 | `listener` | (`productId`: `string`, `granularity`: [`CandleGranularity`](../enums/CandleGranularity.md), `candle`: [`Candle`](../interfaces/Candle.md)) => `void` |
 
@@ -217,9 +217,9 @@ ___
 
 #### Defined in
 
-[client/RESTClient.ts:21](https://github.com/bennycode/coinbase-pro-node/blob/9734468/src/client/RESTClient.ts#L21)
+[client/RESTClient.ts:28](https://github.com/bennycode/coinbase-pro-node/blob/15253ed/src/client/RESTClient.ts#L28)
 
-___
+---
 
 ### stringifyPayload
 
@@ -227,9 +227,9 @@ ___
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `config` | `AxiosRequestConfig` |
+| Name     | Type                         |
+| :------- | :--------------------------- |
+| `config` | `AxiosRequestConfig`<`any`\> |
 
 #### Returns
 
@@ -237,4 +237,4 @@ ___
 
 #### Defined in
 
-[client/RESTClient.ts:120](https://github.com/bennycode/coinbase-pro-node/blob/9734468/src/client/RESTClient.ts#L120)
+[client/RESTClient.ts:127](https://github.com/bennycode/coinbase-pro-node/blob/15253ed/src/client/RESTClient.ts#L127)

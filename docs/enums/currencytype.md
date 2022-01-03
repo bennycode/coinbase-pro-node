@@ -17,9 +17,9 @@
 
 #### Defined in
 
-[currency/CurrencyAPI.ts:13](https://github.com/bennycode/coinbase-pro-node/blob/9734468/src/currency/CurrencyAPI.ts#L13)
+[currency/CurrencyAPI.ts:13](https://github.com/bennycode/coinbase-pro-node/blob/15253ed/src/currency/CurrencyAPI.ts#L13)
 
-___
+---
 
 ### FIAT
 
@@ -27,4 +27,4 @@ ___
 
 #### Defined in
 
-[currency/CurrencyAPI.ts:14](https://github.com/bennycode/coinbase-pro-node/blob/9734468/src/currency/CurrencyAPI.ts#L14)
+[currency/CurrencyAPI.ts:14](https://github.com/bennycode/coinbase-pro-node/blob/15253ed/src/currency/CurrencyAPI.ts#L14)

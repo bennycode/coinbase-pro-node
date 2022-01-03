@@ -17,9 +17,9 @@
 
 #### Defined in
 
-[account/AccountAPI.ts:39](https://github.com/bennycode/coinbase-pro-node/blob/9734468/src/account/AccountAPI.ts#L39)
+[account/AccountAPI.ts:39](https://github.com/bennycode/coinbase-pro-node/blob/15253ed/src/account/AccountAPI.ts#L39)
 
-___
+---
 
 ### WALLET
 
@@ -27,4 +27,4 @@ ___
 
 #### Defined in
 
-[account/AccountAPI.ts:40](https://github.com/bennycode/coinbase-pro-node/blob/9734468/src/account/AccountAPI.ts#L40)
+[account/AccountAPI.ts:40](https://github.com/bennycode/coinbase-pro-node/blob/15253ed/src/account/AccountAPI.ts#L40)

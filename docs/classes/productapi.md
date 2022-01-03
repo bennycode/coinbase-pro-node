@@ -32,14 +32,14 @@
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `apiClient` | `AxiosInstance` |
+| Name         | Type                          |
+| :----------- | :---------------------------- |
+| `apiClient`  | `AxiosInstance`               |
 | `restClient` | [`RESTClient`](RESTClient.md) |
 
 #### Defined in
 
-[product/ProductAPI.ts:191](https://github.com/bennycode/coinbase-pro-node/blob/9734468/src/product/ProductAPI.ts#L191)
+[product/ProductAPI.ts:191](https://github.com/bennycode/coinbase-pro-node/blob/15253ed/src/product/ProductAPI.ts#L191)
 
 ## Properties
 
@@ -49,13 +49,13 @@
 
 #### Type declaration
 
-| Name | Type |
-| :------ | :------ |
+| Name       | Type     |
+| :--------- | :------- |
 | `PRODUCTS` | `string` |
 
 #### Defined in
 
-[product/ProductAPI.ts:178](https://github.com/bennycode/coinbase-pro-node/blob/9734468/src/product/ProductAPI.ts#L178)
+[product/ProductAPI.ts:178](https://github.com/bennycode/coinbase-pro-node/blob/15253ed/src/product/ProductAPI.ts#L178)
 
 ## Methods
 
@@ -63,21 +63,18 @@
 
 ▸ **getCandles**(`productId`, `params`): `Promise`<[`Candle`](../interfaces/Candle.md)[]\>
 
-Get historic rates for a product. Rates are returned in grouped buckets (candlesticks) based on requested
-granularity.
+Get historic rates for a product. Rates are returned in grouped buckets (candlesticks) based on requested granularity.
 
-Note: The maximum number of data points for a single request is 300 candles. If your selection of start/end time
-and granularity will result in more than 300 data points, your request will be rejected. If you wish to retrieve
-fine granularity data over a larger time range, you will need to make multiple requests with new start/end ranges.
+Note: The maximum number of data points for a single request is 300 candles. If your selection of start/end time and granularity will result in more than 300 data points, your request will be rejected. If you wish to retrieve fine granularity data over a larger time range, you will need to make multiple requests with new start/end ranges.
 
 **`see`** https://docs.pro.coinbase.com/#get-historic-rates
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `productId` | `string` | Representation for base and counter |
-| `params` | [`HistoricRateRequest`](../modules.md#historicraterequest) | - |
+| Name        | Type                                                       | Description                         |
+| :---------- | :--------------------------------------------------------- | :---------------------------------- |
+| `productId` | `string`                                                   | Representation for base and counter |
+| `params`    | [`HistoricRateRequest`](../modules.md#historicraterequest) | -                                   |
 
 #### Returns
 
@@ -85,9 +82,9 @@ fine granularity data over a larger time range, you will need to make multiple r
 
 #### Defined in
 
-[product/ProductAPI.ts:205](https://github.com/bennycode/coinbase-pro-node/blob/9734468/src/product/ProductAPI.ts#L205)
+[product/ProductAPI.ts:205](https://github.com/bennycode/coinbase-pro-node/blob/15253ed/src/product/ProductAPI.ts#L205)
 
-___
+---
 
 ### getProduct
 
@@ -99,8 +96,8 @@ Get trading details for a specified product.
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name        | Type     |
+| :---------- | :------- |
 | `productId` | `string` |
 
 #### Returns
@@ -109,23 +106,22 @@ Get trading details for a specified product.
 
 #### Defined in
 
-[product/ProductAPI.ts:286](https://github.com/bennycode/coinbase-pro-node/blob/9734468/src/product/ProductAPI.ts#L286)
+[product/ProductAPI.ts:286](https://github.com/bennycode/coinbase-pro-node/blob/15253ed/src/product/ProductAPI.ts#L286)
 
-___
+---
 
 ### getProductOrderBook
 
 ▸ **getProductOrderBook**(`productId`, `params?`): `Promise`<[`OrderBookLevel1`](../interfaces/OrderBookLevel1.md)\>
 
-Get a list of open orders for a product. The amount of detail shown can be customized with the level parameter.
-By default, only the inside (i.e. best) bid and ask are returned. This is equivalent to a book depth of 1 level.
+Get a list of open orders for a product. The amount of detail shown can be customized with the level parameter. By default, only the inside (i.e. best) bid and ask are returned. This is equivalent to a book depth of 1 level.
 
 **`see`** https://docs.pro.coinbase.com/#get-product-order-book
 
 #### Parameters
 
 | Name | Type | Description |
-| :------ | :------ | :------ |
+| :-- | :-- | :-- |
 | `productId` | `string` | Representation for base and counter |
 | `params?` | `Object` | Amount of detail |
 | `params.level` | [`ONLY_BEST_BID_AND_ASK`](../enums/OrderBookLevel.md#only_best_bid_and_ask) | - |
@@ -136,16 +132,16 @@ By default, only the inside (i.e. best) bid and ask are returned. This is equiva
 
 #### Defined in
 
-[product/ProductAPI.ts:330](https://github.com/bennycode/coinbase-pro-node/blob/9734468/src/product/ProductAPI.ts#L330)
+[product/ProductAPI.ts:330](https://github.com/bennycode/coinbase-pro-node/blob/15253ed/src/product/ProductAPI.ts#L330)
 
 ▸ **getProductOrderBook**(`productId`, `params?`): `Promise`<[`OrderBookLevel2`](../interfaces/OrderBookLevel2.md)\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `productId` | `string` |
-| `params?` | `Object` |
+| Name           | Type                                                                      |
+| :------------- | :------------------------------------------------------------------------ |
+| `productId`    | `string`                                                                  |
+| `params?`      | `Object`                                                                  |
 | `params.level` | [`TOP_50_BIDS_AND_ASKS`](../enums/OrderBookLevel.md#top_50_bids_and_asks) |
 
 #### Returns
@@ -154,16 +150,16 @@ By default, only the inside (i.e. best) bid and ask are returned. This is equiva
 
 #### Defined in
 
-[product/ProductAPI.ts:334](https://github.com/bennycode/coinbase-pro-node/blob/9734468/src/product/ProductAPI.ts#L334)
+[product/ProductAPI.ts:334](https://github.com/bennycode/coinbase-pro-node/blob/15253ed/src/product/ProductAPI.ts#L334)
 
 ▸ **getProductOrderBook**(`productId`, `params?`): `Promise`<[`OrderBookLevel3`](../interfaces/OrderBookLevel3.md)\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `productId` | `string` |
-| `params?` | `Object` |
+| Name           | Type                                                            |
+| :------------- | :-------------------------------------------------------------- |
+| `productId`    | `string`                                                        |
+| `params?`      | `Object`                                                        |
 | `params.level` | [`FULL_ORDER_BOOK`](../enums/OrderBookLevel.md#full_order_book) |
 
 #### Returns
@@ -172,9 +168,9 @@ By default, only the inside (i.e. best) bid and ask are returned. This is equiva
 
 #### Defined in
 
-[product/ProductAPI.ts:338](https://github.com/bennycode/coinbase-pro-node/blob/9734468/src/product/ProductAPI.ts#L338)
+[product/ProductAPI.ts:338](https://github.com/bennycode/coinbase-pro-node/blob/15253ed/src/product/ProductAPI.ts#L338)
 
-___
+---
 
 ### getProductStats
 
@@ -186,8 +182,8 @@ Get latest 24 hours of movement data for a product.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
+| Name        | Type     | Description                         |
+| :---------- | :------- | :---------------------------------- |
 | `productId` | `string` | Representation for base and counter |
 
 #### Returns
@@ -196,9 +192,9 @@ Get latest 24 hours of movement data for a product.
 
 #### Defined in
 
-[product/ProductAPI.ts:369](https://github.com/bennycode/coinbase-pro-node/blob/9734468/src/product/ProductAPI.ts#L369)
+[product/ProductAPI.ts:369](https://github.com/bennycode/coinbase-pro-node/blob/15253ed/src/product/ProductAPI.ts#L369)
 
-___
+---
 
 ### getProductTicker
 
@@ -210,8 +206,8 @@ Get snapshot information about the last trade (tick), best bid/ask and 24h volum
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
+| Name        | Type     | Description                         |
+| :---------- | :------- | :---------------------------------- |
 | `productId` | `string` | Representation for base and counter |
 
 #### Returns
@@ -220,9 +216,9 @@ Get snapshot information about the last trade (tick), best bid/ask and 24h volum
 
 #### Defined in
 
-[product/ProductAPI.ts:381](https://github.com/bennycode/coinbase-pro-node/blob/9734468/src/product/ProductAPI.ts#L381)
+[product/ProductAPI.ts:381](https://github.com/bennycode/coinbase-pro-node/blob/15253ed/src/product/ProductAPI.ts#L381)
 
-___
+---
 
 ### getProducts
 
@@ -238,9 +234,9 @@ Get trading details of all available products.
 
 #### Defined in
 
-[product/ProductAPI.ts:297](https://github.com/bennycode/coinbase-pro-node/blob/9734468/src/product/ProductAPI.ts#L297)
+[product/ProductAPI.ts:297](https://github.com/bennycode/coinbase-pro-node/blob/15253ed/src/product/ProductAPI.ts#L297)
 
-___
+---
 
 ### getTrades
 
@@ -252,10 +248,10 @@ Get latest trades for a product.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `productId` | `string` | Representation for base and counter |
-| `pagination?` | `Pagination` | Pagination field |
+| Name          | Type         | Description                         |
+| :------------ | :----------- | :---------------------------------- |
+| `productId`   | `string`     | Representation for base and counter |
+| `pagination?` | `Pagination` | Pagination field                    |
 
 #### Returns
 
@@ -263,9 +259,9 @@ Get latest trades for a product.
 
 #### Defined in
 
-[product/ProductAPI.ts:310](https://github.com/bennycode/coinbase-pro-node/blob/9734468/src/product/ProductAPI.ts#L310)
+[product/ProductAPI.ts:310](https://github.com/bennycode/coinbase-pro-node/blob/15253ed/src/product/ProductAPI.ts#L310)
 
-___
+---
 
 ### unwatchCandles
 
@@ -275,10 +271,10 @@ Stop watching a specific candle interval.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `productId` | `string` | Representation for base and counter |
-| `granularity` | [`CandleGranularity`](../enums/CandleGranularity.md) | Desired candle size |
+| Name          | Type                                                 | Description                         |
+| :------------ | :--------------------------------------------------- | :---------------------------------- |
+| `productId`   | `string`                                             | Representation for base and counter |
+| `granularity` | [`CandleGranularity`](../enums/CandleGranularity.md) | Desired candle size                 |
 
 #### Returns
 
@@ -286,9 +282,9 @@ Stop watching a specific candle interval.
 
 #### Defined in
 
-[product/ProductAPI.ts:272](https://github.com/bennycode/coinbase-pro-node/blob/9734468/src/product/ProductAPI.ts#L272)
+[product/ProductAPI.ts:272](https://github.com/bennycode/coinbase-pro-node/blob/15253ed/src/product/ProductAPI.ts#L272)
 
-___
+---
 
 ### watchCandles
 
@@ -299,7 +295,7 @@ Watch a specific product ID for new candles. Candles will be emitted through the
 #### Parameters
 
 | Name | Type | Description |
-| :------ | :------ | :------ |
+| :-- | :-- | :-- |
 | `productId` | `string` | Representation for base and counter |
 | `granularity` | [`CandleGranularity`](../enums/CandleGranularity.md) | Desired candle size |
 | `lastCandleTime` | `string` | Timestamp (ISO 8601) of last candle received |
@@ -312,4 +308,4 @@ Handle to stop the watch interval
 
 #### Defined in
 
-[product/ProductAPI.ts:249](https://github.com/bennycode/coinbase-pro-node/blob/9734468/src/product/ProductAPI.ts#L249)
+[product/ProductAPI.ts:249](https://github.com/bennycode/coinbase-pro-node/blob/15253ed/src/product/ProductAPI.ts#L249)

@@ -335,6 +335,22 @@ describe('WebSocketClient', () => {
       ws.connect();
     });
 
+    it('receives typed "ticker" messages from the special "ticker_1000" channel', done => {
+      const channel = {
+        name: WebSocketChannelName.TICKER_1000,
+        product_ids: ['BTC-USD'],
+      };
+
+      const ws = mockWebSocketResponse(done, channel, tickerBTCUSD);
+
+      ws.on(WebSocketEvent.ON_MESSAGE_TICKER, tickerMessage => {
+        expect(tickerMessage.trade_id).toBe(3526965);
+        ws.unsubscribe(channel);
+      });
+
+      ws.connect();
+    });
+
     it('receives typed messages from multiple "matches" channels', done => {
       const channels = [
         {
