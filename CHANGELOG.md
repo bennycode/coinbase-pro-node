@@ -1,3 +1,24 @@
+### 3.1.0 (2022-01-03)
+
+##### Chores
+
+- **deps-dev:**
+  - bump @typescript-eslint/parser from 5.8.0 to 5.8.1 ([#652](https://github.com/bennycode/coinbase-pro-node/pull/652)) ([8e1bdb8e](https://github.com/bennycode/coinbase-pro-node/commit/8e1bdb8e832a04d15e031a584c869b53f19b5c8e))
+  - bump eslint from 8.5.0 to 8.6.0 ([#654](https://github.com/bennycode/coinbase-pro-node/pull/654)) ([6adf2338](https://github.com/bennycode/coinbase-pro-node/commit/6adf2338190ea8d126412c389950ce3bc0c884fb))
+  - bump lint-staged from 12.1.3 to 12.1.4 ([#651](https://github.com/bennycode/coinbase-pro-node/pull/651)) ([4d927dce](https://github.com/bennycode/coinbase-pro-node/commit/4d927dce01d22c2d895848cfa5827772242048f6))
+  - bump pretty-quick from 3.1.2 to 3.1.3 ([#653](https://github.com/bennycode/coinbase-pro-node/pull/653)) ([e0815029](https://github.com/bennycode/coinbase-pro-node/commit/e08150292172ff3a7b64f54aade105ee66dd5419))
+  - bump @typescript-eslint/eslint-plugin ([#650](https://github.com/bennycode/coinbase-pro-node/pull/650)) ([93eaa215](https://github.com/bennycode/coinbase-pro-node/commit/93eaa2154c1a9618d4971e3168f738c24e893b05))
+
+##### New Features
+
+- Add getter for determining if WebSocket is connected ([#656](https://github.com/bennycode/coinbase-pro-node/pull/656)) ([7947d7fd](https://github.com/bennycode/coinbase-pro-node/commit/7947d7fd187bfbfca47525c32c3136c4bd69b2b6))
+- Add additional WebSocket message types ([#606](https://github.com/bennycode/coinbase-pro-node/pull/606)) ([6bf86e44](https://github.com/bennycode/coinbase-pro-node/commit/6bf86e44aa5c566e20c2237bf344d8100f4f9702))
+- Add ticker_1000 WebSocket channel ([#655](https://github.com/bennycode/coinbase-pro-node/pull/655)) ([6c798745](https://github.com/bennycode/coinbase-pro-node/commit/6c7987451ea88ac5fd9e72fe75dfb75fdfbde259))
+
+##### Refactors
+
+- Add spacing ([67afbc7c](https://github.com/bennycode/coinbase-pro-node/commit/67afbc7cc2c55af89ef07c764e36a9aff7562330))
+
 #### 3.0.9 (2021-12-20)
 
 ##### Chores
