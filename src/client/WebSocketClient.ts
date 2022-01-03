@@ -194,14 +194,14 @@ export interface WebSocketTickerMessage {
 }
 
 export interface WebSocketL2SnapshotMessage {
-  asks: [[string, string]];
-  bids: [[string, string]];
+  asks: [string, string][];
+  bids: [string, string][];
   product_id: string;
   type: WebSocketResponseType.LEVEL2_SNAPSHOT;
 }
 
 export interface WebSocketL2UpdateMessage {
-  changes: [[string, string, string]];
+  changes: [string, string, string][];
   product_id: string;
   type: WebSocketResponseType.LEVEL2_UPDATE;
 }
