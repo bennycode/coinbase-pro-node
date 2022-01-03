@@ -31,7 +31,7 @@
 
 #### Defined in
 
-[fill/FillAPI.ts:30](https://github.com/bennycode/coinbase-pro-node/blob/15253ed/src/fill/FillAPI.ts#L30)
+[fill/FillAPI.ts:30](https://github.com/bennycode/coinbase-pro-node/blob/208278f/src/fill/FillAPI.ts#L30)
 
 ## Properties
 
@@ -47,7 +47,7 @@
 
 #### Defined in
 
-[fill/FillAPI.ts:26](https://github.com/bennycode/coinbase-pro-node/blob/15253ed/src/fill/FillAPI.ts#L26)
+[fill/FillAPI.ts:26](https://github.com/bennycode/coinbase-pro-node/blob/208278f/src/fill/FillAPI.ts#L26)
 
 ## Methods
 
@@ -74,7 +74,7 @@ Get a list of recent fills for a given Order of the API key's profile.
 
 #### Defined in
 
-[fill/FillAPI.ts:40](https://github.com/bennycode/coinbase-pro-node/blob/15253ed/src/fill/FillAPI.ts#L40)
+[fill/FillAPI.ts:40](https://github.com/bennycode/coinbase-pro-node/blob/208278f/src/fill/FillAPI.ts#L40)
 
 ---
 
@@ -101,4 +101,4 @@ Get a list of recent fills for a given Product of the API key's profile.
 
 #### Defined in
 
-[fill/FillAPI.ts:60](https://github.com/bennycode/coinbase-pro-node/blob/15253ed/src/fill/FillAPI.ts#L60)
+[fill/FillAPI.ts:60](https://github.com/bennycode/coinbase-pro-node/blob/208278f/src/fill/FillAPI.ts#L60)

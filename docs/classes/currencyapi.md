@@ -30,7 +30,7 @@
 
 #### Defined in
 
-[currency/CurrencyAPI.ts:34](https://github.com/bennycode/coinbase-pro-node/blob/15253ed/src/currency/CurrencyAPI.ts#L34)
+[currency/CurrencyAPI.ts:34](https://github.com/bennycode/coinbase-pro-node/blob/208278f/src/currency/CurrencyAPI.ts#L34)
 
 ## Properties
 
@@ -46,7 +46,7 @@
 
 #### Defined in
 
-[currency/CurrencyAPI.ts:30](https://github.com/bennycode/coinbase-pro-node/blob/15253ed/src/currency/CurrencyAPI.ts#L30)
+[currency/CurrencyAPI.ts:30](https://github.com/bennycode/coinbase-pro-node/blob/208278f/src/currency/CurrencyAPI.ts#L30)
 
 ## Methods
 
@@ -64,4 +64,4 @@ List known currencies. Currency codes will conform to the ISO 4217 standard wher
 
 #### Defined in
 
-[currency/CurrencyAPI.ts:43](https://github.com/bennycode/coinbase-pro-node/blob/15253ed/src/currency/CurrencyAPI.ts#L43)
+[currency/CurrencyAPI.ts:43](https://github.com/bennycode/coinbase-pro-node/blob/208278f/src/currency/CurrencyAPI.ts#L43)

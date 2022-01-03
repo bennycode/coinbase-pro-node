@@ -19,6 +19,10 @@
 - [socket](WebSocketClient.md#socket)
 - [CLOSE_EVENT_CODE](WebSocketClient.md#close_event_code)
 
+### Accessors
+
+- [connected](WebSocketClient.md#connected)
+
 ### Methods
 
 - [connect](WebSocketClient.md#connect)
@@ -43,7 +47,7 @@
 
 #### Defined in
 
-[client/WebSocketClient.ts:246](https://github.com/bennycode/coinbase-pro-node/blob/15253ed/src/client/WebSocketClient.ts#L246)
+[client/WebSocketClient.ts:367](https://github.com/bennycode/coinbase-pro-node/blob/208278f/src/client/WebSocketClient.ts#L367)
 
 ## Properties
 
@@ -53,7 +57,7 @@
 
 #### Defined in
 
-[client/WebSocketClient.ts:238](https://github.com/bennycode/coinbase-pro-node/blob/15253ed/src/client/WebSocketClient.ts#L238)
+[client/WebSocketClient.ts:359](https://github.com/bennycode/coinbase-pro-node/blob/208278f/src/client/WebSocketClient.ts#L359)
 
 ---
 
@@ -72,7 +76,25 @@
 
 #### Defined in
 
-[client/WebSocketClient.ts:230](https://github.com/bennycode/coinbase-pro-node/blob/15253ed/src/client/WebSocketClient.ts#L230)
+[client/WebSocketClient.ts:351](https://github.com/bennycode/coinbase-pro-node/blob/208278f/src/client/WebSocketClient.ts#L351)
+
+## Accessors
+
+### connected
+
+• `get` **connected**(): `boolean`
+
+A simple function to determine if the websocket appears to be open.
+
+#### Returns
+
+`boolean`
+
+True if the websocket has been opened and has not closed.
+
+#### Defined in
+
+[client/WebSocketClient.ts:479](https://github.com/bennycode/coinbase-pro-node/blob/208278f/src/client/WebSocketClient.ts#L479)
 
 ## Methods
 
@@ -96,7 +118,7 @@ The websocket feed is publicly available, but connections to it are rate-limited
 
 #### Defined in
 
-[client/WebSocketClient.ts:260](https://github.com/bennycode/coinbase-pro-node/blob/15253ed/src/client/WebSocketClient.ts#L260)
+[client/WebSocketClient.ts:381](https://github.com/bennycode/coinbase-pro-node/blob/208278f/src/client/WebSocketClient.ts#L381)
 
 ---
 
@@ -116,7 +138,7 @@ The websocket feed is publicly available, but connections to it are rate-limited
 
 #### Defined in
 
-[client/WebSocketClient.ts:325](https://github.com/bennycode/coinbase-pro-node/blob/15253ed/src/client/WebSocketClient.ts#L325)
+[client/WebSocketClient.ts:467](https://github.com/bennycode/coinbase-pro-node/blob/208278f/src/client/WebSocketClient.ts#L467)
 
 ---
 
@@ -137,7 +159,7 @@ The websocket feed is publicly available, but connections to it are rate-limited
 
 #### Defined in
 
-[client/WebSocketClient.ts:206](https://github.com/bennycode/coinbase-pro-node/blob/15253ed/src/client/WebSocketClient.ts#L206)
+[client/WebSocketClient.ts:307](https://github.com/bennycode/coinbase-pro-node/blob/208278f/src/client/WebSocketClient.ts#L307)
 
 ▸ **on**(`event`, `listener`): [`WebSocketClient`](WebSocketClient.md)
 
@@ -154,7 +176,7 @@ The websocket feed is publicly available, but connections to it are rate-limited
 
 #### Defined in
 
-[client/WebSocketClient.ts:208](https://github.com/bennycode/coinbase-pro-node/blob/15253ed/src/client/WebSocketClient.ts#L208)
+[client/WebSocketClient.ts:309](https://github.com/bennycode/coinbase-pro-node/blob/208278f/src/client/WebSocketClient.ts#L309)
 
 ▸ **on**(`event`, `listener`): [`WebSocketClient`](WebSocketClient.md)
 
@@ -171,7 +193,7 @@ The websocket feed is publicly available, but connections to it are rate-limited
 
 #### Defined in
 
-[client/WebSocketClient.ts:210](https://github.com/bennycode/coinbase-pro-node/blob/15253ed/src/client/WebSocketClient.ts#L210)
+[client/WebSocketClient.ts:311](https://github.com/bennycode/coinbase-pro-node/blob/208278f/src/client/WebSocketClient.ts#L311)
 
 ▸ **on**(`event`, `listener`): [`WebSocketClient`](WebSocketClient.md)
 
@@ -188,7 +210,7 @@ The websocket feed is publicly available, but connections to it are rate-limited
 
 #### Defined in
 
-[client/WebSocketClient.ts:212](https://github.com/bennycode/coinbase-pro-node/blob/15253ed/src/client/WebSocketClient.ts#L212)
+[client/WebSocketClient.ts:313](https://github.com/bennycode/coinbase-pro-node/blob/208278f/src/client/WebSocketClient.ts#L313)
 
 ▸ **on**(`event`, `listener`): [`WebSocketClient`](WebSocketClient.md)
 
@@ -205,7 +227,7 @@ The websocket feed is publicly available, but connections to it are rate-limited
 
 #### Defined in
 
-[client/WebSocketClient.ts:214](https://github.com/bennycode/coinbase-pro-node/blob/15253ed/src/client/WebSocketClient.ts#L214)
+[client/WebSocketClient.ts:315](https://github.com/bennycode/coinbase-pro-node/blob/208278f/src/client/WebSocketClient.ts#L315)
 
 ▸ **on**(`event`, `listener`): [`WebSocketClient`](WebSocketClient.md)
 
@@ -222,7 +244,7 @@ The websocket feed is publicly available, but connections to it are rate-limited
 
 #### Defined in
 
-[client/WebSocketClient.ts:219](https://github.com/bennycode/coinbase-pro-node/blob/15253ed/src/client/WebSocketClient.ts#L219)
+[client/WebSocketClient.ts:320](https://github.com/bennycode/coinbase-pro-node/blob/208278f/src/client/WebSocketClient.ts#L320)
 
 ▸ **on**(`event`, `listener`): [`WebSocketClient`](WebSocketClient.md)
 
@@ -239,7 +261,7 @@ The websocket feed is publicly available, but connections to it are rate-limited
 
 #### Defined in
 
-[client/WebSocketClient.ts:221](https://github.com/bennycode/coinbase-pro-node/blob/15253ed/src/client/WebSocketClient.ts#L221)
+[client/WebSocketClient.ts:322](https://github.com/bennycode/coinbase-pro-node/blob/208278f/src/client/WebSocketClient.ts#L322)
 
 ▸ **on**(`event`, `listener`): [`WebSocketClient`](WebSocketClient.md)
 
@@ -256,7 +278,126 @@ The websocket feed is publicly available, but connections to it are rate-limited
 
 #### Defined in
 
-[client/WebSocketClient.ts:223](https://github.com/bennycode/coinbase-pro-node/blob/15253ed/src/client/WebSocketClient.ts#L223)
+[client/WebSocketClient.ts:324](https://github.com/bennycode/coinbase-pro-node/blob/208278f/src/client/WebSocketClient.ts#L324)
+
+▸ **on**(`event`, `listener`): [`WebSocketClient`](WebSocketClient.md)
+
+#### Parameters
+
+| Name | Type |
+| :-- | :-- |
+| `event` | [`ON_MESSAGE_L2SNAPSHOT`](../enums/WebSocketEvent.md#on_message_l2snapshot) |
+| `listener` | (`subscriptions`: [`WebSocketL2SnapshotMessage`](../interfaces/WebSocketL2SnapshotMessage.md)) => `void` |
+
+#### Returns
+
+[`WebSocketClient`](WebSocketClient.md)
+
+#### Defined in
+
+[client/WebSocketClient.ts:326](https://github.com/bennycode/coinbase-pro-node/blob/208278f/src/client/WebSocketClient.ts#L326)
+
+▸ **on**(`event`, `listener`): [`WebSocketClient`](WebSocketClient.md)
+
+#### Parameters
+
+| Name       | Type                                                                                                 |
+| :--------- | :--------------------------------------------------------------------------------------------------- |
+| `event`    | [`ON_MESSAGE_L2UPDATE`](../enums/WebSocketEvent.md#on_message_l2update)                              |
+| `listener` | (`subscriptions`: [`WebSocketL2UpdateMessage`](../interfaces/WebSocketL2UpdateMessage.md)) => `void` |
+
+#### Returns
+
+[`WebSocketClient`](WebSocketClient.md)
+
+#### Defined in
+
+[client/WebSocketClient.ts:328](https://github.com/bennycode/coinbase-pro-node/blob/208278f/src/client/WebSocketClient.ts#L328)
+
+▸ **on**(`event`, `listener`): [`WebSocketClient`](WebSocketClient.md)
+
+#### Parameters
+
+| Name | Type |
+| :-- | :-- |
+| `event` | [`ON_MESSAGE_FULL_RECEIVED`](../enums/WebSocketEvent.md#on_message_full_received) |
+| `listener` | (`subscriptions`: [`WebSocketFullReceivedMessage`](../interfaces/WebSocketFullReceivedMessage.md)) => `void` |
+
+#### Returns
+
+[`WebSocketClient`](WebSocketClient.md)
+
+#### Defined in
+
+[client/WebSocketClient.ts:330](https://github.com/bennycode/coinbase-pro-node/blob/208278f/src/client/WebSocketClient.ts#L330)
+
+▸ **on**(`event`, `listener`): [`WebSocketClient`](WebSocketClient.md)
+
+#### Parameters
+
+| Name       | Type                                                                                                 |
+| :--------- | :--------------------------------------------------------------------------------------------------- |
+| `event`    | [`ON_MESSAGE_FULL_OPEN`](../enums/WebSocketEvent.md#on_message_full_open)                            |
+| `listener` | (`subscriptions`: [`WebSocketFullOpenMessage`](../interfaces/WebSocketFullOpenMessage.md)) => `void` |
+
+#### Returns
+
+[`WebSocketClient`](WebSocketClient.md)
+
+#### Defined in
+
+[client/WebSocketClient.ts:335](https://github.com/bennycode/coinbase-pro-node/blob/208278f/src/client/WebSocketClient.ts#L335)
+
+▸ **on**(`event`, `listener`): [`WebSocketClient`](WebSocketClient.md)
+
+#### Parameters
+
+| Name       | Type                                                                                                 |
+| :--------- | :--------------------------------------------------------------------------------------------------- |
+| `event`    | [`ON_MESSAGE_FULL_DONE`](../enums/WebSocketEvent.md#on_message_full_done)                            |
+| `listener` | (`subscriptions`: [`WebSocketFullDoneMessage`](../interfaces/WebSocketFullDoneMessage.md)) => `void` |
+
+#### Returns
+
+[`WebSocketClient`](WebSocketClient.md)
+
+#### Defined in
+
+[client/WebSocketClient.ts:337](https://github.com/bennycode/coinbase-pro-node/blob/208278f/src/client/WebSocketClient.ts#L337)
+
+▸ **on**(`event`, `listener`): [`WebSocketClient`](WebSocketClient.md)
+
+#### Parameters
+
+| Name | Type |
+| :-- | :-- |
+| `event` | [`ON_MESSAGE_FULL_CHANGE`](../enums/WebSocketEvent.md#on_message_full_change) |
+| `listener` | (`subscriptions`: [`WebSocketFullChangeMessage`](../interfaces/WebSocketFullChangeMessage.md)) => `void` |
+
+#### Returns
+
+[`WebSocketClient`](WebSocketClient.md)
+
+#### Defined in
+
+[client/WebSocketClient.ts:339](https://github.com/bennycode/coinbase-pro-node/blob/208278f/src/client/WebSocketClient.ts#L339)
+
+▸ **on**(`event`, `listener`): [`WebSocketClient`](WebSocketClient.md)
+
+#### Parameters
+
+| Name | Type |
+| :-- | :-- |
+| `event` | [`ON_MESSAGE_FULL_ACTIVATE`](../enums/WebSocketEvent.md#on_message_full_activate) |
+| `listener` | (`subscriptions`: [`WebSocketFullActivateMessage`](../interfaces/WebSocketFullActivateMessage.md)) => `void` |
+
+#### Returns
+
+[`WebSocketClient`](WebSocketClient.md)
+
+#### Defined in
+
+[client/WebSocketClient.ts:341](https://github.com/bennycode/coinbase-pro-node/blob/208278f/src/client/WebSocketClient.ts#L341)
 
 ▸ **on**(`event`, `listener`): [`WebSocketClient`](WebSocketClient.md)
 
@@ -273,7 +414,7 @@ The websocket feed is publicly available, but connections to it are rate-limited
 
 #### Defined in
 
-[client/WebSocketClient.ts:225](https://github.com/bennycode/coinbase-pro-node/blob/15253ed/src/client/WebSocketClient.ts#L225)
+[client/WebSocketClient.ts:346](https://github.com/bennycode/coinbase-pro-node/blob/208278f/src/client/WebSocketClient.ts#L346)
 
 ---
 
@@ -293,7 +434,7 @@ The websocket feed is publicly available, but connections to it are rate-limited
 
 #### Defined in
 
-[client/WebSocketClient.ts:332](https://github.com/bennycode/coinbase-pro-node/blob/15253ed/src/client/WebSocketClient.ts#L332)
+[client/WebSocketClient.ts:483](https://github.com/bennycode/coinbase-pro-node/blob/208278f/src/client/WebSocketClient.ts#L483)
 
 ---
 
@@ -313,7 +454,7 @@ The websocket feed is publicly available, but connections to it are rate-limited
 
 #### Defined in
 
-[client/WebSocketClient.ts:353](https://github.com/bennycode/coinbase-pro-node/blob/15253ed/src/client/WebSocketClient.ts#L353)
+[client/WebSocketClient.ts:504](https://github.com/bennycode/coinbase-pro-node/blob/208278f/src/client/WebSocketClient.ts#L504)
 
 ---
 
@@ -333,4 +474,4 @@ The websocket feed is publicly available, but connections to it are rate-limited
 
 #### Defined in
 
-[client/WebSocketClient.ts:360](https://github.com/bennycode/coinbase-pro-node/blob/15253ed/src/client/WebSocketClient.ts#L360)
+[client/WebSocketClient.ts:511](https://github.com/bennycode/coinbase-pro-node/blob/208278f/src/client/WebSocketClient.ts#L511)

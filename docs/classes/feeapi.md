@@ -30,7 +30,7 @@
 
 #### Defined in
 
-[fee/FeeAPI.ts:22](https://github.com/bennycode/coinbase-pro-node/blob/15253ed/src/fee/FeeAPI.ts#L22)
+[fee/FeeAPI.ts:22](https://github.com/bennycode/coinbase-pro-node/blob/208278f/src/fee/FeeAPI.ts#L22)
 
 ## Properties
 
@@ -46,7 +46,7 @@
 
 #### Defined in
 
-[fee/FeeAPI.ts:18](https://github.com/bennycode/coinbase-pro-node/blob/15253ed/src/fee/FeeAPI.ts#L18)
+[fee/FeeAPI.ts:18](https://github.com/bennycode/coinbase-pro-node/blob/208278f/src/fee/FeeAPI.ts#L18)
 
 ## Methods
 
@@ -66,4 +66,4 @@ Get your current maker & taker fee rates, as well as your 30-day trailing volume
 
 #### Defined in
 
-[fee/FeeAPI.ts:31](https://github.com/bennycode/coinbase-pro-node/blob/15253ed/src/fee/FeeAPI.ts#L31)
+[fee/FeeAPI.ts:31](https://github.com/bennycode/coinbase-pro-node/blob/208278f/src/fee/FeeAPI.ts#L31)

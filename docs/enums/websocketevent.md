@@ -10,6 +10,13 @@
 - [ON_ERROR](WebSocketEvent.md#on_error)
 - [ON_MESSAGE](WebSocketEvent.md#on_message)
 - [ON_MESSAGE_ERROR](WebSocketEvent.md#on_message_error)
+- [ON_MESSAGE_FULL_ACTIVATE](WebSocketEvent.md#on_message_full_activate)
+- [ON_MESSAGE_FULL_CHANGE](WebSocketEvent.md#on_message_full_change)
+- [ON_MESSAGE_FULL_DONE](WebSocketEvent.md#on_message_full_done)
+- [ON_MESSAGE_FULL_OPEN](WebSocketEvent.md#on_message_full_open)
+- [ON_MESSAGE_FULL_RECEIVED](WebSocketEvent.md#on_message_full_received)
+- [ON_MESSAGE_L2SNAPSHOT](WebSocketEvent.md#on_message_l2snapshot)
+- [ON_MESSAGE_L2UPDATE](WebSocketEvent.md#on_message_l2update)
 - [ON_MESSAGE_MATCHES](WebSocketEvent.md#on_message_matches)
 - [ON_MESSAGE_STATUS](WebSocketEvent.md#on_message_status)
 - [ON_MESSAGE_TICKER](WebSocketEvent.md#on_message_ticker)
@@ -24,7 +31,7 @@
 
 #### Defined in
 
-[client/WebSocketClient.ts:194](https://github.com/bennycode/coinbase-pro-node/blob/15253ed/src/client/WebSocketClient.ts#L194)
+[client/WebSocketClient.ts:288](https://github.com/bennycode/coinbase-pro-node/blob/208278f/src/client/WebSocketClient.ts#L288)
 
 ---
 
@@ -34,7 +41,7 @@
 
 #### Defined in
 
-[client/WebSocketClient.ts:195](https://github.com/bennycode/coinbase-pro-node/blob/15253ed/src/client/WebSocketClient.ts#L195)
+[client/WebSocketClient.ts:289](https://github.com/bennycode/coinbase-pro-node/blob/208278f/src/client/WebSocketClient.ts#L289)
 
 ---
 
@@ -44,7 +51,7 @@
 
 #### Defined in
 
-[client/WebSocketClient.ts:196](https://github.com/bennycode/coinbase-pro-node/blob/15253ed/src/client/WebSocketClient.ts#L196)
+[client/WebSocketClient.ts:290](https://github.com/bennycode/coinbase-pro-node/blob/208278f/src/client/WebSocketClient.ts#L290)
 
 ---
 
@@ -54,7 +61,77 @@
 
 #### Defined in
 
-[client/WebSocketClient.ts:197](https://github.com/bennycode/coinbase-pro-node/blob/15253ed/src/client/WebSocketClient.ts#L197)
+[client/WebSocketClient.ts:291](https://github.com/bennycode/coinbase-pro-node/blob/208278f/src/client/WebSocketClient.ts#L291)
+
+---
+
+### ON_MESSAGE_FULL_ACTIVATE
+
+• **ON_MESSAGE_FULL_ACTIVATE** = `"WebSocketEvent.ON_MESSAGE_FULL_ACTIVATE"`
+
+#### Defined in
+
+[client/WebSocketClient.ts:292](https://github.com/bennycode/coinbase-pro-node/blob/208278f/src/client/WebSocketClient.ts#L292)
+
+---
+
+### ON_MESSAGE_FULL_CHANGE
+
+• **ON_MESSAGE_FULL_CHANGE** = `"WebSocketEvent.ON_MESSAGE_FULL_CHANGE"`
+
+#### Defined in
+
+[client/WebSocketClient.ts:293](https://github.com/bennycode/coinbase-pro-node/blob/208278f/src/client/WebSocketClient.ts#L293)
+
+---
+
+### ON_MESSAGE_FULL_DONE
+
+• **ON_MESSAGE_FULL_DONE** = `"WebSocketEvent.ON_MESSAGE_FULL_DONE"`
+
+#### Defined in
+
+[client/WebSocketClient.ts:294](https://github.com/bennycode/coinbase-pro-node/blob/208278f/src/client/WebSocketClient.ts#L294)
+
+---
+
+### ON_MESSAGE_FULL_OPEN
+
+• **ON_MESSAGE_FULL_OPEN** = `"WebSocketEvent.ON_MESSAGE_FULL_OPEN"`
+
+#### Defined in
+
+[client/WebSocketClient.ts:295](https://github.com/bennycode/coinbase-pro-node/blob/208278f/src/client/WebSocketClient.ts#L295)
+
+---
+
+### ON_MESSAGE_FULL_RECEIVED
+
+• **ON_MESSAGE_FULL_RECEIVED** = `"WebSocketEvent.ON_MESSAGE_FULL_RECEIVED"`
+
+#### Defined in
+
+[client/WebSocketClient.ts:296](https://github.com/bennycode/coinbase-pro-node/blob/208278f/src/client/WebSocketClient.ts#L296)
+
+---
+
+### ON_MESSAGE_L2SNAPSHOT
+
+• **ON_MESSAGE_L2SNAPSHOT** = `"WebSocketEvent.ON_MESSAGE_L2SNAPSHOT"`
+
+#### Defined in
+
+[client/WebSocketClient.ts:297](https://github.com/bennycode/coinbase-pro-node/blob/208278f/src/client/WebSocketClient.ts#L297)
+
+---
+
+### ON_MESSAGE_L2UPDATE
+
+• **ON_MESSAGE_L2UPDATE** = `"WebSocketEvent.ON_MESSAGE_L2UPDATE"`
+
+#### Defined in
+
+[client/WebSocketClient.ts:298](https://github.com/bennycode/coinbase-pro-node/blob/208278f/src/client/WebSocketClient.ts#L298)
 
 ---
 
@@ -64,7 +141,7 @@
 
 #### Defined in
 
-[client/WebSocketClient.ts:198](https://github.com/bennycode/coinbase-pro-node/blob/15253ed/src/client/WebSocketClient.ts#L198)
+[client/WebSocketClient.ts:299](https://github.com/bennycode/coinbase-pro-node/blob/208278f/src/client/WebSocketClient.ts#L299)
 
 ---
 
@@ -74,7 +151,7 @@
 
 #### Defined in
 
-[client/WebSocketClient.ts:199](https://github.com/bennycode/coinbase-pro-node/blob/15253ed/src/client/WebSocketClient.ts#L199)
+[client/WebSocketClient.ts:300](https://github.com/bennycode/coinbase-pro-node/blob/208278f/src/client/WebSocketClient.ts#L300)
 
 ---
 
@@ -84,7 +161,7 @@
 
 #### Defined in
 
-[client/WebSocketClient.ts:200](https://github.com/bennycode/coinbase-pro-node/blob/15253ed/src/client/WebSocketClient.ts#L200)
+[client/WebSocketClient.ts:301](https://github.com/bennycode/coinbase-pro-node/blob/208278f/src/client/WebSocketClient.ts#L301)
 
 ---
 
@@ -94,7 +171,7 @@
 
 #### Defined in
 
-[client/WebSocketClient.ts:201](https://github.com/bennycode/coinbase-pro-node/blob/15253ed/src/client/WebSocketClient.ts#L201)
+[client/WebSocketClient.ts:302](https://github.com/bennycode/coinbase-pro-node/blob/208278f/src/client/WebSocketClient.ts#L302)
 
 ---
 
@@ -104,4 +181,4 @@
 
 #### Defined in
 
-[client/WebSocketClient.ts:202](https://github.com/bennycode/coinbase-pro-node/blob/15253ed/src/client/WebSocketClient.ts#L202)
+[client/WebSocketClient.ts:303](https://github.com/bennycode/coinbase-pro-node/blob/208278f/src/client/WebSocketClient.ts#L303)

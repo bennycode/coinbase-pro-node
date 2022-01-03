@@ -20,7 +20,7 @@ Represents only the best bid and ask.
 
 #### Defined in
 
-[product/ProductAPI.ts:111](https://github.com/bennycode/coinbase-pro-node/blob/15253ed/src/product/ProductAPI.ts#L111)
+[product/ProductAPI.ts:111](https://github.com/bennycode/coinbase-pro-node/blob/208278f/src/product/ProductAPI.ts#L111)
 
 ---
 
@@ -30,7 +30,7 @@ Represents only the best bid and ask.
 
 #### Defined in
 
-[product/ProductAPI.ts:112](https://github.com/bennycode/coinbase-pro-node/blob/15253ed/src/product/ProductAPI.ts#L112)
+[product/ProductAPI.ts:112](https://github.com/bennycode/coinbase-pro-node/blob/208278f/src/product/ProductAPI.ts#L112)
 
 ---
 
@@ -40,4 +40,4 @@ Represents only the best bid and ask.
 
 #### Defined in
 
-[product/ProductAPI.ts:113](https://github.com/bennycode/coinbase-pro-node/blob/15253ed/src/product/ProductAPI.ts#L113)
+[product/ProductAPI.ts:113](https://github.com/bennycode/coinbase-pro-node/blob/208278f/src/product/ProductAPI.ts#L113)

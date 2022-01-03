@@ -2,22 +2,42 @@
 
 # Interface: WebSocketMatchMessage
 
+## Hierarchy
+
+- `WebSocketUserMessage`
+
+  ↳ **`WebSocketMatchMessage`**
+
 ## Table of contents
 
 ### Properties
 
+- [maker_fee_rate](WebSocketMatchMessage.md#maker_fee_rate)
 - [maker_order_id](WebSocketMatchMessage.md#maker_order_id)
 - [price](WebSocketMatchMessage.md#price)
 - [product_id](WebSocketMatchMessage.md#product_id)
+- [profile_id](WebSocketMatchMessage.md#profile_id)
 - [sequence](WebSocketMatchMessage.md#sequence)
 - [side](WebSocketMatchMessage.md#side)
 - [size](WebSocketMatchMessage.md#size)
+- [taker_fee_rate](WebSocketMatchMessage.md#taker_fee_rate)
 - [taker_order_id](WebSocketMatchMessage.md#taker_order_id)
 - [time](WebSocketMatchMessage.md#time)
 - [trade_id](WebSocketMatchMessage.md#trade_id)
 - [type](WebSocketMatchMessage.md#type)
+- [user_id](WebSocketMatchMessage.md#user_id)
 
 ## Properties
+
+### maker_fee_rate
+
+• `Optional` **maker_fee_rate**: `string`
+
+#### Defined in
+
+[client/WebSocketClient.ts:150](https://github.com/bennycode/coinbase-pro-node/blob/208278f/src/client/WebSocketClient.ts#L150)
+
+---
 
 ### maker_order_id
 
@@ -25,7 +45,7 @@
 
 #### Defined in
 
-[client/WebSocketClient.ts:140](https://github.com/bennycode/coinbase-pro-node/blob/15253ed/src/client/WebSocketClient.ts#L140)
+[client/WebSocketClient.ts:151](https://github.com/bennycode/coinbase-pro-node/blob/208278f/src/client/WebSocketClient.ts#L151)
 
 ---
 
@@ -35,7 +55,7 @@
 
 #### Defined in
 
-[client/WebSocketClient.ts:141](https://github.com/bennycode/coinbase-pro-node/blob/15253ed/src/client/WebSocketClient.ts#L141)
+[client/WebSocketClient.ts:152](https://github.com/bennycode/coinbase-pro-node/blob/208278f/src/client/WebSocketClient.ts#L152)
 
 ---
 
@@ -45,7 +65,21 @@
 
 #### Defined in
 
-[client/WebSocketClient.ts:142](https://github.com/bennycode/coinbase-pro-node/blob/15253ed/src/client/WebSocketClient.ts#L142)
+[client/WebSocketClient.ts:153](https://github.com/bennycode/coinbase-pro-node/blob/208278f/src/client/WebSocketClient.ts#L153)
+
+---
+
+### profile_id
+
+• `Optional` **profile_id**: `string`
+
+#### Inherited from
+
+WebSocketUserMessage.profile_id
+
+#### Defined in
+
+[client/WebSocketClient.ts:276](https://github.com/bennycode/coinbase-pro-node/blob/208278f/src/client/WebSocketClient.ts#L276)
 
 ---
 
@@ -55,7 +89,7 @@
 
 #### Defined in
 
-[client/WebSocketClient.ts:143](https://github.com/bennycode/coinbase-pro-node/blob/15253ed/src/client/WebSocketClient.ts#L143)
+[client/WebSocketClient.ts:154](https://github.com/bennycode/coinbase-pro-node/blob/208278f/src/client/WebSocketClient.ts#L154)
 
 ---
 
@@ -65,7 +99,7 @@
 
 #### Defined in
 
-[client/WebSocketClient.ts:144](https://github.com/bennycode/coinbase-pro-node/blob/15253ed/src/client/WebSocketClient.ts#L144)
+[client/WebSocketClient.ts:155](https://github.com/bennycode/coinbase-pro-node/blob/208278f/src/client/WebSocketClient.ts#L155)
 
 ---
 
@@ -75,7 +109,17 @@
 
 #### Defined in
 
-[client/WebSocketClient.ts:145](https://github.com/bennycode/coinbase-pro-node/blob/15253ed/src/client/WebSocketClient.ts#L145)
+[client/WebSocketClient.ts:156](https://github.com/bennycode/coinbase-pro-node/blob/208278f/src/client/WebSocketClient.ts#L156)
+
+---
+
+### taker_fee_rate
+
+• `Optional` **taker_fee_rate**: `string`
+
+#### Defined in
+
+[client/WebSocketClient.ts:157](https://github.com/bennycode/coinbase-pro-node/blob/208278f/src/client/WebSocketClient.ts#L157)
 
 ---
 
@@ -85,7 +129,7 @@
 
 #### Defined in
 
-[client/WebSocketClient.ts:146](https://github.com/bennycode/coinbase-pro-node/blob/15253ed/src/client/WebSocketClient.ts#L146)
+[client/WebSocketClient.ts:158](https://github.com/bennycode/coinbase-pro-node/blob/208278f/src/client/WebSocketClient.ts#L158)
 
 ---
 
@@ -95,7 +139,7 @@
 
 #### Defined in
 
-[client/WebSocketClient.ts:147](https://github.com/bennycode/coinbase-pro-node/blob/15253ed/src/client/WebSocketClient.ts#L147)
+[client/WebSocketClient.ts:159](https://github.com/bennycode/coinbase-pro-node/blob/208278f/src/client/WebSocketClient.ts#L159)
 
 ---
 
@@ -105,7 +149,7 @@
 
 #### Defined in
 
-[client/WebSocketClient.ts:148](https://github.com/bennycode/coinbase-pro-node/blob/15253ed/src/client/WebSocketClient.ts#L148)
+[client/WebSocketClient.ts:160](https://github.com/bennycode/coinbase-pro-node/blob/208278f/src/client/WebSocketClient.ts#L160)
 
 ---
 
@@ -115,4 +159,18 @@
 
 #### Defined in
 
-[client/WebSocketClient.ts:149](https://github.com/bennycode/coinbase-pro-node/blob/15253ed/src/client/WebSocketClient.ts#L149)
+[client/WebSocketClient.ts:161](https://github.com/bennycode/coinbase-pro-node/blob/208278f/src/client/WebSocketClient.ts#L161)
+
+---
+
+### user_id
+
+• `Optional` **user_id**: `string`
+
+#### Inherited from
+
+WebSocketUserMessage.user_id
+
+#### Defined in
+
+[client/WebSocketClient.ts:277](https://github.com/bennycode/coinbase-pro-node/blob/208278f/src/client/WebSocketClient.ts#L277)
