@@ -90,6 +90,7 @@ describe('WebSocketClient', () => {
       expect(ws.connected).toBe(false);
       done();
     });
+
     it('returns true when called after the connection is created', done => {
       const ws = createWebSocketClient();
 
