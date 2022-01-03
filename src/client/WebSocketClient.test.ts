@@ -222,10 +222,7 @@ describe('WebSocketClient', () => {
 
       ws.on(WebSocketEvent.ON_MESSAGE_L2SNAPSHOT, snapshotMessage => {
         expect<number>(snapshotMessage.asks.length).toBe(10);
-        expect(snapshotMessage.asks[0]).toEqual([
-          "47009.28",
-          "0.00100000"
-        ]);
+        expect(snapshotMessage.asks[0]).toEqual(['47009.28', '0.00100000']);
         expect<number>(snapshotMessage.bids.length).toBe(10);
         ws.unsubscribe(channel);
       });
@@ -242,17 +239,9 @@ describe('WebSocketClient', () => {
       const ws = mockWebSocketResponse(done, channel, l2updateBTCUSD);
 
       ws.on(WebSocketEvent.ON_MESSAGE_L2UPDATE, updateMessage => {
-        expect<number>(updateMessage.changes.length).toBe(5)
-        expect(updateMessage.changes[0]).toEqual([
-          "buy",
-          "46961.95",
-          "0.00000000"
-        ]);
-        expect(updateMessage.changes[1]).toEqual([
-          "sell",
-          "47027.24",
-          "0.04443115"
-        ]);
+        expect<number>(updateMessage.changes.length).toBe(5);
+        expect(updateMessage.changes[0]).toEqual(['buy', '46961.95', '0.00000000']);
+        expect(updateMessage.changes[1]).toEqual(['sell', '47027.24', '0.04443115']);
         ws.unsubscribe(channel);
       });
 
@@ -268,9 +257,9 @@ describe('WebSocketClient', () => {
       const ws = mockWebSocketResponse(done, channel, fullActivateBTCUSD);
 
       ws.on(WebSocketEvent.ON_MESSAGE_FULL_ACTIVATE, message => {
-        expect(message.profile_id).toBe("30000727-d308-cf50-7b1c-c06deb1934fc");
+        expect(message.profile_id).toBe('30000727-d308-cf50-7b1c-c06deb1934fc');
         expect(message.private).toBe(true);
-        expect(message.stop_type).toBe("entry");
+        expect(message.stop_type).toBe('entry');
         ws.unsubscribe(channel);
       });
 
@@ -286,8 +275,8 @@ describe('WebSocketClient', () => {
       const ws = mockWebSocketResponse(done, channel, fullReceivedLimitBTCUSD);
 
       ws.on(WebSocketEvent.ON_MESSAGE_FULL_RECEIVED, message => {
-        expect(message.order_type).toBe("limit");
-        expect(message.order_id).toBe("d50ec984-77a8-460a-b958-66f114b0de9b");
+        expect(message.order_type).toBe('limit');
+        expect(message.order_id).toBe('d50ec984-77a8-460a-b958-66f114b0de9b');
         ws.unsubscribe(channel);
       });
 
@@ -304,7 +293,7 @@ describe('WebSocketClient', () => {
 
       ws.on(WebSocketEvent.ON_MESSAGE_FULL_OPEN, message => {
         expect(message.profile_id).toBe(undefined);
-        expect(message.remaining_size).toBe("1.00");
+        expect(message.remaining_size).toBe('1.00');
         ws.unsubscribe(channel);
       });
 
@@ -321,8 +310,8 @@ describe('WebSocketClient', () => {
 
       ws.on(WebSocketEvent.ON_MESSAGE_FULL_DONE, message => {
         expect(message.profile_id).toBe(undefined);
-        expect(message.remaining_size).toBe("0");
-        expect(message.reason).toBe("filled");
+        expect(message.remaining_size).toBe('0');
+        expect(message.reason).toBe('filled');
         ws.unsubscribe(channel);
       });
 
@@ -338,8 +327,8 @@ describe('WebSocketClient', () => {
       const ws = mockWebSocketResponse(done, channel, fullChangeBTCUSD);
 
       ws.on(WebSocketEvent.ON_MESSAGE_FULL_CHANGE, message => {
-        expect(message.new_size).toBe("5.23512");
-        expect(message.old_size).toBe("12.234412");
+        expect(message.new_size).toBe('5.23512');
+        expect(message.old_size).toBe('12.234412');
         ws.unsubscribe(channel);
       });
 
