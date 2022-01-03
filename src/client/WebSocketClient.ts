@@ -471,6 +471,15 @@ export class WebSocketClient extends EventEmitter {
     }
   }
 
+  /**
+   * A simple function to determine if the websocket appears to be open.
+   *
+   * @returns True if the websocket has been opened and has not closed.
+   */
+  get connected(): boolean {
+    return undefined !== this.socket;
+  }
+
   async sendMessage(message: WebSocketRequest): Promise<void> {
     if (!this.socket) {
       throw new Error(`Failed to send message of type "${message.type}": You need to connect to the WebSocket first.`);

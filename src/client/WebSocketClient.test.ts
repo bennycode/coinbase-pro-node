@@ -84,6 +84,44 @@ describe('WebSocketClient', () => {
     });
   });
 
+  describe('connected', () => {
+    it('returns false when called before the connection is created', done => {
+      const ws = createWebSocketClient();
+      expect(ws.connected).toBe(false);
+      done();
+    });
+    it('returns true when called after the connection is created', done => {
+      const ws = createWebSocketClient();
+
+      ws.on(WebSocketEvent.ON_CLOSE, () => {
+        done();
+      });
+
+      ws.on(WebSocketEvent.ON_OPEN, () => {
+        expect(ws.connected).toBe(true);
+
+        ws.disconnect();
+      });
+
+      ws.connect();
+    });
+
+    it('returns false when called after the connection is closed', done => {
+      const ws = createWebSocketClient();
+
+      ws.on(WebSocketEvent.ON_CLOSE, () => {
+        expect(ws.connected).toBe(false);
+        done();
+      });
+
+      ws.on(WebSocketEvent.ON_OPEN, () => {
+        ws.disconnect();
+      });
+
+      ws.connect();
+    });
+  });
+
   describe('constructor', () => {
     it('it signals an event when the WebSocket connection is established', done => {
       const ws = createWebSocketClient();
