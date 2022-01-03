@@ -2,6 +2,13 @@ import WebSocket = require('ws');
 import tickerBTCUSD from '../test/fixtures/ws/ticker/BTC-USD.json';
 import statusPayload from '../test/fixtures/ws/status/status.json';
 import matchesBTCUSD from '../test/fixtures/ws/matches/BTC-USD.json';
+import l2snapshotBTCUSD from '../test/fixtures/ws/level2/snapshot.json';
+import l2updateBTCUSD from '../test/fixtures/ws/level2/l2update.json';
+import fullReceivedLimitBTCUSD from '../test/fixtures/ws/full/received-limit.json';
+import fullActivateBTCUSD from '../test/fixtures/ws/full/activate.json';
+import fullOpenBTCUSD from '../test/fixtures/ws/full/open.json';
+import fullDoneBTCUSD from '../test/fixtures/ws/full/done.json';
+import fullChangeBTCUSD from '../test/fixtures/ws/full/change.json';
 import emptySubscriptions from '../test/fixtures/ws/empty-subscriptions.json';
 import {
   WebSocketChannelName,
@@ -199,6 +206,129 @@ describe('WebSocketClient', () => {
 
       ws.on(WebSocketEvent.ON_MESSAGE_TICKER, tickerMessage => {
         expect(tickerMessage.trade_id).toBe(3526965);
+        ws.unsubscribe(channel);
+      });
+
+      ws.connect();
+    });
+
+    it('receives typed "snapshot" messages from "level2" channel', done => {
+      const channel = {
+        name: WebSocketChannelName.LEVEL2,
+        product_ids: ['BTC-USD'],
+      };
+
+      const ws = mockWebSocketResponse(done, channel, l2snapshotBTCUSD);
+
+      ws.on(WebSocketEvent.ON_MESSAGE_L2SNAPSHOT, snapshotMessage => {
+        expect<number>(snapshotMessage.asks.length).toBe(10);
+        expect(snapshotMessage.asks[0]).toEqual(['47009.28', '0.00100000']);
+        expect<number>(snapshotMessage.bids.length).toBe(10);
+        ws.unsubscribe(channel);
+      });
+
+      ws.connect();
+    });
+
+    it('receives typed "l2update" messages from "level2" channel', done => {
+      const channel = {
+        name: WebSocketChannelName.LEVEL2,
+        product_ids: ['BTC-USD'],
+      };
+
+      const ws = mockWebSocketResponse(done, channel, l2updateBTCUSD);
+
+      ws.on(WebSocketEvent.ON_MESSAGE_L2UPDATE, updateMessage => {
+        expect<number>(updateMessage.changes.length).toBe(5);
+        expect(updateMessage.changes[0]).toEqual(['buy', '46961.95', '0.00000000']);
+        expect(updateMessage.changes[1]).toEqual(['sell', '47027.24', '0.04443115']);
+        ws.unsubscribe(channel);
+      });
+
+      ws.connect();
+    });
+
+    it('receives typed "activate" messages from "full" channel', done => {
+      const channel = {
+        name: WebSocketChannelName.FULL,
+        product_ids: ['BTC-USD'],
+      };
+
+      const ws = mockWebSocketResponse(done, channel, fullActivateBTCUSD);
+
+      ws.on(WebSocketEvent.ON_MESSAGE_FULL_ACTIVATE, message => {
+        expect(message.profile_id).toBe('30000727-d308-cf50-7b1c-c06deb1934fc');
+        expect(message.private).toBe(true);
+        expect(message.stop_type).toBe('entry');
+        ws.unsubscribe(channel);
+      });
+
+      ws.connect();
+    });
+
+    it('receives typed "received" messages from "full" channel', done => {
+      const channel = {
+        name: WebSocketChannelName.FULL,
+        product_ids: ['BTC-USD'],
+      };
+
+      const ws = mockWebSocketResponse(done, channel, fullReceivedLimitBTCUSD);
+
+      ws.on(WebSocketEvent.ON_MESSAGE_FULL_RECEIVED, message => {
+        expect(message.order_type).toBe('limit');
+        expect(message.order_id).toBe('d50ec984-77a8-460a-b958-66f114b0de9b');
+        ws.unsubscribe(channel);
+      });
+
+      ws.connect();
+    });
+
+    it('receives typed "open" messages from "full" channel', done => {
+      const channel = {
+        name: WebSocketChannelName.FULL,
+        product_ids: ['BTC-USD'],
+      };
+
+      const ws = mockWebSocketResponse(done, channel, fullOpenBTCUSD);
+
+      ws.on(WebSocketEvent.ON_MESSAGE_FULL_OPEN, message => {
+        expect(message.profile_id).toBe(undefined);
+        expect(message.remaining_size).toBe('1.00');
+        ws.unsubscribe(channel);
+      });
+
+      ws.connect();
+    });
+
+    it('receives typed "done" messages from "full" channel', done => {
+      const channel = {
+        name: WebSocketChannelName.FULL,
+        product_ids: ['BTC-USD'],
+      };
+
+      const ws = mockWebSocketResponse(done, channel, fullDoneBTCUSD);
+
+      ws.on(WebSocketEvent.ON_MESSAGE_FULL_DONE, message => {
+        expect(message.profile_id).toBe(undefined);
+        expect(message.remaining_size).toBe('0');
+        expect(message.reason).toBe('filled');
+        ws.unsubscribe(channel);
+      });
+
+      ws.connect();
+    });
+
+    it('receives typed "change" messages from "full" channel', done => {
+      const channel = {
+        name: WebSocketChannelName.FULL,
+        product_ids: ['BTC-USD'],
+      };
+
+      const ws = mockWebSocketResponse(done, channel, fullChangeBTCUSD);
+
+      ws.on(WebSocketEvent.ON_MESSAGE_FULL_CHANGE, message => {
+        expect(message.new_size).toBe('5.23512');
+        expect(message.old_size).toBe('12.234412');
         ws.unsubscribe(channel);
       });
 
