@@ -1,0 +1,14 @@
+{
+  "type": "activate",
+  "product_id": "BTC-USD",
+  "timestamp": "1483736448.299000",
+  "user_id": "12",
+  "profile_id": "30000727-d308-cf50-7b1c-c06deb1934fc",
+  "order_id": "7b52009b-64fd-0a2a-49e6-d8a939753077",
+  "stop_type": "entry",
+  "side": "buy",
+  "stop_price": "80",
+  "size": "2",
+  "funds": "50",
+  "private": true
+}
