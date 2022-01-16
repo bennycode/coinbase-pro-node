@@ -364,11 +364,19 @@ export class WebSocketClient extends EventEmitter {
   private pingTime: number;
   private readonly pongTime: number;
 
+  private _subscriptions: {
+    [channel_name: string]: Required<WebSocketChannel>;
+  };
+
+  private _subscriptions_cache: WebSocketChannel[];
+
   constructor(baseURL: string, private readonly signRequest: (setup: RequestSetup) => Promise<SignedRequest>) {
     super();
     this.baseURL = baseURL;
     this.pingTime = 10_000;
     this.pongTime = this.pingTime * 1.5;
+    this._subscriptions = {};
+    this._subscriptions_cache = [];
   }
 
   /**
@@ -448,6 +456,12 @@ export class WebSocketClient extends EventEmitter {
 
     this.socket.onopen = (): void => {
       this.emit(WebSocketEvent.ON_OPEN);
+
+      // Resubscribe if we had previous subscriptions
+      if (this._subscriptions_cache.length > 0) {
+        this._subscribe(this._subscriptions_cache);
+      }
+
       /**
        * The 'ws' package for Node.js exposes a "ping" function, but the WebSocket API in browsers doesn't. Since
        * "coinbase-pro-node" can run in both environments (Node.js & web browsers), we have to check for the existence
@@ -464,7 +478,12 @@ export class WebSocketClient extends EventEmitter {
     return this.socket;
   }
 
-  disconnect(reason: string = 'Unknown reason'): void {
+  disconnect(reason: string = 'Unknown reason', forgetSubscriptions: boolean = false): void {
+    if (forgetSubscriptions) {
+      this._subscriptions = {};
+      this._subscriptions_cache = [];
+    }
+
     if (this.socket) {
       this.socket.close(WebSocketClient.CLOSE_EVENT_CODE.NORMAL_CLOSURE, reason);
       this.socket = undefined;
@@ -502,6 +521,36 @@ export class WebSocketClient extends EventEmitter {
   }
 
   async subscribe(channel: WebSocketChannel | WebSocketChannel[]): Promise<void> {
+    const channels = Array.isArray(channel) ? channel : [channel];
+    let updateSubscriptionCache = false;
+
+    for (const chan of channels) {
+      if (chan.product_ids) {
+        if (this._subscriptions[chan.name]) {
+          // Merge the products
+          this._subscriptions[chan.name].product_ids = Array.from(
+            new Set(chan.product_ids.concat(this._subscriptions[chan.name].product_ids))
+          );
+        } else {
+          this._subscriptions[chan.name] = {
+            name: chan.name,
+            product_ids: chan.product_ids,
+          };
+        }
+
+        updateSubscriptionCache = true;
+      }
+    }
+
+    // Only regenerate if a change was made
+    if (updateSubscriptionCache) {
+      this.generateSubscriptionsCache();
+    }
+
+    await this._subscribe(channel);
+  }
+
+  private async _subscribe(channel: WebSocketChannel | WebSocketChannel[]): Promise<void> {
     await this.sendMessage({
       channels: Array.isArray(channel) ? channel : [channel],
       type: WebSocketRequestType.SUBSCRIBE,
@@ -509,10 +558,78 @@ export class WebSocketClient extends EventEmitter {
   }
 
   async unsubscribe(channel: WebSocketChannelName | WebSocketChannel | WebSocketChannel[]): Promise<void> {
+    let updateSubscriptionCache = false;
+    if (typeof channel === 'string' && this._subscriptions[channel]) {
+      // Unsubscribing for all products
+      delete this._subscriptions[channel];
+
+      updateSubscriptionCache = true;
+    } else {
+      const channels = this.mapChannels(channel);
+      for (const chan of channels) {
+        if (this._subscriptions[chan.name]) {
+          if (undefined !== chan.product_ids) {
+            // Remove product ids from the channel
+            this._subscriptions[chan.name].product_ids = this._subscriptions[chan.name].product_ids.filter(
+              x => !chan.product_ids?.includes(x)
+            );
+
+            // If no more products subscribed on the channel, delete its reference
+            if (0 === this._subscriptions[chan.name].product_ids.length) {
+              delete this._subscriptions[chan.name];
+            }
+          } else {
+            // A channel with just the name and no product ids is equivalent to unsubscribe from all of that channel
+            delete this._subscriptions[chan.name];
+          }
+
+          updateSubscriptionCache = true;
+        }
+      }
+    }
+
+    // Only regenerate if a change was made
+    if (updateSubscriptionCache) {
+      this.generateSubscriptionsCache();
+    }
+
+    await this._unsubscribe(channel);
+  }
+
+  private async _unsubscribe(channel: WebSocketChannelName | WebSocketChannel | WebSocketChannel[]): Promise<void> {
     await this.sendMessage({
       channels: this.mapChannels(channel),
       type: WebSocketRequestType.UNSUBSCRIBE,
     }).finally(() => {});
+  }
+
+  private generateSubscriptionsCache(): void {
+    const channels: WebSocketChannel[] = [];
+    for (const channelName in this._subscriptions) {
+      if (Object.prototype.hasOwnProperty.call(this._subscriptions, channelName)) {
+        const chan = this._subscriptions[channelName];
+
+        // Sort product IDs so they are returned in a predictable order
+        chan.product_ids.sort();
+
+        channels.push(chan);
+      }
+    }
+
+    // Sort channels so they are returned in a predictable order
+    this._subscriptions_cache = channels.sort((a, b): number => {
+      if (a.name > b.name) {
+        return 1;
+      }
+      return -1; // assume a's name is less than b's name
+    });
+  }
+
+  /**
+   * Returns all the channels and products that have been subscribed.
+   */
+  get subscriptions(): WebSocketChannel[] {
+    return this._subscriptions_cache;
   }
 
   private cleanupListener(): void {
