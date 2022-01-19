@@ -222,6 +222,96 @@ describe('WebSocketClient', () => {
       return ws;
     }
 
+    function setupWebSocketServer(payload?: Object): void {
+      server.on('connection', (ws: WebSocket) => {
+        ws.on('message', (message: string) => {
+          const request = JSON.parse(message) as WebSocketRequest;
+
+          if (request.type === WebSocketRequestType.SUBSCRIBE) {
+            // Send subscription confirmation
+            server.clients.forEach(client =>
+              client.send(
+                JSON.stringify({
+                  channels: request.channels,
+                  type: WebSocketResponseType.SUBSCRIPTIONS,
+                })
+              )
+            );
+
+            if (payload) {
+              // Send event for subscription
+              server.clients.forEach(client => client.send(JSON.stringify(payload)));
+            }
+          }
+
+          if (request.type === WebSocketRequestType.UNSUBSCRIBE) {
+            // Send unsubscribe confirmation
+            server.clients.forEach(client => client.send(JSON.stringify(emptySubscriptions)));
+          }
+        });
+      });
+    }
+
+    function mockWebSocketClientSubscription(
+      done: DoneFn,
+      channels?: WebSocketChannel | WebSocketChannel[],
+      payload?: Object,
+      options?: {
+        disconnectOnNoMoreSubscriptions?: boolean;
+        disconnectOnSubscriptionResponse?: boolean;
+        doneOnClose?: boolean;
+        subscribeOnOpen?: boolean;
+      }
+    ): WebSocketClient {
+      if (!options) {
+        options = {};
+      }
+
+      options = {
+        ...{
+          disconnectOnNoMoreSubscriptions: true,
+          disconnectOnSubscriptionResponse: false,
+          doneOnClose: true,
+          subscribeOnOpen: true,
+        },
+        ...options,
+      };
+
+      setupWebSocketServer(payload);
+
+      const ws = createWebSocketClient();
+
+      ws.on(WebSocketEvent.ON_MESSAGE_ERROR, (wsError: WebSocketErrorMessage) => done.fail(wsError.message));
+
+      if (options?.doneOnClose) {
+        ws.on(WebSocketEvent.ON_CLOSE, done);
+      }
+
+      if (options?.disconnectOnNoMoreSubscriptions) {
+        ws.on(WebSocketEvent.ON_SUBSCRIPTION_UPDATE, subscriptions => {
+          // Disconnect when there are no more open subscriptions
+          if (subscriptions.channels.length === 0) {
+            ws.disconnect();
+          }
+        });
+      }
+
+      if (options?.disconnectOnSubscriptionResponse) {
+        ws.on(WebSocketEvent.ON_SUBSCRIPTION_UPDATE, () => {
+          ws.disconnect();
+        });
+      }
+
+      if (channels && options?.subscribeOnOpen) {
+        // Send subscription once the WebSocket is ready
+        ws.on(WebSocketEvent.ON_OPEN, () => {
+          ws.subscribe(channels);
+        });
+      }
+
+      return ws;
+    }
+
     it('receives typed messages from "status" channel', (done: DoneFn) => {
       const channel = {
         name: WebSocketChannelName.STATUS,
@@ -466,6 +556,268 @@ describe('WebSocketClient', () => {
 
       ws.on(WebSocketEvent.ON_CLOSE, () => {
         done();
+      });
+
+      ws.connect();
+    });
+
+    it('returns no subscribed channels or products when none have been subscribed', done => {
+      const ws = createWebSocketClient();
+
+      expect(ws.subscriptions.length).toBe(0);
+
+      ws.on(WebSocketEvent.ON_OPEN, () => {
+        expect(ws.subscriptions.length).toBe(0);
+
+        ws.disconnect();
+      });
+
+      ws.on(WebSocketEvent.ON_CLOSE, () => {
+        expect(ws.subscriptions.length).toBe(0);
+
+        done();
+      });
+
+      ws.connect();
+    });
+
+    it('returns subscribed channels and products when subscribe is called once', done => {
+      const channel: WebSocketChannel = {
+        name: WebSocketChannelName.TICKER,
+        product_ids: ['BTC-USD', 'ETH-USD'],
+      };
+
+      const ws = mockWebSocketClientSubscription(done, undefined, undefined, {disconnectOnSubscriptionResponse: true});
+
+      ws.on(WebSocketEvent.ON_OPEN, () => {
+        ws.subscribe(channel);
+
+        const subs = ws.subscriptions;
+
+        expect(subs.length).toBe(1);
+
+        expect(subs[0]).toEqual(channel);
+      });
+
+      ws.connect();
+    });
+
+    it('returns subscribed channels and products when subscribe is called more than once on same channel', done => {
+      const channel: WebSocketChannel = {
+        name: WebSocketChannelName.TICKER,
+        product_ids: ['BTC-USD', 'ETH-USD'],
+      };
+
+      const channel2: WebSocketChannel = {
+        name: WebSocketChannelName.TICKER,
+        product_ids: ['BTC-USD', 'MATIC-USD'],
+      };
+
+      const ws = mockWebSocketClientSubscription(done, undefined, undefined, {disconnectOnSubscriptionResponse: true});
+
+      ws.on(WebSocketEvent.ON_OPEN, () => {
+        ws.subscribe(channel);
+        ws.subscribe(channel2);
+
+        const subs = ws.subscriptions;
+
+        expect(subs.length).toBe(1);
+
+        expect(subs[0]).toEqual({
+          name: WebSocketChannelName.TICKER,
+          product_ids: ['BTC-USD', 'ETH-USD', 'MATIC-USD'],
+        });
+      });
+
+      ws.connect();
+    });
+
+    it('returns the correct channels and products after some channels are unsubscribed', done => {
+      const channel: WebSocketChannel = {
+        name: WebSocketChannelName.TICKER,
+        product_ids: ['BTC-USD', 'ETH-USD'],
+      };
+
+      const channel2: WebSocketChannel = {
+        name: WebSocketChannelName.TICKER,
+        product_ids: ['BTC-USD', 'MATIC-USD'],
+      };
+
+      const ws = mockWebSocketClientSubscription(done, undefined, undefined, {disconnectOnSubscriptionResponse: true});
+
+      ws.on(WebSocketEvent.ON_OPEN, () => {
+        ws.subscribe([channel, channel2]);
+
+        ws.unsubscribe({
+          name: WebSocketChannelName.TICKER,
+          product_ids: ['ETH-USD'],
+        });
+
+        expect(ws.subscriptions[0]).toEqual({
+          name: WebSocketChannelName.TICKER,
+          product_ids: ['BTC-USD', 'MATIC-USD'],
+        });
+      });
+
+      ws.connect();
+    });
+
+    it('returns the correct channels and products when different channels are subscribed', done => {
+      const channel: WebSocketChannel = {
+        name: WebSocketChannelName.TICKER,
+        product_ids: ['BTC-USD', 'ETH-USD'],
+      };
+
+      const channel2: WebSocketChannel = {
+        name: WebSocketChannelName.STATUS,
+        product_ids: ['BTC-USD', 'MATIC-USD'],
+      };
+
+      const ws = mockWebSocketClientSubscription(done, undefined, undefined, {disconnectOnSubscriptionResponse: true});
+
+      ws.on(WebSocketEvent.ON_OPEN, () => {
+        ws.subscribe([channel, channel2]);
+
+        expect(ws.subscriptions).toEqual([channel2, channel]);
+      });
+
+      ws.connect();
+    });
+
+    it('returns the correct channels and products when different channels are subscribed and one product unsubscribed', done => {
+      const channel: WebSocketChannel = {
+        name: WebSocketChannelName.TICKER,
+        product_ids: ['BTC-USD', 'ETH-USD'],
+      };
+
+      const channel2: WebSocketChannel = {
+        name: WebSocketChannelName.STATUS,
+        product_ids: ['BTC-USD', 'MATIC-USD'],
+      };
+
+      const ws = mockWebSocketClientSubscription(done, undefined, undefined, {disconnectOnSubscriptionResponse: true});
+
+      ws.on(WebSocketEvent.ON_OPEN, () => {
+        ws.subscribe([channel, channel2]);
+
+        ws.unsubscribe({
+          name: WebSocketChannelName.TICKER,
+          product_ids: ['BTC-USD'],
+        });
+
+        expect(ws.subscriptions).toEqual([channel2, {name: WebSocketChannelName.TICKER, product_ids: ['ETH-USD']}]);
+      });
+
+      ws.connect();
+    });
+
+    it('returns the correct channels and products when a channel is unsubscribed by name', done => {
+      const channel: WebSocketChannel = {
+        name: WebSocketChannelName.TICKER,
+        product_ids: ['BTC-USD', 'ETH-USD'],
+      };
+
+      const channel2: WebSocketChannel = {
+        name: WebSocketChannelName.STATUS,
+        product_ids: ['BTC-USD', 'MATIC-USD'],
+      };
+
+      const ws = mockWebSocketClientSubscription(done, undefined, undefined, {disconnectOnSubscriptionResponse: true});
+
+      ws.on(WebSocketEvent.ON_OPEN, () => {
+        ws.subscribe([channel, channel2]);
+
+        ws.unsubscribe(WebSocketChannelName.TICKER);
+
+        expect(ws.subscriptions).toEqual([channel2]);
+      });
+
+      ws.connect();
+    });
+
+    it('automatically resubscribes to products after connection is dropped and reopened', done => {
+      const channel: WebSocketChannel = {
+        name: WebSocketChannelName.TICKER,
+        product_ids: ['BTC-USD', 'ETH-USD'],
+      };
+
+      const channel2: WebSocketChannel = {
+        name: WebSocketChannelName.STATUS,
+        product_ids: ['BTC-USD', 'MATIC-USD'],
+      };
+
+      let isReconnect = false;
+
+      const ws = mockWebSocketClientSubscription(done, undefined, undefined, {doneOnClose: false});
+
+      ws.on(WebSocketEvent.ON_OPEN, () => {
+        if (!isReconnect) {
+          ws.subscribe(channel2);
+          ws.subscribe(channel);
+
+          isReconnect = true;
+
+          // Force close the server connection
+          server.close();
+
+          // Reset the WS server
+          server = new WebSocket.Server({port: WEBSOCKET_PORT});
+          setupWebSocketServer();
+        }
+      });
+
+      ws.on(WebSocketEvent.ON_SUBSCRIPTION_UPDATE, e => {
+        if (isReconnect) {
+          expect(e.channels).toEqual([channel2, channel]);
+          ws.disconnect('done');
+        }
+      });
+
+      ws.on(WebSocketEvent.ON_CLOSE, e => {
+        if (e.reason === 'done') {
+          done();
+        }
+      });
+
+      // Connect and reconnect immediately
+      ws.connect({minReconnectionDelay: 0});
+    });
+
+    it('clears remembered subscribed channels when asked to on disconnect', done => {
+      const channel: WebSocketChannel = {
+        name: WebSocketChannelName.TICKER,
+        product_ids: ['BTC-USD', 'ETH-USD'],
+      };
+
+      const ws = mockWebSocketClientSubscription(done);
+
+      ws.on(WebSocketEvent.ON_OPEN, () => {
+        ws.subscribe(channel);
+      });
+
+      ws.on(WebSocketEvent.ON_SUBSCRIPTION_UPDATE, () => {
+        ws.disconnect(undefined, true);
+
+        expect(ws.subscriptions).toEqual([]);
+      });
+
+      ws.connect();
+    });
+
+    it('removes the entire channel subscription when a channel object with just a channel name is passed', done => {
+      const channel: WebSocketChannel = {
+        name: WebSocketChannelName.TICKER,
+        product_ids: ['BTC-USD', 'ETH-USD'],
+      };
+
+      const ws = mockWebSocketClientSubscription(done, undefined, undefined, {disconnectOnSubscriptionResponse: true});
+
+      ws.on(WebSocketEvent.ON_OPEN, () => {
+        ws.subscribe(channel);
+
+        ws.unsubscribe({name: WebSocketChannelName.TICKER});
+
+        expect(ws.subscriptions).toEqual([]);
       });
 
       ws.connect();
