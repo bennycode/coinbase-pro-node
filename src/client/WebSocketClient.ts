@@ -570,9 +570,10 @@ export class WebSocketClient extends EventEmitter {
         if (this._subscriptions[chan.name]) {
           if (undefined !== chan.product_ids) {
             // Remove product ids from the channel
-            this._subscriptions[chan.name].product_ids = this._subscriptions[chan.name].product_ids.filter(
-              x => !chan.product_ids?.includes(x)
-            );
+            this._subscriptions[chan.name].product_ids = this._subscriptions[chan.name].product_ids.filter(x => {
+              /* istanbul ignore next: there should always be product_ids based on above typeguard */
+              return !chan.product_ids?.includes(x);
+            });
 
             // If no more products subscribed on the channel, delete its reference
             if (0 === this._subscriptions[chan.name].product_ids.length) {
@@ -606,6 +607,7 @@ export class WebSocketClient extends EventEmitter {
   private generateSubscriptionsCache(): void {
     const channels: WebSocketChannel[] = [];
     for (const channelName in this._subscriptions) {
+      /* istanbul ignore else: see https://github.com/gotwarlost/istanbul/blob/master/ignoring-code-for-coverage.md#ignore-an-else-path */
       if (Object.prototype.hasOwnProperty.call(this._subscriptions, channelName)) {
         const chan = this._subscriptions[channelName];
 
