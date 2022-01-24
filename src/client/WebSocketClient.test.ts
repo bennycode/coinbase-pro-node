@@ -822,6 +822,50 @@ describe('WebSocketClient', () => {
 
       ws.connect();
     });
+
+    it('defaults to auto-resubscribe when connecting', done => {
+      const channel: WebSocketChannel = {
+        name: WebSocketChannelName.TICKER,
+        product_ids: ['BTC-USD', 'ETH-USD'],
+      };
+
+      const ws = mockWebSocketClientSubscription(done, undefined, undefined, {disconnectOnSubscriptionResponse: true});
+
+      ws.on(WebSocketEvent.ON_OPEN, () => {
+        ws.subscribe(channel);
+      });
+
+      ws.connect();
+
+      expect(ws.willAutoResubscribe).toBe(true);
+    });
+
+    it('clears saved resubscription channels upon disconnect when WebSocketClient should not auto-resubscribe', done => {
+      const channel: WebSocketChannel = {
+        name: WebSocketChannelName.TICKER,
+        product_ids: ['BTC-USD', 'ETH-USD'],
+      };
+
+      const ws = mockWebSocketClientSubscription(done);
+
+      ws.on(WebSocketEvent.ON_OPEN, () => {
+        ws.subscribe(channel);
+
+        expect(ws.subscriptions).toEqual([channel]);
+        expect(ws.willAutoResubscribe).toBe(false);
+      });
+
+      ws.on(WebSocketEvent.ON_SUBSCRIPTION_UPDATE, () => {
+        ws.disconnect();
+
+        expect(ws.willAutoResubscribe).toBe(false);
+        expect(ws.subscriptions).toEqual([]);
+      });
+
+      ws.connect({autoResubscribe: false});
+
+      expect(ws.willAutoResubscribe).toBe(false);
+    });
   });
 
   describe('unsubscribe', () => {

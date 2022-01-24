@@ -122,6 +122,10 @@ export enum WebSocketResponseType {
   TICKER = 'ticker',
 }
 
+type ReconnectOptions = Options & {
+  autoResubscribe?: boolean;
+};
+
 export type WebSocketResponse = WebSocketMessage & {type: WebSocketResponseType};
 
 // Not exported because it will become "WebSocketResponse" once complete
@@ -364,6 +368,8 @@ export class WebSocketClient extends EventEmitter {
   private pingTime: number;
   private readonly pongTime: number;
 
+  private _willAutoResubscribe: boolean;
+
   private _subscriptions: {
     [channel_name: string]: Required<WebSocketChannel>;
   };
@@ -377,6 +383,7 @@ export class WebSocketClient extends EventEmitter {
     this.pongTime = this.pingTime * 1.5;
     this._subscriptions = {};
     this._subscriptions_cache = [];
+    this._willAutoResubscribe = true;
   }
 
   /**
@@ -386,11 +393,20 @@ export class WebSocketClient extends EventEmitter {
    *   will be merged with sensible default values.
    * @see https://docs.pro.coinbase.com/#websocket-feed
    */
-  connect(reconnectOptions?: Options): ReconnectingWebSocket {
+  connect(reconnectOptions?: ReconnectOptions): ReconnectingWebSocket {
     if (this.socket) {
       throw Error(
         `You established already a WebSocket connection. Please call "disconnect" first before creating a new one.`
       );
+    }
+
+    if (undefined !== reconnectOptions?.autoResubscribe) {
+      this._willAutoResubscribe = reconnectOptions.autoResubscribe;
+
+      // Remove the property so as to not interfere with reconnecting-websocket
+      delete reconnectOptions.autoResubscribe;
+    } else {
+      this._willAutoResubscribe = true;
     }
 
     const options = this.mergeOptions(reconnectOptions);
@@ -458,7 +474,7 @@ export class WebSocketClient extends EventEmitter {
       this.emit(WebSocketEvent.ON_OPEN);
 
       // Resubscribe if we had previous subscriptions
-      if (this._subscriptions_cache.length > 0) {
+      if (this._willAutoResubscribe && this._subscriptions_cache.length > 0) {
         this._subscribe(this._subscriptions_cache);
       }
 
@@ -479,7 +495,7 @@ export class WebSocketClient extends EventEmitter {
   }
 
   disconnect(reason: string = 'Unknown reason', forgetSubscriptions: boolean = false): void {
-    if (forgetSubscriptions) {
+    if (forgetSubscriptions || !this._willAutoResubscribe) {
       this._subscriptions = {};
       this._subscriptions_cache = [];
     }
@@ -627,10 +643,18 @@ export class WebSocketClient extends EventEmitter {
   }
 
   /**
-   * Returns all the channels and products that have been subscribed.
+   * Returns all the channels and products that have been requested to be subscribed.
    */
   get subscriptions(): WebSocketChannel[] {
     return this._subscriptions_cache;
+  }
+
+  /**
+   * Indicates whether subscribed channels will resubscribe if connection is dropped
+   * and reestablished.
+   */
+  get willAutoResubscribe(): boolean {
+    return this._willAutoResubscribe;
   }
 
   private cleanupListener(): void {
