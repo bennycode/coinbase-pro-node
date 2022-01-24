@@ -571,8 +571,7 @@ export class WebSocketClient extends EventEmitter {
           if (undefined !== chan.product_ids) {
             // Remove product ids from the channel
             this._subscriptions[chan.name].product_ids = this._subscriptions[chan.name].product_ids.filter(x => {
-              /* istanbul ignore next: there should always be product_ids based on above typeguard */
-              return !chan.product_ids?.includes(x);
+              return !chan.product_ids!.includes(x);
             });
 
             // If no more products subscribed on the channel, delete its reference
