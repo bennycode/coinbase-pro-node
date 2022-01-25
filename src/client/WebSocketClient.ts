@@ -481,10 +481,6 @@ export class WebSocketClient extends EventEmitter {
   }
 
   async sendMessage(message: WebSocketRequest): Promise<void> {
-    if (!this.socket) {
-      throw new Error(`Failed to send message of type "${message.type}": You need to connect to the WebSocket first.`);
-    }
-
     /**
      * Authentication will result in a couple of benefits:
      * 1. Messages where you're one of the parties are expanded and have more useful fields
@@ -497,6 +493,10 @@ export class WebSocketClient extends EventEmitter {
       requestPath: `${UserAPI.URL.USERS}/self/verify`,
     });
     Object.assign(message, signature);
+
+    if (!this.socket) {
+      throw new Error(`Failed to send message of type "${message.type}": You need to connect to the WebSocket first.`);
+    }
 
     this.socket.send(JSON.stringify(message));
   }
