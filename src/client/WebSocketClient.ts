@@ -501,15 +501,15 @@ export class WebSocketClient extends EventEmitter {
     this.socket.send(JSON.stringify(message));
   }
 
-  subscribe(channel: WebSocketChannel | WebSocketChannel[]): void {
-    this.sendMessage({
+  async subscribe(channel: WebSocketChannel | WebSocketChannel[]): Promise<void> {
+    await this.sendMessage({
       channels: Array.isArray(channel) ? channel : [channel],
       type: WebSocketRequestType.SUBSCRIBE,
     }).finally(() => {});
   }
 
-  unsubscribe(channel: WebSocketChannelName | WebSocketChannel | WebSocketChannel[]): void {
-    this.sendMessage({
+  async unsubscribe(channel: WebSocketChannelName | WebSocketChannel | WebSocketChannel[]): Promise<void> {
+    await this.sendMessage({
       channels: this.mapChannels(channel),
       type: WebSocketRequestType.UNSUBSCRIBE,
     }).finally(() => {});

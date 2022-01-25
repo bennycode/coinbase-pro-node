@@ -16,8 +16,8 @@ client.ws.on(WebSocketEvent.ON_MESSAGE_ERROR, errorMessage => {
   throw new Error(`${errorMessage.message}: ${errorMessage.reason}`);
 });
 
-client.ws.on(WebSocketEvent.ON_OPEN, () => {
-  client.ws.subscribe(channel);
+client.ws.on(WebSocketEvent.ON_OPEN, async () => {
+  await client.ws.subscribe(channel);
 });
 
 client.ws.connect();
