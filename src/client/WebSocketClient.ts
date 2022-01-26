@@ -126,6 +126,11 @@ type ReconnectOptions = Options & {
   autoResubscribe?: boolean;
 };
 
+type DisconnectOptions = {
+  forgetSubscriptions?: boolean;
+  reason?: string;
+};
+
 export type WebSocketResponse = WebSocketMessage & {type: WebSocketResponseType};
 
 // Not exported because it will become "WebSocketResponse" once complete
@@ -494,7 +499,21 @@ export class WebSocketClient extends EventEmitter {
     return this.socket;
   }
 
-  disconnect(reason: string = 'Unknown reason', forgetSubscriptions: boolean = false): void {
+  disconnect(options?: DisconnectOptions | string): void {
+    let reason = 'Unknown reason';
+    let forgetSubscriptions = false;
+
+    /*
+     * To prevent breaking the legacy API, we allow options to be a string to represent
+     * the reason for the disconnect.
+     */
+    if (typeof options === 'string') {
+      reason = options;
+    } else if (options) {
+      forgetSubscriptions = options.forgetSubscriptions ?? forgetSubscriptions;
+      reason = options.reason ?? reason;
+    }
+
     if (forgetSubscriptions || !this._willAutoResubscribe) {
       this._subscriptions = {};
       this._subscriptions_cache = [];
