@@ -531,7 +531,7 @@ export class WebSocketClient extends EventEmitter {
     }
 
     /**
-     * Enforce a reconnect when not receiving any 'pong' from Coinbase Pro in time.
+     * Enforce reconnect when not receiving any 'pong' from Coinbase Pro in time.
      * @see https://github.com/bennycode/coinbase-pro-node/issues/374
      */
     this.pongTimeout = setTimeout(this.onPongTimeout.bind(this), this.pongTime);

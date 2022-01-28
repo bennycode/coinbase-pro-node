@@ -126,7 +126,10 @@ describe('WebSocketClient', () => {
   describe('constructor', () => {
     it('it signals an event when the WebSocket connection is established', done => {
       const ws = createWebSocketClient();
-      ws.on(WebSocketEvent.ON_OPEN, () => done());
+      ws.on(WebSocketEvent.ON_OPEN, async () => {
+        await ws.disconnect();
+        done();
+      });
       ws.connect();
     });
   });
@@ -429,8 +432,9 @@ describe('WebSocketClient', () => {
 
       const ws = createWebSocketClient();
 
-      ws.on(WebSocketEvent.ON_MESSAGE_ERROR, errorMessage => {
+      ws.on(WebSocketEvent.ON_MESSAGE_ERROR, async errorMessage => {
         expect(errorMessage.type).toBe(WebSocketResponseType.ERROR);
+        await ws.disconnect();
         done();
       });
 
@@ -483,13 +487,15 @@ describe('WebSocketClient', () => {
 
       const ws = createWebSocketClient();
 
-      ws.on(WebSocketEvent.ON_SUBSCRIPTION_UPDATE, subscriptions => {
+      ws.on(WebSocketEvent.ON_SUBSCRIPTION_UPDATE, async subscriptions => {
         if (subscriptions.channels.length === 0) {
-          ws.disconnect();
+          await ws.disconnect();
         }
       });
 
-      ws.on(WebSocketEvent.ON_CLOSE, done);
+      ws.on(WebSocketEvent.ON_CLOSE, () => {
+        done();
+      });
 
       ws.on(WebSocketEvent.ON_OPEN, () => ws.unsubscribe(WebSocketChannelName.TICKER));
 
@@ -500,7 +506,8 @@ describe('WebSocketClient', () => {
   describe('setupHeartbeat', () => {
     it('sends ping messages within a defined interval', done => {
       server.on('connection', socket => {
-        socket.on('ping', () => {
+        socket.on('ping', async () => {
+          await ws.disconnect();
           done();
         });
       });
