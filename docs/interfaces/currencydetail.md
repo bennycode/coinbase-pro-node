@@ -24,7 +24,7 @@
 
 #### Defined in
 
-[currency/CurrencyAPI.ts:18](https://github.com/bennycode/coinbase-pro-node/blob/208278f/src/currency/CurrencyAPI.ts#L18)
+[currency/CurrencyAPI.ts:18](https://github.com/bennycode/coinbase-pro-node/blob/caaa670/src/currency/CurrencyAPI.ts#L18)
 
 ---
 
@@ -34,7 +34,7 @@
 
 #### Defined in
 
-[currency/CurrencyAPI.ts:19](https://github.com/bennycode/coinbase-pro-node/blob/208278f/src/currency/CurrencyAPI.ts#L19)
+[currency/CurrencyAPI.ts:19](https://github.com/bennycode/coinbase-pro-node/blob/caaa670/src/currency/CurrencyAPI.ts#L19)
 
 ---
 
@@ -44,7 +44,7 @@
 
 #### Defined in
 
-[currency/CurrencyAPI.ts:20](https://github.com/bennycode/coinbase-pro-node/blob/208278f/src/currency/CurrencyAPI.ts#L20)
+[currency/CurrencyAPI.ts:20](https://github.com/bennycode/coinbase-pro-node/blob/caaa670/src/currency/CurrencyAPI.ts#L20)
 
 ---
 
@@ -54,7 +54,7 @@
 
 #### Defined in
 
-[currency/CurrencyAPI.ts:21](https://github.com/bennycode/coinbase-pro-node/blob/208278f/src/currency/CurrencyAPI.ts#L21)
+[currency/CurrencyAPI.ts:21](https://github.com/bennycode/coinbase-pro-node/blob/caaa670/src/currency/CurrencyAPI.ts#L21)
 
 ---
 
@@ -64,7 +64,7 @@
 
 #### Defined in
 
-[currency/CurrencyAPI.ts:22](https://github.com/bennycode/coinbase-pro-node/blob/208278f/src/currency/CurrencyAPI.ts#L22)
+[currency/CurrencyAPI.ts:22](https://github.com/bennycode/coinbase-pro-node/blob/caaa670/src/currency/CurrencyAPI.ts#L22)
 
 ---
 
@@ -74,7 +74,7 @@
 
 #### Defined in
 
-[currency/CurrencyAPI.ts:23](https://github.com/bennycode/coinbase-pro-node/blob/208278f/src/currency/CurrencyAPI.ts#L23)
+[currency/CurrencyAPI.ts:23](https://github.com/bennycode/coinbase-pro-node/blob/caaa670/src/currency/CurrencyAPI.ts#L23)
 
 ---
 
@@ -84,7 +84,7 @@
 
 #### Defined in
 
-[currency/CurrencyAPI.ts:24](https://github.com/bennycode/coinbase-pro-node/blob/208278f/src/currency/CurrencyAPI.ts#L24)
+[currency/CurrencyAPI.ts:24](https://github.com/bennycode/coinbase-pro-node/blob/caaa670/src/currency/CurrencyAPI.ts#L24)
 
 ---
 
@@ -94,7 +94,7 @@
 
 #### Defined in
 
-[currency/CurrencyAPI.ts:25](https://github.com/bennycode/coinbase-pro-node/blob/208278f/src/currency/CurrencyAPI.ts#L25)
+[currency/CurrencyAPI.ts:25](https://github.com/bennycode/coinbase-pro-node/blob/caaa670/src/currency/CurrencyAPI.ts#L25)
 
 ---
 
@@ -104,4 +104,4 @@
 
 #### Defined in
 
-[currency/CurrencyAPI.ts:26](https://github.com/bennycode/coinbase-pro-node/blob/208278f/src/currency/CurrencyAPI.ts#L26)
+[currency/CurrencyAPI.ts:26](https://github.com/bennycode/coinbase-pro-node/blob/caaa670/src/currency/CurrencyAPI.ts#L26)

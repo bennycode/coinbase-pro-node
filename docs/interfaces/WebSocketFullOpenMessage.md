@@ -31,7 +31,7 @@
 
 #### Defined in
 
-[client/WebSocketClient.ts:226](https://github.com/bennycode/coinbase-pro-node/blob/208278f/src/client/WebSocketClient.ts#L226)
+[client/WebSocketClient.ts:226](https://github.com/bennycode/coinbase-pro-node/blob/caaa670/src/client/WebSocketClient.ts#L226)
 
 ---
 
@@ -41,7 +41,7 @@
 
 #### Defined in
 
-[client/WebSocketClient.ts:227](https://github.com/bennycode/coinbase-pro-node/blob/208278f/src/client/WebSocketClient.ts#L227)
+[client/WebSocketClient.ts:227](https://github.com/bennycode/coinbase-pro-node/blob/caaa670/src/client/WebSocketClient.ts#L227)
 
 ---
 
@@ -51,7 +51,7 @@
 
 #### Defined in
 
-[client/WebSocketClient.ts:228](https://github.com/bennycode/coinbase-pro-node/blob/208278f/src/client/WebSocketClient.ts#L228)
+[client/WebSocketClient.ts:228](https://github.com/bennycode/coinbase-pro-node/blob/caaa670/src/client/WebSocketClient.ts#L228)
 
 ---
 
@@ -65,7 +65,7 @@ WebSocketUserMessage.profile_id
 
 #### Defined in
 
-[client/WebSocketClient.ts:276](https://github.com/bennycode/coinbase-pro-node/blob/208278f/src/client/WebSocketClient.ts#L276)
+[client/WebSocketClient.ts:276](https://github.com/bennycode/coinbase-pro-node/blob/caaa670/src/client/WebSocketClient.ts#L276)
 
 ---
 
@@ -75,7 +75,7 @@ WebSocketUserMessage.profile_id
 
 #### Defined in
 
-[client/WebSocketClient.ts:229](https://github.com/bennycode/coinbase-pro-node/blob/208278f/src/client/WebSocketClient.ts#L229)
+[client/WebSocketClient.ts:229](https://github.com/bennycode/coinbase-pro-node/blob/caaa670/src/client/WebSocketClient.ts#L229)
 
 ---
 
@@ -85,7 +85,7 @@ WebSocketUserMessage.profile_id
 
 #### Defined in
 
-[client/WebSocketClient.ts:230](https://github.com/bennycode/coinbase-pro-node/blob/208278f/src/client/WebSocketClient.ts#L230)
+[client/WebSocketClient.ts:230](https://github.com/bennycode/coinbase-pro-node/blob/caaa670/src/client/WebSocketClient.ts#L230)
 
 ---
 
@@ -95,7 +95,7 @@ WebSocketUserMessage.profile_id
 
 #### Defined in
 
-[client/WebSocketClient.ts:231](https://github.com/bennycode/coinbase-pro-node/blob/208278f/src/client/WebSocketClient.ts#L231)
+[client/WebSocketClient.ts:231](https://github.com/bennycode/coinbase-pro-node/blob/caaa670/src/client/WebSocketClient.ts#L231)
 
 ---
 
@@ -105,7 +105,7 @@ WebSocketUserMessage.profile_id
 
 #### Defined in
 
-[client/WebSocketClient.ts:232](https://github.com/bennycode/coinbase-pro-node/blob/208278f/src/client/WebSocketClient.ts#L232)
+[client/WebSocketClient.ts:232](https://github.com/bennycode/coinbase-pro-node/blob/caaa670/src/client/WebSocketClient.ts#L232)
 
 ---
 
@@ -115,7 +115,7 @@ WebSocketUserMessage.profile_id
 
 #### Defined in
 
-[client/WebSocketClient.ts:233](https://github.com/bennycode/coinbase-pro-node/blob/208278f/src/client/WebSocketClient.ts#L233)
+[client/WebSocketClient.ts:233](https://github.com/bennycode/coinbase-pro-node/blob/caaa670/src/client/WebSocketClient.ts#L233)
 
 ---
 
@@ -129,4 +129,4 @@ WebSocketUserMessage.user_id
 
 #### Defined in
 
-[client/WebSocketClient.ts:277](https://github.com/bennycode/coinbase-pro-node/blob/208278f/src/client/WebSocketClient.ts#L277)
+[client/WebSocketClient.ts:277](https://github.com/bennycode/coinbase-pro-node/blob/caaa670/src/client/WebSocketClient.ts#L277)

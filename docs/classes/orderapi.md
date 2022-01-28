@@ -34,7 +34,7 @@
 
 #### Defined in
 
-[order/OrderAPI.ts:113](https://github.com/bennycode/coinbase-pro-node/blob/208278f/src/order/OrderAPI.ts#L113)
+[order/OrderAPI.ts:113](https://github.com/bennycode/coinbase-pro-node/blob/caaa670/src/order/OrderAPI.ts#L113)
 
 ## Properties
 
@@ -50,7 +50,7 @@
 
 #### Defined in
 
-[order/OrderAPI.ts:109](https://github.com/bennycode/coinbase-pro-node/blob/208278f/src/order/OrderAPI.ts#L109)
+[order/OrderAPI.ts:109](https://github.com/bennycode/coinbase-pro-node/blob/caaa670/src/order/OrderAPI.ts#L109)
 
 ## Methods
 
@@ -76,7 +76,7 @@ A list of ids of the canceled orders
 
 #### Defined in
 
-[order/OrderAPI.ts:122](https://github.com/bennycode/coinbase-pro-node/blob/208278f/src/order/OrderAPI.ts#L122)
+[order/OrderAPI.ts:122](https://github.com/bennycode/coinbase-pro-node/blob/caaa670/src/order/OrderAPI.ts#L122)
 
 ---
 
@@ -103,7 +103,7 @@ The ID of the canceled order
 
 #### Defined in
 
-[order/OrderAPI.ts:138](https://github.com/bennycode/coinbase-pro-node/blob/208278f/src/order/OrderAPI.ts#L138)
+[order/OrderAPI.ts:138](https://github.com/bennycode/coinbase-pro-node/blob/caaa670/src/order/OrderAPI.ts#L138)
 
 ---
 
@@ -127,7 +127,7 @@ Get a single order by order id from the profile that the API key belongs to.
 
 #### Defined in
 
-[order/OrderAPI.ts:176](https://github.com/bennycode/coinbase-pro-node/blob/208278f/src/order/OrderAPI.ts#L176)
+[order/OrderAPI.ts:176](https://github.com/bennycode/coinbase-pro-node/blob/caaa670/src/order/OrderAPI.ts#L176)
 
 ---
 
@@ -153,7 +153,7 @@ List your orders from the profile that the API key belongs to. Only open or un-s
 
 #### Defined in
 
-[order/OrderAPI.ts:155](https://github.com/bennycode/coinbase-pro-node/blob/208278f/src/order/OrderAPI.ts#L155)
+[order/OrderAPI.ts:155](https://github.com/bennycode/coinbase-pro-node/blob/caaa670/src/order/OrderAPI.ts#L155)
 
 ---
 
@@ -177,4 +177,4 @@ You can place two types of orders: limit and market. Orders can only be placed i
 
 #### Defined in
 
-[order/OrderAPI.ts:201](https://github.com/bennycode/coinbase-pro-node/blob/208278f/src/order/OrderAPI.ts#L201)
+[order/OrderAPI.ts:201](https://github.com/bennycode/coinbase-pro-node/blob/caaa670/src/order/OrderAPI.ts#L201)

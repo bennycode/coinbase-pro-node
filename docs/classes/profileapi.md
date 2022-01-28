@@ -32,7 +32,7 @@
 
 #### Defined in
 
-[profile/ProfileAPI.ts:27](https://github.com/bennycode/coinbase-pro-node/blob/208278f/src/profile/ProfileAPI.ts#L27)
+[profile/ProfileAPI.ts:27](https://github.com/bennycode/coinbase-pro-node/blob/caaa670/src/profile/ProfileAPI.ts#L27)
 
 ## Properties
 
@@ -48,7 +48,7 @@
 
 #### Defined in
 
-[profile/ProfileAPI.ts:23](https://github.com/bennycode/coinbase-pro-node/blob/208278f/src/profile/ProfileAPI.ts#L23)
+[profile/ProfileAPI.ts:23](https://github.com/bennycode/coinbase-pro-node/blob/caaa670/src/profile/ProfileAPI.ts#L23)
 
 ## Methods
 
@@ -72,7 +72,7 @@ A single profile
 
 #### Defined in
 
-[profile/ProfileAPI.ts:57](https://github.com/bennycode/coinbase-pro-node/blob/208278f/src/profile/ProfileAPI.ts#L57)
+[profile/ProfileAPI.ts:57](https://github.com/bennycode/coinbase-pro-node/blob/caaa670/src/profile/ProfileAPI.ts#L57)
 
 ---
 
@@ -96,7 +96,7 @@ List your profiles. Profiles are equivalent to portfolios. This endpoint require
 
 #### Defined in
 
-[profile/ProfileAPI.ts:36](https://github.com/bennycode/coinbase-pro-node/blob/208278f/src/profile/ProfileAPI.ts#L36)
+[profile/ProfileAPI.ts:36](https://github.com/bennycode/coinbase-pro-node/blob/caaa670/src/profile/ProfileAPI.ts#L36)
 
 ---
 
@@ -120,4 +120,4 @@ Transfer funds from API key’s profile to another user owned profile. This endp
 
 #### Defined in
 
-[profile/ProfileAPI.ts:77](https://github.com/bennycode/coinbase-pro-node/blob/208278f/src/profile/ProfileAPI.ts#L77)
+[profile/ProfileAPI.ts:77](https://github.com/bennycode/coinbase-pro-node/blob/caaa670/src/profile/ProfileAPI.ts#L77)
