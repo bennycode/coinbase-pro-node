@@ -1,3 +1,33 @@
+## 4.0.0 (2022-01-28)
+
+##### Chores
+
+- Use Node v16 in CI ([c14ad281](https://github.com/bennycode/coinbase-pro-node/commit/c14ad281a0396d5e3766d286d1308203dee49982))
+- Upgrade to ws v8.4.2 ([58b522a0](https://github.com/bennycode/coinbase-pro-node/commit/58b522a0461478606a829ff3c4bfe2cc14ea01ca))
+- Update dev dependencies ([c924ad4e](https://github.com/bennycode/coinbase-pro-node/commit/c924ad4ead8a4a178f827ab4f8502cb58af325d5))
+- Automatically update GitHub Actions ([81386993](https://github.com/bennycode/coinbase-pro-node/commit/813869931e05e3960a029587ef4f243bb3212cac))
+- **deps-dev:**
+  - bump eslint from 8.6.0 to 8.7.0 ([#670](https://github.com/bennycode/coinbase-pro-node/pull/670)) ([d48e45e4](https://github.com/bennycode/coinbase-pro-node/commit/d48e45e4e0fbcea60502163b67534e2abf2443d0))
+  - bump @typescript-eslint/eslint-plugin ([#676](https://github.com/bennycode/coinbase-pro-node/pull/676)) ([ce58f75e](https://github.com/bennycode/coinbase-pro-node/commit/ce58f75e647e0d3f57543af74ef30347deeae3a3))
+  - bump @types/jasmine from 3.10.2 to 3.10.3 ([#672](https://github.com/bennycode/coinbase-pro-node/pull/672)) ([8a3f0e88](https://github.com/bennycode/coinbase-pro-node/commit/8a3f0e8886d87a8936cf04be579b6cb1a73e5edb))
+  - bump lint-staged from 12.1.4 to 12.2.1 ([#673](https://github.com/bennycode/coinbase-pro-node/pull/673)) ([77487fda](https://github.com/bennycode/coinbase-pro-node/commit/77487fda565402904339f4a0e264077bafa203c7))
+  - bump dotenv-defaults from 3.0.0 to 5.0.0 ([#671](https://github.com/bennycode/coinbase-pro-node/pull/671)) ([d8c54f18](https://github.com/bennycode/coinbase-pro-node/commit/d8c54f1833f5fadbc4c98516fefd0e4519564883))
+  - bump nock from 13.2.1 to 13.2.2 ([#669](https://github.com/bennycode/coinbase-pro-node/pull/669)) ([b497c365](https://github.com/bennycode/coinbase-pro-node/commit/b497c3650ca8e12e074643d2b8706458d8e24ceb))
+  - bump @typescript-eslint/parser from 5.8.1 to 5.10.0 ([#667](https://github.com/bennycode/coinbase-pro-node/pull/667)) ([e47329f4](https://github.com/bennycode/coinbase-pro-node/commit/e47329f4077e462787a89b89aeb3acb9b5a2d7e7))
+- **deps:**
+  - bump axios from 0.24.0 to 0.25.0 ([#675](https://github.com/bennycode/coinbase-pro-node/pull/675)) ([bef717ba](https://github.com/bennycode/coinbase-pro-node/commit/bef717badcd8990ead0fa8bdeb9c2bdffaba10ae))
+  - bump ahmadnassri/action-dependabot-auto-merge ([#665](https://github.com/bennycode/coinbase-pro-node/pull/665)) ([b027b79e](https://github.com/bennycode/coinbase-pro-node/commit/b027b79ebf8057e4e1677ffa1ef4e40093535b48))
+  - bump bufferutil from 4.0.5 to 4.0.6 ([#668](https://github.com/bennycode/coinbase-pro-node/pull/668)) ([c241c187](https://github.com/bennycode/coinbase-pro-node/commit/c241c1878d6f10333566bf52e5d5e423bc005d6c))
+  - bump utf-8-validate from 5.0.7 to 5.0.8 ([#666](https://github.com/bennycode/coinbase-pro-node/pull/666)) ([9ae72849](https://github.com/bennycode/coinbase-pro-node/commit/9ae7284987c2b7d11b898287f9bcade6fdcb33d6))
+  - bump codecov/codecov-action from 1.3.2 to 2.1.0 ([#662](https://github.com/bennycode/coinbase-pro-node/pull/662)) ([12bfe028](https://github.com/bennycode/coinbase-pro-node/commit/12bfe028e55ee80edbc72ab8092684366ffe4d9f))
+  - bump actions/checkout from 2.3.4 to 2.4.0 ([#663](https://github.com/bennycode/coinbase-pro-node/pull/663)) ([bada1d5a](https://github.com/bennycode/coinbase-pro-node/commit/bada1d5ac9ef92cc5c445144cee8173ba43b2e72))
+  - bump actions/setup-node from 2.1.5 to 2.5.1 ([#664](https://github.com/bennycode/coinbase-pro-node/pull/664)) ([17510009](https://github.com/bennycode/coinbase-pro-node/commit/17510009a7e04d39b5c559790320696184402ebe))
+  - bump follow-redirects from 1.14.4 to 1.14.7 ([#658](https://github.com/bennycode/coinbase-pro-node/pull/658)) ([a6ca2028](https://github.com/bennycode/coinbase-pro-node/commit/a6ca2028639bcaec4dc3954c1e636f3af2fbee08))
+
+##### New Features
+
+- Mark subscribe() and unsubscribe() as async ([#678](https://github.com/bennycode/coinbase-pro-node/pull/678)) ([a64985a8](https://github.com/bennycode/coinbase-pro-node/commit/a64985a8895b45cbd8b78a269e69f4c5ed05c9a7))
+
 ### 3.1.0 (2022-01-03)
 
 ##### Chores
