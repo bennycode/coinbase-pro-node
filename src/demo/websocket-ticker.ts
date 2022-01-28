@@ -11,9 +11,9 @@ const channel = {
 };
 
 // 3. Wait for open WebSocket to send messages
-client.ws.on(WebSocketEvent.ON_OPEN, () => {
+client.ws.on(WebSocketEvent.ON_OPEN, async () => {
   // 7. Subscribe to WebSocket channel
-  client.ws.subscribe([channel]);
+  await client.ws.subscribe([channel]);
 });
 
 // 4. Listen to WebSocket subscription updates
@@ -26,11 +26,11 @@ client.ws.on(WebSocketEvent.ON_SUBSCRIPTION_UPDATE, subscriptions => {
 });
 
 // 5. Listen to WebSocket channel updates
-client.ws.on(WebSocketEvent.ON_MESSAGE_TICKER, tickerMessage => {
+client.ws.on(WebSocketEvent.ON_MESSAGE_TICKER, async tickerMessage => {
   // 8. Receive message from WebSocket channel
   console.info(`Received message of type "${tickerMessage.type}".`, tickerMessage);
   // 9. Unsubscribe from WebSocket channel
-  client.ws.unsubscribe([
+  await client.ws.unsubscribe([
     {
       name: WebSocketChannelName.TICKER,
       product_ids: [tickerMessage.product_id],
