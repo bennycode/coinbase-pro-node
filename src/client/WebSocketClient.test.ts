@@ -160,6 +160,22 @@ describe('WebSocketClient', () => {
 
       ws.connect();
     });
+
+    it('sets the disconnect reason in the options object', done => {
+      const ws = createWebSocketClient();
+
+      ws.on(WebSocketEvent.ON_OPEN, () => {
+        ws.disconnect({reason: 'We received the subscription!'});
+      });
+
+      ws.on(WebSocketEvent.ON_CLOSE, e => {
+        expect(e.reason).toBe('We received the subscription!');
+
+        done();
+      });
+
+      ws.connect();
+    });
   });
 
   describe('sendMessage', () => {
@@ -799,31 +815,6 @@ describe('WebSocketClient', () => {
         ws.disconnect({forgetSubscriptions: true});
 
         expect(ws.subscriptions).toEqual([]);
-      });
-
-      ws.connect();
-    });
-
-    it('sets the disconnect reason in the options object', done => {
-      const channel: WebSocketChannel = {
-        name: WebSocketChannelName.TICKER,
-        product_ids: ['BTC-USD', 'ETH-USD'],
-      };
-
-      const ws = mockWebSocketClientSubscription(done, undefined, undefined, {doneOnClose: false});
-
-      ws.on(WebSocketEvent.ON_OPEN, async () => {
-        await ws.subscribe(channel);
-      });
-
-      ws.on(WebSocketEvent.ON_SUBSCRIPTION_UPDATE, () => {
-        ws.disconnect({reason: 'We received the subscription!'});
-      });
-
-      ws.on(WebSocketEvent.ON_CLOSE, e => {
-        expect(e.reason).toBe('We received the subscription!');
-
-        done();
       });
 
       ws.connect();
