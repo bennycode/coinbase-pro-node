@@ -304,8 +304,8 @@ describe('WebSocketClient', () => {
 
       if (channels && options?.subscribeOnOpen) {
         // Send subscription once the WebSocket is ready
-        ws.on(WebSocketEvent.ON_OPEN, () => {
-          ws.subscribe(channels);
+        ws.on(WebSocketEvent.ON_OPEN, async () => {
+          await ws.subscribe(channels);
         });
       }
 
@@ -589,8 +589,8 @@ describe('WebSocketClient', () => {
 
       const ws = mockWebSocketClientSubscription(done, undefined, undefined, {disconnectOnSubscriptionResponse: true});
 
-      ws.on(WebSocketEvent.ON_OPEN, () => {
-        ws.subscribe(channel);
+      ws.on(WebSocketEvent.ON_OPEN, async () => {
+        await ws.subscribe(channel);
 
         const subs = ws.subscriptions;
 
@@ -615,9 +615,9 @@ describe('WebSocketClient', () => {
 
       const ws = mockWebSocketClientSubscription(done, undefined, undefined, {disconnectOnSubscriptionResponse: true});
 
-      ws.on(WebSocketEvent.ON_OPEN, () => {
-        ws.subscribe(channel);
-        ws.subscribe(channel2);
+      ws.on(WebSocketEvent.ON_OPEN, async () => {
+        await ws.subscribe(channel);
+        await ws.subscribe(channel2);
 
         const subs = ws.subscriptions;
 
@@ -645,10 +645,10 @@ describe('WebSocketClient', () => {
 
       const ws = mockWebSocketClientSubscription(done, undefined, undefined, {disconnectOnSubscriptionResponse: true});
 
-      ws.on(WebSocketEvent.ON_OPEN, () => {
-        ws.subscribe([channel, channel2]);
+      ws.on(WebSocketEvent.ON_OPEN, async () => {
+        await ws.subscribe([channel, channel2]);
 
-        ws.unsubscribe({
+        await ws.unsubscribe({
           name: WebSocketChannelName.TICKER,
           product_ids: ['ETH-USD'],
         });
@@ -675,8 +675,8 @@ describe('WebSocketClient', () => {
 
       const ws = mockWebSocketClientSubscription(done, undefined, undefined, {disconnectOnSubscriptionResponse: true});
 
-      ws.on(WebSocketEvent.ON_OPEN, () => {
-        ws.subscribe([channel, channel2]);
+      ws.on(WebSocketEvent.ON_OPEN, async () => {
+        await ws.subscribe([channel, channel2]);
 
         expect(ws.subscriptions).toEqual([channel2, channel]);
       });
@@ -697,10 +697,10 @@ describe('WebSocketClient', () => {
 
       const ws = mockWebSocketClientSubscription(done, undefined, undefined, {disconnectOnSubscriptionResponse: true});
 
-      ws.on(WebSocketEvent.ON_OPEN, () => {
-        ws.subscribe([channel, channel2]);
+      ws.on(WebSocketEvent.ON_OPEN, async () => {
+        await ws.subscribe([channel, channel2]);
 
-        ws.unsubscribe({
+        await ws.unsubscribe({
           name: WebSocketChannelName.TICKER,
           product_ids: ['BTC-USD'],
         });
@@ -724,10 +724,10 @@ describe('WebSocketClient', () => {
 
       const ws = mockWebSocketClientSubscription(done, undefined, undefined, {disconnectOnSubscriptionResponse: true});
 
-      ws.on(WebSocketEvent.ON_OPEN, () => {
-        ws.subscribe([channel, channel2]);
+      ws.on(WebSocketEvent.ON_OPEN, async () => {
+        await ws.subscribe([channel, channel2]);
 
-        ws.unsubscribe(WebSocketChannelName.TICKER);
+        await ws.unsubscribe(WebSocketChannelName.TICKER);
 
         expect(ws.subscriptions).toEqual([channel2]);
       });
@@ -750,10 +750,10 @@ describe('WebSocketClient', () => {
 
       const ws = mockWebSocketClientSubscription(done, undefined, undefined, {doneOnClose: false});
 
-      ws.on(WebSocketEvent.ON_OPEN, () => {
+      ws.on(WebSocketEvent.ON_OPEN, async () => {
         if (!isReconnect) {
-          ws.subscribe(channel2);
-          ws.subscribe(channel);
+          await ws.subscribe(channel2);
+          await ws.subscribe(channel);
 
           isReconnect = true;
 
@@ -791,8 +791,8 @@ describe('WebSocketClient', () => {
 
       const ws = mockWebSocketClientSubscription(done);
 
-      ws.on(WebSocketEvent.ON_OPEN, () => {
-        ws.subscribe(channel);
+      ws.on(WebSocketEvent.ON_OPEN, async () => {
+        await ws.subscribe(channel);
       });
 
       ws.on(WebSocketEvent.ON_SUBSCRIPTION_UPDATE, () => {
@@ -812,8 +812,8 @@ describe('WebSocketClient', () => {
 
       const ws = mockWebSocketClientSubscription(done, undefined, undefined, {doneOnClose: false});
 
-      ws.on(WebSocketEvent.ON_OPEN, () => {
-        ws.subscribe(channel);
+      ws.on(WebSocketEvent.ON_OPEN, async () => {
+        await ws.subscribe(channel);
       });
 
       ws.on(WebSocketEvent.ON_SUBSCRIPTION_UPDATE, () => {
@@ -837,10 +837,10 @@ describe('WebSocketClient', () => {
 
       const ws = mockWebSocketClientSubscription(done, undefined, undefined, {disconnectOnSubscriptionResponse: true});
 
-      ws.on(WebSocketEvent.ON_OPEN, () => {
-        ws.subscribe(channel);
+      ws.on(WebSocketEvent.ON_OPEN, async () => {
+        await ws.subscribe(channel);
 
-        ws.unsubscribe({name: WebSocketChannelName.TICKER});
+        await ws.unsubscribe({name: WebSocketChannelName.TICKER});
 
         expect(ws.subscriptions).toEqual([]);
       });
@@ -856,8 +856,8 @@ describe('WebSocketClient', () => {
 
       const ws = mockWebSocketClientSubscription(done, undefined, undefined, {disconnectOnSubscriptionResponse: true});
 
-      ws.on(WebSocketEvent.ON_OPEN, () => {
-        ws.subscribe(channel);
+      ws.on(WebSocketEvent.ON_OPEN, async () => {
+        await ws.subscribe(channel);
       });
 
       ws.connect();
@@ -873,8 +873,8 @@ describe('WebSocketClient', () => {
 
       const ws = mockWebSocketClientSubscription(done);
 
-      ws.on(WebSocketEvent.ON_OPEN, () => {
-        ws.subscribe(channel);
+      ws.on(WebSocketEvent.ON_OPEN, async () => {
+        await ws.subscribe(channel);
 
         expect(ws.subscriptions).toEqual([channel]);
         expect(ws.willAutoResubscribe).toBe(false);
@@ -908,9 +908,9 @@ describe('WebSocketClient', () => {
 
       const ws = createWebSocketClient();
 
-      ws.on(WebSocketEvent.ON_SUBSCRIPTION_UPDATE, async subscriptions => {
+      ws.on(WebSocketEvent.ON_SUBSCRIPTION_UPDATE, subscriptions => {
         if (subscriptions.channels.length === 0) {
-          await ws.disconnect();
+          ws.disconnect();
         }
       });
 

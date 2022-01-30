@@ -475,12 +475,12 @@ export class WebSocketClient extends EventEmitter {
       }
     };
 
-    this.socket.onopen = (): void => {
+    this.socket.onopen = async (): Promise<void> => {
       this.emit(WebSocketEvent.ON_OPEN);
 
       // Resubscribe if we had previous subscriptions
       if (this._willAutoResubscribe && this._subscriptions_cache.length > 0) {
-        this._subscribe(this._subscriptions_cache);
+        await this._subscribe(this._subscriptions_cache);
       }
 
       /**
