@@ -1,5 +1,3 @@
-coinbase-pro-node / [Exports](modules.md)
-
 # Coinbase Pro API
 
 ![Language Details](https://img.shields.io/github/languages/top/bennycode/coinbase-pro-node) ![Code Coverage](https://img.shields.io/codecov/c/github/bennycode/coinbase-pro-node/main) ![License](https://img.shields.io/npm/l/coinbase-pro-node.svg) ![Package Version](https://img.shields.io/npm/v/coinbase-pro-node.svg) ![Dependency Updates](https://img.shields.io/david/bennycode/coinbase-pro-node.svg)
