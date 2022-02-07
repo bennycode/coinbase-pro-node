@@ -1,5 +1,5 @@
 {
-  "disableOutputCheck": true,
+  "cleanOutputDir": false,
   "entryPoints": ["src"],
   "exclude": ["**/demo/**/*", "**/payload/**/*", "**/test/**/*", "**/*+(index|.test*).ts"],
   "excludeExternals": true,
