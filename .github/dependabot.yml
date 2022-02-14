@@ -24,14 +24,6 @@ updates:
       - 'type: chore \U0001F9F9'
     open-pull-requests-limit: 10
     ignore:
-      - dependency-name: 'typedoc'
-        versions:
-          # https://github.com/TypeStrong/typedoc/releases/tag/v0.22.0
-          - '>= 0.22.0'
-      - dependency-name: 'typedoc-plugin-markdown'
-        versions:
-          # https://github.com/tgreyuk/typedoc-plugin-markdown/releases/tag/typedoc-plugin-markdown%403.11.0
-          - '>= 3.11.0'
       - dependency-name: 'ws'
         # https://github.com/websockets/ws/releases/tag/8.0.0
         versions:
