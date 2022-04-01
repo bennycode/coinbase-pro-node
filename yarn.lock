@@ -298,10 +298,10 @@
   resolved "https://registry.npmjs.org/@tsconfig/node16/-/node16-1.0.2.tgz#423c77877d0569db20e1fc80885ac4118314010e"
   integrity sha512-eZxlbI8GZscaGS7kkc/trHTT5xgrjH3/1n2JDwusC9iahPKWMRvRjJSAN5mCXviuTGQ/lHnhvv8Q1YTpnfz9gA==
 
-"@types/jasmine@3.10.3":
-  version "3.10.3"
-  resolved "https://registry.npmjs.org/@types/jasmine/-/jasmine-3.10.3.tgz#a89798b3d5a8bd23ca56e855a9aee3e5a93bdaaa"
-  integrity sha512-SWyMrjgdAUHNQmutvDcKablrJhkDLy4wunTme8oYLjKp41GnHGxMRXr2MQMvy/qy8H3LdzwQk9gH4hZ6T++H8g==
+"@types/jasmine@4.0.2":
+  version "4.0.2"
+  resolved "https://registry.npmjs.org/@types/jasmine/-/jasmine-4.0.2.tgz#9a03589f6aa00ef42a90a8d37f09c893efced14c"
+  integrity sha512-mSPIWhDyQ4nzYdR6Ixy15VhVKMVw93mSUlQxxpVb4S9Hj90lBvg+7kkBw23uYcv8CESPPXit+u3cARYcPeC8Jg==
 
 "@types/json-schema@^7.0.9":
   version "7.0.9"
