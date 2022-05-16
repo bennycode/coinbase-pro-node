@@ -40,7 +40,7 @@ export class CoinbasePro {
     SANDBOX: ClientConnection;
   } = {
     PRODUCTION: {
-      REST: 'https://api.pro.coinbase.com',
+      REST: 'https://api.exchange.coinbase.com',
       WebSocket: 'wss://ws-feed.pro.coinbase.com',
     },
     SANDBOX: {
