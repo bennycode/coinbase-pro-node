@@ -83,4 +83,13 @@ describe('AccountAPI', () => {
       expect(holds).toBeDefined();
     });
   });
+
+  describe('generateAddress', () => {
+    it('generates an address for an account', async () => {
+      const accounts = await global.client.rest.account.listAccounts();
+      const accountId = accounts[0].id;
+      const newDepositAddress = await global.client.rest.account.generateDepositAddress(accountId);
+      expect(newDepositAddress).toBeDefined();
+    });
+  });
 });

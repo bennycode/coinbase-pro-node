@@ -57,6 +57,33 @@ export interface CoinbaseAccount {
   wire_deposit_information?: WireDepositInformation;
 }
 
+export interface GeneratedAddress {
+  address: string;
+  address_info: AddressInfo;
+  callback_url: null;
+  created_at: Date;
+  deposit_uri: string;
+  exchange_deposit_address: boolean;
+  id: string;
+  name: string;
+  network: string;
+  resource: string;
+  resource_path: string;
+  updated_at: Date;
+  uri_scheme: string;
+  warnings: Warning[];
+}
+
+export interface AddressInfo {
+  address: string;
+}
+
+export interface Warning {
+  details: string;
+  image_url: string;
+  title: string;
+}
+
 export interface WireDepositInformation {
   account_address: string;
   account_name: string;
@@ -165,6 +192,18 @@ export class AccountAPI {
   async listCoinbaseAccounts(): Promise<CoinbaseAccount[]> {
     const resource = AccountAPI.URL.COINBASE_ACCOUNT;
     const response = await this.apiClient.get<CoinbaseAccount[]>(resource);
+    return response.data;
+  }
+
+  /**
+   * Generate a new deposit address for a given account
+   *
+   * @see https://docs.cloud.coinbase.com/exchange/reference/exchangerestapi_postcoinbaseaccountaddresses
+   */
+  async generateDepositAddress(accountId: string): Promise<GeneratedAddress> {
+    const resource = `${AccountAPI.URL.COINBASE_ACCOUNT}/${accountId}/addresses`;
+
+    const response = await this.apiClient.post<GeneratedAddress>(resource);
     return response.data;
   }
 }
