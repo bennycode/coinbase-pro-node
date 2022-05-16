@@ -1,6 +1,7 @@
 import getAccount from '../test/fixtures/rest/accounts/322dfa88-e10d-4678-856d-2930eac3e62d/GET-200.json';
 import getAccountHistory from '../test/fixtures/rest/accounts/322dfa88-e10d-4678-856d-2930eac3e62d/ledger/GET-200.json';
 import getHolds from '../test/fixtures/rest/accounts/322dfa88-e10d-4678-856d-2930eac3e62d/holds/GET-200.json';
+import genAddress from '../test/fixtures/rest/accounts/322dfa88-e10d-4678-856d-2930eac3e62d/addresses/POST-200.json';
 import listAccounts from '../test/fixtures/rest/accounts/GET-200.json';
 import nock from 'nock';
 import {AccountAPI, AccountType} from './AccountAPI';
@@ -28,6 +29,12 @@ describe('AccountAPI', () => {
       .get(`${AccountAPI.URL.ACCOUNTS}/322dfa88-e10d-4678-856d-2930eac3e62d/holds`)
       .query(true)
       .reply(200, JSON.stringify(getHolds));
+
+    nock(global.REST_URL)
+      .persist()
+      .post(`${AccountAPI.URL.COINBASE_ACCOUNT}/322dfa88-e10d-4678-856d-2930eac3e62d/addresses`)
+      .query(true)
+      .reply(200, JSON.stringify(genAddress));
   });
 
   describe('listAccounts', () => {
@@ -86,9 +93,9 @@ describe('AccountAPI', () => {
 
   describe('generateAddress', () => {
     it('generates an address for an account', async () => {
-      const accounts = await global.client.rest.account.listAccounts();
-      const accountId = accounts[0].id;
-      const newDepositAddress = await global.client.rest.account.generateDepositAddress(accountId);
+      const newDepositAddress = await global.client.rest.account.generateDepositAddress(
+        '322dfa88-e10d-4678-856d-2930eac3e62d'
+      );
       expect(newDepositAddress).toBeDefined();
     });
   });

@@ -70,7 +70,7 @@ export class CandleBucketUtil {
   }
 
   static getBucketsInMillis(fromInMillis: number, toInMillis: number, candleSizeInMillis: number): number[] {
-    const bucketsInMillis = [];
+    const bucketsInMillis: number[] = [];
     const batch = MAXIMUM_HISTORIC_DATA_POINTS * candleSizeInMillis;
 
     let current = fromInMillis;
@@ -88,7 +88,7 @@ export class CandleBucketUtil {
   }
 
   static getBucketsInISO(bucketsInMillis: number[]): CandleBatchBucket[] {
-    const bucketsInISO = [];
+    const bucketsInISO: CandleBatchBucket[] = [];
 
     for (let i = 0; i < bucketsInMillis.length - 1; i += 2) {
       const start = new Date(bucketsInMillis[i]).toISOString();
