@@ -14,6 +14,7 @@
 
 ### Methods
 
+- [generateDepositAddress](AccountAPI.md#generatedepositaddress)
 - [getAccount](AccountAPI.md#getaccount)
 - [getAccountHistory](AccountAPI.md#getaccounthistory)
 - [getHolds](AccountAPI.md#getholds)
@@ -34,7 +35,7 @@
 
 #### Defined in
 
-[account/AccountAPI.ts:94](https://github.com/bennycode/coinbase-pro-node/blob/7372d05/src/account/AccountAPI.ts#L94)
+[account/AccountAPI.ts:124](https://github.com/bennycode/coinbase-pro-node/blob/7770f03/src/account/AccountAPI.ts#L124)
 
 ## Properties
 
@@ -51,9 +52,33 @@
 
 #### Defined in
 
-[account/AccountAPI.ts:89](https://github.com/bennycode/coinbase-pro-node/blob/7372d05/src/account/AccountAPI.ts#L89)
+[account/AccountAPI.ts:119](https://github.com/bennycode/coinbase-pro-node/blob/7770f03/src/account/AccountAPI.ts#L119)
 
 ## Methods
+
+### generateDepositAddress
+
+▸ **generateDepositAddress**(`accountId`): `Promise`<[`GeneratedAddress`](../interfaces/GeneratedAddress.md)\>
+
+Generate a new deposit address for a given account.
+
+**`see`** https://docs.cloud.coinbase.com/exchange/reference/exchangerestapi_postcoinbaseaccountaddresses
+
+#### Parameters
+
+| Name        | Type     |
+| :---------- | :------- |
+| `accountId` | `string` |
+
+#### Returns
+
+`Promise`<[`GeneratedAddress`](../interfaces/GeneratedAddress.md)\>
+
+#### Defined in
+
+[account/AccountAPI.ts:206](https://github.com/bennycode/coinbase-pro-node/blob/7770f03/src/account/AccountAPI.ts#L206)
+
+---
 
 ### getAccount
 
@@ -61,7 +86,7 @@
 
 Get information for a single account. API key must belong to the same profile as the account.
 
-**`see`** https://docs.pro.coinbase.com/#get-an-account
+**`see`** https://docs.cloud.coinbase.com/exchange/reference/exchangerestapi_getaccount
 
 #### Parameters
 
@@ -75,7 +100,7 @@ Get information for a single account. API key must belong to the same profile as
 
 #### Defined in
 
-[account/AccountAPI.ts:102](https://github.com/bennycode/coinbase-pro-node/blob/7372d05/src/account/AccountAPI.ts#L102)
+[account/AccountAPI.ts:132](https://github.com/bennycode/coinbase-pro-node/blob/7770f03/src/account/AccountAPI.ts#L132)
 
 ---
 
@@ -100,7 +125,7 @@ List account activity of the API key’s profile. Account activity either increa
 
 #### Defined in
 
-[account/AccountAPI.ts:116](https://github.com/bennycode/coinbase-pro-node/blob/7372d05/src/account/AccountAPI.ts#L116)
+[account/AccountAPI.ts:146](https://github.com/bennycode/coinbase-pro-node/blob/7770f03/src/account/AccountAPI.ts#L146)
 
 ---
 
@@ -125,7 +150,7 @@ List holds of an account that belong to the same profile as the API key. Holds a
 
 #### Defined in
 
-[account/AccountAPI.ts:137](https://github.com/bennycode/coinbase-pro-node/blob/7372d05/src/account/AccountAPI.ts#L137)
+[account/AccountAPI.ts:167](https://github.com/bennycode/coinbase-pro-node/blob/7770f03/src/account/AccountAPI.ts#L167)
 
 ---
 
@@ -143,7 +168,7 @@ Get a list of trading accounts from the profile of the API key.
 
 #### Defined in
 
-[account/AccountAPI.ts:154](https://github.com/bennycode/coinbase-pro-node/blob/7372d05/src/account/AccountAPI.ts#L154)
+[account/AccountAPI.ts:184](https://github.com/bennycode/coinbase-pro-node/blob/7770f03/src/account/AccountAPI.ts#L184)
 
 ---
 
@@ -161,4 +186,4 @@ Get a list of your coinbase accounts.
 
 #### Defined in
 
-[account/AccountAPI.ts:165](https://github.com/bennycode/coinbase-pro-node/blob/7372d05/src/account/AccountAPI.ts#L165)
+[account/AccountAPI.ts:195](https://github.com/bennycode/coinbase-pro-node/blob/7770f03/src/account/AccountAPI.ts#L195)

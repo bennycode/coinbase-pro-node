@@ -22,7 +22,7 @@
 
 #### Defined in
 
-[product/ProductAPI.ts:34](https://github.com/bennycode/coinbase-pro-node/blob/7372d05/src/product/ProductAPI.ts#L34)
+[product/ProductAPI.ts:34](https://github.com/bennycode/coinbase-pro-node/blob/7770f03/src/product/ProductAPI.ts#L34)
 
 ---
 
@@ -32,7 +32,7 @@
 
 #### Defined in
 
-[product/ProductAPI.ts:35](https://github.com/bennycode/coinbase-pro-node/blob/7372d05/src/product/ProductAPI.ts#L35)
+[product/ProductAPI.ts:35](https://github.com/bennycode/coinbase-pro-node/blob/7770f03/src/product/ProductAPI.ts#L35)
 
 ---
 
@@ -42,7 +42,7 @@
 
 #### Defined in
 
-[product/ProductAPI.ts:36](https://github.com/bennycode/coinbase-pro-node/blob/7372d05/src/product/ProductAPI.ts#L36)
+[product/ProductAPI.ts:36](https://github.com/bennycode/coinbase-pro-node/blob/7770f03/src/product/ProductAPI.ts#L36)
 
 ---
 
@@ -52,7 +52,7 @@
 
 #### Defined in
 
-[product/ProductAPI.ts:37](https://github.com/bennycode/coinbase-pro-node/blob/7372d05/src/product/ProductAPI.ts#L37)
+[product/ProductAPI.ts:37](https://github.com/bennycode/coinbase-pro-node/blob/7770f03/src/product/ProductAPI.ts#L37)
 
 ---
 
@@ -62,7 +62,7 @@
 
 #### Defined in
 
-[product/ProductAPI.ts:38](https://github.com/bennycode/coinbase-pro-node/blob/7372d05/src/product/ProductAPI.ts#L38)
+[product/ProductAPI.ts:38](https://github.com/bennycode/coinbase-pro-node/blob/7770f03/src/product/ProductAPI.ts#L38)
 
 ---
 
@@ -72,7 +72,7 @@
 
 #### Defined in
 
-[product/ProductAPI.ts:39](https://github.com/bennycode/coinbase-pro-node/blob/7372d05/src/product/ProductAPI.ts#L39)
+[product/ProductAPI.ts:39](https://github.com/bennycode/coinbase-pro-node/blob/7770f03/src/product/ProductAPI.ts#L39)
 
 ---
 
@@ -82,4 +82,4 @@
 
 #### Defined in
 
-[product/ProductAPI.ts:40](https://github.com/bennycode/coinbase-pro-node/blob/7372d05/src/product/ProductAPI.ts#L40)
+[product/ProductAPI.ts:40](https://github.com/bennycode/coinbase-pro-node/blob/7770f03/src/product/ProductAPI.ts#L40)

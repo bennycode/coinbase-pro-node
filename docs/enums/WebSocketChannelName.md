@@ -25,7 +25,7 @@ The full channel provides real-time updates on orders and trades. These updates 
 
 #### Defined in
 
-[client/WebSocketClient.ts:14](https://github.com/bennycode/coinbase-pro-node/blob/7372d05/src/client/WebSocketClient.ts#L14)
+[client/WebSocketClient.ts:14](https://github.com/bennycode/coinbase-pro-node/blob/7770f03/src/client/WebSocketClient.ts#L14)
 
 ---
 
@@ -37,7 +37,7 @@ To receive heartbeat messages for specific products once a second subscribe to t
 
 #### Defined in
 
-[client/WebSocketClient.ts:16](https://github.com/bennycode/coinbase-pro-node/blob/7372d05/src/client/WebSocketClient.ts#L16)
+[client/WebSocketClient.ts:16](https://github.com/bennycode/coinbase-pro-node/blob/7770f03/src/client/WebSocketClient.ts#L16)
 
 ---
 
@@ -49,7 +49,7 @@ The easiest way to keep a snapshot of the order book is to use the level2 channe
 
 #### Defined in
 
-[client/WebSocketClient.ts:18](https://github.com/bennycode/coinbase-pro-node/blob/7372d05/src/client/WebSocketClient.ts#L18)
+[client/WebSocketClient.ts:18](https://github.com/bennycode/coinbase-pro-node/blob/7770f03/src/client/WebSocketClient.ts#L18)
 
 ---
 
@@ -61,7 +61,7 @@ If you are only interested in match messages you can subscribe to the matches ch
 
 #### Defined in
 
-[client/WebSocketClient.ts:20](https://github.com/bennycode/coinbase-pro-node/blob/7372d05/src/client/WebSocketClient.ts#L20)
+[client/WebSocketClient.ts:20](https://github.com/bennycode/coinbase-pro-node/blob/7770f03/src/client/WebSocketClient.ts#L20)
 
 ---
 
@@ -73,7 +73,7 @@ The status channel will send all products and currencies on a preset interval.
 
 #### Defined in
 
-[client/WebSocketClient.ts:22](https://github.com/bennycode/coinbase-pro-node/blob/7372d05/src/client/WebSocketClient.ts#L22)
+[client/WebSocketClient.ts:22](https://github.com/bennycode/coinbase-pro-node/blob/7770f03/src/client/WebSocketClient.ts#L22)
 
 ---
 
@@ -85,7 +85,7 @@ The ticker channel provides real-time price updates every time a match happens. 
 
 #### Defined in
 
-[client/WebSocketClient.ts:24](https://github.com/bennycode/coinbase-pro-node/blob/7372d05/src/client/WebSocketClient.ts#L24)
+[client/WebSocketClient.ts:24](https://github.com/bennycode/coinbase-pro-node/blob/7770f03/src/client/WebSocketClient.ts#L24)
 
 ---
 
@@ -97,7 +97,7 @@ A special version of the ticker channel that only provides a ticker update about
 
 #### Defined in
 
-[client/WebSocketClient.ts:26](https://github.com/bennycode/coinbase-pro-node/blob/7372d05/src/client/WebSocketClient.ts#L26)
+[client/WebSocketClient.ts:26](https://github.com/bennycode/coinbase-pro-node/blob/7770f03/src/client/WebSocketClient.ts#L26)
 
 ---
 
@@ -109,4 +109,4 @@ This channel is a version of the full channel that only contains messages that i
 
 #### Defined in
 
-[client/WebSocketClient.ts:28](https://github.com/bennycode/coinbase-pro-node/blob/7372d05/src/client/WebSocketClient.ts#L28)
+[client/WebSocketClient.ts:28](https://github.com/bennycode/coinbase-pro-node/blob/7770f03/src/client/WebSocketClient.ts#L28)

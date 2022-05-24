@@ -23,7 +23,7 @@ Accepted granularity in seconds to group historic rates.
 
 #### Defined in
 
-[product/ProductAPI.ts:64](https://github.com/bennycode/coinbase-pro-node/blob/7372d05/src/product/ProductAPI.ts#L64)
+[product/ProductAPI.ts:64](https://github.com/bennycode/coinbase-pro-node/blob/7770f03/src/product/ProductAPI.ts#L64)
 
 ---
 
@@ -33,7 +33,7 @@ Accepted granularity in seconds to group historic rates.
 
 #### Defined in
 
-[product/ProductAPI.ts:63](https://github.com/bennycode/coinbase-pro-node/blob/7372d05/src/product/ProductAPI.ts#L63)
+[product/ProductAPI.ts:63](https://github.com/bennycode/coinbase-pro-node/blob/7770f03/src/product/ProductAPI.ts#L63)
 
 ---
 
@@ -43,7 +43,7 @@ Accepted granularity in seconds to group historic rates.
 
 #### Defined in
 
-[product/ProductAPI.ts:67](https://github.com/bennycode/coinbase-pro-node/blob/7372d05/src/product/ProductAPI.ts#L67)
+[product/ProductAPI.ts:67](https://github.com/bennycode/coinbase-pro-node/blob/7770f03/src/product/ProductAPI.ts#L67)
 
 ---
 
@@ -53,7 +53,7 @@ Accepted granularity in seconds to group historic rates.
 
 #### Defined in
 
-[product/ProductAPI.ts:65](https://github.com/bennycode/coinbase-pro-node/blob/7372d05/src/product/ProductAPI.ts#L65)
+[product/ProductAPI.ts:65](https://github.com/bennycode/coinbase-pro-node/blob/7770f03/src/product/ProductAPI.ts#L65)
 
 ---
 
@@ -63,7 +63,7 @@ Accepted granularity in seconds to group historic rates.
 
 #### Defined in
 
-[product/ProductAPI.ts:62](https://github.com/bennycode/coinbase-pro-node/blob/7372d05/src/product/ProductAPI.ts#L62)
+[product/ProductAPI.ts:62](https://github.com/bennycode/coinbase-pro-node/blob/7770f03/src/product/ProductAPI.ts#L62)
 
 ---
 
@@ -73,4 +73,4 @@ Accepted granularity in seconds to group historic rates.
 
 #### Defined in
 
-[product/ProductAPI.ts:66](https://github.com/bennycode/coinbase-pro-node/blob/7372d05/src/product/ProductAPI.ts#L66)
+[product/ProductAPI.ts:66](https://github.com/bennycode/coinbase-pro-node/blob/7770f03/src/product/ProductAPI.ts#L66)

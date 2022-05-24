@@ -23,7 +23,7 @@
 
 #### Defined in
 
-[account/AccountAPI.ts:75](https://github.com/bennycode/coinbase-pro-node/blob/7372d05/src/account/AccountAPI.ts#L75)
+[account/AccountAPI.ts:105](https://github.com/bennycode/coinbase-pro-node/blob/7770f03/src/account/AccountAPI.ts#L105)
 
 ---
 
@@ -33,7 +33,7 @@
 
 #### Defined in
 
-[account/AccountAPI.ts:76](https://github.com/bennycode/coinbase-pro-node/blob/7372d05/src/account/AccountAPI.ts#L76)
+[account/AccountAPI.ts:106](https://github.com/bennycode/coinbase-pro-node/blob/7770f03/src/account/AccountAPI.ts#L106)
 
 ---
 
@@ -43,7 +43,7 @@
 
 #### Defined in
 
-[account/AccountAPI.ts:77](https://github.com/bennycode/coinbase-pro-node/blob/7372d05/src/account/AccountAPI.ts#L77)
+[account/AccountAPI.ts:107](https://github.com/bennycode/coinbase-pro-node/blob/7770f03/src/account/AccountAPI.ts#L107)
 
 ---
 
@@ -60,7 +60,7 @@
 
 #### Defined in
 
-[account/AccountAPI.ts:78](https://github.com/bennycode/coinbase-pro-node/blob/7372d05/src/account/AccountAPI.ts#L78)
+[account/AccountAPI.ts:108](https://github.com/bennycode/coinbase-pro-node/blob/7770f03/src/account/AccountAPI.ts#L108)
 
 ---
 
@@ -70,7 +70,7 @@
 
 #### Defined in
 
-[account/AccountAPI.ts:82](https://github.com/bennycode/coinbase-pro-node/blob/7372d05/src/account/AccountAPI.ts#L82)
+[account/AccountAPI.ts:112](https://github.com/bennycode/coinbase-pro-node/blob/7770f03/src/account/AccountAPI.ts#L112)
 
 ---
 
@@ -80,7 +80,7 @@
 
 #### Defined in
 
-[account/AccountAPI.ts:83](https://github.com/bennycode/coinbase-pro-node/blob/7372d05/src/account/AccountAPI.ts#L83)
+[account/AccountAPI.ts:113](https://github.com/bennycode/coinbase-pro-node/blob/7770f03/src/account/AccountAPI.ts#L113)
 
 ---
 
@@ -90,7 +90,7 @@
 
 #### Defined in
 
-[account/AccountAPI.ts:84](https://github.com/bennycode/coinbase-pro-node/blob/7372d05/src/account/AccountAPI.ts#L84)
+[account/AccountAPI.ts:114](https://github.com/bennycode/coinbase-pro-node/blob/7770f03/src/account/AccountAPI.ts#L114)
 
 ---
 
@@ -100,4 +100,4 @@
 
 #### Defined in
 
-[account/AccountAPI.ts:85](https://github.com/bennycode/coinbase-pro-node/blob/7372d05/src/account/AccountAPI.ts#L85)
+[account/AccountAPI.ts:115](https://github.com/bennycode/coinbase-pro-node/blob/7770f03/src/account/AccountAPI.ts#L115)

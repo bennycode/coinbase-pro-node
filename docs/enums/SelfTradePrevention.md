@@ -2,6 +2,8 @@
 
 # Enumeration: SelfTradePrevention
 
+**`see`** https://docs.cloud.coinbase.com/exchange/docs/matching-engine#self-trade-prevention
+
 ## Table of contents
 
 ### Enumeration members
@@ -19,7 +21,7 @@
 
 #### Defined in
 
-[order/OrderAPI.ts:25](https://github.com/bennycode/coinbase-pro-node/blob/7372d05/src/order/OrderAPI.ts#L25)
+[order/OrderAPI.ts:25](https://github.com/bennycode/coinbase-pro-node/blob/7770f03/src/order/OrderAPI.ts#L25)
 
 ---
 
@@ -29,7 +31,7 @@
 
 #### Defined in
 
-[order/OrderAPI.ts:26](https://github.com/bennycode/coinbase-pro-node/blob/7372d05/src/order/OrderAPI.ts#L26)
+[order/OrderAPI.ts:26](https://github.com/bennycode/coinbase-pro-node/blob/7770f03/src/order/OrderAPI.ts#L26)
 
 ---
 
@@ -39,7 +41,7 @@
 
 #### Defined in
 
-[order/OrderAPI.ts:27](https://github.com/bennycode/coinbase-pro-node/blob/7372d05/src/order/OrderAPI.ts#L27)
+[order/OrderAPI.ts:27](https://github.com/bennycode/coinbase-pro-node/blob/7770f03/src/order/OrderAPI.ts#L27)
 
 ---
 
@@ -49,4 +51,4 @@
 
 #### Defined in
 
-[order/OrderAPI.ts:28](https://github.com/bennycode/coinbase-pro-node/blob/7372d05/src/order/OrderAPI.ts#L28)
+[order/OrderAPI.ts:28](https://github.com/bennycode/coinbase-pro-node/blob/7770f03/src/order/OrderAPI.ts#L28)

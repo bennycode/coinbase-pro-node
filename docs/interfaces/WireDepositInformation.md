@@ -23,7 +23,7 @@
 
 #### Defined in
 
-[account/AccountAPI.ts:61](https://github.com/bennycode/coinbase-pro-node/blob/7372d05/src/account/AccountAPI.ts#L61)
+[account/AccountAPI.ts:91](https://github.com/bennycode/coinbase-pro-node/blob/7770f03/src/account/AccountAPI.ts#L91)
 
 ---
 
@@ -33,7 +33,7 @@
 
 #### Defined in
 
-[account/AccountAPI.ts:62](https://github.com/bennycode/coinbase-pro-node/blob/7372d05/src/account/AccountAPI.ts#L62)
+[account/AccountAPI.ts:92](https://github.com/bennycode/coinbase-pro-node/blob/7770f03/src/account/AccountAPI.ts#L92)
 
 ---
 
@@ -43,7 +43,7 @@
 
 #### Defined in
 
-[account/AccountAPI.ts:63](https://github.com/bennycode/coinbase-pro-node/blob/7372d05/src/account/AccountAPI.ts#L63)
+[account/AccountAPI.ts:93](https://github.com/bennycode/coinbase-pro-node/blob/7770f03/src/account/AccountAPI.ts#L93)
 
 ---
 
@@ -53,7 +53,7 @@
 
 #### Defined in
 
-[account/AccountAPI.ts:64](https://github.com/bennycode/coinbase-pro-node/blob/7372d05/src/account/AccountAPI.ts#L64)
+[account/AccountAPI.ts:94](https://github.com/bennycode/coinbase-pro-node/blob/7770f03/src/account/AccountAPI.ts#L94)
 
 ---
 
@@ -70,7 +70,7 @@
 
 #### Defined in
 
-[account/AccountAPI.ts:65](https://github.com/bennycode/coinbase-pro-node/blob/7372d05/src/account/AccountAPI.ts#L65)
+[account/AccountAPI.ts:95](https://github.com/bennycode/coinbase-pro-node/blob/7770f03/src/account/AccountAPI.ts#L95)
 
 ---
 
@@ -80,7 +80,7 @@
 
 #### Defined in
 
-[account/AccountAPI.ts:69](https://github.com/bennycode/coinbase-pro-node/blob/7372d05/src/account/AccountAPI.ts#L69)
+[account/AccountAPI.ts:99](https://github.com/bennycode/coinbase-pro-node/blob/7770f03/src/account/AccountAPI.ts#L99)
 
 ---
 
@@ -90,7 +90,7 @@
 
 #### Defined in
 
-[account/AccountAPI.ts:70](https://github.com/bennycode/coinbase-pro-node/blob/7372d05/src/account/AccountAPI.ts#L70)
+[account/AccountAPI.ts:100](https://github.com/bennycode/coinbase-pro-node/blob/7770f03/src/account/AccountAPI.ts#L100)
 
 ---
 
@@ -100,4 +100,4 @@
 
 #### Defined in
 
-[account/AccountAPI.ts:71](https://github.com/bennycode/coinbase-pro-node/blob/7372d05/src/account/AccountAPI.ts#L71)
+[account/AccountAPI.ts:101](https://github.com/bennycode/coinbase-pro-node/blob/7770f03/src/account/AccountAPI.ts#L101)

@@ -24,7 +24,7 @@ A maker fee is paid when you create ("make") liquidity on the order book, i.e. y
 
 #### Defined in
 
-[fee/FeeAPI.ts:10](https://github.com/bennycode/coinbase-pro-node/blob/7372d05/src/fee/FeeAPI.ts#L10)
+[fee/FeeAPI.ts:10](https://github.com/bennycode/coinbase-pro-node/blob/7770f03/src/fee/FeeAPI.ts#L10)
 
 ---
 
@@ -36,7 +36,7 @@ A taker fee is paid when you remove ("take") liquidity from the order book, i.e.
 
 #### Defined in
 
-[fee/FeeAPI.ts:12](https://github.com/bennycode/coinbase-pro-node/blob/7372d05/src/fee/FeeAPI.ts#L12)
+[fee/FeeAPI.ts:12](https://github.com/bennycode/coinbase-pro-node/blob/7770f03/src/fee/FeeAPI.ts#L12)
 
 ---
 
@@ -48,4 +48,4 @@ Your 30-day trailing volume which impacts your fee rates.
 
 #### Defined in
 
-[fee/FeeAPI.ts:14](https://github.com/bennycode/coinbase-pro-node/blob/7372d05/src/fee/FeeAPI.ts#L14)
+[fee/FeeAPI.ts:14](https://github.com/bennycode/coinbase-pro-node/blob/7770f03/src/fee/FeeAPI.ts#L14)

@@ -31,7 +31,7 @@
 
 #### Defined in
 
-[time/TimeAPI.ts:15](https://github.com/bennycode/coinbase-pro-node/blob/7372d05/src/time/TimeAPI.ts#L15)
+[time/TimeAPI.ts:15](https://github.com/bennycode/coinbase-pro-node/blob/7770f03/src/time/TimeAPI.ts#L15)
 
 ## Properties
 
@@ -47,7 +47,7 @@
 
 #### Defined in
 
-[time/TimeAPI.ts:11](https://github.com/bennycode/coinbase-pro-node/blob/7372d05/src/time/TimeAPI.ts#L11)
+[time/TimeAPI.ts:11](https://github.com/bennycode/coinbase-pro-node/blob/7770f03/src/time/TimeAPI.ts#L11)
 
 ## Methods
 
@@ -69,7 +69,7 @@ Get the absolute difference between server time and local time.
 
 #### Defined in
 
-[time/TimeAPI.ts:34](https://github.com/bennycode/coinbase-pro-node/blob/7372d05/src/time/TimeAPI.ts#L34)
+[time/TimeAPI.ts:34](https://github.com/bennycode/coinbase-pro-node/blob/7770f03/src/time/TimeAPI.ts#L34)
 
 ---
 
@@ -79,7 +79,7 @@ Get the absolute difference between server time and local time.
 
 Get the server time from Coinbase Pro API. It has been reported that sometimes the return value is a string: https://github.com/bennycode/coinbase-pro-node/issues/354
 
-**`see`** https://docs.pro.coinbase.com/#time
+**`see`** https://docs.cloud.coinbase.com/sign-in-with-coinbase/docs/api-time
 
 #### Returns
 
@@ -87,4 +87,4 @@ Get the server time from Coinbase Pro API. It has been reported that sometimes t
 
 #### Defined in
 
-[time/TimeAPI.ts:23](https://github.com/bennycode/coinbase-pro-node/blob/7372d05/src/time/TimeAPI.ts#L23)
+[time/TimeAPI.ts:23](https://github.com/bennycode/coinbase-pro-node/blob/7770f03/src/time/TimeAPI.ts#L23)

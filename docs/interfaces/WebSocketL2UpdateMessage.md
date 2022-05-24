@@ -18,7 +18,7 @@
 
 #### Defined in
 
-[client/WebSocketClient.ts:206](https://github.com/bennycode/coinbase-pro-node/blob/7372d05/src/client/WebSocketClient.ts#L206)
+[client/WebSocketClient.ts:206](https://github.com/bennycode/coinbase-pro-node/blob/7770f03/src/client/WebSocketClient.ts#L206)
 
 ---
 
@@ -28,7 +28,7 @@
 
 #### Defined in
 
-[client/WebSocketClient.ts:207](https://github.com/bennycode/coinbase-pro-node/blob/7372d05/src/client/WebSocketClient.ts#L207)
+[client/WebSocketClient.ts:207](https://github.com/bennycode/coinbase-pro-node/blob/7770f03/src/client/WebSocketClient.ts#L207)
 
 ---
 
@@ -38,4 +38,4 @@
 
 #### Defined in
 
-[client/WebSocketClient.ts:208](https://github.com/bennycode/coinbase-pro-node/blob/7372d05/src/client/WebSocketClient.ts#L208)
+[client/WebSocketClient.ts:208](https://github.com/bennycode/coinbase-pro-node/blob/7770f03/src/client/WebSocketClient.ts#L208)
