@@ -9,6 +9,10 @@ declare global {
       REST_URL: string;
     }
   }
+  /* eslint-disable no-var */
+  var client: CoinbasePro;
+  var REST_URL: string;
+  /* eslint-enable no-var */
 }
 
 // URL to mock a server using "nock":
