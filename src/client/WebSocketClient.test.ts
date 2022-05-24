@@ -215,7 +215,9 @@ describe('WebSocketClient', () => {
           ws.disconnect();
         }
       });
-      ws.on(WebSocketEvent.ON_CLOSE, done);
+      ws.on(WebSocketEvent.ON_CLOSE, () => {
+        done();
+      });
       ws.on(WebSocketEvent.ON_MESSAGE_ERROR, (wsError: WebSocketErrorMessage) => done.fail(wsError.message));
       // Send subscription once the WebSocket is ready
       ws.on(WebSocketEvent.ON_OPEN, () => ws.subscribe(channels));
