@@ -96,7 +96,7 @@ describe('AccountAPI', () => {
       const newDepositAddress = await global.client.rest.account.generateDepositAddress(
         '322dfa88-e10d-4678-856d-2930eac3e62d'
       );
-      expect(newDepositAddress).toBeDefined();
+      expect(newDepositAddress.address).toBe('0xd518A6B23D8bCA15B9cC46a00Be8a818E34Ca79E');
     });
   });
 });

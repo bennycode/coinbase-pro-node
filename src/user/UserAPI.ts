@@ -22,7 +22,7 @@ export class UserAPI {
    * Verify your authentication with Coinbase Pro.
    *
    * @returns Your account
-   * @see https://docs.pro.coinbase.com/#subscribe
+   * @see https://docs.cloud.coinbase.com/exchange/docs/websocket-overview#authentication
    */
   async verifyAuthentication(): Promise<VerifiedUser> {
     const resource = `${UserAPI.URL.USERS}/self/verify`;
@@ -36,7 +36,8 @@ export class UserAPI {
    *
    * @note This endpoint requires either the “view” or “trade” permission
    * @returns Your 30-day trailing volume for all products of the API key’s profile
-   * @see https://docs.pro.coinbase.com/#trailing-volume
+   * @see https://docs.cloud.coinbase.com/exchange/reference/exchangerestapi_getfees
+   * @deprecated The Trailing Volume endpoint has been deprecated in favor of the Fees endpoint to get the latest volumes: https://docs.cloud.coinbase.com/exchange/docs/changelog#2021-feb-04
    */
   async getTrailingVolume(): Promise<TrailingVolume[]> {
     const resource = `${UserAPI.URL.USERS}/self/trailing-volume`;

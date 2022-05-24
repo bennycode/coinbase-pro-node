@@ -3,12 +3,6 @@ import nock from 'nock';
 import {TimeAPI} from '../../time/TimeAPI';
 
 declare global {
-  module NodeJS {
-    interface Global {
-      client: CoinbasePro;
-      REST_URL: string;
-    }
-  }
   /* eslint-disable no-var */
   var client: CoinbasePro;
   var REST_URL: string;

@@ -9,7 +9,7 @@ export enum OrderSide {
   SELL = 'sell',
 }
 
-/** @see https://docs.pro.coinbase.com/#pagination */
+/** @see https://docs.cloud.coinbase.com/exchange/docs/pagination */
 export interface Pagination {
   /** Request page after (older) this pagination id. */
   after?: string;
