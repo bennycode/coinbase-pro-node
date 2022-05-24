@@ -41,11 +41,11 @@ export class CoinbasePro {
   } = {
     PRODUCTION: {
       REST: 'https://api.exchange.coinbase.com',
-      WebSocket: 'wss://ws-feed.pro.coinbase.com',
+      WebSocket: 'wss://ws-feed.exchange.coinbase.com',
     },
     SANDBOX: {
-      REST: 'https://api-public.sandbox.pro.coinbase.com',
-      WebSocket: 'wss://ws-feed-public.sandbox.pro.coinbase.com',
+      REST: 'https://api-public.sandbox.exchange.coinbase.com',
+      WebSocket: 'wss://ws-feed-public.sandbox.exchange.coinbase.com',
     },
   };
 

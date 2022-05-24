@@ -20,7 +20,7 @@ export enum CancelOrderPeriod {
   ONE_MINUTE = 'min',
 }
 
-// https://docs.pro.coinbase.com/#self-trade-prevention
+/** @see https://docs.cloud.coinbase.com/exchange/docs/matching-engine#self-trade-prevention */
 export enum SelfTradePrevention {
   CANCEL_BOTH = 'cb',
   CANCEL_NEWEST = 'cn',

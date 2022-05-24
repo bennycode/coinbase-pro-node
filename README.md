@@ -1,12 +1,12 @@
-# Coinbase Pro API
+# Coinbase API
 
-![Language Details](https://img.shields.io/github/languages/top/bennycode/coinbase-pro-node) ![Code Coverage](https://img.shields.io/codecov/c/github/bennycode/coinbase-pro-node/main) ![License](https://img.shields.io/npm/l/coinbase-pro-node.svg) ![Package Version](https://img.shields.io/npm/v/coinbase-pro-node.svg) ![Dependency Updates](https://img.shields.io/david/bennycode/coinbase-pro-node.svg)
+![Language Details](https://img.shields.io/github/languages/top/bennycode/coinbase-pro-node) ![Code Coverage](https://img.shields.io/codecov/c/github/bennycode/coinbase-pro-node/main) ![License](https://img.shields.io/npm/l/coinbase-pro-node.svg) ![Package Version](https://img.shields.io/npm/v/coinbase-pro-node.svg)
 
-[Coinbase Pro][1] API for Node.js, written in TypeScript and covered by tests.
+[Coinbase API][1] for Node.js, written in TypeScript and covered by tests.
 
 ## Motivation
 
-The purpose of [coinbase-pro-node][5] is to continue an active **Coinbase Pro API** after Coinbase deprecated the official Node.js library on [January, 16 2020](https://github.com/coinbase/coinbase-pro-node/issues/393#issuecomment-574993096). Its predecessor got deprecated on [July, 19th 2016](https://github.com/coinbase/coinbase-exchange-node/commit/b8347efdb4e2589367c1395b646d283c9c391681).
+The purpose of [coinbase-pro-node][5] is to continue an active **Coinbase API** after Coinbase deprecated the official Node.js library on [January, 16 2020](https://github.com/coinbase/coinbase-pro-node/issues/393#issuecomment-574993096). Its predecessor got deprecated on [July, 19th 2016](https://github.com/coinbase/coinbase-exchange-node/commit/b8347efdb4e2589367c1395b646d283c9c391681).
 
 ## Features
 
@@ -67,7 +67,7 @@ const auth = {
   apiSecret: '',
   passphrase: '',
   // The Sandbox is for testing only and offers a subset of the products/assets:
-  // https://docs.pro.coinbase.com/#sandbox
+  // https://docs.cloud.coinbase.com/exchange/docs#sandbox
   useSandbox: true,
 };
 
@@ -115,7 +115,7 @@ const app = express();
 app.use(
   '/api-coinbase-pro',
   createProxyMiddleware({
-    target: 'https://api.pro.coinbase.com',
+    target: 'https://api.exchange.coinbase.com',
     changeOrigin: true,
     pathRewrite: {
       [`^/api-coinbase-pro`]: '',
@@ -157,7 +157,7 @@ The following commits will help you getting started quickly with the code base:
 - [Add REST API endpoint](https://github.com/bennycode/coinbase-pro-node/commit/9920c2f4343985c349b68e2a47d7fe2c42e23e34)
 - [Add REST API endpoint (with fixtures)](https://github.com/bennycode/coinbase-pro-node/commit/8a150fecb7d32b7b7cd39a8109985f665aaee26e)
 
-All resources can be found in the [Coinbase Pro API reference][2].
+All resources can be found in the [Coinbase Exchange API reference][2]. For the latest updates, check [Coinbase's API Changelog][9].
 
 ## License
 
@@ -174,12 +174,13 @@ If you like this project, you might also like these related projects:
 - [**binance-api-node**](https://github.com/Ashlar/binance-api-node), Heavily tested and Promise-based Binance API with TypeScript definitions.
 
 [1]: https://pro.coinbase.com/
-[2]: https://docs.pro.coinbase.com/
+[2]: https://docs.cloud.coinbase.com/exchange
 [3]: https://github.com/bennycode/coinbase-pro-node/tree/main/src/demo
 [4]: https://bennycode.com/coinbase-pro-node
 [5]: https://www.npmjs.com/package/coinbase-pro-node
 [6]: https://github.com/bennycode/coinbase-pro-node/network/dependents
 [7]: https://www.npmjs.com/browse/depended/coinbase-pro-node
 [8]: https://docs.npmjs.com/about-semantic-versioning
+[9]: https://docs.cloud.coinbase.com/exchange/docs/changelog
 [stack_exchange_bennyn_badge]: https://stackexchange.com/users/flair/203782.png?theme=default
 [stack_exchange_bennyn_url]: https://stackexchange.com/users/203782/benny-neugebauer?tab=accounts

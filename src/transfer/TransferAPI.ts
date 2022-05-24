@@ -45,8 +45,8 @@ export class TransferAPI {
    * Get a list of deposits/withdrawals from the profile of the API key, in descending order by created time.
    *
    * @param pagination - Pagination field
-   * @see https://docs.pro.coinbase.com/#list-deposits
-   * @see https://docs.pro.coinbase.com/#list-withdrawals
+   * @see https://docs.cloud.coinbase.com/sign-in-with-coinbase/docs/api-deposits#list-deposits
+   * @see https://docs.cloud.coinbase.com/sign-in-with-coinbase/docs/api-withdrawals#list-withdrawals
    */
   async getTransfers(
     transferType: TransferType,

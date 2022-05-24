@@ -1,7 +1,7 @@
 import {Candle, CandleGranularity} from '.';
 import {ISO_8601_MS_UTC} from '..';
 
-/** The maximum number of data points for a single historic rates API request on Coinbase Pro is 300 candles: https://docs.pro.coinbase.com/#get-historic-rates */
+/** The maximum number of data points for a single historic rates API request on Coinbase Pro is 300 candles: https://docs.cloud.coinbase.com/exchange/reference/exchangerestapi_getproductcandles */
 const MAXIMUM_HISTORIC_DATA_POINTS = 300;
 
 export interface CandleBatchBucket {

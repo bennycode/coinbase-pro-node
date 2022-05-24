@@ -18,7 +18,7 @@ export class TimeAPI {
    * Get the server time from Coinbase Pro API. It has been reported that sometimes the return value is a string:
    * https://github.com/bennycode/coinbase-pro-node/issues/354
    *
-   * @see https://docs.pro.coinbase.com/#time
+   * @see https://docs.cloud.coinbase.com/sign-in-with-coinbase/docs/api-time
    */
   async getTime(): Promise<TimeSkew> {
     const response = await axios.get<TimeSkew>(`${this.baseURL}${TimeAPI.URL.TIME}`, {

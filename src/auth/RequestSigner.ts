@@ -16,7 +16,7 @@ export interface SignedRequest {
 }
 
 export class RequestSigner {
-  // https://docs.pro.coinbase.com/#creating-a-request
+  // https://docs.cloud.coinbase.com/exchange/docs/authorization-and-authentication#creating-a-request
   static signRequest(auth: ClientAuthentication, setup: RequestSetup, clockSkew: number): SignedRequest {
     const timestamp = Date.now() / 1000 + clockSkew;
     const what = `${timestamp}${setup.httpMethod}${setup.requestPath}${setup.payload}`;

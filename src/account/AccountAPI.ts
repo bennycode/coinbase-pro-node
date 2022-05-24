@@ -60,11 +60,13 @@ export interface CoinbaseAccount {
 export interface GeneratedAddress {
   address: string;
   address_info: AddressInfo;
-  callback_url: null;
+  callback_url?: string;
   created_at: Date;
-  deposit_uri: string;
+  deposit_uri?: string;
+  destination_tag?: string;
   exchange_deposit_address: boolean;
   id: string;
+  legacy_address?: string;
   name: string;
   network: string;
   resource: string;
@@ -76,6 +78,7 @@ export interface GeneratedAddress {
 
 export interface AddressInfo {
   address: string;
+  destination_tag?: string;
 }
 
 export interface Warning {
@@ -124,7 +127,7 @@ export class AccountAPI {
    * Get information for a single account. API key must belong to the same profile as the account.
    *
    * @param accountId - Account ID belonging to the API key’s profile
-   * @see https://docs.pro.coinbase.com/#get-an-account
+   * @see https://docs.cloud.coinbase.com/exchange/reference/exchangerestapi_getaccount
    */
   async getAccount(accountId: string): Promise<Account> {
     const resource = `${AccountAPI.URL.ACCOUNTS}/${accountId}`;
@@ -196,13 +199,12 @@ export class AccountAPI {
   }
 
   /**
-   * Generate a new deposit address for a given account
+   * Generate a new deposit address for a given account.
    *
    * @see https://docs.cloud.coinbase.com/exchange/reference/exchangerestapi_postcoinbaseaccountaddresses
    */
   async generateDepositAddress(accountId: string): Promise<GeneratedAddress> {
     const resource = `${AccountAPI.URL.COINBASE_ACCOUNT}/${accountId}/addresses`;
-
     const response = await this.apiClient.post<GeneratedAddress>(resource);
     return response.data;
   }
