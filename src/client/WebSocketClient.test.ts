@@ -62,7 +62,9 @@ describe('WebSocketClient', () => {
     it('attaches an error listener', done => {
       const invalidUrl = 'ws://localhost:50001';
       const ws = createWebSocketClient(invalidUrl);
-      ws.on(WebSocketEvent.ON_ERROR, done);
+      ws.on(WebSocketEvent.ON_ERROR, () => {
+        done();
+      });
       ws.connect();
     });
 
