@@ -376,7 +376,7 @@ export class WebSocketClient extends EventEmitter {
    *
    * @param reconnectOptions - Reconnect options to be used with the "reconnecting-websocket" package. Note: Options
    *   will be merged with sensible default values.
-   * @see https://docs.pro.coinbase.com/#websocket-feed
+   * @see https://docs.cloud.coinbase.com/exchange/docs/websocket-overview
    */
   connect(reconnectOptions?: Options): ReconnectingWebSocket {
     if (this.socket) {
@@ -485,7 +485,7 @@ export class WebSocketClient extends EventEmitter {
      * Authentication will result in a couple of benefits:
      * 1. Messages where you're one of the parties are expanded and have more useful fields
      * 2. You will receive private messages, such as lifecycle information about stop orders you placed
-     * @see https://docs.pro.coinbase.com/#subscribe
+     * @see https://docs.cloud.coinbase.com/exchange/docs/websocket-overview#subscribe
      */
     const signature = await this.signRequest({
       httpMethod: 'GET',

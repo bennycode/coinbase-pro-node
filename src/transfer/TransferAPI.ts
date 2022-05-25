@@ -45,8 +45,7 @@ export class TransferAPI {
    * Get a list of deposits/withdrawals from the profile of the API key, in descending order by created time.
    *
    * @param pagination - Pagination field
-   * @see https://docs.cloud.coinbase.com/sign-in-with-coinbase/docs/api-deposits#list-deposits
-   * @see https://docs.cloud.coinbase.com/sign-in-with-coinbase/docs/api-withdrawals#list-withdrawals
+   * @see https://docs.cloud.coinbase.com/exchange/reference/exchangerestapi_gettransfers
    */
   async getTransfers(
     transferType: TransferType,
@@ -81,8 +80,7 @@ export class TransferAPI {
    * Get information on a single deposit/withdrawal.
    *
    * @param transferId - id of the requested resource
-   * @see https://docs.pro.coinbase.com/#single-deposit
-   * @see https://docs.pro.coinbase.com/#single-withdrawal
+   * @see https://docs.cloud.coinbase.com/exchange/reference/exchangerestapi_gettransfer
    */
   async getTransfer(transferId: string): Promise<TransferInformation> {
     const resource = `${TransferAPI.URL.TRANSFERS}/${transferId}`;

@@ -88,7 +88,7 @@ export class WithdrawAPI {
    * @param destinationTag - A destination tag for currencies that support one
    * @param addNetworkFeeToTotal - A boolean flag to add the network fee on top of the amount.
    * If this is blank, it will default to deducting the network fee from the amount.
-   * @see https://docs.pro.coinbase.com/#crypto
+   * @see https://docs.cloud.coinbase.com/exchange/reference/exchangerestapi_postwithdrawcrypto
    */
   async withdrawToCryptoAddress(
     amount: string,
@@ -120,7 +120,7 @@ export class WithdrawAPI {
    * @param amount - The amount to withdraw
    * @param currency - The type of currency
    * @param coinbaseAccountId - ID of the Coinbase or Coinbase Pro account
-   * @see https://docs.pro.coinbase.com/#coinbase56
+   * @see https://docs.cloud.coinbase.com/exchange/reference/exchangerestapi_postwithdrawcoinbaseaccount
    */
   async withdrawToCoinbaseAccount(
     amount: string,
@@ -143,7 +143,7 @@ export class WithdrawAPI {
    * @param amount - The amount to withdraw
    * @param currency - The type of currency
    * @param paymentMethodId - ID of the payment method
-   * @see https://docs.pro.coinbase.com/#payment-method55
+   * @see https://docs.cloud.coinbase.com/exchange/reference/exchangerestapi_postwithdrawpaymentmethod
    */
   async withdrawToPaymentMethod(
     amount: string,
@@ -165,7 +165,7 @@ export class WithdrawAPI {
    *
    * @param currency - The type of currency
    * @param cryptoAddress - A crypto address of the recipient
-   * @see https://docs.pro.coinbase.com/#fee-estimate
+   * @see https://docs.cloud.coinbase.com/exchange/reference/exchangerestapi_getwithdrawfeeestimate
    */
   async getFeeEstimate(currency: string, cryptoAddress: string): Promise<WithdrawalFeeEstimate> {
     const resource = WithdrawAPI.URL.WITHDRAWALS.FEE_ESTIMATE;
@@ -178,7 +178,7 @@ export class WithdrawAPI {
   /**
    * Get a list of your payment methods.
    *
-   * @see https://docs.pro.coinbase.com/#list-payment-methods
+   * @see https://docs.cloud.coinbase.com/exchange/reference/exchangerestapi_getpaymentmethods
    */
   async getPaymentMethods(): Promise<PaymentMethod[]> {
     const resource = WithdrawAPI.URL.LIST_PAYMENT_METHODS;

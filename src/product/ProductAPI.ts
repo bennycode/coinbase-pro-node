@@ -200,7 +200,7 @@ export class ProductAPI {
    *
    * @param productId - Representation for base and counter
    * @param [params] - Desired timespan
-   * @see https://docs.pro.coinbase.com/#get-historic-rates
+   * @see https://docs.cloud.coinbase.com/exchange/reference/exchangerestapi_getproductcandles
    */
   async getCandles(productId: string, params: HistoricRateRequest): Promise<Candle[]> {
     const resource = `${ProductAPI.URL.PRODUCTS}/${productId}/candles`;
@@ -281,7 +281,7 @@ export class ProductAPI {
   /**
    * Get trading details for a specified product.
    *
-   * @see https://docs.pro.coinbase.com/#get-products
+   * @see https://docs.cloud.coinbase.com/exchange/reference/exchangerestapi_getproduct
    */
   async getProduct(productId: string): Promise<Product | undefined> {
     const resource = `${ProductAPI.URL.PRODUCTS}/${productId}`;
@@ -292,7 +292,7 @@ export class ProductAPI {
   /**
    * Get trading details of all available products.
    *
-   * @see https://docs.pro.coinbase.com/#get-products
+   * @see https://docs.cloud.coinbase.com/exchange/reference/exchangerestapi_getproducts
    */
   async getProducts(): Promise<Product[]> {
     const resource = ProductAPI.URL.PRODUCTS;
@@ -301,11 +301,11 @@ export class ProductAPI {
   }
 
   /**
-   * Get latest trades for a product.
+   * Get the latest trades for a product.
    *
    * @param productId - Representation for base and counter
    * @param pagination - Pagination field
-   * @see https://docs.pro.coinbase.com/#get-trades
+   * @see https://docs.cloud.coinbase.com/exchange/reference/exchangerestapi_getproducttrades
    */
   async getTrades(productId: string, pagination?: Pagination): Promise<PaginatedData<Trade>> {
     const resource = `${ProductAPI.URL.PRODUCTS}/${productId}/trades`;
@@ -325,7 +325,7 @@ export class ProductAPI {
    *
    * @param productId - Representation for base and counter
    * @param params - Amount of detail
-   * @see https://docs.pro.coinbase.com/#get-product-order-book
+   * @see https://docs.cloud.coinbase.com/exchange/reference/exchangerestapi_getproductbook
    */
   async getProductOrderBook(
     productId: string,
@@ -364,7 +364,7 @@ export class ProductAPI {
    * Get latest 24 hours of movement data for a product.
    *
    * @param productId - Representation for base and counter
-   * @see https://docs.pro.coinbase.com/#get-24hr-stats
+   * @see https://docs.cloud.coinbase.com/exchange/reference/exchangerestapi_getproductstats
    */
   async getProductStats(productId: string): Promise<ProductStats> {
     const resource = `${ProductAPI.URL.PRODUCTS}/${productId}/stats`;
@@ -376,7 +376,7 @@ export class ProductAPI {
    * Get snapshot information about the last trade (tick), best bid/ask and 24h volume.
    *
    * @param productId - Representation for base and counter
-   * @see https://docs.pro.coinbase.com/#get-product-ticker
+   * @see https://docs.cloud.coinbase.com/exchange/reference/exchangerestapi_getproductticker
    */
   async getProductTicker(productId: string): Promise<ProductTicker> {
     const resource = `${ProductAPI.URL.PRODUCTS}/${productId}/ticker`;

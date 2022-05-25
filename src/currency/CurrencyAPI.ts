@@ -38,7 +38,7 @@ export class CurrencyAPI {
    * Currency codes will conform to the ISO 4217 standard where possible.
    * Currencies which have or had no representation in ISO 4217 may use a custom code.
    *
-   * @see https://docs.cloud.coinbase.com/sign-in-with-coinbase/docs/api-currencies#get-currencies
+   * @see https://docs.cloud.coinbase.com/exchange/reference/exchangerestapi_getcurrencies
    */
   async listCurrencies(): Promise<Currency[]> {
     const resource = CurrencyAPI.URL.CURRENCIES;

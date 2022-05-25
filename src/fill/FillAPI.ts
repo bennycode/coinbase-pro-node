@@ -34,8 +34,7 @@ export class FillAPI {
    *
    * @param orderId - ID of previously placed order
    * @param pagination - Pagination field
-   * @see https://docs.pro.coinbase.com/#list-fills
-   * @see https://pro.coinbase.com/orders/filled
+   * @see https://docs.cloud.coinbase.com/exchange/reference/exchangerestapi_getfills
    */
   async getFillsByOrderId(orderId: string, pagination?: Pagination): Promise<PaginatedData<Fill>> {
     const resource = FillAPI.URL.FILLS;
@@ -54,8 +53,7 @@ export class FillAPI {
    *
    * @param productId - Representation for base and counter
    * @param pagination - Pagination field
-   * @see https://docs.pro.coinbase.com/#list-fills
-   * @see https://pro.coinbase.com/orders/filled
+   * @see https://docs.cloud.coinbase.com/exchange/reference/exchangerestapi_getfills
    */
   async getFillsByProductId(productId: string, pagination?: Pagination): Promise<PaginatedData<Fill>> {
     const resource = FillAPI.URL.FILLS;

@@ -25,8 +25,7 @@ export class FeeAPI {
    * Get your current maker & taker fee rates, as well as your 30-day trailing volume. Quoted rates are subject to
    * change.
    *
-   * @see https://docs.pro.coinbase.com/#fees
-   * @see https://help.coinbase.com/en/pro/trading-and-funding/trading-rules-and-fees/fees.html
+   * @see https://docs.cloud.coinbase.com/exchange/reference/exchangerestapi_getfees
    */
   async getCurrentFees(): Promise<FeeTier> {
     const resource = FeeAPI.URL.FEES;

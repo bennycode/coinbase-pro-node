@@ -141,7 +141,7 @@ export class AccountAPI {
    *
    * @param accountId - Account ID belonging to the API key’s profile
    * @param pagination - Pagination field
-   * @see https://docs.pro.coinbase.com/#get-account-history
+   * @see https://docs.cloud.coinbase.com/exchange/reference/exchangerestapi_getaccountledger
    */
   async getAccountHistory(accountId: string, pagination?: Pagination): Promise<PaginatedData<AccountHistory>> {
     const resource = `${AccountAPI.URL.ACCOUNTS}/${accountId}/ledger`;
@@ -162,7 +162,7 @@ export class AccountAPI {
    *
    * @param accountId - Account ID belonging to the API key’s profile
    * @param pagination - Pagination field
-   * @see https://docs.pro.coinbase.com/#get-holds
+   * @see https://docs.cloud.coinbase.com/exchange/reference/exchangerestapi_getaccountholds
    */
   async getHolds(accountId: string, pagination?: Pagination): Promise<PaginatedData<Hold>> {
     const resource = `${AccountAPI.URL.ACCOUNTS}/${accountId}/holds`;
@@ -179,7 +179,7 @@ export class AccountAPI {
   /**
    * Get a list of trading accounts from the profile of the API key.
    *
-   * @see https://docs.pro.coinbase.com/#list-accounts
+   * @see https://docs.cloud.coinbase.com/exchange/reference/exchangerestapi_getaccounts
    */
   async listAccounts(): Promise<Account[]> {
     const resource = AccountAPI.URL.ACCOUNTS;
@@ -190,7 +190,7 @@ export class AccountAPI {
   /**
    * Get a list of your coinbase accounts.
    *
-   * @see https://docs.pro.coinbase.com/#coinbase-accounts
+   * @see https://docs.cloud.coinbase.com/exchange/reference/exchangerestapi_getcoinbaseaccounts
    */
   async listCoinbaseAccounts(): Promise<CoinbaseAccount[]> {
     const resource = AccountAPI.URL.COINBASE_ACCOUNT;

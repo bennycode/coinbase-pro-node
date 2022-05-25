@@ -95,7 +95,7 @@ export interface FilledOrder extends BasePlacedOrder {
   status: OrderStatus.DONE;
 }
 
-/** @see https://docs.pro.coinbase.com/#list-orders */
+/** @see https://docs.cloud.coinbase.com/exchange/reference/exchangerestapi_getorders */
 export interface OrderListQueryParam extends Pagination {
   /** Only list orders for a specific product. */
   product_id?: string;
@@ -117,7 +117,7 @@ export class OrderAPI {
    *
    * @param productId - Representation for base and counter
    * @returns A list of ids of the canceled orders
-   * @see https://docs.pro.coinbase.com/#cancel-all
+   * @see https://docs.cloud.coinbase.com/exchange/reference/exchangerestapi_deleteorders
    */
   async cancelOpenOrders(productId?: string): Promise<string[]> {
     const resource = OrderAPI.URL.ORDERS;
@@ -133,7 +133,7 @@ export class OrderAPI {
    * @param orderId - ID of the order to cancel
    * @param productId - While not required, the request will be more performant if you include the product ID
    * @returns The ID of the canceled order
-   * @see https://docs.pro.coinbase.com/#cancel-an-order
+   * @see https://docs.cloud.coinbase.com/exchange/reference/exchangerestapi_deleteorder
    */
   async cancelOrder(orderId: string, productId?: string): Promise<string> {
     const resource = `${OrderAPI.URL.ORDERS}/${orderId}`;
@@ -150,7 +150,7 @@ export class OrderAPI {
    * @note Depending on your activity, fetching all data from this endpoint can take very long (measured already 25
    *   seconds!)
    * @param query - Available query parameters (Pagination, Product ID and/or Order Status)
-   * @see https://docs.pro.coinbase.com/#list-orders
+   * @see https://docs.cloud.coinbase.com/exchange/reference/exchangerestapi_getorders
    */
   async getOrders(query?: OrderListQueryParam): Promise<PaginatedData<Order>> {
     const resource = OrderAPI.URL.ORDERS;
@@ -171,7 +171,7 @@ export class OrderAPI {
    * Get a single order by order id from the profile that the API key belongs to.
    *
    * @param orderId - ID of previously placed order
-   * @see https://docs.pro.coinbase.com/#get-an-order
+   * @see https://docs.cloud.coinbase.com/exchange/reference/exchangerestapi_getorder
    */
   async getOrder(orderId: string): Promise<Order | null> {
     const resource = `${OrderAPI.URL.ORDERS}/${orderId}`;
@@ -196,7 +196,7 @@ export class OrderAPI {
    * funds. Once an order is placed, your account funds will be put on hold for the duration of the order.
    *
    * @param newOrder - Order type and parameters
-   * @see https://docs.pro.coinbase.com/#place-a-new-order
+   * @see https://docs.cloud.coinbase.com/exchange/reference/exchangerestapi_postorders
    */
   async placeOrder(newOrder: NewOrder): Promise<Order> {
     const resource = OrderAPI.URL.ORDERS;

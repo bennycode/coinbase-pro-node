@@ -82,7 +82,7 @@ export class RESTClient extends EventEmitter {
          * Rate limits:
          * - 3 requests per second, up to 6 requests per second in bursts for public endpoints
          * - 5 requests per second, up to 10 requests per second in bursts for private endpoints
-         * @see https://docs.pro.coinbase.com/#rate-limits
+         * @see https://docs.cloud.coinbase.com/exchange/docs/rate-limits
          */
         return 1000;
       },
