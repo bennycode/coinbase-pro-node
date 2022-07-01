@@ -22,7 +22,7 @@
     "dotenv-defaults": "5.0.2",
     "eslint": "8.16.0",
     "eslint-config-prettier": "8.5.0",
-    "eslint-plugin-prettier": "4.0.0",
+    "eslint-plugin-prettier": "4.2.1",
     "eslint-plugin-sort-keys-fix": "1.1.2",
     "eslint-plugin-typescript-sort-keys": "2.1.0",
     "generate-changelog": "1.8.0",
