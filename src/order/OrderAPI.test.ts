@@ -45,6 +45,46 @@ describe('OrderAPI', () => {
       expect(placedOrder.size).toBe('0.10000000');
       expect(placedOrder.status).toBe(OrderStatus.PENDING);
     });
+
+    it('places limit buy orders', async () => {
+      nock(global.REST_URL)
+        .post(OrderAPI.URL.ORDERS)
+        .query(true)
+        .reply((_uri, body) => {
+          const newOrder: NewOrder = typeof body === 'string' ? JSON.parse(body) : body;
+
+          return [
+            200,
+            JSON.stringify({
+              created_at: '2022-07-02T15:29:10.132Z',
+              executed_value: '0.0000000000000000',
+              fill_fees: '0.0000000000000000',
+              filled_size: '0.00000000',
+              funds: '207850.8486540300000000',
+              id: 'b0ba16c1-749c-4f96-b2e5-95192d721f92',
+              post_only: false,
+              product_id: newOrder.product_id,
+              settled: false,
+              side: newOrder.side,
+              size: '1.00000000',
+              status: OrderStatus.PENDING,
+              stp: SelfTradePrevention.DECREMENT_AND_CANCEL,
+              type: newOrder.type,
+            }),
+          ];
+        });
+
+      const placedOrder = await global.client.rest.order.placeOrder({
+        price: '18427.33',
+        product_id: 'BTC-EUR',
+        side: OrderSide.BUY,
+        size: '1',
+        type: OrderType.LIMIT,
+      });
+
+      expect(placedOrder.size).toBe('1.00000000');
+      expect(placedOrder.status).toBe(OrderStatus.PENDING);
+    });
   });
 
   describe('getOrders', () => {
