@@ -3,7 +3,7 @@
     "url": "https://github.com/bennycode/coinbase-pro-node/issues"
   },
   "dependencies": {
-    "@types/node": "18.0.0",
+    "@types/node": "18.0.4",
     "@types/ws": "8.5.3",
     "axios": "0.27.2",
     "axios-retry": "3.3.1",
@@ -16,8 +16,8 @@
   "description": "Coinbase Pro API for Node.js, written in TypeScript and covered by tests.",
   "devDependencies": {
     "@types/jasmine": "4.0.3",
-    "@typescript-eslint/eslint-plugin": "5.30.3",
-    "@typescript-eslint/parser": "5.30.3",
+    "@typescript-eslint/eslint-plugin": "5.30.6",
+    "@typescript-eslint/parser": "5.30.6",
     "cross-env": "7.0.3",
     "dotenv-defaults": "5.0.2",
     "eslint": "8.19.0",
@@ -34,9 +34,9 @@
     "prettier": "2.7.1",
     "pretty-quick": "3.1.3",
     "rimraf": "3.0.2",
-    "ts-node": "10.8.1",
-    "typedoc": "0.23.4",
-    "typedoc-plugin-markdown": "3.13.2",
+    "ts-node": "10.9.1",
+    "typedoc": "0.23.7",
+    "typedoc-plugin-markdown": "3.13.3",
     "typescript": "4.7.4"
   },
   "engines": {
