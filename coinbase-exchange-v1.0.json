@@ -1,0 +1,5619 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Coinbase Exchange REST API",
+    "version": "1.0"
+  },
+  "paths": {
+    "/accounts": {
+      "get": {
+        "summary": "Get all accounts for a profile",
+        "description": "Get a list of trading accounts from the profile of the API key.",
+        "operationId": "ExchangeRESTAPI_GetAccounts",
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/apiAccount"
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/apiUnauthorizedResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "An unexpected error response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/apiErrorResponse"
+                }
+              }
+            }
+          }
+        },
+        "tags": ["Accounts"]
+      }
+    },
+    "/accounts/{account_id}": {
+      "get": {
+        "summary": "Get a single account by id",
+        "description": "Information for a single account. Use this endpoint when you know the account_id. API key must belong to the same profile as the account.",
+        "operationId": "ExchangeRESTAPI_GetAccount",
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/apiAccount"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/apiUnauthorizedResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "An unexpected error response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/apiErrorResponse"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "account_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "tags": ["Accounts"]
+      }
+    },
+    "/accounts/{account_id}/holds": {
+      "get": {
+        "summary": "Get a single account's holds",
+        "description": "List the holds of an account that belong to the same profile as the API key. Holds are placed on an account for any active orders or pending withdraw requests. As an order is filled, the hold amount is updated. If an order is canceled, any remaining hold is removed. For withdrawals, the hold is removed after it is completed.",
+        "operationId": "ExchangeRESTAPI_GetAccountHolds",
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/apiAccountHold"
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/apiUnauthorizedResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "An unexpected error response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/apiErrorResponse"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "account_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "before",
+            "description": "Used for pagination. Sets start cursor to `before` date.",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "after",
+            "description": "Used for pagination. Sets end cursor to `after` date.",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "limit",
+            "description": "Limit on number of results to return.",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int64",
+              "default": "100"
+            }
+          }
+        ],
+        "tags": ["Accounts"]
+      }
+    },
+    "/accounts/{account_id}/ledger": {
+      "get": {
+        "summary": "Get a single account's ledger",
+        "description": "Lists ledger activity for an account. This includes anything that would affect the accounts balance - transfers, trades, fees, etc.",
+        "operationId": "ExchangeRESTAPI_GetAccountLedger",
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/apiAccountLedgerEntry"
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/apiUnauthorizedResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "An unexpected error response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/apiErrorResponse"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "account_id",
+            "description": "Returns list of ledger entries from this account id.",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "start_date",
+            "description": "Filter results by minimum posted date.",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "end_date",
+            "description": "Filter results by maximum posted date.",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "before",
+            "description": "Used for pagination. Sets start cursor to `before` date.",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "after",
+            "description": "Used for pagination. Sets end cursor to `after` date.",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "limit",
+            "description": "Limit on number of results to return.",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int64",
+              "default": "100"
+            }
+          },
+          {
+            "name": "profile_id",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "tags": ["Accounts"]
+      }
+    },
+    "/accounts/{account_id}/transfers": {
+      "get": {
+        "summary": "Get a single account's transfers",
+        "description": "Lists past withdrawals and deposits for an account.",
+        "operationId": "ExchangeRESTAPI_GetAccountTransfers",
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/apiTransfer"
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/apiUnauthorizedResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "An unexpected error response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/apiErrorResponse"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "account_id",
+            "description": "Returns list of transfers from this account id.",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "before",
+            "description": "Used for pagination. Sets start cursor to `before` date.",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "after",
+            "description": "Used for pagination. Sets end cursor to `after` date.",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "limit",
+            "description": "Limit on number of results to return.",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int64",
+              "default": "100"
+            }
+          },
+          {
+            "name": "type",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "tags": ["Accounts"]
+      }
+    },
+    "/address-book": {
+      "get": {
+        "summary": "Get address book",
+        "description": "Get all addresses stored in the address book.",
+        "operationId": "ExchangeRESTAPI_GetAddressBook",
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/apiGetAddressBookResponseAddressInfo"
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/apiUnauthorizedResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "An unexpected error response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/apiErrorResponse"
+                }
+              }
+            }
+          }
+        },
+        "tags": ["Address book"]
+      }
+    },
+    "/coinbase-accounts": {
+      "get": {
+        "summary": "Get all Coinbase wallets",
+        "description": "Gets all the user's available Coinbase wallets (These are the wallets/accounts that are used for buying and selling on www.coinbase.com)",
+        "operationId": "ExchangeRESTAPI_GetCoinbaseAccounts",
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/apiCoinbaseAccount"
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/apiUnauthorizedResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "An unexpected error response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/apiErrorResponse"
+                }
+              }
+            }
+          }
+        },
+        "tags": ["Coinbase accounts"]
+      }
+    },
+    "/coinbase-accounts/{account_id}/addresses": {
+      "post": {
+        "summary": "Generate crypto address",
+        "description": "Generates a one-time crypto address for depositing crypto.",
+        "operationId": "ExchangeRESTAPI_PostCoinbaseAccountAddresses",
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/apiCoinbaseAccountGeneratedDepositAddress"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/apiUnauthorizedResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "An unexpected error response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/apiErrorResponse"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "account_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "tags": ["Coinbase accounts"]
+      }
+    },
+    "/conversions": {
+      "post": {
+        "summary": "Convert currency",
+        "description": "Converts funds from `from` currency to `to` currency. Funds are converted on the `from` account in the `profile_id` profile.",
+        "operationId": "ExchangeRESTAPI_PostConversion",
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/apiConversion"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/apiUnauthorizedResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "An unexpected error response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/apiErrorResponse"
+                }
+              }
+            }
+          }
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/apiPostConversionRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "tags": ["Conversions"]
+      }
+    },
+    "/conversions/{conversion_id}": {
+      "get": {
+        "summary": "Get a conversion",
+        "description": "Gets a currency conversion by id (i.e. USD -> USDC).",
+        "operationId": "ExchangeRESTAPI_GetConversion",
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/apiConversion"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/apiUnauthorizedResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "An unexpected error response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/apiErrorResponse"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "conversion_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "profile_id",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "tags": ["Conversions"]
+      }
+    },
+    "/currencies": {
+      "get": {
+        "summary": "Get all known currencies",
+        "description": "Gets a list of all known currencies.\n Note: Not all currencies may be currently in use for trading.",
+        "operationId": "ExchangeRESTAPI_GetCurrencies",
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/apiCurrency"
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "An unexpected error response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/apiErrorResponse"
+                }
+              }
+            }
+          }
+        },
+        "tags": ["Currencies"],
+        "security": []
+      }
+    },
+    "/currencies/{currency_id}": {
+      "get": {
+        "summary": "Get a currency",
+        "description": "Gets a single currency by id.",
+        "operationId": "ExchangeRESTAPI_GetCurrency",
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/apiCurrency"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "An unexpected error response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/apiErrorResponse"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "currency_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "tags": ["Currencies"],
+        "security": []
+      }
+    },
+    "/deposits/coinbase-account": {
+      "post": {
+        "summary": "Deposit from Coinbase account",
+        "description": "Deposits funds from a www.coinbase.com wallet to the specified `profile_id`.",
+        "operationId": "ExchangeRESTAPI_PostDepositCoinbaseAccount",
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/apiTransferResult"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/apiUnauthorizedResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "An unexpected error response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/apiErrorResponse"
+                }
+              }
+            }
+          }
+        },
+        "requestBody": {
+          "$ref": "#/components/requestBodies/apiPostTransferCoinbaseAccountRequest"
+        },
+        "tags": ["Transfers"]
+      }
+    },
+    "/deposits/payment-method": {
+      "post": {
+        "summary": "Deposit from payment method",
+        "description": "Deposits funds from a linked external payment method to the specified `profile_id`.",
+        "operationId": "ExchangeRESTAPI_PostDepositPaymentMethod",
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/apiTransferResult"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/apiUnauthorizedResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "An unexpected error response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/apiErrorResponse"
+                }
+              }
+            }
+          }
+        },
+        "requestBody": {
+          "$ref": "#/components/requestBodies/apiPostTransferPaymentMethodRequest"
+        },
+        "tags": ["Transfers"]
+      }
+    },
+    "/fees": {
+      "get": {
+        "summary": "Get fees",
+        "description": "Get fees rates and 30 days trailing volume.",
+        "operationId": "ExchangeRESTAPI_GetFees",
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/apiFees"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/apiUnauthorizedResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "An unexpected error response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/apiErrorResponse"
+                }
+              }
+            }
+          }
+        },
+        "tags": ["Fees"]
+      }
+    },
+    "/fills": {
+      "get": {
+        "summary": "Get all fills",
+        "description": "Get a list of fills. A fill is a partial or complete match on a specific order.",
+        "operationId": "ExchangeRESTAPI_GetFills",
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/apiOrderFill"
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/apiUnauthorizedResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "An unexpected error response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/apiErrorResponse"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "order_id",
+            "description": "limit to fills on a specific order. Either `order_id` or `product_id` is required.",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "product_id",
+            "description": "limit to fills on a specific product. Either `order_id` or `product_id` is required.",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "profile_id",
+            "description": "get results for a specific profile",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "default": "default"
+            }
+          },
+          {
+            "name": "limit",
+            "description": "Limit on number of results to return.",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int64",
+              "default": "100"
+            }
+          },
+          {
+            "name": "before",
+            "description": "Used for pagination. Sets start cursor to `before` date.",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "after",
+            "description": "Used for pagination. Sets end cursor to `after` date.",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "tags": ["Orders"]
+      }
+    },
+    "/oracle": {
+      "get": {
+        "summary": "Get signed prices",
+        "description": "Get cryptographically signed prices ready to be posted on-chain using Compound's Open Oracle smart contract.",
+        "operationId": "ExchangeRESTAPI_GetCoinbasePriceOracle",
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/apiCoinbasePriceOracle"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/apiUnauthorizedResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "An unexpected error response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/apiErrorResponse"
+                }
+              }
+            }
+          }
+        },
+        "tags": ["Coinbase price oracle"]
+      }
+    },
+    "/orders": {
+      "get": {
+        "summary": "Get all orders",
+        "description": "List your current open orders. Only open or un-settled orders are returned by default. As soon as an order is no longer open and settled, it will no longer appear in the default request. Open orders may change state between the request and the response depending on market conditions.",
+        "operationId": "ExchangeRESTAPI_GetOrders",
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/apiOrder"
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/apiUnauthorizedResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "An unexpected error response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/apiErrorResponse"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "profile_id",
+            "description": "Filter results by a specific profile_id",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "product_id",
+            "description": "Filter results by a specific product_id",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "sortedBy",
+            "description": "Sort criteria for results.",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "enum": ["created_at", "price", "size", "order_id", "side", "type"],
+              "default": "created_at"
+            }
+          },
+          {
+            "name": "sorting",
+            "description": "Ascending or descending order, by `sortedBy`",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "enum": ["desc", "asc"],
+              "default": "desc"
+            }
+          },
+          {
+            "name": "start_date",
+            "description": "Filter results by minimum posted date",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "end_date",
+            "description": "Filter results by maximum posted date",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "before",
+            "description": "Used for pagination. Sets start cursor to `before` date.",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "after",
+            "description": "Used for pagination. Sets end cursor to `after` date.",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "limit",
+            "description": "Limit on number of results to return.",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64",
+              "default": "100"
+            }
+          },
+          {
+            "name": "status",
+            "description": "Array with order statuses to filter by.",
+            "in": "query",
+            "required": true,
+            "explode": true,
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "enum": ["open", "pending", "rejected", "done", "active", "received", "all"]
+              },
+              "default": "['open', 'pending']"
+            }
+          }
+        ],
+        "tags": ["Orders"]
+      },
+      "delete": {
+        "summary": "Cancel all orders",
+        "description": "With best effort, cancel all open orders. This may require you to make the request multiple times until all of the open orders are deleted.",
+        "operationId": "ExchangeRESTAPI_DeleteOrders",
+        "responses": {
+          "200": {
+            "description": "A list of the `id`s of open orders that were successfully cancelled",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  },
+                  "description": "A list of the `id`s of open orders that were successfully cancelled"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/apiUnauthorizedResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "An unexpected error response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/apiErrorResponse"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "profile_id",
+            "description": "Cancels orders on a specific profile",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "product_id",
+            "description": "Cancels orders on a specific product only",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "tags": ["Orders"]
+      },
+      "post": {
+        "summary": "Create a new order",
+        "description": "Create an order. You can place two types of orders: limit and market. Orders can only be placed if your account has sufficient funds. Once an order is placed, your account funds will be put on hold for the duration of the order. How much and which funds are put on hold depends on the order type and parameters specified.",
+        "operationId": "ExchangeRESTAPI_PostOrders",
+        "responses": {
+          "200": {
+            "description": "The new order that was successfully created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/apiOrder"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/apiUnauthorizedResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "An unexpected error response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/apiErrorResponse"
+                }
+              }
+            }
+          }
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/apiPostOrdersRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "tags": ["Orders"]
+      }
+    },
+    "/orders/{order_id}": {
+      "get": {
+        "summary": "Get single order",
+        "description": "Get a single order by `id`.",
+        "operationId": "ExchangeRESTAPI_GetOrder",
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/apiOrder"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/apiUnauthorizedResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "An unexpected error response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/apiErrorResponse"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "order_id",
+            "description": "`order_id` is either the exchange assigned id or the client assigned client_oid. When using client_oid it must be preceded by the client: namespace.",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "tags": ["Orders"]
+      },
+      "delete": {
+        "summary": "Cancel an order",
+        "description": "Cancel a single open order by `{id}`.",
+        "operationId": "ExchangeRESTAPI_DeleteOrder",
+        "responses": {
+          "200": {
+            "description": "the `id` of the order that was cancelled`",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string",
+                  "description": "the `id` of the order that was cancelled`"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/apiUnauthorizedResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "An unexpected error response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/apiErrorResponse"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "order_id",
+            "description": "Orders may be canceled using either the exchange assigned id or the client assigned client_oid. When using client_oid it must be preceded by the `client:` namespace.",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "profile_id",
+            "description": "Cancels orders on a specific profile",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "product_id",
+            "description": "Optional product id of order",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "tags": ["Orders"]
+      }
+    },
+    "/payment-methods": {
+      "get": {
+        "summary": "Get all payment methods",
+        "description": "Gets a list of the user's linked payment methods.",
+        "operationId": "ExchangeRESTAPI_GetPaymentMethods",
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/apiPaymentMethod"
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/apiUnauthorizedResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "An unexpected error response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/apiErrorResponse"
+                }
+              }
+            }
+          }
+        },
+        "tags": ["Transfers"]
+      }
+    },
+    "/products": {
+      "get": {
+        "summary": "Get all known trading pairs",
+        "description": "Gets a list of available currency pairs for trading.",
+        "operationId": "ExchangeRESTAPI_GetProducts",
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/apiProduct"
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "An unexpected error response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/apiErrorResponse"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "type",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "tags": ["Products"],
+        "security": []
+      }
+    },
+    "/products/{product_id}": {
+      "get": {
+        "summary": "Get single product",
+        "description": "Get information on a single product.",
+        "operationId": "ExchangeRESTAPI_GetProduct",
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/apiProduct"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "An unexpected error response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/apiErrorResponse"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "product_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "tags": ["Products"],
+        "security": []
+      }
+    },
+    "/products/{product_id}/book": {
+      "get": {
+        "summary": "Get product book",
+        "description": "Get a list of open orders for a product. The amount of detail shown can be customized with the `level` parameter.",
+        "operationId": "ExchangeRESTAPI_GetProductBook",
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/apiProductBook"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "An unexpected error response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/apiErrorResponse"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "product_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "level",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": "1"
+            }
+          }
+        ],
+        "tags": ["Products"],
+        "security": []
+      }
+    },
+    "/products/{product_id}/candles": {
+      "get": {
+        "summary": "Get product candles",
+        "description": "Historic rates for a product. Rates are returned in grouped buckets. Candle schema is of the form `[timestamp, price_low, price_high, price_open, price_close]`",
+        "operationId": "ExchangeRESTAPI_GetProductCandles",
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object"
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "An unexpected error response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/apiErrorResponse"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "product_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "granularity",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "start",
+            "description": "Timestamp for starting range of aggregations",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "end",
+            "description": "Timestamp for ending range of aggregations",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "tags": ["Products"],
+        "security": []
+      }
+    },
+    "/products/{product_id}/stats": {
+      "get": {
+        "summary": "Get product stats",
+        "description": "Gets 30day and 24hour stats for a product.",
+        "operationId": "ExchangeRESTAPI_GetProductStats",
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/apiProductStats"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "An unexpected error response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/apiErrorResponse"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "product_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "tags": ["Products"],
+        "security": []
+      }
+    },
+    "/products/{product_id}/ticker": {
+      "get": {
+        "summary": "Get product ticker",
+        "description": "Gets snapshot information about the last trade (tick), best bid/ask and 24h volume.",
+        "operationId": "ExchangeRESTAPI_GetProductTicker",
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/apiProductTicker"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "An unexpected error response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/apiErrorResponse"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "product_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "tags": ["Products"],
+        "security": []
+      }
+    },
+    "/products/{product_id}/trades": {
+      "get": {
+        "summary": "Get product trades",
+        "description": "Gets a list the latest trades for a product.",
+        "operationId": "ExchangeRESTAPI_GetProductTrades",
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/apiProductTrade"
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "An unexpected error response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/apiErrorResponse"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "product_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "before",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "after",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "tags": ["Products"],
+        "security": []
+      }
+    },
+    "/profiles": {
+      "get": {
+        "summary": "Get profiles",
+        "description": "Gets a list of all of the current user's profiles.",
+        "operationId": "ExchangeRESTAPI_GetProfiles",
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/apiProfile"
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/apiUnauthorizedResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "An unexpected error response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/apiErrorResponse"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "active",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "boolean"
+            }
+          }
+        ],
+        "tags": ["Profiles"]
+      },
+      "post": {
+        "summary": "Create a profile",
+        "description": "Create a new profile. Will fail if no name is provided or if user already has max number of profiles.",
+        "operationId": "ExchangeRESTAPI_PostProfile",
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/apiProfile"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/apiUnauthorizedResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "An unexpected error response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/apiErrorResponse"
+                }
+              }
+            }
+          }
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/apiPostProfileRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "tags": ["Profiles"]
+      }
+    },
+    "/profiles/transfer": {
+      "post": {
+        "summary": "Transfer funds between profiles",
+        "description": "Transfer an amount of currency from one profile to another.",
+        "operationId": "ExchangeRESTAPI_PostProfileTransfer",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {}
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/apiUnauthorizedResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "An unexpected error response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/apiErrorResponse"
+                }
+              }
+            }
+          }
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/apiPostProfileTransferRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "tags": ["Profiles"]
+      }
+    },
+    "/profiles/{profile_id}": {
+      "get": {
+        "summary": "Get profile by id",
+        "description": "Information for a single profile. Use this endpoint when you know the profile_id.",
+        "operationId": "ExchangeRESTAPI_GetProfile",
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/apiProfile"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/apiUnauthorizedResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "An unexpected error response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/apiErrorResponse"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "profile_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "active",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "boolean"
+            }
+          }
+        ],
+        "tags": ["Profiles"]
+      },
+      "put": {
+        "summary": "Rename a profile",
+        "description": "Rename a profile. Names 'default' and 'margin' are reserved.",
+        "operationId": "ExchangeRESTAPI_PutProfile",
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/apiProfile"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/apiUnauthorizedResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "An unexpected error response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/apiErrorResponse"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "profile_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/apiPutProfileRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "tags": ["Profiles"]
+      }
+    },
+    "/profiles/{profile_id}/deactivate": {
+      "put": {
+        "summary": "Delete a profile",
+        "description": "Deletes the profile specified by `profile_id` and transfers all funds to the profile specified by `to`. Fails if there are any open orders on the profile to be deleted.",
+        "operationId": "ExchangeRESTAPI_PutProfileDeactivate",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {}
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/apiUnauthorizedResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "An unexpected error response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/apiErrorResponse"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "profile_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/apiPutProfileDeactivateRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "tags": ["Profiles"]
+      }
+    },
+    "/reports": {
+      "get": {
+        "summary": "Get all reports",
+        "description": "Gets a list of past fills/account reports.",
+        "operationId": "ExchangeRESTAPI_GetReports",
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/apiReport"
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/apiUnauthorizedResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "An unexpected error response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/apiErrorResponse"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "portfolio_id",
+            "description": "Filter results by a specific profile_id",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "after",
+            "description": "Filter results after a specific date",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "limit",
+            "description": "Limit results to a specific number",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int64",
+              "default": "100"
+            }
+          },
+          {
+            "name": "type",
+            "description": "Filter results by type of report (`fills` or `account`)\n\n - otc_fills: real string is `otc-fills`\n - type_1099k_transaction_history: real string is `1099-transaction-history`\n - tax_invoice: real string is `tax-invoice`",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "enum": ["fills", "account", "otc_fills", "type_1099k_transaction_history", "tax_invoice"],
+              "default": "fills"
+            }
+          },
+          {
+            "name": "ignore_expired",
+            "description": "Ignore expired results",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "boolean"
+            }
+          }
+        ],
+        "tags": ["Reports"]
+      },
+      "post": {
+        "summary": "Create a report",
+        "description": "Generates a report. Reports are either for past account history or past fills on either all accounts or one product's account.",
+        "operationId": "ExchangeRESTAPI_PostReports",
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/apiReportCreateResult"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/apiUnauthorizedResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "An unexpected error response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/apiErrorResponse"
+                }
+              }
+            }
+          }
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/apiPostReportsRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "tags": ["Reports"]
+      }
+    },
+    "/reports/{report_id}": {
+      "get": {
+        "summary": "Get a report",
+        "description": "Get a specific report by `report_id`.",
+        "operationId": "ExchangeRESTAPI_GetReport",
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/apiReport"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/apiUnauthorizedResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "An unexpected error response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/apiErrorResponse"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "report_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "tags": ["Reports"]
+      }
+    },
+    "/transfers": {
+      "get": {
+        "summary": "Get all transfers",
+        "description": "Gets a list of in-progress and completed transfers of funds in/out of any of the user's accounts.",
+        "operationId": "ExchangeRESTAPI_GetTransfers",
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/apiTransfer"
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/apiUnauthorizedResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "An unexpected error response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/apiErrorResponse"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "profile_id",
+            "description": "Returns list of transfers from this portfolio id.",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "before",
+            "description": "Used for pagination. Sets start cursor to `before` date.",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "after",
+            "description": "Used for pagination. Sets end cursor to `after` date.",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "limit",
+            "description": "Limit on number of results to return.",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int64",
+              "default": "30"
+            }
+          },
+          {
+            "name": "type",
+            "description": "Specify transfers 'deposit' or 'withdraw'.",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "tags": ["Transfers"]
+      }
+    },
+    "/transfers/{transfer_id}": {
+      "get": {
+        "summary": "Get a single transfer",
+        "description": "Get information on a single transfer.",
+        "operationId": "ExchangeRESTAPI_GetTransfer",
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/apiTransfer"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/apiUnauthorizedResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "An unexpected error response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/apiErrorResponse"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "transfer_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "tags": ["Transfers"]
+      }
+    },
+    "/users/{user_id}/exchange-limits": {
+      "get": {
+        "summary": "Get user exchange limits",
+        "description": "Gets exchange limits information for a single user.",
+        "operationId": "ExchangeRESTAPI_GetUserExchangeLimits",
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/apiUserExchangeTransferLimits"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/apiUnauthorizedResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "An unexpected error response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/apiErrorResponse"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "user_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "tags": ["Users"]
+      }
+    },
+    "/withdrawals/coinbase-account": {
+      "post": {
+        "summary": "Withdraw to Coinbase account",
+        "description": "Withdraws funds from the specified `profile_id` to a www.coinbase.com wallet.",
+        "operationId": "ExchangeRESTAPI_PostWithdrawCoinbaseAccount",
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/apiTransferResult"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/apiUnauthorizedResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "An unexpected error response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/apiErrorResponse"
+                }
+              }
+            }
+          }
+        },
+        "requestBody": {
+          "$ref": "#/components/requestBodies/apiPostTransferCoinbaseAccountRequest"
+        },
+        "tags": ["Transfers"]
+      }
+    },
+    "/withdrawals/crypto": {
+      "post": {
+        "summary": "Withdraw to crypto address",
+        "description": "Withdraws funds from the specified `profile_id` to an external crypto address",
+        "operationId": "ExchangeRESTAPI_PostWithdrawCrypto",
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/apiTransferResult"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/apiUnauthorizedResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "An unexpected error response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/apiErrorResponse"
+                }
+              }
+            }
+          }
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/apiPostTransferCryptoRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "tags": ["Transfers"]
+      }
+    },
+    "/withdrawals/fee-estimate": {
+      "get": {
+        "summary": "Get fee estimate for crypto withdrawal",
+        "description": "Gets the fee estimate for the crypto withdrawal to crypto address",
+        "operationId": "ExchangeRESTAPI_GetWithdrawFeeEstimate",
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/apiFeeEstimateResult"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/apiUnauthorizedResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "An unexpected error response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/apiErrorResponse"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "currency",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "crypto_address",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "tags": ["Transfers"]
+      }
+    },
+    "/withdrawals/payment-method": {
+      "post": {
+        "summary": "Withdraw to payment method",
+        "description": "Withdraws funds from the specified `profile_id` to a linked external payment method",
+        "operationId": "ExchangeRESTAPI_PostWithdrawPaymentMethod",
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/apiTransferResult"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/apiUnauthorizedResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "An unexpected error response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/apiErrorResponse"
+                }
+              }
+            }
+          }
+        },
+        "requestBody": {
+          "$ref": "#/components/requestBodies/apiPostTransferPaymentMethodRequest"
+        },
+        "tags": ["Transfers"]
+      }
+    }
+  },
+  "security": [
+    {
+      "ApiKeyAuthKey": [],
+      "ApiKeyAuthPassphrase": [],
+      "ApiKeyAuthSign": [],
+      "ApiKeyAuthTimestamp": []
+    }
+  ],
+  "x-si-base": "./exchange/apis/v1.0/exchange-spec.json",
+  "x-github-repo": "bisontrails/coinbase-cloud-apis",
+  "x-github-sha": "1d6d6f68b45bb8127a133af0b795a46518b37370",
+  "servers": [
+    {
+      "url": "https://api.exchange.coinbase.com"
+    }
+  ],
+  "components": {
+    "requestBodies": {
+      "apiPostTransferCoinbaseAccountRequest": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/apiPostTransferCoinbaseAccountRequest"
+            }
+          }
+        },
+        "required": true
+      },
+      "apiPostTransferPaymentMethodRequest": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/apiPostTransferPaymentMethodRequest"
+            }
+          }
+        },
+        "required": true
+      }
+    },
+    "securitySchemes": {
+      "ApiKeyAuthKey": {
+        "type": "apiKey",
+        "name": "cb-access-key",
+        "in": "header"
+      },
+      "ApiKeyAuthPassphrase": {
+        "type": "apiKey",
+        "name": "cb-access-passphrase",
+        "in": "header"
+      },
+      "ApiKeyAuthSign": {
+        "type": "apiKey",
+        "name": "cb-access-sign",
+        "in": "header"
+      },
+      "ApiKeyAuthTimestamp": {
+        "type": "apiKey",
+        "name": "cb-access-timestamp",
+        "in": "header"
+      }
+    },
+    "schemas": {
+      "AccountHoldAccountHoldType": {
+        "type": "string",
+        "enum": [
+          "order",
+          "transfer",
+          "funding",
+          "profile_transfer",
+          "otc_order",
+          "launch_sell",
+          "launch_buy",
+          "engine_credit_operation"
+        ],
+        "default": "order"
+      },
+      "AccountLedgerEntryAccountLedgerType": {
+        "type": "string",
+        "enum": ["transfer", "match", "fee", "conversion", "margin_interest", "rebate", "otc_fee", "otc_match"],
+        "default": "transfer"
+      },
+      "CoinbaseAccountCoinbaseAccountType": {
+        "type": "string",
+        "enum": ["wallet", "multisig", "fiat", "vault", "multisig_vault"],
+        "default": "wallet"
+      },
+      "apiAccount": {
+        "type": "object",
+        "example": {
+          "id": "7fd0abc0-e5ad-4cbb-8d54-f2b3f43364da",
+          "currency": "USD",
+          "balance": "0.0000000000000000",
+          "available": "0",
+          "hold": "0.0000000000000000",
+          "profile_id": "8058d771-2d88-4f0f-ab6e-299c153d4308",
+          "trading_enabled": true
+        },
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "currency": {
+            "type": "string"
+          },
+          "balance": {
+            "type": "string"
+          },
+          "available": {
+            "type": "string"
+          },
+          "hold": {
+            "type": "string"
+          },
+          "profile_id": {
+            "type": "string"
+          },
+          "trading_enabled": {
+            "type": "boolean"
+          }
+        },
+        "required": ["id", "currency", "balance", "available", "hold", "profile_id", "trading_enabled"]
+      },
+      "apiAccountHold": {
+        "type": "object",
+        "example": {
+          "created_at": "2020-03-11T20:48:46.622052Z",
+          "id": "c5cdd687-2d03-4a87-8dd7-c693a4bb766f",
+          "amount": "10.0500000000000000",
+          "type": "order",
+          "ref": "a9625b04-fc66-4999-a876-543c3684d702"
+        },
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "created_at": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updated_at": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "type": {
+            "$ref": "#/components/schemas/AccountHoldAccountHoldType"
+          },
+          "ref": {
+            "type": "string"
+          }
+        },
+        "required": ["id", "created_at", "updated_at", "type", "ref"]
+      },
+      "apiAccountLedgerEntry": {
+        "type": "object",
+        "example": {
+          "created_at": "2019-06-11T22:11:56.382749Z",
+          "id": "1444415179",
+          "amount": "3.2200000000000000",
+          "balance": "3.2200000000000000",
+          "type": "transfer",
+          "details": {
+            "to": "6d326768-71f2-4068-99dc-7075c78f6402",
+            "from": "20640810-6219-4d3b-95f4-5e1741dd6ea4",
+            "profile_transfer_id": "1f854356-4923-4b10-8db1-d82f7fae8eda"
+          }
+        },
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "amount": {
+            "type": "string"
+          },
+          "created_at": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "balance": {
+            "type": "string"
+          },
+          "type": {
+            "$ref": "#/components/schemas/AccountLedgerEntryAccountLedgerType"
+          },
+          "details": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "string"
+            }
+          }
+        },
+        "required": ["id", "amount", "created_at", "balance", "type", "details"]
+      },
+      "apiAuctionBook": {
+        "type": "object",
+        "example": {
+          "indicative_open_price": "333.99",
+          "indicative_open_size": "0.193",
+          "indicative_bid_price": "333.98",
+          "indicative_bid_size": "4.39088265",
+          "indicative_ask_price": "333.99",
+          "indicative_ask_size": "25.23542881",
+          "auction_status": "CAN_OPEN"
+        },
+        "properties": {
+          "open_price": {
+            "type": "string"
+          },
+          "open_size": {
+            "type": "string"
+          },
+          "best_bid_price": {
+            "type": "string"
+          },
+          "best_bid_size": {
+            "type": "string"
+          },
+          "best_ask_price": {
+            "type": "string"
+          },
+          "best_ask_size": {
+            "type": "string"
+          },
+          "auction_state": {
+            "type": "string"
+          },
+          "can_open": {
+            "type": "string"
+          },
+          "time": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "required": [
+          "open_price",
+          "open_size",
+          "best_bid_price",
+          "best_bid_size",
+          "best_ask_price",
+          "best_ask_size",
+          "auction_state"
+        ]
+      },
+      "apiCoinbaseAccount": {
+        "type": "object",
+        "example": {
+          "available_on_consumer": true,
+          "hold_balance": "0.00",
+          "id": "OXT",
+          "hold_currency": "USD",
+          "balance": "0.00000000",
+          "currency": "OXT",
+          "primary": false,
+          "name": "OXT Wallet",
+          "type": "wallet",
+          "active": true
+        },
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "balance": {
+            "type": "string"
+          },
+          "currency": {
+            "type": "string"
+          },
+          "type": {
+            "$ref": "#/components/schemas/CoinbaseAccountCoinbaseAccountType"
+          },
+          "primary": {
+            "type": "boolean"
+          },
+          "active": {
+            "type": "boolean"
+          },
+          "available_on_consumer": {
+            "type": "boolean"
+          },
+          "ready": {
+            "type": "boolean"
+          },
+          "wire_deposit_information": {
+            "$ref": "#/components/schemas/apiCoinbaseAccountWireDepositInformation"
+          },
+          "swift_deposit_information": {
+            "$ref": "#/components/schemas/apiCoinbaseAccountSwiftDepositInformation"
+          },
+          "sepa_deposit_information": {
+            "$ref": "#/components/schemas/apiCoinbaseAccountSepaDepositInformation"
+          },
+          "uk_deposit_information": {
+            "$ref": "#/components/schemas/apiCoinbaseAccountUkDepositInformation"
+          },
+          "destination_tag_name": {
+            "type": "string"
+          },
+          "destination_tag_regex": {
+            "type": "string"
+          },
+          "hold_balance": {
+            "type": "string"
+          },
+          "hold_currency": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "name",
+          "balance",
+          "currency",
+          "type",
+          "primary",
+          "active",
+          "available_on_consumer",
+          "hold_balance",
+          "hold_currency"
+        ]
+      },
+      "apiCoinbaseAccountAddressInfo": {
+        "type": "object",
+        "properties": {
+          "address": {
+            "type": "string"
+          },
+          "destination_tag": {
+            "type": "string"
+          }
+        },
+        "required": ["address"]
+      },
+      "apiCoinbaseAccountAddressWarning": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string"
+          },
+          "details": {
+            "type": "string"
+          },
+          "image_url": {
+            "type": "string"
+          }
+        },
+        "required": ["title", "details", "image_url"]
+      },
+      "apiCoinbaseAccountBankCountry": {
+        "type": "object",
+        "example": {
+          "name": "United States",
+          "code": "US"
+        },
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "code": {
+            "type": "string"
+          }
+        },
+        "required": ["name", "code"]
+      },
+      "apiCoinbaseAccountGeneratedDepositAddress": {
+        "type": "object",
+        "example": {
+          "id": "fc9fed1e-d25b-54d8-b52b-7fa250c9ae2d",
+          "address": "0xd518A6B23D8bCA15B9cC46a00Be8a818E34Ca79E",
+          "address_info": {
+            "address": "0xd518A6B23D8bCA15B9cC46a00Be8a818E34Ca79E"
+          },
+          "name": "New exchange deposit address",
+          "created_at": "2020-03-31T02:38:44Z",
+          "updated_at": "2020-03-31T02:38:44Z",
+          "network": "ethereum",
+          "uri_scheme": "ethereum",
+          "resource": "address",
+          "resource_path": "/v2/accounts/faf4b657-a48c-56b2-bec2-77567e3f4f97/addresses/fc9fed1e-d25b-54d8-b52b-7fa250c9ae2d",
+          "warnings": [
+            {
+              "title": "Only send Orchid (OXT) to this address",
+              "details": "Sending any other digital asset, including Ethereum (ETH), will result in permanent loss.",
+              "image_url": "https://dynamic-assets.coinbase.com/22b24ad9886150535671f158ccb0dd9d12089803728551c998e17e0f503484e9c38f3e8735354b5e622753684f040488b08d55b8ef5fef51592680f0c572bdfe/asset_icons/023010d790b9b1f47bc285802eafeab3d83c4de2029fe808d59935fbc54cdd7c.png"
+            }
+          ],
+          "deposit_uri": "ethereum:0x4575f41308ec1483f3d399aa9a2826d74da13deb/transfer?address=0xd518A6B23D8bCA15B9cC46a00Be8a818E34Ca79E",
+          "callback_url": null,
+          "exchange_deposit_address": true
+        },
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "address": {
+            "type": "string"
+          },
+          "address_info": {
+            "$ref": "#/components/schemas/apiCoinbaseAccountAddressInfo"
+          },
+          "name": {
+            "type": "string"
+          },
+          "created_at": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updated_at": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "network": {
+            "type": "string"
+          },
+          "uri_scheme": {
+            "type": "string"
+          },
+          "resource": {
+            "type": "string"
+          },
+          "resource_path": {
+            "type": "string"
+          },
+          "warnings": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/apiCoinbaseAccountAddressWarning"
+            }
+          },
+          "legacy_address": {
+            "type": "string"
+          },
+          "destination_tag": {
+            "type": "string"
+          },
+          "deposit_uri": {
+            "type": "string"
+          },
+          "callback_url": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "address",
+          "address_info",
+          "name",
+          "created_at",
+          "updated_at",
+          "network",
+          "uri_scheme",
+          "resource",
+          "resource_path",
+          "warnings"
+        ]
+      },
+      "apiCoinbaseAccountSepaDepositInformation": {
+        "type": "object",
+        "example": {
+          "iban": "AB012345678901234567",
+          "account_address": "3720 Byers Lane, Davis, CA 95616",
+          "swift": "ABCDEF22",
+          "bank_name": "Bank",
+          "bank_address": "1741 Virgil Street, Fort Walton Beach, FL 32548",
+          "reference": "ABCDUEFGHIJKLMNOPQ",
+          "account_name": "PAYMENTS, LTD",
+          "bank_country": {
+            "name": "United States",
+            "code": "US"
+          }
+        },
+        "properties": {
+          "iban": {
+            "type": "string"
+          },
+          "swift": {
+            "type": "string"
+          },
+          "bank_name": {
+            "type": "string"
+          },
+          "bank_address": {
+            "type": "string"
+          },
+          "bank_country": {
+            "$ref": "#/components/schemas/apiCoinbaseAccountBankCountry"
+          },
+          "account_name": {
+            "type": "string"
+          },
+          "account_address": {
+            "type": "string"
+          },
+          "reference": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "iban",
+          "swift",
+          "bank_name",
+          "bank_address",
+          "bank_country",
+          "account_name",
+          "account_address",
+          "reference"
+        ]
+      },
+      "apiCoinbaseAccountSwiftDepositInformation": {
+        "type": "object",
+        "example": {
+          "bank_country": {
+            "name": "United States",
+            "code": "US"
+          },
+          "reference": "ABCDEFGHIJH",
+          "account_number": null,
+          "bank_address": "1741 Virgil Street, Fort Walton Beach, FL 32548",
+          "account_name": "Coinbase Inc",
+          "account_address": "3720 Byers Lane, Davis, CA 95616",
+          "bank_name": "Bank"
+        },
+        "properties": {
+          "account_number": {
+            "type": "string"
+          },
+          "bank_name": {
+            "type": "string"
+          },
+          "bank_address": {
+            "type": "string"
+          },
+          "bank_country": {
+            "$ref": "#/components/schemas/apiCoinbaseAccountBankCountry"
+          },
+          "account_name": {
+            "type": "string"
+          },
+          "account_address": {
+            "type": "string"
+          },
+          "reference": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "account_number",
+          "bank_name",
+          "bank_address",
+          "bank_country",
+          "account_name",
+          "account_address",
+          "reference"
+        ]
+      },
+      "apiCoinbaseAccountUkDepositInformation": {
+        "type": "object",
+        "example": {
+          "sort_code": "04-06-10",
+          "reference": "ABCDEFGHIJLMNOPQRS",
+          "account_number": "00000014",
+          "bank_name": "Bank",
+          "account_name": "PAYMENTS, LTD"
+        },
+        "properties": {
+          "sort_code": {
+            "type": "string"
+          },
+          "account_number": {
+            "type": "string"
+          },
+          "bank_name": {
+            "type": "string"
+          },
+          "account_name": {
+            "type": "string"
+          },
+          "reference": {
+            "type": "string"
+          }
+        },
+        "required": ["sort_code", "account_number", "bank_name", "account_name", "reference"]
+      },
+      "apiCoinbaseAccountWireDepositInformation": {
+        "type": "object",
+        "example": {
+          "bank_country": {
+            "name": "United States",
+            "code": "US"
+          },
+          "reference": "ABCDEFGHIJH",
+          "routing_number": "012345678",
+          "account_number": null,
+          "bank_address": "1741 Virgil Street, Fort Walton Beach, FL 32548",
+          "account_name": "Coinbase Inc",
+          "account_address": "3720 Byers Lane, Davis, CA 95616",
+          "bank_name": "Bank"
+        },
+        "properties": {
+          "account_number": {
+            "type": "string"
+          },
+          "routing_number": {
+            "type": "string"
+          },
+          "bank_name": {
+            "type": "string"
+          },
+          "bank_address": {
+            "type": "string"
+          },
+          "bank_country": {
+            "$ref": "#/components/schemas/apiCoinbaseAccountBankCountry"
+          },
+          "account_name": {
+            "type": "string"
+          },
+          "account_address": {
+            "type": "string"
+          },
+          "reference": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "routing_number",
+          "bank_name",
+          "bank_address",
+          "bank_country",
+          "account_name",
+          "account_address",
+          "reference"
+        ]
+      },
+      "apiCoinbasePriceOracle": {
+        "type": "object",
+        "properties": {
+          "timestamp": {
+            "type": "string",
+            "description": "indicates when the latest datapoint was obtained",
+            "title": "timestamp"
+          },
+          "messages": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "array contains abi-encoded values [``kind``, ``timestamp``, ``key``, ``value``], where ``kind`` always equals to 'prices', ``timestamp`` is the time when the price was obtained, ``key`` is asset ticker (e.g. 'eth') and ``value`` is asset price",
+            "title": "messages"
+          },
+          "signatures": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "array of Ethereum-compatible ECDSA signatures for each message",
+            "title": "signatures"
+          },
+          "prices": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "string"
+            },
+            "description": "contains human-readable asset prices",
+            "title": "prices"
+          }
+        }
+      },
+      "apiConversion": {
+        "type": "object",
+        "example": {
+          "id": "c5aaf125-d99e-41fe-82ea-ad068038b278",
+          "amount": "11.00000000",
+          "from_account_id": "5dcc143c-fb96-4f72-aebf-a165e3d29b53",
+          "to_account_id": "6100247f-90fc-4335-ac17-d99839f0c909",
+          "from": "USDC",
+          "to": "USD"
+        },
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "amount": {
+            "type": "string"
+          },
+          "from_account_id": {
+            "type": "string"
+          },
+          "to_account_id": {
+            "type": "string"
+          },
+          "from": {
+            "type": "string"
+          },
+          "to": {
+            "type": "string"
+          }
+        },
+        "required": ["id", "amount", "from_account_id", "to_account_id", "from", "to"]
+      },
+      "apiCurrency": {
+        "type": "object",
+        "example": {
+          "id": "USD",
+          "name": "United States Dollar",
+          "min_size": "0.01",
+          "max_precision": "0.01",
+          "status": "online",
+          "details": {
+            "type": "fiat",
+            "symbol": "$",
+            "sort_order": 1,
+            "push_payment_methods": ["bank_wire", "fedwire", "swift_bank_account", "intra_bank_account"],
+            "display_name": "US Dollar",
+            "group_types": ["fiat", "usd"]
+          }
+        },
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "min_size": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string"
+          },
+          "message": {
+            "type": "string"
+          },
+          "max_precision": {
+            "type": "string"
+          },
+          "convertible_to": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "details": {
+            "$ref": "#/components/schemas/apiCurrencyDetails"
+          },
+          "default_network": {
+            "type": "string"
+          },
+          "supported_networks": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/apiNetwork"
+            }
+          }
+        },
+        "required": ["id", "name", "min_size", "status", "details", "max_precision"]
+      },
+      "apiCurrencyDetails": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "$ref": "#/components/schemas/apiCurrencyType"
+          },
+          "symbol": {
+            "type": "string"
+          },
+          "network_confirmations": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "sort_order": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "crypto_address_link": {
+            "type": "string"
+          },
+          "crypto_transaction_link": {
+            "type": "string"
+          },
+          "push_payment_methods": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "group_types": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "display_name": {
+            "type": "string"
+          },
+          "processing_time_seconds": {
+            "type": "number",
+            "format": "float"
+          },
+          "min_withdrawal_amount": {
+            "type": "number",
+            "format": "double"
+          },
+          "max_withdrawal_amount": {
+            "type": "number",
+            "format": "double"
+          }
+        }
+      },
+      "apiCurrencyType": {
+        "type": "string",
+        "enum": ["crypto", "fiat"],
+        "default": "crypto"
+      },
+      "apiDeleteOrderResponse": {
+        "type": "object",
+        "properties": {
+          "body": {
+            "type": "string",
+            "description": "the `id` of the order that was cancelled`"
+          }
+        }
+      },
+      "apiDeleteOrdersResponse": {
+        "type": "object",
+        "example": ["496ffbba-7dae-4864-f7e8-a5bf52c6d0e2"],
+        "properties": {
+          "body": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "A list of the `id`s of open orders that were successfully cancelled"
+          }
+        }
+      },
+      "apiErrorResponse": {
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string",
+            "title": "message",
+            "pattern": "^[a-zA-Z0-9]{1, 32}$"
+          }
+        }
+      },
+      "apiFeeEstimateResult": {
+        "type": "object",
+        "properties": {
+          "fee": {
+            "type": "string"
+          }
+        }
+      },
+      "apiFees": {
+        "type": "object",
+        "example": {
+          "maker_fee_rate": "0.0050",
+          "taker_fee_rate": "0.0050",
+          "usd_volume": "43806.92"
+        },
+        "properties": {
+          "taker_fee_rate": {
+            "type": "string",
+            "example": "0.0050",
+            "description": "Taker fee rate."
+          },
+          "maker_fee_rate": {
+            "type": "string",
+            "example": "0.0050",
+            "description": "Maker fee rate."
+          },
+          "usd_volume": {
+            "type": "string",
+            "example": "43806.92",
+            "description": "The 30 days trailing volume in USD."
+          }
+        },
+        "description": "Fees defines taker and maker fees for a given user including the volume in USD.",
+        "required": ["taker_fee_rate", "maker_fee_rate"]
+      },
+      "apiGetAccountHoldsResponse": {
+        "type": "object",
+        "properties": {
+          "body": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/apiAccountHold"
+            }
+          }
+        }
+      },
+      "apiGetAccountLedgerResponse": {
+        "type": "object",
+        "properties": {
+          "body": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/apiAccountLedgerEntry"
+            }
+          }
+        }
+      },
+      "apiGetAccountResponse": {
+        "type": "object",
+        "properties": {
+          "body": {
+            "$ref": "#/components/schemas/apiAccount"
+          }
+        }
+      },
+      "apiGetAccountTransfersResponse": {
+        "type": "object",
+        "properties": {
+          "body": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/apiTransfer"
+            }
+          }
+        }
+      },
+      "apiGetAccountsResponse": {
+        "type": "object",
+        "properties": {
+          "body": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/apiAccount"
+            }
+          }
+        }
+      },
+      "apiGetAddressBookResponse": {
+        "type": "object",
+        "properties": {
+          "body": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/apiGetAddressBookResponseAddressInfo"
+            }
+          }
+        }
+      },
+      "apiGetAddressBookResponseAddressInfo": {
+        "type": "object",
+        "example": {
+          "id": "e9c483b8-c502-11ec-9d64-0242ac120002",
+          "address": "1JmYrFBLMSCLBwoL87gdQ5Qc9MLvb2egKk",
+          "currency": "ETH",
+          "label": "my wallet",
+          "last_used": null,
+          "address_book_added_at": "2019-02-06T22:27:50.221Z",
+          "destination_tag": null
+        },
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "address": {
+            "type": "string"
+          },
+          "destination_tag": {
+            "type": "string"
+          },
+          "currency": {
+            "type": "string"
+          },
+          "label": {
+            "type": "string"
+          },
+          "address_book_added_at": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "last_used": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "required": ["address", "currency", "id", "label", "address_book_added_at", "last_used"]
+      },
+      "apiGetCoinbaseAccountsResponse": {
+        "type": "object",
+        "properties": {
+          "body": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/apiCoinbaseAccount"
+            }
+          }
+        }
+      },
+      "apiGetCoinbasePriceOracleResponse": {
+        "type": "object",
+        "properties": {
+          "body": {
+            "$ref": "#/components/schemas/apiCoinbasePriceOracle"
+          }
+        },
+        "description": "GetCoinbasePriceOracleResponse returns cryptographically signed prices ready\nto be posted on-chain using Compound's Open Oracle smart contract."
+      },
+      "apiGetConversionResponse": {
+        "type": "object",
+        "properties": {
+          "body": {
+            "$ref": "#/components/schemas/apiConversion"
+          }
+        }
+      },
+      "apiGetCurrenciesResponse": {
+        "type": "object",
+        "properties": {
+          "body": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/apiCurrency"
+            }
+          }
+        }
+      },
+      "apiGetCurrencyResponse": {
+        "type": "object",
+        "properties": {
+          "body": {
+            "$ref": "#/components/schemas/apiCurrency"
+          }
+        }
+      },
+      "apiGetFeesResponse": {
+        "type": "object",
+        "properties": {
+          "body": {
+            "$ref": "#/components/schemas/apiFees"
+          }
+        },
+        "description": "GetFeesResponse is used by the GET /fees."
+      },
+      "apiGetFillsResponse": {
+        "type": "object",
+        "properties": {
+          "body": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/apiOrderFill"
+            }
+          }
+        }
+      },
+      "apiGetOrderResponse": {
+        "type": "object",
+        "properties": {
+          "body": {
+            "$ref": "#/components/schemas/apiOrder"
+          }
+        }
+      },
+      "apiGetOrdersResponse": {
+        "type": "object",
+        "properties": {
+          "body": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/apiOrder"
+            }
+          }
+        }
+      },
+      "apiGetPaymentMethodsResponse": {
+        "type": "object",
+        "properties": {
+          "body": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/apiPaymentMethod"
+            }
+          }
+        }
+      },
+      "apiGetProductBookResponse": {
+        "type": "object",
+        "properties": {
+          "body": {
+            "$ref": "#/components/schemas/apiProductBook"
+          }
+        }
+      },
+      "apiGetProductCandlesResponse": {
+        "type": "object",
+        "properties": {
+          "body": {
+            "type": "array",
+            "items": {
+              "type": "object"
+            }
+          }
+        }
+      },
+      "apiGetProductResponse": {
+        "type": "object",
+        "properties": {
+          "body": {
+            "$ref": "#/components/schemas/apiProduct"
+          }
+        }
+      },
+      "apiGetProductStatsResponse": {
+        "type": "object",
+        "properties": {
+          "body": {
+            "$ref": "#/components/schemas/apiProductStats"
+          }
+        }
+      },
+      "apiGetProductTickerResponse": {
+        "type": "object",
+        "properties": {
+          "body": {
+            "$ref": "#/components/schemas/apiProductTicker"
+          }
+        }
+      },
+      "apiGetProductTradesResponse": {
+        "type": "object",
+        "properties": {
+          "body": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/apiProductTrade"
+            }
+          }
+        }
+      },
+      "apiGetProductsResponse": {
+        "type": "object",
+        "properties": {
+          "body": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/apiProduct"
+            }
+          }
+        }
+      },
+      "apiGetProfileResponse": {
+        "type": "object",
+        "properties": {
+          "body": {
+            "$ref": "#/components/schemas/apiProfile"
+          }
+        }
+      },
+      "apiGetProfilesResponse": {
+        "type": "object",
+        "properties": {
+          "body": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/apiProfile"
+            }
+          }
+        }
+      },
+      "apiGetReportResponse": {
+        "type": "object",
+        "properties": {
+          "body": {
+            "$ref": "#/components/schemas/apiReport"
+          }
+        }
+      },
+      "apiGetReportsResponse": {
+        "type": "object",
+        "properties": {
+          "body": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/apiReport"
+            }
+          }
+        }
+      },
+      "apiGetTransferFeeEstimateResponse": {
+        "type": "object",
+        "properties": {
+          "body": {
+            "$ref": "#/components/schemas/apiFeeEstimateResult"
+          }
+        }
+      },
+      "apiGetTransferResponse": {
+        "type": "object",
+        "properties": {
+          "body": {
+            "$ref": "#/components/schemas/apiTransfer"
+          }
+        }
+      },
+      "apiGetTransfersResponse": {
+        "type": "object",
+        "properties": {
+          "body": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/apiTransfer"
+            }
+          }
+        }
+      },
+      "apiGetUserExchangeLimitsResponse": {
+        "type": "object",
+        "properties": {
+          "body": {
+            "$ref": "#/components/schemas/apiUserExchangeTransferLimits"
+          }
+        }
+      },
+      "apiMonorailCurrencyAmount": {
+        "type": "object",
+        "properties": {
+          "amount": {
+            "type": "string"
+          },
+          "currency": {
+            "type": "string"
+          }
+        },
+        "required": ["amount", "currency"]
+      },
+      "apiMonorailLinkedResource": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "resource": {
+            "type": "string"
+          },
+          "resource_path": {
+            "type": "string"
+          }
+        }
+      },
+      "apiNetwork": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string"
+          },
+          "contract_address": {
+            "type": "string"
+          },
+          "crypto_address_link": {
+            "type": "string"
+          },
+          "crypto_transaction_link": {
+            "type": "string"
+          },
+          "min_withdrawal_amount": {
+            "type": "number",
+            "format": "double"
+          },
+          "max_withdrawal_amount": {
+            "type": "number",
+            "format": "double"
+          },
+          "network_confirmations": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "processing_time_seconds": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+      },
+      "apiOrder": {
+        "type": "object",
+        "example": {
+          "id": "a9625b04-fc66-4999-a876-543c3684d702",
+          "price": "10.00000000",
+          "size": "1.00000000",
+          "product_id": "BTC-USD",
+          "profile_id": "8058d771-2d88-4f0f-ab6e-299c153d4308",
+          "side": "buy",
+          "type": "limit",
+          "time_in_force": "GTC",
+          "post_only": true,
+          "created_at": "2020-03-11T20:48:46.622052Z",
+          "fill_fees": "0.0000000000000000",
+          "filled_size": "0.00000000",
+          "executed_value": "0.0000000000000000",
+          "status": "open",
+          "settled": false
+        },
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "uuid"
+          },
+          "price": {
+            "type": "string",
+            "description": "price per unit of base currency"
+          },
+          "size": {
+            "type": "string",
+            "description": "amount of base currency to buy/sell"
+          },
+          "product_id": {
+            "type": "string",
+            "description": "book the order was placed on"
+          },
+          "profile_id": {
+            "type": "string",
+            "description": "profile_id that placed the order"
+          },
+          "side": {
+            "$ref": "#/components/schemas/apiOrderSide"
+          },
+          "funds": {
+            "type": "string",
+            "description": "amount of quote currency to spend (for market orders)"
+          },
+          "specified_funds": {
+            "type": "string",
+            "description": "funds with fees"
+          },
+          "type": {
+            "$ref": "#/components/schemas/apiOrderType"
+          },
+          "time_in_force": {
+            "$ref": "#/components/schemas/apiOrderTimeInForce"
+          },
+          "expire_time": {
+            "type": "string",
+            "format": "date-time",
+            "description": "timestamp at which order expires"
+          },
+          "post_only": {
+            "type": "boolean",
+            "description": "if true, forces order to be `maker` only"
+          },
+          "created_at": {
+            "type": "string",
+            "format": "date-time",
+            "description": "timestamp at which order was placed"
+          },
+          "done_at": {
+            "type": "string",
+            "format": "date-time",
+            "description": "timestamp at which order was done"
+          },
+          "done_reason": {
+            "type": "string",
+            "description": "reason order was done (filled, rejected, or otherwise)"
+          },
+          "reject_reason": {
+            "type": "string",
+            "description": "reason order was rejected by engine"
+          },
+          "fill_fees": {
+            "type": "string",
+            "description": "fees paid on current filled amount"
+          },
+          "filled_size": {
+            "type": "string",
+            "description": "amount (in base currency) of the order that has been filled"
+          },
+          "executed_value": {
+            "type": "string"
+          },
+          "status": {
+            "$ref": "#/components/schemas/apiOrderStatus"
+          },
+          "settled": {
+            "type": "boolean",
+            "description": "true if funds have been exchanged and settled"
+          },
+          "stop": {
+            "$ref": "#/components/schemas/apiOrderStop"
+          },
+          "stop_price": {
+            "type": "string",
+            "description": "price (in quote currency) at which to execute the order"
+          },
+          "funding_amount": {
+            "type": "string"
+          },
+          "client_oid": {
+            "type": "string",
+            "description": "client order id"
+          }
+        },
+        "required": [
+          "id",
+          "product_id",
+          "side",
+          "type",
+          "post_only",
+          "created_at",
+          "fill_fees",
+          "filled_size",
+          "status",
+          "settled"
+        ]
+      },
+      "apiOrderCancelAfter": {
+        "type": "string",
+        "enum": ["min", "hour", "day"],
+        "default": "min"
+      },
+      "apiOrderFill": {
+        "type": "object",
+        "example": {
+          "created_at": "2019-11-21T01:38:23.878Z",
+          "trade_id": 78098253,
+          "product_id": "BTC-USD",
+          "order_id": "41473628-db2c-464e-b9f4-82df7e4fb4f4",
+          "user_id": "5cf6e115aaf44503db300f1e",
+          "profile_id": "8058d771-2d88-4f0f-ab6e-299c153d4308",
+          "liquidity": "T",
+          "price": "8087.38000000",
+          "size": "0.00601800",
+          "fee": "0.2433492642000000",
+          "side": "sell",
+          "settled": true,
+          "usd_volume": "48.6698528400000000"
+        },
+        "properties": {
+          "trade_id": {
+            "type": "integer",
+            "format": "int32",
+            "description": "id of trade that created the fill"
+          },
+          "product_id": {
+            "type": "string",
+            "description": "book the order was placed on"
+          },
+          "order_id": {
+            "type": "string",
+            "description": "uuid"
+          },
+          "user_id": {
+            "type": "string",
+            "description": "id of user's account"
+          },
+          "profile_id": {
+            "type": "string",
+            "description": "profile_id that placed the order"
+          },
+          "liquidity": {
+            "$ref": "#/components/schemas/apiOrderFillLiquidity"
+          },
+          "price": {
+            "type": "string",
+            "description": "price per unit of base currency"
+          },
+          "size": {
+            "type": "string",
+            "description": "amount of base currency to buy/sell"
+          },
+          "fee": {
+            "type": "string",
+            "description": "fees paid on current filled amount"
+          },
+          "created_at": {
+            "type": "string",
+            "description": "timestamp of fill"
+          },
+          "side": {
+            "$ref": "#/components/schemas/apiOrderSide"
+          },
+          "settled": {
+            "type": "boolean",
+            "description": "true if funds have been exchanged and settled"
+          },
+          "usd_volume": {
+            "type": "string",
+            "description": "true if funds have been exchanged and settled"
+          }
+        },
+        "required": [
+          "trade_id",
+          "product_id",
+          "order_id",
+          "user_id",
+          "profile_id",
+          "liquidity",
+          "price",
+          "size",
+          "fee",
+          "created_at",
+          "side",
+          "settled",
+          "usd_volume"
+        ]
+      },
+      "apiOrderFillLiquidity": {
+        "type": "string",
+        "enum": ["M", "T"],
+        "default": "M"
+      },
+      "apiOrderSide": {
+        "type": "string",
+        "enum": ["buy", "sell"],
+        "default": "buy"
+      },
+      "apiOrderSortedBy": {
+        "type": "string",
+        "enum": ["created_at", "price", "size", "order_id", "side", "type"],
+        "default": "created_at"
+      },
+      "apiOrderSorting": {
+        "type": "string",
+        "enum": ["desc", "asc"],
+        "default": "desc"
+      },
+      "apiOrderStatus": {
+        "type": "string",
+        "enum": ["open", "pending", "rejected", "done", "active", "received", "all"],
+        "default": "open"
+      },
+      "apiOrderStop": {
+        "type": "string",
+        "enum": ["loss", "entry"],
+        "default": "loss"
+      },
+      "apiOrderStpFlag": {
+        "type": "string",
+        "enum": ["dc", "co", "cn", "cb"],
+        "default": "dc"
+      },
+      "apiOrderTimeInForce": {
+        "type": "string",
+        "enum": ["GTC", "GTT", "IOC", "FOK"],
+        "default": "GTC"
+      },
+      "apiOrderType": {
+        "type": "string",
+        "enum": ["limit", "market", "stop"],
+        "default": "limit"
+      },
+      "apiPartialUser": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "created_at": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "active_at": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "name": {
+            "type": "string"
+          },
+          "email": {
+            "type": "string"
+          },
+          "roles": {
+            "type": "array",
+            "items": {
+              "type": "object"
+            }
+          },
+          "is_banned": {
+            "type": "boolean"
+          },
+          "user_type": {
+            "type": "string"
+          },
+          "fulfills_new_requirements": {
+            "type": "boolean"
+          },
+          "flags": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "string"
+            }
+          },
+          "details": {
+            "type": "object"
+          },
+          "preferences": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "object"
+            }
+          },
+          "has_default": {
+            "type": "boolean"
+          },
+          "state_code": {
+            "type": "string"
+          },
+          "cb_data_from_cache": {
+            "type": "boolean"
+          },
+          "two_factor_method": {
+            "type": "string"
+          },
+          "legal_name": {
+            "type": "string"
+          },
+          "terms_accepted": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "has_clawback_payment_pending": {
+            "type": "boolean"
+          },
+          "has_restricted_assets": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "id",
+          "created_at",
+          "name",
+          "email",
+          "is_banned",
+          "user_type",
+          "fulfills_new_requirements",
+          "preferences",
+          "has_default"
+        ]
+      },
+      "apiPaymentMethod": {
+        "type": "object",
+        "example": {
+          "id": "cbdd9f28-34e7-5152-b1dc-d657bf8df858",
+          "type": "fiat_account",
+          "name": "Cash (USD)",
+          "currency": "USD",
+          "primary_buy": true,
+          "primary_sell": true,
+          "instant_buy": true,
+          "instant_sell": true,
+          "created_at": "2019-06-04T21:24:32Z",
+          "updated_at": "2019-06-04T21:24:32Z",
+          "resource": "payment_method",
+          "resource_path": "/v2/payment-methods/cbdd9f28-34e7-5152-b1dc-d657bf8df858",
+          "limits": {
+            "type": "fiat_account",
+            "name": "Coinbase Account"
+          },
+          "allow_buy": true,
+          "allow_sell": true,
+          "allow_deposit": false,
+          "allow_withdraw": false,
+          "fiat_account": {
+            "id": "2b760113-fbba-5600-ac74-36482c130768",
+            "resource": "account",
+            "resource_path": "/v2/accounts/2b760113-fbba-5600-ac74-36482c130768"
+          },
+          "verified": true,
+          "picker_data": {
+            "symbol": "fiat_account",
+            "balance": {
+              "amount": "1.00",
+              "currency": "USD"
+            }
+          },
+          "hold_business_days": 0,
+          "hold_days": 0
+        },
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "currency": {
+            "type": "string"
+          },
+          "primary_buy": {
+            "type": "boolean"
+          },
+          "primary_sell": {
+            "type": "boolean"
+          },
+          "instant_buy": {
+            "type": "boolean"
+          },
+          "instant_sell": {
+            "type": "boolean"
+          },
+          "created_at": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updated_at": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "resource": {
+            "type": "string"
+          },
+          "resource_path": {
+            "type": "string"
+          },
+          "verified": {
+            "type": "boolean"
+          },
+          "limits": {
+            "$ref": "#/components/schemas/apiPaymentMethodLimits"
+          },
+          "allow_buy": {
+            "type": "boolean"
+          },
+          "allow_sell": {
+            "type": "boolean"
+          },
+          "allow_deposit": {
+            "type": "boolean"
+          },
+          "allow_withdraw": {
+            "type": "boolean"
+          },
+          "fiat_account": {
+            "$ref": "#/components/schemas/apiMonorailLinkedResource"
+          },
+          "crypto_account": {
+            "$ref": "#/components/schemas/apiMonorailLinkedResource"
+          },
+          "recurring_options": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/apiPaymentMethodRecurringOption"
+            }
+          },
+          "available_balance": {
+            "$ref": "#/components/schemas/apiPaymentMethodAvailableBalance"
+          },
+          "picker_data": {
+            "$ref": "#/components/schemas/apiPaymentMethodPickerData"
+          },
+          "hold_business_days": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "hold_days": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "verificationMethod": {
+            "type": "string"
+          },
+          "cdvStatus": {
+            "type": "string"
+          }
+        },
+        "title": "from https://github.cbhq.net/engineering/coinbase/blob/master/app/presenters/api/v2/payment_method_presenter.rb",
+        "required": [
+          "id",
+          "type",
+          "name",
+          "currency",
+          "primary_buy",
+          "primary_sell",
+          "instant_buy",
+          "instant_sell",
+          "created_at",
+          "updated_at",
+          "resource",
+          "resource_path"
+        ]
+      },
+      "apiPaymentMethodAvailableBalance": {
+        "type": "object",
+        "properties": {
+          "amount": {
+            "type": "string"
+          },
+          "currency": {
+            "type": "string"
+          },
+          "scale": {
+            "type": "string"
+          }
+        }
+      },
+      "apiPaymentMethodLimits": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          }
+        }
+      },
+      "apiPaymentMethodPickerData": {
+        "type": "object",
+        "properties": {
+          "symbol": {
+            "type": "string"
+          },
+          "customer_name": {
+            "type": "string"
+          },
+          "account_name": {
+            "type": "string"
+          },
+          "account_number": {
+            "type": "string"
+          },
+          "account_type": {
+            "type": "string"
+          },
+          "institution_code": {
+            "type": "string"
+          },
+          "institution_name": {
+            "type": "string"
+          },
+          "iban": {
+            "type": "string"
+          },
+          "swift": {
+            "type": "string"
+          },
+          "paypal_email": {
+            "type": "string"
+          },
+          "paypal_owner": {
+            "type": "string"
+          },
+          "routing_number": {
+            "type": "string"
+          },
+          "institution_identifier": {
+            "type": "string"
+          },
+          "bank_name": {
+            "type": "string"
+          },
+          "branch_name": {
+            "type": "string"
+          },
+          "icon_url": {
+            "type": "string"
+          },
+          "balance": {
+            "$ref": "#/components/schemas/apiMonorailCurrencyAmount"
+          }
+        },
+        "title": "from https://github.cbhq.net/engineering/coinbase/blob/c3e0852ff30323fe31ab265ca5f2389387a324dc/app/presenters/api/v2/payment_method_internal_presenter.rb"
+      },
+      "apiPaymentMethodRecurringOption": {
+        "type": "object",
+        "properties": {
+          "period": {
+            "type": "string"
+          },
+          "label": {
+            "type": "string"
+          }
+        }
+      },
+      "apiPostCoinbaseAccountAddressesResponse": {
+        "type": "object",
+        "properties": {
+          "body": {
+            "$ref": "#/components/schemas/apiCoinbaseAccountGeneratedDepositAddress"
+          }
+        }
+      },
+      "apiPostConversionRequest": {
+        "type": "object",
+        "properties": {
+          "profile_id": {
+            "type": "string"
+          },
+          "from": {
+            "type": "string"
+          },
+          "to": {
+            "type": "string"
+          },
+          "amount": {
+            "type": "string"
+          },
+          "nonce": {
+            "type": "string"
+          }
+        },
+        "required": ["from", "to", "amount"]
+      },
+      "apiPostConversionResponse": {
+        "type": "object",
+        "properties": {
+          "body": {
+            "$ref": "#/components/schemas/apiConversion"
+          }
+        }
+      },
+      "apiPostOrdersRequest": {
+        "type": "object",
+        "example": {
+          "price": "1",
+          "size": "10",
+          "type": "limit",
+          "side": "buy",
+          "product_id": "BTC-USD",
+          "client_oid": "496ffbba-7dae-4864-f7e8-a5bf52c6d0e2",
+          "post_only": true
+        },
+        "properties": {
+          "profile_id": {
+            "type": "string",
+            "default": "default profile_id",
+            "description": "create order on a specific `profile_id`. If none is passed, defaults to `default` profile."
+          },
+          "type": {
+            "$ref": "#/components/schemas/apiOrderType"
+          },
+          "side": {
+            "$ref": "#/components/schemas/apiOrderSide"
+          },
+          "product_id": {
+            "type": "string",
+            "description": "Book on which to place an order"
+          },
+          "stp": {
+            "$ref": "#/components/schemas/apiOrderStpFlag"
+          },
+          "stop": {
+            "$ref": "#/components/schemas/apiOrderStop"
+          },
+          "stop_price": {
+            "type": "string",
+            "description": "Price threshold at which a `stop` order will be placed on the book"
+          },
+          "price": {
+            "type": "string",
+            "description": "Price per unit of cryptocurrency - required for `limit`/`stop` orders"
+          },
+          "size": {
+            "type": "string",
+            "description": "Amount of base currency to buy or sell - required for `limit`/`stop` orders and `market` `sell`s"
+          },
+          "funds": {
+            "type": "string",
+            "description": "Amount of quote currency to buy - required for `market` `buy`s"
+          },
+          "time_in_force": {
+            "$ref": "#/components/schemas/apiOrderTimeInForce"
+          },
+          "cancel_after": {
+            "$ref": "#/components/schemas/apiOrderCancelAfter"
+          },
+          "post_only": {
+            "type": "boolean",
+            "default": "false",
+            "description": "If true, order will only execute as a `maker` order"
+          },
+          "client_oid": {
+            "type": "string",
+            "description": "Optional Order ID selected by the user or the frontend client to identify their order"
+          }
+        },
+        "required": ["side", "product_id"]
+      },
+      "apiPostOrdersResponse": {
+        "type": "object",
+        "properties": {
+          "body": {
+            "$ref": "#/components/schemas/apiOrder"
+          }
+        }
+      },
+      "apiPostProfileRequest": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          }
+        }
+      },
+      "apiPostProfileResponse": {
+        "type": "object",
+        "properties": {
+          "body": {
+            "$ref": "#/components/schemas/apiProfile"
+          }
+        }
+      },
+      "apiPostProfileTransferRequest": {
+        "type": "object",
+        "example": {
+          "from": "e543fd44-cbcd-4144-a2d9-6d81f42e2093",
+          "to": "00921972-6b04-4daa-9458-3a38dd4924f6",
+          "amount": "12.345",
+          "currency": "BTC"
+        },
+        "properties": {
+          "from": {
+            "type": "string"
+          },
+          "to": {
+            "type": "string"
+          },
+          "currency": {
+            "type": "string"
+          },
+          "amount": {
+            "type": "string"
+          }
+        },
+        "required": ["from", "to", "currency", "amount"]
+      },
+      "apiPostReportsRequest": {
+        "type": "object",
+        "example": {
+          "type": "account",
+          "start_date": "2020-02-25T03:11:42.164Z",
+          "end_date": "2020-03-26T02:11:42.164Z",
+          "product_id": "ALL",
+          "account_id": "ALL",
+          "format": "pdf",
+          "email": "user1@example.com",
+          "profile_id": "8058d771-2d88-4f0f-ab6e-299c153d4308"
+        },
+        "properties": {
+          "start_date": {
+            "type": "string",
+            "default": "<30 days ago>",
+            "description": "Start date for items to be included in report."
+          },
+          "end_date": {
+            "type": "string",
+            "default": "<today>",
+            "description": "End date for items to be included in report"
+          },
+          "type": {
+            "$ref": "#/components/schemas/apiReportType"
+          },
+          "year": {
+            "type": "string",
+            "description": "required for `1099k-transaction-history`-type reports"
+          },
+          "format": {
+            "$ref": "#/components/schemas/apiReportFormat"
+          },
+          "product_id": {
+            "type": "string",
+            "description": "Product - required for `fills`-type reports"
+          },
+          "account_id": {
+            "type": "string",
+            "description": "Account - required for `account`-type reports"
+          },
+          "email": {
+            "type": "string",
+            "description": "Email to send generated report to"
+          },
+          "profile_id": {
+            "type": "string",
+            "description": "Portfolio - Which portfolio to generate the report for"
+          }
+        },
+        "required": ["type"]
+      },
+      "apiPostReportsResponse": {
+        "type": "object",
+        "properties": {
+          "body": {
+            "$ref": "#/components/schemas/apiReportCreateResult"
+          }
+        }
+      },
+      "apiPostTransferCoinbaseAccountRequest": {
+        "type": "object",
+        "properties": {
+          "profile_id": {
+            "type": "string"
+          },
+          "amount": {
+            "type": "string"
+          },
+          "coinbase_account_id": {
+            "type": "string"
+          },
+          "currency": {
+            "type": "string"
+          }
+        },
+        "required": ["amount", "coinbase_account_id", "currency"]
+      },
+      "apiPostTransferCryptoRequest": {
+        "type": "object",
+        "properties": {
+          "profile_id": {
+            "type": "string"
+          },
+          "amount": {
+            "type": "string"
+          },
+          "currency": {
+            "type": "string"
+          },
+          "crypto_address": {
+            "type": "string"
+          },
+          "destination_tag": {
+            "type": "string"
+          },
+          "no_destination_tag": {
+            "type": "boolean"
+          },
+          "two_factor_code": {
+            "type": "string"
+          },
+          "nonce": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "fee": {
+            "type": "string"
+          }
+        },
+        "required": ["amount", "crypto_address", "currency"]
+      },
+      "apiPostTransferPaymentMethodRequest": {
+        "type": "object",
+        "properties": {
+          "profile_id": {
+            "type": "string"
+          },
+          "amount": {
+            "type": "string"
+          },
+          "payment_method_id": {
+            "type": "string"
+          },
+          "currency": {
+            "type": "string"
+          }
+        },
+        "required": ["amount", "payment_method_id", "currency"]
+      },
+      "apiPostTransferResponse": {
+        "type": "object",
+        "properties": {
+          "body": {
+            "$ref": "#/components/schemas/apiTransferResult"
+          }
+        }
+      },
+      "apiProduct": {
+        "type": "object",
+        "example": {
+          "id": "BTC-USD",
+          "base_currency": "BTC",
+          "quote_currency": "USD",
+          "base_min_size": "0.00100000",
+          "base_max_size": "280.00000000",
+          "quote_increment": "0.01000000",
+          "base_increment": "0.00000001",
+          "display_name": "BTC/USD",
+          "min_market_funds": "10",
+          "max_market_funds": "1000000",
+          "margin_enabled": false,
+          "post_only": false,
+          "limit_only": false,
+          "cancel_only": false,
+          "status": "online",
+          "status_message": "",
+          "auction_mode": true
+        },
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "base_currency": {
+            "type": "string"
+          },
+          "quote_currency": {
+            "type": "string"
+          },
+          "base_min_size": {
+            "type": "string",
+            "description": "Minmum order size"
+          },
+          "base_max_size": {
+            "type": "string",
+            "description": "Maximum order size"
+          },
+          "quote_increment": {
+            "type": "string",
+            "description": "Min order price (a.k.a. price increment"
+          },
+          "base_increment": {
+            "type": "string"
+          },
+          "display_name": {
+            "type": "string"
+          },
+          "min_market_funds": {
+            "type": "string"
+          },
+          "max_market_funds": {
+            "type": "string"
+          },
+          "margin_enabled": {
+            "type": "boolean"
+          },
+          "post_only": {
+            "type": "boolean"
+          },
+          "limit_only": {
+            "type": "boolean"
+          },
+          "cancel_only": {
+            "type": "boolean"
+          },
+          "status": {
+            "$ref": "#/components/schemas/apiProductStatusEnum"
+          },
+          "status_message": {
+            "type": "string"
+          },
+          "trading_disabled": {
+            "type": "boolean"
+          },
+          "fx_stablecoin": {
+            "type": "boolean"
+          },
+          "max_slippage_percentage": {
+            "type": "string"
+          },
+          "auction_mode": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "id",
+          "base_currency",
+          "quote_currency",
+          "base_min_size",
+          "base_max_size",
+          "quote_increment",
+          "base_increment",
+          "display_name",
+          "status",
+          "status_message",
+          "min_market_funds",
+          "max_market_funds",
+          "margin_enabled",
+          "post_only",
+          "limit_only",
+          "cancel_only",
+          "auction_mode"
+        ]
+      },
+      "apiProductBook": {
+        "type": "object",
+        "example": {
+          "sequence": 13051505638,
+          "bids": [["6247.58", "6.3578146", 2]],
+          "asks": [["6251.52", "2", 1]]
+        },
+        "properties": {
+          "bids": {
+            "type": "array",
+            "items": {
+              "type": "object"
+            }
+          },
+          "asks": {
+            "type": "array",
+            "items": {
+              "type": "object"
+            }
+          },
+          "sequence": {
+            "type": "number",
+            "format": "double"
+          },
+          "auction_mode": {
+            "type": "boolean"
+          },
+          "auction": {
+            "$ref": "#/components/schemas/apiAuctionBook"
+          }
+        },
+        "required": ["bids", "asks", "sequence"]
+      },
+      "apiProductStats": {
+        "type": "object",
+        "example": {
+          "stats_24hour": {
+            "open": "5414.18000000",
+            "high": "6441.37000000",
+            "low": "5261.69000000",
+            "volume": "53687.76764233",
+            "last": "6250.02000000",
+            "volume_30day": "786763.72930864"
+          }
+        },
+        "properties": {
+          "open": {
+            "type": "string"
+          },
+          "high": {
+            "type": "string"
+          },
+          "low": {
+            "type": "string"
+          },
+          "last": {
+            "type": "string"
+          },
+          "volume": {
+            "type": "string"
+          },
+          "volume_30day": {
+            "type": "string"
+          }
+        },
+        "required": ["open", "high", "low", "last", "volume"]
+      },
+      "apiProductStatusEnum": {
+        "type": "string",
+        "enum": ["online", "offline", "internal", "delisted"],
+        "default": "online"
+      },
+      "apiProductTicker": {
+        "type": "object",
+        "example": {
+          "trade_id": 86326522,
+          "price": "6268.48",
+          "size": "0.00698254",
+          "time": "2020-03-20T00:22:57.833897Z",
+          "bid": "6265.15",
+          "ask": "6267.71",
+          "volume": "53602.03940154"
+        },
+        "properties": {
+          "ask": {
+            "type": "string"
+          },
+          "bid": {
+            "type": "string"
+          },
+          "volume": {
+            "type": "string"
+          },
+          "trade_id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "price": {
+            "type": "string"
+          },
+          "size": {
+            "type": "string"
+          },
+          "time": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "required": ["ask", "bid", "volume", "trade_id", "price", "size", "time"]
+      },
+      "apiProductTrade": {
+        "type": "object",
+        "example": {
+          "time": "2020-03-20T00:36:59.86Z",
+          "trade_id": 86327327,
+          "price": "6225.32000000",
+          "size": "0.06469797",
+          "side": "sell"
+        },
+        "properties": {
+          "trade_id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "side": {
+            "$ref": "#/components/schemas/apiOrderSide"
+          },
+          "size": {
+            "type": "string"
+          },
+          "price": {
+            "type": "string"
+          },
+          "time": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "required": ["trade_id", "side", "size", "price", "time"]
+      },
+      "apiProfile": {
+        "type": "object",
+        "example": {
+          "id": "8058d771-2d88-4f0f-ab6e-299c153d4308",
+          "user_id": "5cf6e115aaf44503db300f1e",
+          "name": "default",
+          "active": true,
+          "is_default": true,
+          "created_at": "2019-06-04T21:22:32.226461Z",
+          "has_margin": true
+        },
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "user_id": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "active": {
+            "type": "boolean"
+          },
+          "is_default": {
+            "type": "boolean"
+          },
+          "has_margin": {
+            "type": "boolean"
+          },
+          "created_at": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "required": ["id", "user_id", "name", "active", "is_default", "created_at"]
+      },
+      "apiPutProfileDeactivateRequest": {
+        "type": "object",
+        "properties": {
+          "profile_id": {
+            "type": "string"
+          },
+          "to": {
+            "type": "string"
+          }
+        },
+        "required": ["profile_id", "to"]
+      },
+      "apiPutProfileRequest": {
+        "type": "object",
+        "properties": {
+          "profile_id": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          }
+        },
+        "required": ["profile_id", "name"]
+      },
+      "apiPutProfileResponse": {
+        "type": "object",
+        "properties": {
+          "body": {
+            "$ref": "#/components/schemas/apiProfile"
+          }
+        }
+      },
+      "apiReport": {
+        "type": "object",
+        "example": {
+          "created_at": "2019-07-25T22:14:00.410418Z",
+          "completed_at": "2019-07-25T22:14:01.332Z",
+          "expires_at": "2019-08-01T22:14:00.410418Z",
+          "id": "66e2dc58-a11b-4ae7-af08-1b42cf8031ad",
+          "type": "account",
+          "status": "ready",
+          "user_id": "5cf6e115aaf44503db300f1e",
+          "file_url": "www.example.com",
+          "params": {
+            "start_date": "2019-06-25T22:13:48.592Z",
+            "end_date": "2019-07-25T22:13:48.592Z",
+            "format": "pdf",
+            "product_id": "ALL",
+            "account_id": "ALL",
+            "profile_id": "8058d771-2d88-4f0f-ab6e-299c153d4308",
+            "email": "user1@example.com",
+            "user": {
+              "created_at": "2019-06-04T21:22:32.226461Z",
+              "active_at": "2019-06-04T21:27:49.25Z",
+              "id": "5cf6e115aaf44503db300f1e",
+              "name": "User One",
+              "email": "user1@example.com",
+              "roles": null,
+              "is_banned": false,
+              "permissions": null,
+              "user_type": "individual",
+              "fulfills_new_requirements": true,
+              "flags": null,
+              "details": null,
+              "oauth_client": "pro",
+              "preferences": {
+                "preferred_market": "BTC-USD",
+                "margin_terms_completed_in_utc": "2019-06-13T23:40:17.7520+00:00",
+                "margin_tutorial_completed_in_utc": "2019-06-19T23:56:59.4110+00:00"
+              },
+              "has_default": false
+            },
+            "new_york_state": false
+          },
+          "file_count": null
+        },
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "type": {
+            "$ref": "#/components/schemas/apiReportType"
+          },
+          "created_at": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "completed_at": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "expires_at": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "status": {
+            "$ref": "#/components/schemas/apiReportReportStatus"
+          },
+          "user_id": {
+            "type": "string"
+          },
+          "file_url": {
+            "type": "string"
+          },
+          "params": {
+            "$ref": "#/components/schemas/apiReportParams"
+          },
+          "file_count": {
+            "type": "string",
+            "format": "uint64"
+          }
+        },
+        "required": [
+          "id",
+          "type",
+          "created_at",
+          "completed_at",
+          "expires_at",
+          "status",
+          "user_id",
+          "file_url",
+          "params"
+        ]
+      },
+      "apiReportCreateResult": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "type": {
+            "$ref": "#/components/schemas/apiReportType"
+          },
+          "status": {
+            "$ref": "#/components/schemas/apiReportCreateResultReportStatus"
+          }
+        },
+        "required": ["id", "type", "status"]
+      },
+      "apiReportCreateResultReportStatus": {
+        "type": "string",
+        "enum": ["pending"],
+        "default": "pending"
+      },
+      "apiReportFormat": {
+        "type": "string",
+        "enum": ["pdf", "csv"],
+        "default": "pdf"
+      },
+      "apiReportParams": {
+        "type": "object",
+        "example": {
+          "start_date": "2019-06-25T22:13:48.592Z",
+          "end_date": "2019-07-25T22:13:48.592Z",
+          "format": "pdf",
+          "product_id": "ALL",
+          "account_id": "ALL",
+          "profile_id": "8058d771-2d88-4f0f-ab6e-299c153d4308",
+          "email": "user1@example.com",
+          "user": {
+            "created_at": "2019-06-04T21:22:32.226461Z",
+            "active_at": "2019-06-04T21:27:49.25Z",
+            "id": "5cf6e115aaf44503db300f1e",
+            "name": "User One",
+            "email": "user1@example.com",
+            "roles": null,
+            "is_banned": false,
+            "permissions": null,
+            "user_type": "individual",
+            "fulfills_new_requirements": true,
+            "flags": null,
+            "details": null,
+            "oauth_client": "pro",
+            "preferences": {
+              "preferred_market": "BTC-USD",
+              "margin_terms_completed_in_utc": "2019-06-13T23:40:17.7520+00:00",
+              "margin_tutorial_completed_in_utc": "2019-06-19T23:56:59.4110+00:00"
+            },
+            "has_default": false
+          },
+          "new_york_state": false
+        },
+        "properties": {
+          "start_date": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "end_date": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "format": {
+            "$ref": "#/components/schemas/apiReportFormat"
+          },
+          "product_id": {
+            "type": "string"
+          },
+          "account_id": {
+            "type": "string"
+          },
+          "profile_id": {
+            "type": "string"
+          },
+          "email": {
+            "type": "string"
+          },
+          "user": {
+            "$ref": "#/components/schemas/apiPartialUser"
+          },
+          "new_york_state": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "start_date",
+          "end_date",
+          "format",
+          "product_id",
+          "account_id",
+          "profile_id",
+          "email",
+          "new_york_state",
+          "user"
+        ]
+      },
+      "apiReportReportStatus": {
+        "type": "string",
+        "enum": ["pending", "creating", "ready"],
+        "default": "pending"
+      },
+      "apiReportType": {
+        "type": "string",
+        "enum": ["fills", "account", "otc_fills", "type_1099k_transaction_history", "tax_invoice"],
+        "default": "fills",
+        "title": "- otc_fills: real string is `otc-fills`\n - type_1099k_transaction_history: real string is `1099-transaction-history`\n - tax_invoice: real string is `tax-invoice`"
+      },
+      "apiTransfer": {
+        "type": "object",
+        "example": {
+          "id": "19ac524d-8827-4246-a1b2-18dc5ca9472c",
+          "type": "withdraw",
+          "created_at": "2020-03-12 00:14:12.397805+00",
+          "completed_at": "2020-03-12 00:14:13.021626+00",
+          "canceled_at": null,
+          "processed_at": null,
+          "user_nonce": null,
+          "amount": "1.00000000",
+          "details": {
+            "coinbase_account_id": "2b760113-fbba-5600-ac74-36482c130768",
+            "coinbase_transaction_id": "5e697ed49f8417148f3366ea",
+            "coinbase_payment_method_id": ""
+          }
+        },
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "type": {
+            "$ref": "#/components/schemas/apiTransferType"
+          },
+          "created_at": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "completed_at": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "canceled_at": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "processed_at": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "amount": {
+            "type": "string"
+          },
+          "details": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "string"
+            }
+          },
+          "user_nonce": {
+            "type": "string",
+            "format": "int64"
+          }
+        },
+        "required": [
+          "id",
+          "type",
+          "created_at",
+          "completed_at",
+          "canceled_at",
+          "processed_at",
+          "amount",
+          "details",
+          "user_nonce"
+        ]
+      },
+      "apiTransferResult": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "amount": {
+            "type": "string"
+          },
+          "currency": {
+            "type": "string"
+          },
+          "payout_at": {
+            "type": "string"
+          },
+          "fee": {
+            "type": "string"
+          },
+          "subtotal": {
+            "type": "string"
+          }
+        }
+      },
+      "apiTransferType": {
+        "type": "string",
+        "enum": ["deposit", "withdraw", "move"],
+        "default": "deposit"
+      },
+      "apiUnauthorizedResponse": {
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string",
+            "title": "message",
+            "pattern": "^[a-zA-Z0-9]{1, 32}$"
+          }
+        },
+        "description": "UnauthorizedResponse is the response message for endpoints in rest-gateway that requires authentication.\nThis message is used to generate the Exchange REST API documentation using OpenAPI format."
+      },
+      "apiUserExchangeTransferLimits": {
+        "type": "object",
+        "example": {
+          "limit_currency": "USD",
+          "transfer_limits": {
+            "ach": {
+              "MANA": {
+                "max": "391282.23187385",
+                "remaining": "391282.23187385",
+                "period_in_days": 7
+              },
+              "ALGO": {
+                "max": "59844.404548",
+                "remaining": "59844.404548",
+                "period_in_days": 7
+              },
+              "ATOM": {
+                "max": "4624.277457",
+                "remaining": "4624.277457",
+                "period_in_days": 7
+              },
+              "KNC": {
+                "max": "21584.28663933",
+                "remaining": "21584.28663933",
+                "period_in_days": 7
+              }
+            }
+          }
+        },
+        "properties": {
+          "transfer_limits": {
+            "$ref": "#/components/schemas/apiUserExchangeTransferLimitsEntry"
+          },
+          "limit_currency": {
+            "type": "string"
+          }
+        },
+        "required": ["transfer_limits", "limit_currency"]
+      },
+      "apiUserExchangeTransferLimitsEntry": {
+        "type": "object",
+        "example": {
+          "ach": {
+            "MANA": {
+              "max": "391282.23187385",
+              "remaining": "391282.23187385",
+              "period_in_days": 7
+            },
+            "ALGO": {
+              "max": "59844.404548",
+              "remaining": "59844.404548",
+              "period_in_days": 7
+            },
+            "ATOM": {
+              "max": "4624.277457",
+              "remaining": "4624.277457",
+              "period_in_days": 7
+            },
+            "KNC": {
+              "max": "21584.28663933",
+              "remaining": "21584.28663933",
+              "period_in_days": 7
+            }
+          }
+        },
+        "properties": {
+          "buy": {
+            "type": "object",
+            "additionalProperties": {
+              "$ref": "#/components/schemas/apiUserExchangeTransferLimitsForCurrency"
+            }
+          },
+          "sell": {
+            "type": "object",
+            "additionalProperties": {
+              "$ref": "#/components/schemas/apiUserExchangeTransferLimitsForCurrency"
+            }
+          },
+          "exchange_withdraw": {
+            "type": "object",
+            "additionalProperties": {
+              "$ref": "#/components/schemas/apiUserExchangeTransferLimitsForCurrency"
+            }
+          },
+          "ach": {
+            "type": "object",
+            "additionalProperties": {
+              "$ref": "#/components/schemas/apiUserExchangeTransferLimitsForCurrency"
+            }
+          },
+          "ach_no_balance": {
+            "type": "object",
+            "additionalProperties": {
+              "$ref": "#/components/schemas/apiUserExchangeTransferLimitsForCurrency"
+            }
+          },
+          "credit_debit_card": {
+            "type": "object",
+            "additionalProperties": {
+              "$ref": "#/components/schemas/apiUserExchangeTransferLimitsForCurrency"
+            }
+          },
+          "secure3d_buy": {
+            "type": "object",
+            "additionalProperties": {
+              "$ref": "#/components/schemas/apiUserExchangeTransferLimitsForCurrency"
+            }
+          },
+          "paypal_buy": {
+            "type": "object",
+            "additionalProperties": {
+              "$ref": "#/components/schemas/apiUserExchangeTransferLimitsForCurrency"
+            }
+          },
+          "paypal_withdrawal": {
+            "type": "object",
+            "additionalProperties": {
+              "$ref": "#/components/schemas/apiUserExchangeTransferLimitsForCurrency"
+            }
+          },
+          "ideal_deposit": {
+            "type": "object",
+            "additionalProperties": {
+              "$ref": "#/components/schemas/apiUserExchangeTransferLimitsForCurrency"
+            }
+          },
+          "sofort_deposit": {
+            "type": "object",
+            "additionalProperties": {
+              "$ref": "#/components/schemas/apiUserExchangeTransferLimitsForCurrency"
+            }
+          },
+          "instant_ach_withdrawal": {
+            "type": "object",
+            "additionalProperties": {
+              "$ref": "#/components/schemas/apiUserExchangeTransferLimitsForCurrency"
+            }
+          }
+        },
+        "required": ["exchange_withdraw"]
+      },
+      "apiUserExchangeTransferLimitsForCurrency": {
+        "type": "object",
+        "example": {
+          "max": "391282.23187385",
+          "remaining": "391282.23187385",
+          "period_in_days": 7
+        },
+        "properties": {
+          "period_in_days": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "remaining": {
+            "type": "string"
+          },
+          "max": {
+            "type": "string"
+          }
+        },
+        "required": ["period_in_days", "remaining", "max"]
+      },
+      "protobufNullValue": {
+        "type": "string",
+        "enum": ["NULL_VALUE"],
+        "default": "NULL_VALUE",
+        "description": "`NullValue` is a singleton enumeration to represent the null value for the\n`Value` type union.\n\n The JSON representation for `NullValue` is JSON `null`.\n\n - NULL_VALUE: Null value."
+      }
+    }
+  }
+}
