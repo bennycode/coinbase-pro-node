@@ -3,7 +3,7 @@
     "url": "https://github.com/bennycode/coinbase-pro-node/issues"
   },
   "dependencies": {
-    "@types/node": "18.0.4",
+    "@types/node": "18.6.3",
     "@types/ws": "8.5.3",
     "axios": "0.27.2",
     "axios-retry": "3.3.1",
