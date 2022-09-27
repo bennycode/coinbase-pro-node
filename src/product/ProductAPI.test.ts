@@ -207,6 +207,15 @@ describe('ProductAPI', () => {
     });
   });
 
+  describe('getCandleWatcherConfig', () => {
+    it('throws an error when supplying an invalid product ID', () => {
+      const test = (): void => {
+        global.client.rest.product.getCandleWatcherConfig('invalid-product-id', CandleGranularity.ONE_DAY);
+      };
+      expect(test).toThrowError();
+    });
+  });
+
   describe('getCandles', () => {
     it('returns the latest candles when not giving any parameters', async () => {
       nock(global.REST_URL)
@@ -370,6 +379,13 @@ describe('ProductAPI', () => {
   });
 
   describe('unwatchCandles', () => {
+    it('does not remove an unregistered interval', () => {
+      const test = (): void => {
+        global.client.rest.product.unwatchCandles('invalid-product-id', CandleGranularity.ONE_DAY);
+      };
+      expect(test).not.toThrowError();
+    });
+
     it('removes running candle watching intervals', async () => {
       const productId = 'BTC-USD';
 
