@@ -170,7 +170,7 @@ export interface Candle {
 
 type RawCandle = [Timestamp, Low, High, Open, Close, Volume];
 
-type CandleWatcherSetup = {
+type CandleWatcherConfig = {
   expectedISO: ISO_8601_MS_UTC;
   intervalId: NodeJS.Timeout;
 };
@@ -184,7 +184,7 @@ export class ProductAPI {
     PRODUCTS: `/products`,
   };
 
-  private watchCandlesConfig: Map<string, CandleWatcherSetup> = new Map();
+  private watchCandlesConfig: Map<string, CandleWatcherConfig> = new Map();
 
   constructor(private readonly apiClient: AxiosInstance, private readonly restClient: RESTClient) {}
 
@@ -240,6 +240,15 @@ export class ProductAPI {
     return `${productId}@${granularity}`;
   }
 
+  getCandleWatcherConfig(productId: string, granularity: CandleGranularity): CandleWatcherConfig {
+    const key = this.composeCandleWatcherKey(productId, granularity);
+    const config = this.watchCandlesConfig.get(key);
+    if (config) {
+      return config;
+    }
+    throw new Error(`There is no candle watching config with key "${key}".`);
+  }
+
   /**
    * Watch a specific product ID for new candles. Candles will be emitted through the `ProductEvent.NEW_CANDLE` event.
    *
@@ -274,9 +283,11 @@ export class ProductAPI {
    */
   unwatchCandles(productId: string, granularity: CandleGranularity): void {
     const key = this.composeCandleWatcherKey(productId, granularity);
-    const intervalId = this.watchCandlesConfig.get(key)!.intervalId;
-    clearInterval(intervalId);
-    this.watchCandlesConfig.delete(key);
+    const config = this.watchCandlesConfig.get(key);
+    if (config) {
+      clearInterval(config.intervalId);
+      this.watchCandlesConfig.delete(key);
+    }
   }
 
   /**
@@ -405,17 +416,17 @@ export class ProductAPI {
   }
 
   private emitCandle(productId: string, granularity: CandleGranularity, candle: Candle): void {
-    const key = this.composeCandleWatcherKey(productId, granularity);
+    const config = this.getCandleWatcherConfig(productId, granularity);
     // Emit matched candle
     this.restClient.emit(ProductEvent.NEW_CANDLE, productId, granularity, candle);
     // Cache timestamp of upcoming candle
     const nextOpenTime = CandleBucketUtil.addUnitISO(candle.openTimeInMillis, granularity, 1);
-    this.watchCandlesConfig.get(key)!.expectedISO = nextOpenTime;
+    config.expectedISO = nextOpenTime;
   }
 
   private async checkNewCandles(productId: string, granularity: CandleGranularity): Promise<void> {
-    const key = this.composeCandleWatcherKey(productId, granularity);
-    const expectedTimestampISO = this.watchCandlesConfig.get(key)!.expectedISO;
+    const config = this.getCandleWatcherConfig(productId, granularity);
+    const expectedTimestampISO = config.expectedISO;
 
     const candles = await this.getCandles(productId, {
       granularity,
