@@ -186,12 +186,6 @@ export class ProductAPI {
 
   private watchCandlesConfig: Map<string, CandleWatcherSetup> = new Map();
 
-  // private watchCandlesConfig: {
-  //   [productId: string]: {
-  //     [granularity: number]: CandleWatcherSetup;
-  //   };
-  // } = {};
-
   constructor(private readonly apiClient: AxiosInstance, private readonly restClient: RESTClient) {}
 
   /**
