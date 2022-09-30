@@ -16,13 +16,14 @@ import {FillAPI} from '../fill';
 import querystring from 'querystring';
 import {ProfileAPI} from '../profile';
 import axiosRetry, {isNetworkOrIdempotentRequestError} from 'axios-retry';
-import util from 'util';
+import util, {DebugLogger} from 'util';
 import {EventEmitter} from 'events';
 import {getErrorMessage, gotRateLimited, inAirPlaneMode} from '../error/ErrorUtil';
 import {CurrencyAPI} from '../currency';
 import {WithdrawAPI} from '../withdraw';
 import {TransferAPI} from '../transfer';
 import {TimeAPI} from '../time';
+import {ExchangeRateAPI} from '../exchange-rate/ExchangeRateAPI';
 
 export interface RESTClient {
   on(
@@ -46,6 +47,7 @@ export class RESTClient extends EventEmitter {
 
   readonly account: AccountAPI;
   readonly currency: CurrencyAPI;
+  readonly exchangeRate: ExchangeRateAPI;
   readonly fee: FeeAPI;
   readonly fill: FillAPI;
   readonly order: OrderAPI;
@@ -57,7 +59,7 @@ export class RESTClient extends EventEmitter {
   readonly withdraw: WithdrawAPI;
 
   private readonly httpClient: AxiosInstance;
-  private readonly logger: (msg: string, ...param: any[]) => void;
+  private readonly logger: DebugLogger;
 
   constructor(baseURL: string, private readonly signRequest: (setup: RequestSetup) => Promise<SignedRequest>) {
     super();
@@ -113,6 +115,7 @@ export class RESTClient extends EventEmitter {
 
     this.account = new AccountAPI(this.httpClient);
     this.currency = new CurrencyAPI(this.httpClient);
+    this.exchangeRate = new ExchangeRateAPI();
     this.fee = new FeeAPI(this.httpClient);
     this.fill = new FillAPI(this.httpClient);
     this.order = new OrderAPI(this.httpClient);
