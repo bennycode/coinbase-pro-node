@@ -63,6 +63,13 @@ describe('WebSocketClient', () => {
       const invalidUrl = 'ws://localhost:50001';
       const ws = createWebSocketClient(invalidUrl);
       ws.on(WebSocketEvent.ON_ERROR, () => {
+        /**
+         * TODO:
+         * An asynchronous function called its 'done' callback more than once. This is a bug in the spec, beforeAll,
+         * beforeEach, afterAll, or afterEach function in question. This will be treated as an error in a future
+         * version. See:
+         * https://jasmine.github.io/tutorials/upgrading_to_Jasmine_4.0#deprecations-due-to-calling-done-multiple-times
+         */
         done();
       });
       ws.connect();
@@ -93,6 +100,7 @@ describe('WebSocketClient', () => {
       done();
     });
 
+    // TODO: This test appears to be flaky
     it('returns true when called after the connection is created', done => {
       const ws = createWebSocketClient();
 
@@ -109,6 +117,7 @@ describe('WebSocketClient', () => {
       ws.connect();
     });
 
+    // TODO: This test appears to be flaky
     it('returns false when called after the connection is closed', done => {
       const ws = createWebSocketClient();
 
@@ -258,6 +267,7 @@ describe('WebSocketClient', () => {
       ws.connect();
     });
 
+    // TODO: This test appears to be flaky
     it('receives typed "snapshot" messages from "level2" channel', done => {
       const channel = {
         name: WebSocketChannelName.LEVEL2,
@@ -477,6 +487,7 @@ describe('WebSocketClient', () => {
   });
 
   describe('unsubscribe', () => {
+    // TODO: This test appears to be flaky
     it('unsubscribes from all products on a channel', done => {
       server.on('connection', socket => {
         socket.on('message', (message: string) => {
@@ -508,6 +519,7 @@ describe('WebSocketClient', () => {
   });
 
   describe('setupHeartbeat', () => {
+    // TODO: This test appears to be flaky
     it('sends ping messages within a defined interval', done => {
       server.on('connection', socket => {
         socket.on('ping', async () => {
