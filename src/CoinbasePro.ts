@@ -79,7 +79,7 @@ export class CoinbasePro {
        */
       if (this.clockSkew === -1) {
         const time = await this.rest.time.getTime();
-        this.clockSkew = await this.rest.time.getClockSkew(time);
+        this.clockSkew = this.rest.time.getClockSkew(time);
       }
 
       return RequestSigner.signRequest(auth, setup, this.clockSkew);
