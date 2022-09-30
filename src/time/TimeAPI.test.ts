@@ -35,23 +35,4 @@ describe('TimeAPI', () => {
       expect(time).toEqual(expected);
     });
   });
-
-  describe('getClockSkew', () => {
-    beforeEach(() => jasmine.clock().install());
-
-    afterEach(() => jasmine.clock().uninstall());
-
-    it('handles epochs sent as string', async () => {
-      const mockDate = new Date(1610486424105);
-      jasmine.clock().mockDate(mockDate);
-
-      const mockPayload = '{"iso":"2021-01-12T21:20:24Z","epoch":1610486424.}';
-
-      const timeApi = new TimeAPI(global.REST_URL);
-
-      const clockSkew = await timeApi.getClockSkew(mockPayload);
-
-      expect(clockSkew).toBe(-0.10500001907348633);
-    });
-  });
 });
