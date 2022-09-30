@@ -2,7 +2,9 @@
 
 # Interface: OrderListQueryParam
 
-**`see`** https://docs.pro.coinbase.com/#list-orders
+**`See`**
+
+https://docs.cloud.coinbase.com/exchange/reference/exchangerestapi_getorders
 
 ## Hierarchy
 
@@ -27,16 +29,16 @@ Only list orders for a specific product.
 
 #### Defined in
 
-[order/OrderAPI.ts:101](https://github.com/bennycode/coinbase-pro-node/blob/7770f03/src/order/OrderAPI.ts#L101)
+[order/OrderAPI.ts:101](https://github.com/bennycode/coinbase-pro-node/blob/2016513/src/order/OrderAPI.ts#L101)
 
 ---
 
 ### status
 
-• `Optional` **status**: ([`OrderStatus`](../enums/OrderStatus.md) \| `"all"`)[]
+• `Optional` **status**: (`"all"` \| [`OrderStatus`](../enums/OrderStatus.md))[]
 
 Limit list of orders to these statuses. Passing "all" returns orders of all statuses. Default: [open, pending, active]
 
 #### Defined in
 
-[order/OrderAPI.ts:103](https://github.com/bennycode/coinbase-pro-node/blob/7770f03/src/order/OrderAPI.ts#L103)
+[order/OrderAPI.ts:103](https://github.com/bennycode/coinbase-pro-node/blob/2016513/src/order/OrderAPI.ts#L103)

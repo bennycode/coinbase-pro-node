@@ -32,7 +32,7 @@
 
 #### Defined in
 
-[product/ProductAPI.ts:7](https://github.com/bennycode/coinbase-pro-node/blob/7770f03/src/product/ProductAPI.ts#L7)
+[product/ProductAPI.ts:7](https://github.com/bennycode/coinbase-pro-node/blob/2016513/src/product/ProductAPI.ts#L7)
 
 ---
 
@@ -42,7 +42,7 @@
 
 #### Defined in
 
-[product/ProductAPI.ts:8](https://github.com/bennycode/coinbase-pro-node/blob/7770f03/src/product/ProductAPI.ts#L8)
+[product/ProductAPI.ts:8](https://github.com/bennycode/coinbase-pro-node/blob/2016513/src/product/ProductAPI.ts#L8)
 
 ---
 
@@ -54,7 +54,7 @@ Maximum order size
 
 #### Defined in
 
-[product/ProductAPI.ts:10](https://github.com/bennycode/coinbase-pro-node/blob/7770f03/src/product/ProductAPI.ts#L10)
+[product/ProductAPI.ts:10](https://github.com/bennycode/coinbase-pro-node/blob/2016513/src/product/ProductAPI.ts#L10)
 
 ---
 
@@ -66,7 +66,7 @@ Minimum order size
 
 #### Defined in
 
-[product/ProductAPI.ts:12](https://github.com/bennycode/coinbase-pro-node/blob/7770f03/src/product/ProductAPI.ts#L12)
+[product/ProductAPI.ts:12](https://github.com/bennycode/coinbase-pro-node/blob/2016513/src/product/ProductAPI.ts#L12)
 
 ---
 
@@ -76,7 +76,7 @@ Minimum order size
 
 #### Defined in
 
-[product/ProductAPI.ts:13](https://github.com/bennycode/coinbase-pro-node/blob/7770f03/src/product/ProductAPI.ts#L13)
+[product/ProductAPI.ts:13](https://github.com/bennycode/coinbase-pro-node/blob/2016513/src/product/ProductAPI.ts#L13)
 
 ---
 
@@ -86,7 +86,7 @@ Minimum order size
 
 #### Defined in
 
-[product/ProductAPI.ts:14](https://github.com/bennycode/coinbase-pro-node/blob/7770f03/src/product/ProductAPI.ts#L14)
+[product/ProductAPI.ts:14](https://github.com/bennycode/coinbase-pro-node/blob/2016513/src/product/ProductAPI.ts#L14)
 
 ---
 
@@ -96,7 +96,7 @@ Minimum order size
 
 #### Defined in
 
-[product/ProductAPI.ts:15](https://github.com/bennycode/coinbase-pro-node/blob/7770f03/src/product/ProductAPI.ts#L15)
+[product/ProductAPI.ts:15](https://github.com/bennycode/coinbase-pro-node/blob/2016513/src/product/ProductAPI.ts#L15)
 
 ---
 
@@ -106,7 +106,7 @@ Minimum order size
 
 #### Defined in
 
-[product/ProductAPI.ts:16](https://github.com/bennycode/coinbase-pro-node/blob/7770f03/src/product/ProductAPI.ts#L16)
+[product/ProductAPI.ts:16](https://github.com/bennycode/coinbase-pro-node/blob/2016513/src/product/ProductAPI.ts#L16)
 
 ---
 
@@ -116,7 +116,7 @@ Minimum order size
 
 #### Defined in
 
-[product/ProductAPI.ts:17](https://github.com/bennycode/coinbase-pro-node/blob/7770f03/src/product/ProductAPI.ts#L17)
+[product/ProductAPI.ts:17](https://github.com/bennycode/coinbase-pro-node/blob/2016513/src/product/ProductAPI.ts#L17)
 
 ---
 
@@ -126,7 +126,7 @@ Minimum order size
 
 #### Defined in
 
-[product/ProductAPI.ts:18](https://github.com/bennycode/coinbase-pro-node/blob/7770f03/src/product/ProductAPI.ts#L18)
+[product/ProductAPI.ts:18](https://github.com/bennycode/coinbase-pro-node/blob/2016513/src/product/ProductAPI.ts#L18)
 
 ---
 
@@ -136,7 +136,7 @@ Minimum order size
 
 #### Defined in
 
-[product/ProductAPI.ts:19](https://github.com/bennycode/coinbase-pro-node/blob/7770f03/src/product/ProductAPI.ts#L19)
+[product/ProductAPI.ts:19](https://github.com/bennycode/coinbase-pro-node/blob/2016513/src/product/ProductAPI.ts#L19)
 
 ---
 
@@ -146,7 +146,7 @@ Minimum order size
 
 #### Defined in
 
-[product/ProductAPI.ts:20](https://github.com/bennycode/coinbase-pro-node/blob/7770f03/src/product/ProductAPI.ts#L20)
+[product/ProductAPI.ts:20](https://github.com/bennycode/coinbase-pro-node/blob/2016513/src/product/ProductAPI.ts#L20)
 
 ---
 
@@ -156,7 +156,7 @@ Minimum order size
 
 #### Defined in
 
-[product/ProductAPI.ts:21](https://github.com/bennycode/coinbase-pro-node/blob/7770f03/src/product/ProductAPI.ts#L21)
+[product/ProductAPI.ts:21](https://github.com/bennycode/coinbase-pro-node/blob/2016513/src/product/ProductAPI.ts#L21)
 
 ---
 
@@ -168,7 +168,7 @@ Increment steps for min/max order size. The order price must be a multiple of th
 
 #### Defined in
 
-[product/ProductAPI.ts:26](https://github.com/bennycode/coinbase-pro-node/blob/7770f03/src/product/ProductAPI.ts#L26)
+[product/ProductAPI.ts:26](https://github.com/bennycode/coinbase-pro-node/blob/2016513/src/product/ProductAPI.ts#L26)
 
 ---
 
@@ -178,7 +178,7 @@ Increment steps for min/max order size. The order price must be a multiple of th
 
 #### Defined in
 
-[product/ProductAPI.ts:27](https://github.com/bennycode/coinbase-pro-node/blob/7770f03/src/product/ProductAPI.ts#L27)
+[product/ProductAPI.ts:27](https://github.com/bennycode/coinbase-pro-node/blob/2016513/src/product/ProductAPI.ts#L27)
 
 ---
 
@@ -188,7 +188,7 @@ Increment steps for min/max order size. The order price must be a multiple of th
 
 #### Defined in
 
-[product/ProductAPI.ts:28](https://github.com/bennycode/coinbase-pro-node/blob/7770f03/src/product/ProductAPI.ts#L28)
+[product/ProductAPI.ts:28](https://github.com/bennycode/coinbase-pro-node/blob/2016513/src/product/ProductAPI.ts#L28)
 
 ---
 
@@ -198,4 +198,4 @@ Increment steps for min/max order size. The order price must be a multiple of th
 
 #### Defined in
 
-[product/ProductAPI.ts:29](https://github.com/bennycode/coinbase-pro-node/blob/7770f03/src/product/ProductAPI.ts#L29)
+[product/ProductAPI.ts:29](https://github.com/bennycode/coinbase-pro-node/blob/2016513/src/product/ProductAPI.ts#L29)

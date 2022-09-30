@@ -28,7 +28,7 @@ ID of base asset
 
 #### Defined in
 
-[product/ProductAPI.ts:148](https://github.com/bennycode/coinbase-pro-node/blob/7770f03/src/product/ProductAPI.ts#L148)
+[product/ProductAPI.ts:148](https://github.com/bennycode/coinbase-pro-node/blob/2016513/src/product/ProductAPI.ts#L148)
 
 ---
 
@@ -40,7 +40,7 @@ Closing price (last trade) in the bucket interval
 
 #### Defined in
 
-[product/ProductAPI.ts:150](https://github.com/bennycode/coinbase-pro-node/blob/7770f03/src/product/ProductAPI.ts#L150)
+[product/ProductAPI.ts:150](https://github.com/bennycode/coinbase-pro-node/blob/2016513/src/product/ProductAPI.ts#L150)
 
 ---
 
@@ -52,7 +52,7 @@ ID of quote asset
 
 #### Defined in
 
-[product/ProductAPI.ts:152](https://github.com/bennycode/coinbase-pro-node/blob/7770f03/src/product/ProductAPI.ts#L152)
+[product/ProductAPI.ts:152](https://github.com/bennycode/coinbase-pro-node/blob/2016513/src/product/ProductAPI.ts#L152)
 
 ---
 
@@ -64,7 +64,7 @@ Highest price during the bucket interval
 
 #### Defined in
 
-[product/ProductAPI.ts:154](https://github.com/bennycode/coinbase-pro-node/blob/7770f03/src/product/ProductAPI.ts#L154)
+[product/ProductAPI.ts:154](https://github.com/bennycode/coinbase-pro-node/blob/2016513/src/product/ProductAPI.ts#L154)
 
 ---
 
@@ -76,7 +76,7 @@ Lowest price during the bucket interval
 
 #### Defined in
 
-[product/ProductAPI.ts:156](https://github.com/bennycode/coinbase-pro-node/blob/7770f03/src/product/ProductAPI.ts#L156)
+[product/ProductAPI.ts:156](https://github.com/bennycode/coinbase-pro-node/blob/2016513/src/product/ProductAPI.ts#L156)
 
 ---
 
@@ -88,7 +88,7 @@ Opening price (first trade) in the bucket interval
 
 #### Defined in
 
-[product/ProductAPI.ts:158](https://github.com/bennycode/coinbase-pro-node/blob/7770f03/src/product/ProductAPI.ts#L158)
+[product/ProductAPI.ts:158](https://github.com/bennycode/coinbase-pro-node/blob/2016513/src/product/ProductAPI.ts#L158)
 
 ---
 
@@ -100,7 +100,7 @@ Bucket start time in simplified extended ISO 8601 format
 
 #### Defined in
 
-[product/ProductAPI.ts:160](https://github.com/bennycode/coinbase-pro-node/blob/7770f03/src/product/ProductAPI.ts#L160)
+[product/ProductAPI.ts:160](https://github.com/bennycode/coinbase-pro-node/blob/2016513/src/product/ProductAPI.ts#L160)
 
 ---
 
@@ -112,7 +112,7 @@ Bucket start time converted to milliseconds (note: Coinbase Pro actually uses se
 
 #### Defined in
 
-[product/ProductAPI.ts:162](https://github.com/bennycode/coinbase-pro-node/blob/7770f03/src/product/ProductAPI.ts#L162)
+[product/ProductAPI.ts:162](https://github.com/bennycode/coinbase-pro-node/blob/2016513/src/product/ProductAPI.ts#L162)
 
 ---
 
@@ -124,7 +124,7 @@ Product ID / Symbol
 
 #### Defined in
 
-[product/ProductAPI.ts:164](https://github.com/bennycode/coinbase-pro-node/blob/7770f03/src/product/ProductAPI.ts#L164)
+[product/ProductAPI.ts:164](https://github.com/bennycode/coinbase-pro-node/blob/2016513/src/product/ProductAPI.ts#L164)
 
 ---
 
@@ -136,7 +136,7 @@ Candle size in milliseconds
 
 #### Defined in
 
-[product/ProductAPI.ts:166](https://github.com/bennycode/coinbase-pro-node/blob/7770f03/src/product/ProductAPI.ts#L166)
+[product/ProductAPI.ts:166](https://github.com/bennycode/coinbase-pro-node/blob/2016513/src/product/ProductAPI.ts#L166)
 
 ---
 
@@ -148,4 +148,4 @@ Volume of trading activity during the bucket interval
 
 #### Defined in
 
-[product/ProductAPI.ts:168](https://github.com/bennycode/coinbase-pro-node/blob/7770f03/src/product/ProductAPI.ts#L168)
+[product/ProductAPI.ts:168](https://github.com/bennycode/coinbase-pro-node/blob/2016513/src/product/ProductAPI.ts#L168)

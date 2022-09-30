@@ -17,7 +17,7 @@
 
 #### Defined in
 
-[account/AccountAPI.ts:80](https://github.com/bennycode/coinbase-pro-node/blob/7770f03/src/account/AccountAPI.ts#L80)
+[account/AccountAPI.ts:80](https://github.com/bennycode/coinbase-pro-node/blob/2016513/src/account/AccountAPI.ts#L80)
 
 ---
 
@@ -27,4 +27,4 @@
 
 #### Defined in
 
-[account/AccountAPI.ts:81](https://github.com/bennycode/coinbase-pro-node/blob/7770f03/src/account/AccountAPI.ts#L81)
+[account/AccountAPI.ts:81](https://github.com/bennycode/coinbase-pro-node/blob/2016513/src/account/AccountAPI.ts#L81)

@@ -17,7 +17,7 @@
 
 #### Defined in
 
-[product/CandleBucketUtil.ts:8](https://github.com/bennycode/coinbase-pro-node/blob/7770f03/src/product/CandleBucketUtil.ts#L8)
+[product/CandleBucketUtil.ts:8](https://github.com/bennycode/coinbase-pro-node/blob/2016513/src/product/CandleBucketUtil.ts#L8)
 
 ---
 
@@ -27,4 +27,4 @@
 
 #### Defined in
 
-[product/CandleBucketUtil.ts:9](https://github.com/bennycode/coinbase-pro-node/blob/7770f03/src/product/CandleBucketUtil.ts#L9)
+[product/CandleBucketUtil.ts:9](https://github.com/bennycode/coinbase-pro-node/blob/2016513/src/product/CandleBucketUtil.ts#L9)

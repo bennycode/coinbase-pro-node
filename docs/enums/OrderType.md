@@ -4,12 +4,12 @@
 
 ## Table of contents
 
-### Enumeration members
+### Enumeration Members
 
 - [LIMIT](OrderType.md#limit)
 - [MARKET](OrderType.md#market)
 
-## Enumeration members
+## Enumeration Members
 
 ### LIMIT
 
@@ -17,7 +17,7 @@
 
 #### Defined in
 
-[order/OrderAPI.ts:6](https://github.com/bennycode/coinbase-pro-node/blob/7770f03/src/order/OrderAPI.ts#L6)
+[order/OrderAPI.ts:6](https://github.com/bennycode/coinbase-pro-node/blob/2016513/src/order/OrderAPI.ts#L6)
 
 ---
 
@@ -27,4 +27,4 @@
 
 #### Defined in
 
-[order/OrderAPI.ts:7](https://github.com/bennycode/coinbase-pro-node/blob/7770f03/src/order/OrderAPI.ts#L7)
+[order/OrderAPI.ts:7](https://github.com/bennycode/coinbase-pro-node/blob/2016513/src/order/OrderAPI.ts#L7)

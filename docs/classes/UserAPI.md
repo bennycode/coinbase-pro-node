@@ -31,7 +31,7 @@
 
 #### Defined in
 
-[user/UserAPI.ts:19](https://github.com/bennycode/coinbase-pro-node/blob/7770f03/src/user/UserAPI.ts#L19)
+[user/UserAPI.ts:19](https://github.com/bennycode/coinbase-pro-node/blob/2016513/src/user/UserAPI.ts#L19)
 
 ## Properties
 
@@ -47,7 +47,7 @@
 
 #### Defined in
 
-[user/UserAPI.ts:15](https://github.com/bennycode/coinbase-pro-node/blob/7770f03/src/user/UserAPI.ts#L15)
+[user/UserAPI.ts:15](https://github.com/bennycode/coinbase-pro-node/blob/2016513/src/user/UserAPI.ts#L15)
 
 ## Methods
 
@@ -57,11 +57,17 @@
 
 This request will return your 30-day trailing volume for all products of the API key’s profile. This is a cached value that’s calculated every day at midnight UTC.
 
-**`note`** This endpoint requires either the “view” or “trade” permission
+**`Note`**
 
-**`see`** https://docs.cloud.coinbase.com/exchange/reference/exchangerestapi_getfees
+This endpoint requires either the “view” or “trade” permission
 
-**`deprecated`** The Trailing Volume endpoint has been deprecated in favor of the Fees endpoint to get the latest volumes: https://docs.cloud.coinbase.com/exchange/docs/changelog#2021-feb-04
+**`See`**
+
+https://docs.cloud.coinbase.com/exchange/reference/exchangerestapi_getfees
+
+**`Deprecated`**
+
+The Trailing Volume endpoint has been deprecated in favor of the Fees endpoint to get the latest volumes: https://docs.cloud.coinbase.com/exchange/docs/changelog#2021-feb-04
 
 #### Returns
 
@@ -71,7 +77,7 @@ Your 30-day trailing volume for all products of the API key’s profile
 
 #### Defined in
 
-[user/UserAPI.ts:42](https://github.com/bennycode/coinbase-pro-node/blob/7770f03/src/user/UserAPI.ts#L42)
+[user/UserAPI.ts:42](https://github.com/bennycode/coinbase-pro-node/blob/2016513/src/user/UserAPI.ts#L42)
 
 ---
 
@@ -81,7 +87,9 @@ Your 30-day trailing volume for all products of the API key’s profile
 
 Verify your authentication with Coinbase Pro.
 
-**`see`** https://docs.cloud.coinbase.com/exchange/docs/websocket-overview#authentication
+**`See`**
+
+https://docs.cloud.coinbase.com/exchange/docs/websocket-overview#authentication
 
 #### Returns
 
@@ -91,4 +99,4 @@ Your account
 
 #### Defined in
 
-[user/UserAPI.ts:27](https://github.com/bennycode/coinbase-pro-node/blob/7770f03/src/user/UserAPI.ts#L27)
+[user/UserAPI.ts:27](https://github.com/bennycode/coinbase-pro-node/blob/2016513/src/user/UserAPI.ts#L27)

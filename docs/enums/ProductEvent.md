@@ -4,11 +4,11 @@
 
 ## Table of contents
 
-### Enumeration members
+### Enumeration Members
 
 - [NEW_CANDLE](ProductEvent.md#new_candle)
 
-## Enumeration members
+## Enumeration Members
 
 ### NEW_CANDLE
 
@@ -16,4 +16,4 @@
 
 #### Defined in
 
-[product/ProductAPI.ts:174](https://github.com/bennycode/coinbase-pro-node/blob/7770f03/src/product/ProductAPI.ts#L174)
+[product/ProductAPI.ts:179](https://github.com/bennycode/coinbase-pro-node/blob/2016513/src/product/ProductAPI.ts#L179)

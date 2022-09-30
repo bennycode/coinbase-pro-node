@@ -4,12 +4,12 @@
 
 ## Table of contents
 
-### Enumeration members
+### Enumeration Members
 
 - [FIAT](AccountType.md#fiat)
 - [WALLET](AccountType.md#wallet)
 
-## Enumeration members
+## Enumeration Members
 
 ### FIAT
 
@@ -17,7 +17,7 @@
 
 #### Defined in
 
-[account/AccountAPI.ts:39](https://github.com/bennycode/coinbase-pro-node/blob/7770f03/src/account/AccountAPI.ts#L39)
+[account/AccountAPI.ts:39](https://github.com/bennycode/coinbase-pro-node/blob/2016513/src/account/AccountAPI.ts#L39)
 
 ---
 
@@ -27,4 +27,4 @@
 
 #### Defined in
 
-[account/AccountAPI.ts:40](https://github.com/bennycode/coinbase-pro-node/blob/7770f03/src/account/AccountAPI.ts#L40)
+[account/AccountAPI.ts:40](https://github.com/bennycode/coinbase-pro-node/blob/2016513/src/account/AccountAPI.ts#L40)

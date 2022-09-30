@@ -31,7 +31,7 @@
 
 #### Defined in
 
-[fill/FillAPI.ts:30](https://github.com/bennycode/coinbase-pro-node/blob/7770f03/src/fill/FillAPI.ts#L30)
+[fill/FillAPI.ts:30](https://github.com/bennycode/coinbase-pro-node/blob/2016513/src/fill/FillAPI.ts#L30)
 
 ## Properties
 
@@ -47,7 +47,7 @@
 
 #### Defined in
 
-[fill/FillAPI.ts:26](https://github.com/bennycode/coinbase-pro-node/blob/7770f03/src/fill/FillAPI.ts#L26)
+[fill/FillAPI.ts:26](https://github.com/bennycode/coinbase-pro-node/blob/2016513/src/fill/FillAPI.ts#L26)
 
 ## Methods
 
@@ -57,9 +57,9 @@
 
 Get a list of recent fills for a given Order of the API key's profile.
 
-**`see`** https://docs.pro.coinbase.com/#list-fills
+**`See`**
 
-**`see`** https://pro.coinbase.com/orders/filled
+https://docs.cloud.coinbase.com/exchange/reference/exchangerestapi_getfills
 
 #### Parameters
 
@@ -74,7 +74,7 @@ Get a list of recent fills for a given Order of the API key's profile.
 
 #### Defined in
 
-[fill/FillAPI.ts:40](https://github.com/bennycode/coinbase-pro-node/blob/7770f03/src/fill/FillAPI.ts#L40)
+[fill/FillAPI.ts:39](https://github.com/bennycode/coinbase-pro-node/blob/2016513/src/fill/FillAPI.ts#L39)
 
 ---
 
@@ -84,9 +84,9 @@ Get a list of recent fills for a given Order of the API key's profile.
 
 Get a list of recent fills for a given Product of the API key's profile.
 
-**`see`** https://docs.pro.coinbase.com/#list-fills
+**`See`**
 
-**`see`** https://pro.coinbase.com/orders/filled
+https://docs.cloud.coinbase.com/exchange/reference/exchangerestapi_getfills
 
 #### Parameters
 
@@ -101,4 +101,4 @@ Get a list of recent fills for a given Product of the API key's profile.
 
 #### Defined in
 
-[fill/FillAPI.ts:60](https://github.com/bennycode/coinbase-pro-node/blob/7770f03/src/fill/FillAPI.ts#L60)
+[fill/FillAPI.ts:58](https://github.com/bennycode/coinbase-pro-node/blob/2016513/src/fill/FillAPI.ts#L58)

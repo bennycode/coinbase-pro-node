@@ -34,7 +34,7 @@
 
 #### Defined in
 
-[order/OrderAPI.ts:113](https://github.com/bennycode/coinbase-pro-node/blob/7770f03/src/order/OrderAPI.ts#L113)
+[order/OrderAPI.ts:113](https://github.com/bennycode/coinbase-pro-node/blob/2016513/src/order/OrderAPI.ts#L113)
 
 ## Properties
 
@@ -50,7 +50,7 @@
 
 #### Defined in
 
-[order/OrderAPI.ts:109](https://github.com/bennycode/coinbase-pro-node/blob/7770f03/src/order/OrderAPI.ts#L109)
+[order/OrderAPI.ts:109](https://github.com/bennycode/coinbase-pro-node/blob/2016513/src/order/OrderAPI.ts#L109)
 
 ## Methods
 
@@ -60,7 +60,9 @@
 
 With best effort, cancel all open orders from the profile that the API key belongs to.
 
-**`see`** https://docs.pro.coinbase.com/#cancel-all
+**`See`**
+
+https://docs.cloud.coinbase.com/exchange/reference/exchangerestapi_deleteorders
 
 #### Parameters
 
@@ -76,7 +78,7 @@ A list of ids of the canceled orders
 
 #### Defined in
 
-[order/OrderAPI.ts:122](https://github.com/bennycode/coinbase-pro-node/blob/7770f03/src/order/OrderAPI.ts#L122)
+[order/OrderAPI.ts:122](https://github.com/bennycode/coinbase-pro-node/blob/2016513/src/order/OrderAPI.ts#L122)
 
 ---
 
@@ -86,7 +88,9 @@ A list of ids of the canceled orders
 
 Cancel a previously placed order. Order must belong to the profile that the API key belongs to.
 
-**`see`** https://docs.pro.coinbase.com/#cancel-an-order
+**`See`**
+
+https://docs.cloud.coinbase.com/exchange/reference/exchangerestapi_deleteorder
 
 #### Parameters
 
@@ -103,7 +107,7 @@ The ID of the canceled order
 
 #### Defined in
 
-[order/OrderAPI.ts:138](https://github.com/bennycode/coinbase-pro-node/blob/7770f03/src/order/OrderAPI.ts#L138)
+[order/OrderAPI.ts:138](https://github.com/bennycode/coinbase-pro-node/blob/2016513/src/order/OrderAPI.ts#L138)
 
 ---
 
@@ -113,7 +117,9 @@ The ID of the canceled order
 
 Get a single order by order id from the profile that the API key belongs to.
 
-**`see`** https://docs.pro.coinbase.com/#get-an-order
+**`See`**
+
+https://docs.cloud.coinbase.com/exchange/reference/exchangerestapi_getorder
 
 #### Parameters
 
@@ -127,7 +133,7 @@ Get a single order by order id from the profile that the API key belongs to.
 
 #### Defined in
 
-[order/OrderAPI.ts:176](https://github.com/bennycode/coinbase-pro-node/blob/7770f03/src/order/OrderAPI.ts#L176)
+[order/OrderAPI.ts:176](https://github.com/bennycode/coinbase-pro-node/blob/2016513/src/order/OrderAPI.ts#L176)
 
 ---
 
@@ -137,9 +143,13 @@ Get a single order by order id from the profile that the API key belongs to.
 
 List your orders from the profile that the API key belongs to. Only open or un-settled orders are returned. As soon as an order is no longer open and settled, it will no longer appear in the default request.
 
-**`note`** Depending on your activity, fetching all data from this endpoint can take very long (measured already 25 seconds!)
+**`Note`**
 
-**`see`** https://docs.pro.coinbase.com/#list-orders
+Depending on your activity, fetching all data from this endpoint can take very long (measured already 25 seconds!)
+
+**`See`**
+
+https://docs.cloud.coinbase.com/exchange/reference/exchangerestapi_getorders
 
 #### Parameters
 
@@ -153,7 +163,7 @@ List your orders from the profile that the API key belongs to. Only open or un-s
 
 #### Defined in
 
-[order/OrderAPI.ts:155](https://github.com/bennycode/coinbase-pro-node/blob/7770f03/src/order/OrderAPI.ts#L155)
+[order/OrderAPI.ts:155](https://github.com/bennycode/coinbase-pro-node/blob/2016513/src/order/OrderAPI.ts#L155)
 
 ---
 
@@ -163,7 +173,9 @@ List your orders from the profile that the API key belongs to. Only open or un-s
 
 You can place two types of orders: limit and market. Orders can only be placed if your account has sufficient funds. Once an order is placed, your account funds will be put on hold for the duration of the order.
 
-**`see`** https://docs.pro.coinbase.com/#place-a-new-order
+**`See`**
+
+https://docs.cloud.coinbase.com/exchange/reference/exchangerestapi_postorders
 
 #### Parameters
 
@@ -177,4 +189,4 @@ You can place two types of orders: limit and market. Orders can only be placed i
 
 #### Defined in
 
-[order/OrderAPI.ts:201](https://github.com/bennycode/coinbase-pro-node/blob/7770f03/src/order/OrderAPI.ts#L201)
+[order/OrderAPI.ts:201](https://github.com/bennycode/coinbase-pro-node/blob/2016513/src/order/OrderAPI.ts#L201)

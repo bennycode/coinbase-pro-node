@@ -4,11 +4,11 @@ coinbase-pro-node / [Exports](modules.md)
 
 ![Language Details](https://img.shields.io/github/languages/top/bennycode/coinbase-pro-node) ![Code Coverage](https://img.shields.io/codecov/c/github/bennycode/coinbase-pro-node/main) ![License](https://img.shields.io/npm/l/coinbase-pro-node.svg) ![Package Version](https://img.shields.io/npm/v/coinbase-pro-node.svg)
 
-[Coinbase API][1] for Node.js, written in TypeScript and covered by tests.
+Unofficial [Coinbase API][1] for Node.js, written in TypeScript and covered by tests.
 
 ## Motivation
 
-The purpose of [coinbase-pro-node][5] is to continue an active **Coinbase API** after Coinbase deprecated the official Node.js library on [January, 16 2020](https://github.com/coinbase/coinbase-pro-node/issues/393#issuecomment-574993096). Its predecessor got deprecated on [July, 19th 2016](https://github.com/coinbase/coinbase-exchange-node/commit/b8347efdb4e2589367c1395b646d283c9c391681).
+The purpose of this [coinbase-pro-node][5] package is to maintain a recent Coinbase API for Node.js with type safety through TypeScript.
 
 ## Features
 
@@ -56,7 +56,7 @@ const client = new CoinbasePro();
 
 The [demo section][3] provides many examples on how to use "coinbase-pro-node". There is also an automatically generated [API documentation][4]. For a quick start, here is a simple example for a REST request:
 
-### REST example
+### REST Example
 
 ```typescript
 import {CoinbasePro} from 'coinbase-pro-node';
@@ -81,7 +81,7 @@ client.rest.account.listAccounts().then(accounts => {
 });
 ```
 
-### WebSocket example
+### WebSocket Example
 
 If you want to listen to WebSocket messages, have a look at these demo scripts:
 
@@ -140,7 +140,7 @@ const client = new CoinbasePro({
 });
 ```
 
-### Real-world examples
+### Real-world Examples
 
 Checkout [GitHub's dependency graph][6] to see who uses "coinbase-pro-node" in production. There are also [npm packages][7] depending on "coinbase-pro-node".
 
@@ -174,6 +174,46 @@ If you like this project, you might also like these related projects:
 - [**trading-signals**](https://github.com/bennycode/trading-signals), Technical indicators, written in TypeScript, with arbitrary-precision arithmetic.
 - [**ig-trading-api**](https://github.com/bennycode/ig-trading-api), REST API, written in TypeScript, for CFD trading with IG.
 - [**binance-api-node**](https://github.com/Ashlar/binance-api-node), Heavily tested and Promise-based Binance API with TypeScript definitions.
+
+---
+
+## Problems with official Coinbase APIs
+
+There are official Coinbase APIs for Node.js, but they all come with some disadvantages leading to decreased developer experience (DX):
+
+1. [Coinbase's first Node.js API](https://github.com/coinbase/coinbase-exchange-node) has no type safety and got deprecated on [July, 19th 2016](https://github.com/coinbase/coinbase-exchange-node/commit/b8347efdb4e2589367c1395b646d283c9c391681)
+2. [Coinbase's second Node.js API](https://github.com/coinbase/coinbase-pro-node) has no type safety and got deprecated on [January, 16 2020](https://github.com/coinbase/coinbase-pro-node/issues/393#issuecomment-574993096)
+3. [Coinbase's current Node.js API](https://docs.cloud.coinbase.com/exchange/reference) ([OAS spec](https://dash.readme.com/api/v1/api-registry/qgumw1pl3iz4yut)) still lacks type safety and does not incorporate best practices like automatic reconnections and request throttling
+
+## Official Coinbase API
+
+Coinbase is versioning its API through [ReadMe.com](https://readme.com/), so you can generate an API client from their [OpenAPI Specification](https://dash.readme.com/api/v1/api-registry/qgumw1pl3iz4yut). ReadMe provides a Node.js package named "[api](https://www.npmjs.com/package/api)" which allows you to retrieve an automatically generated Node.js client:
+
+### Installation
+
+```bash
+npm install api@^4.5.1
+```
+
+### Usage
+
+```ts
+import api from 'api';
+
+const sdk = api('@coinbase-exchange/v1.0#qgumw1pl3iz4yut');
+
+sdk['ExchangeRESTAPI_GetProductTrades']({
+  product_id: 'BTC-USD',
+}).then(response => {
+  console.log(`Found "${response.length}" trades.`);
+});
+```
+
+### Drawbacks
+
+The current Coinbase Node.js SDK (provided by the [api package](https://www.npmjs.com/package/api)) does not support typings for response payloads:
+
+![Official Coinbase API](./coinbase-api-screenshot.png 'Type safety problems in official Coinbase API')
 
 [1]: https://pro.coinbase.com/
 [2]: https://docs.cloud.coinbase.com/exchange

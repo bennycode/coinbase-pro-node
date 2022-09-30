@@ -4,12 +4,12 @@
 
 ## Table of contents
 
-### Enumeration members
+### Enumeration Members
 
 - [SUBSCRIBE](WebSocketRequestType.md#subscribe)
 - [UNSUBSCRIBE](WebSocketRequestType.md#unsubscribe)
 
-## Enumeration members
+## Enumeration Members
 
 ### SUBSCRIBE
 
@@ -17,7 +17,7 @@
 
 #### Defined in
 
-[client/WebSocketClient.ts:37](https://github.com/bennycode/coinbase-pro-node/blob/7770f03/src/client/WebSocketClient.ts#L37)
+[client/WebSocketClient.ts:37](https://github.com/bennycode/coinbase-pro-node/blob/2016513/src/client/WebSocketClient.ts#L37)
 
 ---
 
@@ -27,4 +27,4 @@
 
 #### Defined in
 
-[client/WebSocketClient.ts:38](https://github.com/bennycode/coinbase-pro-node/blob/7770f03/src/client/WebSocketClient.ts#L38)
+[client/WebSocketClient.ts:38](https://github.com/bennycode/coinbase-pro-node/blob/2016513/src/client/WebSocketClient.ts#L38)

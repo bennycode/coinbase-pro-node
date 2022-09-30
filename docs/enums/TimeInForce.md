@@ -4,14 +4,14 @@
 
 ## Table of contents
 
-### Enumeration members
+### Enumeration Members
 
 - [FILL_OR_KILL](TimeInForce.md#fill_or_kill)
 - [GOOD_TILL_CANCELED](TimeInForce.md#good_till_canceled)
 - [GOOD_TILL_TIME](TimeInForce.md#good_till_time)
 - [IMMEDIATE_OR_CANCEL](TimeInForce.md#immediate_or_cancel)
 
-## Enumeration members
+## Enumeration Members
 
 ### FILL_OR_KILL
 
@@ -19,7 +19,7 @@
 
 #### Defined in
 
-[order/OrderAPI.ts:11](https://github.com/bennycode/coinbase-pro-node/blob/7770f03/src/order/OrderAPI.ts#L11)
+[order/OrderAPI.ts:11](https://github.com/bennycode/coinbase-pro-node/blob/2016513/src/order/OrderAPI.ts#L11)
 
 ---
 
@@ -29,7 +29,7 @@
 
 #### Defined in
 
-[order/OrderAPI.ts:12](https://github.com/bennycode/coinbase-pro-node/blob/7770f03/src/order/OrderAPI.ts#L12)
+[order/OrderAPI.ts:12](https://github.com/bennycode/coinbase-pro-node/blob/2016513/src/order/OrderAPI.ts#L12)
 
 ---
 
@@ -39,7 +39,7 @@
 
 #### Defined in
 
-[order/OrderAPI.ts:13](https://github.com/bennycode/coinbase-pro-node/blob/7770f03/src/order/OrderAPI.ts#L13)
+[order/OrderAPI.ts:13](https://github.com/bennycode/coinbase-pro-node/blob/2016513/src/order/OrderAPI.ts#L13)
 
 ---
 
@@ -49,4 +49,4 @@
 
 #### Defined in
 
-[order/OrderAPI.ts:14](https://github.com/bennycode/coinbase-pro-node/blob/7770f03/src/order/OrderAPI.ts#L14)
+[order/OrderAPI.ts:14](https://github.com/bennycode/coinbase-pro-node/blob/2016513/src/order/OrderAPI.ts#L14)

@@ -4,12 +4,12 @@
 
 ## Table of contents
 
-### Enumeration members
+### Enumeration Members
 
 - [MAKER](Liquidity.md#maker)
 - [TAKER](Liquidity.md#taker)
 
-## Enumeration members
+## Enumeration Members
 
 ### MAKER
 
@@ -17,7 +17,7 @@
 
 #### Defined in
 
-[fill/FillAPI.ts:5](https://github.com/bennycode/coinbase-pro-node/blob/7770f03/src/fill/FillAPI.ts#L5)
+[fill/FillAPI.ts:5](https://github.com/bennycode/coinbase-pro-node/blob/2016513/src/fill/FillAPI.ts#L5)
 
 ---
 
@@ -27,4 +27,4 @@
 
 #### Defined in
 
-[fill/FillAPI.ts:6](https://github.com/bennycode/coinbase-pro-node/blob/7770f03/src/fill/FillAPI.ts#L6)
+[fill/FillAPI.ts:6](https://github.com/bennycode/coinbase-pro-node/blob/2016513/src/fill/FillAPI.ts#L6)

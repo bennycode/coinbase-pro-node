@@ -4,12 +4,12 @@
 
 ## Table of contents
 
-### Enumeration members
+### Enumeration Members
 
 - [CRYPTO](CurrencyType.md#crypto)
 - [FIAT](CurrencyType.md#fiat)
 
-## Enumeration members
+## Enumeration Members
 
 ### CRYPTO
 
@@ -17,7 +17,7 @@
 
 #### Defined in
 
-[currency/CurrencyAPI.ts:13](https://github.com/bennycode/coinbase-pro-node/blob/7770f03/src/currency/CurrencyAPI.ts#L13)
+[currency/CurrencyAPI.ts:13](https://github.com/bennycode/coinbase-pro-node/blob/2016513/src/currency/CurrencyAPI.ts#L13)
 
 ---
 
@@ -27,4 +27,4 @@
 
 #### Defined in
 
-[currency/CurrencyAPI.ts:14](https://github.com/bennycode/coinbase-pro-node/blob/7770f03/src/currency/CurrencyAPI.ts#L14)
+[currency/CurrencyAPI.ts:14](https://github.com/bennycode/coinbase-pro-node/blob/2016513/src/currency/CurrencyAPI.ts#L14)
