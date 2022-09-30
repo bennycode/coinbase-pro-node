@@ -27,7 +27,7 @@ const WEBSOCKET_URL = `ws://localhost:${WEBSOCKET_PORT}`;
 
 let server: WebSocket.Server;
 
-fdescribe('WebSocketClient', () => {
+describe('WebSocketClient', () => {
   function createWebSocketClient(url: string = WEBSOCKET_URL): WebSocketClient {
     return new WebSocketClient(url, () => {
       return Promise.resolve({
