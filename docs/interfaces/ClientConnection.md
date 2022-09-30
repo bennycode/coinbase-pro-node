@@ -17,7 +17,7 @@
 
 #### Defined in
 
-[CoinbasePro.ts:29](https://github.com/bennycode/coinbase-pro-node/blob/dacd532/src/CoinbasePro.ts#L29)
+[CoinbasePro.ts:29](https://github.com/bennycode/coinbase-pro-node/blob/01e6d53/src/CoinbasePro.ts#L29)
 
 ---
 
@@ -27,4 +27,4 @@
 
 #### Defined in
 
-[CoinbasePro.ts:30](https://github.com/bennycode/coinbase-pro-node/blob/dacd532/src/CoinbasePro.ts#L30)
+[CoinbasePro.ts:30](https://github.com/bennycode/coinbase-pro-node/blob/01e6d53/src/CoinbasePro.ts#L30)

@@ -31,7 +31,7 @@
 
 #### Defined in
 
-[client/WebSocketClient.ts:288](https://github.com/bennycode/coinbase-pro-node/blob/dacd532/src/client/WebSocketClient.ts#L288)
+[client/WebSocketClient.ts:288](https://github.com/bennycode/coinbase-pro-node/blob/01e6d53/src/client/WebSocketClient.ts#L288)
 
 ---
 
@@ -41,7 +41,7 @@
 
 #### Defined in
 
-[client/WebSocketClient.ts:289](https://github.com/bennycode/coinbase-pro-node/blob/dacd532/src/client/WebSocketClient.ts#L289)
+[client/WebSocketClient.ts:289](https://github.com/bennycode/coinbase-pro-node/blob/01e6d53/src/client/WebSocketClient.ts#L289)
 
 ---
 
@@ -51,7 +51,7 @@
 
 #### Defined in
 
-[client/WebSocketClient.ts:290](https://github.com/bennycode/coinbase-pro-node/blob/dacd532/src/client/WebSocketClient.ts#L290)
+[client/WebSocketClient.ts:290](https://github.com/bennycode/coinbase-pro-node/blob/01e6d53/src/client/WebSocketClient.ts#L290)
 
 ---
 
@@ -61,7 +61,7 @@
 
 #### Defined in
 
-[client/WebSocketClient.ts:291](https://github.com/bennycode/coinbase-pro-node/blob/dacd532/src/client/WebSocketClient.ts#L291)
+[client/WebSocketClient.ts:291](https://github.com/bennycode/coinbase-pro-node/blob/01e6d53/src/client/WebSocketClient.ts#L291)
 
 ---
 
@@ -71,7 +71,7 @@
 
 #### Defined in
 
-[client/WebSocketClient.ts:292](https://github.com/bennycode/coinbase-pro-node/blob/dacd532/src/client/WebSocketClient.ts#L292)
+[client/WebSocketClient.ts:292](https://github.com/bennycode/coinbase-pro-node/blob/01e6d53/src/client/WebSocketClient.ts#L292)
 
 ---
 
@@ -81,7 +81,7 @@
 
 #### Defined in
 
-[client/WebSocketClient.ts:293](https://github.com/bennycode/coinbase-pro-node/blob/dacd532/src/client/WebSocketClient.ts#L293)
+[client/WebSocketClient.ts:293](https://github.com/bennycode/coinbase-pro-node/blob/01e6d53/src/client/WebSocketClient.ts#L293)
 
 ---
 
@@ -91,7 +91,7 @@
 
 #### Defined in
 
-[client/WebSocketClient.ts:294](https://github.com/bennycode/coinbase-pro-node/blob/dacd532/src/client/WebSocketClient.ts#L294)
+[client/WebSocketClient.ts:294](https://github.com/bennycode/coinbase-pro-node/blob/01e6d53/src/client/WebSocketClient.ts#L294)
 
 ---
 
@@ -101,7 +101,7 @@
 
 #### Defined in
 
-[client/WebSocketClient.ts:295](https://github.com/bennycode/coinbase-pro-node/blob/dacd532/src/client/WebSocketClient.ts#L295)
+[client/WebSocketClient.ts:295](https://github.com/bennycode/coinbase-pro-node/blob/01e6d53/src/client/WebSocketClient.ts#L295)
 
 ---
 
@@ -111,7 +111,7 @@
 
 #### Defined in
 
-[client/WebSocketClient.ts:296](https://github.com/bennycode/coinbase-pro-node/blob/dacd532/src/client/WebSocketClient.ts#L296)
+[client/WebSocketClient.ts:296](https://github.com/bennycode/coinbase-pro-node/blob/01e6d53/src/client/WebSocketClient.ts#L296)
 
 ---
 
@@ -121,7 +121,7 @@
 
 #### Defined in
 
-[client/WebSocketClient.ts:297](https://github.com/bennycode/coinbase-pro-node/blob/dacd532/src/client/WebSocketClient.ts#L297)
+[client/WebSocketClient.ts:297](https://github.com/bennycode/coinbase-pro-node/blob/01e6d53/src/client/WebSocketClient.ts#L297)
 
 ---
 
@@ -131,7 +131,7 @@
 
 #### Defined in
 
-[client/WebSocketClient.ts:298](https://github.com/bennycode/coinbase-pro-node/blob/dacd532/src/client/WebSocketClient.ts#L298)
+[client/WebSocketClient.ts:298](https://github.com/bennycode/coinbase-pro-node/blob/01e6d53/src/client/WebSocketClient.ts#L298)
 
 ---
 
@@ -141,7 +141,7 @@
 
 #### Defined in
 
-[client/WebSocketClient.ts:299](https://github.com/bennycode/coinbase-pro-node/blob/dacd532/src/client/WebSocketClient.ts#L299)
+[client/WebSocketClient.ts:299](https://github.com/bennycode/coinbase-pro-node/blob/01e6d53/src/client/WebSocketClient.ts#L299)
 
 ---
 
@@ -151,7 +151,7 @@
 
 #### Defined in
 
-[client/WebSocketClient.ts:300](https://github.com/bennycode/coinbase-pro-node/blob/dacd532/src/client/WebSocketClient.ts#L300)
+[client/WebSocketClient.ts:300](https://github.com/bennycode/coinbase-pro-node/blob/01e6d53/src/client/WebSocketClient.ts#L300)
 
 ---
 
@@ -161,7 +161,7 @@
 
 #### Defined in
 
-[client/WebSocketClient.ts:301](https://github.com/bennycode/coinbase-pro-node/blob/dacd532/src/client/WebSocketClient.ts#L301)
+[client/WebSocketClient.ts:301](https://github.com/bennycode/coinbase-pro-node/blob/01e6d53/src/client/WebSocketClient.ts#L301)
 
 ---
 
@@ -171,7 +171,7 @@
 
 #### Defined in
 
-[client/WebSocketClient.ts:302](https://github.com/bennycode/coinbase-pro-node/blob/dacd532/src/client/WebSocketClient.ts#L302)
+[client/WebSocketClient.ts:302](https://github.com/bennycode/coinbase-pro-node/blob/01e6d53/src/client/WebSocketClient.ts#L302)
 
 ---
 
@@ -181,4 +181,4 @@
 
 #### Defined in
 
-[client/WebSocketClient.ts:303](https://github.com/bennycode/coinbase-pro-node/blob/dacd532/src/client/WebSocketClient.ts#L303)
+[client/WebSocketClient.ts:303](https://github.com/bennycode/coinbase-pro-node/blob/01e6d53/src/client/WebSocketClient.ts#L303)

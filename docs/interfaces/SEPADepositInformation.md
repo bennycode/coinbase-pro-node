@@ -23,7 +23,7 @@
 
 #### Defined in
 
-[account/AccountAPI.ts:105](https://github.com/bennycode/coinbase-pro-node/blob/dacd532/src/account/AccountAPI.ts#L105)
+[account/AccountAPI.ts:105](https://github.com/bennycode/coinbase-pro-node/blob/01e6d53/src/account/AccountAPI.ts#L105)
 
 ---
 
@@ -33,7 +33,7 @@
 
 #### Defined in
 
-[account/AccountAPI.ts:106](https://github.com/bennycode/coinbase-pro-node/blob/dacd532/src/account/AccountAPI.ts#L106)
+[account/AccountAPI.ts:106](https://github.com/bennycode/coinbase-pro-node/blob/01e6d53/src/account/AccountAPI.ts#L106)
 
 ---
 
@@ -43,7 +43,7 @@
 
 #### Defined in
 
-[account/AccountAPI.ts:107](https://github.com/bennycode/coinbase-pro-node/blob/dacd532/src/account/AccountAPI.ts#L107)
+[account/AccountAPI.ts:107](https://github.com/bennycode/coinbase-pro-node/blob/01e6d53/src/account/AccountAPI.ts#L107)
 
 ---
 
@@ -60,7 +60,7 @@
 
 #### Defined in
 
-[account/AccountAPI.ts:108](https://github.com/bennycode/coinbase-pro-node/blob/dacd532/src/account/AccountAPI.ts#L108)
+[account/AccountAPI.ts:108](https://github.com/bennycode/coinbase-pro-node/blob/01e6d53/src/account/AccountAPI.ts#L108)
 
 ---
 
@@ -70,7 +70,7 @@
 
 #### Defined in
 
-[account/AccountAPI.ts:112](https://github.com/bennycode/coinbase-pro-node/blob/dacd532/src/account/AccountAPI.ts#L112)
+[account/AccountAPI.ts:112](https://github.com/bennycode/coinbase-pro-node/blob/01e6d53/src/account/AccountAPI.ts#L112)
 
 ---
 
@@ -80,7 +80,7 @@
 
 #### Defined in
 
-[account/AccountAPI.ts:113](https://github.com/bennycode/coinbase-pro-node/blob/dacd532/src/account/AccountAPI.ts#L113)
+[account/AccountAPI.ts:113](https://github.com/bennycode/coinbase-pro-node/blob/01e6d53/src/account/AccountAPI.ts#L113)
 
 ---
 
@@ -90,7 +90,7 @@
 
 #### Defined in
 
-[account/AccountAPI.ts:114](https://github.com/bennycode/coinbase-pro-node/blob/dacd532/src/account/AccountAPI.ts#L114)
+[account/AccountAPI.ts:114](https://github.com/bennycode/coinbase-pro-node/blob/01e6d53/src/account/AccountAPI.ts#L114)
 
 ---
 
@@ -100,4 +100,4 @@
 
 #### Defined in
 
-[account/AccountAPI.ts:115](https://github.com/bennycode/coinbase-pro-node/blob/dacd532/src/account/AccountAPI.ts#L115)
+[account/AccountAPI.ts:115](https://github.com/bennycode/coinbase-pro-node/blob/01e6d53/src/account/AccountAPI.ts#L115)

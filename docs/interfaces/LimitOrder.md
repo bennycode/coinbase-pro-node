@@ -39,7 +39,7 @@ BaseOrder.client_oid
 
 #### Defined in
 
-[order/OrderAPI.ts:32](https://github.com/bennycode/coinbase-pro-node/blob/dacd532/src/order/OrderAPI.ts#L32)
+[order/OrderAPI.ts:32](https://github.com/bennycode/coinbase-pro-node/blob/01e6d53/src/order/OrderAPI.ts#L32)
 
 ---
 
@@ -49,7 +49,7 @@ BaseOrder.client_oid
 
 #### Defined in
 
-[order/OrderAPI.ts:70](https://github.com/bennycode/coinbase-pro-node/blob/dacd532/src/order/OrderAPI.ts#L70)
+[order/OrderAPI.ts:70](https://github.com/bennycode/coinbase-pro-node/blob/01e6d53/src/order/OrderAPI.ts#L70)
 
 ---
 
@@ -63,7 +63,7 @@ BaseOrder.product_id
 
 #### Defined in
 
-[order/OrderAPI.ts:33](https://github.com/bennycode/coinbase-pro-node/blob/dacd532/src/order/OrderAPI.ts#L33)
+[order/OrderAPI.ts:33](https://github.com/bennycode/coinbase-pro-node/blob/01e6d53/src/order/OrderAPI.ts#L33)
 
 ---
 
@@ -77,7 +77,7 @@ BaseOrder.side
 
 #### Defined in
 
-[order/OrderAPI.ts:34](https://github.com/bennycode/coinbase-pro-node/blob/dacd532/src/order/OrderAPI.ts#L34)
+[order/OrderAPI.ts:34](https://github.com/bennycode/coinbase-pro-node/blob/01e6d53/src/order/OrderAPI.ts#L34)
 
 ---
 
@@ -87,7 +87,7 @@ BaseOrder.side
 
 #### Defined in
 
-[order/OrderAPI.ts:71](https://github.com/bennycode/coinbase-pro-node/blob/dacd532/src/order/OrderAPI.ts#L71)
+[order/OrderAPI.ts:71](https://github.com/bennycode/coinbase-pro-node/blob/01e6d53/src/order/OrderAPI.ts#L71)
 
 ---
 
@@ -101,7 +101,7 @@ BaseOrder.stop
 
 #### Defined in
 
-[order/OrderAPI.ts:35](https://github.com/bennycode/coinbase-pro-node/blob/dacd532/src/order/OrderAPI.ts#L35)
+[order/OrderAPI.ts:35](https://github.com/bennycode/coinbase-pro-node/blob/01e6d53/src/order/OrderAPI.ts#L35)
 
 ---
 
@@ -115,7 +115,7 @@ BaseOrder.stop_price
 
 #### Defined in
 
-[order/OrderAPI.ts:36](https://github.com/bennycode/coinbase-pro-node/blob/dacd532/src/order/OrderAPI.ts#L36)
+[order/OrderAPI.ts:36](https://github.com/bennycode/coinbase-pro-node/blob/01e6d53/src/order/OrderAPI.ts#L36)
 
 ---
 
@@ -129,7 +129,7 @@ BaseOrder.stp
 
 #### Defined in
 
-[order/OrderAPI.ts:37](https://github.com/bennycode/coinbase-pro-node/blob/dacd532/src/order/OrderAPI.ts#L37)
+[order/OrderAPI.ts:37](https://github.com/bennycode/coinbase-pro-node/blob/01e6d53/src/order/OrderAPI.ts#L37)
 
 ---
 
@@ -141,7 +141,7 @@ Default is 'GTC'.
 
 #### Defined in
 
-[order/OrderAPI.ts:73](https://github.com/bennycode/coinbase-pro-node/blob/dacd532/src/order/OrderAPI.ts#L73)
+[order/OrderAPI.ts:73](https://github.com/bennycode/coinbase-pro-node/blob/01e6d53/src/order/OrderAPI.ts#L73)
 
 ---
 
@@ -151,4 +151,4 @@ Default is 'GTC'.
 
 #### Defined in
 
-[order/OrderAPI.ts:74](https://github.com/bennycode/coinbase-pro-node/blob/dacd532/src/order/OrderAPI.ts#L74)
+[order/OrderAPI.ts:74](https://github.com/bennycode/coinbase-pro-node/blob/01e6d53/src/order/OrderAPI.ts#L74)

@@ -30,7 +30,7 @@
 
 #### Defined in
 
-[fee/FeeAPI.ts:22](https://github.com/bennycode/coinbase-pro-node/blob/dacd532/src/fee/FeeAPI.ts#L22)
+[fee/FeeAPI.ts:22](https://github.com/bennycode/coinbase-pro-node/blob/01e6d53/src/fee/FeeAPI.ts#L22)
 
 ## Properties
 
@@ -46,7 +46,7 @@
 
 #### Defined in
 
-[fee/FeeAPI.ts:18](https://github.com/bennycode/coinbase-pro-node/blob/dacd532/src/fee/FeeAPI.ts#L18)
+[fee/FeeAPI.ts:18](https://github.com/bennycode/coinbase-pro-node/blob/01e6d53/src/fee/FeeAPI.ts#L18)
 
 ## Methods
 
@@ -66,4 +66,4 @@ https://docs.cloud.coinbase.com/exchange/reference/exchangerestapi_getfees
 
 #### Defined in
 
-[fee/FeeAPI.ts:30](https://github.com/bennycode/coinbase-pro-node/blob/dacd532/src/fee/FeeAPI.ts#L30)
+[fee/FeeAPI.ts:30](https://github.com/bennycode/coinbase-pro-node/blob/01e6d53/src/fee/FeeAPI.ts#L30)

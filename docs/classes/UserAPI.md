@@ -31,7 +31,7 @@
 
 #### Defined in
 
-[user/UserAPI.ts:19](https://github.com/bennycode/coinbase-pro-node/blob/dacd532/src/user/UserAPI.ts#L19)
+[user/UserAPI.ts:19](https://github.com/bennycode/coinbase-pro-node/blob/01e6d53/src/user/UserAPI.ts#L19)
 
 ## Properties
 
@@ -47,7 +47,7 @@
 
 #### Defined in
 
-[user/UserAPI.ts:15](https://github.com/bennycode/coinbase-pro-node/blob/dacd532/src/user/UserAPI.ts#L15)
+[user/UserAPI.ts:15](https://github.com/bennycode/coinbase-pro-node/blob/01e6d53/src/user/UserAPI.ts#L15)
 
 ## Methods
 
@@ -77,7 +77,7 @@ Your 30-day trailing volume for all products of the API key’s profile
 
 #### Defined in
 
-[user/UserAPI.ts:42](https://github.com/bennycode/coinbase-pro-node/blob/dacd532/src/user/UserAPI.ts#L42)
+[user/UserAPI.ts:42](https://github.com/bennycode/coinbase-pro-node/blob/01e6d53/src/user/UserAPI.ts#L42)
 
 ---
 
@@ -99,4 +99,4 @@ Your account
 
 #### Defined in
 
-[user/UserAPI.ts:27](https://github.com/bennycode/coinbase-pro-node/blob/dacd532/src/user/UserAPI.ts#L27)
+[user/UserAPI.ts:27](https://github.com/bennycode/coinbase-pro-node/blob/01e6d53/src/user/UserAPI.ts#L27)

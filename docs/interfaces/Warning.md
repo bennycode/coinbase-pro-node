@@ -18,7 +18,7 @@
 
 #### Defined in
 
-[account/AccountAPI.ts:85](https://github.com/bennycode/coinbase-pro-node/blob/dacd532/src/account/AccountAPI.ts#L85)
+[account/AccountAPI.ts:85](https://github.com/bennycode/coinbase-pro-node/blob/01e6d53/src/account/AccountAPI.ts#L85)
 
 ---
 
@@ -28,7 +28,7 @@
 
 #### Defined in
 
-[account/AccountAPI.ts:86](https://github.com/bennycode/coinbase-pro-node/blob/dacd532/src/account/AccountAPI.ts#L86)
+[account/AccountAPI.ts:86](https://github.com/bennycode/coinbase-pro-node/blob/01e6d53/src/account/AccountAPI.ts#L86)
 
 ---
 
@@ -38,4 +38,4 @@
 
 #### Defined in
 
-[account/AccountAPI.ts:87](https://github.com/bennycode/coinbase-pro-node/blob/dacd532/src/account/AccountAPI.ts#L87)
+[account/AccountAPI.ts:87](https://github.com/bennycode/coinbase-pro-node/blob/01e6d53/src/account/AccountAPI.ts#L87)

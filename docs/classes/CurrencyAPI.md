@@ -30,7 +30,7 @@
 
 #### Defined in
 
-[currency/CurrencyAPI.ts:34](https://github.com/bennycode/coinbase-pro-node/blob/dacd532/src/currency/CurrencyAPI.ts#L34)
+[currency/CurrencyAPI.ts:34](https://github.com/bennycode/coinbase-pro-node/blob/01e6d53/src/currency/CurrencyAPI.ts#L34)
 
 ## Properties
 
@@ -46,7 +46,7 @@
 
 #### Defined in
 
-[currency/CurrencyAPI.ts:30](https://github.com/bennycode/coinbase-pro-node/blob/dacd532/src/currency/CurrencyAPI.ts#L30)
+[currency/CurrencyAPI.ts:30](https://github.com/bennycode/coinbase-pro-node/blob/01e6d53/src/currency/CurrencyAPI.ts#L30)
 
 ## Methods
 
@@ -66,4 +66,4 @@ https://docs.cloud.coinbase.com/exchange/reference/exchangerestapi_getcurrencies
 
 #### Defined in
 
-[currency/CurrencyAPI.ts:43](https://github.com/bennycode/coinbase-pro-node/blob/dacd532/src/currency/CurrencyAPI.ts#L43)
+[currency/CurrencyAPI.ts:43](https://github.com/bennycode/coinbase-pro-node/blob/01e6d53/src/currency/CurrencyAPI.ts#L43)
