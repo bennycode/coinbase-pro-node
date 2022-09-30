@@ -1,3 +1,13 @@
+## 6.0.0 (2022-09-30)
+
+##### Chores
+
+- Run code scanning on demand ([5a6b1533](https://github.com/bennycode/coinbase-pro-node/commit/5a6b153355ba693793e2627fc4fedf15c7a1461f))
+
+##### Bug Fixes
+
+- **time:** Remove polynomial regular expression ([#769](https://github.com/bennycode/coinbase-pro-node/pull/769)) ([6f3410ef](https://github.com/bennycode/coinbase-pro-node/commit/6f3410efe173be70246beee873e036a68796eb5c))
+
 ### 5.1.0 (2022-09-30)
 
 ##### Chores
