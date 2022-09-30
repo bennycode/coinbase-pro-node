@@ -31,10 +31,8 @@ export class TimeAPI {
   /**
    * Get the absolute difference between server time and local time.
    */
-  async getClockSkew(time: TimeSkew | string): Promise<number> {
-    /** @see https://github.com/bennycode/coinbase-pro-node/issues/354 */
-    const epoch = typeof time === 'string' ? parseFloat(time.match(/epoch":(.*)\./i)![1]) : time.epoch;
+  getClockSkew(time: TimeSkew): number {
     const now = Date.now() / 1000;
-    return epoch - now;
+    return time.epoch - now;
   }
 }
