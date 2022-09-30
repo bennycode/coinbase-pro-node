@@ -35,7 +35,7 @@
 
 #### Defined in
 
-[account/AccountAPI.ts:124](https://github.com/bennycode/coinbase-pro-node/blob/2016513/src/account/AccountAPI.ts#L124)
+[account/AccountAPI.ts:124](https://github.com/bennycode/coinbase-pro-node/blob/dacd532/src/account/AccountAPI.ts#L124)
 
 ## Properties
 
@@ -52,7 +52,7 @@
 
 #### Defined in
 
-[account/AccountAPI.ts:119](https://github.com/bennycode/coinbase-pro-node/blob/2016513/src/account/AccountAPI.ts#L119)
+[account/AccountAPI.ts:119](https://github.com/bennycode/coinbase-pro-node/blob/dacd532/src/account/AccountAPI.ts#L119)
 
 ## Methods
 
@@ -78,7 +78,7 @@ https://docs.cloud.coinbase.com/exchange/reference/exchangerestapi_postcoinbasea
 
 #### Defined in
 
-[account/AccountAPI.ts:206](https://github.com/bennycode/coinbase-pro-node/blob/2016513/src/account/AccountAPI.ts#L206)
+[account/AccountAPI.ts:206](https://github.com/bennycode/coinbase-pro-node/blob/dacd532/src/account/AccountAPI.ts#L206)
 
 ---
 
@@ -104,7 +104,7 @@ https://docs.cloud.coinbase.com/exchange/reference/exchangerestapi_getaccount
 
 #### Defined in
 
-[account/AccountAPI.ts:132](https://github.com/bennycode/coinbase-pro-node/blob/2016513/src/account/AccountAPI.ts#L132)
+[account/AccountAPI.ts:132](https://github.com/bennycode/coinbase-pro-node/blob/dacd532/src/account/AccountAPI.ts#L132)
 
 ---
 
@@ -131,7 +131,7 @@ https://docs.cloud.coinbase.com/exchange/reference/exchangerestapi_getaccountled
 
 #### Defined in
 
-[account/AccountAPI.ts:146](https://github.com/bennycode/coinbase-pro-node/blob/2016513/src/account/AccountAPI.ts#L146)
+[account/AccountAPI.ts:146](https://github.com/bennycode/coinbase-pro-node/blob/dacd532/src/account/AccountAPI.ts#L146)
 
 ---
 
@@ -158,7 +158,7 @@ https://docs.cloud.coinbase.com/exchange/reference/exchangerestapi_getaccounthol
 
 #### Defined in
 
-[account/AccountAPI.ts:167](https://github.com/bennycode/coinbase-pro-node/blob/2016513/src/account/AccountAPI.ts#L167)
+[account/AccountAPI.ts:167](https://github.com/bennycode/coinbase-pro-node/blob/dacd532/src/account/AccountAPI.ts#L167)
 
 ---
 
@@ -178,7 +178,7 @@ https://docs.cloud.coinbase.com/exchange/reference/exchangerestapi_getaccounts
 
 #### Defined in
 
-[account/AccountAPI.ts:184](https://github.com/bennycode/coinbase-pro-node/blob/2016513/src/account/AccountAPI.ts#L184)
+[account/AccountAPI.ts:184](https://github.com/bennycode/coinbase-pro-node/blob/dacd532/src/account/AccountAPI.ts#L184)
 
 ---
 
@@ -198,4 +198,4 @@ https://docs.cloud.coinbase.com/exchange/reference/exchangerestapi_getcoinbaseac
 
 #### Defined in
 
-[account/AccountAPI.ts:195](https://github.com/bennycode/coinbase-pro-node/blob/2016513/src/account/AccountAPI.ts#L195)
+[account/AccountAPI.ts:195](https://github.com/bennycode/coinbase-pro-node/blob/dacd532/src/account/AccountAPI.ts#L195)

@@ -19,7 +19,7 @@
 
 #### Defined in
 
-[user/UserAPI.ts:8](https://github.com/bennycode/coinbase-pro-node/blob/2016513/src/user/UserAPI.ts#L8)
+[user/UserAPI.ts:8](https://github.com/bennycode/coinbase-pro-node/blob/dacd532/src/user/UserAPI.ts#L8)
 
 ---
 
@@ -29,7 +29,7 @@
 
 #### Defined in
 
-[user/UserAPI.ts:9](https://github.com/bennycode/coinbase-pro-node/blob/2016513/src/user/UserAPI.ts#L9)
+[user/UserAPI.ts:9](https://github.com/bennycode/coinbase-pro-node/blob/dacd532/src/user/UserAPI.ts#L9)
 
 ---
 
@@ -39,7 +39,7 @@
 
 #### Defined in
 
-[user/UserAPI.ts:10](https://github.com/bennycode/coinbase-pro-node/blob/2016513/src/user/UserAPI.ts#L10)
+[user/UserAPI.ts:10](https://github.com/bennycode/coinbase-pro-node/blob/dacd532/src/user/UserAPI.ts#L10)
 
 ---
 
@@ -49,4 +49,4 @@
 
 #### Defined in
 
-[user/UserAPI.ts:11](https://github.com/bennycode/coinbase-pro-node/blob/2016513/src/user/UserAPI.ts#L11)
+[user/UserAPI.ts:11](https://github.com/bennycode/coinbase-pro-node/blob/dacd532/src/user/UserAPI.ts#L11)

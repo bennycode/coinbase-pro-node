@@ -32,7 +32,7 @@
 
 #### Defined in
 
-[profile/ProfileAPI.ts:27](https://github.com/bennycode/coinbase-pro-node/blob/2016513/src/profile/ProfileAPI.ts#L27)
+[profile/ProfileAPI.ts:27](https://github.com/bennycode/coinbase-pro-node/blob/dacd532/src/profile/ProfileAPI.ts#L27)
 
 ## Properties
 
@@ -48,7 +48,7 @@
 
 #### Defined in
 
-[profile/ProfileAPI.ts:23](https://github.com/bennycode/coinbase-pro-node/blob/2016513/src/profile/ProfileAPI.ts#L23)
+[profile/ProfileAPI.ts:23](https://github.com/bennycode/coinbase-pro-node/blob/dacd532/src/profile/ProfileAPI.ts#L23)
 
 ## Methods
 
@@ -76,7 +76,7 @@ A single profile
 
 #### Defined in
 
-[profile/ProfileAPI.ts:58](https://github.com/bennycode/coinbase-pro-node/blob/2016513/src/profile/ProfileAPI.ts#L58)
+[profile/ProfileAPI.ts:58](https://github.com/bennycode/coinbase-pro-node/blob/dacd532/src/profile/ProfileAPI.ts#L58)
 
 ---
 
@@ -102,7 +102,7 @@ https://docs.cloud.coinbase.com/exchange/reference/exchangerestapi_getprofiles
 
 #### Defined in
 
-[profile/ProfileAPI.ts:36](https://github.com/bennycode/coinbase-pro-node/blob/2016513/src/profile/ProfileAPI.ts#L36)
+[profile/ProfileAPI.ts:36](https://github.com/bennycode/coinbase-pro-node/blob/dacd532/src/profile/ProfileAPI.ts#L36)
 
 ---
 
@@ -128,4 +128,4 @@ https://docs.cloud.coinbase.com/exchange/reference/exchangerestapi_postprofiletr
 
 #### Defined in
 
-[profile/ProfileAPI.ts:78](https://github.com/bennycode/coinbase-pro-node/blob/2016513/src/profile/ProfileAPI.ts#L78)
+[profile/ProfileAPI.ts:78](https://github.com/bennycode/coinbase-pro-node/blob/dacd532/src/profile/ProfileAPI.ts#L78)

@@ -31,7 +31,7 @@
 
 #### Defined in
 
-[time/TimeAPI.ts:15](https://github.com/bennycode/coinbase-pro-node/blob/2016513/src/time/TimeAPI.ts#L15)
+[time/TimeAPI.ts:15](https://github.com/bennycode/coinbase-pro-node/blob/dacd532/src/time/TimeAPI.ts#L15)
 
 ## Properties
 
@@ -47,7 +47,7 @@
 
 #### Defined in
 
-[time/TimeAPI.ts:11](https://github.com/bennycode/coinbase-pro-node/blob/2016513/src/time/TimeAPI.ts#L11)
+[time/TimeAPI.ts:11](https://github.com/bennycode/coinbase-pro-node/blob/dacd532/src/time/TimeAPI.ts#L11)
 
 ## Methods
 
@@ -69,7 +69,7 @@ Get the absolute difference between server time and local time.
 
 #### Defined in
 
-[time/TimeAPI.ts:34](https://github.com/bennycode/coinbase-pro-node/blob/2016513/src/time/TimeAPI.ts#L34)
+[time/TimeAPI.ts:34](https://github.com/bennycode/coinbase-pro-node/blob/dacd532/src/time/TimeAPI.ts#L34)
 
 ---
 
@@ -89,4 +89,4 @@ https://docs.cloud.coinbase.com/sign-in-with-coinbase/docs/api-time
 
 #### Defined in
 
-[time/TimeAPI.ts:23](https://github.com/bennycode/coinbase-pro-node/blob/2016513/src/time/TimeAPI.ts#L23)
+[time/TimeAPI.ts:23](https://github.com/bennycode/coinbase-pro-node/blob/dacd532/src/time/TimeAPI.ts#L23)

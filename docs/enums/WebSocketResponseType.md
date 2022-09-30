@@ -31,7 +31,7 @@ Most failure cases will cause an error message (a message with the type "error")
 
 #### Defined in
 
-[client/WebSocketClient.ts:43](https://github.com/bennycode/coinbase-pro-node/blob/2016513/src/client/WebSocketClient.ts#L43)
+[client/WebSocketClient.ts:43](https://github.com/bennycode/coinbase-pro-node/blob/dacd532/src/client/WebSocketClient.ts#L43)
 
 ---
 
@@ -43,7 +43,7 @@ An `activate` message is sent when a stop order is placed. When the stop is trig
 
 #### Defined in
 
-[client/WebSocketClient.ts:48](https://github.com/bennycode/coinbase-pro-node/blob/2016513/src/client/WebSocketClient.ts#L48)
+[client/WebSocketClient.ts:48](https://github.com/bennycode/coinbase-pro-node/blob/dacd532/src/client/WebSocketClient.ts#L48)
 
 ---
 
@@ -59,7 +59,7 @@ Any `change` message where the price is `null` indicates that the `change` messa
 
 #### Defined in
 
-[client/WebSocketClient.ts:62](https://github.com/bennycode/coinbase-pro-node/blob/2016513/src/client/WebSocketClient.ts#L62)
+[client/WebSocketClient.ts:62](https://github.com/bennycode/coinbase-pro-node/blob/dacd532/src/client/WebSocketClient.ts#L62)
 
 ---
 
@@ -75,7 +75,7 @@ A `done` message will be sent for received orders which are fully filled or canc
 
 #### Defined in
 
-[client/WebSocketClient.ts:76](https://github.com/bennycode/coinbase-pro-node/blob/2016513/src/client/WebSocketClient.ts#L76)
+[client/WebSocketClient.ts:76](https://github.com/bennycode/coinbase-pro-node/blob/dacd532/src/client/WebSocketClient.ts#L76)
 
 ---
 
@@ -87,7 +87,7 @@ A trade occurred between two orders. The aggressor or `taker` order is the one e
 
 #### Defined in
 
-[client/WebSocketClient.ts:83](https://github.com/bennycode/coinbase-pro-node/blob/2016513/src/client/WebSocketClient.ts#L83)
+[client/WebSocketClient.ts:83](https://github.com/bennycode/coinbase-pro-node/blob/dacd532/src/client/WebSocketClient.ts#L83)
 
 ---
 
@@ -101,7 +101,7 @@ There will be no `open` message for orders which will be filled immediately. The
 
 #### Defined in
 
-[client/WebSocketClient.ts:91](https://github.com/bennycode/coinbase-pro-node/blob/2016513/src/client/WebSocketClient.ts#L91)
+[client/WebSocketClient.ts:91](https://github.com/bennycode/coinbase-pro-node/blob/dacd532/src/client/WebSocketClient.ts#L91)
 
 ---
 
@@ -117,7 +117,7 @@ Market orders (indicated by the `order_type` field) may have an optional `funds`
 
 #### Defined in
 
-[client/WebSocketClient.ts:106](https://github.com/bennycode/coinbase-pro-node/blob/2016513/src/client/WebSocketClient.ts#L106)
+[client/WebSocketClient.ts:106](https://github.com/bennycode/coinbase-pro-node/blob/dacd532/src/client/WebSocketClient.ts#L106)
 
 ---
 
@@ -129,7 +129,7 @@ Heartbeats include sequence numbers and last trade ids that can be used to verif
 
 #### Defined in
 
-[client/WebSocketClient.ts:108](https://github.com/bennycode/coinbase-pro-node/blob/2016513/src/client/WebSocketClient.ts#L108)
+[client/WebSocketClient.ts:108](https://github.com/bennycode/coinbase-pro-node/blob/dacd532/src/client/WebSocketClient.ts#L108)
 
 ---
 
@@ -141,7 +141,7 @@ Latest match between two orders.
 
 #### Defined in
 
-[client/WebSocketClient.ts:112](https://github.com/bennycode/coinbase-pro-node/blob/2016513/src/client/WebSocketClient.ts#L112)
+[client/WebSocketClient.ts:112](https://github.com/bennycode/coinbase-pro-node/blob/dacd532/src/client/WebSocketClient.ts#L112)
 
 ---
 
@@ -153,7 +153,7 @@ When subscribing to the 'level2' channel it will send an initial snapshot messag
 
 #### Defined in
 
-[client/WebSocketClient.ts:114](https://github.com/bennycode/coinbase-pro-node/blob/2016513/src/client/WebSocketClient.ts#L114)
+[client/WebSocketClient.ts:114](https://github.com/bennycode/coinbase-pro-node/blob/dacd532/src/client/WebSocketClient.ts#L114)
 
 ---
 
@@ -165,7 +165,7 @@ Subsequent updates of a 'level2' subscription. The `time` property of `l2update`
 
 #### Defined in
 
-[client/WebSocketClient.ts:116](https://github.com/bennycode/coinbase-pro-node/blob/2016513/src/client/WebSocketClient.ts#L116)
+[client/WebSocketClient.ts:116](https://github.com/bennycode/coinbase-pro-node/blob/dacd532/src/client/WebSocketClient.ts#L116)
 
 ---
 
@@ -177,7 +177,7 @@ The status channel will send all products and currencies on a preset interval.
 
 #### Defined in
 
-[client/WebSocketClient.ts:118](https://github.com/bennycode/coinbase-pro-node/blob/2016513/src/client/WebSocketClient.ts#L118)
+[client/WebSocketClient.ts:118](https://github.com/bennycode/coinbase-pro-node/blob/dacd532/src/client/WebSocketClient.ts#L118)
 
 ---
 
@@ -189,7 +189,7 @@ Once a subscribe or unsubscribe message is received, the server will respond wit
 
 #### Defined in
 
-[client/WebSocketClient.ts:120](https://github.com/bennycode/coinbase-pro-node/blob/2016513/src/client/WebSocketClient.ts#L120)
+[client/WebSocketClient.ts:120](https://github.com/bennycode/coinbase-pro-node/blob/dacd532/src/client/WebSocketClient.ts#L120)
 
 ---
 
@@ -201,4 +201,4 @@ The ticker channel provides real-time price updates every time a match happens.
 
 #### Defined in
 
-[client/WebSocketClient.ts:122](https://github.com/bennycode/coinbase-pro-node/blob/2016513/src/client/WebSocketClient.ts#L122)
+[client/WebSocketClient.ts:122](https://github.com/bennycode/coinbase-pro-node/blob/dacd532/src/client/WebSocketClient.ts#L122)

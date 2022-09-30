@@ -54,7 +54,7 @@
 
 #### Defined in
 
-[client/RESTClient.ts:64](https://github.com/bennycode/coinbase-pro-node/blob/2016513/src/client/RESTClient.ts#L64)
+[client/RESTClient.ts:64](https://github.com/bennycode/coinbase-pro-node/blob/dacd532/src/client/RESTClient.ts#L64)
 
 ## Properties
 
@@ -64,7 +64,7 @@
 
 #### Defined in
 
-[client/RESTClient.ts:48](https://github.com/bennycode/coinbase-pro-node/blob/2016513/src/client/RESTClient.ts#L48)
+[client/RESTClient.ts:48](https://github.com/bennycode/coinbase-pro-node/blob/dacd532/src/client/RESTClient.ts#L48)
 
 ---
 
@@ -74,7 +74,7 @@
 
 #### Defined in
 
-[client/RESTClient.ts:49](https://github.com/bennycode/coinbase-pro-node/blob/2016513/src/client/RESTClient.ts#L49)
+[client/RESTClient.ts:49](https://github.com/bennycode/coinbase-pro-node/blob/dacd532/src/client/RESTClient.ts#L49)
 
 ---
 
@@ -84,7 +84,7 @@
 
 #### Defined in
 
-[client/RESTClient.ts:50](https://github.com/bennycode/coinbase-pro-node/blob/2016513/src/client/RESTClient.ts#L50)
+[client/RESTClient.ts:50](https://github.com/bennycode/coinbase-pro-node/blob/dacd532/src/client/RESTClient.ts#L50)
 
 ---
 
@@ -94,7 +94,7 @@
 
 #### Defined in
 
-[client/RESTClient.ts:51](https://github.com/bennycode/coinbase-pro-node/blob/2016513/src/client/RESTClient.ts#L51)
+[client/RESTClient.ts:51](https://github.com/bennycode/coinbase-pro-node/blob/dacd532/src/client/RESTClient.ts#L51)
 
 ---
 
@@ -104,7 +104,7 @@
 
 #### Defined in
 
-[client/RESTClient.ts:52](https://github.com/bennycode/coinbase-pro-node/blob/2016513/src/client/RESTClient.ts#L52)
+[client/RESTClient.ts:52](https://github.com/bennycode/coinbase-pro-node/blob/dacd532/src/client/RESTClient.ts#L52)
 
 ---
 
@@ -114,7 +114,7 @@
 
 #### Defined in
 
-[client/RESTClient.ts:53](https://github.com/bennycode/coinbase-pro-node/blob/2016513/src/client/RESTClient.ts#L53)
+[client/RESTClient.ts:53](https://github.com/bennycode/coinbase-pro-node/blob/dacd532/src/client/RESTClient.ts#L53)
 
 ---
 
@@ -124,7 +124,7 @@
 
 #### Defined in
 
-[client/RESTClient.ts:54](https://github.com/bennycode/coinbase-pro-node/blob/2016513/src/client/RESTClient.ts#L54)
+[client/RESTClient.ts:54](https://github.com/bennycode/coinbase-pro-node/blob/dacd532/src/client/RESTClient.ts#L54)
 
 ---
 
@@ -134,7 +134,7 @@
 
 #### Defined in
 
-[client/RESTClient.ts:55](https://github.com/bennycode/coinbase-pro-node/blob/2016513/src/client/RESTClient.ts#L55)
+[client/RESTClient.ts:55](https://github.com/bennycode/coinbase-pro-node/blob/dacd532/src/client/RESTClient.ts#L55)
 
 ---
 
@@ -144,7 +144,7 @@
 
 #### Defined in
 
-[client/RESTClient.ts:56](https://github.com/bennycode/coinbase-pro-node/blob/2016513/src/client/RESTClient.ts#L56)
+[client/RESTClient.ts:56](https://github.com/bennycode/coinbase-pro-node/blob/dacd532/src/client/RESTClient.ts#L56)
 
 ---
 
@@ -154,7 +154,7 @@
 
 #### Defined in
 
-[client/RESTClient.ts:57](https://github.com/bennycode/coinbase-pro-node/blob/2016513/src/client/RESTClient.ts#L57)
+[client/RESTClient.ts:57](https://github.com/bennycode/coinbase-pro-node/blob/dacd532/src/client/RESTClient.ts#L57)
 
 ---
 
@@ -164,7 +164,7 @@
 
 #### Defined in
 
-[client/RESTClient.ts:58](https://github.com/bennycode/coinbase-pro-node/blob/2016513/src/client/RESTClient.ts#L58)
+[client/RESTClient.ts:58](https://github.com/bennycode/coinbase-pro-node/blob/dacd532/src/client/RESTClient.ts#L58)
 
 ---
 
@@ -174,7 +174,7 @@
 
 #### Defined in
 
-[client/RESTClient.ts:59](https://github.com/bennycode/coinbase-pro-node/blob/2016513/src/client/RESTClient.ts#L59)
+[client/RESTClient.ts:59](https://github.com/bennycode/coinbase-pro-node/blob/dacd532/src/client/RESTClient.ts#L59)
 
 ## Accessors
 
@@ -188,7 +188,7 @@
 
 #### Defined in
 
-[client/RESTClient.ts:37](https://github.com/bennycode/coinbase-pro-node/blob/2016513/src/client/RESTClient.ts#L37)
+[client/RESTClient.ts:37](https://github.com/bennycode/coinbase-pro-node/blob/dacd532/src/client/RESTClient.ts#L37)
 
 ---
 
@@ -207,7 +207,7 @@
 
 #### Defined in
 
-[client/RESTClient.ts:41](https://github.com/bennycode/coinbase-pro-node/blob/2016513/src/client/RESTClient.ts#L41)
+[client/RESTClient.ts:41](https://github.com/bennycode/coinbase-pro-node/blob/dacd532/src/client/RESTClient.ts#L41)
 
 ## Methods
 
@@ -228,7 +228,7 @@
 
 #### Defined in
 
-[client/RESTClient.ts:29](https://github.com/bennycode/coinbase-pro-node/blob/2016513/src/client/RESTClient.ts#L29)
+[client/RESTClient.ts:29](https://github.com/bennycode/coinbase-pro-node/blob/dacd532/src/client/RESTClient.ts#L29)
 
 ---
 
@@ -248,4 +248,4 @@
 
 #### Defined in
 
-[client/RESTClient.ts:130](https://github.com/bennycode/coinbase-pro-node/blob/2016513/src/client/RESTClient.ts#L130)
+[client/RESTClient.ts:130](https://github.com/bennycode/coinbase-pro-node/blob/dacd532/src/client/RESTClient.ts#L130)

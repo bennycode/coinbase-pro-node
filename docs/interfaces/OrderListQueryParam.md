@@ -29,7 +29,7 @@ Only list orders for a specific product.
 
 #### Defined in
 
-[order/OrderAPI.ts:101](https://github.com/bennycode/coinbase-pro-node/blob/2016513/src/order/OrderAPI.ts#L101)
+[order/OrderAPI.ts:101](https://github.com/bennycode/coinbase-pro-node/blob/dacd532/src/order/OrderAPI.ts#L101)
 
 ---
 
@@ -41,4 +41,4 @@ Limit list of orders to these statuses. Passing "all" returns orders of all stat
 
 #### Defined in
 
-[order/OrderAPI.ts:103](https://github.com/bennycode/coinbase-pro-node/blob/2016513/src/order/OrderAPI.ts#L103)
+[order/OrderAPI.ts:103](https://github.com/bennycode/coinbase-pro-node/blob/dacd532/src/order/OrderAPI.ts#L103)

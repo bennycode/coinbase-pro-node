@@ -40,7 +40,7 @@
 
 #### Defined in
 
-[product/ProductAPI.ts:189](https://github.com/bennycode/coinbase-pro-node/blob/2016513/src/product/ProductAPI.ts#L189)
+[product/ProductAPI.ts:189](https://github.com/bennycode/coinbase-pro-node/blob/dacd532/src/product/ProductAPI.ts#L189)
 
 ## Properties
 
@@ -56,7 +56,7 @@
 
 #### Defined in
 
-[product/ProductAPI.ts:183](https://github.com/bennycode/coinbase-pro-node/blob/2016513/src/product/ProductAPI.ts#L183)
+[product/ProductAPI.ts:183](https://github.com/bennycode/coinbase-pro-node/blob/dacd532/src/product/ProductAPI.ts#L183)
 
 ## Methods
 
@@ -77,7 +77,7 @@
 
 #### Defined in
 
-[product/ProductAPI.ts:243](https://github.com/bennycode/coinbase-pro-node/blob/2016513/src/product/ProductAPI.ts#L243)
+[product/ProductAPI.ts:243](https://github.com/bennycode/coinbase-pro-node/blob/dacd532/src/product/ProductAPI.ts#L243)
 
 ---
 
@@ -106,7 +106,7 @@ https://docs.cloud.coinbase.com/exchange/reference/exchangerestapi_getproductcan
 
 #### Defined in
 
-[product/ProductAPI.ts:203](https://github.com/bennycode/coinbase-pro-node/blob/2016513/src/product/ProductAPI.ts#L203)
+[product/ProductAPI.ts:203](https://github.com/bennycode/coinbase-pro-node/blob/dacd532/src/product/ProductAPI.ts#L203)
 
 ---
 
@@ -132,7 +132,7 @@ https://docs.cloud.coinbase.com/exchange/reference/exchangerestapi_getproduct
 
 #### Defined in
 
-[product/ProductAPI.ts:298](https://github.com/bennycode/coinbase-pro-node/blob/2016513/src/product/ProductAPI.ts#L298)
+[product/ProductAPI.ts:298](https://github.com/bennycode/coinbase-pro-node/blob/dacd532/src/product/ProductAPI.ts#L298)
 
 ---
 
@@ -160,7 +160,7 @@ https://docs.cloud.coinbase.com/exchange/reference/exchangerestapi_getproductboo
 
 #### Defined in
 
-[product/ProductAPI.ts:342](https://github.com/bennycode/coinbase-pro-node/blob/2016513/src/product/ProductAPI.ts#L342)
+[product/ProductAPI.ts:342](https://github.com/bennycode/coinbase-pro-node/blob/dacd532/src/product/ProductAPI.ts#L342)
 
 ▸ **getProductOrderBook**(`productId`, `params?`): `Promise`<[`OrderBookLevel2`](../interfaces/OrderBookLevel2.md)\>
 
@@ -178,7 +178,7 @@ https://docs.cloud.coinbase.com/exchange/reference/exchangerestapi_getproductboo
 
 #### Defined in
 
-[product/ProductAPI.ts:346](https://github.com/bennycode/coinbase-pro-node/blob/2016513/src/product/ProductAPI.ts#L346)
+[product/ProductAPI.ts:346](https://github.com/bennycode/coinbase-pro-node/blob/dacd532/src/product/ProductAPI.ts#L346)
 
 ▸ **getProductOrderBook**(`productId`, `params?`): `Promise`<[`OrderBookLevel3`](../interfaces/OrderBookLevel3.md)\>
 
@@ -196,7 +196,7 @@ https://docs.cloud.coinbase.com/exchange/reference/exchangerestapi_getproductboo
 
 #### Defined in
 
-[product/ProductAPI.ts:350](https://github.com/bennycode/coinbase-pro-node/blob/2016513/src/product/ProductAPI.ts#L350)
+[product/ProductAPI.ts:350](https://github.com/bennycode/coinbase-pro-node/blob/dacd532/src/product/ProductAPI.ts#L350)
 
 ---
 
@@ -222,7 +222,7 @@ https://docs.cloud.coinbase.com/exchange/reference/exchangerestapi_getproductsta
 
 #### Defined in
 
-[product/ProductAPI.ts:381](https://github.com/bennycode/coinbase-pro-node/blob/2016513/src/product/ProductAPI.ts#L381)
+[product/ProductAPI.ts:381](https://github.com/bennycode/coinbase-pro-node/blob/dacd532/src/product/ProductAPI.ts#L381)
 
 ---
 
@@ -248,7 +248,7 @@ https://docs.cloud.coinbase.com/exchange/reference/exchangerestapi_getproducttic
 
 #### Defined in
 
-[product/ProductAPI.ts:393](https://github.com/bennycode/coinbase-pro-node/blob/2016513/src/product/ProductAPI.ts#L393)
+[product/ProductAPI.ts:393](https://github.com/bennycode/coinbase-pro-node/blob/dacd532/src/product/ProductAPI.ts#L393)
 
 ---
 
@@ -268,7 +268,7 @@ https://docs.cloud.coinbase.com/exchange/reference/exchangerestapi_getproducts
 
 #### Defined in
 
-[product/ProductAPI.ts:309](https://github.com/bennycode/coinbase-pro-node/blob/2016513/src/product/ProductAPI.ts#L309)
+[product/ProductAPI.ts:309](https://github.com/bennycode/coinbase-pro-node/blob/dacd532/src/product/ProductAPI.ts#L309)
 
 ---
 
@@ -295,7 +295,7 @@ https://docs.cloud.coinbase.com/exchange/reference/exchangerestapi_getproducttra
 
 #### Defined in
 
-[product/ProductAPI.ts:322](https://github.com/bennycode/coinbase-pro-node/blob/2016513/src/product/ProductAPI.ts#L322)
+[product/ProductAPI.ts:322](https://github.com/bennycode/coinbase-pro-node/blob/dacd532/src/product/ProductAPI.ts#L322)
 
 ---
 
@@ -318,7 +318,7 @@ Stop watching a specific candle interval.
 
 #### Defined in
 
-[product/ProductAPI.ts:284](https://github.com/bennycode/coinbase-pro-node/blob/2016513/src/product/ProductAPI.ts#L284)
+[product/ProductAPI.ts:284](https://github.com/bennycode/coinbase-pro-node/blob/dacd532/src/product/ProductAPI.ts#L284)
 
 ---
 
@@ -344,4 +344,4 @@ Handle to stop the watch interval
 
 #### Defined in
 
-[product/ProductAPI.ts:260](https://github.com/bennycode/coinbase-pro-node/blob/2016513/src/product/ProductAPI.ts#L260)
+[product/ProductAPI.ts:260](https://github.com/bennycode/coinbase-pro-node/blob/dacd532/src/product/ProductAPI.ts#L260)

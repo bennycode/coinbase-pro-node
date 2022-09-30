@@ -19,7 +19,7 @@
 
 #### Defined in
 
-[order/OrderAPI.ts:80](https://github.com/bennycode/coinbase-pro-node/blob/2016513/src/order/OrderAPI.ts#L80)
+[order/OrderAPI.ts:80](https://github.com/bennycode/coinbase-pro-node/blob/dacd532/src/order/OrderAPI.ts#L80)
 
 ---
 
@@ -29,7 +29,7 @@
 
 #### Defined in
 
-[order/OrderAPI.ts:81](https://github.com/bennycode/coinbase-pro-node/blob/2016513/src/order/OrderAPI.ts#L81)
+[order/OrderAPI.ts:81](https://github.com/bennycode/coinbase-pro-node/blob/dacd532/src/order/OrderAPI.ts#L81)
 
 ---
 
@@ -39,7 +39,7 @@
 
 #### Defined in
 
-[order/OrderAPI.ts:82](https://github.com/bennycode/coinbase-pro-node/blob/2016513/src/order/OrderAPI.ts#L82)
+[order/OrderAPI.ts:82](https://github.com/bennycode/coinbase-pro-node/blob/dacd532/src/order/OrderAPI.ts#L82)
 
 ---
 
@@ -49,4 +49,4 @@
 
 #### Defined in
 
-[order/OrderAPI.ts:83](https://github.com/bennycode/coinbase-pro-node/blob/2016513/src/order/OrderAPI.ts#L83)
+[order/OrderAPI.ts:83](https://github.com/bennycode/coinbase-pro-node/blob/dacd532/src/order/OrderAPI.ts#L83)
