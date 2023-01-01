@@ -5,7 +5,7 @@
   "dependencies": {
     "@types/node": "18.11.18",
     "@types/ws": "8.5.3",
-    "axios": "1.2.0",
+    "axios": "1.2.2",
     "axios-retry": "3.3.1",
     "buffer": "6.0.3",
     "bufferutil": "4.0.7",
