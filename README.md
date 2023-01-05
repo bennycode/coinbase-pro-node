@@ -146,6 +146,10 @@ Checkout [GitHub's dependency graph][6] to see who uses "coinbase-pro-node" in p
 
 [![Benny Neugebauer on Stack Exchange][stack_exchange_bennyn_badge]][stack_exchange_bennyn_url]
 
+## Stargazers
+
+[![Stargazers](https://reporoster.com/stars/bennycode/coinbase-pro-node)](https://github.com/bennycode/coinbase-pro-node/stargazers)
+
 ## Contributing
 
 Contributions, issues and feature requests are welcome!
