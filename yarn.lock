@@ -1034,10 +1034,10 @@ eslint-plugin-sort-keys-fix@1.1.2:
     natural-compare "^1.4.0"
     requireindex "~1.2.0"
 
-eslint-plugin-typescript-sort-keys@2.1.0:
-  version "2.1.0"
-  resolved "https://registry.npmjs.org/eslint-plugin-typescript-sort-keys/-/eslint-plugin-typescript-sort-keys-2.1.0.tgz"
-  integrity sha512-ET7ABypdz19m47QnKynzNfWPi4CTNQ5jQQC1X5d0gojIwblkbGiCa5IilsqzBTmqxZ0yXDqKBO/GBkBFQCOFsg==
+eslint-plugin-typescript-sort-keys@2.3.0:
+  version "2.3.0"
+  resolved "https://registry.npmjs.org/eslint-plugin-typescript-sort-keys/-/eslint-plugin-typescript-sort-keys-2.3.0.tgz#d9b17983e550a70f57f7a4c8abc7a5ac115bae61"
+  integrity sha512-3LAcYulo5gNYiPWee+TksITfvWeBuBjGgcSLTacPESFVKEoy8laOQuZvJlSCwTBHT2SCGIxr3bJ56zuux+3MCQ==
   dependencies:
     "@typescript-eslint/experimental-utils" "^5.0.0"
     json-schema "^0.4.0"
