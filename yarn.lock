@@ -2636,10 +2636,10 @@ typedarray-to-buffer@^3.1.5:
   dependencies:
     is-typedarray "^1.0.0"
 
-typedoc-plugin-markdown@3.15.0:
-  version "3.15.0"
-  resolved "https://registry.npmjs.org/typedoc-plugin-markdown/-/typedoc-plugin-markdown-3.15.0.tgz#5352f79d583f6d36f2584316fb82545503fe17bd"
-  integrity sha512-q/zULWrdpCxHVUAICBvVbzIysZ70P7ZvwPzjGcfh9WokeozZWVOsw3RGerg6Yt8A0ajqEhNFJshcQvBo27vHXg==
+typedoc-plugin-markdown@3.15.3:
+  version "3.15.3"
+  resolved "https://registry.npmjs.org/typedoc-plugin-markdown/-/typedoc-plugin-markdown-3.15.3.tgz#f5419a32b93efbdc0fcba60ca4de37727aeb8ba9"
+  integrity sha512-idntFYu3vfaY3eaD+w9DeRd0PmNGqGuNLKihPU9poxFGnATJYGn9dPtEhn2QrTdishFMg7jPXAhos+2T6YCWRQ==
   dependencies:
     handlebars "^4.7.7"
 
