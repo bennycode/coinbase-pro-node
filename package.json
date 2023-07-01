@@ -6,7 +6,7 @@
     "@types/node": "20.3.3",
     "@types/ws": "8.5.3",
     "axios": "0.27.2",
-    "axios-retry": "3.4.0",
+    "axios-retry": "3.5.1",
     "buffer": "6.0.3",
     "bufferutil": "4.0.7",
     "reconnecting-websocket": "4.4.0",
