@@ -105,5 +105,5 @@
     "test:types": "yarn lint:types",
     "prepare": "husky install"
   },
-  "version": "6.0.0"
+  "version": "7.0.0"
 }
