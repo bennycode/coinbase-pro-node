@@ -193,7 +193,11 @@ describe('WithdrawAPI', () => {
         );
 
       const paymentMethods = await global.client.rest.withdraw.getPaymentMethods();
-      expect(paymentMethods[0].limits.instant_buy[0].period_in_days).toBe(7);
+      if ('instant_buy' in paymentMethods[0].limits && paymentMethods[0].limits.instant_buy) {
+        expect(paymentMethods[0].limits.instant_buy[0].period_in_days).toBe(7);
+      } else {
+        throw new Error('No "instant_buy" limit found.');
+      }
     });
   });
 });
