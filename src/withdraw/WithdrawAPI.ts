@@ -1,3 +1,4 @@
+import {z} from 'zod';
 import {AxiosInstance} from 'axios';
 
 export interface CryptoWithdrawal {
@@ -35,36 +36,52 @@ export interface WithdrawalFeeEstimate {
   fee: string;
 }
 
-export interface PaymentMethodLimit {
-  period_in_days: number;
-  remaining: {
-    amount: string;
-    currency: string;
-  };
-  total: {
-    amount: string;
-    currency: string;
-  };
-}
+export const PaymentMethodLimitSchema = z.object({
+  period_in_days: z.number(),
+  remaining: z.object({
+    amount: z.string(),
+    currency: z.string(),
+  }),
+  total: z.object({
+    amount: z.string(),
+    currency: z.string(),
+  }),
+});
 
-export interface PaymentMethod {
-  allow_buy: boolean;
-  allow_deposit: boolean;
-  allow_sell: boolean;
-  allow_withdraw: boolean;
-  currency: string;
-  id: string;
-  limits: {
-    buy: PaymentMethodLimit[];
-    deposit: PaymentMethodLimit[];
-    instant_buy: PaymentMethodLimit[];
-    sell: PaymentMethodLimit[];
-  };
-  name: string;
-  primary_buy: boolean;
-  primary_sell: boolean;
-  type: string;
-}
+export type PaymentMethodLimit = z.infer<typeof PaymentMethodLimitSchema>;
+
+export const PaymentMethodSchema = z.object({
+  allow_buy: z.boolean(),
+  allow_deposit: z.boolean(),
+  allow_sell: z.boolean(),
+  allow_withdraw: z.boolean(),
+  created_at: z.string().nullable().or(z.undefined()),
+  currency: z.string().nullable().or(z.undefined()),
+  fiat_account: z
+    .object({
+      id: z.string(),
+      resource: z.string(),
+    })
+    .optional(),
+  id: z.string(),
+  limits: z
+    .object({
+      buy: z.array(PaymentMethodLimitSchema).optional(),
+      deposit: z.array(PaymentMethodLimitSchema).optional(),
+      instant_buy: z.array(PaymentMethodLimitSchema).optional(),
+      sell: z.array(PaymentMethodLimitSchema).optional(),
+    })
+    .or(z.object({})),
+  name: z.string(),
+  primary_buy: z.boolean(),
+  primary_sell: z.boolean(),
+  resource: z.string().nullable().or(z.undefined()),
+  resource_path: z.string().nullable().or(z.undefined()),
+  type: z.string(),
+  updated_at: z.string().nullable().or(z.undefined()),
+});
+
+export type PaymentMethod = z.infer<typeof PaymentMethodSchema>;
 
 export class WithdrawAPI {
   static readonly URL = {
@@ -183,6 +200,6 @@ export class WithdrawAPI {
   async getPaymentMethods(): Promise<PaymentMethod[]> {
     const resource = WithdrawAPI.URL.LIST_PAYMENT_METHODS;
     const response = await this.apiClient.get<PaymentMethod[]>(resource);
-    return response.data;
+    return z.array(PaymentMethodSchema).parse(response.data);
   }
 }
