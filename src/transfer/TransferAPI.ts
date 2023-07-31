@@ -1,31 +1,7 @@
+import {z} from 'zod';
 import {AxiosInstance} from 'axios';
-import {ISO_8601_MS_UTC, PaginatedData, Pagination} from '../payload/common';
+import {PaginatedData, Pagination} from '../payload/common';
 import querystring from 'querystring';
-
-export interface TransferInformation {
-  account_id: string;
-  amount: string;
-  canceled_at?: ISO_8601_MS_UTC;
-  completed_at?: ISO_8601_MS_UTC;
-  created_at: ISO_8601_MS_UTC;
-  details: {
-    coinbase_account_id?: string;
-    coinbase_payment_method_id?: string;
-    coinbase_transaction_id?: string;
-    coinbase_withdrawal_id?: string;
-    crypto_address?: string;
-    crypto_transaction_hash?: string;
-    crypto_transaction_id?: string;
-    destination_tag: string;
-    destination_tag_name?: string;
-    sent_to_address?: string;
-  };
-  id: string;
-  processed_at?: ISO_8601_MS_UTC;
-  type: string;
-  user_id: string;
-  user_nonce?: string;
-}
 
 export enum TransferType {
   DEPOSIT = 'deposit',
@@ -33,6 +9,37 @@ export enum TransferType {
   INTERNAL_WITHDRAW = 'internal_withdraw',
   WITHDRAW = 'withdraw',
 }
+
+export const TransferInformationSchema = z.object({
+  account_id: z.string(),
+  amount: z.string(),
+  canceled_at: z.string().nullable().or(z.undefined()),
+  completed_at: z.string().nullable().or(z.undefined()),
+  created_at: z.string(),
+  currency: z.string().nullable().or(z.undefined()),
+  details: z.object({
+    coinbase_account_id: z.string().nullable().or(z.undefined()),
+    coinbase_payment_method_id: z.string().nullable().or(z.undefined()),
+    coinbase_transaction_id: z.string().nullable().or(z.undefined()),
+    coinbase_withdrawal_id: z.string().nullable().or(z.undefined()),
+    crypto_address: z.string().nullable().or(z.undefined()),
+    crypto_transaction_hash: z.string().nullable().or(z.undefined()),
+    crypto_transaction_id: z.string().nullable().or(z.undefined()),
+    destination_tag: z.string().nullable().or(z.undefined()),
+    destination_tag_name: z.string().nullable().or(z.undefined()),
+    sent_to_address: z.string().nullable().or(z.undefined()),
+    tx_service_transaction_id: z.string().optional(),
+  }),
+  id: z.string(),
+  idem: z.string().nullable().or(z.undefined()),
+  processed_at: z.string().nullable().or(z.undefined()),
+  profile_id: z.string().nullable().or(z.undefined()),
+  type: z.nativeEnum(TransferType),
+  user_id: z.string(),
+  user_nonce: z.string().nullable().or(z.undefined()),
+});
+
+export type TransferInformation = z.infer<typeof TransferInformationSchema>;
 
 export class TransferAPI {
   static readonly URL = {
@@ -67,6 +74,9 @@ export class TransferAPI {
       params,
       paramsSerializer: querystring.stringify,
     });
+
+    z.array(TransferInformationSchema).parse(response.data);
+
     return {
       data: response.data,
       pagination: {
@@ -85,6 +95,6 @@ export class TransferAPI {
   async getTransfer(transferId: string): Promise<TransferInformation> {
     const resource = `${TransferAPI.URL.TRANSFERS}/${transferId}`;
     const response = await this.apiClient.get<TransferInformation>(resource);
-    return response.data;
+    return TransferInformationSchema.parse(response.data);
   }
 }
