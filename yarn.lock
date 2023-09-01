@@ -648,10 +648,10 @@ asynckit@^0.4.0:
   resolved "https://registry.npmjs.org/asynckit/-/asynckit-0.4.0.tgz"
   integrity sha1-x57Zf380y48robyXkLzDZkdLS3k=
 
-axios-retry@3.6.0:
-  version "3.6.0"
-  resolved "https://registry.npmjs.org/axios-retry/-/axios-retry-3.6.0.tgz#3bf6edbce42e526a3f7ac70b1891b645adb4c301"
-  integrity sha512-jtH4qWTKZ2a17dH6tjq52Y1ssNV0lKge6/Z9Lw67s9Wt01nGTg4hg7/LJBGYfDci44NTANJQlCPHPOT/TSFm9w==
+axios-retry@3.7.0:
+  version "3.7.0"
+  resolved "https://registry.npmjs.org/axios-retry/-/axios-retry-3.7.0.tgz#d5007755d257b97e08d846089976f838b9db9ef9"
+  integrity sha512-ZTnCkJbRtfScvwiRnoVskFAfvU0UG3xNcsjwTR0mawSbIJoothxn67gKsMaNAFHRXJ1RmuLhmZBzvyXi3+9WyQ==
   dependencies:
     "@babel/runtime" "^7.15.4"
     is-retry-allowed "^2.2.0"
