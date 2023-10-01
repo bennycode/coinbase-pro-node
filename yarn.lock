@@ -358,10 +358,10 @@
   resolved "https://registry.npmjs.org/@types/minimatch/-/minimatch-3.0.4.tgz"
   integrity sha512-1z8k4wzFnNjVK/tlxvrWuK5WMt6mydWWP7+zvH5eFep4oj+UkrfiJTRtjCeBXNpwaA/FYqqtb4/QS4ianFpIRA==
 
-"@types/node@*", "@types/node@20.5.7":
-  version "20.5.7"
-  resolved "https://registry.npmjs.org/@types/node/-/node-20.5.7.tgz#4b8ecac87fbefbc92f431d09c30e176fc0a7c377"
-  integrity sha512-dP7f3LdZIysZnmvP3ANJYTSwg+wLLl8p7RqniVlV7j+oXSXAbt9h0WIBFmJy5inWZoX9wZN6eXx+YXd9Rh3RBA==
+"@types/node@*", "@types/node@20.8.0":
+  version "20.8.0"
+  resolved "https://registry.npmjs.org/@types/node/-/node-20.8.0.tgz#10ddf0119cf20028781c06d7115562934e53f745"
+  integrity sha512-LzcWltT83s1bthcvjBmiBvGJiiUe84NWRHkw+ZV6Fr41z2FbIzvc815dk2nQ3RAKMuN2fkenM/z3Xv2QzEpYxQ==
 
 "@types/semver@^7.3.12":
   version "7.3.13"
