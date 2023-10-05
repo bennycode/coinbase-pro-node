@@ -4,7 +4,7 @@
 
 ---
 
-🌟 _Better than the original Coinbase API. [See why](./#problems-with-official-coinbase-apis)._ 🌟
+🌟 _Better than the original Coinbase API. [See why](#problems-with-official-coinbase-apis)._ 🌟
 
 Community-maintained [Coinbase API][1] for Node.js & Deno, written in TypeScript and covered by tests.
 
