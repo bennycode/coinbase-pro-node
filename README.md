@@ -2,7 +2,11 @@
 
 ![Language Details](https://img.shields.io/github/languages/top/bennycode/coinbase-pro-node) ![Code Coverage](https://img.shields.io/codecov/c/github/bennycode/coinbase-pro-node/main) ![License](https://img.shields.io/npm/l/coinbase-pro-node.svg) ![Package Version](https://img.shields.io/npm/v/coinbase-pro-node.svg)
 
-Unofficial [Coinbase API][1] for Node.js, written in TypeScript and covered by tests.
+---
+
+🌟 _Better than the original Coinbase API. [See why](./#problems-with-official-coinbase-apis)._ 🌟
+
+Community-maintained [Coinbase API][1] for Node.js & Deno, written in TypeScript and covered by tests.
 
 ## Motivation
 
@@ -10,15 +14,15 @@ The purpose of this [coinbase-pro-node][5] package is to maintain a recent Coinb
 
 ## Features
 
-- **Typed.** Source code is 100% TypeScript. No need to install external typings.
-- **Tested.** Code coverage is 100%. No surprises when using "coinbase-pro-node".
-- **Convenient.** Request throttling is built-in. Don't worry about rate limiting.
-- **Comfortable.** More than an API client. You will get extras like [candle watching](https://github.com/bennycode/coinbase-pro-node/blob/main/src/demo/rest-watch-candles.ts).
-- **Maintained.** Automated security updates. No threats from outdated dependencies.
-- **Documented.** Get started with [demo scripts][3] and [generated documentation][4].
-- **Modern.** HTTP client with Promise API. Don't lose yourself in callback hell.
-- **Robust.** WebSocket reconnection is built-in. No problems if your Wi-Fi is gone.
-- **Reliable.** Following [semantic versioning][8]. Get notified about breaking changes.
+- ✅ **Typed.** Source code is 100% TypeScript. No need to install external typings.
+- ✅ **Tested.** Code coverage is 100%. No surprises when using "coinbase-pro-node".
+- ✅ **Convenient.** Request throttling is built-in. Don't worry about rate limiting.
+- ✅ **Comfortable.** More than an API client. You will get extras like [candle watching](https://github.com/bennycode/coinbase-pro-node/blob/main/src/demo/rest-watch-candles.ts).
+- ✅ **Maintained.** Automated security updates. No threats from outdated dependencies.
+- ✅ **Documented.** Get started with [demo scripts][3] and [generated documentation][4].
+- ✅ **Modern.** HTTP client with Promise API. Don't lose yourself in callback hell.
+- ✅ **Robust.** WebSocket reconnection is built-in. No problems if your Wi-Fi is gone.
+- ✅ **Reliable.** Following [semantic versioning][8]. Get notified about breaking changes.
 
 ## Installation
 
