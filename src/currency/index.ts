@@ -1,1 +1,1 @@
-export * from './CurrencyAPI';
+export * from './CurrencyAPI.js';

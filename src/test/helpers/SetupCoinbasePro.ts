@@ -1,12 +1,12 @@
-import {CoinbasePro} from '../../CoinbasePro';
+import {CoinbasePro} from '../../CoinbasePro.js';
 import nock from 'nock';
-import {TimeAPI} from '../../time/TimeAPI';
+import {TimeAPI} from '../../time/TimeAPI.js';
 
 declare global {
-  /* eslint-disable no-var */
-  var client: CoinbasePro;
-  var REST_URL: string;
-  /* eslint-enable no-var */
+  namespace globalThis {
+    var client: CoinbasePro;
+    var REST_URL: string;
+  }
 }
 
 // URL to mock a server using "nock":

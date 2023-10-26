@@ -1,6 +1,7 @@
 {
   "helpers": ["test/helpers/**/*.ts"],
   "random": true,
+  "jsLoader": "import",
   "spec_dir": "src",
   "spec_files": ["**/*.test.ts", "**/*.test.node.ts"],
   "stopSpecOnExpectationFailure": true,

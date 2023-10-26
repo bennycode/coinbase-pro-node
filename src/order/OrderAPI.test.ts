@@ -1,6 +1,6 @@
 import nock from 'nock';
-import {NewOrder, OrderAPI, OrderStatus, OrderType, SelfTradePrevention} from './OrderAPI';
-import {OrderSide} from '../payload';
+import {NewOrder, OrderAPI, OrderStatus, OrderType, SelfTradePrevention} from './OrderAPI.js';
+import {OrderSide} from '../payload/index.js';
 import {AxiosError} from 'axios';
 
 describe('OrderAPI', () => {

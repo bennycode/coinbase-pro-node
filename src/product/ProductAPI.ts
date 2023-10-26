@@ -1,7 +1,7 @@
 import {AxiosInstance, AxiosResponse} from 'axios';
-import {ISO_8601_MS_UTC, OrderSide, PaginatedData, Pagination} from '../payload/common';
-import {CandleBucketUtil} from './CandleBucketUtil';
-import {RESTClient} from '..';
+import {ISO_8601_MS_UTC, OrderSide, PaginatedData, Pagination} from '../payload/common.js';
+import {CandleBucketUtil} from './CandleBucketUtil.js';
+import {RESTClient} from '../index.js';
 
 export interface Product {
   base_currency: string;

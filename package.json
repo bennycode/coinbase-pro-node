@@ -100,10 +100,11 @@
     "release:major": "generate-changelog -M && yarn changelog:commit && yarn docs:release && npm version major",
     "release:minor": "generate-changelog -m && yarn changelog:commit && yarn docs:release && npm version minor",
     "release:patch": "generate-changelog -p && yarn changelog:commit && yarn docs:release && npm version patch",
-    "test": "nyc --nycrc-path=nyc.config.coverage.json jasmine --config=jasmine.json",
+    "test": "ts-node-esm ./node_modules/.bin/jasmine --config=jasmine.json",
     "test:dev": "nyc --nycrc-path=nyc.config.json jasmine --config=jasmine.json",
     "test:types": "yarn lint:types",
     "prepare": "husky install"
   },
+  "type": "module",
   "version": "7.0.0"
 }

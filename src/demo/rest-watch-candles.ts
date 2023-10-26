@@ -1,5 +1,5 @@
-import {initClient} from './init-client';
-import {Candle, CandleGranularity, ProductEvent} from '..';
+import {initClient} from './init-client.js';
+import {Candle, CandleGranularity, ProductEvent} from '../index.js';
 
 async function main(): Promise<void> {
   // 1. Base configuration

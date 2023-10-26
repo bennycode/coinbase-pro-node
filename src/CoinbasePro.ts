@@ -1,6 +1,6 @@
-import {RESTClient} from './client/RESTClient';
-import {WebSocketClient} from './client/WebSocketClient';
-import {RequestSetup, RequestSigner, SignedRequest} from './auth/RequestSigner';
+import {RESTClient} from './client/RESTClient.js';
+import {WebSocketClient} from './client/WebSocketClient.js';
+import {RequestSetup, RequestSigner, SignedRequest} from './auth/RequestSigner.js';
 
 export interface ClientAuthenticationBase {
   apiKey: string;

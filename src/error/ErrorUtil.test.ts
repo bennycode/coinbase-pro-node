@@ -1,4 +1,4 @@
-import {getErrorMessage, gotRateLimited, inAirPlaneMode} from './ErrorUtil';
+import {getErrorMessage, gotRateLimited, inAirPlaneMode} from './ErrorUtil.js';
 import type {AxiosError} from 'axios';
 
 describe('ErrorUtil', () => {

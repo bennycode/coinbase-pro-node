@@ -1,1 +1,1 @@
-export * from './AccountAPI';
+export * from './AccountAPI.js';

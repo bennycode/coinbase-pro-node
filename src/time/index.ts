@@ -1,1 +1,1 @@
-export * from './TimeAPI';
+export * from './TimeAPI.js';

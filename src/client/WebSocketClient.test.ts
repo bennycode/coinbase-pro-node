@@ -1,15 +1,15 @@
 import WebSocket = require('ws');
-import tickerBTCUSD from '../test/fixtures/ws/ticker/BTC-USD.json';
-import statusPayload from '../test/fixtures/ws/status/status.json';
-import matchesBTCUSD from '../test/fixtures/ws/matches/BTC-USD.json';
-import l2snapshotBTCUSD from '../test/fixtures/ws/level2/snapshot.json';
-import l2updateBTCUSD from '../test/fixtures/ws/level2/l2update.json';
-import fullReceivedLimitBTCUSD from '../test/fixtures/ws/full/received-limit.json';
-import fullActivateBTCUSD from '../test/fixtures/ws/full/activate.json';
-import fullOpenBTCUSD from '../test/fixtures/ws/full/open.json';
-import fullDoneBTCUSD from '../test/fixtures/ws/full/done.json';
-import fullChangeBTCUSD from '../test/fixtures/ws/full/change.json';
-import emptySubscriptions from '../test/fixtures/ws/empty-subscriptions.json';
+import tickerBTCUSD from '../test/fixtures/ws/ticker/BTC-USD.json' assert { type: "json" };
+import statusPayload from '../test/fixtures/ws/status/status.json' assert { type: "json" };
+import matchesBTCUSD from '../test/fixtures/ws/matches/BTC-USD.json' assert { type: "json" };
+import l2snapshotBTCUSD from '../test/fixtures/ws/level2/snapshot.json' assert { type: "json" };
+import l2updateBTCUSD from '../test/fixtures/ws/level2/l2update.json' assert { type: "json" };
+import fullReceivedLimitBTCUSD from '../test/fixtures/ws/full/received-limit.json' assert { type: "json" };
+import fullActivateBTCUSD from '../test/fixtures/ws/full/activate.json' assert { type: "json" };
+import fullOpenBTCUSD from '../test/fixtures/ws/full/open.json' assert { type: "json" };
+import fullDoneBTCUSD from '../test/fixtures/ws/full/done.json' assert { type: "json" };
+import fullChangeBTCUSD from '../test/fixtures/ws/full/change.json' assert { type: "json" };
+import emptySubscriptions from '../test/fixtures/ws/empty-subscriptions.json' assert { type: "json" };
 import {
   WebSocketChannelName,
   WebSocketClient,
@@ -19,7 +19,7 @@ import {
   WebSocketRequest,
   WebSocketChannel,
   WebSocketErrorMessage,
-} from './WebSocketClient';
+} from './WebSocketClient.js';
 import ReconnectingWebSocket from 'reconnecting-websocket';
 
 const WEBSOCKET_PORT = 8087;
@@ -28,7 +28,7 @@ const WEBSOCKET_URL = `ws://localhost:${WEBSOCKET_PORT}`;
 let server: WebSocket.Server;
 
 describe('WebSocketClient', () => {
-  function createWebSocketClient(url: string = WEBSOCKET_URL): WebSocketClient {
+  function createWebSocketClient(url: string = WEBSOCKET_URL) {
     return new WebSocketClient(url, () => {
       return Promise.resolve({
         key: '',
@@ -89,7 +89,7 @@ describe('WebSocketClient', () => {
     it('supports custom reconnect options', async () => {
       const ws = createWebSocketClient();
       const socket = ws.connect({startClosed: true});
-      expect(socket.readyState).toBe(ReconnectingWebSocket.CLOSED);
+      expect(socket.readyState).toBe(ReconnectingWebSocket.default.CLOSED);
     });
   });
 

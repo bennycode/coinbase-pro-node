@@ -1,2 +1,2 @@
-export * from './RESTClient';
-export * from './WebSocketClient';
+export * from './RESTClient.js';
+export * from './WebSocketClient.js';

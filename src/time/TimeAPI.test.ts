@@ -1,4 +1,4 @@
-import {TimeAPI, TimeSkew} from './TimeAPI';
+import {TimeAPI, TimeSkew} from './TimeAPI.js';
 import nock from 'nock';
 
 describe('TimeAPI', () => {

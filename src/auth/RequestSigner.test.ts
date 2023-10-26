@@ -1,5 +1,5 @@
-import {RequestSetup, RequestSigner, SignedRequest} from './RequestSigner';
-import {ClientAuthentication} from '../CoinbasePro';
+import {RequestSetup, RequestSigner, SignedRequest} from './RequestSigner.js';
+import {ClientAuthentication} from '../CoinbasePro.js';
 
 describe('RequestSigner', () => {
   describe('signRequest', () => {

@@ -1,6 +1,6 @@
 import {z} from 'zod';
 import {AxiosInstance} from 'axios';
-import {PaginatedData, Pagination} from '../payload/common';
+import {PaginatedData, Pagination} from '../payload/common.js';
 import querystring from 'querystring';
 
 export enum TransferType {

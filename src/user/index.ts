@@ -1,1 +1,1 @@
-export * from './UserAPI';
+export * from './UserAPI.js';

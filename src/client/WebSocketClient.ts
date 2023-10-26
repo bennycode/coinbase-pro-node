@@ -1,8 +1,8 @@
-import {EventEmitter} from 'events';
+import {EventEmitter} from 'node:events';
 import ReconnectingWebSocket, {Event, ErrorEvent, Options, CloseEvent} from 'reconnecting-websocket';
 import WebSocket from 'ws';
-import {RequestSetup, SignedRequest} from '../auth/RequestSigner';
-import {OrderSide, ISO_8601_MS_UTC, UUID_V4, UserAPI, CurrencyDetail, Product} from '..';
+import {RequestSetup, SignedRequest} from '../auth/RequestSigner.js';
+import {OrderSide, ISO_8601_MS_UTC, UUID_V4, UserAPI, CurrencyDetail, Product} from '../index.js';
 
 export interface WebSocketChannel {
   name: WebSocketChannelName;
@@ -356,7 +356,7 @@ export class WebSocketClient extends EventEmitter {
   };
 
   private readonly baseURL: string;
-  public socket: ReconnectingWebSocket | undefined;
+  public socket: ReconnectingWebSocket.default | undefined;
 
   private pingInterval?: NodeJS.Timeout;
   private pongTimeout?: NodeJS.Timeout;
@@ -378,7 +378,7 @@ export class WebSocketClient extends EventEmitter {
    *   will be merged with sensible default values.
    * @see https://docs.cloud.coinbase.com/exchange/docs/websocket-overview
    */
-  connect(reconnectOptions?: Options): ReconnectingWebSocket {
+  connect(reconnectOptions?: Options) {
     if (this.socket) {
       throw Error(
         `You established already a WebSocket connection. Please call "disconnect" first before creating a new one.`
@@ -386,7 +386,7 @@ export class WebSocketClient extends EventEmitter {
     }
 
     const options = this.mergeOptions(reconnectOptions);
-    this.socket = new ReconnectingWebSocket(this.baseURL, [], options);
+    this.socket = new ReconnectingWebSocket.default(this.baseURL, [], options);
 
     this.socket.onclose = (event: CloseEvent): void => {
       this.cleanupListener();

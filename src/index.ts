@@ -1,15 +1,12 @@
-import {CoinbasePro} from './CoinbasePro';
-export default CoinbasePro;
-
-export * from './account';
-export * from './client';
-export * from './CoinbasePro';
-export * from './currency';
-export * from './fee';
-export * from './fill';
-export * from './order';
-export * from './payload';
-export * from './product';
-export * from './profile';
-export * from './time';
-export * from './user';
+export * from './account/index.js';
+export * from './client/index.js';
+export * from './CoinbasePro.js';
+export * from './currency/index.js';
+export * from './fee/index.js';
+export * from './fill/index.js';
+export * from './order/index.js';
+export * from './payload/index.js';
+export * from './product/index.js';
+export * from './profile/index.js';
+export * from './time/index.js';
+export * from './user/index.js';
