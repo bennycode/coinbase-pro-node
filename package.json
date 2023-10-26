@@ -19,11 +19,11 @@
     "@types/jasmine": "4.3.5",
     "@typescript-eslint/eslint-plugin": "5.62.0",
     "@typescript-eslint/parser": "5.62.0",
-    "c8": "^8.0.1",
+    "c8": "8.0.1",
     "cross-env": "7.0.3",
     "dotenv-defaults": "5.0.2",
     "eslint-config-prettier": "9.0.0",
-    "eslint-plugin-prettier": "^5.0.1",
+    "eslint-plugin-prettier": "5.0.1",
     "eslint-plugin-sort-keys-fix": "1.1.2",
     "eslint-plugin-typescript-sort-keys": "2.3.0",
     "eslint": "8.46.0",
@@ -37,7 +37,7 @@
     "ts-node": "10.9.1",
     "typedoc-plugin-markdown": "3.15.4",
     "typedoc": "0.25.2",
-    "typescript": "^5.2.2"
+    "typescript": "5.2.2"
   },
   "engines": {
     "node": ">= 10.9",
