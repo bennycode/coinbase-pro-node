@@ -364,7 +364,10 @@ export class WebSocketClient extends EventEmitter {
   private pingTime: number;
   private readonly pongTime: number;
 
-  constructor(baseURL: string, private readonly signRequest: (setup: RequestSetup) => Promise<SignedRequest>) {
+  constructor(
+    baseURL: string,
+    private readonly signRequest: (setup: RequestSetup) => Promise<SignedRequest>
+  ) {
     super();
     this.baseURL = baseURL;
     this.pingTime = 10_000;

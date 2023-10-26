@@ -61,7 +61,10 @@ export class RESTClient extends EventEmitter {
   private readonly httpClient: AxiosInstance;
   private readonly logger: DebugLogger;
 
-  constructor(baseURL: string, private readonly signRequest: (setup: RequestSetup) => Promise<SignedRequest>) {
+  constructor(
+    baseURL: string,
+    private readonly signRequest: (setup: RequestSetup) => Promise<SignedRequest>
+  ) {
     super();
     this.logger = util.debuglog('coinbase-pro-node');
 

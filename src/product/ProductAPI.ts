@@ -186,7 +186,10 @@ export class ProductAPI {
 
   private watchCandlesConfig: Map<string, CandleWatcherConfig> = new Map();
 
-  constructor(private readonly apiClient: AxiosInstance, private readonly restClient: RESTClient) {}
+  constructor(
+    private readonly apiClient: AxiosInstance,
+    private readonly restClient: RESTClient
+  ) {}
 
   /**
    * Get historic rates for a product. Rates are returned in grouped buckets (candlesticks) based on requested
