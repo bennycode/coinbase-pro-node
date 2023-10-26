@@ -1,5 +1,5 @@
 import {CandleBucketUtil, CandleGranularity} from './index.js';
-import oneWeekInMinutes from '../test/fixtures/rest/products/BTC-USD/candles/BTC-USD-1581292800000-60.json' assert { type: "json" };
+import oneWeekInMinutes from '../test/fixtures/rest/products/BTC-USD/candles/BTC-USD-1581292800000-60.json' assert {type: 'json'};
 
 describe('CandleBucketUtil', () => {
   beforeAll(() => {

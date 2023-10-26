@@ -1,7 +1,7 @@
 import {AxiosRequestConfig} from 'axios';
 import nock from 'nock';
 import {AccountAPI} from '../account/index.js';
-import listAccounts from '../test/fixtures/rest/accounts/GET-200.json' assert { type: "json" };
+import listAccounts from '../test/fixtures/rest/accounts/GET-200.json' assert {type: 'json'};
 import {RESTClient} from './RESTClient.js';
 
 describe('RESTClient', () => {

@@ -4,26 +4,26 @@ import axios, {
   AxiosInstance,
   AxiosInterceptorManager,
   AxiosRequestConfig,
-  AxiosResponse
+  AxiosResponse,
 } from 'axios';
-import axiosRetry, { isNetworkOrIdempotentRequestError } from 'axios-retry';
-import { EventEmitter } from 'node:events';
-import util, { DebugLogger } from 'node:util';
+import axiosRetry, {isNetworkOrIdempotentRequestError} from 'axios-retry';
+import {EventEmitter} from 'node:events';
+import util, {DebugLogger} from 'node:util';
 import querystring from 'querystring';
-import { AccountAPI } from '../account/index.js';
-import { RequestSetup, SignedRequest } from '../auth/RequestSigner.js';
-import { CurrencyAPI } from '../currency/index.js';
-import { getErrorMessage, gotRateLimited, inAirPlaneMode } from '../error/ErrorUtil.js';
-import { ExchangeRateAPI } from '../exchange-rate/ExchangeRateAPI.js';
-import { FeeAPI } from '../fee/index.js';
-import { FillAPI } from '../fill/index.js';
-import { OrderAPI } from '../order/index.js';
-import { Candle, CandleGranularity, ProductAPI, ProductEvent } from '../product/index.js';
-import { ProfileAPI } from '../profile/index.js';
-import { TimeAPI } from '../time/index.js';
-import { TransferAPI } from '../transfer/index.js';
-import { UserAPI } from '../user/index.js';
-import { WithdrawAPI } from '../withdraw/index.js';
+import {AccountAPI} from '../account/index.js';
+import {RequestSetup, SignedRequest} from '../auth/RequestSigner.js';
+import {CurrencyAPI} from '../currency/index.js';
+import {getErrorMessage, gotRateLimited, inAirPlaneMode} from '../error/ErrorUtil.js';
+import {ExchangeRateAPI} from '../exchange-rate/ExchangeRateAPI.js';
+import {FeeAPI} from '../fee/index.js';
+import {FillAPI} from '../fill/index.js';
+import {OrderAPI} from '../order/index.js';
+import {Candle, CandleGranularity, ProductAPI, ProductEvent} from '../product/index.js';
+import {ProfileAPI} from '../profile/index.js';
+import {TimeAPI} from '../time/index.js';
+import {TransferAPI} from '../transfer/index.js';
+import {UserAPI} from '../user/index.js';
+import {WithdrawAPI} from '../withdraw/index.js';
 
 export interface RESTClient {
   on(

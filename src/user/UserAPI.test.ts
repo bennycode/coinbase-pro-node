@@ -1,6 +1,6 @@
 import nock from 'nock';
-import verifyPayload from '../test/fixtures/rest/users/self/verify/GET-200.json' assert { type: "json" };
-import trailingVolume from '../test/fixtures/rest/users/self/trailing-volume/GET-200.json' assert { type: "json" };
+import verifyPayload from '../test/fixtures/rest/users/self/verify/GET-200.json' assert {type: 'json'};
+import trailingVolume from '../test/fixtures/rest/users/self/trailing-volume/GET-200.json' assert {type: 'json'};
 import {UserAPI} from './UserAPI.js';
 
 describe('UserAPI', () => {

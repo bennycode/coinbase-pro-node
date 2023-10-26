@@ -1,6 +1,6 @@
 import nock from 'nock';
-import getExchangeRates from '../test/fixtures/rest/v2/exchange-rates/GET-200.json' assert { type: "json" };
-import getExchangeRatesEUR from '../test/fixtures/rest/v2/exchange-rates/GET-200-EUR.json' assert { type: "json" };
+import getExchangeRates from '../test/fixtures/rest/v2/exchange-rates/GET-200.json' assert {type: 'json'};
+import getExchangeRatesEUR from '../test/fixtures/rest/v2/exchange-rates/GET-200-EUR.json' assert {type: 'json'};
 import {ExchangeRateAPI} from './ExchangeRateAPI.js';
 
 describe('ExchangeRateAPI', () => {

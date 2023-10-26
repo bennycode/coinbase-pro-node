@@ -4,8 +4,10 @@ import {TimeAPI} from '../../time/TimeAPI.js';
 
 declare global {
   namespace globalThis {
+    /* eslint-disable no-var */
     var client: CoinbasePro;
     var REST_URL: string;
+    /* eslint-enable no-var */
   }
 }
 

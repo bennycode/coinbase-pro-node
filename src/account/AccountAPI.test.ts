@@ -1,8 +1,8 @@
-import getAccount from '../test/fixtures/rest/accounts/322dfa88-e10d-4678-856d-2930eac3e62d/GET-200.json' assert { type: "json" };
-import getAccountHistory from '../test/fixtures/rest/accounts/322dfa88-e10d-4678-856d-2930eac3e62d/ledger/GET-200.json' assert { type: "json" };
-import getHolds from '../test/fixtures/rest/accounts/322dfa88-e10d-4678-856d-2930eac3e62d/holds/GET-200.json' assert { type: "json" };
-import genAddress from '../test/fixtures/rest/accounts/322dfa88-e10d-4678-856d-2930eac3e62d/addresses/POST-200.json' assert { type: "json" };
-import listAccounts from '../test/fixtures/rest/accounts/GET-200.json' assert { type: "json" };
+import getAccount from '../test/fixtures/rest/accounts/322dfa88-e10d-4678-856d-2930eac3e62d/GET-200.json' assert {type: 'json'};
+import getAccountHistory from '../test/fixtures/rest/accounts/322dfa88-e10d-4678-856d-2930eac3e62d/ledger/GET-200.json' assert {type: 'json'};
+import getHolds from '../test/fixtures/rest/accounts/322dfa88-e10d-4678-856d-2930eac3e62d/holds/GET-200.json' assert {type: 'json'};
+import genAddress from '../test/fixtures/rest/accounts/322dfa88-e10d-4678-856d-2930eac3e62d/addresses/POST-200.json' assert {type: 'json'};
+import listAccounts from '../test/fixtures/rest/accounts/GET-200.json' assert {type: 'json'};
 import nock from 'nock';
 import {AccountAPI, AccountType} from './AccountAPI.js';
 
