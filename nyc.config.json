@@ -5,6 +5,6 @@
   "extension": [".ts"],
   "include": ["src/**/*.ts"],
   "per-file": false,
-  "loader": ["ts-node/esm"],
-  "reporter": ["text-summary"]
+  "reporter": ["text-summary"],
+  "require": ["ts-node/register"]
 }
