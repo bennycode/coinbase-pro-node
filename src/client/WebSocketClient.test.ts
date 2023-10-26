@@ -1,26 +1,25 @@
 import WebSocket = require('ws');
-import tickerBTCUSD from '../test/fixtures/ws/ticker/BTC-USD.json' assert {type: 'json'};
-import statusPayload from '../test/fixtures/ws/status/status.json' assert {type: 'json'};
-import matchesBTCUSD from '../test/fixtures/ws/matches/BTC-USD.json' assert {type: 'json'};
-import l2snapshotBTCUSD from '../test/fixtures/ws/level2/snapshot.json' assert {type: 'json'};
-import l2updateBTCUSD from '../test/fixtures/ws/level2/l2update.json' assert {type: 'json'};
-import fullReceivedLimitBTCUSD from '../test/fixtures/ws/full/received-limit.json' assert {type: 'json'};
-import fullActivateBTCUSD from '../test/fixtures/ws/full/activate.json' assert {type: 'json'};
-import fullOpenBTCUSD from '../test/fixtures/ws/full/open.json' assert {type: 'json'};
-import fullDoneBTCUSD from '../test/fixtures/ws/full/done.json' assert {type: 'json'};
-import fullChangeBTCUSD from '../test/fixtures/ws/full/change.json' assert {type: 'json'};
-import emptySubscriptions from '../test/fixtures/ws/empty-subscriptions.json' assert {type: 'json'};
+import emptySubscriptions from '../test/fixtures/ws/empty-subscriptions.json' assert { type: 'json' };
+import fullActivateBTCUSD from '../test/fixtures/ws/full/activate.json' assert { type: 'json' };
+import fullChangeBTCUSD from '../test/fixtures/ws/full/change.json' assert { type: 'json' };
+import fullDoneBTCUSD from '../test/fixtures/ws/full/done.json' assert { type: 'json' };
+import fullOpenBTCUSD from '../test/fixtures/ws/full/open.json' assert { type: 'json' };
+import fullReceivedLimitBTCUSD from '../test/fixtures/ws/full/received-limit.json' assert { type: 'json' };
+import l2updateBTCUSD from '../test/fixtures/ws/level2/l2update.json' assert { type: 'json' };
+import l2snapshotBTCUSD from '../test/fixtures/ws/level2/snapshot.json' assert { type: 'json' };
+import matchesBTCUSD from '../test/fixtures/ws/matches/BTC-USD.json' assert { type: 'json' };
+import statusPayload from '../test/fixtures/ws/status/status.json' assert { type: 'json' };
+import tickerBTCUSD from '../test/fixtures/ws/ticker/BTC-USD.json' assert { type: 'json' };
 import {
+  WebSocketChannel,
   WebSocketChannelName,
   WebSocketClient,
+  WebSocketErrorMessage,
   WebSocketEvent,
+  WebSocketRequest,
   WebSocketRequestType,
   WebSocketResponseType,
-  WebSocketRequest,
-  WebSocketChannel,
-  WebSocketErrorMessage,
 } from './WebSocketClient.js';
-import ReconnectingWebSocket from 'reconnecting-websocket';
 
 const WEBSOCKET_PORT = 8087;
 const WEBSOCKET_URL = `ws://localhost:${WEBSOCKET_PORT}`;
@@ -89,7 +88,8 @@ describe('WebSocketClient', () => {
     it('supports custom reconnect options', async () => {
       const ws = createWebSocketClient();
       const socket = ws.connect({startClosed: true});
-      expect(socket.readyState).toBe(ReconnectingWebSocket.default.CLOSED);
+      // Info: State 3 is "ReconnectingWebSocket.CLOSED"
+      expect(socket.readyState).toBe(3);
     });
   });
 

@@ -386,7 +386,8 @@ export class WebSocketClient extends EventEmitter {
     }
 
     const options = this.mergeOptions(reconnectOptions);
-    this.socket = new ReconnectingWebSocket.default(this.baseURL, [], options);
+    // Quickfix: https://github.com/pladaria/reconnecting-websocket/issues/196#issue-1963876085
+    this.socket = new (ReconnectingWebSocket as any)(this.baseURL, [], options) as ReconnectingWebSocket.default;
 
     this.socket.onclose = (event: CloseEvent): void => {
       this.cleanupListener();
