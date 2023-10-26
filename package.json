@@ -90,7 +90,7 @@
     "fix": "yarn fix:other && yarn fix:code",
     "fix:code": "yarn lint:code --fix",
     "fix:other": "yarn prettier --write",
-    "lint": "yarn lint:types && yarn lint:code && yarn lint:other",
+    "lint": "yarn clean && yarn lint:types && yarn lint:code && yarn lint:other",
     "lint:code": "eslint --ext .js,.jsx,.ts,.tsx .",
     "lint:other": "yarn prettier --list-different",
     "lint:types": "tsc --noEmit",
