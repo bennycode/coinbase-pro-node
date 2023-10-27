@@ -1,1 +1,1 @@
-export * from './TransferAPI';
+export * from './TransferAPI.js';

@@ -1,13 +1,13 @@
 import nock from 'nock';
-import {Candle, CandleGranularity, OrderBookLevel, ProductAPI, ProductEvent} from '.';
-import Level1OrderBookBTCEUR from '../test/fixtures/rest/products/BTC-EUR/book/level-1.json';
-import Level2OrderBookBTCEUR from '../test/fixtures/rest/products/BTC-EUR/book/level-2.json';
-import Level2OrderBookBTCUSD from '../test/fixtures/rest/products/BTC-USD/book/level-2.json';
-import Level3OrderBookBTCUSD from '../test/fixtures/rest/products/BTC-USD/book/level-3.json';
-import TradesBTCEUR from '../test/fixtures/rest/products/BTC-EUR/trades/GET-200.json';
-import CandlesBTCUSD from '../test/fixtures/rest/products/BTC-USD/candles/GET-200.json';
-import FirstCandleBatch from '../test/fixtures/rest/products/BTC-USD/candles/2020-03-20-00-00.json';
-import SecondCandleBatch from '../test/fixtures/rest/products/BTC-USD/candles/2020-03-20-05-00.json';
+import {Candle, CandleGranularity, OrderBookLevel, ProductAPI, ProductEvent} from './index.js';
+import Level1OrderBookBTCEUR from '../test/fixtures/rest/products/BTC-EUR/book/level-1.json' assert {type: 'json'};
+import Level2OrderBookBTCEUR from '../test/fixtures/rest/products/BTC-EUR/book/level-2.json' assert {type: 'json'};
+import Level2OrderBookBTCUSD from '../test/fixtures/rest/products/BTC-USD/book/level-2.json' assert {type: 'json'};
+import Level3OrderBookBTCUSD from '../test/fixtures/rest/products/BTC-USD/book/level-3.json' assert {type: 'json'};
+import TradesBTCEUR from '../test/fixtures/rest/products/BTC-EUR/trades/GET-200.json' assert {type: 'json'};
+import CandlesBTCUSD from '../test/fixtures/rest/products/BTC-USD/candles/GET-200.json' assert {type: 'json'};
+import FirstCandleBatch from '../test/fixtures/rest/products/BTC-USD/candles/2020-03-20-00-00.json' assert {type: 'json'};
+import SecondCandleBatch from '../test/fixtures/rest/products/BTC-USD/candles/2020-03-20-05-00.json' assert {type: 'json'};
 
 describe('ProductAPI', () => {
   afterEach(() => nock.cleanAll());

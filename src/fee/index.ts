@@ -1,1 +1,1 @@
-export * from './FeeAPI';
+export * from './FeeAPI.js';

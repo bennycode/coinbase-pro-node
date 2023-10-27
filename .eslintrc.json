@@ -17,7 +17,7 @@
   "rules": {
     "@typescript-eslint/array-type": "error",
     "@typescript-eslint/consistent-type-assertions": "error",
-    "@typescript-eslint/explicit-function-return-type": "error",
+    "@typescript-eslint/explicit-function-return-type": "off",
     "@typescript-eslint/no-floating-promises": "error",
     "@typescript-eslint/no-namespace": "off",
     "@typescript-eslint/no-this-alias": "error",

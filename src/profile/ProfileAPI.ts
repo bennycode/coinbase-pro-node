@@ -1,5 +1,5 @@
 import {AxiosError, AxiosInstance} from 'axios';
-import {ISO_8601_MS_UTC, UUID_V4} from '../payload/common';
+import {ISO_8601_MS_UTC, UUID_V4} from '../payload/common.js';
 
 type Nickname = 'default' | string;
 

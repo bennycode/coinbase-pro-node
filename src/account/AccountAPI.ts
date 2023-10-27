@@ -1,5 +1,5 @@
 import {AxiosInstance} from 'axios';
-import {ISO_8601_MS_UTC, PaginatedData, Pagination} from '../payload/common';
+import {ISO_8601_MS_UTC, PaginatedData, Pagination} from '../payload/common.js';
 
 export interface Account {
   available: string;

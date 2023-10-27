@@ -1,5 +1,5 @@
-import {initClient} from './init-client';
-import {WebSocketChannelName, WebSocketEvent} from '..';
+import {initClient} from './init-client.js';
+import {WebSocketChannelName, WebSocketEvent} from '../index.js';
 
 const client = initClient();
 

@@ -1,4 +1,4 @@
-import {CoinbasePro} from '..';
+import {CoinbasePro} from '../index.js';
 
 import 'dotenv-defaults/config';
 

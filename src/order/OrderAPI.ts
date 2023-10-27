@@ -1,5 +1,5 @@
 import {AxiosError, AxiosInstance} from 'axios';
-import {ISO_8601_MS_UTC, OrderSide, PaginatedData, Pagination} from '../payload';
+import {ISO_8601_MS_UTC, OrderSide, PaginatedData, Pagination} from '../payload/index.js';
 import querystring from 'querystring';
 
 export enum OrderType {

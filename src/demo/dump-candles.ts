@@ -1,7 +1,7 @@
-import {initClient} from './init-client';
-import {CandleGranularity} from '..';
-import fs from 'fs';
-import path from 'path';
+import {initClient} from './init-client.js';
+import {CandleGranularity} from '../index.js';
+import fs from 'node:fs';
+import path from 'node:path';
 
 async function main(): Promise<void> {
   const client = initClient();

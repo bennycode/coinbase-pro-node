@@ -1,6 +1,6 @@
 import nock from 'nock';
-import {ProfileAPI} from './ProfileAPI';
-import url from 'url';
+import {ProfileAPI} from './ProfileAPI.js';
+import url from 'node:url';
 import {AxiosError} from 'axios';
 
 describe('ProfileAPI', () => {

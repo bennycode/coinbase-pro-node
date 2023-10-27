@@ -1,6 +1,6 @@
 import nock from 'nock';
-import BTCEUR from '../test/fixtures/rest/fills/product_id/BTC-EUR/GET-200.json';
-import {FillAPI} from './FillAPI';
+import BTCEUR from '../test/fixtures/rest/fills/product_id/BTC-EUR/GET-200.json' assert {type: 'json'};
+import {FillAPI} from './FillAPI.js';
 import querystring from 'querystring';
 
 describe('FillAPI', () => {

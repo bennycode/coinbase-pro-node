@@ -1,6 +1,6 @@
-import crypto from 'crypto';
-import {ClientAuthentication} from '../CoinbasePro';
-import {Buffer} from 'buffer/';
+import crypto from 'node:crypto';
+import {ClientAuthentication} from '../CoinbasePro.js';
+import {Buffer} from 'node:buffer';
 
 export interface RequestSetup {
   httpMethod: string;

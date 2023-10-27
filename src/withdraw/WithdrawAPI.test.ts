@@ -1,5 +1,5 @@
 import nock from 'nock';
-import {CryptoWithdrawal, WithdrawalFeeEstimate, WithdrawAPI} from './WithdrawAPI';
+import {CryptoWithdrawal, WithdrawalFeeEstimate, WithdrawAPI} from './WithdrawAPI.js';
 
 describe('WithdrawAPI', () => {
   const currency = 'BTC';

@@ -6,24 +6,24 @@ import axios, {
   AxiosRequestConfig,
   AxiosResponse,
 } from 'axios';
-import {AccountAPI} from '../account';
-import {RequestSetup, SignedRequest} from '../auth/RequestSigner';
-import {OrderAPI} from '../order';
-import {Candle, CandleGranularity, ProductAPI, ProductEvent} from '../product';
-import {UserAPI} from '../user';
-import {FeeAPI} from '../fee';
-import {FillAPI} from '../fill';
-import querystring from 'querystring';
-import {ProfileAPI} from '../profile';
 import axiosRetry, {isNetworkOrIdempotentRequestError} from 'axios-retry';
-import util, {DebugLogger} from 'util';
-import {EventEmitter} from 'events';
-import {getErrorMessage, gotRateLimited, inAirPlaneMode} from '../error/ErrorUtil';
-import {CurrencyAPI} from '../currency';
-import {WithdrawAPI} from '../withdraw';
-import {TransferAPI} from '../transfer';
-import {TimeAPI} from '../time';
-import {ExchangeRateAPI} from '../exchange-rate/ExchangeRateAPI';
+import {EventEmitter} from 'node:events';
+import util, {DebugLogger} from 'node:util';
+import querystring from 'querystring';
+import {AccountAPI} from '../account/index.js';
+import {RequestSetup, SignedRequest} from '../auth/RequestSigner.js';
+import {CurrencyAPI} from '../currency/index.js';
+import {getErrorMessage, gotRateLimited, inAirPlaneMode} from '../error/ErrorUtil.js';
+import {ExchangeRateAPI} from '../exchange-rate/ExchangeRateAPI.js';
+import {FeeAPI} from '../fee/index.js';
+import {FillAPI} from '../fill/index.js';
+import {OrderAPI} from '../order/index.js';
+import {Candle, CandleGranularity, ProductAPI, ProductEvent} from '../product/index.js';
+import {ProfileAPI} from '../profile/index.js';
+import {TimeAPI} from '../time/index.js';
+import {TransferAPI} from '../transfer/index.js';
+import {UserAPI} from '../user/index.js';
+import {WithdrawAPI} from '../withdraw/index.js';
 
 export interface RESTClient {
   on(
@@ -61,11 +61,14 @@ export class RESTClient extends EventEmitter {
   private readonly httpClient: AxiosInstance;
   private readonly logger: DebugLogger;
 
-  constructor(baseURL: string, private readonly signRequest: (setup: RequestSetup) => Promise<SignedRequest>) {
+  constructor(
+    baseURL: string,
+    private readonly signRequest: (setup: RequestSetup) => Promise<SignedRequest>
+  ) {
     super();
     this.logger = util.debuglog('coinbase-pro-node');
 
-    this.httpClient = axios.create({
+    this.httpClient = axios.default.create({
       baseURL: baseURL,
       timeout: 50_000,
     });
@@ -78,7 +81,7 @@ export class RESTClient extends EventEmitter {
       retryDelay: (retryCount: number, error: AxiosError) => {
         const errorMessage = getErrorMessage(error);
         this.logger(
-          `#${retryCount} There was an error querying "${error.config.baseURL}${error.config.url}": ${errorMessage}`
+          `#${retryCount} There was an error querying "${error.config?.baseURL}${error.config?.url}": ${errorMessage}`
         );
         /**
          * Rate limits:

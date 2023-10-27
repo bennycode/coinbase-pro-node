@@ -6,8 +6,8 @@
     "experimentalDecorators": true,
     "forceConsistentCasingInFileNames": true,
     "lib": ["dom", "es2017"],
-    "module": "commonjs",
-    "moduleResolution": "node",
+    "module": "NodeNext",
+    "moduleResolution": "Node16",
     "noEmitOnError": true,
     "noImplicitReturns": true,
     "noUnusedLocals": true,
@@ -18,7 +18,7 @@
     "rootDir": "src",
     "sourceMap": true,
     "strict": true,
-    "target": "es6"
+    "target": "es2022"
   },
   "exclude": ["dist", "node_modules"]
 }

@@ -1,5 +1,5 @@
 import {AxiosInstance} from 'axios';
-import {ISO_8601_MS_UTC, UUID_V4, OrderSide, Pagination, PaginatedData} from '../payload/common';
+import {ISO_8601_MS_UTC, UUID_V4, OrderSide, Pagination, PaginatedData} from '../payload/common.js';
 
 export enum Liquidity {
   MAKER = 'M',

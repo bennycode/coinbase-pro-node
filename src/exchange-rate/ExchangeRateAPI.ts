@@ -22,7 +22,7 @@ export class ExchangeRateAPI {
    * @see https://docs.cloud.coinbase.com/sign-in-with-coinbase/docs/api-exchange-rates#get-exchange-rates
    */
   async getExchangeRates(currency: string = 'USD'): Promise<ExchangeRate> {
-    const response = await axios.get<{
+    const response = await axios.default.get<{
       data: ExchangeRate;
     }>(`${this.baseURL}${ExchangeRateAPI.URL.V2_EXCHANGE_RATES}`, {params: {currency}});
     return response.data.data;

@@ -1,5 +1,5 @@
 import nock from 'nock';
-import {TransferAPI, TransferType} from './TransferAPI';
+import {TransferAPI, TransferType} from './TransferAPI.js';
 
 describe('TransferAPI', () => {
   afterEach(() => nock.cleanAll());
