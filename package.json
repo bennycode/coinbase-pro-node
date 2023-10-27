@@ -4,14 +4,14 @@
   },
   "dependencies": {
     "@types/node": "20.8.9",
-    "@types/ws": "8.5.5",
+    "@types/ws": "8.5.8",
     "axios": "0.27.2",
     "axios-retry": "3.8.1",
     "buffer": "6.0.3",
-    "bufferutil": "4.0.7",
+    "bufferutil": "4.0.8",
     "reconnecting-websocket": "4.4.0",
     "utf-8-validate": "6.0.3",
-    "ws": "8.13.0",
+    "ws": "8.14.2",
     "zod": "3.22.4"
   },
   "description": "Coinbase Pro API for Node.js, written in TypeScript and covered by tests.",
