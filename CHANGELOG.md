@@ -1,3 +1,43 @@
+## 8.0.0 (2023-10-27)
+
+##### Chores
+
+*  Update dependencies ([3995344b](https://github.com/bennycode/coinbase-pro-node/commit/3995344b2e437766a05313135fd43c36449bf10f))
+*  Update TypeScript ([5ae07c4d](https://github.com/bennycode/coinbase-pro-node/commit/5ae07c4d1663a6c25203c99bd5329d67fb95a9fd))
+* **deps-dev:**
+  *  bump typedoc-plugin-markdown from 3.15.4 to 3.16.0 ([#882](https://github.com/bennycode/coinbase-pro-node/pull/882)) ([fc5f8a84](https://github.com/bennycode/coinbase-pro-node/commit/fc5f8a841a760a0ca00c466bccd2e4d8dfa01bcd))
+  *  bump rimraf from 5.0.1 to 5.0.5 ([#894](https://github.com/bennycode/coinbase-pro-node/pull/894)) ([763de739](https://github.com/bennycode/coinbase-pro-node/commit/763de73961e7682f1a1b2780df075e1f9828d448))
+  *  bump typedoc from 0.24.8 to 0.25.2 ([#900](https://github.com/bennycode/coinbase-pro-node/pull/900)) ([8be3ed64](https://github.com/bennycode/coinbase-pro-node/commit/8be3ed6499a6346940d33771a2355128cc427e87))
+  *  bump lint-staged from 13.2.3 to 14.0.1 ([#888](https://github.com/bennycode/coinbase-pro-node/pull/888)) ([bbff84a2](https://github.com/bennycode/coinbase-pro-node/commit/bbff84a27d36f1dd5ea09e4f3fb40d89f78081b9))
+  *  bump nock from 13.3.2 to 13.3.3 ([#881](https://github.com/bennycode/coinbase-pro-node/pull/881)) ([27fbab4e](https://github.com/bennycode/coinbase-pro-node/commit/27fbab4ec225c8e40c9f615619e2bc028a001e0d))
+  *  bump eslint-config-prettier from 8.9.0 to 9.0.0 ([#880](https://github.com/bennycode/coinbase-pro-node/pull/880)) ([c2672954](https://github.com/bennycode/coinbase-pro-node/commit/c26729541dfdeeca8133d23d119b6742414377b7))
+  *  bump @typescript-eslint/parser from 5.60.1 to 5.62.0 ([#877](https://github.com/bennycode/coinbase-pro-node/pull/877)) ([9155cd25](https://github.com/bennycode/coinbase-pro-node/commit/9155cd2547060ffb320d1ca45bff97a95ba1e36c))
+  *  bump @typescript-eslint/eslint-plugin ([#878](https://github.com/bennycode/coinbase-pro-node/pull/878)) ([52270eef](https://github.com/bennycode/coinbase-pro-node/commit/52270eef1eae94440b5680494d809bdc19c6619e))
+* **deps:**
+  *  bump zod from 3.22.3 to 3.22.4 ([#905](https://github.com/bennycode/coinbase-pro-node/pull/905)) ([4d24584e](https://github.com/bennycode/coinbase-pro-node/commit/4d24584ecb9ab95098b1e1e037ed79debc0faf31))
+  *  bump @types/node from 20.5.7 to 20.8.9 ([#904](https://github.com/bennycode/coinbase-pro-node/pull/904)) ([160b886b](https://github.com/bennycode/coinbase-pro-node/commit/160b886b8eb95d0f85f8caae453c748219d47c7e))
+  *  bump axios-retry from 3.7.0 to 3.8.1 ([#902](https://github.com/bennycode/coinbase-pro-node/pull/902)) ([41c58f40](https://github.com/bennycode/coinbase-pro-node/commit/41c58f40efb2151ac4e69cc07623d7cd615f7ae1))
+  *  bump zod from 3.21.4 to 3.22.3 ([#899](https://github.com/bennycode/coinbase-pro-node/pull/899)) ([69e86b73](https://github.com/bennycode/coinbase-pro-node/commit/69e86b735aa869de5ccd32f3363700985a6002fb))
+  *  bump actions/checkout from 3 to 4 ([#889](https://github.com/bennycode/coinbase-pro-node/pull/889)) ([dfb1da21](https://github.com/bennycode/coinbase-pro-node/commit/dfb1da2148b74d8c73386e61f066b70db519ed15))
+  *  bump @types/node from 20.4.5 to 20.5.7 ([#886](https://github.com/bennycode/coinbase-pro-node/pull/886)) ([5ada5a67](https://github.com/bennycode/coinbase-pro-node/commit/5ada5a67a913d976db1a2856e27ca13189740a28))
+  *  bump axios-retry from 3.6.0 to 3.7.0 ([#883](https://github.com/bennycode/coinbase-pro-node/pull/883)) ([fdbd3ba0](https://github.com/bennycode/coinbase-pro-node/commit/fdbd3ba0c120d82bb3c2575f0455b7cebafefe4a))
+
+##### Documentation Changes
+
+*  Highlight features ([#895](https://github.com/bennycode/coinbase-pro-node/pull/895)) ([e9d06e84](https://github.com/bennycode/coinbase-pro-node/commit/e9d06e84b068bacf0fbf5b2cb8000ed65346921d))
+
+##### Other Changes
+
+*  Switch from CJS to ESM ([#901](https://github.com/bennycode/coinbase-pro-node/pull/901)) ([48d58a74](https://github.com/bennycode/coinbase-pro-node/commit/48d58a740ac5a79f6cebc66724027b41fd357483))
+
+##### Refactors
+
+*  Remove Buffer polyfill ([5aad8433](https://github.com/bennycode/coinbase-pro-node/commit/5aad8433de8a1170888eb64a7c013d04eaa31e62))
+
+##### Tests
+
+*  Use fixed test seed ([3a193624](https://github.com/bennycode/coinbase-pro-node/commit/3a193624c65ac5d10e6781a9ef77924da3859360))
+
 ## 7.0.0 (2023-07-31)
 
 ##### Chores
