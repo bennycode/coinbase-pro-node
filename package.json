@@ -32,7 +32,7 @@
     "prettier": "3.0.3",
     "rimraf": "5.0.5",
     "ts-node": "10.9.1",
-    "typedoc": "0.25.3",
+    "typedoc": "0.25.4",
     "typedoc-plugin-markdown": "3.16.0",
     "typescript": "5.2.2"
   },
