@@ -96,8 +96,8 @@
     "release:major": "generate-changelog -M && yarn changelog:commit && yarn docs:release && npm version major",
     "release:minor": "generate-changelog -m && yarn changelog:commit && yarn docs:release && npm version minor",
     "release:patch": "generate-changelog -p && yarn changelog:commit && yarn docs:release && npm version patch",
-    "test": "c8 --config=.c8rc.coverage.json ts-node-esm ./node_modules/.bin/jasmine --config=jasmine.json --seed=84164",
-    "test:dev": "c8 ts-node-esm ./node_modules/.bin/jasmine --config=jasmine.json --seed=84164",
+    "test": "c8 --config=.c8rc.coverage.json node --no-warnings --loader ts-node/esm ./node_modules/.bin/jasmine --config=jasmine.json --seed=84164",
+    "test:dev": "c8 node --no-warnings --loader ts-node/esm ./node_modules/.bin/jasmine --config=jasmine.json --seed=84164",
     "test:types": "yarn lint:types",
     "prepare": "husky install"
   },
