@@ -156,7 +156,7 @@ export class OrderAPI {
     const resource = OrderAPI.URL.ORDERS;
     const response = await this.apiClient.get<Order[]>(`${resource}`, {
       params: query,
-      paramsSerializer: (params) => {
+      paramsSerializer: params => {
         return querystring.stringify(params);
       },
     });

@@ -105,10 +105,10 @@ export class RESTClient extends EventEmitter {
         requestPath,
       });
 
-      config.headers.set('CB-ACCESS-KEY', signedRequest.key)
-      config.headers.set('CB-ACCESS-PASSPHRASE', signedRequest.passphrase)
-      config.headers.set('CB-ACCESS-SIGN', signedRequest.signature)
-      config.headers.set('CB-ACCESS-TIMESTAMP', `${signedRequest.timestamp}`)
+      config.headers.set('CB-ACCESS-KEY', signedRequest.key);
+      config.headers.set('CB-ACCESS-PASSPHRASE', signedRequest.passphrase);
+      config.headers.set('CB-ACCESS-SIGN', signedRequest.signature);
+      config.headers.set('CB-ACCESS-TIMESTAMP', `${signedRequest.timestamp}`);
 
       return config;
     });
