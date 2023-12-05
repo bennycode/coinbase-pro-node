@@ -21,7 +21,7 @@ export class TimeAPI {
    * @see https://docs.cloud.coinbase.com/sign-in-with-coinbase/docs/api-time
    */
   async getTime(): Promise<TimeSkew> {
-    const response = await axios.default.get<TimeSkew>(`${this.baseURL}${TimeAPI.URL.TIME}`, {
+    const response = await axios.get<TimeSkew>(`${this.baseURL}${TimeAPI.URL.TIME}`, {
       // This trick forces axios to set JSON headers
       data: {},
     });

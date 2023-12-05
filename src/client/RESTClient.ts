@@ -68,7 +68,7 @@ export class RESTClient extends EventEmitter {
     super();
     this.logger = util.debuglog('coinbase-pro-node');
 
-    this.httpClient = axios.default.create({
+    this.httpClient = axios.create({
       baseURL: baseURL,
       timeout: 50_000,
     });
@@ -105,13 +105,10 @@ export class RESTClient extends EventEmitter {
         requestPath,
       });
 
-      config.headers = {
-        ...config.headers,
-        'CB-ACCESS-KEY': signedRequest.key,
-        'CB-ACCESS-PASSPHRASE': signedRequest.passphrase,
-        'CB-ACCESS-SIGN': signedRequest.signature,
-        'CB-ACCESS-TIMESTAMP': `${signedRequest.timestamp}`,
-      };
+      config.headers.set('CB-ACCESS-KEY', signedRequest.key);
+      config.headers.set('CB-ACCESS-PASSPHRASE', signedRequest.passphrase);
+      config.headers.set('CB-ACCESS-SIGN', signedRequest.signature);
+      config.headers.set('CB-ACCESS-TIMESTAMP', `${signedRequest.timestamp}`);
 
       return config;
     });

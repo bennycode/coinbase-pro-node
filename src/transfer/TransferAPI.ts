@@ -72,7 +72,9 @@ export class TransferAPI {
     }
     const response = await this.apiClient.get<TransferInformation[]>(resource, {
       params,
-      paramsSerializer: querystring.stringify,
+      paramsSerializer: params => {
+        return querystring.stringify(params);
+      },
     });
 
     z.array(TransferInformationSchema).parse(response.data);
