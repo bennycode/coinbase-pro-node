@@ -27,7 +27,7 @@
     "generate-changelog": "1.8.0",
     "husky": "9.0.7",
     "jasmine": "3.99.0",
-    "lint-staged": "15.2.1",
+    "lint-staged": "15.2.2",
     "nock": "13.5.1",
     "prettier": "3.1.1",
     "rimraf": "5.0.5",
