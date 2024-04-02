@@ -1,3 +1,10 @@
+> [!IMPORTANT]  
+> On [2022/06/22](https://www.coinbase.com/blog/hello-advanced-trade-goodbye-coinbase-pro) Coinbase announced that it will discontinue the [Pro API](https://docs.cloud.coinbase.com/exchange/reference) in favor of its [Advanced Trade API](https://docs.cloud.coinbase.com/advanced-trade-api/reference).
+>
+> With this news the **coinbase-pro-node** package, which has been serving users effectively since 2019-04-11, will become non functional.
+>
+> Luckily, the code of this library is open-source, allowing you to fork it and tailor it to the new Advanced Trade API. Coinbase offers a [Pro to Advanced Trade API Mapping guide](https://docs.cloud.coinbase.com/advanced-trade-api/docs/rest-api-pro-mapping) to assist in this process.
+
 # Coinbase API
 
 ![Language Details](https://img.shields.io/github/languages/top/bennycode/coinbase-pro-node) ![Code Coverage](https://img.shields.io/codecov/c/github/bennycode/coinbase-pro-node/main) ![License](https://img.shields.io/npm/l/coinbase-pro-node.svg) ![Package Version](https://img.shields.io/npm/v/coinbase-pro-node.svg)
