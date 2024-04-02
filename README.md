@@ -1,5 +1,5 @@
 > [!IMPORTANT]  
-> On [2022/06/22](https://www.coinbase.com/blog/hello-advanced-trade-goodbye-coinbase-pro) Coinbase announced that it will discontinue the [Pro API](https://docs.cloud.coinbase.com/exchange/reference) in favor of its [Advanced Trade API](https://docs.cloud.coinbase.com/advanced-trade-api/reference).
+> On [2022-06-22](https://www.coinbase.com/blog/hello-advanced-trade-goodbye-coinbase-pro) Coinbase announced that it will discontinue the [Pro API](https://docs.cloud.coinbase.com/exchange/reference) in favor of its [Advanced Trade API](https://docs.cloud.coinbase.com/advanced-trade-api/reference).
 >
 > With this news the **coinbase-pro-node** package, which has been serving users effectively since 2019-04-11, will become non functional.
 >
