@@ -2,5 +2,6 @@
 .husky/
 .nyc_output/
 coverage/
+dist/
 docs/
 node_modules/
