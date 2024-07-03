@@ -1,3 +1,22 @@
+### 9.1.0 (2024-07-03)
+
+##### Chores
+
+- **deps-dev:**
+  - bump rimraf from 5.0.5 to 5.0.7 ([#981](https://github.com/bennycode/coinbase-pro-node/pull/981)) ([582ab7e2](https://github.com/bennycode/coinbase-pro-node/commit/582ab7e25ef73c533f677f6330cd964caa2991e7))
+  - bump typescript from 5.4.5 to 5.5.3 ([#983](https://github.com/bennycode/coinbase-pro-node/pull/983)) ([dcb8f1d2](https://github.com/bennycode/coinbase-pro-node/commit/dcb8f1d29c65d2464c7da95935e6e7913ad43bc0))
+  - bump lint-staged from 15.2.2 to 15.2.7 ([#979](https://github.com/bennycode/coinbase-pro-node/pull/979)) ([beba53c8](https://github.com/bennycode/coinbase-pro-node/commit/beba53c8558d4d83dbf12390fdfde77a5b81ce27))
+  - bump typescript from 5.4.3 to 5.4.5 ([#980](https://github.com/bennycode/coinbase-pro-node/pull/980)) ([f4fab43e](https://github.com/bennycode/coinbase-pro-node/commit/f4fab43e58fd72f86dff0e52fa44f3fa7a9df302))
+  - bump typedoc from 0.25.12 to 0.26.3 ([#977](https://github.com/bennycode/coinbase-pro-node/pull/977)) ([4e1b2d77](https://github.com/bennycode/coinbase-pro-node/commit/4e1b2d77fb650b620c587869fcb93e8f48baa1b1))
+  - bump prettier from 3.2.5 to 3.3.2 ([#975](https://github.com/bennycode/coinbase-pro-node/pull/975)) ([3ceff562](https://github.com/bennycode/coinbase-pro-node/commit/3ceff5628a6f26bb52f8d24098d9d9f38ca633aa))
+- **deps:**
+  - bump axios from 1.6.8 to 1.7.2 ([#978](https://github.com/bennycode/coinbase-pro-node/pull/978)) ([ebe3e565](https://github.com/bennycode/coinbase-pro-node/commit/ebe3e565d92ea3c43d189482288f1dd0da4887a8))
+  - bump axios-retry from 4.1.0 to 4.4.1 ([#972](https://github.com/bennycode/coinbase-pro-node/pull/972)) ([1e37ff0e](https://github.com/bennycode/coinbase-pro-node/commit/1e37ff0e264ef8101b92109480081a26ead0c970))
+  - bump ws from 8.16.0 to 8.17.1 ([#973](https://github.com/bennycode/coinbase-pro-node/pull/973)) ([74021557](https://github.com/bennycode/coinbase-pro-node/commit/740215578d9c53764cd4c0063f24b7d394750183))
+  - bump braces from 3.0.2 to 3.0.3 ([#970](https://github.com/bennycode/coinbase-pro-node/pull/970)) ([f76de5b7](https://github.com/bennycode/coinbase-pro-node/commit/f76de5b71d760665e6a57218db3a106f2f9f351b))
+  - bump @types/node from 20.12.2 to 20.14.9 ([#971](https://github.com/bennycode/coinbase-pro-node/pull/971)) ([43a5b12e](https://github.com/bennycode/coinbase-pro-node/commit/43a5b12ecf1ee5648e49495be4f41a6b1d9e28b7))
+  - bump codecov/codecov-action from 4.1.1 to 4.5.0 ([#969](https://github.com/bennycode/coinbase-pro-node/pull/969)) ([029dd12d](https://github.com/bennycode/coinbase-pro-node/commit/029dd12d985ba630c967abf1e7e1e6fc10a16ae2))
+
 #### 9.0.1 (2024-04-02)
 
 ##### Chores
