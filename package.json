@@ -5,7 +5,7 @@
   "dependencies": {
     "@types/node": "20.14.9",
     "@types/ws": "8.5.10",
-    "axios": "1.6.8",
+    "axios": "1.7.2",
     "axios-retry": "4.4.1",
     "reconnecting-websocket": "4.4.0",
     "ws": "8.17.1",
