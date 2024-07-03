@@ -30,7 +30,7 @@
     "lint-staged": "15.2.2",
     "nock": "13.5.4",
     "prettier": "3.3.2",
-    "rimraf": "5.0.5",
+    "rimraf": "5.0.7",
     "ts-node": "10.9.2",
     "typedoc": "0.26.3",
     "typedoc-plugin-markdown": "3.17.1",
