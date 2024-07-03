@@ -29,7 +29,7 @@
     "jasmine": "3.99.0",
     "lint-staged": "15.2.2",
     "nock": "13.5.4",
-    "prettier": "3.2.5",
+    "prettier": "3.3.2",
     "rimraf": "5.0.5",
     "ts-node": "10.9.2",
     "typedoc": "0.25.12",
