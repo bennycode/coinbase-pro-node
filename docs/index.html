@@ -49,7 +49,8 @@
         <div class="tsd-panel tsd-typography">
           <blockquote>
             <p>
-              [!IMPORTANT]<br />On
+              [!IMPORTANT]<br />
+              On
               <a href="https://www.coinbase.com/blog/hello-advanced-trade-goodbye-coinbase-pro">2022-06-22</a> Coinbase
               announced that it will discontinue the
               <a href="https://docs.cloud.coinbase.com/exchange/reference">Pro API</a> in favor of its
@@ -69,7 +70,11 @@
             </p>
           </blockquote>
           <a id="md:coinbase-api" class="tsd-anchor"></a>
-          <h1><a href="#md:coinbase-api">Coinbase API</a></h1>
+          <h1 class="tsd-anchor-link">
+            Coinbase API<a href="#md:coinbase-api" aria-label="Permalink" class="tsd-anchor-icon"
+              ><svg viewBox="0 0 24 24"><use href="assets/icons.svg#icon-anchor"></use></svg
+            ></a>
+          </h1>
           <p>
             <img src="https://img.shields.io/github/languages/top/bennycode/coinbase-pro-node" alt="Language Details" />
             <img src="https://img.shields.io/codecov/c/github/bennycode/coinbase-pro-node/main" alt="Code Coverage" />
@@ -90,21 +95,27 @@
             TypeScript and covered by tests.
           </p>
           <a id="md:motivation" class="tsd-anchor"></a>
-          <h2><a href="#md:motivation">Motivation</a></h2>
+          <h2 class="tsd-anchor-link">
+            Motivation<a href="#md:motivation" aria-label="Permalink" class="tsd-anchor-icon"
+              ><svg viewBox="0 0 24 24"><use href="assets/icons.svg#icon-anchor"></use></svg
+            ></a>
+          </h2>
           <p>
             The purpose of this <a href="https://www.npmjs.com/package/coinbase-pro-node">coinbase-pro-node</a> package
             is to maintain a recent Coinbase API for Node.js with type safety through TypeScript.
           </p>
           <a id="md:features" class="tsd-anchor"></a>
-          <h2><a href="#md:features">Features</a></h2>
+          <h2 class="tsd-anchor-link">
+            Features<a href="#md:features" aria-label="Permalink" class="tsd-anchor-icon"
+              ><svg viewBox="0 0 24 24"><use href="assets/icons.svg#icon-anchor"></use></svg
+            ></a>
+          </h2>
           <ul>
             <li>✅ <strong>Typed.</strong> Source code is 100% TypeScript. No need to install external typings.</li>
             <li>
               ✅ <strong>Tested.</strong> Code coverage is 100%. No surprises when using &quot;coinbase-pro-node&quot;.
             </li>
-            <li>
-              ✅ <strong>Convenient.</strong> Request throttling is built-in. Don&#39;t worry about rate limiting.
-            </li>
+            <li>✅ <strong>Convenient.</strong> Request throttling is built-in. Don't worry about rate limiting.</li>
             <li>
               ✅ <strong>Comfortable.</strong> More than an API client. You will get extras like
               <a href="https://github.com/bennycode/coinbase-pro-node/blob/main/src/demo/rest-watch-candles.ts"
@@ -117,7 +128,7 @@
               <a href="https://github.com/bennycode/coinbase-pro-node/tree/main/src/demo">demo scripts</a> and
               <a href="https://bennycode.com/coinbase-pro-node">generated documentation</a>.
             </li>
-            <li>✅ <strong>Modern.</strong> HTTP client with Promise API. Don&#39;t lose yourself in callback hell.</li>
+            <li>✅ <strong>Modern.</strong> HTTP client with Promise API. Don't lose yourself in callback hell.</li>
             <li>✅ <strong>Robust.</strong> WebSocket reconnection is built-in. No problems if your Wi-Fi is gone.</li>
             <li>
               ✅ <strong>Reliable.</strong> Following
@@ -126,23 +137,39 @@
             </li>
           </ul>
           <a id="md:installation" class="tsd-anchor"></a>
-          <h2><a href="#md:installation">Installation</a></h2>
+          <h2 class="tsd-anchor-link">
+            Installation<a href="#md:installation" aria-label="Permalink" class="tsd-anchor-icon"
+              ><svg viewBox="0 0 24 24"><use href="assets/icons.svg#icon-anchor"></use></svg
+            ></a>
+          </h2>
           <p><strong>npm</strong></p>
-          <pre><code class="language-bash"><span class="hl-0">npm</span><span class="hl-1"> </span><span class="hl-2">install</span><span class="hl-1"> </span><span class="hl-2">coinbase-pro-node</span>
-</code><button>Copy</button></pre>
+          <pre><code class="bash"><span class="hl-0">npm</span><span class="hl-1"> </span><span class="hl-2">install</span><span class="hl-1"> </span><span class="hl-2">coinbase-pro-node</span>
+</code><button type="button">Copy</button></pre>
+
           <p><strong>Yarn</strong></p>
-          <pre><code class="language-bash"><span class="hl-0">yarn</span><span class="hl-1"> </span><span class="hl-2">add</span><span class="hl-1"> </span><span class="hl-2">coinbase-pro-node</span>
-</code><button>Copy</button></pre>
+          <pre><code class="bash"><span class="hl-0">yarn</span><span class="hl-1"> </span><span class="hl-2">add</span><span class="hl-1"> </span><span class="hl-2">coinbase-pro-node</span>
+</code><button type="button">Copy</button></pre>
+
           <a id="md:setup" class="tsd-anchor"></a>
-          <h2><a href="#md:setup">Setup</a></h2>
+          <h2 class="tsd-anchor-link">
+            Setup<a href="#md:setup" aria-label="Permalink" class="tsd-anchor-icon"
+              ><svg viewBox="0 0 24 24"><use href="assets/icons.svg#icon-anchor"></use></svg
+            ></a>
+          </h2>
           <p><strong>JavaScript</strong></p>
-          <pre><code class="language-javascript"><span class="hl-3">const</span><span class="hl-1"> {</span><span class="hl-4">CoinbasePro</span><span class="hl-1">} = </span><span class="hl-0">require</span><span class="hl-1">(</span><span class="hl-2">&#39;coinbase-pro-node&#39;</span><span class="hl-1">);</span><br/><span class="hl-3">const</span><span class="hl-1"> </span><span class="hl-4">client</span><span class="hl-1"> = </span><span class="hl-3">new</span><span class="hl-1"> </span><span class="hl-0">CoinbasePro</span><span class="hl-1">();</span>
-</code><button>Copy</button></pre>
+          <pre><code class="javascript"><span class="hl-3">const</span><span class="hl-1"> {</span><span class="hl-4">CoinbasePro</span><span class="hl-1">} = </span><span class="hl-0">require</span><span class="hl-1">(</span><span class="hl-2">&#39;coinbase-pro-node&#39;</span><span class="hl-1">);</span><br/><span class="hl-3">const</span><span class="hl-1"> </span><span class="hl-4">client</span><span class="hl-1"> = </span><span class="hl-3">new</span><span class="hl-1"> </span><span class="hl-0">CoinbasePro</span><span class="hl-1">();</span>
+</code><button type="button">Copy</button></pre>
+
           <p><strong>TypeScript</strong></p>
-          <pre><code class="language-typescript"><span class="hl-5">import</span><span class="hl-1"> {</span><span class="hl-6">CoinbasePro</span><span class="hl-1">} </span><span class="hl-5">from</span><span class="hl-1"> </span><span class="hl-2">&#39;coinbase-pro-node&#39;</span><span class="hl-1">;</span><br/><span class="hl-3">const</span><span class="hl-1"> </span><span class="hl-4">client</span><span class="hl-1"> = </span><span class="hl-3">new</span><span class="hl-1"> </span><span class="hl-0">CoinbasePro</span><span class="hl-1">();</span>
-</code><button>Copy</button></pre>
+          <pre><code class="typescript"><span class="hl-5">import</span><span class="hl-1"> {</span><span class="hl-6">CoinbasePro</span><span class="hl-1">} </span><span class="hl-5">from</span><span class="hl-1"> </span><span class="hl-2">&#39;coinbase-pro-node&#39;</span><span class="hl-1">;</span><br/><span class="hl-3">const</span><span class="hl-1"> </span><span class="hl-4">client</span><span class="hl-1"> = </span><span class="hl-3">new</span><span class="hl-1"> </span><span class="hl-0">CoinbasePro</span><span class="hl-1">();</span>
+</code><button type="button">Copy</button></pre>
+
           <a id="md:usage" class="tsd-anchor"></a>
-          <h2><a href="#md:usage">Usage</a></h2>
+          <h2 class="tsd-anchor-link">
+            Usage<a href="#md:usage" aria-label="Permalink" class="tsd-anchor-icon"
+              ><svg viewBox="0 0 24 24"><use href="assets/icons.svg#icon-anchor"></use></svg
+            ></a>
+          </h2>
           <p>
             The <a href="https://github.com/bennycode/coinbase-pro-node/tree/main/src/demo">demo section</a> provides
             many examples on how to use &quot;coinbase-pro-node&quot;. There is also an automatically generated
@@ -150,11 +177,20 @@
             example for a REST request:
           </p>
           <a id="md:rest-example" class="tsd-anchor"></a>
-          <h3><a href="#md:rest-example">REST Example</a></h3>
-          <pre><code class="language-typescript"><span class="hl-5">import</span><span class="hl-1"> {</span><span class="hl-6">CoinbasePro</span><span class="hl-1">} </span><span class="hl-5">from</span><span class="hl-1"> </span><span class="hl-2">&#39;coinbase-pro-node&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-7">// API Keys can be generated here:</span><br/><span class="hl-7">// https://pro.coinbase.com/profile/api</span><br/><span class="hl-7">// https://public.sandbox.pro.coinbase.com/profile/api</span><br/><span class="hl-3">const</span><span class="hl-1"> </span><span class="hl-4">auth</span><span class="hl-1"> = {</span><br/><span class="hl-1">  </span><span class="hl-6">apiKey:</span><span class="hl-1"> </span><span class="hl-2">&#39;&#39;</span><span class="hl-1">,</span><br/><span class="hl-1">  </span><span class="hl-6">apiSecret:</span><span class="hl-1"> </span><span class="hl-2">&#39;&#39;</span><span class="hl-1">,</span><br/><span class="hl-1">  </span><span class="hl-6">passphrase:</span><span class="hl-1"> </span><span class="hl-2">&#39;&#39;</span><span class="hl-1">,</span><br/><span class="hl-1">  </span><span class="hl-7">// The Sandbox is for testing only and offers a subset of the products/assets:</span><br/><span class="hl-1">  </span><span class="hl-7">// https://docs.cloud.coinbase.com/exchange/docs#sandbox</span><br/><span class="hl-1">  </span><span class="hl-6">useSandbox:</span><span class="hl-1"> </span><span class="hl-3">true</span><span class="hl-1">,</span><br/><span class="hl-1">};</span><br/><br/><span class="hl-3">const</span><span class="hl-1"> </span><span class="hl-4">client</span><span class="hl-1"> = </span><span class="hl-3">new</span><span class="hl-1"> </span><span class="hl-0">CoinbasePro</span><span class="hl-1">(</span><span class="hl-6">auth</span><span class="hl-1">);</span><br/><br/><span class="hl-6">client</span><span class="hl-1">.</span><span class="hl-6">rest</span><span class="hl-1">.</span><span class="hl-6">account</span><span class="hl-1">.</span><span class="hl-0">listAccounts</span><span class="hl-1">().</span><span class="hl-0">then</span><span class="hl-1">(</span><span class="hl-6">accounts</span><span class="hl-1"> </span><span class="hl-3">=&gt;</span><span class="hl-1"> {</span><br/><span class="hl-1">  </span><span class="hl-3">const</span><span class="hl-1"> </span><span class="hl-4">message</span><span class="hl-1"> = </span><span class="hl-2">`You can trade &quot;</span><span class="hl-3">${</span><span class="hl-6">accounts</span><span class="hl-8">.</span><span class="hl-6">length</span><span class="hl-3">}</span><span class="hl-2">&quot; different pairs.`</span><span class="hl-1">;</span><br/><span class="hl-1">  </span><span class="hl-6">console</span><span class="hl-1">.</span><span class="hl-0">log</span><span class="hl-1">(</span><span class="hl-6">message</span><span class="hl-1">);</span><br/><span class="hl-1">});</span>
-</code><button>Copy</button></pre>
+          <h3 class="tsd-anchor-link">
+            REST Example<a href="#md:rest-example" aria-label="Permalink" class="tsd-anchor-icon"
+              ><svg viewBox="0 0 24 24"><use href="assets/icons.svg#icon-anchor"></use></svg
+            ></a>
+          </h3>
+          <pre><code class="typescript"><span class="hl-5">import</span><span class="hl-1"> {</span><span class="hl-6">CoinbasePro</span><span class="hl-1">} </span><span class="hl-5">from</span><span class="hl-1"> </span><span class="hl-2">&#39;coinbase-pro-node&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-7">// API Keys can be generated here:</span><br/><span class="hl-7">// https://pro.coinbase.com/profile/api</span><br/><span class="hl-7">// https://public.sandbox.pro.coinbase.com/profile/api</span><br/><span class="hl-3">const</span><span class="hl-1"> </span><span class="hl-4">auth</span><span class="hl-1"> = {</span><br/><span class="hl-1">  </span><span class="hl-6">apiKey:</span><span class="hl-1"> </span><span class="hl-2">&#39;&#39;</span><span class="hl-1">,</span><br/><span class="hl-1">  </span><span class="hl-6">apiSecret:</span><span class="hl-1"> </span><span class="hl-2">&#39;&#39;</span><span class="hl-1">,</span><br/><span class="hl-1">  </span><span class="hl-6">passphrase:</span><span class="hl-1"> </span><span class="hl-2">&#39;&#39;</span><span class="hl-1">,</span><br/><span class="hl-1">  </span><span class="hl-7">// The Sandbox is for testing only and offers a subset of the products/assets:</span><br/><span class="hl-1">  </span><span class="hl-7">// https://docs.cloud.coinbase.com/exchange/docs#sandbox</span><br/><span class="hl-1">  </span><span class="hl-6">useSandbox:</span><span class="hl-1"> </span><span class="hl-3">true</span><span class="hl-1">,</span><br/><span class="hl-1">};</span><br/><br/><span class="hl-3">const</span><span class="hl-1"> </span><span class="hl-4">client</span><span class="hl-1"> = </span><span class="hl-3">new</span><span class="hl-1"> </span><span class="hl-0">CoinbasePro</span><span class="hl-1">(</span><span class="hl-6">auth</span><span class="hl-1">);</span><br/><br/><span class="hl-6">client</span><span class="hl-1">.</span><span class="hl-6">rest</span><span class="hl-1">.</span><span class="hl-6">account</span><span class="hl-1">.</span><span class="hl-0">listAccounts</span><span class="hl-1">().</span><span class="hl-0">then</span><span class="hl-1">(</span><span class="hl-6">accounts</span><span class="hl-1"> </span><span class="hl-3">=&gt;</span><span class="hl-1"> {</span><br/><span class="hl-1">  </span><span class="hl-3">const</span><span class="hl-1"> </span><span class="hl-4">message</span><span class="hl-1"> = </span><span class="hl-2">`You can trade &quot;</span><span class="hl-3">${</span><span class="hl-6">accounts</span><span class="hl-8">.</span><span class="hl-6">length</span><span class="hl-3">}</span><span class="hl-2">&quot; different pairs.`</span><span class="hl-1">;</span><br/><span class="hl-1">  </span><span class="hl-6">console</span><span class="hl-1">.</span><span class="hl-0">log</span><span class="hl-1">(</span><span class="hl-6">message</span><span class="hl-1">);</span><br/><span class="hl-1">});</span>
+</code><button type="button">Copy</button></pre>
+
           <a id="md:websocket-example" class="tsd-anchor"></a>
-          <h3><a href="#md:websocket-example">WebSocket Example</a></h3>
+          <h3 class="tsd-anchor-link">
+            WebSocket Example<a href="#md:websocket-example" aria-label="Permalink" class="tsd-anchor-icon"
+              ><svg viewBox="0 0 24 24"><use href="assets/icons.svg#icon-anchor"></use></svg
+            ></a>
+          </h3>
           <p>If you want to listen to WebSocket messages, have a look at these demo scripts:</p>
           <ul>
             <li>
@@ -169,7 +205,11 @@
             </li>
           </ul>
           <a id="md:demos" class="tsd-anchor"></a>
-          <h3><a href="#md:demos">Demos</a></h3>
+          <h3 class="tsd-anchor-link">
+            Demos<a href="#md:demos" aria-label="Permalink" class="tsd-anchor-icon"
+              ><svg viewBox="0 0 24 24"><use href="assets/icons.svg#icon-anchor"></use></svg
+            ></a>
+          </h3>
           <p>
             All <a href="https://github.com/bennycode/coinbase-pro-node/tree/main/src/demo">demo scripts</a> are
             executable from the root directory. If you want to use specific credentials with a demo script, simply add a
@@ -177,8 +217,9 @@
             <a href="https://github.com/motdotla/dotenv/tree/v8.2.0#usage">modify environment variables</a> used in
             <a href="https://github.com/bennyn/coinbase-pro-node/blob/main/src/demo/init-client.ts">init-client.ts</a>.
           </p>
-          <pre><code class="language-bash"><span class="hl-0">npx</span><span class="hl-1"> </span><span class="hl-2">ts-node</span><span class="hl-1"> </span><span class="hl-2">./src/demo/dump-candles.ts</span>
-</code><button>Copy</button></pre>
+          <pre><code class="bash"><span class="hl-0">npx</span><span class="hl-1"> </span><span class="hl-2">ts-node</span><span class="hl-1"> </span><span class="hl-2">./src/demo/dump-candles.ts</span>
+</code><button type="button">Copy</button></pre>
+
           <p>
             <strong>Tip:</strong> There is a
             <a href="https://github.com/bennycode/coinbase-pro-node/blob/main/.env.defaults">.env.defaults</a> file
@@ -186,7 +227,14 @@
             get started. Do not commit this file (or your credentials) to any repository!
           </p>
           <a id="md:web-frontend-applications" class="tsd-anchor"></a>
-          <h3><a href="#md:web-frontend-applications">Web Frontend Applications</a></h3>
+          <h3 class="tsd-anchor-link">
+            Web Frontend Applications<a
+              href="#md:web-frontend-applications"
+              aria-label="Permalink"
+              class="tsd-anchor-icon"
+              ><svg viewBox="0 0 24 24"><use href="assets/icons.svg#icon-anchor"></use></svg
+            ></a>
+          </h3>
           <p>
             The &quot;coinbase-pro-node&quot; library was built to be used in Node.js environments BUT you can also make
             use of it in web frontend applications (using React, Vue.js, etc.). However, due to the
@@ -194,34 +242,42 @@
             will have to use a proxy server.
           </p>
           <p>
-            A proxy server can be setup with webpack&#39;s
+            A proxy server can be setup with webpack's
             <a href="https://webpack.js.org/configuration/dev-server/#devserverproxy">DevServer proxy configuration</a>
             or <a href="https://www.npmjs.com/package/http-proxy-middleware">http-proxy-middleware</a>.
           </p>
           <p>Here is an example:</p>
           <p><strong>Backend</strong></p>
-          <pre><code class="language-typescript"><span class="hl-5">import</span><span class="hl-1"> {</span><span class="hl-6">createProxyMiddleware</span><span class="hl-1">} </span><span class="hl-5">from</span><span class="hl-1"> </span><span class="hl-2">&#39;http-proxy-middleware&#39;</span><span class="hl-1">;</span><br/><span class="hl-5">import</span><span class="hl-1"> </span><span class="hl-6">express</span><span class="hl-1"> </span><span class="hl-5">from</span><span class="hl-1"> </span><span class="hl-2">&#39;express&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-3">const</span><span class="hl-1"> </span><span class="hl-4">app</span><span class="hl-1"> = </span><span class="hl-0">express</span><span class="hl-1">();</span><br/><br/><span class="hl-6">app</span><span class="hl-1">.</span><span class="hl-0">use</span><span class="hl-1">(</span><br/><span class="hl-1">  </span><span class="hl-2">&#39;/api-coinbase-pro&#39;</span><span class="hl-1">,</span><br/><span class="hl-1">  </span><span class="hl-0">createProxyMiddleware</span><span class="hl-1">({</span><br/><span class="hl-1">    </span><span class="hl-6">target:</span><span class="hl-1"> </span><span class="hl-2">&#39;https://api.exchange.coinbase.com&#39;</span><span class="hl-1">,</span><br/><span class="hl-1">    </span><span class="hl-6">changeOrigin:</span><span class="hl-1"> </span><span class="hl-3">true</span><span class="hl-1">,</span><br/><span class="hl-1">    </span><span class="hl-6">pathRewrite:</span><span class="hl-1"> {</span><br/><span class="hl-1">      </span><span class="hl-6">[</span><span class="hl-2">`^/api-coinbase-pro`</span><span class="hl-6">]:</span><span class="hl-1"> </span><span class="hl-2">&#39;&#39;</span><span class="hl-1">,</span><br/><span class="hl-1">    },</span><br/><span class="hl-1">  })</span><br/><span class="hl-1">);</span>
-</code><button>Copy</button></pre>
+          <pre><code class="typescript"><span class="hl-5">import</span><span class="hl-1"> {</span><span class="hl-6">createProxyMiddleware</span><span class="hl-1">} </span><span class="hl-5">from</span><span class="hl-1"> </span><span class="hl-2">&#39;http-proxy-middleware&#39;</span><span class="hl-1">;</span><br/><span class="hl-5">import</span><span class="hl-1"> </span><span class="hl-6">express</span><span class="hl-1"> </span><span class="hl-5">from</span><span class="hl-1"> </span><span class="hl-2">&#39;express&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-3">const</span><span class="hl-1"> </span><span class="hl-4">app</span><span class="hl-1"> = </span><span class="hl-0">express</span><span class="hl-1">();</span><br/><br/><span class="hl-6">app</span><span class="hl-1">.</span><span class="hl-0">use</span><span class="hl-1">(</span><br/><span class="hl-1">  </span><span class="hl-2">&#39;/api-coinbase-pro&#39;</span><span class="hl-1">,</span><br/><span class="hl-1">  </span><span class="hl-0">createProxyMiddleware</span><span class="hl-1">({</span><br/><span class="hl-1">    </span><span class="hl-6">target:</span><span class="hl-1"> </span><span class="hl-2">&#39;https://api.exchange.coinbase.com&#39;</span><span class="hl-1">,</span><br/><span class="hl-1">    </span><span class="hl-6">changeOrigin:</span><span class="hl-1"> </span><span class="hl-3">true</span><span class="hl-1">,</span><br/><span class="hl-1">    </span><span class="hl-6">pathRewrite:</span><span class="hl-1"> {</span><br/><span class="hl-1">      </span><span class="hl-6">[</span><span class="hl-2">`^/api-coinbase-pro`</span><span class="hl-6">]:</span><span class="hl-1"> </span><span class="hl-2">&#39;&#39;</span><span class="hl-1">,</span><br/><span class="hl-1">    },</span><br/><span class="hl-1">  })</span><br/><span class="hl-1">);</span>
+</code><button type="button">Copy</button></pre>
+
           <p>
             Later on, you can use the proxy URL (<code>/api-coinbase-pro</code> from above) in your web application to
             initialize &quot;coinbase-pro-node&quot; with it:
           </p>
           <p><strong>Frontend</strong></p>
-          <pre><code class="language-typescript"><span class="hl-3">const</span><span class="hl-1"> </span><span class="hl-4">client</span><span class="hl-1"> = </span><span class="hl-3">new</span><span class="hl-1"> </span><span class="hl-0">CoinbasePro</span><span class="hl-1">({</span><br/><span class="hl-1">  </span><span class="hl-6">httpUrl:</span><span class="hl-1"> </span><span class="hl-2">&#39;/api-coinbase-pro&#39;</span><span class="hl-1">,</span><br/><span class="hl-1">  </span><span class="hl-6">apiKey:</span><span class="hl-1"> </span><span class="hl-2">&#39;&#39;</span><span class="hl-1">,</span><br/><span class="hl-1">  </span><span class="hl-6">apiSecret:</span><span class="hl-1"> </span><span class="hl-2">&#39;&#39;</span><span class="hl-1">,</span><br/><span class="hl-1">  </span><span class="hl-6">passphrase:</span><span class="hl-1"> </span><span class="hl-2">&#39;&#39;</span><span class="hl-1">,</span><br/><span class="hl-1">  </span><span class="hl-6">useSandbox:</span><span class="hl-1"> </span><span class="hl-3">false</span><span class="hl-1">,</span><br/><span class="hl-1">});</span>
-</code><button>Copy</button></pre>
+          <pre><code class="typescript"><span class="hl-3">const</span><span class="hl-1"> </span><span class="hl-4">client</span><span class="hl-1"> = </span><span class="hl-3">new</span><span class="hl-1"> </span><span class="hl-0">CoinbasePro</span><span class="hl-1">({</span><br/><span class="hl-1">  </span><span class="hl-6">httpUrl:</span><span class="hl-1"> </span><span class="hl-2">&#39;/api-coinbase-pro&#39;</span><span class="hl-1">,</span><br/><span class="hl-1">  </span><span class="hl-6">apiKey:</span><span class="hl-1"> </span><span class="hl-2">&#39;&#39;</span><span class="hl-1">,</span><br/><span class="hl-1">  </span><span class="hl-6">apiSecret:</span><span class="hl-1"> </span><span class="hl-2">&#39;&#39;</span><span class="hl-1">,</span><br/><span class="hl-1">  </span><span class="hl-6">passphrase:</span><span class="hl-1"> </span><span class="hl-2">&#39;&#39;</span><span class="hl-1">,</span><br/><span class="hl-1">  </span><span class="hl-6">useSandbox:</span><span class="hl-1"> </span><span class="hl-3">false</span><span class="hl-1">,</span><br/><span class="hl-1">});</span>
+</code><button type="button">Copy</button></pre>
+
           <a id="md:real-world-examples" class="tsd-anchor"></a>
-          <h3><a href="#md:real-world-examples">Real-world Examples</a></h3>
+          <h3 class="tsd-anchor-link">
+            Real-world Examples<a href="#md:real-world-examples" aria-label="Permalink" class="tsd-anchor-icon"
+              ><svg viewBox="0 0 24 24"><use href="assets/icons.svg#icon-anchor"></use></svg
+            ></a>
+          </h3>
           <p>
             Checkout
-            <a href="https://github.com/bennycode/coinbase-pro-node/network/dependents"
-              >GitHub&#39;s dependency graph</a
-            >
-            to see who uses &quot;coinbase-pro-node&quot; in production. There are also
+            <a href="https://github.com/bennycode/coinbase-pro-node/network/dependents">GitHub's dependency graph</a> to
+            see who uses &quot;coinbase-pro-node&quot; in production. There are also
             <a href="https://www.npmjs.com/browse/depended/coinbase-pro-node">npm packages</a> depending on
             &quot;coinbase-pro-node&quot;.
           </p>
           <a id="md:maintainers" class="tsd-anchor"></a>
-          <h2><a href="#md:maintainers">Maintainers</a></h2>
+          <h2 class="tsd-anchor-link">
+            Maintainers<a href="#md:maintainers" aria-label="Permalink" class="tsd-anchor-icon"
+              ><svg viewBox="0 0 24 24"><use href="assets/icons.svg#icon-anchor"></use></svg
+            ></a>
+          </h2>
           <p>
             <a href="https://stackexchange.com/users/203782/benny-neugebauer?tab=accounts"
               ><img
@@ -230,14 +286,22 @@
             /></a>
           </p>
           <a id="md:stargazers" class="tsd-anchor"></a>
-          <h2><a href="#md:stargazers">Stargazers</a></h2>
+          <h2 class="tsd-anchor-link">
+            Stargazers<a href="#md:stargazers" aria-label="Permalink" class="tsd-anchor-icon"
+              ><svg viewBox="0 0 24 24"><use href="assets/icons.svg#icon-anchor"></use></svg
+            ></a>
+          </h2>
           <p>
             <a href="https://github.com/bennycode/coinbase-pro-node/stargazers"
               ><img src="https://reporoster.com/stars/bennycode/coinbase-pro-node" alt="Stargazers"
             /></a>
           </p>
           <a id="md:contributing" class="tsd-anchor"></a>
-          <h2><a href="#md:contributing">Contributing</a></h2>
+          <h2 class="tsd-anchor-link">
+            Contributing<a href="#md:contributing" aria-label="Permalink" class="tsd-anchor-icon"
+              ><svg viewBox="0 0 24 24"><use href="assets/icons.svg#icon-anchor"></use></svg
+            ></a>
+          </h2>
           <p>Contributions, issues and feature requests are welcome!</p>
           <p>Feel free to check the <a href="https://github.com/bennycode/coinbase-pro-node/issues">issues page</a>.</p>
           <p>The following commits will help you getting started quickly with the code base:</p>
@@ -257,13 +321,24 @@
             All resources can be found in the
             <a href="https://docs.cloud.coinbase.com/exchange">Coinbase Exchange API reference</a>. For the latest
             updates, check
-            <a href="https://docs.cloud.coinbase.com/exchange/docs/changelog">Coinbase&#39;s API Changelog</a>.
+            <a href="https://docs.cloud.coinbase.com/exchange/docs/changelog">Coinbase's API Changelog</a>.
           </p>
           <a id="md:license" class="tsd-anchor"></a>
-          <h2><a href="#md:license">License</a></h2>
-          <p>This project is <a href="./LICENSE">MIT</a> licensed.</p>
+          <h2 class="tsd-anchor-link">
+            License<a href="#md:license" aria-label="Permalink" class="tsd-anchor-icon"
+              ><svg viewBox="0 0 24 24"><use href="assets/icons.svg#icon-anchor"></use></svg
+            ></a>
+          </h2>
+          <p>This project is <a href="media/LICENSE">MIT</a> licensed.</p>
           <a id="md:⭐️-show-your-support-⭐️" class="tsd-anchor"></a>
-          <h2><a href="#md:⭐️-show-your-support-⭐️">⭐️ Show your support ⭐️</a></h2>
+          <h2 class="tsd-anchor-link">
+            ⭐️ Show your support ⭐️<a
+              href="#md:⭐️-show-your-support-⭐️"
+              aria-label="Permalink"
+              class="tsd-anchor-icon"
+              ><svg viewBox="0 0 24 24"><use href="assets/icons.svg#icon-anchor"></use></svg
+            ></a>
+          </h2>
           <p>
             <a href="https://github.com/bennycode/coinbase-pro-node/stargazers">Please leave a star</a> if you find this
             project useful.
@@ -285,29 +360,36 @@
           </ul>
           <hr />
           <a id="md:problems-with-official-coinbase-apis" class="tsd-anchor"></a>
-          <h2><a href="#md:problems-with-official-coinbase-apis">Problems with official Coinbase APIs</a></h2>
+          <h2 class="tsd-anchor-link">
+            Problems with official Coinbase APIs<a
+              href="#md:problems-with-official-coinbase-apis"
+              aria-label="Permalink"
+              class="tsd-anchor-icon"
+              ><svg viewBox="0 0 24 24"><use href="assets/icons.svg#icon-anchor"></use></svg
+            ></a>
+          </h2>
           <p>
             There are official Coinbase APIs for Node.js, but they all come with some disadvantages leading to decreased
             developer experience (DX):
           </p>
           <ol>
             <li>
-              <a href="https://github.com/coinbase/coinbase-exchange-node">Coinbase&#39;s first Node.js API</a> has no
-              type safety and got deprecated on
+              <a href="https://github.com/coinbase/coinbase-exchange-node">Coinbase's first Node.js API</a> has no type
+              safety and got deprecated on
               <a
                 href="https://github.com/coinbase/coinbase-exchange-node/commit/b8347efdb4e2589367c1395b646d283c9c391681"
                 >July, 19th 2016</a
               >
             </li>
             <li>
-              <a href="https://github.com/coinbase/coinbase-pro-node">Coinbase&#39;s second Node.js API</a> has no type
+              <a href="https://github.com/coinbase/coinbase-pro-node">Coinbase's second Node.js API</a> has no type
               safety and got deprecated on
               <a href="https://github.com/coinbase/coinbase-pro-node/issues/393#issuecomment-574993096"
                 >January, 16 2020</a
               >
             </li>
             <li>
-              <a href="https://docs.cloud.coinbase.com/exchange/reference">Coinbase&#39;s current Node.js API</a> (<a
+              <a href="https://docs.cloud.coinbase.com/exchange/reference">Coinbase's current Node.js API</a> (<a
                 href="https://dash.readme.com/api/v1/api-registry/qgumw1pl3iz4yut"
                 >OAS spec</a
               >) still lacks type safety and does not incorporate best practices like automatic reconnections and
@@ -315,7 +397,11 @@
             </li>
           </ol>
           <a id="md:official-coinbase-api" class="tsd-anchor"></a>
-          <h2><a href="#md:official-coinbase-api">Official Coinbase API</a></h2>
+          <h2 class="tsd-anchor-link">
+            Official Coinbase API<a href="#md:official-coinbase-api" aria-label="Permalink" class="tsd-anchor-icon"
+              ><svg viewBox="0 0 24 24"><use href="assets/icons.svg#icon-anchor"></use></svg
+            ></a>
+          </h2>
           <p>
             Coinbase is versioning its API through <a href="https://readme.com/">ReadMe.com</a>, so you can generate an
             API client from their
@@ -324,22 +410,36 @@
             allows you to retrieve an automatically generated Node.js client:
           </p>
           <a id="md:installation-1" class="tsd-anchor"></a>
-          <h3><a href="#md:installation-1">Installation</a></h3>
-          <pre><code class="language-bash"><span class="hl-0">npm</span><span class="hl-1"> </span><span class="hl-2">install</span><span class="hl-1"> </span><span class="hl-2">api@^4.5.1</span>
-</code><button>Copy</button></pre>
+          <h3 class="tsd-anchor-link">
+            Installation<a href="#md:installation-1" aria-label="Permalink" class="tsd-anchor-icon"
+              ><svg viewBox="0 0 24 24"><use href="assets/icons.svg#icon-anchor"></use></svg
+            ></a>
+          </h3>
+          <pre><code class="bash"><span class="hl-0">npm</span><span class="hl-1"> </span><span class="hl-2">install</span><span class="hl-1"> </span><span class="hl-2">api@^4.5.1</span>
+</code><button type="button">Copy</button></pre>
+
           <a id="md:usage-1" class="tsd-anchor"></a>
-          <h3><a href="#md:usage-1">Usage</a></h3>
-          <pre><code class="language-ts"><span class="hl-5">import</span><span class="hl-1"> </span><span class="hl-6">api</span><span class="hl-1"> </span><span class="hl-5">from</span><span class="hl-1"> </span><span class="hl-2">&#39;api&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-3">const</span><span class="hl-1"> </span><span class="hl-4">sdk</span><span class="hl-1"> = </span><span class="hl-0">api</span><span class="hl-1">(</span><span class="hl-2">&#39;@coinbase-exchange/v1.0#qgumw1pl3iz4yut&#39;</span><span class="hl-1">);</span><br/><br/><span class="hl-6">sdk</span><span class="hl-1">[</span><span class="hl-2">&#39;ExchangeRESTAPI_GetProductTrades&#39;</span><span class="hl-1">]({</span><br/><span class="hl-1">  </span><span class="hl-6">product_id:</span><span class="hl-1"> </span><span class="hl-2">&#39;BTC-USD&#39;</span><span class="hl-1">,</span><br/><span class="hl-1">}).</span><span class="hl-0">then</span><span class="hl-1">(</span><span class="hl-6">response</span><span class="hl-1"> </span><span class="hl-3">=&gt;</span><span class="hl-1"> {</span><br/><span class="hl-1">  </span><span class="hl-6">console</span><span class="hl-1">.</span><span class="hl-0">log</span><span class="hl-1">(</span><span class="hl-2">`Found &quot;</span><span class="hl-3">${</span><span class="hl-6">response</span><span class="hl-8">.</span><span class="hl-6">length</span><span class="hl-3">}</span><span class="hl-2">&quot; trades.`</span><span class="hl-1">);</span><br/><span class="hl-1">});</span>
-</code><button>Copy</button></pre>
+          <h3 class="tsd-anchor-link">
+            Usage<a href="#md:usage-1" aria-label="Permalink" class="tsd-anchor-icon"
+              ><svg viewBox="0 0 24 24"><use href="assets/icons.svg#icon-anchor"></use></svg
+            ></a>
+          </h3>
+          <pre><code class="ts"><span class="hl-5">import</span><span class="hl-1"> </span><span class="hl-6">api</span><span class="hl-1"> </span><span class="hl-5">from</span><span class="hl-1"> </span><span class="hl-2">&#39;api&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-3">const</span><span class="hl-1"> </span><span class="hl-4">sdk</span><span class="hl-1"> = </span><span class="hl-0">api</span><span class="hl-1">(</span><span class="hl-2">&#39;@coinbase-exchange/v1.0#qgumw1pl3iz4yut&#39;</span><span class="hl-1">);</span><br/><br/><span class="hl-6">sdk</span><span class="hl-1">[</span><span class="hl-2">&#39;ExchangeRESTAPI_GetProductTrades&#39;</span><span class="hl-1">]({</span><br/><span class="hl-1">  </span><span class="hl-6">product_id:</span><span class="hl-1"> </span><span class="hl-2">&#39;BTC-USD&#39;</span><span class="hl-1">,</span><br/><span class="hl-1">}).</span><span class="hl-0">then</span><span class="hl-1">(</span><span class="hl-6">response</span><span class="hl-1"> </span><span class="hl-3">=&gt;</span><span class="hl-1"> {</span><br/><span class="hl-1">  </span><span class="hl-6">console</span><span class="hl-1">.</span><span class="hl-0">log</span><span class="hl-1">(</span><span class="hl-2">`Found &quot;</span><span class="hl-3">${</span><span class="hl-6">response</span><span class="hl-8">.</span><span class="hl-6">length</span><span class="hl-3">}</span><span class="hl-2">&quot; trades.`</span><span class="hl-1">);</span><br/><span class="hl-1">});</span>
+</code><button type="button">Copy</button></pre>
+
           <a id="md:drawbacks" class="tsd-anchor"></a>
-          <h3><a href="#md:drawbacks">Drawbacks</a></h3>
+          <h3 class="tsd-anchor-link">
+            Drawbacks<a href="#md:drawbacks" aria-label="Permalink" class="tsd-anchor-icon"
+              ><svg viewBox="0 0 24 24"><use href="assets/icons.svg#icon-anchor"></use></svg
+            ></a>
+          </h3>
           <p>
             The current Coinbase Node.js SDK (provided by the
             <a href="https://www.npmjs.com/package/api">api package</a>) does not support typings for response payloads:
           </p>
           <p>
             <img
-              src="./coinbase-api-screenshot.png"
+              src="media/coinbase-api-screenshot.png"
               alt="Official Coinbase API"
               title="Type safety problems in official Coinbase API" />
           </p>
@@ -348,7 +448,7 @@
       <div class="col-sidebar">
         <div class="page-menu">
           <div class="tsd-navigation settings">
-            <details class="tsd-index-accordion">
+            <details class="tsd-accordion">
               <summary class="tsd-accordion-summary">
                 <h3>
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
@@ -358,40 +458,38 @@
               </summary>
               <div class="tsd-accordion-details">
                 <div class="tsd-filter-visibility">
-                  <h4 class="uppercase">Member Visibility</h4>
-                  <form>
-                    <ul id="tsd-filter-options">
-                      <li class="tsd-filter-item">
-                        <label class="tsd-filter-input"
-                          ><input type="checkbox" id="tsd-filter-inherited" name="inherited" checked /><svg
-                            width="32"
-                            height="32"
-                            viewBox="0 0 32 32"
-                            aria-hidden="true">
-                            <rect
-                              class="tsd-checkbox-background"
-                              width="30"
-                              height="30"
-                              x="1"
-                              y="1"
-                              rx="6"
-                              fill="none"></rect>
-                            <path
-                              class="tsd-checkbox-checkmark"
-                              d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25"
-                              stroke="none"
-                              stroke-width="3.5"
-                              stroke-linejoin="round"
-                              fill="none"></path></svg
-                          ><span>Inherited</span></label
-                        >
-                      </li>
-                    </ul>
-                  </form>
+                  <span class="settings-label">Member Visibility</span>
+                  <ul id="tsd-filter-options">
+                    <li class="tsd-filter-item">
+                      <label class="tsd-filter-input"
+                        ><input type="checkbox" id="tsd-filter-inherited" name="inherited" checked /><svg
+                          width="32"
+                          height="32"
+                          viewBox="0 0 32 32"
+                          aria-hidden="true">
+                          <rect
+                            class="tsd-checkbox-background"
+                            width="30"
+                            height="30"
+                            x="1"
+                            y="1"
+                            rx="6"
+                            fill="none"></rect>
+                          <path
+                            class="tsd-checkbox-checkmark"
+                            d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25"
+                            stroke="none"
+                            stroke-width="3.5"
+                            stroke-linejoin="round"
+                            fill="none"></path></svg
+                        ><span>Inherited</span></label
+                      >
+                    </li>
+                  </ul>
                 </div>
                 <div class="tsd-theme-toggle">
-                  <h4 class="uppercase">Theme</h4>
-                  <select id="tsd-theme">
+                  <label class="settings-label" for="tsd-theme">Theme</label
+                  ><select id="tsd-theme">
                     <option value="os">OS</option>
                     <option value="light">Light</option>
                     <option value="dark">Dark</option>
@@ -400,7 +498,7 @@
               </div>
             </details>
           </div>
-          <details open class="tsd-index-accordion tsd-page-navigation">
+          <details open class="tsd-accordion tsd-page-navigation">
             <summary class="tsd-accordion-summary">
               <h3>
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
@@ -510,9 +608,9 @@
         </div>
       </div>
     </div>
-    <div class="tsd-generator">
-      <p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p>
-    </div>
+    <footer>
+      <p class="tsd-generator">Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p>
+    </footer>
     <div class="overlay"></div>
   </body>
 </html>

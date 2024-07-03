@@ -1,23 +1,28 @@
 'use strict';
-'use strict';
+window.translations = {
+  copy: 'Copy',
+  copied: 'Copied!',
+  normally_hidden: 'This member is normally hidden due to your filter settings.',
+};
+('use strict');
 (() => {
   var Ce = Object.create;
-  var ne = Object.defineProperty;
-  var Pe = Object.getOwnPropertyDescriptor;
-  var Oe = Object.getOwnPropertyNames;
-  var _e = Object.getPrototypeOf,
-    Re = Object.prototype.hasOwnProperty;
-  var Me = (t, e) => () => (e || t((e = {exports: {}}).exports, e), e.exports);
-  var Fe = (t, e, n, r) => {
+  var ie = Object.defineProperty;
+  var Oe = Object.getOwnPropertyDescriptor;
+  var _e = Object.getOwnPropertyNames;
+  var Re = Object.getPrototypeOf,
+    Me = Object.prototype.hasOwnProperty;
+  var Fe = (t, e) => () => (e || t((e = {exports: {}}).exports, e), e.exports);
+  var De = (t, e, n, r) => {
     if ((e && typeof e == 'object') || typeof e == 'function')
-      for (let i of Oe(e))
-        !Re.call(t, i) && i !== n && ne(t, i, {get: () => e[i], enumerable: !(r = Pe(e, i)) || r.enumerable});
+      for (let i of _e(e))
+        !Me.call(t, i) && i !== n && ie(t, i, {get: () => e[i], enumerable: !(r = Oe(e, i)) || r.enumerable});
     return t;
   };
-  var De = (t, e, n) => (
-    (n = t != null ? Ce(_e(t)) : {}), Fe(e || !t || !t.__esModule ? ne(n, 'default', {value: t, enumerable: !0}) : n, t)
+  var Ae = (t, e, n) => (
+    (n = t != null ? Ce(Re(t)) : {}), De(e || !t || !t.__esModule ? ie(n, 'default', {value: t, enumerable: !0}) : n, t)
   );
-  var ae = Me((se, oe) => {
+  var ue = Fe((ae, le) => {
     (function () {
       var t = function (e) {
         var n = new t.Builder();
@@ -152,8 +157,8 @@
       (t.tokenizer = function (e, n) {
         if (e == null || e == null) return [];
         if (Array.isArray(e))
-          return e.map(function (y) {
-            return new t.Token(t.utils.asString(y).toLowerCase(), t.utils.clone(n));
+          return e.map(function (m) {
+            return new t.Token(t.utils.asString(m).toLowerCase(), t.utils.clone(n));
           });
         for (var r = e.toString().toLowerCase(), i = r.length, s = [], o = 0, a = 0; o <= i; o++) {
           var l = r.charAt(o),
@@ -335,13 +340,13 @@
           l = '^(' + s + ')?' + o + s + '(' + o + ')?$',
           u = '^(' + s + ')?' + o + s + o + s,
           d = '^(' + s + ')?' + i,
-          y = new RegExp(a),
+          m = new RegExp(a),
           p = new RegExp(u),
           b = new RegExp(l),
           g = new RegExp(d),
           L = /^(.+?)(ss|i)es$/,
           f = /^(.+?)([^s])s$/,
-          m = /^(.+?)eed$/,
+          y = /^(.+?)eed$/,
           S = /^(.+?)(ed|ing)$/,
           w = /.$/,
           k = /(at|bl|iz)$/,
@@ -350,14 +355,14 @@
           A = /^(.+?[^aeiou])y$/,
           j =
             /^(.+?)(ational|tional|enci|anci|izer|bli|alli|entli|eli|ousli|ization|ation|ator|alism|iveness|fulness|ousness|aliti|iviti|biliti|logi)$/,
-          $ = /^(.+?)(icate|ative|alize|iciti|ical|ful|ness)$/,
-          N = /^(.+?)(al|ance|ence|er|ic|able|ible|ant|ement|ment|ent|ou|ism|ate|iti|ous|ive|ize)$/,
-          q = /^(.+?)(s|t)(ion)$/,
-          C = /^(.+?)e$/,
+          q = /^(.+?)(icate|ative|alize|iciti|ical|ful|ness)$/,
+          V = /^(.+?)(al|ance|ence|er|ic|able|ible|ant|ement|ment|ent|ou|ism|ate|iti|ous|ive|ize)$/,
+          $ = /^(.+?)(s|t)(ion)$/,
+          P = /^(.+?)e$/,
           z = /ll$/,
           W = new RegExp('^' + s + i + '[^aeiouwxy]$'),
-          V = function (c) {
-            var v, P, T, h, x, O, M;
+          N = function (c) {
+            var v, C, T, h, x, O, M;
             if (c.length < 3) return c;
             if (
               ((T = c.substr(0, 1)),
@@ -365,12 +370,12 @@
               (h = L),
               (x = f),
               h.test(c) ? (c = c.replace(h, '$1$2')) : x.test(c) && (c = c.replace(x, '$1$2')),
-              (h = m),
+              (h = y),
               (x = S),
               h.test(c))
             ) {
               var E = h.exec(c);
-              (h = y), h.test(E[1]) && ((h = w), (c = c.replace(h, '')));
+              (h = m), h.test(E[1]) && ((h = w), (c = c.replace(h, '')));
             } else if (x.test(c)) {
               var E = x.exec(c);
               (v = E[1]),
@@ -392,20 +397,20 @@
             }
             if (((h = j), h.test(c))) {
               var E = h.exec(c);
-              (v = E[1]), (P = E[2]), (h = y), h.test(v) && (c = v + e[P]);
+              (v = E[1]), (C = E[2]), (h = m), h.test(v) && (c = v + e[C]);
             }
-            if (((h = $), h.test(c))) {
+            if (((h = q), h.test(c))) {
               var E = h.exec(c);
-              (v = E[1]), (P = E[2]), (h = y), h.test(v) && (c = v + n[P]);
+              (v = E[1]), (C = E[2]), (h = m), h.test(v) && (c = v + n[C]);
             }
-            if (((h = N), (x = q), h.test(c))) {
+            if (((h = V), (x = $), h.test(c))) {
               var E = h.exec(c);
               (v = E[1]), (h = p), h.test(v) && (c = v);
             } else if (x.test(c)) {
               var E = x.exec(c);
               (v = E[1] + E[2]), (x = p), x.test(v) && (c = v);
             }
-            if (((h = C), h.test(c))) {
+            if (((h = P), h.test(c))) {
               var E = h.exec(c);
               (v = E[1]), (h = p), (x = b), (O = W), (h.test(v) || (x.test(v) && !O.test(v))) && (c = v);
             }
@@ -418,7 +423,7 @@
             );
           };
         return function (R) {
-          return R.update(V);
+          return R.update(N);
         };
       })()),
         t.Pipeline.registerFunction(t.stemmer, 'stemmer');
@@ -604,9 +609,9 @@
               }
               if (s.str.length > 1) {
                 var d = s.str.charAt(0),
-                  y = s.str.charAt(1),
+                  m = s.str.charAt(1),
                   p;
-                y in s.node.edges ? (p = s.node.edges[y]) : ((p = new t.TokenSet()), (s.node.edges[y] = p)),
+                m in s.node.edges ? (p = s.node.edges[m]) : ((p = new t.TokenSet()), (s.node.edges[m] = p)),
                   s.str.length == 1 && (p.final = !0),
                   i.push({node: p, editsRemaining: s.editsRemaining - 1, str: d + s.str.slice(2)});
               }
@@ -656,8 +661,8 @@
               u < o;
               u++
             )
-              for (var d = s[u], y = 0; y < l; y++) {
-                var p = a[y];
+              for (var d = s[u], m = 0; m < l; m++) {
+                var p = a[m];
                 if (p == d || d == '*') {
                   var b = r.node.edges[p],
                     g = r.qNode.edges[d],
@@ -737,7 +742,7 @@
           for (var l = 0; l < n.clauses.length; l++) {
             var u = n.clauses[l],
               d = null,
-              y = t.Set.empty;
+              m = t.Set.empty;
             u.usePipeline ? (d = this.pipeline.runString(u.term, {fields: u.fields})) : (d = [u.term]);
             for (var p = 0; p < d.length; p++) {
               var b = d[p];
@@ -746,38 +751,38 @@
                 L = this.tokenSet.intersect(g).toArray();
               if (L.length === 0 && u.presence === t.Query.presence.REQUIRED) {
                 for (var f = 0; f < u.fields.length; f++) {
-                  var m = u.fields[f];
-                  o[m] = t.Set.empty;
+                  var y = u.fields[f];
+                  o[y] = t.Set.empty;
                 }
                 break;
               }
               for (var S = 0; S < L.length; S++)
                 for (var w = L[S], k = this.invertedIndex[w], _ = k._index, f = 0; f < u.fields.length; f++) {
-                  var m = u.fields[f],
-                    B = k[m],
+                  var y = u.fields[f],
+                    B = k[y],
                     A = Object.keys(B),
-                    j = w + '/' + m,
-                    $ = new t.Set(A);
+                    j = w + '/' + y,
+                    q = new t.Set(A);
                   if (
                     (u.presence == t.Query.presence.REQUIRED &&
-                      ((y = y.union($)), o[m] === void 0 && (o[m] = t.Set.complete)),
+                      ((m = m.union(q)), o[y] === void 0 && (o[y] = t.Set.complete)),
                     u.presence == t.Query.presence.PROHIBITED)
                   ) {
-                    a[m] === void 0 && (a[m] = t.Set.empty), (a[m] = a[m].union($));
+                    a[y] === void 0 && (a[y] = t.Set.empty), (a[y] = a[y].union(q));
                     continue;
                   }
                   if (
-                    (i[m].upsert(_, u.boost, function (Qe, Ie) {
-                      return Qe + Ie;
+                    (i[y].upsert(_, u.boost, function (Ie, Pe) {
+                      return Ie + Pe;
                     }),
                     !s[j])
                   ) {
-                    for (var N = 0; N < A.length; N++) {
-                      var q = A[N],
-                        C = new t.FieldRef(q, m),
-                        z = B[q],
+                    for (var V = 0; V < A.length; V++) {
+                      var $ = A[V],
+                        P = new t.FieldRef($, y),
+                        z = B[$],
                         W;
-                      (W = r[C]) === void 0 ? (r[C] = new t.MatchData(w, m, z)) : W.add(w, m, z);
+                      (W = r[P]) === void 0 ? (r[P] = new t.MatchData(w, y, z)) : W.add(w, y, z);
                     }
                     s[j] = !0;
                   }
@@ -785,41 +790,41 @@
             }
             if (u.presence === t.Query.presence.REQUIRED)
               for (var f = 0; f < u.fields.length; f++) {
-                var m = u.fields[f];
-                o[m] = o[m].intersect(y);
+                var y = u.fields[f];
+                o[y] = o[y].intersect(m);
               }
           }
-          for (var V = t.Set.complete, R = t.Set.empty, l = 0; l < this.fields.length; l++) {
-            var m = this.fields[l];
-            o[m] && (V = V.intersect(o[m])), a[m] && (R = R.union(a[m]));
+          for (var N = t.Set.complete, R = t.Set.empty, l = 0; l < this.fields.length; l++) {
+            var y = this.fields[l];
+            o[y] && (N = N.intersect(o[y])), a[y] && (R = R.union(a[y]));
           }
           var c = Object.keys(r),
             v = [],
-            P = Object.create(null);
+            C = Object.create(null);
           if (n.isNegated()) {
             c = Object.keys(this.fieldVectors);
             for (var l = 0; l < c.length; l++) {
-              var C = c[l],
-                T = t.FieldRef.fromString(C);
-              r[C] = new t.MatchData();
+              var P = c[l],
+                T = t.FieldRef.fromString(P);
+              r[P] = new t.MatchData();
             }
           }
           for (var l = 0; l < c.length; l++) {
             var T = t.FieldRef.fromString(c[l]),
               h = T.docRef;
-            if (V.contains(h) && !R.contains(h)) {
+            if (N.contains(h) && !R.contains(h)) {
               var x = this.fieldVectors[T],
                 O = i[T.fieldName].similarity(x),
                 M;
-              if ((M = P[h]) !== void 0) (M.score += O), M.matchData.combine(r[T]);
+              if ((M = C[h]) !== void 0) (M.score += O), M.matchData.combine(r[T]);
               else {
                 var E = {ref: h, score: O, matchData: r[T]};
-                (P[h] = E), v.push(E);
+                (C[h] = E), v.push(E);
               }
             }
           }
-          return v.sort(function (Te, ke) {
-            return ke.score - Te.score;
+          return v.sort(function (ke, Qe) {
+            return Qe.score - ke.score;
           });
         }),
         (t.Index.prototype.toJSON = function () {
@@ -857,9 +862,9 @@
             );
           for (var u = 0; u < i.length; u++) {
             var d = i[u],
-              y = d[0],
+              m = d[0],
               p = d[1];
-            r[y] = new t.Vector(p);
+            r[m] = new t.Vector(p);
           }
           for (var u = 0; u < o.length; u++) {
             var d = o[u],
@@ -916,9 +921,9 @@
               l = a ? a(e) : e[o],
               u = this.tokenizer(l, {fields: [o]}),
               d = this.pipeline.run(u),
-              y = new t.FieldRef(r, o),
+              m = new t.FieldRef(r, o),
               p = Object.create(null);
-            (this.fieldTermFrequencies[y] = p), (this.fieldLengths[y] = 0), (this.fieldLengths[y] += d.length);
+            (this.fieldTermFrequencies[m] = p), (this.fieldLengths[m] = 0), (this.fieldLengths[m] += d.length);
             for (var b = 0; b < d.length; b++) {
               var g = d[b];
               if ((p[g] == null && (p[g] = 0), (p[g] += 1), this.invertedIndex[g] == null)) {
@@ -928,8 +933,8 @@
                 this.invertedIndex[g] = L;
               }
               this.invertedIndex[g][o][r] == null && (this.invertedIndex[g][o][r] = Object.create(null));
-              for (var m = 0; m < this.metadataWhitelist.length; m++) {
-                var S = this.metadataWhitelist[m],
+              for (var y = 0; y < this.metadataWhitelist.length; y++) {
+                var S = this.metadataWhitelist[y],
                   w = g.metadata[S];
                 this.invertedIndex[g][o][r][S] == null && (this.invertedIndex[g][o][r][S] = []),
                   this.invertedIndex[g][o][r][S].push(w);
@@ -961,24 +966,24 @@
                 l = this.fieldLengths[o],
                 u = new t.Vector(),
                 d = this.fieldTermFrequencies[o],
-                y = Object.keys(d),
-                p = y.length,
+                m = Object.keys(d),
+                p = m.length,
                 b = this._fields[a].boost || 1,
                 g = this._documents[o.docRef].boost || 1,
                 L = 0;
               L < p;
               L++
             ) {
-              var f = y[L],
-                m = d[f],
+              var f = m[L],
+                y = d[f],
                 S = this.invertedIndex[f]._index,
                 w,
                 k,
                 _;
               i[f] === void 0 ? ((w = t.idf(this.invertedIndex[f], this.documentCount)), (i[f] = w)) : (w = i[f]),
                 (k =
-                  (w * ((this._k1 + 1) * m)) /
-                  (this._k1 * (1 - this._b + this._b * (l / this.averageFieldLength[a])) + m)),
+                  (w * ((this._k1 + 1) * y)) /
+                  (this._k1 * (1 - this._b + this._b * (l / this.averageFieldLength[a])) + y)),
                 (k *= b),
                 (k *= g),
                 (_ = Math.round(k * 1e3) / 1e3),
@@ -1364,17 +1369,17 @@
         (function (e, n) {
           typeof define == 'function' && define.amd
             ? define(n)
-            : typeof se == 'object'
-              ? (oe.exports = n())
+            : typeof ae == 'object'
+              ? (le.exports = n())
               : (e.lunr = n());
         })(this, function () {
           return t;
         });
     })();
   });
-  var re = [];
+  var se = [];
   function G(t, e) {
-    re.push({selector: e, constructor: t});
+    se.push({selector: e, constructor: t});
   }
   var U = class {
     constructor() {
@@ -1383,10 +1388,11 @@
         this.ensureFocusedElementVisible(),
         this.listenForCodeCopies(),
         window.addEventListener('hashchange', () => this.ensureFocusedElementVisible()),
-        document.body.style.display || (this.scrollToHash(), this.updateIndexVisibility());
+        document.body.style.display ||
+          (this.ensureFocusedElementVisible(), this.updateIndexVisibility(), this.scrollToHash());
     }
     createComponents(e) {
-      re.forEach(n => {
+      se.forEach(n => {
         e.querySelectorAll(n.selector).forEach(r => {
           r.dataset.hasInstance || (new n.constructor({el: r, app: this}), (r.dataset.hasInstance = String(!0)));
         });
@@ -1397,7 +1403,10 @@
     }
     showPage() {
       document.body.style.display &&
-        (document.body.style.removeProperty('display'), this.scrollToHash(), this.updateIndexVisibility());
+        (document.body.style.removeProperty('display'),
+        this.ensureFocusedElementVisible(),
+        this.updateIndexVisibility(),
+        this.scrollToHash());
     }
     scrollToHash() {
       if (location.hash) {
@@ -1440,13 +1449,16 @@
       if (!e) return;
       let n = e.parentElement;
       for (; n && n.tagName !== 'SECTION'; ) n = n.parentElement;
-      if (n && n.offsetParent == null) {
+      if (!n) return;
+      let r = n.offsetParent == null,
+        i = n;
+      for (; i !== document.body; ) i instanceof HTMLDetailsElement && (i.open = !0), (i = i.parentElement);
+      if (n.offsetParent == null) {
         (this.alwaysVisibleMember = n), n.classList.add('always-visible');
-        let r = document.createElement('p');
-        r.classList.add('warning'),
-          (r.textContent = 'This member is normally hidden due to your filter settings.'),
-          n.prepend(r);
+        let s = document.createElement('p');
+        s.classList.add('warning'), (s.textContent = window.translations.normally_hidden), n.prepend(s);
       }
+      r && e.scrollIntoView();
     }
     listenForCodeCopies() {
       document.querySelectorAll('pre > button').forEach(e => {
@@ -1454,34 +1466,34 @@
         e.addEventListener('click', () => {
           e.previousElementSibling instanceof HTMLElement &&
             navigator.clipboard.writeText(e.previousElementSibling.innerText.trim()),
-            (e.textContent = 'Copied!'),
+            (e.textContent = window.translations.copied),
             e.classList.add('visible'),
             clearTimeout(n),
             (n = setTimeout(() => {
               e.classList.remove('visible'),
                 (n = setTimeout(() => {
-                  e.textContent = 'Copy';
+                  e.textContent = window.translations.copy;
                 }, 100));
             }, 1e3));
         });
       });
     }
   };
-  var ie = (t, e = 100) => {
+  var oe = (t, e = 100) => {
     let n;
     return () => {
       clearTimeout(n), (n = setTimeout(() => t(), e));
     };
   };
-  var de = De(ae());
-  async function le(t, e) {
+  var pe = Ae(ue());
+  async function ce(t, e) {
     if (!window.searchData) return;
     let n = await fetch(window.searchData),
       r = new Blob([await n.arrayBuffer()]).stream().pipeThrough(new DecompressionStream('gzip')),
       i = await new Response(r).json();
-    (t.data = i), (t.index = de.Index.load(i.index)), e.classList.remove('loading'), e.classList.add('ready');
+    (t.data = i), (t.index = pe.Index.load(i.index)), e.classList.remove('loading'), e.classList.add('ready');
   }
-  function he() {
+  function fe() {
     let t = document.getElementById('tsd-search');
     if (!t) return;
     let e = {base: t.dataset.base + '/'},
@@ -1492,52 +1504,46 @@
           t.classList.remove('loading'), t.classList.add('failure');
         }),
         n.addEventListener('load', () => {
-          le(e, t);
+          ce(e, t);
         }),
-        le(e, t));
+        ce(e, t));
     let r = document.querySelector('#tsd-search input'),
       i = document.querySelector('#tsd-search .results');
     if (!r || !i) throw new Error('The input field or the result list wrapper was not found');
-    let s = !1;
-    i.addEventListener('mousedown', () => (s = !0)),
-      i.addEventListener('mouseup', () => {
-        (s = !1), t.classList.remove('has-focus');
-      }),
+    i.addEventListener('mouseup', () => {
+      te(t);
+    }),
       r.addEventListener('focus', () => t.classList.add('has-focus')),
-      r.addEventListener('blur', () => {
-        s || ((s = !1), t.classList.remove('has-focus'));
-      }),
-      Ae(t, i, r, e);
+      Ve(t, i, r, e);
   }
-  function Ae(t, e, n, r) {
+  function Ve(t, e, n, r) {
     n.addEventListener(
       'input',
-      ie(() => {
+      oe(() => {
         Ne(t, e, n, r);
       }, 200)
-    );
-    let i = !1;
-    n.addEventListener('keydown', s => {
-      (i = !0),
-        s.key == 'Enter'
-          ? Ve(e, n)
-          : s.key == 'Escape'
-            ? n.blur()
-            : s.key == 'ArrowUp'
-              ? ue(e, -1)
-              : s.key === 'ArrowDown'
-                ? ue(e, 1)
-                : (i = !1);
-    }),
-      n.addEventListener('keypress', s => {
-        i && s.preventDefault();
+    ),
+      n.addEventListener('keydown', i => {
+        i.key == 'Enter'
+          ? He(e, t)
+          : i.key == 'ArrowUp'
+            ? (de(e, n, -1), i.preventDefault())
+            : i.key === 'ArrowDown' && (de(e, n, 1), i.preventDefault());
       }),
-      document.body.addEventListener('keydown', s => {
-        s.altKey ||
-          s.ctrlKey ||
-          s.metaKey ||
-          (!n.matches(':focus') && s.key === '/' && (n.focus(), s.preventDefault()));
+      document.body.addEventListener('keypress', i => {
+        i.altKey ||
+          i.ctrlKey ||
+          i.metaKey ||
+          (!n.matches(':focus') && i.key === '/' && (i.preventDefault(), n.focus()));
+      }),
+      document.body.addEventListener('keyup', i => {
+        t.classList.contains('has-focus') &&
+          (i.key === 'Escape' || (!e.matches(':focus-within') && !n.matches(':focus'))) &&
+          (n.blur(), te(t));
       });
+  }
+  function te(t) {
+    t.classList.remove('has-focus');
   }
   function Ne(t, e, n, r) {
     if (!r.index || !r.data) return;
@@ -1568,39 +1574,47 @@
     for (let o = 0, a = Math.min(10, s.length); o < a; o++) {
       let l = r.data.rows[Number(s[o].ref)],
         u = `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" class="tsd-kind-icon"><use href="#icon-${l.kind}"></use></svg>`,
-        d = ce(l.name, i);
+        d = he(l.name, i);
       globalThis.DEBUG_SEARCH_WEIGHTS && (d += ` (score: ${s[o].score.toFixed(2)})`),
         l.parent &&
           (d = `<span class="parent">
-                ${ce(l.parent, i)}.</span>${d}`);
-      let y = document.createElement('li');
-      y.classList.value = l.classes ?? '';
+                ${he(l.parent, i)}.</span>${d}`);
+      let m = document.createElement('li');
+      m.classList.value = l.classes ?? '';
       let p = document.createElement('a');
-      (p.href = r.base + l.url), (p.innerHTML = u + d), y.append(p), e.appendChild(y);
+      (p.href = r.base + l.url),
+        (p.innerHTML = u + d),
+        m.append(p),
+        p.addEventListener('focus', () => {
+          e.querySelector('.current')?.classList.remove('current'), m.classList.add('current');
+        }),
+        e.appendChild(m);
     }
   }
-  function ue(t, e) {
-    let n = t.querySelector('.current');
-    if (!n) (n = t.querySelector(e == 1 ? 'li:first-child' : 'li:last-child')), n && n.classList.add('current');
+  function de(t, e, n) {
+    let r = t.querySelector('.current');
+    if (!r) (r = t.querySelector(n == 1 ? 'li:first-child' : 'li:last-child')), r && r.classList.add('current');
     else {
-      let r = n;
-      if (e === 1)
-        do r = r.nextElementSibling ?? void 0;
-        while (r instanceof HTMLElement && r.offsetParent == null);
+      let i = r;
+      if (n === 1)
+        do i = i.nextElementSibling ?? void 0;
+        while (i instanceof HTMLElement && i.offsetParent == null);
       else
-        do r = r.previousElementSibling ?? void 0;
-        while (r instanceof HTMLElement && r.offsetParent == null);
-      r && (n.classList.remove('current'), r.classList.add('current'));
+        do i = i.previousElementSibling ?? void 0;
+        while (i instanceof HTMLElement && i.offsetParent == null);
+      i
+        ? (r.classList.remove('current'), i.classList.add('current'))
+        : n === -1 && (r.classList.remove('current'), e.focus());
     }
   }
-  function Ve(t, e) {
+  function He(t, e) {
     let n = t.querySelector('.current');
     if ((n || (n = t.querySelector('li:first-child')), n)) {
       let r = n.querySelector('a');
-      r && (window.location.href = r.href), e.blur();
+      r && (window.location.href = r.href), te(e);
     }
   }
-  function ce(t, e) {
+  function he(t, e) {
     if (e === '') return t;
     let n = t.toLocaleLowerCase(),
       r = e.toLocaleLowerCase(),
@@ -1608,14 +1622,14 @@
       s = 0,
       o = n.indexOf(r);
     for (; o != -1; )
-      i.push(K(t.substring(s, o)), `<b>${K(t.substring(o, o + r.length))}</b>`),
+      i.push(ee(t.substring(s, o)), `<b>${ee(t.substring(o, o + r.length))}</b>`),
         (s = o + r.length),
         (o = n.indexOf(r, s));
-    return i.push(K(t.substring(s))), i.join('');
+    return i.push(ee(t.substring(s))), i.join('');
   }
-  var He = {'&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#039;', '"': '&quot;'};
-  function K(t) {
-    return t.replace(/[&<>"'"]/g, e => He[e]);
+  var Be = {'&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#039;', '"': '&quot;'};
+  function ee(t) {
+    return t.replace(/[&<>"'"]/g, e => Be[e]);
   }
   var I = class {
     constructor(e) {
@@ -1623,25 +1637,25 @@
     }
   };
   var F = 'mousedown',
-    fe = 'mousemove',
+    ye = 'mousemove',
     H = 'mouseup',
     J = {x: 0, y: 0},
-    pe = !1,
-    ee = !1,
-    Be = !1,
+    me = !1,
+    ne = !1,
+    je = !1,
     D = !1,
-    me = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-  document.documentElement.classList.add(me ? 'is-mobile' : 'not-mobile');
-  me &&
+    ve = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+  document.documentElement.classList.add(ve ? 'is-mobile' : 'not-mobile');
+  ve &&
     'ontouchstart' in document.documentElement &&
-    ((Be = !0), (F = 'touchstart'), (fe = 'touchmove'), (H = 'touchend'));
+    ((je = !0), (F = 'touchstart'), (ye = 'touchmove'), (H = 'touchend'));
   document.addEventListener(F, t => {
-    (ee = !0), (D = !1);
+    (ne = !0), (D = !1);
     let e = F == 'touchstart' ? t.targetTouches[0] : t;
     (J.y = e.pageY || 0), (J.x = e.pageX || 0);
   });
-  document.addEventListener(fe, t => {
-    if (ee && !D) {
+  document.addEventListener(ye, t => {
+    if (ne && !D) {
       let e = F == 'touchstart' ? t.targetTouches[0] : t,
         n = J.x - (e.pageX || 0),
         r = J.y - (e.pageY || 0);
@@ -1649,10 +1663,10 @@
     }
   });
   document.addEventListener(H, () => {
-    ee = !1;
+    ne = !1;
   });
   document.addEventListener('click', t => {
-    pe && (t.preventDefault(), t.stopImmediatePropagation(), (pe = !1));
+    me && (t.preventDefault(), t.stopImmediatePropagation(), (me = !1));
   });
   var X = class extends I {
     constructor(e) {
@@ -1691,20 +1705,20 @@
       }
     }
   };
-  var te;
+  var re;
   try {
-    te = localStorage;
+    re = localStorage;
   } catch {
-    te = {
+    re = {
       getItem() {
         return null;
       },
       setItem() {},
     };
   }
-  var Q = te;
-  var ye = document.head.appendChild(document.createElement('style'));
-  ye.dataset.for = 'filters';
+  var Q = re;
+  var ge = document.head.appendChild(document.createElement('style'));
+  ge.dataset.for = 'filters';
   var Y = class extends I {
     constructor(e) {
       super(e),
@@ -1714,7 +1728,7 @@
           this.setLocalStorage(this.el.checked);
         }),
         this.setLocalStorage(this.fromLocalStorage()),
-        (ye.innerHTML += `html:not(.${this.key}) .tsd-is-${this.el.name} { display: none; }
+        (ge.innerHTML += `html:not(.${this.key}) .tsd-is-${this.el.name} { display: none; }
 `),
         this.app.updateIndexVisibility();
     }
@@ -1752,54 +1766,55 @@
         Q.setItem(this.key, this.el.open.toString());
     }
   };
-  function ge(t) {
+  function Ee(t) {
     let e = Q.getItem('tsd-theme') || 'os';
     (t.value = e),
-      ve(e),
+      xe(e),
       t.addEventListener('change', () => {
-        Q.setItem('tsd-theme', t.value), ve(t.value);
+        Q.setItem('tsd-theme', t.value), xe(t.value);
       });
   }
-  function ve(t) {
+  function xe(t) {
     document.documentElement.dataset.theme = t;
   }
-  var Le;
-  function be() {
+  var K;
+  function we() {
     let t = document.getElementById('tsd-nav-script');
-    t && (t.addEventListener('load', xe), xe());
+    t && (t.addEventListener('load', Le), Le());
   }
-  async function xe() {
+  async function Le() {
     let t = document.getElementById('tsd-nav-container');
     if (!t || !window.navigationData) return;
     let n = await (await fetch(window.navigationData)).arrayBuffer(),
       r = new Blob([n]).stream().pipeThrough(new DecompressionStream('gzip')),
       i = await new Response(r).json();
-    (Le = t.dataset.base + '/'), (t.innerHTML = '');
-    for (let s of i) we(s, t, []);
+    (K = t.dataset.base), K.endsWith('/') || (K += '/'), (t.innerHTML = '');
+    for (let s of i) Se(s, t, []);
     window.app.createComponents(t), window.app.showPage(), window.app.ensureActivePageVisible();
   }
-  function we(t, e, n) {
+  function Se(t, e, n) {
     let r = e.appendChild(document.createElement('li'));
     if (t.children) {
       let i = [...n, t.text],
         s = r.appendChild(document.createElement('details'));
-      (s.className = t.class ? `${t.class} tsd-index-accordion` : 'tsd-index-accordion'), (s.dataset.key = i.join('$'));
+      s.className = t.class ? `${t.class} tsd-accordion` : 'tsd-accordion';
       let o = s.appendChild(document.createElement('summary'));
       (o.className = 'tsd-accordion-summary'),
+        (o.dataset.key = i.join('$')),
         (o.innerHTML =
           '<svg width="20" height="20" viewBox="0 0 24 24" fill="none"><use href="#icon-chevronDown"></use></svg>'),
-        Ee(t, o);
+        be(t, o);
       let a = s.appendChild(document.createElement('div'));
       a.className = 'tsd-accordion-details';
       let l = a.appendChild(document.createElement('ul'));
       l.className = 'tsd-nested-navigation';
-      for (let u of t.children) we(u, l, i);
-    } else Ee(t, r, t.class);
+      for (let u of t.children) Se(u, l, i);
+    } else be(t, r, t.class);
   }
-  function Ee(t, e, n) {
+  function be(t, e, n) {
     if (t.path) {
       let r = e.appendChild(document.createElement('a'));
-      (r.href = Le + t.path),
+      (r.href = K + t.path),
         n && (r.className = n),
         location.pathname === r.pathname && r.classList.add('current'),
         t.kind &&
@@ -1808,14 +1823,14 @@
     } else e.appendChild(document.createElement('span')).textContent = t.text;
   }
   G(X, 'a[data-toggle]');
-  G(Z, '.tsd-index-accordion');
+  G(Z, '.tsd-accordion');
   G(Y, '.tsd-filter-item input[type=checkbox]');
-  var Se = document.getElementById('tsd-theme');
-  Se && ge(Se);
-  var je = new U();
-  Object.defineProperty(window, 'app', {value: je});
-  he();
-  be();
+  var Te = document.getElementById('tsd-theme');
+  Te && Ee(Te);
+  var qe = new U();
+  Object.defineProperty(window, 'app', {value: qe});
+  fe();
+  we();
 })();
 /*! Bundled license information:
 
