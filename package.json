@@ -8,7 +8,7 @@
     "axios": "1.6.8",
     "axios-retry": "4.1.0",
     "reconnecting-websocket": "4.4.0",
-    "ws": "8.16.0",
+    "ws": "8.17.1",
     "zod": "3.22.4"
   },
   "description": "Coinbase Pro API for Node.js, written in TypeScript and covered by tests.",
