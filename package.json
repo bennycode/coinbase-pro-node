@@ -102,5 +102,5 @@
     "prepare": "husky install"
   },
   "type": "module",
-  "version": "9.0.1"
+  "version": "9.1.0"
 }
