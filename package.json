@@ -33,7 +33,7 @@
     "rimraf": "^6.0.1",
     "ts-node": "^10.9.2",
     "typedoc": "^0.26.3",
-    "typedoc-plugin-markdown": "^3.17.1",
+    "typedoc-plugin-markdown": "^4.2.3",
     "typescript": "^5.5.3"
   },
   "engines": {
