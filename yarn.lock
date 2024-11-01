@@ -792,9 +792,9 @@ eslint-plugin-sort-keys-fix@^1.1.2:
     requireindex "~1.2.0"
 
 eslint-plugin-typescript-sort-keys@^3.2.0:
-  version "3.2.0"
-  resolved "https://registry.npmjs.org/eslint-plugin-typescript-sort-keys/-/eslint-plugin-typescript-sort-keys-3.2.0.tgz#9308a2d4134acf06a3028c6e01c331c51d5f5e3d"
-  integrity sha512-GutszvriaVtwmn7pQjuj9/9o0iXhD7XZs0/424+zsozdRr/fdg5e8206t478Vnqnqi1GjuxcAolj1kf74KnhPA==
+  version "3.3.0"
+  resolved "https://registry.npmjs.org/eslint-plugin-typescript-sort-keys/-/eslint-plugin-typescript-sort-keys-3.3.0.tgz#a3ba29e5d6b7f3e5e66ad898347fa9142d3596d1"
+  integrity sha512-bRW3Rc/VNdrSP9OoY5wgjjaXCOOkZKpzvl/Mk6l8Sg8CMehVIcg9K4y33l+ZcZiknpl0aR6rKusxuCJNGZWmVw==
   dependencies:
     "@typescript-eslint/experimental-utils" "^5.0.0"
     json-schema "^0.4.0"
